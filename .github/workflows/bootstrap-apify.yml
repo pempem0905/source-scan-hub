@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Give production a moment to settle
-        run: sleep 5
+        run: sleep 2
       - name: Deploy orchestrator, schedule it, and start first cycle
         env:
           BOOTSTRAP_TOKEN: A-bJiCblqjurbY-6glgsQRV6FZq0a7BhDvRr52W04pM
