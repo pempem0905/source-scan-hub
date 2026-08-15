@@ -17,6 +17,9 @@ import { Route as ResolverRouteImport } from './routes/resolver'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as SourcesRouteImport } from './routes/sources'
 import { Route as WorkersRouteImport } from './routes/workers'
+import { Route as ApiActivateNativeApifyRouteImport } from './routes/api/activate-native-apify'
+import { Route as ApiAutopilotRouteImport } from './routes/api/autopilot'
+import { Route as ApiBootstrapNativeApifyRouteImport } from './routes/api/bootstrap-native-apify'
 import { Route as ApiSourceEngineActionRouteImport } from './routes/api/source-engine/$action'
 
 const IndexRoute = IndexRouteImport.update({
@@ -59,6 +62,21 @@ const WorkersRoute = WorkersRouteImport.update({
   path: '/workers',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiActivateNativeApifyRoute = ApiActivateNativeApifyRouteImport.update({
+  id: '/api/activate-native-apify',
+  path: '/api/activate-native-apify',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiAutopilotRoute = ApiAutopilotRouteImport.update({
+  id: '/api/autopilot',
+  path: '/api/autopilot',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiBootstrapNativeApifyRoute = ApiBootstrapNativeApifyRouteImport.update({
+  id: '/api/bootstrap-native-apify',
+  path: '/api/bootstrap-native-apify',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiSourceEngineActionRoute = ApiSourceEngineActionRouteImport.update({
   id: '/api/source-engine/$action',
   path: '/api/source-engine/$action',
@@ -74,6 +92,9 @@ export interface FileRoutesByFullPath {
   '/settings': typeof SettingsRoute
   '/sources': typeof SourcesRoute
   '/workers': typeof WorkersRoute
+  '/api/activate-native-apify': typeof ApiActivateNativeApifyRoute
+  '/api/autopilot': typeof ApiAutopilotRoute
+  '/api/bootstrap-native-apify': typeof ApiBootstrapNativeApifyRoute
   '/api/source-engine/$action': typeof ApiSourceEngineActionRoute
 }
 export interface FileRoutesByTo {
@@ -85,6 +106,9 @@ export interface FileRoutesByTo {
   '/settings': typeof SettingsRoute
   '/sources': typeof SourcesRoute
   '/workers': typeof WorkersRoute
+  '/api/activate-native-apify': typeof ApiActivateNativeApifyRoute
+  '/api/autopilot': typeof ApiAutopilotRoute
+  '/api/bootstrap-native-apify': typeof ApiBootstrapNativeApifyRoute
   '/api/source-engine/$action': typeof ApiSourceEngineActionRoute
 }
 export interface FileRoutesById {
@@ -97,6 +121,9 @@ export interface FileRoutesById {
   '/settings': typeof SettingsRoute
   '/sources': typeof SourcesRoute
   '/workers': typeof WorkersRoute
+  '/api/activate-native-apify': typeof ApiActivateNativeApifyRoute
+  '/api/autopilot': typeof ApiAutopilotRoute
+  '/api/bootstrap-native-apify': typeof ApiBootstrapNativeApifyRoute
   '/api/source-engine/$action': typeof ApiSourceEngineActionRoute
 }
 export interface FileRouteTypes {
@@ -110,6 +137,9 @@ export interface FileRouteTypes {
     | '/settings'
     | '/sources'
     | '/workers'
+    | '/api/activate-native-apify'
+    | '/api/autopilot'
+    | '/api/bootstrap-native-apify'
     | '/api/source-engine/$action'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -121,6 +151,9 @@ export interface FileRouteTypes {
     | '/settings'
     | '/sources'
     | '/workers'
+    | '/api/activate-native-apify'
+    | '/api/autopilot'
+    | '/api/bootstrap-native-apify'
     | '/api/source-engine/$action'
   id:
     | '__root__'
@@ -132,6 +165,9 @@ export interface FileRouteTypes {
     | '/settings'
     | '/sources'
     | '/workers'
+    | '/api/activate-native-apify'
+    | '/api/autopilot'
+    | '/api/bootstrap-native-apify'
     | '/api/source-engine/$action'
   fileRoutesById: FileRoutesById
 }
@@ -144,6 +180,9 @@ export interface RootRouteChildren {
   SettingsRoute: typeof SettingsRoute
   SourcesRoute: typeof SourcesRoute
   WorkersRoute: typeof WorkersRoute
+  ApiActivateNativeApifyRoute: typeof ApiActivateNativeApifyRoute
+  ApiAutopilotRoute: typeof ApiAutopilotRoute
+  ApiBootstrapNativeApifyRoute: typeof ApiBootstrapNativeApifyRoute
   ApiSourceEngineActionRoute: typeof ApiSourceEngineActionRoute
 }
 
@@ -205,6 +244,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/activate-native-apify': {
+      id: '/api/activate-native-apify'
+      path: '/api/activate-native-apify'
+      fullPath: '/api/activate-native-apify'
+      preLoaderRoute: typeof ApiActivateNativeApifyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/autopilot': {
+      id: '/api/autopilot'
+      path: '/api/autopilot'
+      fullPath: '/api/autopilot'
+      preLoaderRoute: typeof ApiAutopilotRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/bootstrap-native-apify': {
+      id: '/api/bootstrap-native-apify'
+      path: '/api/bootstrap-native-apify'
+      fullPath: '/api/bootstrap-native-apify'
+      preLoaderRoute: typeof ApiBootstrapNativeApifyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/source-engine/$action': {
       id: '/api/source-engine/$action'
       path: '/api/source-engine/$action'
@@ -224,6 +284,9 @@ const rootRouteChildren: RootRouteChildren = {
   SettingsRoute: SettingsRoute,
   SourcesRoute: SourcesRoute,
   WorkersRoute: WorkersRoute,
+  ApiActivateNativeApifyRoute: ApiActivateNativeApifyRoute,
+  ApiAutopilotRoute: ApiAutopilotRoute,
+  ApiBootstrapNativeApifyRoute: ApiBootstrapNativeApifyRoute,
   ApiSourceEngineActionRoute: ApiSourceEngineActionRoute,
 }
 export const routeTree = rootRouteImport
