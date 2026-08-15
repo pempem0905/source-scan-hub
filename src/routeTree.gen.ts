@@ -17,6 +17,7 @@ import { Route as ResolverRouteImport } from './routes/resolver'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as SourcesRouteImport } from './routes/sources'
 import { Route as WorkersRouteImport } from './routes/workers'
+import { Route as ApiSourceEngineActionRouteImport } from './routes/api/source-engine/$action'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -58,6 +59,11 @@ const WorkersRoute = WorkersRouteImport.update({
   path: '/workers',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiSourceEngineActionRoute = ApiSourceEngineActionRouteImport.update({
+  id: '/api/source-engine/$action',
+  path: '/api/source-engine/$action',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -68,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/settings': typeof SettingsRoute
   '/sources': typeof SourcesRoute
   '/workers': typeof WorkersRoute
+  '/api/source-engine/$action': typeof ApiSourceEngineActionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,6 +85,7 @@ export interface FileRoutesByTo {
   '/settings': typeof SettingsRoute
   '/sources': typeof SourcesRoute
   '/workers': typeof WorkersRoute
+  '/api/source-engine/$action': typeof ApiSourceEngineActionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,6 +97,7 @@ export interface FileRoutesById {
   '/settings': typeof SettingsRoute
   '/sources': typeof SourcesRoute
   '/workers': typeof WorkersRoute
+  '/api/source-engine/$action': typeof ApiSourceEngineActionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/sources'
     | '/workers'
+    | '/api/source-engine/$action'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/sources'
     | '/workers'
+    | '/api/source-engine/$action'
   id:
     | '__root__'
     | '/'
@@ -121,6 +132,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/sources'
     | '/workers'
+    | '/api/source-engine/$action'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -132,6 +144,7 @@ export interface RootRouteChildren {
   SettingsRoute: typeof SettingsRoute
   SourcesRoute: typeof SourcesRoute
   WorkersRoute: typeof WorkersRoute
+  ApiSourceEngineActionRoute: typeof ApiSourceEngineActionRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -192,6 +205,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/source-engine/$action': {
+      id: '/api/source-engine/$action'
+      path: '/api/source-engine/$action'
+      fullPath: '/api/source-engine/$action'
+      preLoaderRoute: typeof ApiSourceEngineActionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -204,6 +224,7 @@ const rootRouteChildren: RootRouteChildren = {
   SettingsRoute: SettingsRoute,
   SourcesRoute: SourcesRoute,
   WorkersRoute: WorkersRoute,
+  ApiSourceEngineActionRoute: ApiSourceEngineActionRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

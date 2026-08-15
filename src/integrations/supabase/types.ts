@@ -549,7 +549,29 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      claim_scan_queue_item: {
+        Args: { p_lane?: string; p_worker_id: string }
+        Returns: {
+          available_at: string
+          created_at: string
+          id: string
+          job_id: string | null
+          lane: string | null
+          locked_at: string | null
+          locked_by: string | null
+          priority: number
+          status: string
+          target_domain: string | null
+          target_url: string | null
+          updated_at: string
+        }[]
+        SetofOptions: {
+          from: "*"
+          to: "scan_queue"
+          isOneToOne: false
+          isSetofReturn: true
+        }
+      }
     }
     Enums: {
       [_ in never]: never
