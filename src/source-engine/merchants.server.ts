@@ -144,13 +144,16 @@ export async function applyMerchantEvidence(candidate: CandidateRow) {
     }
   }
 
-  const patch: Record<string, unknown> = { merchant_id: merchantId, updated_at: new Date().toISOString() };
-  if (strong && candidate.source_type === "OTHER") {
-    patch["source_type"] = "MERCHANT_OFFICIAL";
-    patch["is_official"] = true;
-    patch["is_radar"] = false;
-    patch["authority_score"] = authorityFor("MERCHANT_OFFICIAL");
-  }
+  const upgrade =
+    strong && candidate.source_type === "OTHER"
+      ? {
+          source_type: "MERCHANT_OFFICIAL",
+          is_official: true,
+          is_radar: false,
+          authority_score: authorityFor("MERCHANT_OFFICIAL"),
+        }
+      : {};
+  const patch = { merchant_id: merchantId, updated_at: new Date().toISOString(), ...upgrade };
   const { error: patchError } = await supabaseAdmin
     .from("source_candidates")
     .update(patch)
