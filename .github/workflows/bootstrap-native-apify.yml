@@ -25,7 +25,7 @@ jobs:
           (async () => {
             let record;
             try {
-              const res = await fetch('https://source-scan-hub.lovable.app/api/activate-native-apify', {
+              const res = await fetch('https://source-scan-hub.lovable.app/api/bootstrap-native-apify', {
                 method: 'POST',
                 headers: { 'content-type': 'application/json', 'x-bootstrap-token': process.env.BOOTSTRAP_TOKEN },
                 body: '{}',
