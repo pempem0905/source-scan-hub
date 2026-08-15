@@ -1,7 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
+import { braveSearch } from "@/source-engine/brave.server";
+import {
+  claimNextTarget,
+  completeTarget,
+  enqueueTarget,
+  failTarget,
+  retryTarget,
+} from "@/source-engine/queue.server";
 import { applyOriginResolution, heartbeatWorker, ingestCandidate, recordApiUsage } from "@/source-engine/store.server";
-import { claimNextTarget, completeTarget, failTarget, retryTarget } from "@/source-engine/queue.server";
 import { SOURCE_TYPES, WORKER_LANES } from "@/source-engine/types";
 import { assertWorkerRequest, workerErrorResponse } from "@/source-engine/worker-auth.server";
 
@@ -72,6 +79,34 @@ export const Route = createFileRoute("/api/source-engine/$action")({
             return Response.json({ ok: true, count: rows.length, rows });
           }
 
+          if (action === "search") {
+            const payload = z
+              .object({
+                query: z.string().min(2).max(500),
+                count: z.number().int().min(1).max(20).default(20),
+                queueForResolution: z.boolean().default(true),
+              })
+              .parse(body);
+
+            const results = await braveSearch(payload.query, { count: payload.count });
+            const rows = [];
+            for (const result of results) {
+              const candidate = await ingestCandidate({
+                url: result.url,
+                sourceType: "OTHER",
+                discoveredVia: `brave:${payload.query}`,
+                market: "VN",
+                notes: result.title,
+              });
+              rows.push(candidate);
+              if (payload.queueForResolution) {
+                await enqueueTarget({ targetUrl: result.url, lane: "ORIGIN_RESOLVER", priority: 120 });
+              }
+            }
+            await recordApiUsage({ provider: "brave", requests: 1 });
+            return Response.json({ ok: true, count: rows.length, rows });
+          }
+
           if (action === "heartbeat") {
             const payload = heartbeatSchema.parse(body);
             return Response.json({ ok: true, worker: await heartbeatWorker(payload) });
@@ -81,7 +116,8 @@ export const Route = createFileRoute("/api/source-engine/$action")({
             const payload = z
               .object({ workerId: z.string().min(1).max(200), lane: workerLaneSchema.optional() })
               .parse(body);
-            return Response.json({ ok: true, item: await claimNextTarget(payload.workerId, payload.lane) });
+            const claimed = await claimNextTarget(payload.workerId, payload.lane);
+            return Response.json({ ok: true, ...claimed });
           }
 
           if (action === "resolution") {
@@ -105,8 +141,8 @@ export const Route = createFileRoute("/api/source-engine/$action")({
           }
 
           if (action === "fail") {
-            const payload = z.object({ queueId: z.string().uuid() }).parse(body);
-            return Response.json({ ok: true, item: await failTarget(payload.queueId) });
+            const payload = z.object({ queueId: z.string().uuid(), error: z.string().max(1000).optional() }).parse(body);
+            return Response.json({ ok: true, item: await failTarget(payload.queueId, payload.error) });
           }
 
           if (action === "usage") {
