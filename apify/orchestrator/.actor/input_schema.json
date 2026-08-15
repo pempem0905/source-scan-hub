@@ -1,0 +1,59 @@
+{
+  "title": "Source Scan Hub Autopilot Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "hubBaseUrl": {
+      "title": "Source Scan Hub base URL",
+      "type": "string",
+      "description": "Published control API base URL.",
+      "editor": "textfield"
+    },
+    "workerToken": {
+      "title": "Worker token",
+      "type": "string",
+      "description": "Bearer token used by workers and orchestrator to call Source Scan Hub.",
+      "editor": "textfield",
+      "isSecret": true
+    },
+    "workerActorId": {
+      "title": "Worker Actor ID",
+      "type": "string",
+      "description": "Existing Source Scan Hub worker Actor ID.",
+      "editor": "textfield"
+    },
+    "mode": {
+      "title": "Autopilot mode",
+      "type": "string",
+      "enum": ["auto", "master", "daily"],
+      "default": "auto",
+      "description": "auto keeps building the master source baseline until convergence, then switches to daily updates.",
+      "editor": "select"
+    },
+    "maxResolverWorkers": {
+      "title": "Maximum resolver workers",
+      "type": "integer",
+      "minimum": 4,
+      "maximum": 32,
+      "default": 16,
+      "description": "Adaptive upper bound; starts at 4 and only scales when 403/429/error rates are healthy."
+    },
+    "maxCycleSpendUsd": {
+      "title": "Maximum spend per cycle (USD)",
+      "type": "number",
+      "minimum": 0.01,
+      "maximum": 5,
+      "default": 0.2,
+      "description": "Hard local ceiling for new Apify child-run compute in one Autopilot cycle."
+    },
+    "maxCycleMinutes": {
+      "title": "Maximum cycle minutes",
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 120,
+      "default": 45,
+      "description": "Stops launching new child runs after this duration; remaining queue waits for the next scheduled cycle."
+    }
+  },
+  "required": ["hubBaseUrl", "workerToken", "workerActorId"]
+}
