@@ -1,0 +1,54 @@
+name: Patch Native Diagnostic Bridge
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/patch-diagnostic-bridge.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add diagnose-abort action
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          p = Path('src/routes/api/bootstrap-native-apify.ts')
+          s = p.read_text()
+          needle = '''          if (body.action === "buildRestart") {'''
+          block = '''          if (body.action === "diagnoseAbort") {
+            const { worker } = await nativeActors();
+            const workerRuns = await apify(`/acts/${encodeURIComponent(worker.id)}/runs?desc=1&limit=100`);
+            const failed = (workerRuns.items ?? []).find((r: any) => r.status === "FAILED");
+            const failedLog = failed ? await apifyText(`/logs/${encodeURIComponent(failed.id)}`).catch((error) => String(error)) : null;
+            let aborted = null;
+            if (body.runId) {
+              aborted = await apify(`/actor-runs/${encodeURIComponent(body.runId)}/abort?gracefully=false`, { method: "POST" }).catch((error) => ({ error: error instanceof Error ? error.message : String(error) }));
+            }
+            return Response.json({
+              ok: true,
+              failedRun: failed ? { id: failed.id, status: failed.status, startedAt: failed.startedAt, finishedAt: failed.finishedAt } : null,
+              failedLogTail: failedLog ? failedLog.slice(-12000) : null,
+              aborted: aborted ? { id: aborted.id ?? null, status: aborted.status ?? null, error: aborted.error ?? null } : null,
+            });
+          }
+
+'''
+          if needle not in s:
+              raise SystemExit('target not found')
+          s = s.replace(needle, block + needle, 1)
+          p.write_text(s)
+          PY
+      - name: Commit diagnostic bridge
+        run: |
+          git config user.name "source-scan-autopilot"
+          git config user.email "75533279+pempem0905@users.noreply.github.com"
+          git add src/routes/api/bootstrap-native-apify.ts
+          git commit -m "Add temporary native worker failure diagnostic"
+          git push
