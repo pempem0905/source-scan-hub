@@ -3,16 +3,83 @@
   "type": "object",
   "schemaVersion": 1,
   "properties": {
-    "workerId": { "title": "Worker ID", "type": "string" },
-    "taskQueueName": { "title": "Task queue", "type": "string", "default": "source-scan-native-tasks-v1" },
-    "masterQueueName": { "title": "Master source set", "type": "string", "default": "source-scan-native-master-v1" },
-    "masterDatasetName": { "title": "Master source events", "type": "string", "default": "source-scan-native-master-events-v1" },
-    "evidenceDatasetName": { "title": "Evidence events", "type": "string", "default": "source-scan-native-evidence-v1" },
-    "runtimeStoreName": { "title": "Runtime KV store", "type": "string", "default": "source-scan-native-runtime-v1" },
-    "localConcurrency": { "title": "Concurrent tasks inside this worker", "type": "integer", "default": 10, "minimum": 1, "maximum": 24 },
-    "maxItems": { "title": "Max tasks per worker", "type": "integer", "default": 600, "minimum": 1, "maximum": 5000 },
-    "maxRunMinutes": { "title": "Max run minutes", "type": "integer", "default": 20, "minimum": 2, "maximum": 120 },
-    "displayBaseUrl": { "title": "Optional display-only sink", "type": "string" },
-    "displayToken": { "title": "Optional display-only token", "type": "string", "isSecret": true }
+    "workerId": {
+      "title": "Worker ID",
+      "type": "string",
+      "description": "Unique identifier for this distributed worker run.",
+      "editor": "textfield"
+    },
+    "taskQueueName": {
+      "title": "Task queue",
+      "type": "string",
+      "default": "source-scan-native-tasks-v1",
+      "description": "Named Apify Request Queue used as the shared scan work queue.",
+      "editor": "textfield"
+    },
+    "masterQueueName": {
+      "title": "Master source set",
+      "type": "string",
+      "default": "source-scan-native-master-v1",
+      "description": "Named Apify Request Queue used as the deduplicated master source set.",
+      "editor": "textfield"
+    },
+    "masterDatasetName": {
+      "title": "Master source events",
+      "type": "string",
+      "default": "source-scan-native-master-events-v1",
+      "description": "Named dataset that stores append-only master source events.",
+      "editor": "textfield"
+    },
+    "evidenceDatasetName": {
+      "title": "Evidence events",
+      "type": "string",
+      "default": "source-scan-native-evidence-v1",
+      "description": "Named dataset for failures, evidence, and diagnostics.",
+      "editor": "textfield"
+    },
+    "runtimeStoreName": {
+      "title": "Runtime KV store",
+      "type": "string",
+      "default": "source-scan-native-runtime-v1",
+      "description": "Named key-value store for worker heartbeats and runtime state.",
+      "editor": "textfield"
+    },
+    "localConcurrency": {
+      "title": "Concurrent tasks inside this worker",
+      "type": "integer",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 24,
+      "description": "Number of queue tasks processed concurrently inside one Actor run."
+    },
+    "maxItems": {
+      "title": "Max tasks per worker",
+      "type": "integer",
+      "default": 600,
+      "minimum": 1,
+      "maximum": 5000,
+      "description": "Maximum tasks this worker processes before exiting."
+    },
+    "maxRunMinutes": {
+      "title": "Max run minutes",
+      "type": "integer",
+      "default": 20,
+      "minimum": 2,
+      "maximum": 120,
+      "description": "Maximum duration of this worker run in minutes."
+    },
+    "displayBaseUrl": {
+      "title": "Optional display-only sink",
+      "type": "string",
+      "description": "Optional read-model endpoint used only to mirror telemetry for the dashboard.",
+      "editor": "textfield"
+    },
+    "displayToken": {
+      "title": "Optional display-only token",
+      "type": "string",
+      "description": "Optional token used only for one-way dashboard telemetry writes.",
+      "editor": "textfield",
+      "isSecret": true
+    }
   }
 }
