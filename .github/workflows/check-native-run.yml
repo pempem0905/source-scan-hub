@@ -1,0 +1,39 @@
+name: Check Native Apify Run
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/check-native-run.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch native orchestrator run
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          (async () => {
+            const runId = 'xgW6jZLyZKiqwYEfa';
+            const res = await fetch(`https://api.apify.com/v2/actor-runs/${runId}`);
+            const text = await res.text();
+            let payload;
+            try { payload = JSON.parse(text); } catch { payload = { raw: text.slice(0, 10000) }; }
+            fs.writeFileSync('native-run-status.json', JSON.stringify({ httpStatus: res.status, ...payload }, null, 2));
+            console.log(JSON.stringify({ httpStatus: res.status, status: payload?.data?.status, startedAt: payload?.data?.startedAt, finishedAt: payload?.data?.finishedAt, defaultDatasetId: payload?.data?.defaultDatasetId }, null, 2));
+          })().catch((error) => {
+            fs.writeFileSync('native-run-status.json', JSON.stringify({ error: error instanceof Error ? error.message : String(error) }, null, 2));
+            process.exit(1);
+          });
+          NODE
+      - name: Upload run status
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-run-status
+          path: native-run-status.json
