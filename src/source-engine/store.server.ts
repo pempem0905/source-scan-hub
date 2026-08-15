@@ -126,10 +126,13 @@ export async function promoteCandidateToSource(candidateId: string) {
     .maybeSingle();
   if (existing) return existing;
 
+  const sourceDomain =
+    candidate.canonical_domain ?? candidate.domain ?? normalizeUrl(candidate.url).normalizedDomain;
+
   const { data: source, error } = await supabaseAdmin
     .from("sources")
     .insert({
-      domain: candidate.domain,
+      domain: sourceDomain,
       url: candidate.url,
       normalized_url: candidate.normalized_url,
       canonical_url: candidate.canonical_url,
