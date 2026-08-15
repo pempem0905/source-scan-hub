@@ -60,6 +60,50 @@ function extractLinks(html, baseUrl, limit = 500) {
   return [...out];
 }
 
+// Domain Expander keeps the raw href (minus the fragment): affiliate/click/ref
+// params are what make the redirect resolvable to a merchant origin. Stripping
+// them here would destroy the redirect before ORIGIN_RESOLVER ever sees it.
+function extractRawLinks(html, baseUrl, limit = 800) {
+  const out = new Set();
+  const re = /<a\b[^>]*\bhref=["']([^"']+)["']/gi;
+  let m;
+  while ((m = re.exec(html)) && out.size < limit) {
+    try {
+      const u = new URL(m[1], baseUrl);
+      if (u.protocol !== "http:" && u.protocol !== "https:") continue;
+      u.hash = "";
+      out.add(u.toString());
+    } catch {}
+  }
+  return [...out];
+}
+
+// Utility / social / infrastructure hosts that are never merchant origins.
+const NOISE_HOST_RE =
+  /(^|\.)(facebook|fb|instagram|linkedin|twitter|x|t|pinterest|tiktok|youtube|youtu|zalo|telegram|whatsapp|threads|reddit|messenger)\.(com|me|be|co|vn|net|org)$|(^|\.)(google|googleapis|googletagmanager|google-analytics|gstatic|doubleclick|googlesyndication|googleadservices)\.|(^|\.)(schema\.org|w3\.org|cloudflare\.com|cloudflareinsights\.com|jsdelivr\.net|unpkg\.com|bootstrapcdn\.com|fontawesome\.com|gravatar\.com|wordpress\.org|wp\.com|apple\.com|microsoft\.com|adobe\.com|jquery\.com|githubusercontent\.com)$|(^|\.)(apps\.apple\.com|play\.google\.com)$/i;
+
+const ASSET_RE = /\.(png|jpe?g|gif|svg|webp|ico|css|js|mjs|woff2?|ttf|eot|pdf|zip|mp4|mp3|xml|rss)$/i;
+
+// Hosts whose links are per-merchant redirects — each distinct URL is a
+// different destination, so they are not collapsed to one per host.
+const AFFILIATE_HOST_RE =
+  /(^|\.)(accesstrade|adpia|masoffer|involve\.asia|invol\.co|ecomobi|interspace|shorten\.asia|go\.isclix|pub\.accesstrade|clickbank|admitad|awin|linksynergy|shopback|dgm|adflex|permate|civi\.vn|leadscloud)/i ||
+  /$^/;
+
+const AFFILIATE_PATH_RE = /\/(go|out|click|redirect|deal|link|aff|track|r)\//i;
+
+function isAffiliateLink(u) {
+  if (AFFILIATE_HOST_RE.test(u.hostname)) return true;
+  if (AFFILIATE_PATH_RE.test(u.pathname)) return true;
+  for (const k of u.searchParams.keys()) {
+    const key = k.toLowerCase();
+    if (["url", "u", "to", "target", "redirect", "dest", "aff", "aff_id", "affiliate_id", "subid", "sub_id", "clickid", "click_id", "ref", "utm_source"].includes(key)) {
+      return true;
+    }
+  }
+  return false;
+}
+
 async function fetchManual(url) {
   return fetch(url, {
     redirect: "manual",
