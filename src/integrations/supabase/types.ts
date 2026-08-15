@@ -137,6 +137,120 @@ export type Database = {
         }
         Relationships: []
       }
+      promo_candidate_queue: {
+        Row: {
+          candidate: Json
+          commit_id: string | null
+          committed_at: string | null
+          created_at: string
+          id: string
+          idempotency_key: string
+          source_url: string | null
+          source_worker: string
+          status: string
+        }
+        Insert: {
+          candidate: Json
+          commit_id?: string | null
+          committed_at?: string | null
+          created_at?: string
+          id?: string
+          idempotency_key: string
+          source_url?: string | null
+          source_worker: string
+          status?: string
+        }
+        Update: {
+          candidate?: Json
+          commit_id?: string | null
+          committed_at?: string | null
+          created_at?: string
+          id?: string
+          idempotency_key?: string
+          source_url?: string | null
+          source_worker?: string
+          status?: string
+        }
+        Relationships: []
+      }
+      promo_master_commits: {
+        Row: {
+          batch_no: number
+          checkpoint: string
+          codes_delta: number
+          commit_id: string
+          created_at: string
+          offers_delta: number
+          previous_batch_no: number
+          queue_ids: string[]
+          registered_delta: number
+          scanned_delta: number
+        }
+        Insert: {
+          batch_no: number
+          checkpoint: string
+          codes_delta?: number
+          commit_id?: string
+          created_at?: string
+          offers_delta?: number
+          previous_batch_no: number
+          queue_ids: string[]
+          registered_delta?: number
+          scanned_delta?: number
+        }
+        Update: {
+          batch_no?: number
+          checkpoint?: string
+          codes_delta?: number
+          commit_id?: string
+          created_at?: string
+          offers_delta?: number
+          previous_batch_no?: number
+          queue_ids?: string[]
+          registered_delta?: number
+          scanned_delta?: number
+        }
+        Relationships: []
+      }
+      promo_master_state: {
+        Row: {
+          actionable_offers: number
+          batch_no: number
+          checkpoint: string
+          last_successful_commit: string
+          literal_codes: number
+          registered_sources: number
+          scanned_sources: number
+          singleton: boolean
+          updated_at: string
+          value_filter_version: string
+        }
+        Insert: {
+          actionable_offers: number
+          batch_no: number
+          checkpoint: string
+          last_successful_commit: string
+          literal_codes: number
+          registered_sources: number
+          scanned_sources: number
+          singleton?: boolean
+          updated_at?: string
+          value_filter_version?: string
+        }
+        Update: {
+          actionable_offers?: number
+          batch_no?: number
+          checkpoint?: string
+          last_successful_commit?: string
+          literal_codes?: number
+          registered_sources?: number
+          scanned_sources?: number
+          singleton?: boolean
+          updated_at?: string
+          value_filter_version?: string
+        }
+        Relationships: []
+      }
       scan_jobs: {
         Row: {
           attempts: number
@@ -546,7 +660,45 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      promo_writer_health: {
+        Row: {
+          actionable_offers: number | null
+          batch_no: number | null
+          checkpoint: string | null
+          committed_rows: number | null
+          last_successful_commit: string | null
+          literal_codes: number | null
+          ready_backlog: number | null
+          registered_sources: number | null
+          scanned_sources: number | null
+          value_filter_version: string | null
+        }
+        Insert: {
+          actionable_offers?: number | null
+          batch_no?: number | null
+          checkpoint?: string | null
+          committed_rows?: never
+          last_successful_commit?: string | null
+          literal_codes?: number | null
+          ready_backlog?: never
+          registered_sources?: number | null
+          scanned_sources?: number | null
+          value_filter_version?: string | null
+        }
+        Update: {
+          actionable_offers?: number | null
+          batch_no?: number | null
+          checkpoint?: string | null
+          committed_rows?: never
+          last_successful_commit?: string | null
+          literal_codes?: number | null
+          ready_backlog?: never
+          registered_sources?: number | null
+          scanned_sources?: number | null
+          value_filter_version?: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       claim_scan_queue_item: {
@@ -571,6 +723,19 @@ export type Database = {
           isOneToOne: false
           isSetofReturn: true
         }
+      }
+      commit_promo_queue: {
+        Args: {
+          p_checkpoint: string
+          p_codes_delta: number
+          p_expected_batch: number
+          p_next_batch: number
+          p_offers_delta: number
+          p_queue_ids: string[]
+          p_registered_delta: number
+          p_scanned_delta: number
+        }
+        Returns: string
       }
     }
     Enums: {
