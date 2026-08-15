@@ -1,9 +1,10 @@
 import { createServerFn } from "@tanstack/react-start";
 
-async function admin() {
+async function admin(): Promise<any> {
   const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
   return supabaseAdmin;
 }
+
 
 export const getOverview = createServerFn({ method: "GET" }).handler(async () => {
   const db = await admin();
