@@ -1,0 +1,42 @@
+name: Bootstrap Apify Autopilot
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/bootstrap-apify.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for Source Scan Hub production deploy
+        run: sleep 75
+      - name: Deploy orchestrator, schedule it, and start first cycle
+        env:
+          BOOTSTRAP_TOKEN: A-bJiCblqjurbY-6glgsQRV6FZq0a7BhDvRr52W04pM
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const base = 'apify/orchestrator/';
+          const names = ['package.json', 'src/main.js', '.actor/Dockerfile', '.actor/actor.json', '.actor/input_schema.json'];
+          const sourceFiles = names.map((name) => ({ name, format: 'TEXT', content: fs.readFileSync(base + name, 'utf8') }));
+          const res = await fetch('https://source-scan-hub.lovable.app/api/bootstrap-apify', {
+            method: 'POST',
+            headers: {
+              'content-type': 'application/json',
+              'x-bootstrap-token': process.env.BOOTSTRAP_TOKEN,
+            },
+            body: JSON.stringify({ actorName: 'source-scan-hub-orchestrator', sourceFiles }),
+          });
+          const text = await res.text();
+          let payload;
+          try { payload = JSON.parse(text); } catch { payload = { raw: text.slice(0, 1000) }; }
+          console.log(JSON.stringify(payload, null, 2));
+          if (!res.ok || payload.ok === false) process.exit(1);
+          NODE
