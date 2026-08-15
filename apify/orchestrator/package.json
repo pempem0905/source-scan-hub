@@ -1,0 +1,13 @@
+{
+  "name": "source-scan-hub-orchestrator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "apify": "^3.7.0"
+  },
+  "scripts": {
+    "start": "node src/main.js"
+  }
+}
