@@ -3,24 +3,114 @@
   "type": "object",
   "schemaVersion": 1,
   "properties": {
-    "workerActorId": { "title": "Native worker Actor ID", "type": "string" },
-    "taskQueueName": { "title": "Task queue", "type": "string", "default": "source-scan-native-tasks-v1" },
-    "masterQueueName": { "title": "Master source set", "type": "string", "default": "source-scan-native-master-v1" },
-    "masterDatasetName": { "title": "Master source events", "type": "string", "default": "source-scan-native-master-events-v1" },
-    "evidenceDatasetName": { "title": "Evidence events", "type": "string", "default": "source-scan-native-evidence-v1" },
-    "runtimeStoreName": { "title": "Runtime KV store", "type": "string", "default": "source-scan-native-runtime-v1" },
-    "localConcurrency": { "title": "Concurrency inside each worker", "type": "integer", "default": 10, "minimum": 1, "maximum": 24 },
-    "maxWorkerItems": { "title": "Max tasks per worker", "type": "integer", "default": 600, "minimum": 1, "maximum": 5000 },
-    "maxWorkerRunMinutes": { "title": "Worker max minutes", "type": "integer", "default": 20, "minimum": 2, "maximum": 120 },
-    "maxCycleMinutes": { "title": "Orchestrator cycle max minutes", "type": "integer", "default": 50, "minimum": 5, "maximum": 180 },
-    "dailyBudgetUsd": { "title": "Daily project budget", "type": "number", "default": 1, "minimum": 0.01 },
-    "projectBudgetUsd": { "title": "Total project budget", "type": "number", "default": 50, "minimum": 1 },
-    "mode": { "title": "Mode", "type": "string", "enum": ["auto", "master", "daily"], "default": "auto" },
-    "displayBaseUrl": { "title": "Optional display-only sink", "type": "string" },
-    "displayToken": { "title": "Optional display-only token", "type": "string", "isSecret": true },
-    "bootstrapSources": { "title": "One-time existing source records", "type": "array", "editor": "json", "default": [] },
-    "bootstrapCandidates": { "title": "One-time existing candidate records", "type": "array", "editor": "json", "default": [] },
-    "seedUrls": { "title": "Additional seed URLs", "type": "array", "editor": "stringList", "default": [] }
+    "workerActorId": {
+      "title": "Native worker Actor ID",
+      "type": "string",
+      "description": "Actor ID of the Apify-native distributed worker.",
+      "editor": "textfield"
+    },
+    "taskQueueName": {
+      "title": "Task queue",
+      "type": "string",
+      "default": "source-scan-native-tasks-v1",
+      "description": "Named Apify Request Queue used as the shared scan work queue.",
+      "editor": "textfield"
+    },
+    "masterQueueName": {
+      "title": "Master source set",
+      "type": "string",
+      "default": "source-scan-native-master-v1",
+      "description": "Named Apify Request Queue used as the deduplicated master source set.",
+      "editor": "textfield"
+    },
+    "masterDatasetName": {
+      "title": "Master source events",
+      "type": "string",
+      "default": "source-scan-native-master-events-v1",
+      "description": "Named dataset for append-only master source events.",
+      "editor": "textfield"
+    },
+    "evidenceDatasetName": {
+      "title": "Evidence events",
+      "type": "string",
+      "default": "source-scan-native-evidence-v1",
+      "description": "Named dataset for scan evidence and diagnostics.",
+      "editor": "textfield"
+    },
+    "runtimeStoreName": {
+      "title": "Runtime KV store",
+      "type": "string",
+      "default": "source-scan-native-runtime-v1",
+      "description": "Named key-value store for orchestration state, budget, lease, and telemetry.",
+      "editor": "textfield"
+    },
+    "localConcurrency": {
+      "title": "Concurrency inside each worker",
+      "type": "integer",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 24,
+      "description": "Number of queue tasks each child worker processes concurrently."
+    },
+    "maxWorkerItems": {
+      "title": "Max tasks per worker",
+      "type": "integer",
+      "default": 600,
+      "minimum": 1,
+      "maximum": 5000,
+      "description": "Maximum queue tasks assigned to each worker run."
+    },
+    "maxWorkerRunMinutes": {
+      "title": "Worker max minutes",
+      "type": "integer",
+      "default": 20,
+      "minimum": 2,
+      "maximum": 120,
+      "description": "Maximum duration of each child worker run."
+    },
+    "maxCycleMinutes": {
+      "title": "Orchestrator cycle max minutes",
+      "type": "integer",
+      "default": 50,
+      "minimum": 5,
+      "maximum": 180,
+      "description": "Maximum duration of one orchestration cycle."
+    },
+    "dailyBudgetUsd": {
+      "title": "Daily project budget",
+      "type": "number",
+      "default": 1,
+      "minimum": 0.01,
+      "description": "Daily usage guard for this native source scan project."
+    },
+    "projectBudgetUsd": {
+      "title": "Total project budget",
+      "type": "number",
+      "default": 50,
+      "minimum": 1,
+      "description": "Total usage guard for the project."
+    },
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "enum": ["auto", "master", "daily"],
+      "default": "auto",
+      "description": "Auto continues master discovery until convergence, then switches to daily refresh.",
+      "editor": "select"
+    },
+    "displayBaseUrl": {
+      "title": "Optional display-only sink",
+      "type": "string",
+      "description": "Optional dashboard endpoint. It is never used for control decisions.",
+      "editor": "textfield"
+    },
+    "displayToken": {
+      "title": "Optional display-only token",
+      "type": "string",
+      "description": "Optional token for one-way dashboard telemetry only.",
+      "editor": "textfield",
+      "isSecret": true
+    }
   },
   "required": ["workerActorId"]
 }
