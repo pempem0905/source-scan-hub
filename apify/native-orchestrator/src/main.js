@@ -3,6 +3,19 @@ import { Actor, log } from "apify";
 const APIFY_BASE = "https://api.apify.com/v2";
 const TERMINAL = new Set(["SUCCEEDED", "FAILED", "ABORTED", "TIMED-OUT"]);
 const CURATED_SEED_VERSION = "vn-retail-malls-2026-08-15-v1";
+const DISCOVERY_VERSION = "vn-wide-source-discovery-2026-08-15-v1";
+const DISCOVERY_TERMS = [
+  "trung tâm thương mại", "shopping mall", "siêu thị", "chuỗi bán lẻ", "cửa hàng tiện lợi",
+  "thực phẩm nhập khẩu", "thực phẩm sạch", "mẹ và bé", "điện máy", "điện thoại laptop",
+  "nhà thuốc", "mỹ phẩm làm đẹp", "thời trang", "giày dép", "trang sức", "nội thất gia dụng",
+  "nhà hàng", "cafe trà sữa", "rạp chiếu phim", "khu vui chơi", "khách sạn resort", "hãng bay",
+  "du lịch OTA", "giao đồ ăn", "gọi xe", "ngân hàng thẻ tín dụng", "ví điện tử", "bảo hiểm",
+  "viễn thông internet", "giáo dục", "phòng gym fitness", "spa thẩm mỹ", "ô tô xe máy",
+  "bất động sản", "loyalty membership"
+];
+const DISCOVERY_MODIFIERS = ["khuyến mãi Việt Nam", "ưu đãi Việt Nam", "voucher Việt Nam", "promotion Vietnam"];
+function discoveryQueries() { return DISCOVERY_TERMS.flatMap((term) => DISCOVERY_MODIFIERS.map((m) => `${term} ${m}`)); }
+function discoveryWindow() { const slot = Math.floor(Date.now() / (15 * 60_000)); return { bucket: slot, shard: slot % 20, offset: Math.floor(slot / 20) % 10 }; }
 const DEFAULT_SEEDS = [
   // Radar / marketplaces / platforms
   "https://bloggiamgia.vn/",
@@ -260,6 +273,41 @@ await Actor.main(async () => {
     return record;
   }
 
+  async function seedDiscoveryBootstrap() {
+    const key = `BRAVE_BOOTSTRAP_${DISCOVERY_VERSION}`;
+    const already = await runtimeStore.getValue(key).catch(() => null);
+    if (already) return already;
+    const queries = discoveryQueries();
+    let seeded = 0;
+    for (const query of queries) {
+      const raw = `https://api.search.brave.com/res/v1/web/search?q=${encodeURIComponent(query)}&count=20&offset=0`;
+      await addTask("BRAVE_SEARCH", raw, { query, offset: 0, discoveredVia: "brave_bootstrap" }, `BRAVE:${DISCOVERY_VERSION}:BOOT:`);
+      seeded += 1;
+    }
+    const record = { at: new Date().toISOString(), version: DISCOVERY_VERSION, seeded, offset: 0 };
+    await runtimeStore.setValue(key, record);
+    return record;
+  }
+
+  async function seedDiscoveryWindow() {
+    const { bucket, shard, offset } = discoveryWindow();
+    const key = `BRAVE_WINDOW_${DISCOVERY_VERSION}_${bucket}`;
+    const already = await runtimeStore.getValue(key).catch(() => null);
+    if (already) return already;
+    const queries = discoveryQueries();
+    let seeded = 0;
+    for (let i = 0; i < queries.length; i += 1) {
+      if (i % 20 !== shard) continue;
+      const query = queries[i];
+      const raw = `https://api.search.brave.com/res/v1/web/search?q=${encodeURIComponent(query)}&count=20&offset=${offset}`;
+      await addTask("BRAVE_SEARCH", raw, { query, offset, discoveredVia: "brave_window" }, `BRAVE:${DISCOVERY_VERSION}:${bucket}:`);
+      seeded += 1;
+    }
+    const record = { at: new Date().toISOString(), version: DISCOVERY_VERSION, bucket, shard, offset, seeded };
+    await runtimeStore.setValue(key, record);
+    return record;
+  }
+
   async function seedDaily() {
     const prefix = `DAILY:${today}:`;
     const page = await masterDataset.getData({ offset: 0, limit: 5000, desc: true }).catch(() => ({ items: [] }));
@@ -281,6 +329,8 @@ await Actor.main(async () => {
   const beforeMaster = Number(beforeInfo?.totalRequestCount ?? 0);
   const bootstrap = await bootstrapOnce();
   const curated = await seedCuratedIfNeeded();
+  const braveBootstrap = await seedDiscoveryBootstrap();
+  const braveWindow = await seedDiscoveryWindow();
   let dailySeeded = 0;
   if (mode === "daily") dailySeeded = await seedDaily();
 
@@ -368,7 +418,7 @@ await Actor.main(async () => {
     return cost;
   }
 
-  await publishStatus({ bootstrap, curated, dailySeeded });
+  await publishStatus({ bootstrap, curated, braveBootstrap, braveWindow, dailySeeded });
 
   while (Date.now() < deadline) {
     const taskInfo = await taskQueue.getInfo().catch(() => null);

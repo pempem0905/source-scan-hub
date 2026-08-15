@@ -15,6 +15,7 @@ const RADAR_HOST_RE = /(bloggiamgia|picodi|magiamgia|giamgia|coupon|voucher|sand
 const BANK_HOST_RE = /(vietcombank|vietinbank|bidv|agribank|techcombank|acb\.com\.vn|mbbank|vpbank|tpbank|sacombank|vib\.com\.vn|hdbank|ocb\.com\.vn|seabank|shb\.com\.vn|eximbank|namabank|bacabank|pvcombank|msb\.com\.vn|visa\.|mastercard\.|jcb\.|americanexpress)/i;
 const PLATFORM_HOST_RE = /(shopee|lazada|tiki\.vn|sendo|tiktokshop|grab\.com|traveloka|booking\.com|agoda|klook|baemin|ahamove)/i;
 const TRACKING_KEYS = new Set(["gclid", "fbclid", "clickid", "click_id", "aff", "aff_id", "affiliate_id", "subid", "sub_id"]);
+const BRAVE_SEARCH_ENDPOINT = "https://api.search.brave.com/res/v1/web/search";
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function safeUrl(raw, base) {
@@ -150,6 +151,7 @@ await Actor.main(async () => {
   const masterDatasetName = String(input.masterDatasetName ?? "source-scan-native-master-events-v1");
   const evidenceDatasetName = String(input.evidenceDatasetName ?? "source-scan-native-evidence-v1");
   const runtimeStoreName = String(input.runtimeStoreName ?? "source-scan-native-runtime-v1");
+  const braveSearchKey = process.env.BRAVE_SEARCH_API_KEY ?? "";
   const localConcurrency = Math.max(1, Math.min(24, Number(input.localConcurrency ?? 10)));
   const maxItems = Math.max(1, Math.min(5000, Number(input.maxItems ?? 600)));
   const maxRunMinutes = Math.max(2, Math.min(120, Number(input.maxRunMinutes ?? 20)));
@@ -476,8 +478,36 @@ await Actor.main(async () => {
     }
   }
 
+  async function processBraveSearch(request) {
+    if (!braveSearchKey) throw new Error("BRAVE_SEARCH_API_KEY is unavailable in Actor runtime");
+    const query = String(request.userData?.query ?? "").trim();
+    const offset = Math.max(0, Math.min(9, Number(request.userData?.offset ?? 0)));
+    if (!query) return;
+    const url = `${BRAVE_SEARCH_ENDPOINT}?q=${encodeURIComponent(query)}&count=20&offset=${offset}&safesearch=moderate`;
+    const controller = new AbortController();
+    const t = setTimeout(() => controller.abort(), 15000);
+    try {
+      const res = await fetch(url, { headers: { accept: "application/json", "x-subscription-token": braveSearchKey, "user-agent": "SourceScanNative/1.0" }, signal: controller.signal });
+      stats.httpRequests += 1;
+      if (res.status === 403) stats.count403 += 1;
+      if (res.status === 429) stats.count429 += 1;
+      if (!res.ok) throw Object.assign(new Error(`Brave HTTP ${res.status}`), { status: res.status });
+      const data = await res.json();
+      const results = data?.web?.results ?? [];
+      for (const item of results) {
+        const u = safeUrl(item?.url);
+        if (!u) continue;
+        const h = u.hostname.replace(/^www\./, "").toLowerCase();
+        if (NOISE_HOST_RE.test(h) || ASSET_RE.test(u.pathname)) continue;
+        await enqueue("RESOLVE", u.toString(), { discoveredVia: `brave:${query}`, discoveredFrom: request.url, fromRadar: false }, true);
+      }
+      await evidence({ event: "BRAVE_SEARCH", query, offset, results: results.length, moreResultsAvailable: Boolean(data?.query?.more_results_available) });
+    } finally { clearTimeout(t); }
+  }
+
   async function processRequest(request) {
     const kind = String(request.userData?.kind ?? "RESOLVE");
+    if (kind === "BRAVE_SEARCH") return processBraveSearch(request);
     if (kind === "DOMAIN_EXPAND") return processDomainExpand(request);
     if (kind === "SITEMAP") return processSitemap(request);
     if (kind === "PROMO_PATH") return processPromoPath(request);
