@@ -247,16 +247,59 @@ async function main() {
         if (res.status === 429) count429 += 1;
         const html = (await res.text()).slice(0, 600000);
         const baseHost = new URL(item.target_url).hostname.replace(/^www\./, "");
-        const links = extractLinks(html, item.target_url, 400);
-        const candidates = links
-          .filter((url) => {
-            const u = new URL(url);
-            const host = u.hostname.replace(/^www\./, "");
-            const promo = PROMO_HINTS.some((hint) => u.pathname.toLowerCase().includes(hint));
-            return host !== baseHost || promo;
-          })
-          .slice(0, 300)
-          .map((url) => ({ url, sourceType: "OTHER", discoveredVia: `domain_expander:${baseHost}`, market: "VN" }));
+        const links = extractRawLinks(html, item.target_url, 800);
+
+        const MAX_OUT = 150;
+        const MAX_PER_DIRECT_HOST = 2;
+        const MAX_SAME_HOST_PROMO = 15;
+
+        const affiliateUrls = [];
+        const directByHost = new Map();
+        const samePromo = [];
+
+        for (const url of links) {
+          let u;
+          try { u = new URL(url); } catch { continue; }
+          const host = u.hostname.replace(/^www\./, "").toLowerCase();
+          if (ASSET_RE.test(u.pathname)) continue;
+
+          if (host === baseHost) {
+            // Same-domain promo paths are kept separately; outbound merchant
+            // discovery is this lane's primary Wave 2 purpose.
+            if (samePromo.length < MAX_SAME_HOST_PROMO && PROMO_HINTS.some((h) => u.pathname.toLowerCase().includes(h))) {
+              samePromo.push(u.toString());
+            }
+            continue;
+          }
+          if (NOISE_HOST_RE.test(host)) continue;
+
+          if (isAffiliateLink(u)) {
+            // Each redirect URL can lead to a different merchant: keep them all.
+            affiliateUrls.push(u.toString());
+          } else {
+            const list = directByHost.get(host) ?? [];
+            if (list.length < MAX_PER_DIRECT_HOST) {
+              list.push(u.toString());
+              directByHost.set(host, list);
+            }
+          }
+        }
+
+        // Prioritise affiliate redirects, then one representative URL per new
+        // external host, then the extra per-host URLs, then same-host promo.
+        const firstPerHost = [...directByHost.values()].map((v) => v[0]);
+        const restPerHost = [...directByHost.values()].flatMap((v) => v.slice(1));
+        const ordered = [...new Set([...affiliateUrls, ...firstPerHost, ...restPerHost, ...samePromo])].slice(0, MAX_OUT);
+
+        const candidates = ordered.map((url) => ({
+          url,
+          sourceType: "OTHER",
+          discoveredVia:
+            new URL(url).hostname.replace(/^www\./, "").toLowerCase() === baseHost
+              ? `promo_path:${baseHost}`
+              : `domain_expander:${baseHost}`,
+          market: "VN",
+        }));
         if (candidates.length) {
           const result = await post("candidates", { candidates });
           qualified += Number(result.count ?? 0);
