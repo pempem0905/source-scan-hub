@@ -2,7 +2,9 @@ import { Actor, log } from "apify";
 
 const APIFY_BASE = "https://api.apify.com/v2";
 const TERMINAL = new Set(["SUCCEEDED", "FAILED", "ABORTED", "TIMED-OUT"]);
+const CURATED_SEED_VERSION = "vn-retail-malls-2026-08-15-v1";
 const DEFAULT_SEEDS = [
+  // Radar / marketplaces / platforms
   "https://bloggiamgia.vn/",
   "https://www.picodi.com/vn/",
   "https://shopee.vn/",
@@ -10,6 +12,8 @@ const DEFAULT_SEEDS = [
   "https://tiki.vn/",
   "https://www.grab.com/vn/",
   "https://www.traveloka.com/vi-vn/",
+
+  // Banks / issuers
   "https://www.vietcombank.com.vn/",
   "https://techcombank.com/",
   "https://www.vpbank.com.vn/",
@@ -19,6 +23,56 @@ const DEFAULT_SEEDS = [
   "https://www.vib.com.vn/",
   "https://www.hdbank.com.vn/",
   "https://www.ocb.com.vn/",
+
+  // Shopping malls / retail property
+  "https://vincom.com.vn/",
+  "https://www.aeon.com.vn/",
+  "https://aeonmall-binhtan.com.vn/",
+  "https://aeonmall-hadong.com.vn/",
+  "https://aeonmall-haiphong-lechan.com.vn/",
+  "https://aeonmall-tanphuceladon.com.vn/",
+  "https://lottemallwestlakehanoi.vn/",
+  "https://www.thisomallsala.vn/vn",
+  "https://shopping.saigoncentre.com.vn/",
+  "https://www.crescentmall.com.vn/",
+  "https://gigamall.com.vn/",
+  "https://centralretail.com.vn/",
+
+  // Supermarket / grocery / food retail
+  "https://homefarm.vn/",
+  "https://www.winmart.vn/",
+  "https://co-opmart.com.vn/",
+  "https://mmvietnam.com/",
+  "https://emart.com.vn/",
+
+  // Electronics / technology
+  "https://www.thegioididong.com/",
+  "https://www.dienmayxanh.com/",
+  "https://fptshop.com.vn/",
+  "https://cellphones.com.vn/",
+  "https://viettelstore.vn/",
+
+  // Pharmacy / beauty
+  "https://nhathuoclongchau.com.vn/",
+  "https://www.pharmacity.vn/",
+  "https://www.guardian.com.vn/",
+  "https://www.watsons.vn/",
+
+  // Jewellery / fashion / lifestyle
+  "https://www.pnj.com.vn/",
+  "https://www.uniqlo.com/vn/",
+  "https://www.decathlon.vn/",
+  "https://www.canifa.com/",
+  "https://juno.vn/",
+
+  // F&B / entertainment
+  "https://www.highlandscoffee.com.vn/",
+  "https://phuclong.com.vn/",
+  "https://kfcvietnam.com.vn/",
+  "https://lotteria.vn/",
+  "https://jollibee.com.vn/",
+  "https://www.cgv.vn/",
+  "https://www.galaxycine.vn/"
 ];
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -186,9 +240,23 @@ await Actor.main(async () => {
       await seedRoot(raw, Boolean(row?.is_radar), "migrated_candidate");
       importedCandidates += 1;
     }
-    for (const url of seedUrls) await seedRoot(url, /bloggiamgia|picodi|giamgia|coupon|voucher/i.test(url), "curated_seed");
-    const record = { at: new Date().toISOString(), importedSources, importedCandidates, curatedSeeds: seedUrls.length };
+    const record = { at: new Date().toISOString(), importedSources, importedCandidates };
     await runtimeStore.setValue("BOOTSTRAPPED", record);
+    return record;
+  }
+
+  async function seedCuratedIfNeeded() {
+    const key = `CURATED_SEEDS_${CURATED_SEED_VERSION}`;
+    const already = await runtimeStore.getValue(key).catch(() => null);
+    if (already) return already;
+    let seededRoots = 0;
+    const prefix = `CURATED:${CURATED_SEED_VERSION}:`;
+    for (const url of seedUrls) {
+      await seedRoot(url, /bloggiamgia|picodi|giamgia|coupon|voucher/i.test(url), "curated_seed", prefix);
+      seededRoots += 1;
+    }
+    const record = { at: new Date().toISOString(), version: CURATED_SEED_VERSION, seededRoots };
+    await runtimeStore.setValue(key, record);
     return record;
   }
 
@@ -212,6 +280,7 @@ await Actor.main(async () => {
   const beforeInfo = await masterQueue.getInfo().catch(() => null);
   const beforeMaster = Number(beforeInfo?.totalRequestCount ?? 0);
   const bootstrap = await bootstrapOnce();
+  const curated = await seedCuratedIfNeeded();
   let dailySeeded = 0;
   if (mode === "daily") dailySeeded = await seedDaily();
 
@@ -299,7 +368,7 @@ await Actor.main(async () => {
     return cost;
   }
 
-  await publishStatus({ bootstrap, dailySeeded });
+  await publishStatus({ bootstrap, curated, dailySeeded });
 
   while (Date.now() < deadline) {
     const taskInfo = await taskQueue.getInfo().catch(() => null);
