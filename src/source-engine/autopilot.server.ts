@@ -1,4 +1,5 @@
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
+import type { Json } from "@/integrations/supabase/types";
 import { enqueueSearchQuery, enqueueTarget } from "./queue.server";
 
 export type AutopilotMode = "auto" | "master" | "daily";
@@ -64,7 +65,7 @@ async function setConfig(key: string, value: unknown, description?: string) {
   const { error } = await supabaseAdmin.from("system_config").upsert(
     {
       key,
-      value,
+      value: value as Json,
       description: description ?? null,
       updated_at: new Date().toISOString(),
     },
@@ -185,14 +186,14 @@ export async function getAutopilotStats(workerPrefix?: string | null) {
 
 export async function prepareAutopilotCycle(requestedMode: AutopilotMode = "auto") {
   const config = await getConfigMap();
-  if (config.autopilot_enabled === false) {
+  if (config['autopilot_enabled'] === false) {
     return { shouldRun: false, reason: "autopilot_disabled", mode: requestedMode, stats: await getAutopilotStats() };
   }
 
-  const baselineReady = config.source_baseline_ready === true;
+  const baselineReady = config['source_baseline_ready'] === true;
   const mode: "master" | "daily" = requestedMode === "auto" ? (baselineReady ? "daily" : "master") : requestedMode;
   const today = vnDate();
-  if (mode === "daily" && config.autopilot_last_daily_date === today) {
+  if (mode === "daily" && config['autopilot_last_daily_date'] === today) {
     return { shouldRun: false, reason: "daily_already_completed", mode, stats: await getAutopilotStats() };
   }
 
@@ -303,13 +304,13 @@ export async function prepareAutopilotCycle(requestedMode: AutopilotMode = "auto
 export async function finishAutopilotCycle(input: {
   mode: "master" | "daily";
   sourceCountBefore: number;
-  workerPrefix?: string | null;
-  apifyCostUsd?: number;
+  workerPrefix?: string | null | undefined;
+  apifyCostUsd?: number | undefined;
 }) {
   const stats = await getAutopilotStats(input.workerPrefix);
   const delta = Math.max(0, stats.masterSources - Math.max(0, input.sourceCountBefore));
   const config = await getConfigMap();
-  const oldStreak = Number(config.autopilot_low_growth_streak ?? 0);
+  const oldStreak = Number(config['autopilot_low_growth_streak'] ?? 0);
   const lowGrowthThreshold = Math.max(2, Math.floor(Math.max(1, input.sourceCountBefore) * 0.005));
   const lowGrowth = delta <= lowGrowthThreshold;
   const streak = lowGrowth ? oldStreak + 1 : 0;
