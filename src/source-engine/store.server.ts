@@ -1,5 +1,6 @@
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
 import { classifySourceType } from "./classify";
+import { applyMerchantEvidence } from "./merchants.server";
 import { authorityFor, isOfficialType, isRadarType } from "./taxonomy";
 import type { OriginResolution, SourceCandidateInput, WorkerHeartbeat } from "./types";
 import { normalizeUrl } from "./url-normalize";
