@@ -1,4 +1,4 @@
-name: Rebuild Native Apify Continuous Discovery
+name: Inspect Fresh Native Apify Run
 
 on:
   push:
@@ -11,47 +11,31 @@ permissions:
   contents: read
 
 jobs:
-  rebuild:
+  inspect:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Wait for display host to sync bridge patch
-        run: sleep 90
-      - name: Rebuild both native Actors and restart max scan
+      - name: Inspect new native runtime
         env:
           BOOTSTRAP_TOKEN: vKd5jIOoKvbcGSy7zWi0-LOVDXVNVjtU6RoHOq2z9oM
         run: |
           node <<'NODE'
           const fs = require('fs');
           (async () => {
-            const names = ['package.json','src/main.js','.actor/Dockerfile','.actor/actor.json','.actor/input_schema.json'];
-            const pack = (base) => names.map((name) => ({ name, format: 'TEXT', content: fs.readFileSync(base + name, 'utf8') }));
-            let last;
-            for (let attempt = 1; attempt <= 4; attempt++) {
-              const res = await fetch('https://source-scan-hub.lovable.app/api/bootstrap-native-apify', {
-                method: 'POST',
-                headers: { 'content-type': 'application/json', 'x-bootstrap-token': process.env.BOOTSTRAP_TOKEN },
-                body: JSON.stringify({
-                  action: 'buildRestart',
-                  workerFiles: pack('apify/native-worker/'),
-                  orchestratorFiles: pack('apify/native-orchestrator/'),
-                }),
-              });
-              const text = await res.text();
-              let payload;
-              try { payload = JSON.parse(text); } catch { payload = { raw: text.slice(0, 20000) }; }
-              last = { httpStatus: res.status, ...payload };
-              if (res.ok && payload?.ok !== false) break;
-              await new Promise(r => setTimeout(r, 30000));
-            }
-            fs.writeFileSync('native-rebuild.json', JSON.stringify(last, null, 2));
-            console.log(JSON.stringify({ httpStatus:last?.httpStatus, ok:last?.ok, builds:last?.builds, limits:last?.limits, schedule:last?.schedule, run:last?.run }, null, 2));
-            if (!last || last.httpStatus >= 400 || last.ok === false) process.exit(1);
-          })().catch((error) => { console.error(error); process.exit(1); });
+            await new Promise(r => setTimeout(r, 10000));
+            const res = await fetch('https://source-scan-hub.lovable.app/api/bootstrap-native-apify', {
+              method: 'POST',
+              headers: { 'content-type': 'application/json', 'x-bootstrap-token': process.env.BOOTSTRAP_TOKEN },
+              body: JSON.stringify({ action: 'inspect', runId: 'iyNrEJxSVRQ2FGFmS' }),
+            });
+            const payload = await res.json();
+            fs.writeFileSync('native-fresh-status.json', JSON.stringify({ httpStatus: res.status, ...payload }, null, 2));
+            console.log(JSON.stringify({ httpStatus:res.status, ok:payload?.ok, limits:payload?.limits, targetRun:payload?.targetRun, workerRuns:payload?.workerRuns && {running:payload.workerRuns.running,ready:payload.workerRuns.ready,succeeded:payload.workerRuns.succeeded,failed:payload.workerRuns.failed}, runtime:payload?.runtime?.status }, null, 2));
+            if (!res.ok || payload?.ok === false) process.exit(1);
+          })().catch(e => { console.error(e); process.exit(1); });
           NODE
-      - name: Upload rebuild result
+      - name: Upload status
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: native-rebuild
-          path: native-rebuild.json
+          name: native-fresh-status
+          path: native-fresh-status.json
