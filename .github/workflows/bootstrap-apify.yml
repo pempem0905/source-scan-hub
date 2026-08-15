@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Wait for Source Scan Hub production deploy
-        run: sleep 75
+      - name: Give production a moment to settle
+        run: sleep 8
       - name: Deploy orchestrator, schedule it, and start first cycle
         env:
           BOOTSTRAP_TOKEN: A-bJiCblqjurbY-6glgsQRV6FZq0a7BhDvRr52W04pM
@@ -26,17 +26,33 @@ jobs:
           const base = 'apify/orchestrator/';
           const names = ['package.json', 'src/main.js', '.actor/Dockerfile', '.actor/actor.json', '.actor/input_schema.json'];
           const sourceFiles = names.map((name) => ({ name, format: 'TEXT', content: fs.readFileSync(base + name, 'utf8') }));
-          const res = await fetch('https://source-scan-hub.lovable.app/api/bootstrap-apify', {
-            method: 'POST',
-            headers: {
-              'content-type': 'application/json',
-              'x-bootstrap-token': process.env.BOOTSTRAP_TOKEN,
-            },
-            body: JSON.stringify({ actorName: 'source-scan-hub-orchestrator', sourceFiles }),
-          });
-          const text = await res.text();
-          let payload;
-          try { payload = JSON.parse(text); } catch { payload = { raw: text.slice(0, 1000) }; }
-          console.log(JSON.stringify(payload, null, 2));
-          if (!res.ok || payload.ok === false) process.exit(1);
+          let record;
+          try {
+            const res = await fetch('https://source-scan-hub.lovable.app/api/bootstrap-apify', {
+              method: 'POST',
+              headers: {
+                'content-type': 'application/json',
+                'x-bootstrap-token': process.env.BOOTSTRAP_TOKEN,
+              },
+              body: JSON.stringify({ actorName: 'source-scan-hub-orchestrator', sourceFiles }),
+            });
+            const text = await res.text();
+            let payload;
+            try { payload = JSON.parse(text); } catch { payload = { raw: text.slice(0, 3000) }; }
+            record = { httpStatus: res.status, ...payload };
+            if (!res.ok || payload.ok === false) fs.writeFileSync('.bootstrap_failed', '1');
+          } catch (error) {
+            record = { transportError: error instanceof Error ? error.message : String(error) };
+            fs.writeFileSync('.bootstrap_failed', '1');
+          }
+          fs.writeFileSync('bootstrap-result.json', JSON.stringify(record, null, 2));
+          console.log(JSON.stringify(record, null, 2));
           NODE
+      - name: Upload bootstrap result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bootstrap-result
+          path: bootstrap-result.json
+      - name: Fail if bootstrap failed
+        run: test ! -f .bootstrap_failed
