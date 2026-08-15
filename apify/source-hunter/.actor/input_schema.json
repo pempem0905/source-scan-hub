@@ -1,0 +1,61 @@
+{
+  "title": "Source Scan Hub Worker Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "hubBaseUrl": {
+      "title": "Source Scan Hub base URL",
+      "type": "string",
+      "description": "Published Lovable app URL, for example https://source-scan-hub.lovable.app",
+      "editor": "textfield"
+    },
+    "workerToken": {
+      "title": "Worker token",
+      "type": "string",
+      "description": "Must match SOURCE_WORKER_TOKEN configured on Source Scan Hub server",
+      "editor": "textfield",
+      "isSecret": true
+    },
+    "lane": {
+      "title": "Worker lane",
+      "type": "string",
+      "enum": [
+        "SEARCH_DISCOVERY",
+        "ORIGIN_RESOLVER",
+        "DOMAIN_EXPANDER",
+        "SITEMAP_HUNTER",
+        "PROMO_PATH_HUNTER"
+      ],
+      "default": "ORIGIN_RESOLVER",
+      "editor": "select"
+    },
+    "workerId": {
+      "title": "Worker ID override",
+      "type": "string",
+      "description": "Optional; auto-generated when empty",
+      "editor": "textfield"
+    },
+    "maxItems": {
+      "title": "Maximum queue items per run",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5000,
+      "default": 250
+    },
+    "idlePollMs": {
+      "title": "Idle poll delay (ms)",
+      "type": "integer",
+      "minimum": 500,
+      "maximum": 60000,
+      "default": 2500
+    },
+    "emptyPollLimit": {
+      "title": "Empty polls before exit",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 50,
+      "default": 3
+    }
+  },
+  "required": ["hubBaseUrl", "workerToken", "lane"]
+}
