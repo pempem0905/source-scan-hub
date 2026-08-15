@@ -10,33 +10,128 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiCostRouteImport } from './routes/api-cost'
+import { Route as QueueRouteImport } from './routes/queue'
+import { Route as RadarRouteImport } from './routes/radar'
+import { Route as ResolverRouteImport } from './routes/resolver'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as SourcesRouteImport } from './routes/sources'
+import { Route as WorkersRouteImport } from './routes/workers'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiCostRoute = ApiCostRouteImport.update({
+  id: '/api-cost',
+  path: '/api-cost',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QueueRoute = QueueRouteImport.update({
+  id: '/queue',
+  path: '/queue',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RadarRoute = RadarRouteImport.update({
+  id: '/radar',
+  path: '/radar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResolverRoute = ResolverRouteImport.update({
+  id: '/resolver',
+  path: '/resolver',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SourcesRoute = SourcesRouteImport.update({
+  id: '/sources',
+  path: '/sources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkersRoute = WorkersRouteImport.update({
+  id: '/workers',
+  path: '/workers',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/api-cost': typeof ApiCostRoute
+  '/queue': typeof QueueRoute
+  '/radar': typeof RadarRoute
+  '/resolver': typeof ResolverRoute
+  '/settings': typeof SettingsRoute
+  '/sources': typeof SourcesRoute
+  '/workers': typeof WorkersRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/api-cost': typeof ApiCostRoute
+  '/queue': typeof QueueRoute
+  '/radar': typeof RadarRoute
+  '/resolver': typeof ResolverRoute
+  '/settings': typeof SettingsRoute
+  '/sources': typeof SourcesRoute
+  '/workers': typeof WorkersRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/api-cost': typeof ApiCostRoute
+  '/queue': typeof QueueRoute
+  '/radar': typeof RadarRoute
+  '/resolver': typeof ResolverRoute
+  '/settings': typeof SettingsRoute
+  '/sources': typeof SourcesRoute
+  '/workers': typeof WorkersRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/api-cost'
+    | '/queue'
+    | '/radar'
+    | '/resolver'
+    | '/settings'
+    | '/sources'
+    | '/workers'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/api-cost'
+    | '/queue'
+    | '/radar'
+    | '/resolver'
+    | '/settings'
+    | '/sources'
+    | '/workers'
+  id:
+    | '__root__'
+    | '/'
+    | '/api-cost'
+    | '/queue'
+    | '/radar'
+    | '/resolver'
+    | '/settings'
+    | '/sources'
+    | '/workers'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ApiCostRoute: typeof ApiCostRoute
+  QueueRoute: typeof QueueRoute
+  RadarRoute: typeof RadarRoute
+  ResolverRoute: typeof ResolverRoute
+  SettingsRoute: typeof SettingsRoute
+  SourcesRoute: typeof SourcesRoute
+  WorkersRoute: typeof WorkersRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +143,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api-cost': {
+      id: '/api-cost'
+      path: '/api-cost'
+      fullPath: '/api-cost'
+      preLoaderRoute: typeof ApiCostRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/queue': {
+      id: '/queue'
+      path: '/queue'
+      fullPath: '/queue'
+      preLoaderRoute: typeof QueueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/radar': {
+      id: '/radar'
+      path: '/radar'
+      fullPath: '/radar'
+      preLoaderRoute: typeof RadarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resolver': {
+      id: '/resolver'
+      path: '/resolver'
+      fullPath: '/resolver'
+      preLoaderRoute: typeof ResolverRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sources': {
+      id: '/sources'
+      path: '/sources'
+      fullPath: '/sources'
+      preLoaderRoute: typeof SourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/workers': {
+      id: '/workers'
+      path: '/workers'
+      fullPath: '/workers'
+      preLoaderRoute: typeof WorkersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ApiCostRoute: ApiCostRoute,
+  QueueRoute: QueueRoute,
+  RadarRoute: RadarRoute,
+  ResolverRoute: ResolverRoute,
+  SettingsRoute: SettingsRoute,
+  SourcesRoute: SourcesRoute,
+  WorkersRoute: WorkersRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
