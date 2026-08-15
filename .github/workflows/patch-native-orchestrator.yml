@@ -1,4 +1,4 @@
-name: Patch Native Orchestrator Scaling
+name: Patch Native Actor Permissions
 
 on:
   push:
@@ -15,49 +15,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Patch runtime-token-safe max capacity scaling
+      - name: Make native actors full-permission before each restart
         run: |
           python <<'PY'
           from pathlib import Path
-          p = Path('apify/native-orchestrator/src/main.js')
+          p = Path('src/routes/api/bootstrap-native-apify.ts')
           s = p.read_text()
-          replacements = [
-          (
-          '''  const projectBudgetUsd = Math.max(1, Number(input.projectBudgetUsd ?? 50));\n  const requestedMode = String(input.mode ?? "auto").toLowerCase();''',
-          '''  const projectBudgetUsd = Math.max(1, Number(input.projectBudgetUsd ?? 50));\n  const maxConcurrentJobs = Math.max(2, Math.min(256, Number(input.maxConcurrentJobs ?? 32)));\n  const forceLease = Boolean(input.forceLease ?? false);\n  const requestedMode = String(input.mode ?? "auto").toLowerCase();'''
-          ),
-          (
-          '''  if (oldLease?.expiresAt && new Date(oldLease.expiresAt).getTime() > Date.now() && oldLease.runId !== runId) {''',
-          '''  if (!forceLease && oldLease?.expiresAt && new Date(oldLease.expiresAt).getTime() > Date.now() && oldLease.runId !== runId) {'''
-          ),
-          (
-          '''  async function limits() {\n    return apify("/users/me/limits");\n  }\n\n  async function publishStatus(extra = {}) {\n    const l = await limits().catch(() => null);''',
-          '''  async function publishStatus(extra = {}) {'''
-          ),
-          (
-          '''      maxConcurrentActorJobs: l?.limits?.maxConcurrentActorJobs ?? null,\n      activeActorJobs: l?.current?.activeActorJobCount ?? null,''',
-          '''      maxConcurrentActorJobs: maxConcurrentJobs,\n      activeActorJobs: null,'''
-          ),
-          (
-          '''    const l = await limits();\n    const maxJobs = Number(l?.limits?.maxConcurrentActorJobs ?? 1);\n    const active = Number(l?.current?.activeActorJobCount ?? 1);\n    const freeSlots = Math.max(0, maxJobs - active);\n    if (freeSlots <= 0) { await sleep(5000); continue; }\n\n    const dailyRemaining''',
-          '''    const targetWorkerSlots = Math.max(1, maxConcurrentJobs - 1);\n\n    const dailyRemaining'''
-          ),
-          (
-          '''    const slots = Math.max(0, Math.min(freeSlots, pending, budgetSlots));\n    if (slots <= 0) break;\n\n    batches += 1;\n    const ids = [];\n    for (let i = 0; i < slots && Date.now() < deadline; i += 1) ids.push(await startWorker(i + 1));\n    await publishStatus({ batch: batches, batchLaunched: ids.length, freeSlotsBefore: freeSlots, maxJobs });\n    if (!ids.length) break;''',
-          '''    const slots = Math.max(0, Math.min(targetWorkerSlots, pending, budgetSlots));\n    if (slots <= 0) break;\n\n    batches += 1;\n    const ids = [];\n    for (let i = 0; i < slots && Date.now() < deadline; i += 1) {\n      try {\n        ids.push(await startWorker(i + 1));\n      } catch (error) {\n        const message = error instanceof Error ? error.message : String(error);\n        if (/limit|concurrent|too many|capacity|quota|429/i.test(message)) {\n          log.info("Account capacity reached; keeping every available slot full", { launched: ids.length, targetWorkerSlots, message: message.slice(0, 240) });\n          break;\n        }\n        throw error;\n      }\n    }\n    await publishStatus({ batch: batches, batchLaunched: ids.length, maxJobs: maxConcurrentJobs, targetWorkerSlots });\n    if (!ids.length) { await sleep(5000); continue; }'''
-          ),
-          ]
-          for old, new in replacements:
-              if old not in s:
-                  raise SystemExit('Patch target not found:\n' + old[:180])
-              s = s.replace(old, new, 1)
+          old = '''async function scheduleAndRun(workerId: string, orchestratorId: string, forceLease: boolean) {\n  const [limits, schedules] = await Promise.all([apify("/users/me/limits"), apify("/schedules?limit=1000")]);'''
+          new = '''async function scheduleAndRun(workerId: string, orchestratorId: string, forceLease: boolean) {\n  await Promise.all([\n    apify(`/actors/${encodeURIComponent(workerId)}`, { method: "PUT", body: JSON.stringify({ actorPermissionLevel: "FULL_PERMISSIONS" }) }),\n    apify(`/actors/${encodeURIComponent(orchestratorId)}`, { method: "PUT", body: JSON.stringify({ actorPermissionLevel: "FULL_PERMISSIONS" }) }),\n  ]);\n  const [limits, schedules] = await Promise.all([apify("/users/me/limits"), apify("/schedules?limit=1000")]);'''
+          if old not in s:
+              raise SystemExit('scheduleAndRun patch target not found')
+          s = s.replace(old, new, 1)
+          old2 = '''  const params = new URLSearchParams({ memory: "256", timeout: "4200", build: "latest", maxTotalChargeUsd: "0.1" });'''
+          new2 = '''  const params = new URLSearchParams({ memory: "256", timeout: "4200", build: "latest", maxTotalChargeUsd: "0.1", forcePermissionLevel: "FULL_PERMISSIONS" });'''
+          if old2 not in s:
+              raise SystemExit('run params patch target not found')
+          s = s.replace(old2, new2, 1)
           p.write_text(s)
           PY
-          node --check apify/native-orchestrator/src/main.js
-      - name: Commit patched orchestrator
+      - name: Commit full-permission restart bridge
         run: |
           git config user.name "source-scan-autopilot"
           git config user.email "75533279+pempem0905@users.noreply.github.com"
-          git add apify/native-orchestrator/src/main.js
-          git commit -m "Make native orchestrator fill all Apify slots"
+          git add src/routes/api/bootstrap-native-apify.ts
+          git commit -m "Run native Actors with full Apify storage permissions"
           git push
