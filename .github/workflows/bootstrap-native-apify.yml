@@ -1,0 +1,63 @@
+name: Bootstrap Apify Native Control Plane
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/bootstrap-native-apify.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for display deployment
+        run: sleep 75
+      - name: Build and activate Apify-native actors
+        env:
+          BOOTSTRAP_TOKEN: PyqmUpj7SBNd-EB5yw48dkkRz0WbegxfaInGQIelsyU
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          (async () => {
+            const pack = (base) => ['package.json','src/main.js','.actor/Dockerfile','.actor/actor.json','.actor/input_schema.json']
+              .map((name) => ({ name, format: 'TEXT', content: fs.readFileSync(base + name, 'utf8') }));
+            let record;
+            try {
+              const res = await fetch('https://source-scan-hub.lovable.app/api/bootstrap-native-apify', {
+                method: 'POST',
+                headers: { 'content-type': 'application/json', 'x-bootstrap-token': process.env.BOOTSTRAP_TOKEN },
+                body: JSON.stringify({
+                  workerFiles: pack('apify/native-worker/'),
+                  orchestratorFiles: pack('apify/native-orchestrator/'),
+                }),
+              });
+              const text = await res.text();
+              let payload;
+              try { payload = JSON.parse(text); } catch { payload = { raw: text.slice(0, 5000) }; }
+              record = { httpStatus: res.status, ...payload };
+              if (!res.ok || payload.ok === false) fs.writeFileSync('.bootstrap_failed', '1');
+            } catch (error) {
+              record = { transportError: error instanceof Error ? error.message : String(error) };
+              fs.writeFileSync('.bootstrap_failed', '1');
+            }
+            fs.writeFileSync('native-bootstrap-result.json', JSON.stringify(record, null, 2));
+            console.log(JSON.stringify(record, null, 2));
+          })().catch((error) => {
+            fs.writeFileSync('native-bootstrap-result.json', JSON.stringify({ scriptError: error instanceof Error ? error.message : String(error) }, null, 2));
+            fs.writeFileSync('.bootstrap_failed', '1');
+          });
+          NODE
+      - name: Upload result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-bootstrap-result
+          path: native-bootstrap-result.json
+      - name: Fail if bootstrap failed
+        if: always()
+        run: test ! -f .bootstrap_failed
