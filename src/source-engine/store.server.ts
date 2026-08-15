@@ -1,5 +1,6 @@
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
 import { classifySourceType } from "./classify";
+import { applyMerchantEvidence } from "./merchants.server";
 import { authorityFor, isOfficialType, isRadarType } from "./taxonomy";
 import type { OriginResolution, SourceCandidateInput, WorkerHeartbeat } from "./types";
 import { normalizeUrl } from "./url-normalize";
@@ -118,18 +119,31 @@ export async function applyOriginResolution(candidateId: string, resolution: Ori
   });
   if (edgeError) throw edgeError;
 
+  // Radar -> merchant linkage runs before promotion so a candidate with strong
+  // (>=2 distinct radar) evidence can promote in the same pass.
+  let current = updated;
+  if (resolution.resolutionStatus === "resolved") {
+    await applyMerchantEvidence(current);
+    const { data: refreshed } = await supabaseAdmin
+      .from("source_candidates")
+      .select("*")
+      .eq("id", candidateId)
+      .maybeSingle();
+    if (refreshed) current = refreshed;
+  }
+
   // Auto-promote: a successful resolution plus an already-known classification
   // (official or radar) is enough to become a real source. OTHER never promotes
   // just because it resolved. promoteCandidateToSource is idempotent.
   if (
     resolution.resolutionStatus === "resolved" &&
-    updated.source_type !== "OTHER" &&
-    (updated.is_official === true || updated.is_radar === true)
+    current.source_type !== "OTHER" &&
+    (current.is_official === true || current.is_radar === true)
   ) {
     await promoteCandidateToSource(candidateId);
   }
 
-  return updated;
+  return current;
 }
 
 export async function promoteCandidateToSource(candidateId: string) {

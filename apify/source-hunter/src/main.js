@@ -60,6 +60,49 @@ function extractLinks(html, baseUrl, limit = 500) {
   return [...out];
 }
 
+// Domain Expander keeps the raw href (minus the fragment): affiliate/click/ref
+// params are what make the redirect resolvable to a merchant origin. Stripping
+// them here would destroy the redirect before ORIGIN_RESOLVER ever sees it.
+function extractRawLinks(html, baseUrl, limit = 800) {
+  const out = new Set();
+  const re = /<a\b[^>]*\bhref=["']([^"']+)["']/gi;
+  let m;
+  while ((m = re.exec(html)) && out.size < limit) {
+    try {
+      const u = new URL(m[1], baseUrl);
+      if (u.protocol !== "http:" && u.protocol !== "https:") continue;
+      u.hash = "";
+      out.add(u.toString());
+    } catch {}
+  }
+  return [...out];
+}
+
+// Utility / social / infrastructure hosts that are never merchant origins.
+const NOISE_HOST_RE =
+  /(^|\.)(facebook|fb|instagram|linkedin|twitter|x|t|pinterest|tiktok|youtube|youtu|zalo|telegram|whatsapp|threads|reddit|messenger)\.(com|me|be|co|vn|net|org)$|(^|\.)(google|googleapis|googletagmanager|google-analytics|gstatic|doubleclick|googlesyndication|googleadservices)\.|(^|\.)(schema\.org|w3\.org|cloudflare\.com|cloudflareinsights\.com|jsdelivr\.net|unpkg\.com|bootstrapcdn\.com|fontawesome\.com|gravatar\.com|wordpress\.org|wp\.com|apple\.com|microsoft\.com|adobe\.com|jquery\.com|githubusercontent\.com)$|(^|\.)(apps\.apple\.com|play\.google\.com)$/i;
+
+const ASSET_RE = /\.(png|jpe?g|gif|svg|webp|ico|css|js|mjs|woff2?|ttf|eot|pdf|zip|mp4|mp3|xml|rss)$/i;
+
+// Hosts whose links are per-merchant redirects — each distinct URL is a
+// different destination, so they are not collapsed to one per host.
+const AFFILIATE_HOST_RE =
+  /(accesstrade|adpia|masoffer|involve\.asia|invol\.co|ecomobi|interspace|shorten\.asia|isclix|admitad|awin|linksynergy|adflex|permate|leadscloud|clickbank)/i;
+
+const AFFILIATE_PATH_RE = /\/(go|out|click|redirect|deal|link|aff|track|r)\//i;
+
+function isAffiliateLink(u) {
+  if (AFFILIATE_HOST_RE.test(u.hostname)) return true;
+  if (AFFILIATE_PATH_RE.test(u.pathname)) return true;
+  for (const k of u.searchParams.keys()) {
+    const key = k.toLowerCase();
+    if (["url", "u", "to", "target", "redirect", "dest", "aff", "aff_id", "affiliate_id", "subid", "sub_id", "clickid", "click_id", "ref"].includes(key)) {
+      return true;
+    }
+  }
+  return false;
+}
+
 async function fetchManual(url) {
   return fetch(url, {
     redirect: "manual",
@@ -204,16 +247,59 @@ async function main() {
         if (res.status === 429) count429 += 1;
         const html = (await res.text()).slice(0, 600000);
         const baseHost = new URL(item.target_url).hostname.replace(/^www\./, "");
-        const links = extractLinks(html, item.target_url, 400);
-        const candidates = links
-          .filter((url) => {
-            const u = new URL(url);
-            const host = u.hostname.replace(/^www\./, "");
-            const promo = PROMO_HINTS.some((hint) => u.pathname.toLowerCase().includes(hint));
-            return host !== baseHost || promo;
-          })
-          .slice(0, 300)
-          .map((url) => ({ url, sourceType: "OTHER", discoveredVia: `domain_expander:${baseHost}`, market: "VN" }));
+        const links = extractRawLinks(html, item.target_url, 800);
+
+        const MAX_OUT = 150;
+        const MAX_PER_DIRECT_HOST = 2;
+        const MAX_SAME_HOST_PROMO = 15;
+
+        const affiliateUrls = [];
+        const directByHost = new Map();
+        const samePromo = [];
+
+        for (const url of links) {
+          let u;
+          try { u = new URL(url); } catch { continue; }
+          const host = u.hostname.replace(/^www\./, "").toLowerCase();
+          if (ASSET_RE.test(u.pathname)) continue;
+
+          if (host === baseHost) {
+            // Same-domain promo paths are kept separately; outbound merchant
+            // discovery is this lane's primary Wave 2 purpose.
+            if (samePromo.length < MAX_SAME_HOST_PROMO && PROMO_HINTS.some((h) => u.pathname.toLowerCase().includes(h))) {
+              samePromo.push(u.toString());
+            }
+            continue;
+          }
+          if (NOISE_HOST_RE.test(host)) continue;
+
+          if (isAffiliateLink(u)) {
+            // Each redirect URL can lead to a different merchant: keep them all.
+            affiliateUrls.push(u.toString());
+          } else {
+            const list = directByHost.get(host) ?? [];
+            if (list.length < MAX_PER_DIRECT_HOST) {
+              list.push(u.toString());
+              directByHost.set(host, list);
+            }
+          }
+        }
+
+        // Prioritise affiliate redirects, then one representative URL per new
+        // external host, then the extra per-host URLs, then same-host promo.
+        const firstPerHost = [...directByHost.values()].map((v) => v[0]);
+        const restPerHost = [...directByHost.values()].flatMap((v) => v.slice(1));
+        const ordered = [...new Set([...affiliateUrls, ...firstPerHost, ...restPerHost, ...samePromo])].slice(0, MAX_OUT);
+
+        const candidates = ordered.map((url) => ({
+          url,
+          sourceType: "OTHER",
+          discoveredVia:
+            new URL(url).hostname.replace(/^www\./, "").toLowerCase() === baseHost
+              ? `promo_path:${baseHost}`
+              : `domain_expander:${baseHost}`,
+          market: "VN",
+        }));
         if (candidates.length) {
           const result = await post("candidates", { candidates });
           qualified += Number(result.count ?? 0);
