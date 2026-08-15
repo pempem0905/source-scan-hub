@@ -1,4 +1,4 @@
-name: One-shot Apify Budget 40
+name: Inspect Apify Budget 40
 on:
   push:
     branches: [main]
@@ -7,19 +7,19 @@ on:
 permissions:
   contents: read
 jobs:
-  apply:
+  inspect:
     runs-on: ubuntu-latest
     steps:
       - name: Wait for production deploy
-        run: sleep 45
-      - name: Raise Apify daily cap and restart
+        run: sleep 25
+      - name: Inspect Apify native runtime
         run: |
           node <<'NODE'
           (async()=>{
             const res = await fetch('https://source-scan-hub.lovable.app/api/temp-apify-budget40', {
               method:'POST',
               headers:{'content-type':'application/json','x-one-shot':'budget40-20260815-2249'},
-              body:'{}'
+              body:JSON.stringify({action:'inspect'})
             });
             const text = await res.text();
             console.log(text);
