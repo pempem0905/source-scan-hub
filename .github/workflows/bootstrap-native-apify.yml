@@ -1,4 +1,4 @@
-name: Bootstrap Apify Native Control Plane
+name: Activate Apify Native Control Plane
 
 on:
   push:
@@ -11,53 +11,47 @@ permissions:
   contents: read
 
 jobs:
-  bootstrap:
+  activate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - name: Wait for display deployment
-        run: sleep 10
-      - name: Build and activate Apify-native actors
+        run: sleep 60
+      - name: Activate native schedule and first run
         env:
-          BOOTSTRAP_TOKEN: PyqmUpj7SBNd-EB5yw48dkkRz0WbegxfaInGQIelsyU
+          BOOTSTRAP_TOKEN: vKd5jIOoKvbcGSy7zWi0-LOVDXVNVjtU6RoHOq2z9oM
         run: |
           node <<'NODE'
           const fs = require('fs');
           (async () => {
-            const pack = (base) => ['package.json','src/main.js','.actor/Dockerfile','.actor/actor.json','.actor/input_schema.json']
-              .map((name) => ({ name, format: 'TEXT', content: fs.readFileSync(base + name, 'utf8') }));
             let record;
             try {
-              const res = await fetch('https://source-scan-hub.lovable.app/api/bootstrap-native-apify', {
+              const res = await fetch('https://source-scan-hub.lovable.app/api/activate-native-apify', {
                 method: 'POST',
                 headers: { 'content-type': 'application/json', 'x-bootstrap-token': process.env.BOOTSTRAP_TOKEN },
-                body: JSON.stringify({
-                  workerFiles: pack('apify/native-worker/'),
-                  orchestratorFiles: pack('apify/native-orchestrator/'),
-                }),
+                body: '{}',
               });
               const text = await res.text();
               let payload;
               try { payload = JSON.parse(text); } catch { payload = { raw: text.slice(0, 10000) }; }
               record = { httpStatus: res.status, ...payload };
-              if (!res.ok || payload.ok === false) fs.writeFileSync('.bootstrap_failed', '1');
+              if (!res.ok || payload.ok === false) fs.writeFileSync('.activate_failed', '1');
             } catch (error) {
               record = { transportError: error instanceof Error ? error.message : String(error) };
-              fs.writeFileSync('.bootstrap_failed', '1');
+              fs.writeFileSync('.activate_failed', '1');
             }
-            fs.writeFileSync('native-bootstrap-result.json', JSON.stringify(record, null, 2));
+            fs.writeFileSync('native-activation-result.json', JSON.stringify(record, null, 2));
             console.log(JSON.stringify(record, null, 2));
           })().catch((error) => {
-            fs.writeFileSync('native-bootstrap-result.json', JSON.stringify({ scriptError: error instanceof Error ? error.message : String(error) }, null, 2));
-            fs.writeFileSync('.bootstrap_failed', '1');
+            fs.writeFileSync('native-activation-result.json', JSON.stringify({ scriptError: error instanceof Error ? error.message : String(error) }, null, 2));
+            fs.writeFileSync('.activate_failed', '1');
           });
           NODE
       - name: Upload result
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: native-bootstrap-result
-          path: native-bootstrap-result.json
-      - name: Fail if bootstrap failed
+          name: native-activation-result
+          path: native-activation-result.json
+      - name: Fail if activation failed
         if: always()
-        run: test ! -f .bootstrap_failed
+        run: test ! -f .activate_failed
