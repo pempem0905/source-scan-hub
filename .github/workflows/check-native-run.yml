@@ -1,4 +1,4 @@
-name: Verify Native Apify Workers
+name: Capture Native Worker Failure
 
 on:
   push:
@@ -11,51 +11,15 @@ permissions:
   contents: read
 
 jobs:
-  check:
+  diagnose:
     runs-on: ubuntu-latest
     steps:
-      - name: Let native workers occupy Apify slots
-        run: sleep 35
-      - name: Inspect native runtime
-        env:
-          BOOTSTRAP_TOKEN: vKd5jIOoKvbcGSy7zWi0-LOVDXVNVjtU6RoHOq2z9oM
+      - name: Fetch failed worker log directly from Apify
         run: |
-          node <<'NODE'
-          const fs = require('fs');
-          (async () => {
-            const res = await fetch('https://source-scan-hub.lovable.app/api/bootstrap-native-apify', {
-              method: 'POST',
-              headers: { 'content-type': 'application/json', 'x-bootstrap-token': process.env.BOOTSTRAP_TOKEN },
-              body: JSON.stringify({ action: 'inspect', runId: 'kwD5Pa3RTFhzlvePl' }),
-            });
-            const text = await res.text();
-            let payload;
-            try { payload = JSON.parse(text); } catch { payload = { raw: text.slice(0, 20000) }; }
-            fs.writeFileSync('native-runtime-status.json', JSON.stringify({ httpStatus: res.status, ...payload }, null, 2));
-            console.log(JSON.stringify({
-              httpStatus: res.status,
-              ok: payload?.ok,
-              limits: payload?.limits,
-              targetRun: payload?.targetRun,
-              workerRuns: payload?.workerRuns && {
-                totalShown: payload.workerRuns.totalShown,
-                running: payload.workerRuns.running,
-                ready: payload.workerRuns.ready,
-                succeeded: payload.workerRuns.succeeded,
-                failed: payload.workerRuns.failed,
-              },
-              runtimeStatus: payload?.runtime?.status,
-              runtimeBudget: payload?.runtime?.budget,
-            }, null, 2));
-            if (!res.ok || payload?.ok === false) process.exit(1);
-          })().catch((error) => {
-            fs.writeFileSync('native-runtime-status.json', JSON.stringify({ error: error instanceof Error ? error.message : String(error) }, null, 2));
-            process.exit(1);
-          });
-          NODE
-      - name: Upload runtime status
-        if: always()
+          curl -fsSL 'https://api.apify.com/v2/logs/eiUqUZVFQov1alClH' -o failed-worker.log
+          tail -n 120 failed-worker.log
+      - name: Upload worker log
         uses: actions/upload-artifact@v4
         with:
-          name: native-runtime-status
-          path: native-runtime-status.json
+          name: failed-worker-log
+          path: failed-worker.log
