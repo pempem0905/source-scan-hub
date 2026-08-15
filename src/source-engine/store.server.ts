@@ -118,6 +118,17 @@ export async function applyOriginResolution(candidateId: string, resolution: Ori
   });
   if (edgeError) throw edgeError;
 
+  // Auto-promote: a successful resolution plus an already-known classification
+  // (official or radar) is enough to become a real source. OTHER never promotes
+  // just because it resolved. promoteCandidateToSource is idempotent.
+  if (
+    resolution.resolutionStatus === "resolved" &&
+    updated.source_type !== "OTHER" &&
+    (updated.is_official === true || updated.is_radar === true)
+  ) {
+    await promoteCandidateToSource(candidateId);
+  }
+
   return updated;
 }
 
