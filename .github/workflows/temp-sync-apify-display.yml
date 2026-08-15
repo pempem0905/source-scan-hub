@@ -1,4 +1,4 @@
-name: One-shot repair Apify display telemetry
+name: One-shot backfill Apify display telemetry
 on:
   push:
     branches: [main]
@@ -12,14 +12,14 @@ jobs:
     steps:
       - name: Wait for production deploy
         run: sleep 45
-      - name: Repair telemetry and inspect native queues
+      - name: Backfill missed native sources and restart
         run: |
           node <<'NODE'
           (async()=>{
             const res=await fetch('https://source-scan-hub.lovable.app/api/temp-sync-apify-display',{
               method:'POST',
               headers:{'content-type':'application/json','x-one-shot':'9sTcuUbRnSlKRewYEhJ9TNdxoGqpaN24'},
-              body:'{}'
+              body:JSON.stringify({action:'backfillRun'})
             });
             const text=await res.text();
             console.log(text);
