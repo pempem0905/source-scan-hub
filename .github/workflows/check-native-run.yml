@@ -14,26 +14,34 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch native orchestrator run
+      - name: Wait for diagnostic deploy
+        run: sleep 60
+      - name: Inspect native Apify runtime
+        env:
+          BOOTSTRAP_TOKEN: vKd5jIOoKvbcGSy7zWi0-LOVDXVNVjtU6RoHOq2z9oM
         run: |
           node <<'NODE'
           const fs = require('fs');
           (async () => {
-            const runId = 'xgW6jZLyZKiqwYEfa';
-            const res = await fetch(`https://api.apify.com/v2/actor-runs/${runId}`);
+            const res = await fetch('https://source-scan-hub.lovable.app/api/bootstrap-native-apify', {
+              method: 'POST',
+              headers: { 'content-type': 'application/json', 'x-bootstrap-token': process.env.BOOTSTRAP_TOKEN },
+              body: JSON.stringify({ action: 'inspect', runId: 'xgW6jZLyZKiqwYEfa' }),
+            });
             const text = await res.text();
             let payload;
-            try { payload = JSON.parse(text); } catch { payload = { raw: text.slice(0, 10000) }; }
-            fs.writeFileSync('native-run-status.json', JSON.stringify({ httpStatus: res.status, ...payload }, null, 2));
-            console.log(JSON.stringify({ httpStatus: res.status, status: payload?.data?.status, startedAt: payload?.data?.startedAt, finishedAt: payload?.data?.finishedAt, defaultDatasetId: payload?.data?.defaultDatasetId }, null, 2));
+            try { payload = JSON.parse(text); } catch { payload = { raw: text.slice(0, 20000) }; }
+            fs.writeFileSync('native-runtime-status.json', JSON.stringify({ httpStatus: res.status, ...payload }, null, 2));
+            console.log(JSON.stringify({ httpStatus: res.status, ok: payload?.ok, limits: payload?.limits, targetRun: payload?.targetRun, workerRuns: payload?.workerRuns && { totalShown: payload.workerRuns.totalShown, running: payload.workerRuns.running, ready: payload.workerRuns.ready, succeeded: payload.workerRuns.succeeded, failed: payload.workerRuns.failed }, runtime: payload?.runtime?.status }, null, 2));
+            if (!res.ok || payload?.ok === false) process.exit(1);
           })().catch((error) => {
-            fs.writeFileSync('native-run-status.json', JSON.stringify({ error: error instanceof Error ? error.message : String(error) }, null, 2));
+            fs.writeFileSync('native-runtime-status.json', JSON.stringify({ error: error instanceof Error ? error.message : String(error) }, null, 2));
             process.exit(1);
           });
           NODE
-      - name: Upload run status
+      - name: Upload runtime status
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: native-run-status
-          path: native-run-status.json
+          name: native-runtime-status
+          path: native-runtime-status.json
