@@ -8,7 +8,8 @@ import {
   failTarget,
   retryTarget,
 } from "@/source-engine/queue.server";
-import { applyOriginResolution, heartbeatWorker, ingestCandidate, recordApiUsage } from "@/source-engine/store.server";
+import { applyOriginResolutionByUrl } from "@/source-engine/resolution-store.server";
+import { heartbeatWorker, ingestCandidate, recordApiUsage } from "@/source-engine/store.server";
 import { SOURCE_TYPES, WORKER_LANES } from "@/source-engine/types";
 import { assertWorkerRequest, workerErrorResponse } from "@/source-engine/worker-auth.server";
 
@@ -39,7 +40,7 @@ const heartbeatSchema = z.object({
 });
 
 const resolutionSchema = z.object({
-  candidateId: z.string().uuid(),
+  candidateId: z.string().uuid().nullable().optional(),
   resolution: z.object({
     discoveredUrl: z.string().url(),
     finalUrl: z.string().url(),
@@ -124,7 +125,7 @@ export const Route = createFileRoute("/api/source-engine/$action")({
             const payload = resolutionSchema.parse(body);
             return Response.json({
               ok: true,
-              candidate: await applyOriginResolution(payload.candidateId, payload.resolution),
+              candidate: await applyOriginResolutionByUrl(payload.candidateId, payload.resolution),
             });
           }
 
