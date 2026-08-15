@@ -1,4 +1,4 @@
-name: Inspect Fresh Native Apify Run
+name: Fast Rebuild Native Apify
 
 on:
   push:
@@ -11,31 +11,35 @@ permissions:
   contents: read
 
 jobs:
-  inspect:
+  rebuild:
     runs-on: ubuntu-latest
     steps:
-      - name: Inspect new native runtime
+      - uses: actions/checkout@v4
+      - name: Rebuild both Actors on published bridge
         env:
           BOOTSTRAP_TOKEN: vKd5jIOoKvbcGSy7zWi0-LOVDXVNVjtU6RoHOq2z9oM
         run: |
           node <<'NODE'
           const fs = require('fs');
           (async () => {
-            await new Promise(r => setTimeout(r, 10000));
+            await new Promise(r => setTimeout(r, 5000));
+            const names = ['package.json','src/main.js','.actor/Dockerfile','.actor/actor.json','.actor/input_schema.json'];
+            const pack = (base) => names.map((name) => ({ name, format: 'TEXT', content: fs.readFileSync(base + name, 'utf8') }));
             const res = await fetch('https://source-scan-hub.lovable.app/api/bootstrap-native-apify', {
               method: 'POST',
               headers: { 'content-type': 'application/json', 'x-bootstrap-token': process.env.BOOTSTRAP_TOKEN },
-              body: JSON.stringify({ action: 'inspect', runId: 'iyNrEJxSVRQ2FGFmS' }),
+              body: JSON.stringify({ action:'buildRestart', workerFiles:pack('apify/native-worker/'), orchestratorFiles:pack('apify/native-orchestrator/') }),
             });
-            const payload = await res.json();
-            fs.writeFileSync('native-fresh-status.json', JSON.stringify({ httpStatus: res.status, ...payload }, null, 2));
-            console.log(JSON.stringify({ httpStatus:res.status, ok:payload?.ok, limits:payload?.limits, targetRun:payload?.targetRun, workerRuns:payload?.workerRuns && {running:payload.workerRuns.running,ready:payload.workerRuns.ready,succeeded:payload.workerRuns.succeeded,failed:payload.workerRuns.failed}, runtime:payload?.runtime?.status }, null, 2));
-            if (!res.ok || payload?.ok === false) process.exit(1);
-          })().catch(e => { console.error(e); process.exit(1); });
+            const text = await res.text();
+            let payload; try { payload=JSON.parse(text); } catch { payload={raw:text}; }
+            fs.writeFileSync('native-fast-rebuild.json', JSON.stringify({httpStatus:res.status,...payload},null,2));
+            console.log(JSON.stringify({httpStatus:res.status,ok:payload?.ok,builds:payload?.builds,limits:payload?.limits,schedule:payload?.schedule,run:payload?.run},null,2));
+            if (!res.ok || payload?.ok===false) process.exit(1);
+          })().catch(e=>{console.error(e);process.exit(1)});
           NODE
-      - name: Upload status
+      - name: Upload rebuild
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: native-fresh-status
-          path: native-fresh-status.json
+          name: native-fast-rebuild
+          path: native-fast-rebuild.json
