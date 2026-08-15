@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Wait for display deployment
-        run: sleep 45
+        run: sleep 10
       - name: Build and activate Apify-native actors
         env:
           BOOTSTRAP_TOKEN: PyqmUpj7SBNd-EB5yw48dkkRz0WbegxfaInGQIelsyU
