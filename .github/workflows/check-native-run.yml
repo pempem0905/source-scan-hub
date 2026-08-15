@@ -1,4 +1,4 @@
-name: Remove Duplicate Native Orchestrator
+name: Verify Native Apify Capacity
 
 on:
   push:
@@ -11,21 +11,22 @@ permissions:
   contents: read
 
 jobs:
-  cleanup:
+  inspect:
     runs-on: ubuntu-latest
     steps:
-      - name: Abort duplicate manual orchestrator
+      - name: Verify scheduled runtime
         env:
           BOOTSTRAP_TOKEN: vKd5jIOoKvbcGSy7zWi0-LOVDXVNVjtU6RoHOq2z9oM
         run: |
           node <<'NODE'
           (async()=>{
+            await new Promise(r=>setTimeout(r,5000));
             const res=await fetch('https://source-scan-hub.lovable.app/api/bootstrap-native-apify',{
               method:'POST',headers:{'content-type':'application/json','x-bootstrap-token':process.env.BOOTSTRAP_TOKEN},
-              body:JSON.stringify({action:'diagnoseAbort',runId:'430ffx6XVecUbPG6l'})
+              body:JSON.stringify({action:'inspect',runId:'97OvFctJGU8Zjqwpe'})
             });
             const p=await res.json();
-            console.log(JSON.stringify({httpStatus:res.status,ok:p?.ok,aborted:p?.aborted},null,2));
+            console.log(JSON.stringify({httpStatus:res.status,ok:p?.ok,limits:p?.limits,targetRun:p?.targetRun,workerRuns:p?.workerRuns&&{running:p.workerRuns.running,ready:p.workerRuns.ready,succeeded:p.workerRuns.succeeded,failed:p.workerRuns.failed},runtimeStatus:p?.runtime?.status,runtimeBudget:p?.runtime?.budget},null,2));
             if(!res.ok||p?.ok===false)process.exit(1);
           })().catch(e=>{console.error(e);process.exit(1)});
           NODE
