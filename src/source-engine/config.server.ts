@@ -42,7 +42,7 @@ function moneyEnv(name: string, fallback: number): number {
 }
 
 export function getSourceEngineRuntimeConfig(): SourceEngineRuntimeConfig {
-  const mode = (process.env.SOURCE_ENGINE_POWER_MODE ?? DEFAULT_CONFIG.powerMode).toUpperCase();
+  const mode = (process.env['SOURCE_ENGINE_POWER_MODE'] ?? DEFAULT_CONFIG.powerMode).toUpperCase();
   const powerMode: PowerMode = mode === "ECO" || mode === "MAX_SPEED" ? mode : "AUTO";
 
   const modeConcurrency = powerMode === "MAX_SPEED" ? 256 : powerMode === "ECO" ? 16 : 64;
@@ -63,7 +63,7 @@ export function getSourceEngineRuntimeConfig(): SourceEngineRuntimeConfig {
 
 export function getRequiredServerSecrets() {
   return {
-    apifyTokenPresent: Boolean(process.env.APIFY_TOKEN),
-    braveSearchKeyPresent: Boolean(process.env.BRAVE_SEARCH_API_KEY),
+    apifyTokenPresent: Boolean(process.env['APIFY_TOKEN']),
+    braveSearchKeyPresent: Boolean(process.env['BRAVE_SEARCH_API_KEY']),
   };
 }

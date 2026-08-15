@@ -17,7 +17,7 @@ export interface ApifyRunInfo {
 }
 
 function token(): string {
-  const value = process.env.APIFY_TOKEN;
+  const value = process.env['APIFY_TOKEN'];
   if (!value) throw new Error("Missing APIFY_TOKEN server secret");
   return value;
 }

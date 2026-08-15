@@ -18,7 +18,7 @@ export async function braveSearch(
   query: string,
   options: { count?: number; country?: string; searchLang?: string } = {},
 ): Promise<SearchResult[]> {
-  const apiKey = process.env.BRAVE_SEARCH_API_KEY;
+  const apiKey = process.env['BRAVE_SEARCH_API_KEY'];
   if (!apiKey) throw new Error("Missing BRAVE_SEARCH_API_KEY server secret");
 
   const url = new URL(BRAVE_ENDPOINT);
