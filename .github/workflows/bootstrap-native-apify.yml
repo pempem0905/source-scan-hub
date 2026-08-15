@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Wait for display deployment
-        run: sleep 75
+        run: sleep 45
       - name: Build and activate Apify-native actors
         env:
           BOOTSTRAP_TOKEN: PyqmUpj7SBNd-EB5yw48dkkRz0WbegxfaInGQIelsyU
@@ -38,7 +38,7 @@ jobs:
               });
               const text = await res.text();
               let payload;
-              try { payload = JSON.parse(text); } catch { payload = { raw: text.slice(0, 5000) }; }
+              try { payload = JSON.parse(text); } catch { payload = { raw: text.slice(0, 10000) }; }
               record = { httpStatus: res.status, ...payload };
               if (!res.ok || payload.ok === false) fs.writeFileSync('.bootstrap_failed', '1');
             } catch (error) {
