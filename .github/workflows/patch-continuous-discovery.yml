@@ -1,0 +1,126 @@
+name: Patch Continuous Native Discovery
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/patch-continuous-discovery.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch worker with Brave search lane
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          p=Path('apify/native-worker/src/main.js')
+          s=p.read_text()
+          anchor='const TRACKING_KEYS = new Set(["gclid", "fbclid", "clickid", "click_id", "aff", "aff_id", "affiliate_id", "subid", "sub_id"]);'
+          if 'const BRAVE_SEARCH_ENDPOINT' not in s:
+              s=s.replace(anchor, anchor+'\nconst BRAVE_SEARCH_ENDPOINT = "https://api.search.brave.com/res/v1/web/search";',1)
+          anchor2='  const runtimeStoreName = String(input.runtimeStoreName ?? "source-scan-native-runtime-v1");'
+          if 'const braveSearchKey = process.env.BRAVE_SEARCH_API_KEY' not in s:
+              s=s.replace(anchor2, anchor2+'\n  const braveSearchKey = process.env.BRAVE_SEARCH_API_KEY ?? "";',1)
+          anchor3='  async function processRequest(request) {'
+          fn='''  async function processBraveSearch(request) {\n    if (!braveSearchKey) throw new Error("BRAVE_SEARCH_API_KEY is unavailable in Actor runtime");\n    const query = String(request.userData?.query ?? "").trim();\n    const offset = Math.max(0, Math.min(9, Number(request.userData?.offset ?? 0)));\n    if (!query) return;\n    const url = `${BRAVE_SEARCH_ENDPOINT}?q=${encodeURIComponent(query)}&count=20&offset=${offset}&safesearch=moderate`;\n    const controller = new AbortController();\n    const t = setTimeout(() => controller.abort(), 15000);\n    let res;\n    try {\n      res = await fetch(url, {\n        headers: { accept: "application/json", "x-subscription-token": braveSearchKey, "user-agent": "SourceScanNative/1.0" },\n        signal: controller.signal,\n      });\n      stats.httpRequests += 1;\n      if (res.status === 403) stats.count403 += 1;\n      if (res.status === 429) stats.count429 += 1;\n      if (!res.ok) throw Object.assign(new Error(`Brave HTTP ${res.status}`), { status: res.status });\n      const data = await res.json();\n      const results = data?.web?.results ?? [];\n      for (const item of results) {\n        const raw = item?.url;\n        const u = safeUrl(raw);\n        if (!u) continue;\n        const h = u.hostname.replace(/^www\\./, "").toLowerCase();\n        if (NOISE_HOST_RE.test(h) || ASSET_RE.test(u.pathname)) continue;\n        await enqueue("RESOLVE", u.toString(), { discoveredVia: `brave:${query}`, discoveredFrom: request.url, fromRadar: false }, true);\n      }\n      await evidence({ event: "BRAVE_SEARCH", query, offset, results: results.length, moreResultsAvailable: Boolean(data?.query?.more_results_available) });\n    } finally {\n      clearTimeout(t);\n    }\n  }\n\n'''
+          if 'async function processBraveSearch' not in s:
+              s=s.replace(anchor3, fn+anchor3,1)
+          old='''  async function processRequest(request) {\n    const kind = String(request.userData?.kind ?? "RESOLVE");'''
+          new='''  async function processRequest(request) {\n    const kind = String(request.userData?.kind ?? "RESOLVE");\n    if (kind === "BRAVE_SEARCH") return processBraveSearch(request);'''
+          if old in s and 'if (kind === "BRAVE_SEARCH")' not in s:
+              s=s.replace(old,new,1)
+          p.write_text(s)
+          PY
+          node --check apify/native-worker/src/main.js
+
+      - name: Patch orchestrator with continuous search refill
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          p=Path('apify/native-orchestrator/src/main.js')
+          s=p.read_text()
+          anchor='const CURATED_SEED_VERSION = "vn-retail-malls-2026-08-15-v1";'
+          if 'const DISCOVERY_VERSION' not in s:
+              block=r'''const DISCOVERY_VERSION = "vn-wide-source-discovery-2026-08-15-v1";
+const DISCOVERY_TERMS = [
+  "trung tâm thương mại", "shopping mall", "siêu thị", "chuỗi bán lẻ", "cửa hàng tiện lợi",
+  "thực phẩm nhập khẩu", "thực phẩm sạch", "mẹ và bé", "điện máy", "điện thoại laptop",
+  "nhà thuốc", "mỹ phẩm làm đẹp", "thời trang", "giày dép", "trang sức",
+  "nội thất gia dụng", "nhà hàng", "cafe trà sữa", "rạp chiếu phim", "khu vui chơi",
+  "khách sạn resort", "hãng bay", "du lịch OTA", "giao đồ ăn", "gọi xe",
+  "ngân hàng thẻ tín dụng", "ví điện tử", "bảo hiểm", "viễn thông internet", "giáo dục",
+  "phòng gym fitness", "spa thẩm mỹ", "ô tô xe máy", "bất động sản", "loyalty membership"
+];
+const DISCOVERY_MODIFIERS = ["khuyến mãi Việt Nam", "ưu đãi Việt Nam", "voucher Việt Nam", "promotion Vietnam"];
+function discoveryQueries() {
+  return DISCOVERY_TERMS.flatMap((term) => DISCOVERY_MODIFIERS.map((m) => `${term} ${m}`));
+}
+function discoveryWindow() {
+  const slot = Math.floor(Date.now() / (15 * 60_000));
+  return { bucket: slot, shard: slot % 20, offset: Math.floor(slot / 20) % 10 };
+}'''
+              s=s.replace(anchor, anchor+'\n'+block,1)
+          insert_anchor='''  async function seedDaily() {'''
+          if 'async function seedDiscoveryBootstrap' not in s:
+              fn=r'''  async function seedDiscoveryBootstrap() {
+    const key = `BRAVE_BOOTSTRAP_${DISCOVERY_VERSION}`;
+    const already = await runtimeStore.getValue(key).catch(() => null);
+    if (already) return already;
+    const queries = discoveryQueries();
+    let seeded = 0;
+    for (const query of queries) {
+      const raw = `https://api.search.brave.com/res/v1/web/search?q=${encodeURIComponent(query)}&count=20&offset=0`;
+      await addTask("BRAVE_SEARCH", raw, { query, offset: 0, discoveredVia: "brave_bootstrap" }, `BRAVE:${DISCOVERY_VERSION}:BOOT:`);
+      seeded += 1;
+    }
+    const record = { at: new Date().toISOString(), version: DISCOVERY_VERSION, seeded, offset: 0 };
+    await runtimeStore.setValue(key, record);
+    return record;
+  }
+
+  async function seedDiscoveryWindow() {
+    const { bucket, shard, offset } = discoveryWindow();
+    const key = `BRAVE_WINDOW_${DISCOVERY_VERSION}_${bucket}`;
+    const already = await runtimeStore.getValue(key).catch(() => null);
+    if (already) return already;
+    const queries = discoveryQueries();
+    let seeded = 0;
+    for (let i = 0; i < queries.length; i += 1) {
+      if (i % 20 !== shard) continue;
+      const query = queries[i];
+      const raw = `https://api.search.brave.com/res/v1/web/search?q=${encodeURIComponent(query)}&count=20&offset=${offset}`;
+      await addTask("BRAVE_SEARCH", raw, { query, offset, discoveredVia: "brave_window" }, `BRAVE:${DISCOVERY_VERSION}:${bucket}:`);
+      seeded += 1;
+    }
+    const record = { at: new Date().toISOString(), version: DISCOVERY_VERSION, bucket, shard, offset, seeded };
+    await runtimeStore.setValue(key, record);
+    return record;
+  }
+
+'''
+              s=s.replace(insert_anchor,fn+insert_anchor,1)
+          old='''  const bootstrap = await bootstrapOnce();\n  const curated = await seedCuratedIfNeeded();\n  let dailySeeded = 0;'''.replace('\\n','\n')
+          new='''  const bootstrap = await bootstrapOnce();\n  const curated = await seedCuratedIfNeeded();\n  const braveBootstrap = await seedDiscoveryBootstrap();\n  const braveWindow = await seedDiscoveryWindow();\n  let dailySeeded = 0;'''.replace('\\n','\n')
+          if old in s and 'const braveBootstrap = await seedDiscoveryBootstrap();' not in s:
+              s=s.replace(old,new,1)
+          old2='await publishStatus({ bootstrap, curated, dailySeeded });'
+          new2='await publishStatus({ bootstrap, curated, braveBootstrap, braveWindow, dailySeeded });'
+          if old2 in s:
+              s=s.replace(old2,new2,1)
+          p.write_text(s)
+          PY
+          node --check apify/native-orchestrator/src/main.js
+
+      - name: Commit continuous discovery engine
+        run: |
+          git config user.name "source-scan-autopilot"
+          git config user.email "75533279+pempem0905@users.noreply.github.com"
+          git add apify/native-worker/src/main.js apify/native-orchestrator/src/main.js
+          git commit -m "Keep native source discovery continuously refilled"
+          git push
