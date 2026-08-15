@@ -63,8 +63,8 @@ async function actors() {
   return { worker, orchestrator };
 }
 
-async function buildActor(actorId: string, files: z.infer<typeof fileSchema>[]) {
-  const version = { versionNumber: "1.0", buildTag: "latest", sourceType: "SOURCE_FILES", sourceFiles: files };
+async function buildActor(actorId: string, files: z.infer<typeof fileSchema>[], envVars: Array<{ name: string; value: string; isSecret?: boolean }> = []) {
+  const version = { versionNumber: "1.0", buildTag: "latest", sourceType: "SOURCE_FILES", sourceFiles: files, envVars };
   await apify(`/acts/${encodeURIComponent(actorId)}/versions/1.0`, { method: "PUT", body: JSON.stringify(version) });
   const build = await apify(`/acts/${encodeURIComponent(actorId)}/builds?version=1.0&tag=latest`, { method: "POST" });
   const finished = await waitBuild(build.id);
@@ -119,10 +119,10 @@ async function scheduleAndRun(workerId: string, orchestratorId: string, forceLea
     workerActorId: workerId,
     mode: "auto",
     localConcurrency: 10,
-    maxWorkerItems: 600,
-    maxWorkerRunMinutes: 20,
-    maxCycleMinutes: 50,
-    dailyBudgetUsd: 1,
+    maxWorkerItems: 1200,
+    maxWorkerRunMinutes: 30,
+    maxCycleMinutes: 170,
+    dailyBudgetUsd: 10,
     projectBudgetUsd: 50,
     maxConcurrentJobs,
     displayBaseUrl: DISPLAY_BASE_URL,
@@ -134,20 +134,20 @@ async function scheduleAndRun(workerId: string, orchestratorId: string, forceLea
     description: "Apify-native control plane. Lovable is one-way display telemetry only.",
     isEnabled: true,
     isExclusive: true,
-    cronExpression: "0 */3 * * *",
+    cronExpression: "*/15 * * * *",
     timezone: "Asia/Ho_Chi_Minh",
     actions: [{
       type: "RUN_ACTOR",
       actorId: orchestratorId,
       runInput: { body: JSON.stringify(scheduleInput), contentType: "application/json; charset=utf-8" },
-      runOptions: { build: "latest", timeoutSecs: 4200, memoryMbytes: 256, maxTotalChargeUsd: 0.1, restartOnError: false },
+      runOptions: { build: "latest", timeoutSecs: 10800, memoryMbytes: 256, maxTotalChargeUsd: 0.5, restartOnError: false },
     }],
   };
   const existing = (schedules.items ?? []).find((s: any) => s.name === scheduleBody.name);
   const schedule = existing
     ? await apify(`/schedules/${encodeURIComponent(existing.id)}`, { method: "PUT", body: JSON.stringify(scheduleBody) })
     : await apify("/schedules", { method: "POST", body: JSON.stringify(scheduleBody) });
-  const params = new URLSearchParams({ memory: "256", timeout: "4200", build: "latest", maxTotalChargeUsd: "0.1", forcePermissionLevel: "FULL_PERMISSIONS" });
+  const params = new URLSearchParams({ memory: "256", timeout: "10800", build: "latest", maxTotalChargeUsd: "0.5", forcePermissionLevel: "FULL_PERMISSIONS" });
   const run = await apify(`/acts/${encodeURIComponent(orchestratorId)}/runs?${params.toString()}`, {
     method: "POST",
     body: JSON.stringify({ ...scheduleInput, forceLease }),
@@ -190,7 +190,7 @@ export const Route = createFileRoute("/api/bootstrap-native-apify")({
             const workerFiles = body.workerFiles ? z.array(fileSchema).min(4).max(20).parse(body.workerFiles) : null;
             const orchestratorFiles = body.orchestratorFiles ? z.array(fileSchema).min(4).max(20).parse(body.orchestratorFiles) : null;
             const builds: Record<string, any> = {};
-            if (workerFiles) builds.worker = await buildActor(worker.id, workerFiles);
+            if (workerFiles) builds.worker = await buildActor(worker.id, workerFiles, [{ name: "BRAVE_SEARCH_API_KEY", value: secret("BRAVE_SEARCH_API_KEY"), isSecret: true }]);
             if (orchestratorFiles) builds.orchestrator = await buildActor(orchestrator.id, orchestratorFiles);
             if (!workerFiles && !orchestratorFiles) throw new Error("At least one Actor source package is required");
             const started = await scheduleAndRun(worker.id, orchestrator.id, true);
