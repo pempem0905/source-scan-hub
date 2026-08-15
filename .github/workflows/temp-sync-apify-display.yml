@@ -1,0 +1,28 @@
+name: One-shot repair Apify display telemetry
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/temp-sync-apify-display.yml
+permissions:
+  contents: read
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for production deploy
+        run: sleep 45
+      - name: Repair telemetry and inspect native queues
+        run: |
+          node <<'NODE'
+          (async()=>{
+            const res=await fetch('https://source-scan-hub.lovable.app/api/temp-sync-apify-display',{
+              method:'POST',
+              headers:{'content-type':'application/json','x-one-shot':'9sTcuUbRnSlKRewYEhJ9TNdxoGqpaN24'},
+              body:'{}'
+            });
+            const text=await res.text();
+            console.log(text);
+            if(!res.ok) process.exit(1);
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
