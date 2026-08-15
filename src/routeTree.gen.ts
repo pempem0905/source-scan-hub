@@ -19,7 +19,9 @@ import { Route as SourcesRouteImport } from './routes/sources'
 import { Route as WorkersRouteImport } from './routes/workers'
 import { Route as ApiActivateNativeApifyRouteImport } from './routes/api/activate-native-apify'
 import { Route as ApiAutopilotRouteImport } from './routes/api/autopilot'
-import { Route as ApiBootstrapNativeApifyRouteImport } from './routes/api/bootstrap-native-apify'
+import { Route as ApiPromoCommitRouteImport } from './routes/api/promo-commit'
+import { Route as ApiPromoQueueRouteImport } from './routes/api/promo-queue'
+import { Route as ApiPromoStatusRouteImport } from './routes/api/promo-status'
 import { Route as ApiSourceEngineActionRouteImport } from './routes/api/source-engine/$action'
 
 const IndexRoute = IndexRouteImport.update({
@@ -72,9 +74,19 @@ const ApiAutopilotRoute = ApiAutopilotRouteImport.update({
   path: '/api/autopilot',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiBootstrapNativeApifyRoute = ApiBootstrapNativeApifyRouteImport.update({
-  id: '/api/bootstrap-native-apify',
-  path: '/api/bootstrap-native-apify',
+const ApiPromoCommitRoute = ApiPromoCommitRouteImport.update({
+  id: '/api/promo-commit',
+  path: '/api/promo-commit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPromoQueueRoute = ApiPromoQueueRouteImport.update({
+  id: '/api/promo-queue',
+  path: '/api/promo-queue',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPromoStatusRoute = ApiPromoStatusRouteImport.update({
+  id: '/api/promo-status',
+  path: '/api/promo-status',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiSourceEngineActionRoute = ApiSourceEngineActionRouteImport.update({
@@ -94,7 +106,9 @@ export interface FileRoutesByFullPath {
   '/workers': typeof WorkersRoute
   '/api/activate-native-apify': typeof ApiActivateNativeApifyRoute
   '/api/autopilot': typeof ApiAutopilotRoute
-  '/api/bootstrap-native-apify': typeof ApiBootstrapNativeApifyRoute
+  '/api/promo-commit': typeof ApiPromoCommitRoute
+  '/api/promo-queue': typeof ApiPromoQueueRoute
+  '/api/promo-status': typeof ApiPromoStatusRoute
   '/api/source-engine/$action': typeof ApiSourceEngineActionRoute
 }
 export interface FileRoutesByTo {
@@ -108,7 +122,9 @@ export interface FileRoutesByTo {
   '/workers': typeof WorkersRoute
   '/api/activate-native-apify': typeof ApiActivateNativeApifyRoute
   '/api/autopilot': typeof ApiAutopilotRoute
-  '/api/bootstrap-native-apify': typeof ApiBootstrapNativeApifyRoute
+  '/api/promo-commit': typeof ApiPromoCommitRoute
+  '/api/promo-queue': typeof ApiPromoQueueRoute
+  '/api/promo-status': typeof ApiPromoStatusRoute
   '/api/source-engine/$action': typeof ApiSourceEngineActionRoute
 }
 export interface FileRoutesById {
@@ -123,7 +139,9 @@ export interface FileRoutesById {
   '/workers': typeof WorkersRoute
   '/api/activate-native-apify': typeof ApiActivateNativeApifyRoute
   '/api/autopilot': typeof ApiAutopilotRoute
-  '/api/bootstrap-native-apify': typeof ApiBootstrapNativeApifyRoute
+  '/api/promo-commit': typeof ApiPromoCommitRoute
+  '/api/promo-queue': typeof ApiPromoQueueRoute
+  '/api/promo-status': typeof ApiPromoStatusRoute
   '/api/source-engine/$action': typeof ApiSourceEngineActionRoute
 }
 export interface FileRouteTypes {
@@ -139,7 +157,9 @@ export interface FileRouteTypes {
     | '/workers'
     | '/api/activate-native-apify'
     | '/api/autopilot'
-    | '/api/bootstrap-native-apify'
+    | '/api/promo-commit'
+    | '/api/promo-queue'
+    | '/api/promo-status'
     | '/api/source-engine/$action'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -153,7 +173,9 @@ export interface FileRouteTypes {
     | '/workers'
     | '/api/activate-native-apify'
     | '/api/autopilot'
-    | '/api/bootstrap-native-apify'
+    | '/api/promo-commit'
+    | '/api/promo-queue'
+    | '/api/promo-status'
     | '/api/source-engine/$action'
   id:
     | '__root__'
@@ -167,7 +189,9 @@ export interface FileRouteTypes {
     | '/workers'
     | '/api/activate-native-apify'
     | '/api/autopilot'
-    | '/api/bootstrap-native-apify'
+    | '/api/promo-commit'
+    | '/api/promo-queue'
+    | '/api/promo-status'
     | '/api/source-engine/$action'
   fileRoutesById: FileRoutesById
 }
@@ -182,7 +206,9 @@ export interface RootRouteChildren {
   WorkersRoute: typeof WorkersRoute
   ApiActivateNativeApifyRoute: typeof ApiActivateNativeApifyRoute
   ApiAutopilotRoute: typeof ApiAutopilotRoute
-  ApiBootstrapNativeApifyRoute: typeof ApiBootstrapNativeApifyRoute
+  ApiPromoCommitRoute: typeof ApiPromoCommitRoute
+  ApiPromoQueueRoute: typeof ApiPromoQueueRoute
+  ApiPromoStatusRoute: typeof ApiPromoStatusRoute
   ApiSourceEngineActionRoute: typeof ApiSourceEngineActionRoute
 }
 
@@ -258,11 +284,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiAutopilotRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/bootstrap-native-apify': {
-      id: '/api/bootstrap-native-apify'
-      path: '/api/bootstrap-native-apify'
-      fullPath: '/api/bootstrap-native-apify'
-      preLoaderRoute: typeof ApiBootstrapNativeApifyRouteImport
+    '/api/promo-commit': {
+      id: '/api/promo-commit'
+      path: '/api/promo-commit'
+      fullPath: '/api/promo-commit'
+      preLoaderRoute: typeof ApiPromoCommitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/promo-queue': {
+      id: '/api/promo-queue'
+      path: '/api/promo-queue'
+      fullPath: '/api/promo-queue'
+      preLoaderRoute: typeof ApiPromoQueueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/promo-status': {
+      id: '/api/promo-status'
+      path: '/api/promo-status'
+      fullPath: '/api/promo-status'
+      preLoaderRoute: typeof ApiPromoStatusRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/source-engine/$action': {
@@ -286,7 +326,9 @@ const rootRouteChildren: RootRouteChildren = {
   WorkersRoute: WorkersRoute,
   ApiActivateNativeApifyRoute: ApiActivateNativeApifyRoute,
   ApiAutopilotRoute: ApiAutopilotRoute,
-  ApiBootstrapNativeApifyRoute: ApiBootstrapNativeApifyRoute,
+  ApiPromoCommitRoute: ApiPromoCommitRoute,
+  ApiPromoQueueRoute: ApiPromoQueueRoute,
+  ApiPromoStatusRoute: ApiPromoStatusRoute,
   ApiSourceEngineActionRoute: ApiSourceEngineActionRoute,
 }
 export const routeTree = rootRouteImport
