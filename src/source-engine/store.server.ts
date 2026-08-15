@@ -1,11 +1,18 @@
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
+import { classifySourceType } from "./classify";
 import { authorityFor, isOfficialType, isRadarType } from "./taxonomy";
 import type { OriginResolution, SourceCandidateInput, WorkerHeartbeat } from "./types";
 import { normalizeUrl } from "./url-normalize";
 
 export async function ingestCandidate(input: SourceCandidateInput) {
   const normalized = normalizeUrl(input.url);
-  const sourceType = input.sourceType ?? "OTHER";
+  // Callers that already know the type win; otherwise classify by host so radar
+  // vs official is decided at ingest time instead of staying "OTHER" forever.
+  const sourceType =
+    input.sourceType && input.sourceType !== "OTHER"
+      ? input.sourceType
+      : classifySourceType(normalized.normalizedUrl);
+
 
   const { data: existing, error: selectError } = await supabaseAdmin
     .from("source_candidates")
@@ -193,9 +200,9 @@ export async function heartbeatWorker(input: WorkerHeartbeat) {
 
 export async function recordApiUsage(input: {
   provider: string;
-  requests?: number;
-  credits?: number;
-  costUsd?: number;
+  requests?: number | undefined;
+  credits?: number | undefined;
+  costUsd?: number | undefined;
 }) {
   const usageDate = new Date().toISOString().slice(0, 10);
   const { data: existing } = await supabaseAdmin
