@@ -7,10 +7,7 @@ const APIFY_BASE = "https://api.apify.com/v2";
 const DISPLAY_BASE_URL = "https://source-scan-hub.lovable.app";
 
 const fileSchema = z.object({ name: z.string().min(1).max(300), format: z.literal("TEXT").default("TEXT"), content: z.string().max(500_000) });
-const bodySchema = z.object({
-  workerFiles: z.array(fileSchema).min(4).max(20),
-  orchestratorFiles: z.array(fileSchema).min(4).max(20),
-});
+const bodySchema = z.object({ workerFiles: z.array(fileSchema).min(4).max(20), orchestratorFiles: z.array(fileSchema).min(4).max(20) });
 
 function secret(name: string) {
   const value = process.env[name];
@@ -18,8 +15,8 @@ function secret(name: string) {
   return value;
 }
 
-async function apify(path: string, init: RequestInit = {}) {
-  const res = await fetch(`${APIFY_BASE}${path}`, {
+async function apifyRaw(path: string, init: RequestInit = {}) {
+  return fetch(`${APIFY_BASE}${path}`, {
     ...init,
     headers: {
       authorization: `Bearer ${secret("APIFY_TOKEN")}`,
@@ -28,11 +25,22 @@ async function apify(path: string, init: RequestInit = {}) {
       ...(init.headers ?? {}),
     },
   });
+}
+
+async function apify(path: string, init: RequestInit = {}) {
+  const res = await apifyRaw(path, init);
   const text = await res.text();
   let parsed: any;
   try { parsed = JSON.parse(text); } catch { parsed = { raw: text }; }
   if (!res.ok) throw new Error(`Apify ${path} failed ${res.status}: ${text.slice(0, 800)}`);
   return parsed.data ?? parsed;
+}
+
+async function apifyText(path: string) {
+  const res = await apifyRaw(path);
+  const text = await res.text();
+  if (!res.ok) throw new Error(`Apify ${path} failed ${res.status}: ${text.slice(0, 800)}`);
+  return text;
 }
 
 async function waitBuild(buildId: string) {
@@ -51,12 +59,7 @@ async function upsertActor(name: string, title: string, sourceFiles: Array<{ nam
   if (!actor) {
     actor = await apify("/acts", {
       method: "POST",
-      body: JSON.stringify({
-        name,
-        title,
-        isPublic: false,
-        defaultRunOptions: { build: "latest", memoryMbytes: 256, timeoutSecs: 4200, restartOnError: false },
-      }),
+      body: JSON.stringify({ name, title, isPublic: false, defaultRunOptions: { build: "latest", memoryMbytes: 256, timeoutSecs: 4200, restartOnError: false } }),
     });
   }
   const version = { versionNumber: "1.0", buildTag: "latest", sourceType: "SOURCE_FILES", sourceFiles };
@@ -69,7 +72,11 @@ async function upsertActor(name: string, title: string, sourceFiles: Array<{ nam
   }
   const build = await apify(`/acts/${encodeURIComponent(actor.id)}/builds?version=1.0&tag=latest`, { method: "POST" });
   const finished = await waitBuild(build.id);
-  if (finished.status !== "SUCCEEDED") throw new Error(`${name} build ended with ${finished.status}`);
+  if (finished.status !== "SUCCEEDED") {
+    const logText = await apifyText(`/logs/${encodeURIComponent(build.id)}`).catch(() => "");
+    const tail = logText.slice(-5000);
+    throw new Error(`${name} build ended with ${finished.status}; buildId=${build.id}; logTail=${tail}`);
+  }
   return { actor, build: finished };
 }
 
