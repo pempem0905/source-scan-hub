@@ -14,8 +14,8 @@ jobs:
   activate:
     runs-on: ubuntu-latest
     steps:
-      - name: Wait for display deployment
-        run: sleep 60
+      - name: Wait for stable display deployment
+        run: sleep 75
       - name: Activate native schedule and first run
         env:
           BOOTSTRAP_TOKEN: vKd5jIOoKvbcGSy7zWi0-LOVDXVNVjtU6RoHOq2z9oM
