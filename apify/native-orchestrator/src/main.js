@@ -57,6 +57,8 @@ await Actor.main(async () => {
   const maxCycleMinutes = Math.max(5, Math.min(180, Number(input.maxCycleMinutes ?? 50)));
   const dailyBudgetUsd = Math.max(0.01, Number(input.dailyBudgetUsd ?? 1));
   const projectBudgetUsd = Math.max(1, Number(input.projectBudgetUsd ?? 50));
+  const maxConcurrentJobs = Math.max(2, Math.min(256, Number(input.maxConcurrentJobs ?? 32)));
+  const forceLease = Boolean(input.forceLease ?? false);
   const requestedMode = String(input.mode ?? "auto").toLowerCase();
   const displayBaseUrl = String(input.displayBaseUrl ?? "").replace(/\/$/, "");
   const displayToken = String(input.displayToken ?? "");
@@ -105,7 +107,7 @@ await Actor.main(async () => {
   }
 
   const oldLease = await runtimeStore.getValue("LEASE").catch(() => null);
-  if (oldLease?.expiresAt && new Date(oldLease.expiresAt).getTime() > Date.now() && oldLease.runId !== runId) {
+  if (!forceLease && oldLease?.expiresAt && new Date(oldLease.expiresAt).getTime() > Date.now() && oldLease.runId !== runId) {
     log.info("Another native orchestrator holds the lease", oldLease);
     await Actor.pushData({ status: "NOOP", reason: "lease_held", lease: oldLease });
     return;
@@ -218,18 +220,13 @@ await Actor.main(async () => {
   let batches = 0;
   const launched = [];
 
-  async function limits() {
-    return apify("/users/me/limits");
-  }
-
   async function publishStatus(extra = {}) {
-    const l = await limits().catch(() => null);
     const taskInfo = await taskQueue.getInfo().catch(() => null);
     const masterInfo = await masterQueue.getInfo().catch(() => null);
     const status = {
       runId, mode, at: new Date().toISOString(),
-      maxConcurrentActorJobs: l?.limits?.maxConcurrentActorJobs ?? null,
-      activeActorJobs: l?.current?.activeActorJobCount ?? null,
+      maxConcurrentActorJobs: maxConcurrentJobs,
+      activeActorJobs: null,
       taskQueue: taskInfo ? { total: taskInfo.totalRequestCount, pending: taskInfo.pendingRequestCount, handled: taskInfo.handledRequestCount } : null,
       masterSources: masterInfo?.totalRequestCount ?? null,
       cycleCostUsd: cycleCost,
@@ -308,11 +305,7 @@ await Actor.main(async () => {
     const taskInfo = await taskQueue.getInfo().catch(() => null);
     const pending = Number(taskInfo?.pendingRequestCount ?? 0);
     if (pending <= 0) break;
-    const l = await limits();
-    const maxJobs = Number(l?.limits?.maxConcurrentActorJobs ?? 1);
-    const active = Number(l?.current?.activeActorJobCount ?? 1);
-    const freeSlots = Math.max(0, maxJobs - active);
-    if (freeSlots <= 0) { await sleep(5000); continue; }
+    const targetWorkerSlots = Math.max(1, maxConcurrentJobs - 1);
 
     const dailyRemaining = Math.max(0, dailyBudgetUsd - budget.dailySpentUsd);
     const projectRemaining = Math.max(0, projectBudgetUsd - budget.projectSpentUsd);
@@ -322,14 +315,25 @@ await Actor.main(async () => {
     // Conservative $0.20/CU estimate keeps the existing $1/day and $50/project guards.
     const estimatedWorkerMaxCost = 0.256 * (maxWorkerRunMinutes / 60) * 0.20;
     const budgetSlots = Math.max(1, Math.floor(remaining / Math.max(estimatedWorkerMaxCost, 0.001)));
-    const slots = Math.max(0, Math.min(freeSlots, pending, budgetSlots));
+    const slots = Math.max(0, Math.min(targetWorkerSlots, pending, budgetSlots));
     if (slots <= 0) break;
 
     batches += 1;
     const ids = [];
-    for (let i = 0; i < slots && Date.now() < deadline; i += 1) ids.push(await startWorker(i + 1));
-    await publishStatus({ batch: batches, batchLaunched: ids.length, freeSlotsBefore: freeSlots, maxJobs });
-    if (!ids.length) break;
+    for (let i = 0; i < slots && Date.now() < deadline; i += 1) {
+      try {
+        ids.push(await startWorker(i + 1));
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        if (/limit|concurrent|too many|capacity|quota|429/i.test(message)) {
+          log.info("Account capacity reached; keeping every available slot full", { launched: ids.length, targetWorkerSlots, message: message.slice(0, 240) });
+          break;
+        }
+        throw error;
+      }
+    }
+    await publishStatus({ batch: batches, batchLaunched: ids.length, maxJobs: maxConcurrentJobs, targetWorkerSlots });
+    if (!ids.length) { await sleep(5000); continue; }
     await waitBatch(ids);
     if (budget.dailySpentUsd >= dailyBudgetUsd || budget.projectSpentUsd >= projectBudgetUsd) break;
   }
