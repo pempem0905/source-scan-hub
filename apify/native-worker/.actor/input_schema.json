@@ -1,0 +1,18 @@
+{
+  "title": "Source Scan Native Worker input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "workerId": { "title": "Worker ID", "type": "string" },
+    "taskQueueName": { "title": "Task queue", "type": "string", "default": "source-scan-native-tasks-v1" },
+    "masterQueueName": { "title": "Master source set", "type": "string", "default": "source-scan-native-master-v1" },
+    "masterDatasetName": { "title": "Master source events", "type": "string", "default": "source-scan-native-master-events-v1" },
+    "evidenceDatasetName": { "title": "Evidence events", "type": "string", "default": "source-scan-native-evidence-v1" },
+    "runtimeStoreName": { "title": "Runtime KV store", "type": "string", "default": "source-scan-native-runtime-v1" },
+    "localConcurrency": { "title": "Concurrent tasks inside this worker", "type": "integer", "default": 10, "minimum": 1, "maximum": 24 },
+    "maxItems": { "title": "Max tasks per worker", "type": "integer", "default": 600, "minimum": 1, "maximum": 5000 },
+    "maxRunMinutes": { "title": "Max run minutes", "type": "integer", "default": 20, "minimum": 2, "maximum": 120 },
+    "displayBaseUrl": { "title": "Optional display-only sink", "type": "string" },
+    "displayToken": { "title": "Optional display-only token", "type": "string", "isSecret": true }
+  }
+}
