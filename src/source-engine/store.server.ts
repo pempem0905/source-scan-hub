@@ -1,11 +1,18 @@
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
+import { classifySourceType } from "./classify";
 import { authorityFor, isOfficialType, isRadarType } from "./taxonomy";
 import type { OriginResolution, SourceCandidateInput, WorkerHeartbeat } from "./types";
 import { normalizeUrl } from "./url-normalize";
 
 export async function ingestCandidate(input: SourceCandidateInput) {
   const normalized = normalizeUrl(input.url);
-  const sourceType = input.sourceType ?? "OTHER";
+  // Callers that already know the type win; otherwise classify by host so radar
+  // vs official is decided at ingest time instead of staying "OTHER" forever.
+  const sourceType =
+    input.sourceType && input.sourceType !== "OTHER"
+      ? input.sourceType
+      : classifySourceType(normalized.normalizedUrl);
+
 
   const { data: existing, error: selectError } = await supabaseAdmin
     .from("source_candidates")
@@ -14,17 +21,22 @@ export async function ingestCandidate(input: SourceCandidateInput) {
     .maybeSingle();
   if (selectError) throw selectError;
 
+  // Never downgrade an already-classified row back to OTHER.
+  const effectiveType =
+    sourceType === "OTHER" && existing?.source_type ? (existing.source_type as typeof sourceType) : sourceType;
+
   const patch = {
     domain: input.domain ?? normalized.normalizedDomain,
     url: input.url,
     normalized_url: normalized.normalizedUrl,
-    source_type: sourceType,
+    source_type: effectiveType,
     market: input.market ?? "VN",
     discovered_via: input.discoveredVia ?? "unknown",
     status: existing?.status ?? "candidate",
-    is_radar: isRadarType(sourceType),
-    is_official: isOfficialType(sourceType),
-    authority_score: authorityFor(sourceType),
+    is_radar: isRadarType(effectiveType),
+    is_official: isOfficialType(effectiveType),
+    authority_score: authorityFor(effectiveType),
+
     merchant_id: input.merchantId ?? existing?.merchant_id ?? null,
     notes: input.notes ?? existing?.notes ?? null,
     updated_at: new Date().toISOString(),
@@ -193,9 +205,9 @@ export async function heartbeatWorker(input: WorkerHeartbeat) {
 
 export async function recordApiUsage(input: {
   provider: string;
-  requests?: number;
-  credits?: number;
-  costUsd?: number;
+  requests?: number | undefined;
+  credits?: number | undefined;
+  costUsd?: number | undefined;
 }) {
   const usageDate = new Date().toISOString().slice(0, 10);
   const { data: existing } = await supabaseAdmin

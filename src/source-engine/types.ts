@@ -44,13 +44,13 @@ export type SourceStatus =
 
 export interface SourceCandidateInput {
   url: string;
-  domain?: string | null;
-  sourceType?: SourceType | null;
-  discoveredVia?: string | null;
-  discoverySourceId?: string | null;
-  merchantId?: string | null;
-  market?: string;
-  notes?: string | null;
+  domain?: string | null | undefined;
+  sourceType?: SourceType | null | undefined;
+  discoveredVia?: string | null | undefined;
+  discoverySourceId?: string | null | undefined;
+  merchantId?: string | null | undefined;
+  market?: string | undefined;
+  notes?: string | null | undefined;
 }
 
 export interface NormalizedUrl {
@@ -69,25 +69,26 @@ export interface OriginResolution {
   httpStatus: number | null;
   resolutionStatus: ResolutionStatus;
   confidence: number;
-  error?: string;
+  error?: string | undefined;
 }
 
 export interface SearchResult {
   title: string;
   url: string;
-  description?: string;
+  description?: string | undefined;
   source: "brave" | "common_crawl" | "seed" | "sitemap" | "outgoing_link";
-  query?: string;
+  query?: string | undefined;
 }
 
 export interface WorkerHeartbeat {
   workerId: string;
   lane: WorkerLane;
   status: "idle" | "running" | "paused" | "error";
-  requestsTotal?: number;
-  qualifiedSourcesTotal?: number;
-  errorsTotal?: number;
-  rate403?: number;
-  rate429?: number;
-  currentJobId?: string | null;
+  requestsTotal?: number | undefined;
+  qualifiedSourcesTotal?: number | undefined;
+  errorsTotal?: number | undefined;
+  rate403?: number | undefined;
+  rate429?: number | undefined;
+  currentJobId?: string | null | undefined;
 }
+

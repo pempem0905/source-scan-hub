@@ -6,7 +6,7 @@ function safeEqual(a: string, b: string): boolean {
 }
 
 export function assertWorkerRequest(request: Request): void {
-  const expected = process.env.SOURCE_WORKER_TOKEN;
+  const expected = process.env['SOURCE_WORKER_TOKEN'];
   if (!expected) throw new Error("SOURCE_WORKER_TOKEN is not configured on the server");
 
   const authorization = request.headers.get("authorization") ?? "";
