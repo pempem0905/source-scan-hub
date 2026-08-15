@@ -118,6 +118,17 @@ export async function applyOriginResolution(candidateId: string, resolution: Ori
   });
   if (edgeError) throw edgeError;
 
+  // Auto-promote: a successful resolution plus an already-known classification
+  // (official or radar) is enough to become a real source. OTHER never promotes
+  // just because it resolved. promoteCandidateToSource is idempotent.
+  if (
+    resolution.resolutionStatus === "resolved" &&
+    updated.source_type !== "OTHER" &&
+    (updated.is_official === true || updated.is_radar === true)
+  ) {
+    await promoteCandidateToSource(candidateId);
+  }
+
   return updated;
 }
 
@@ -168,7 +179,20 @@ export async function promoteCandidateToSource(candidateId: string) {
     })
     .select("*")
     .single();
-  if (error) throw error;
+  if (error) {
+    // Concurrent workers can race on the same normalized_url; treat the
+    // existing row as the result so promotion stays idempotent.
+    if (error.code === "23505") {
+      const { data: raced, error: racedError } = await supabaseAdmin
+        .from("sources")
+        .select("*")
+        .eq("normalized_url", candidate.normalized_url)
+        .single();
+      if (racedError) throw racedError;
+      return raced;
+    }
+    throw error;
+  }
 
   await supabaseAdmin
     .from("source_candidates")
