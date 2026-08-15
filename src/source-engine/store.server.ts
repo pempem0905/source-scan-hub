@@ -21,17 +21,22 @@ export async function ingestCandidate(input: SourceCandidateInput) {
     .maybeSingle();
   if (selectError) throw selectError;
 
+  // Never downgrade an already-classified row back to OTHER.
+  const effectiveType =
+    sourceType === "OTHER" && existing?.source_type ? (existing.source_type as typeof sourceType) : sourceType;
+
   const patch = {
     domain: input.domain ?? normalized.normalizedDomain,
     url: input.url,
     normalized_url: normalized.normalizedUrl,
-    source_type: sourceType,
+    source_type: effectiveType,
     market: input.market ?? "VN",
     discovered_via: input.discoveredVia ?? "unknown",
     status: existing?.status ?? "candidate",
-    is_radar: isRadarType(sourceType),
-    is_official: isOfficialType(sourceType),
-    authority_score: authorityFor(sourceType),
+    is_radar: isRadarType(effectiveType),
+    is_official: isOfficialType(effectiveType),
+    authority_score: authorityFor(effectiveType),
+
     merchant_id: input.merchantId ?? existing?.merchant_id ?? null,
     notes: input.notes ?? existing?.notes ?? null,
     updated_at: new Date().toISOString(),
