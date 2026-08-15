@@ -39,11 +39,13 @@ export const Route = createFileRoute("/api/temp-apify-budget40")({
           ]);
           const schedule = (schedules.items ?? []).find((s:any) => s.name === "source-scan-native-autopilot");
           const orchestrator = (actors.items ?? []).find((a:any) => a.name === "source-scan-native-orchestrator");
-          if (!schedule || !orchestrator) throw new Error("schedule/orchestrator not found");
+          const worker = (actors.items ?? []).find((a:any) => a.name === "source-scan-native-worker");
+          if (!schedule || !orchestrator || !worker) throw new Error("schedule/orchestrator/worker not found");
           const action = schedule.actions?.[0];
           const oldInput = action?.runInput?.body ? JSON.parse(action.runInput.body) : {};
           const runInput = {
             ...oldInput,
+            workerActorId: worker.id,
             dailyBudgetUsd: 40,
             projectBudgetUsd: 50,
             maxConcurrentJobs: Math.max(2, Number(limits?.limits?.maxConcurrentActorJobs ?? 32)),
@@ -71,6 +73,7 @@ export const Route = createFileRoute("/api/temp-apify-budget40")({
             ok:true,
             dailyBudgetUsd:40,
             projectBudgetUsd:50,
+            workerActorId:worker.id,
             maxConcurrentJobs:runInput.maxConcurrentJobs,
             schedule:{ id:updated.id, nextRunAt:updated.nextRunAt, enabled:updated.isEnabled },
             run:{ id:run.id, status:run.status },
