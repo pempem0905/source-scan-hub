@@ -24,7 +24,9 @@ export async function braveSearch(
   const url = new URL(BRAVE_ENDPOINT);
   url.searchParams.set("q", query);
   url.searchParams.set("count", String(Math.max(1, Math.min(20, options.count ?? 20))));
-  url.searchParams.set("country", options.country ?? "VN");
+  // Brave rejects country=VN; "ALL" also matches the Phase 1 definition of the
+  // Vietnam market: the whole internet ecosystem serving Vietnam, any TLD.
+  url.searchParams.set("country", options.country ?? "ALL");
   url.searchParams.set("search_lang", options.searchLang ?? "vi");
 
   const response = await fetch(url, {

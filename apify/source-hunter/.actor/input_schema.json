@@ -27,7 +27,8 @@
         "PROMO_PATH_HUNTER"
       ],
       "default": "ORIGIN_RESOLVER",
-      "editor": "select"
+      "editor": "select",
+      "description": "Which worker lane this run should process."
     },
     "workerId": {
       "title": "Worker ID override",
@@ -40,22 +41,29 @@
       "type": "integer",
       "minimum": 1,
       "maximum": 5000,
-      "default": 250
+      "default": 250,
+      "description": "Maximum queue items processed in a single run."
     },
     "idlePollMs": {
       "title": "Idle poll delay (ms)",
       "type": "integer",
       "minimum": 500,
       "maximum": 60000,
-      "default": 2500
+      "default": 2500,
+      "description": "Delay between polls when the queue is empty."
     },
     "emptyPollLimit": {
       "title": "Empty polls before exit",
       "type": "integer",
       "minimum": 1,
       "maximum": 50,
-      "default": 3
+      "default": 3,
+      "description": "Number of consecutive empty polls before the run exits."
     }
   },
-  "required": ["hubBaseUrl", "workerToken", "lane"]
+  "required": [
+    "hubBaseUrl",
+    "workerToken",
+    "lane"
+  ]
 }
