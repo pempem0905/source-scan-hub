@@ -1,4 +1,4 @@
-name: Diagnose Native Worker Failure
+name: Restart Native Apify Full Permissions
 
 on:
   push:
@@ -11,37 +11,41 @@ permissions:
   contents: read
 
 jobs:
-  diagnose:
+  restart:
     runs-on: ubuntu-latest
     steps:
-      - name: Wait for diagnostic bridge deploy
-        run: sleep 50
-      - name: Abort failing orchestrator and capture worker log
+      - uses: actions/checkout@v4
+      - name: Wait for full-permission bridge deploy
+        run: sleep 60
+      - name: Rebuild orchestrator and restart native scan
         env:
           BOOTSTRAP_TOKEN: vKd5jIOoKvbcGSy7zWi0-LOVDXVNVjtU6RoHOq2z9oM
         run: |
           node <<'NODE'
           const fs = require('fs');
           (async () => {
+            const base = 'apify/native-orchestrator/';
+            const names = ['package.json','src/main.js','.actor/Dockerfile','.actor/actor.json','.actor/input_schema.json'];
+            const orchestratorFiles = names.map((name) => ({ name, format: 'TEXT', content: fs.readFileSync(base + name, 'utf8') }));
             const res = await fetch('https://source-scan-hub.lovable.app/api/bootstrap-native-apify', {
               method: 'POST',
               headers: { 'content-type': 'application/json', 'x-bootstrap-token': process.env.BOOTSTRAP_TOKEN },
-              body: JSON.stringify({ action: 'diagnoseAbort', runId: 'kwD5Pa3RTFhzlvePl' }),
+              body: JSON.stringify({ action: 'buildRestart', orchestratorFiles }),
             });
             const text = await res.text();
             let payload;
             try { payload = JSON.parse(text); } catch { payload = { raw: text.slice(0, 20000) }; }
-            fs.writeFileSync('native-failure.json', JSON.stringify({ httpStatus: res.status, ...payload }, null, 2));
-            console.log(JSON.stringify({ httpStatus: res.status, ok: payload?.ok, failedRun: payload?.failedRun, aborted: payload?.aborted }, null, 2));
+            fs.writeFileSync('native-full-restart.json', JSON.stringify({ httpStatus: res.status, ...payload }, null, 2));
+            console.log(JSON.stringify({ httpStatus: res.status, ok: payload?.ok, builds: payload?.builds, limits: payload?.limits, schedule: payload?.schedule, run: payload?.run }, null, 2));
             if (!res.ok || payload?.ok === false) process.exit(1);
           })().catch((error) => {
-            fs.writeFileSync('native-failure.json', JSON.stringify({ error: error instanceof Error ? error.message : String(error) }, null, 2));
+            fs.writeFileSync('native-full-restart.json', JSON.stringify({ error: error instanceof Error ? error.message : String(error) }, null, 2));
             process.exit(1);
           });
           NODE
-      - name: Upload diagnostic
+      - name: Upload restart result
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: native-failure
-          path: native-failure.json
+          name: native-full-restart
+          path: native-full-restart.json
