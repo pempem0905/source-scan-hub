@@ -109,6 +109,10 @@ async function inspect(runId?: string) {
 }
 
 async function scheduleAndRun(workerId: string, orchestratorId: string, forceLease: boolean) {
+  await Promise.all([
+    apify(`/actors/${encodeURIComponent(workerId)}`, { method: "PUT", body: JSON.stringify({ actorPermissionLevel: "FULL_PERMISSIONS" }) }),
+    apify(`/actors/${encodeURIComponent(orchestratorId)}`, { method: "PUT", body: JSON.stringify({ actorPermissionLevel: "FULL_PERMISSIONS" }) }),
+  ]);
   const [limits, schedules] = await Promise.all([apify("/users/me/limits"), apify("/schedules?limit=1000")]);
   const maxConcurrentJobs = Math.max(2, Number(limits?.limits?.maxConcurrentActorJobs ?? 32));
   const scheduleInput = {
@@ -143,7 +147,7 @@ async function scheduleAndRun(workerId: string, orchestratorId: string, forceLea
   const schedule = existing
     ? await apify(`/schedules/${encodeURIComponent(existing.id)}`, { method: "PUT", body: JSON.stringify(scheduleBody) })
     : await apify("/schedules", { method: "POST", body: JSON.stringify(scheduleBody) });
-  const params = new URLSearchParams({ memory: "256", timeout: "4200", build: "latest", maxTotalChargeUsd: "0.1" });
+  const params = new URLSearchParams({ memory: "256", timeout: "4200", build: "latest", maxTotalChargeUsd: "0.1", forcePermissionLevel: "FULL_PERMISSIONS" });
   const run = await apify(`/acts/${encodeURIComponent(orchestratorId)}/runs?${params.toString()}`, {
     method: "POST",
     body: JSON.stringify({ ...scheduleInput, forceLease }),
