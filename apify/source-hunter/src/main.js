@@ -87,8 +87,7 @@ const ASSET_RE = /\.(png|jpe?g|gif|svg|webp|ico|css|js|mjs|woff2?|ttf|eot|pdf|zi
 // Hosts whose links are per-merchant redirects — each distinct URL is a
 // different destination, so they are not collapsed to one per host.
 const AFFILIATE_HOST_RE =
-  /(^|\.)(accesstrade|adpia|masoffer|involve\.asia|invol\.co|ecomobi|interspace|shorten\.asia|go\.isclix|pub\.accesstrade|clickbank|admitad|awin|linksynergy|shopback|dgm|adflex|permate|civi\.vn|leadscloud)/i ||
-  /$^/;
+  /(accesstrade|adpia|masoffer|involve\.asia|invol\.co|ecomobi|interspace|shorten\.asia|isclix|admitad|awin|linksynergy|adflex|permate|leadscloud|clickbank)/i;
 
 const AFFILIATE_PATH_RE = /\/(go|out|click|redirect|deal|link|aff|track|r)\//i;
 
@@ -97,7 +96,7 @@ function isAffiliateLink(u) {
   if (AFFILIATE_PATH_RE.test(u.pathname)) return true;
   for (const k of u.searchParams.keys()) {
     const key = k.toLowerCase();
-    if (["url", "u", "to", "target", "redirect", "dest", "aff", "aff_id", "affiliate_id", "subid", "sub_id", "clickid", "click_id", "ref", "utm_source"].includes(key)) {
+    if (["url", "u", "to", "target", "redirect", "dest", "aff", "aff_id", "affiliate_id", "subid", "sub_id", "clickid", "click_id", "ref"].includes(key)) {
       return true;
     }
   }
