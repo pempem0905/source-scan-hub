@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/bootstrap-master-input.yml'
       - 'integration/build_master_input.py'
+      - 'integration/quality_gate_sources.py'
       - 'integration/legacy-source-seed.jsonl'
       - 'integration/promo-source-export.jsonl'
   workflow_dispatch:
@@ -27,6 +28,8 @@ jobs:
           fetch-depth: 1
       - name: Build canonical master input
         run: python3 integration/build_master_input.py
+      - name: Apply source quality gate
+        run: python3 integration/quality_gate_sources.py
       - name: Persist canonical input bridge
         run: |
           git config user.name "promo-input-bridge-bot"
