@@ -125,6 +125,8 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - name: Upload monitor artifact
         uses: actions/upload-pages-artifact@v4
         with:
