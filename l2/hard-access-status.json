@@ -5,12 +5,9 @@
     "INFRA_PENDING_RESIDENTIAL": 11,
     "RESIDENTIAL_REQUIRED": 11
   },
-  "note": "Proactive pre-auth is enabled. Login profiles are prepared before demand, but secure browser session control is not ready yet; residential-required sources remain isolated on the residential lane.",
-  "preauth_enabled": true,
-  "preauth_registry": "l2/preauth-platforms.json",
-  "browser_session_control": "PENDING",
+  "note": "No login is requested until an authorized persistent/self-hosted runner profile exists.",
   "production_write": false,
   "runner_ready": false,
-  "schema": "promo.l2.hard_access_status.v2",
+  "schema": "promo.l2.hard_access_status.v1",
   "total": 13
 }
