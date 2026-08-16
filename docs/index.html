@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Source Scan Monitor</title>
+  <style>
+    :root{--bg:#080b11;--card:#0f141d;--card2:#121925;--line:#222c3a;--text:#edf3fb;--muted:#8390a3;--good:#50d890;--warn:#f4c95d;--bad:#ff6b78;--blue:#6ba8ff}
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 15% -10%,#152239 0,#080b11 38%);color:var(--text);font:14px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+    .wrap{max-width:1280px;margin:auto;padding:22px}.top{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:18px}.title{font-size:24px;font-weight:760;letter-spacing:-.03em}.sub{color:var(--muted);margin-top:5px}.pill{display:inline-flex;gap:8px;align-items:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:#0d121a;color:var(--muted);font-size:12px}.dot{width:8px;height:8px;border-radius:50%;background:var(--muted)}.dot.good{background:var(--good);box-shadow:0 0 14px #50d89088}.dot.warn{background:var(--warn)}.dot.bad{background:var(--bad)}
+    .grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.card{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0}.k{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}.v{font-size:24px;font-weight:760;margin-top:6px;letter-spacing:-.025em}.hint{font-size:11px;color:var(--muted);margin-top:5px}.good{color:var(--good)}.warn{color:var(--warn)}.bad{color:var(--bad)}
+    .section{display:grid;grid-template-columns:1.15fr .85fr;gap:10px;margin-top:10px}.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px}.panel h2{font-size:13px;margin:0 0 12px}.rows{display:grid;grid-template-columns:1fr auto;gap:8px 16px}.rows div:nth-child(odd){color:var(--muted)}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.bar{height:7px;background:#18202b;border-radius:999px;overflow:hidden;margin-top:10px}.bar>i{display:block;height:100%;background:linear-gradient(90deg,#4c8cff,#52d693);border-radius:999px;width:0}
+    .tableWrap{margin-top:10px;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:var(--card)}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #1c2531;font-size:12px}th{color:var(--muted);font-weight:600;background:#0c1118}td a{color:#a9c9ff;text-decoration:none}td a:hover{text-decoration:underline}.empty{padding:25px;color:var(--muted);text-align:center}.footer{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:11px;margin-top:14px}.tag{padding:2px 6px;border:1px solid var(--line);border-radius:6px;color:#a8b4c5;white-space:nowrap}
+    @media(max-width:1050px){.grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:720px){.wrap{padding:14px}.top{display:block}.top .pill{margin-top:12px}.grid{grid-template-columns:repeat(2,1fr)}.section{grid-template-columns:1fr}.v{font-size:21px}th:nth-child(3),td:nth-child(3){display:none}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div><div class="title">Source Scan Monitor</div><div class="sub">Vietnam Promo Source Hunter · Free-first engine · GitHub Actions</div></div>
+    <div class="pill"><span id="statusDot" class="dot"></span><strong id="engineState">LOADING</strong><span id="lastUpdate">—</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="card"><div class="k">Legacy baseline</div><div class="v" id="legacy">—</div><div class="hint">Master domains trước free engine</div></div>
+    <div class="card"><div class="k">Free verified domains</div><div class="v good" id="freeDomains">—</div><div class="hint">Tự xác nhận trong free lane</div></div>
+    <div class="card"><div class="k">Frontier pending</div><div class="v" id="frontier">—</div><div class="hint">URL còn chờ xử lý</div></div>
+    <div class="card"><div class="k">Seen URLs</div><div class="v" id="seen">—</div><div class="hint">Đã dedupe / từng biết</div></div>
+    <div class="card"><div class="k">Runs</div><div class="v" id="runs">—</div><div class="hint">Checkpoint hoàn tất</div></div>
+    <div class="card"><div class="k">Free search added</div><div class="v" id="searchAdded">—</div><div class="hint">Root domain bơm ở lượt gần nhất</div></div>
+  </div>
+
+  <div class="section">
+    <div class="panel">
+      <h2>Lượt scan gần nhất</h2>
+      <div class="rows">
+        <div>Processed URLs</div><div class="mono" id="processed">—</div>
+        <div>New verified domains</div><div class="mono" id="newDomains">—</div>
+        <div>Errors</div><div class="mono" id="errors">—</div>
+        <div>403 rate</div><div class="mono" id="r403">—</div>
+        <div>429 rate</div><div class="mono" id="r429">—</div>
+        <div>Duration</div><div class="mono" id="duration">—</div>
+      </div>
+      <div class="bar"><i id="healthBar"></i></div>
+    </div>
+    <div class="panel">
+      <h2>Discovery</h2>
+      <div class="rows">
+        <div>Mode</div><div class="tag" id="mode">—</div>
+        <div>Common Crawl</div><div class="mono" id="cc">—</div>
+        <div>Schedule</div><div class="mono">mỗi 6 giờ</div>
+        <div>Target crawler cost</div><div class="mono good">$0</div>
+        <div>Est. GitHub minutes/mo</div><div class="mono" id="ghMinutes">—</div>
+        <div>Latest search queries</div><div class="mono" id="queryCount">—</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tableWrap">
+    <table><thead><tr><th>Recent source</th><th>Via</th><th>Evidence URL</th></tr></thead><tbody id="sources"></tbody></table>
+    <div id="emptySources" class="empty" hidden>Chưa có evidence mới trong snapshot.</div>
+  </div>
+
+  <div class="footer"><span>Auto refresh trình duyệt: 60 giây · dữ liệu thay đổi khi free hunter checkpoint</span><span id="generated">snapshot —</span></div>
+</div>
+<script>
+const $=id=>document.getElementById(id); const nf=new Intl.NumberFormat('vi-VN');
+function fmt(n){return Number.isFinite(Number(n))?nf.format(Number(n)):'—'}
+function ageText(iso){if(!iso)return '—';const m=Math.max(0,Math.round((Date.now()-new Date(iso).getTime())/60000));if(m<60)return `${m} phút trước`;const h=Math.round(m/60);return h<48?`${h} giờ trước`:`${Math.round(h/24)} ngày trước`}
+async function load(){
+ try{
+  const r=await fetch(`./data/engine.json?t=${Date.now()}`,{cache:'no-store'}); if(!r.ok)throw new Error('snapshot '+r.status); const d=await r.json();
+  const s=d.status||{}, l=s.last_run||{}, st=d.discovery||{}; const age=Date.now()-new Date(s.updated_at||0).getTime();
+  const active=age<8*3600e3; $('engineState').textContent=active?'ACTIVE':'IDLE'; $('statusDot').className='dot '+(active?'good':'warn'); $('lastUpdate').textContent=ageText(s.updated_at);
+  $('legacy').textContent=fmt(d.legacy_baseline_domains); $('freeDomains').textContent=fmt(s.master_domains); $('frontier').textContent=fmt(s.frontier_pending); $('seen').textContent=fmt(s.seen_urls); $('runs').textContent=fmt(s.run_count); $('searchAdded').textContent=fmt(st.free_search_last_added||0);
+  $('processed').textContent=fmt(l.processed); $('newDomains').textContent=fmt(l.new_domains); $('errors').textContent=fmt(l.errors); $('r403').textContent=`${Number(l.rate403||0).toFixed(2)}%`; $('r429').textContent=`${Number(l.rate429||0).toFixed(2)}%`; $('duration').textContent=`${Number(l.duration_s||0).toFixed(1)}s`;
+  const health=Math.max(0,100-Number(l.rate403||0)-Number(l.rate429||0)-Math.min(40,(Number(l.errors||0)/Math.max(1,Number(l.processed||1)))*100)); $('healthBar').style.width=`${health}%`;
+  $('mode').textContent=s.mode||'FREE'; $('cc').textContent=s.latest_common_crawl||'—'; $('ghMinutes').textContent=fmt(s.estimated_monthly_github_minutes); $('queryCount').textContent=fmt((st.free_search_last_queries||[]).length); $('generated').textContent=`snapshot ${new Date(d.generated_at).toLocaleString('vi-VN')}`;
+  const body=$('sources'); body.innerHTML=''; const rows=(d.recent_sources||[]).slice().reverse().slice(0,40); $('emptySources').hidden=rows.length>0;
+  for(const x of rows){const tr=document.createElement('tr'); const u=x.url||x.source_url||x.final_url||''; const domain=x.domain||(()=>{try{return new URL(u).hostname}catch{return '—'}})(); const via=x.via||x.discovery_method||x.source_type||'—'; tr.innerHTML=`<td><strong>${String(domain).replace(/[&<>]/g,'')}</strong></td><td><span class="tag">${String(via).replace(/[&<>]/g,'')}</span></td><td>${u?`<a href="${u}" target="_blank" rel="noreferrer">${u.length>90?u.slice(0,87)+'…':u}</a>`:'—'}</td>`; body.appendChild(tr)}
+ }catch(e){$('engineState').textContent='NO DATA';$('statusDot').className='dot bad';$('lastUpdate').textContent=String(e.message||e)}
+}
+load(); setInterval(load,60000);
+</script>
+</body></html>
