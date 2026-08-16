@@ -1,18 +1,18 @@
 {
   "schema": "promo.runtime_status.v1",
-  "generated_at": "2026-08-16T14:12:16Z",
+  "generated_at": "2026-08-16T14:21:41Z",
   "source": "latest_verified_baseline_then_live_worker_exports",
   "canonical": {
-    "batch": 56,
-    "source_high_watermark": "SRC-341",
-    "registered_sources": 320,
-    "scanned_sources": 176,
-    "actionable_offers": 169,
+    "batch": 83,
+    "source_high_watermark": "SRC-471",
+    "registered_sources": 450,
+    "scanned_sources": 306,
+    "actionable_offers": 299,
     "voucher_benefit_records": null,
-    "literal_codes": 42,
-    "ready_queue": null,
-    "last_commit_at": null,
-    "note": "Baseline is the latest verified canonical snapshot available to this GitHub bridge. Null fields are intentionally not guessed and must be filled from live durable state by PROMO GPT Infra + Dispatch."
+    "literal_codes": 60,
+    "ready_queue": 2,
+    "last_commit_at": "2026-08-16T12:18:32.094117Z",
+    "note": "Live durable Supabase canonical state verified by PROMO GPT Infra + Dispatch; voucher_benefit_records remains null because no explicit canonical DB count was verified."
   },
   "workers": {
     "PROMO Banks Shard": {
@@ -44,11 +44,11 @@
     },
     "PROMO GPT Infra + Dispatch": {
       "state": "ACTIVE",
-      "last_run_at": null,
-      "ready_queue": null,
-      "relayed": null,
-      "commit_stall": null,
-      "worker_health": null
+      "last_run_at": "2026-08-16T14:21:41Z",
+      "ready_queue": 2,
+      "relayed": 0,
+      "commit_stall": false,
+      "worker_health": "CANONICAL_OK; ledger head B83 matches master; 2 READY below immediate threshold and oldest <2h; shared input BRIDGE_SHADOW active_input=99."
     }
   }
 }
