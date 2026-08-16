@@ -8,6 +8,7 @@ on:
       - 'free-source-hunter/hunter.py'
       - 'free-source-hunter/bootstrap_free.py'
       - 'free-source-hunter/cc_domain_discovery.py'
+      - 'free-source-hunter/free_search_discovery.py'
   schedule:
     - cron: '23 */6 * * *'
   workflow_dispatch:
@@ -49,8 +50,10 @@ jobs:
           PY
       - name: Bootstrap free frontier
         run: python3 free-source-hunter/bootstrap_free.py
-      - name: Discover domains from broad Common Crawl pages
+      - name: Common Crawl discovery
         run: python3 free-source-hunter/cc_domain_discovery.py
+      - name: Free web-search discovery fallback
+        run: python3 free-source-hunter/free_search_discovery.py
       - name: Validate and expand free frontier
         run: python3 free-source-hunter/hunter.py
       - name: Persist frontier and master domains
