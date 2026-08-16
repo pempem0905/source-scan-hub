@@ -20,8 +20,8 @@
     "runtime_probe_verified": true,
     "permission_required": {
       "state": "PERMISSION_REQUIRED",
-      "reason": "One authorized platform login must be completed through Cloudflare Browser Run Live Sessions to verify structured human takeover and authenticated-session reuse end-to-end.",
-      "safe_action": "Run PROMO L2 Browser Run Bridge in handoff mode for a user-owned/authorized platform, open that active session from Cloudflare Dashboard > Browser Run > Live Sessions, complete login/MFA/CAPTCHA there, then mark the handoff Done.",
+      "reason": "One authorized platform must complete a real Cloudflare structured handoff and authenticated-session reuse verification before the login bridge can become end-to-end READY.",
+      "safe_action": "No login action is required until bridge_status becomes TAKEOVER_READY. The request/retry path opens the secure Live Session automatically; only then open Cloudflare Dashboard > Browser Run > Live Sessions, complete login/MFA/CAPTCHA there, and mark the handoff complete.",
       "note": "Do not place passwords, OTPs, cookies, refresh tokens, CAPTCHA data, session IDs, websocket URLs, or takeover URLs in GitHub files, logs, chat, or public dashboard."
     },
     "end_to_end_verified": false
