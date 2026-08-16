@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-16T21:54:30.494121Z",
+  "generated_at": "2026-08-16T22:03:12.297414Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 4442,
-    "frontier_deferred_pending": 39650,
-    "frontier_pending": 44092,
-    "last_6_runs_new_domains": 14,
+    "frontier_active_pending": 4601,
+    "frontier_deferred_pending": 39570,
+    "frontier_pending": 44171,
+    "last_6_runs_new_domains": 23,
     "last_run": {
-      "at": "2026-08-16T21:52:54.800364Z",
+      "at": "2026-08-16T22:01:13.914723Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.net/vn/*uu-dai*",
-        "*.com/vietnam/*promotion*",
-        "*.vn/*khuyen-mai*",
-        "*.vn/*khuyenmai*"
+        "*.vn/*uu-dai*",
+        "*.vn/*uudai*",
+        "*.vn/*voucher*",
+        "*.vn/*promotion*"
       ],
-      "duration_s": 94.8,
-      "errors": 45,
-      "frontier_pending": 44092,
+      "duration_s": 117.5,
+      "errors": 58,
+      "frontier_pending": 44171,
       "new_domains": 9,
-      "processed": 350,
-      "rate403": 3.143,
+      "processed": 430,
+      "rate403": 0.233,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 687,
+    "master_domains": 712,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 51,
+    "run_count": 52,
     "running": true,
-    "seen_urls": 240562,
-    "updated_at": "2026-08-16T21:54:29.590909Z"
+    "seen_urls": 245232,
+    "updated_at": "2026-08-16T22:03:11.378772Z"
   },
   "master_input": {
     "active_input_count": 105,
     "counts": {
       "ACTIVE_INPUT": 105,
       "AUTHORIZED_ACCOUNT": 2,
-      "BANK_CARD": 32,
+      "BANK_CARD": 33,
       "DISCOVERY_ONLY": 14,
       "FOOD_BEVERAGE": 22,
-      "GENERAL": 447,
+      "GENERAL": 468,
       "LOYALTY_REWARDS": 9,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 14,
       "PROMO_RETAIL": 60,
-      "PUBLIC_HTTP": 587,
+      "PUBLIC_HTTP": 610,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 71,
-      "REVIEW_INPUT": 482,
+      "RETAIL_ECOMMERCE": 72,
+      "REVIEW_INPUT": 505,
       "SOURCE_HUNTER": 14,
-      "SOURCE_REVIEW": 482,
+      "SOURCE_REVIEW": 505,
       "TRAVEL_MOBILITY": 13
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 14,
-    "generated_at": "2026-08-16T21:54:30.323783Z",
+    "generated_at": "2026-08-16T22:03:12.129554Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 601,
-    "review_input_count": 482,
+    "record_count": 624,
+    "review_input_count": 505,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 687,
+    "source_hunter_domains": 712,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -210,7 +210,7 @@
       "SHADOW_REJECT_TECHNICAL": 18,
       "SHADOW_REVIEW_DATE": 24
     },
-    "generated_at": "2026-08-16T21:40:27.348109Z",
+    "generated_at": "2026-08-16T21:56:31.567338Z",
     "note": "SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion.",
     "production_eligible_automatically": 0,
     "production_write": false,
@@ -320,93 +320,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 4,
+    "free_search_last_added": 3,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "bảo hiểm khuyến mãi Việt Nam",
-      "bảo hiểm ưu đãi Việt Nam",
-      "bảo hiểm voucher Việt Nam",
-      "bảo hiểm promotion Vietnam"
+      "viễn thông internet khuyến mãi Việt Nam",
+      "viễn thông internet ưu đãi Việt Nam",
+      "viễn thông internet voucher Việt Nam",
+      "viễn thông internet promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 43,
+    "cc_domain_page": 44,
     "frontier_scheduler": {
-      "active": 350,
+      "active": 430,
       "base_per_host_batch": 16,
-      "deferred": 39650,
+      "deferred": 39570,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 86
+      "unique_hosts": 67
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T14:43:52.731191Z",
-      "domain": "fptnet.vn",
-      "radar": false,
-      "url": "https://fptnet.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T14:43:52.731191Z",
-      "domain": "internet-viettel.com",
-      "radar": false,
-      "url": "https://internet-viettel.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T14:43:52.731191Z",
-      "domain": "mangfpt.vn",
-      "radar": false,
-      "url": "https://mangfpt.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T14:43:52.731191Z",
-      "domain": "internetviettel.vn",
-      "radar": false,
-      "url": "https://internetviettel.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T14:43:52.731191Z",
-      "domain": "fpt.vn",
-      "radar": false,
-      "url": "https://fpt.vn/vi",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T14:43:52.731191Z",
-      "domain": "viettel-telecom.net",
-      "radar": false,
-      "url": "https://viettel-telecom.net/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T14:43:52.731191Z",
-      "domain": "viettelkhuyenmai.vn",
-      "radar": false,
-      "url": "https://viettelkhuyenmai.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T14:43:52.731191Z",
-      "domain": "viettelnet.vn",
-      "radar": false,
-      "url": "https://viettelnet.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T14:43:52.731191Z",
-      "domain": "viettelvt.com",
-      "radar": false,
-      "url": "https://viettelvt.com/",
-      "via": "free_search"
-    },
     {
       "at": "2026-08-16T14:43:52.731191Z",
       "domain": "fpt24.vn",
@@ -1182,6 +1119,69 @@
       "domain": "pjico.com.vn",
       "radar": false,
       "url": "https://pjico.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T22:01:13.914723Z",
+      "domain": "creatorforvietnam.com",
+      "radar": false,
+      "url": "https://creatorforvietnam.com/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T22:01:13.914723Z",
+      "domain": "nsqvietnam.com",
+      "radar": false,
+      "url": "https://nsqvietnam.com/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T22:01:13.914723Z",
+      "domain": "flexoffice.com",
+      "radar": false,
+      "url": "https://flexoffice.com/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T22:01:13.914723Z",
+      "domain": "rentracks.com.vn",
+      "radar": false,
+      "url": "https://rentracks.com.vn/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T22:01:13.914723Z",
+      "domain": "pierre-cardin.vn",
+      "radar": false,
+      "url": "https://pierre-cardin.vn/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T22:01:13.914723Z",
+      "domain": "achinhngach.com",
+      "radar": false,
+      "url": "https://achinhngach.com/",
+      "via": "common_crawl_domain"
+    },
+    {
+      "at": "2026-08-16T22:01:13.914723Z",
+      "domain": "viettelnet.com",
+      "radar": false,
+      "url": "https://viettelnet.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T22:01:13.914723Z",
+      "domain": "internet-fpt.com.vn",
+      "radar": false,
+      "url": "https://internet-fpt.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T22:01:13.914723Z",
+      "domain": "vn-fpt.com",
+      "radar": false,
+      "url": "https://vn-fpt.com/",
       "via": "free_search"
     }
   ]

@@ -1,32 +1,32 @@
 {
   "cost_target_usd": 0,
   "estimated_monthly_github_minutes": 1320.0,
-  "frontier_active_pending": 4442,
-  "frontier_deferred_pending": 39650,
-  "frontier_pending": 44092,
-  "last_6_runs_new_domains": 14,
+  "frontier_active_pending": 4601,
+  "frontier_deferred_pending": 39570,
+  "frontier_pending": 44171,
+  "last_6_runs_new_domains": 23,
   "last_run": {
-    "at": "2026-08-16T21:52:54.800364Z",
+    "at": "2026-08-16T22:01:13.914723Z",
     "cc_added": 0,
     "cc_patterns": [
-      "*.net/vn/*uu-dai*",
-      "*.com/vietnam/*promotion*",
-      "*.vn/*khuyen-mai*",
-      "*.vn/*khuyenmai*"
+      "*.vn/*uu-dai*",
+      "*.vn/*uudai*",
+      "*.vn/*voucher*",
+      "*.vn/*promotion*"
     ],
-    "duration_s": 94.8,
-    "errors": 45,
-    "frontier_pending": 44092,
+    "duration_s": 117.5,
+    "errors": 58,
+    "frontier_pending": 44171,
     "new_domains": 9,
-    "processed": 350,
-    "rate403": 3.143,
+    "processed": 430,
+    "rate403": 0.233,
     "rate429": 0.0
   },
   "latest_common_crawl": "CC-MAIN-2026-30",
-  "master_domains": 687,
+  "master_domains": 712,
   "mode": "FREE_COMMON_CRAWL_GITHUB",
-  "run_count": 51,
+  "run_count": 52,
   "running": true,
-  "seen_urls": 240562,
-  "updated_at": "2026-08-16T21:54:29.590909Z"
+  "seen_urls": 245232,
+  "updated_at": "2026-08-16T22:03:11.378772Z"
 }
