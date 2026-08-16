@@ -70,21 +70,33 @@
       "promo_candidates": 20,
       "public_ok": 19,
       "shadow_ready": 23
+    },
+    {
+      "at": "2026-08-16T11:19:13Z",
+      "attempted": 30,
+      "blocked": 3,
+      "code_candidates": 6,
+      "errors": 2,
+      "js_browser": 0,
+      "login_required": 0,
+      "promo_candidates": 20,
+      "public_ok": 25,
+      "shadow_ready": 6
     }
   ],
   "last_run": {
     "attempted": 30,
-    "blocked": 2,
-    "code_candidates": 23,
-    "errors": 7,
+    "blocked": 3,
+    "code_candidates": 6,
+    "errors": 2,
     "js_browser": 0,
-    "login_required": 2,
+    "login_required": 0,
     "promo_candidates": 20,
-    "public_ok": 19,
-    "shadow_ready": 23
+    "public_ok": 25,
+    "shadow_ready": 6
   },
   "project_id": "PROMO-L2-ROUTER-V1",
-  "run_count": 6,
+  "run_count": 7,
   "schema_version": 2,
   "seen": {
     "https://acb.com.vn/": {
@@ -107,15 +119,40 @@
       "at": "2026-08-16T11:08:04Z",
       "content_hash": null
     },
+    "https://aeon.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:17:33Z",
+      "content_hash": "fd3cc7b6569fb0890ca7eac7078d1925e7fb40b76295beeee6250134a5d53cf8"
+    },
+    "https://agoda.com/c/visamy": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:18:13Z",
+      "content_hash": "bf9006e0174231f4838efc855700ab2f7d285cca14ba187716a84ee77d1992fa"
+    },
+    "https://all.accor.com/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:18:07Z",
+      "content_hash": null
+    },
     "https://bachhoaxanh.com/khuyen-mai": {
       "access_state": "ERROR",
       "at": "2026-08-16T11:08:04Z",
       "content_hash": null
     },
+    "https://be.com.vn/tin-tuc/ma-giam-gia-be-moi-nhat/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:18:14Z",
+      "content_hash": "2384988294f9316d63b8a5649704b57b527e3272489a69bdc701d9d83770c2c3"
+    },
     "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T11:08:08Z",
       "content_hash": "50f4689c4cfc47353dcecdf77ef602d5cda138ceeed543a5551aa8c34a6f1f67"
+    },
+    "https://booking.com/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:18:22Z",
+      "content_hash": "3513abbac130c5913259911c7ca19d525cb3dab92672728599de6f07dbf1ef4c"
     },
     "https://card.apply.hsbc.com.vn/daily-offers/en": {
       "access_state": "PUBLIC_OK",
@@ -137,6 +174,11 @@
       "at": "2026-08-16T10:51:12Z",
       "content_hash": "9dbb40617de5e891d9ab0891b0371fbf412161ee26f0170595a9f89ad07f89c2"
     },
+    "https://cgv.vn/default/faq/": {
+      "access_state": "ERROR",
+      "at": "2026-08-16T11:18:36Z",
+      "content_hash": null
+    },
     "https://circlek.com.vn/": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T11:12:03Z",
@@ -157,6 +199,26 @@
       "at": "2026-08-16T11:08:15Z",
       "content_hash": "d6061ba3e970cffa00bd3675bd2770a0c7cf023636e3030e18b74c27513385c1"
     },
+    "https://cooponline.vn/": {
+      "access_state": "ERROR",
+      "at": "2026-08-16T11:18:46Z",
+      "content_hash": null
+    },
+    "https://crescentmall.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:17:35Z",
+      "content_hash": "937bdbdfd8c10a6dd4c8da983112b5e958b0500aadbd8a8df741d9d5f8997bc4"
+    },
+    "https://crescentmall.com.vn/vi/events/su-kien": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:17:36Z",
+      "content_hash": "9d0513982b5941546be650c1851ca3eaa4c3327c76db2dfb859610aad3c5668e"
+    },
+    "https://decathlon.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:18:58Z",
+      "content_hash": "25c41e1c3e5879cc694de1955e135dc26812cb1c29d3b232f342f5dc4c7a8c27"
+    },
     "https://dienmaycholon.vn/khuyen-mai": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T11:08:18Z",
@@ -171,6 +233,16 @@
       "access_state": "ERROR",
       "at": "2026-08-16T11:08:22Z",
       "content_hash": null
+    },
+    "https://estellaplace.com.vn/su-kien": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:18:59Z",
+      "content_hash": "f895d14066af4670d616bdda9f611ac44fd020b943a19bafe490411efcdbdef0"
+    },
+    "https://food.grab.com/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:17:53Z",
+      "content_hash": "b89ec9f3596f2e038172f1ee338bd3d448021b13f916b0e3fa55489c1e7e621e"
     },
     "https://food.grab.com/sg/en/": {
       "access_state": "PUBLIC_OK",
@@ -187,30 +259,85 @@
       "at": "2026-08-16T11:08:27Z",
       "content_hash": null
     },
+    "https://gigamall.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:19:01Z",
+      "content_hash": "9efdef79b61f1ee9b3636759bf3029857e239cb844bc906164754dd017e7ab53"
+    },
     "https://go-vietnam.vn/khuyen-mai/": {
       "access_state": "ERROR",
       "at": "2026-08-16T11:08:29Z",
       "content_hash": null
+    },
+    "https://gotit.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:19:03Z",
+      "content_hash": "6efb36ac36d1f26e3664a0d4d2574bc52da789d8738a8d6c515a8c9fc3f5df48"
+    },
+    "https://grab.com/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:17:36Z",
+      "content_hash": "e335c06300ace3fae5c1ab505a3532d94fcc954311ded193773b3bf383dbc715"
     },
     "https://grab.com/vn/": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:50:28Z",
       "content_hash": "db2a486aee32c24f9a922214f30dce5dea5ad4f404bf5c8990dd37cb25a1e909"
     },
+    "https://grab.com/vn/blog/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:17:55Z",
+      "content_hash": "328e6a87de4aa19e226d0dba98ea301289f12ab94d6a093854625e522c8d9a79"
+    },
+    "https://growth-public.grab.com/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:17:55Z",
+      "content_hash": null
+    },
     "https://growth-public.grab.com/grabfood-com/sitemap/sitemap_index.xml": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:50:17Z",
       "content_hash": "b3ac25baa78f69911fd4f6b2f540b1f92b1b9127af91c006d47c98ceebac67b1"
+    },
+    "https://gs25.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:19:05Z",
+      "content_hash": "974c07dc06c6aeaee6b63352b500a8e6e08919ba3a881cb7923e2116ef0a88c7"
+    },
+    "https://gs25.com.vn/vi": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:19:06Z",
+      "content_hash": "974c07dc06c6aeaee6b63352b500a8e6e08919ba3a881cb7923e2116ef0a88c7"
+    },
+    "https://guardian.com.vn/": {
+      "access_state": "BLOCKED_DATACENTER",
+      "at": "2026-08-16T11:19:06Z",
+      "content_hash": null
+    },
+    "https://hdbank.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:19:07Z",
+      "content_hash": "6fc90fa8fdf725e490f0bcbe5b9eced13f986b1269d2df5f6212f1965382654c"
     },
     "https://help.cs.shopeepay.vn/portal/100/": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:50:17Z",
       "content_hash": "54826b9cc1e46b2c829c07bdfc4f74e34142cea33e2968b1845508786a360ec2"
     },
+    "https://help.shopee.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:18:03Z",
+      "content_hash": "7f84e8ba74d34f1f023ac9e1cf9a7fd3d95532240399eace64b7a55752131078"
+    },
     "https://help.shopee.vn/portal/4/": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:50:12Z",
       "content_hash": "7f84e8ba74d34f1f023ac9e1cf9a7fd3d95532240399eace64b7a55752131078"
+    },
+    "https://highlandscoffee.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:19:09Z",
+      "content_hash": "c142a1e4c1fc4cda0002706a4ebd00a2e748fcca95b13d746897af13d74e9398"
     },
     "https://homefarm.vn/": {
       "access_state": "PUBLIC_OK",
@@ -226,6 +353,11 @@
       "access_state": "BLOCKED_DATACENTER",
       "at": "2026-08-16T11:08:31Z",
       "content_hash": null
+    },
+    "https://juno.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:19:13Z",
+      "content_hash": "e805590a2107e75b9c734956bf0b92f8a4de63785f96b7cdbf0e04e296dc5cb1"
     },
     "https://lottemallwestlakehanoi.vn/": {
       "access_state": "PUBLIC_OK",
@@ -297,6 +429,11 @@
       "at": "2026-08-16T10:51:06Z",
       "content_hash": "a9a58fe6a00029df1016a8e878dcebbe48a1576e8f74a00185851df9565319f0"
     },
+    "https://pharmacity.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:17:56Z",
+      "content_hash": "24c9992dc4e16ce7b9fa0f177bbd251a8050a5e2de2eba437a5f71b7c74a27f7"
+    },
     "https://phuclong.com.vn/": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T11:09:07Z",
@@ -342,6 +479,11 @@
       "at": "2026-08-16T11:12:37Z",
       "content_hash": null
     },
+    "https://shop.aeonmall-vietnam.com/": {
+      "access_state": "BLOCKED_DATACENTER",
+      "at": "2026-08-16T11:18:07Z",
+      "content_hash": null
+    },
     "https://shopee.vn/": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:50:26Z",
@@ -356,6 +498,16 @@
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:50:40Z",
       "content_hash": "d8aa8ca310fc71f289c5bfcacde1ef106b5abea81a8b9904f8d2213c306941f6"
+    },
+    "https://techcombank.com/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:18:04Z",
+      "content_hash": "83e68ce475681028dc3729a44772d47b2200e6174e82c6818c04d68f9dda7973"
+    },
+    "https://techcombank.com/thong-tin/blog/ma-giam-gia-shopee": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:18:05Z",
+      "content_hash": "11f92957cee85a30fd1cb7b381f1daf355eff5893a22f97568a146c9415c0b88"
     },
     "https://thegioididong.com/khuyen-mai": {
       "access_state": "ERROR",
@@ -427,6 +579,11 @@
       "at": "2026-08-16T10:50:01Z",
       "content_hash": "4cc5d5a2e06d772274256248caee87b8de3ec5adb5b5d54c22bd7e8fc3bf9b61"
     },
+    "https://vincom.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:18:07Z",
+      "content_hash": "c3851daebe81bc308c51086127a4ff44355fce8c5048735a3220ad08095d1e73"
+    },
     "https://vinpearl.com/vi/promotion": {
       "access_state": "BLOCKED_DATACENTER",
       "at": "2026-08-16T11:13:27Z",
@@ -472,6 +629,11 @@
       "at": "2026-08-16T10:50:00Z",
       "content_hash": "820d72003553c7dd218eee11ac0cfdc5453c5c5780653d43359dcae99c8a24a4"
     },
+    "https://www2.hm.com/vi_vn/men/sale/view-all.html": {
+      "access_state": "BLOCKED_DATACENTER",
+      "at": "2026-08-16T11:18:07Z",
+      "content_hash": null
+    },
     "https://yody.vn/khuyen-mai": {
       "access_state": "ERROR",
       "at": "2026-08-16T11:13:32Z",
@@ -488,5 +650,5 @@
       "content_hash": "41c02a4a827a8c2e4ceb581580f496de7cc787135ec22741ab4cd2501970091a"
     }
   },
-  "updated_at": "2026-08-16T11:13:51Z"
+  "updated_at": "2026-08-16T11:19:13Z"
 }
