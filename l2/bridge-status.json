@@ -1,0 +1,46 @@
+{
+  "schema": "promo.l2.bridge_status.v1",
+  "project_id": "PROMO-L2-ROUTER-V1",
+  "provider": "CLOUDFLARE_BROWSER_RUN_HUMAN_IN_LOOP",
+  "status": "PERMISSION_REQUIRED",
+  "ready": false,
+  "verified": false,
+  "runtime_components": {
+    "session_manager": "l2/session_manager.py",
+    "human_takeover": "Cloudflare Browser Run Live View",
+    "session_transport": "CDP Browser Session",
+    "private_handoff": "runtime-local file outside repository",
+    "residential_fallback": "self-hosted persistent browser profile"
+  },
+  "required_runtime_settings": [
+    {
+      "name": "CLOUDFLARE_ACCOUNT_ID",
+      "type": "runtime setting",
+      "reason": "Select the Cloudflare account that owns Browser Run."
+    },
+    {
+      "name": "CLOUDFLARE_BROWSER_RUN_API_TOKEN",
+      "type": "secret",
+      "required_permission": "Browser Rendering - Edit",
+      "reason": "Create/manage Browser Run CDP sessions and Live View handoff."
+    },
+    {
+      "name": "L2_PRIVATE_HANDOFF_PATH",
+      "type": "runtime-local path",
+      "reason": "Store ephemeral takeover URL outside GitHub with mode 0600."
+    }
+  ],
+  "security_invariants": {
+    "passwords_in_github": false,
+    "otp_in_github": false,
+    "cookies_in_github": false,
+    "refresh_tokens_in_github": false,
+    "captcha_data_in_github": false,
+    "session_ids_in_github": false,
+    "takeover_urls_in_github": false,
+    "takeover_urls_in_logs": false,
+    "one_platform_failure_pauses_others": false
+  },
+  "readiness_rule": "Do not mark READY until a real Browser Run session has been created, a private Live View takeover has been delivered outside GitHub, human takeover has been exercised, and the authenticated session has been reused successfully by L2.",
+  "fallback_readiness_rule": "For cloud/datacenter-blocked sites, require an online self-hosted residential runner with a platform-isolated persistent profile before marking that platform READY."
+}
