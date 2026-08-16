@@ -8,9 +8,7 @@ on:
         required: true
         default: "probe"
         type: choice
-        options:
-          - probe
-          - handoff
+        options: [probe, handoff]
       platform:
         description: "authorized platform key"
         required: false
@@ -25,7 +23,6 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/promo-l2-browser-run-bridge.yml'
-      - 'l2/browser_run_cdp.py'
       - 'l2/browser_run_bridge.mjs'
       - 'l2/session_manager.py'
       - 'l2/preauth-platforms.json'
@@ -35,7 +32,7 @@ permissions:
 
 concurrency:
   group: promo-l2-browser-run-bridge
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   bridge:
@@ -52,9 +49,9 @@ jobs:
           ref: main
           fetch-depth: 1
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: '3.12'
+          node-version: '22'
 
       - name: Validate non-secret inputs
         id: inputs
@@ -79,8 +76,17 @@ jobs:
           test -n "${CLOUDFLARE_BROWSER_RUN_API_TOKEN:-}" || { echo 'CLOUDFLARE_BROWSER_RUN_API_TOKEN unavailable to runtime'; exit 11; }
           echo 'Cloudflare runtime settings are present (values suppressed).'
 
-      - name: Install minimal CDP websocket dependency
-        run: python -m pip install --disable-pip-version-check --no-cache-dir 'websockets>=15,<16'
+      - name: Prepare isolated CDP runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/promo-l2-cdp
+          mkdir -p /tmp/promo-l2-cdp
+          cp l2/browser_run_bridge.mjs /tmp/promo-l2-cdp/bridge.mjs
+          cd /tmp/promo-l2-cdp
+          npm init -y >/dev/null 2>&1
+          npm install --no-audit --no-fund --ignore-scripts playwright-core@1.55.0 >/dev/null
+          echo 'Isolated Browser Run CDP runtime prepared.'
 
       - name: Execute secure Browser Run bridge
         id: bridge
@@ -92,7 +98,7 @@ jobs:
         shell: bash
         run: |
           set +e
-          python l2/browser_run_cdp.py "$BRIDGE_MODE" "$BRIDGE_PLATFORM" "$BRIDGE_START_URL"
+          node /tmp/promo-l2-cdp/bridge.mjs "$BRIDGE_MODE" "$BRIDGE_PLATFORM" "$BRIDGE_START_URL"
           RC=$?
           echo "rc=$RC" >> "$GITHUB_OUTPUT"
           exit 0
@@ -112,27 +118,16 @@ jobs:
           now=dt.datetime.now(dt.timezone.utc).isoformat().replace('+00:00','Z')
           if mode=='probe':
               state='BROWSER_RUN_PROBE_VERIFIED' if rc==0 else 'BROWSER_RUN_PROBE_FAILED'
-              created = rc==0
-              handoff=False
-              reuse=False
+              created = rc==0; handoff=False; reuse=False
           else:
               state='SESSION_REUSE_VERIFIED' if rc==0 else ('HANDOFF_REUSE_UNVERIFIED' if rc==3 else 'HANDOFF_FAILED')
-              created = rc in (0,3)
-              handoff = rc in (0,3)
-              reuse = rc==0
+              created = rc in (0,3); handoff = rc in (0,3); reuse = rc==0
           payload={
-            'schema':'promo.l2.bridge_runtime_status.v1',
-            'provider':'CLOUDFLARE_BROWSER_RUN',
-            'checked_at':now,
-            'mode':mode,
-            'platform':platform,
-            'state':state,
-            'browser_session_created':created,
-            'human_handoff_exercised':handoff,
-            'authenticated_session_reuse_verified':reuse,
-            'ready': bool(mode=='handoff' and rc==0),
-            'secret_values_observable':False,
-            'sensitive_runtime_material_persisted':False,
+            'schema':'promo.l2.bridge_runtime_status.v1','provider':'CLOUDFLARE_BROWSER_RUN',
+            'checked_at':now,'mode':mode,'platform':platform,'state':state,
+            'browser_session_created':created,'human_handoff_exercised':handoff,
+            'authenticated_session_reuse_verified':reuse,'ready':bool(mode=='handoff' and rc==0),
+            'secret_values_observable':False,'sensitive_runtime_material_persisted':False,
             'note':'No session IDs, websocket endpoints, Live View URLs, cookies, credentials, OTPs or CAPTCHA data are persisted.'
           }
           Path('l2/bridge-runtime-status.json').write_text(json.dumps(payload,indent=2)+'\n')
@@ -154,5 +149,4 @@ jobs:
         env:
           BRIDGE_RC: ${{ steps.bridge.outputs.rc }}
         shell: bash
-        run: |
-          test "${BRIDGE_RC:-99}" = '0'
+        run: test "${BRIDGE_RC:-99}" = '0'
