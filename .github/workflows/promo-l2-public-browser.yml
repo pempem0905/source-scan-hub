@@ -1,0 +1,57 @@
+name: PROMO L2 Public Browser
+
+on:
+  schedule:
+    - cron: '2-52/10 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'l2/public_browser_worker.py'
+      - 'l2/router.json'
+      - '.github/workflows/promo-l2-public-browser.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: promo-l2-public-browser
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      L2_MAX_ITEMS: '20'
+      L2_MAX_SECONDS: '480'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Playwright client
+        run: python -m pip install --disable-pip-version-check playwright
+
+      - name: Scan public and JS-heavy sources
+        run: python l2/public_browser_worker.py
+
+      - name: Persist L2 state and candidates
+        run: |
+          git config user.name "promo-l2-free-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          touch l2/public-results.jsonl
+          git add l2/public-state.json l2/public-results.jsonl
+          if git diff --cached --quiet; then
+            echo "No L2 state changes"
+            exit 0
+          fi
+          git commit -m "PROMO L2 public browser checkpoint [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
