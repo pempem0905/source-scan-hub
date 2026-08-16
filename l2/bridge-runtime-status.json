@@ -1,7 +1,7 @@
 {
   "schema": "promo.l2.bridge_runtime_status.v1",
   "provider": "CLOUDFLARE_BROWSER_RUN",
-  "checked_at": "2026-08-16T17:29:05.952737Z",
+  "checked_at": "2026-08-16T17:30:14.675791Z",
   "mode": "probe",
   "platform": "probe",
   "state": "BROWSER_RUN_PROBE_VERIFIED",
