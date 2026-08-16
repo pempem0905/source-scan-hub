@@ -88,7 +88,7 @@ jobs:
           npm install --no-audit --no-fund --ignore-scripts playwright-core@1.55.0 >/dev/null
           echo 'Isolated Browser Run CDP runtime prepared.'
 
-      - name: Execute secure Browser Run bridge
+      - name: Execute secure Browser Run bridge with transient backoff
         id: bridge
         continue-on-error: true
         env:
@@ -98,12 +98,18 @@ jobs:
         shell: bash
         run: |
           set +e
-          node /tmp/promo-l2-cdp/bridge.mjs "$BRIDGE_MODE" "$BRIDGE_PLATFORM" "$BRIDGE_START_URL"
-          RC=$?
+          RC=99
+          for DELAY in 0 20 60; do
+            if [ "$DELAY" -gt 0 ]; then sleep "$DELAY"; fi
+            node /tmp/promo-l2-cdp/bridge.mjs "$BRIDGE_MODE" "$BRIDGE_PLATFORM" "$BRIDGE_START_URL"
+            RC=$?
+            [ "$RC" -eq 75 ] || break
+            echo 'Transient Browser Run rate limit; backing off without invalidating prior verification.'
+          done
           echo "rc=$RC" >> "$GITHUB_OUTPUT"
           exit 0
 
-      - name: Write non-secret bridge runtime status
+      - name: Write monotonic non-secret bridge runtime status
         env:
           BRIDGE_MODE: ${{ steps.inputs.outputs.mode }}
           BRIDGE_PLATFORM: ${{ steps.inputs.outputs.platform }}
@@ -112,25 +118,26 @@ jobs:
           python3 - <<'PY'
           import datetime as dt, json, os
           from pathlib import Path
-          mode=os.environ.get('BRIDGE_MODE','probe')
-          platform=os.environ.get('BRIDGE_PLATFORM','probe')
-          rc=int(os.environ.get('BRIDGE_RC','99') or 99)
-          now=dt.datetime.now(dt.timezone.utc).isoformat().replace('+00:00','Z')
-          if mode=='probe':
-              state='BROWSER_RUN_PROBE_VERIFIED' if rc==0 else 'BROWSER_RUN_PROBE_FAILED'
-              created = rc==0; handoff=False; reuse=False
+          mode=os.environ.get('BRIDGE_MODE','probe'); platform=os.environ.get('BRIDGE_PLATFORM','probe')
+          rc=int(os.environ.get('BRIDGE_RC','99') or 99); now=dt.datetime.now(dt.timezone.utc).isoformat().replace('+00:00','Z')
+          p=Path('l2/bridge-runtime-status.json')
+          try: prev=json.loads(p.read_text())
+          except Exception: prev={}
+          previously_verified=bool(prev.get('browser_session_created')) or prev.get('state')=='BROWSER_RUN_PROBE_VERIFIED'
+          if mode=='probe' and rc==0:
+              state='BROWSER_RUN_PROBE_VERIFIED'; created=True; handoff=False; reuse=False; last_verified_at=now
+          elif mode=='probe' and rc==75:
+              state='TRANSIENT_RATE_LIMIT'; created=previously_verified; handoff=bool(prev.get('human_handoff_exercised')); reuse=bool(prev.get('authenticated_session_reuse_verified')); last_verified_at=prev.get('last_verified_at') or prev.get('checked_at') if previously_verified else None
+          elif mode=='probe':
+              state='BROWSER_RUN_PROBE_FAILED'; created=previously_verified; handoff=bool(prev.get('human_handoff_exercised')); reuse=bool(prev.get('authenticated_session_reuse_verified')); last_verified_at=prev.get('last_verified_at') or (prev.get('checked_at') if previously_verified else None)
+          elif rc==0:
+              state='SESSION_REUSE_VERIFIED'; created=True; handoff=True; reuse=True; last_verified_at=now
+          elif rc==75:
+              state='TRANSIENT_RATE_LIMIT'; created=previously_verified; handoff=bool(prev.get('human_handoff_exercised')); reuse=bool(prev.get('authenticated_session_reuse_verified')); last_verified_at=prev.get('last_verified_at')
           else:
-              state='SESSION_REUSE_VERIFIED' if rc==0 else ('HANDOFF_REUSE_UNVERIFIED' if rc==3 else 'HANDOFF_FAILED')
-              created = rc in (0,3); handoff = rc in (0,3); reuse = rc==0
-          payload={
-            'schema':'promo.l2.bridge_runtime_status.v1','provider':'CLOUDFLARE_BROWSER_RUN',
-            'checked_at':now,'mode':mode,'platform':platform,'state':state,
-            'browser_session_created':created,'human_handoff_exercised':handoff,
-            'authenticated_session_reuse_verified':reuse,'ready':bool(mode=='handoff' and rc==0),
-            'secret_values_observable':False,'sensitive_runtime_material_persisted':False,
-            'note':'No session IDs, websocket endpoints, Live View URLs, cookies, credentials, OTPs or CAPTCHA data are persisted.'
-          }
-          Path('l2/bridge-runtime-status.json').write_text(json.dumps(payload,indent=2)+'\n')
+              state='HANDOFF_REUSE_UNVERIFIED' if rc==3 else 'HANDOFF_FAILED'; created=previously_verified; handoff=bool(prev.get('human_handoff_exercised')) or rc==3; reuse=bool(prev.get('authenticated_session_reuse_verified')); last_verified_at=prev.get('last_verified_at')
+          payload={'schema':'promo.l2.bridge_runtime_status.v2','provider':'CLOUDFLARE_BROWSER_RUN','checked_at':now,'last_verified_at':last_verified_at,'mode':mode,'platform':platform,'state':state,'browser_session_created':created,'human_handoff_exercised':handoff,'authenticated_session_reuse_verified':reuse,'ready':bool(reuse),'transient_failure':rc==75,'secret_values_observable':False,'sensitive_runtime_material_persisted':False,'note':'No session IDs, websocket endpoints, Live View URLs, cookies, credentials, OTPs or CAPTCHA data are persisted.'}
+          p.write_text(json.dumps(payload,indent=2)+'\n')
           PY
 
       - name: Persist only sanitized runtime status
@@ -149,4 +156,9 @@ jobs:
         env:
           BRIDGE_RC: ${{ steps.bridge.outputs.rc }}
         shell: bash
-        run: test "${BRIDGE_RC:-99}" = '0'
+        run: |
+          if [ "${BRIDGE_RC:-99}" = '75' ]; then
+            echo 'Transient Cloudflare rate limit; preserving prior verified state.'
+            exit 0
+          fi
+          test "${BRIDGE_RC:-99}" = '0'
