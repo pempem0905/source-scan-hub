@@ -1,11 +1,6 @@
 name: PROMO L2 Secure Login Bridge
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'l2/browser_run_cdp.py'
-      - '.github/workflows/promo-l2-secure-login-bridge.yml'
   workflow_dispatch:
     inputs:
       operation:
@@ -19,7 +14,7 @@ on:
         required: true
         default: grabfood
         type: choice
-        options: [grabfood, shopeefood, tiktok, uniqlo, smember]
+        options: [grabfood, shopeefood, tiktok, tiktokshop, uniqlo, smember]
 
 permissions:
   contents: read
@@ -37,6 +32,7 @@ jobs:
       CLOUDFLARE_BROWSER_RUN_API_TOKEN: ${{ secrets.CLOUDFLARE_BROWSER_RUN_API_TOKEN }}
       L2_BROWSER_KEEP_ALIVE_MS: '600000'
       L2_HANDOFF_TIMEOUT_MS: '1800000'
+      L2_HANDOFF_HEARTBEAT_S: '120'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -63,25 +59,21 @@ jobs:
           set -euo pipefail
           test -n "${CLOUDFLARE_ACCOUNT_ID:-}" || { echo 'CLOUDFLARE_ACCOUNT_ID is not available to this workflow'; exit 2; }
           test -n "${CLOUDFLARE_BROWSER_RUN_API_TOKEN:-}" || { echo 'CLOUDFLARE_BROWSER_RUN_API_TOKEN is not available to this workflow'; exit 2; }
-          echo 'Cloudflare Browser Run runtime settings are present.'
+          echo 'Cloudflare Browser Run runtime settings are present (values suppressed).'
 
       - name: Resolve authorized platform target
         id: target
         shell: python
         env:
-          EVENT_NAME: ${{ github.event_name }}
           INPUT_OPERATION: ${{ inputs.operation }}
           INPUT_PLATFORM: ${{ inputs.platform }}
         run: |
           import json, os
           from pathlib import Path
-          event = os.environ.get('EVENT_NAME', '')
-          if event == 'workflow_dispatch':
-              operation = os.environ.get('INPUT_OPERATION') or 'probe'
-              platform = os.environ.get('INPUT_PLATFORM') or 'grabfood'
-          else:
-              operation = 'probe'
-              platform = 'bridge-probe'
+          operation = os.environ.get('INPUT_OPERATION') or 'probe'
+          platform = os.environ.get('INPUT_PLATFORM') or 'grabfood'
+          if operation not in {'probe','handoff'}:
+              raise SystemExit('Unsupported operation')
           start_url = 'https://example.com/'
           if operation == 'handoff':
               data = json.loads(Path('l2/preauth-platforms.json').read_text())
