@@ -10,13 +10,11 @@ on:
       - 'free-source-hunter/cc_domain_discovery.py'
       - 'free-source-hunter/free_search_discovery.py'
   schedule:
-    - cron: '23 */6 * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: free-source-hunter
@@ -25,13 +23,13 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 14
+    timeout-minutes: 13
     env:
-      FREE_HUNTER_MAX_SECONDS: '600'
-      FREE_HUNTER_MAX_FETCHES: '320'
-      FREE_HUNTER_HTTP_WORKERS: '6'
-      FREE_HUNTER_CC_PATTERNS: '2'
-      FREE_HUNTER_CC_LIMIT: '250'
+      FREE_HUNTER_MAX_SECONDS: '660'
+      FREE_HUNTER_MAX_FETCHES: '2500'
+      FREE_HUNTER_HTTP_WORKERS: '8'
+      FREE_HUNTER_CC_PATTERNS: '4'
+      FREE_HUNTER_CC_LIMIT: '500'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -108,29 +106,3 @@ jobs:
           git commit -m "Free source hunter checkpoint [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main
-
-  deploy-monitor:
-    needs: scan
-    if: always() && needs.scan.result == 'success'
-    continue-on-error: true
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout latest dashboard snapshot
-        uses: actions/checkout@v4
-        with:
-          ref: main
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - name: Upload monitor artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: ./docs
-      - name: Deploy monitor
-        id: deployment
-        uses: actions/deploy-pages@v5
