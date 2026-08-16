@@ -131,8 +131,11 @@
 525.vn
 52batrieu.vn
 52duhang.vn
+568play.vn
+abc-mart.com.vn
 acb.com.vn
 aeon.com.vn
+aeonmall-haiphong-lechan.com.vn
 afamily.vn
 africa.visa.com
 agoda.com
@@ -140,6 +143,7 @@ ai.3si.vn
 aldoshoes.vn
 alibabacloud.com
 anz.2te.vn
+api-ht.568play.vn
 apple.com
 atrip.vn
 bannha.net
@@ -158,7 +162,9 @@ bemiie.com
 bestprice.vn
 bf.360play.vn
 bibomart.com.vn
+bidv.com.vn
 biggreen.com.vn
+bizfly.vn
 bloggiamgia.vn
 bonbanh.com
 bookingcare.vn
@@ -182,6 +188,7 @@ cis.visa.com
 citigym.asia
 clickbuy.com.vn
 cms.360home.vn
+cnvloyalty.com
 co-opmart.com.vn
 cocoonvietnam.com
 code.360game.vn
@@ -221,6 +228,7 @@ fingo.vn
 flchotelsresorts.com
 food.grab.com
 fordbacgiang.0to.vn
+forum.568play.vn
 fpt.vn
 fpt24.vn
 fptelecom.vn
@@ -307,6 +315,7 @@ lottemallwestlakehanoi.vn
 lottemart.com.vn
 lottemart.vn
 lotteria.vn
+loyalty.nuti.vn
 lv.360game.vn
 lypham.vn
 macplanet.vn
@@ -427,6 +436,7 @@ toplist.vn
 topreviewviet.com
 trangsuc.doji.vn
 tripwise.vn
+trogiup.mogi.vn
 tt.360game.vn
 tvc.360game.vn
 tvl.360game.vn
@@ -436,6 +446,7 @@ unityfitness.vn
 upanh.0511.vn
 upbeauty.vn
 upharma.vn
+urbox.vn
 v2.dinhvi.3tbk.vn
 vi.wikipedia.org
 vietbank.com.vn
@@ -469,6 +480,7 @@ visa.com.vn
 visasoutheasteurope.com
 vivita.vn
 vlnt.360game.vn
+vn-vtmarkets.com
 vn.my-best.com
 vn.puma.com
 vn.tradingview.com
@@ -477,6 +489,7 @@ vnba.org.vn
 vneconomy.vn
 vnexpress.net
 vnpay.vn
+vnptpay.vn
 vnreview.vn
 voshop.vn
 voucheranuong.com
