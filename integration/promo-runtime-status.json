@@ -1,6 +1,6 @@
 {
   "schema": "promo.runtime_status.v1",
-  "generated_at": "2026-08-16T14:21:41Z",
+  "generated_at": "2026-08-16T14:35:10Z",
   "source": "latest_verified_baseline_then_live_worker_exports",
   "canonical": {
     "batch": 83,
@@ -26,8 +26,8 @@
     },
     "PROMO Retail Shard": {
       "state": "ACTIVE",
-      "last_run_at": "2026-08-16T13:34:05Z",
-      "sources_read": 4,
+      "last_run_at": "2026-08-16T14:35:10Z",
+      "sources_read": 5,
       "offers_found": 1,
       "voucher_benefits_found": 1,
       "literal_codes_found": 0,
