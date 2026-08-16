@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-08-16T09:33:18Z",
+  "legacy_baseline_domains": 6117,
+  "status": {
+    "cost_target_usd": 0,
+    "estimated_monthly_github_minutes": 1200,
+    "frontier_pending": 4856,
+    "last_run": {
+      "duration_s": 88.1,
+      "errors": 15,
+      "new_domains": 0,
+      "processed": 320,
+      "rate403": 0,
+      "rate429": 0
+    },
+    "latest_common_crawl": "CC-MAIN-2026-25",
+    "master_domains": 36,
+    "mode": "FREE_COMMON_CRAWL_GITHUB",
+    "run_count": 6,
+    "seen_urls": 6776,
+    "updated_at": "2026-08-16T09:33:18Z"
+  },
+  "discovery": {
+    "free_search_last_added": 6,
+    "free_search_last_queries": [
+      "siêu thị khuyến mãi Việt Nam",
+      "siêu thị ưu đãi Việt Nam",
+      "siêu thị voucher Việt Nam",
+      "siêu thị promotion Vietnam"
+    ]
+  },
+  "recent_sources": []
+}
