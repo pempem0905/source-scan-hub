@@ -34,6 +34,15 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          STATE=$(python3 - <<'PY'
+          import json
+          from pathlib import Path
+          try: d=json.loads(Path('l2/handoff-request.json').read_text())
+          except Exception: d={}
+          print(str(d.get('state') or ''))
+          PY
+          )
+          echo "state=$STATE" >> "$GITHUB_OUTPUT"
           git config user.name "promo-l2-retry-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add l2/handoff-request.json
@@ -46,7 +55,7 @@ jobs:
           git push origin HEAD:main
           echo 'changed=true' >> "$GITHUB_OUTPUT"
       - name: Dispatch request-driven Browser Run bridge explicitly
-        if: steps.persist.outputs.changed == 'true'
+        if: steps.persist.outputs.changed == 'true' && steps.persist.outputs.state == 'REQUESTED'
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
