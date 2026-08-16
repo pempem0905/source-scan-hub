@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-16T14:27:13.176854Z",
+  "generated_at": "2026-08-16T14:49:26.611480Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 4861,
-    "frontier_deferred_pending": 38683,
-    "frontier_pending": 43544,
-    "last_6_runs_new_domains": 92,
+    "frontier_active_pending": 5348,
+    "frontier_deferred_pending": 38831,
+    "frontier_pending": 44179,
+    "last_6_runs_new_domains": 102,
     "last_run": {
-      "at": "2026-08-16T14:20:16.388502Z",
+      "at": "2026-08-16T14:43:52.731191Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vn/*uu-dai*",
-        "*.com/vn/*voucher*",
-        "*.com/vn/*promotion*",
-        "*.com/vi-vn/*khuyen-mai*"
+        "*.com/vi-vn/*uu-dai*",
+        "*.com/vi-vn/*voucher*",
+        "*.com/vi-vn/*promotion*",
+        "*.net/vn/*khuyen-mai*"
       ],
-      "duration_s": 416.0,
-      "errors": 261,
-      "frontier_pending": 43544,
-      "new_domains": 13,
-      "processed": 1317,
-      "rate403": 0.152,
+      "duration_s": 333.1,
+      "errors": 176,
+      "frontier_pending": 44179,
+      "new_domains": 22,
+      "processed": 1169,
+      "rate403": 0.257,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 338,
+    "master_domains": 369,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 24,
+    "run_count": 25,
     "running": true,
-    "seen_urls": 111883,
-    "updated_at": "2026-08-16T14:27:12.387703Z"
+    "seen_urls": 117319,
+    "updated_at": "2026-08-16T14:49:25.862450Z"
   },
   "master_input": {
     "active_input_count": 100,
@@ -41,33 +41,33 @@
       "BANK_CARD": 28,
       "DISCOVERY_ONLY": 13,
       "FOOD_BEVERAGE": 20,
-      "GENERAL": 197,
+      "GENERAL": 227,
       "LOYALTY_REWARDS": 6,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 29,
-      "PROMO_L2": 13,
-      "PROMO_RETAIL": 58,
-      "PUBLIC_HTTP": 310,
-      "RESIDENTIAL_REQUIRED": 11,
-      "RETAIL_ECOMMERCE": 56,
-      "REVIEW_INPUT": 210,
+      "PROMO_L2": 14,
+      "PROMO_RETAIL": 57,
+      "PUBLIC_HTTP": 340,
+      "RESIDENTIAL_REQUIRED": 12,
+      "RETAIL_ECOMMERCE": 57,
+      "REVIEW_INPUT": 241,
       "SOURCE_HUNTER": 13,
-      "SOURCE_REVIEW": 210,
+      "SOURCE_REVIEW": 241,
       "TRAVEL_MOBILITY": 9
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 13,
-    "generated_at": "2026-08-16T14:27:13.020506Z",
+    "generated_at": "2026-08-16T14:49:26.461906Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 323,
-    "review_input_count": 210,
+    "record_count": 354,
+    "review_input_count": 241,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 338,
+    "source_hunter_domains": 369,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -210,7 +210,7 @@
       "SHADOW_REJECT_TECHNICAL": 18,
       "SHADOW_REVIEW_DATE": 24
     },
-    "generated_at": "2026-08-16T14:00:25.498290Z",
+    "generated_at": "2026-08-16T14:31:55.001897Z",
     "note": "SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion.",
     "production_eligible_automatically": 0,
     "production_write": false,
@@ -222,14 +222,14 @@
     "counts": {
       "AUTHORIZED_ACCOUNT": 2,
       "INFRA_PENDING_ACCOUNT_PROFILE": 2,
-      "INFRA_PENDING_RESIDENTIAL": 11,
-      "RESIDENTIAL_REQUIRED": 11
+      "INFRA_PENDING_RESIDENTIAL": 12,
+      "RESIDENTIAL_REQUIRED": 12
     },
     "note": "No login is requested until an authorized persistent/self-hosted runner profile exists.",
     "production_write": false,
     "runner_ready": false,
     "schema": "promo.l2.hard_access_status.v1",
-    "total": 13
+    "total": 14
   },
   "l2_auth": {
     "schema_version": 2,
@@ -301,184 +301,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 15,
+    "free_search_last_added": 16,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "bảo hiểm khuyến mãi Việt Nam",
-      "bảo hiểm ưu đãi Việt Nam",
-      "bảo hiểm voucher Việt Nam",
-      "bảo hiểm promotion Vietnam"
+      "viễn thông internet khuyến mãi Việt Nam",
+      "viễn thông internet ưu đãi Việt Nam",
+      "viễn thông internet voucher Việt Nam",
+      "viễn thông internet promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 20,
+    "cc_domain_page": 21,
     "frontier_scheduler": {
-      "active": 1317,
+      "active": 1169,
       "base_per_host_batch": 16,
-      "deferred": 38683,
+      "deferred": 38831,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 161
+      "unique_hosts": 141
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T11:43:08.304355Z",
-      "domain": "collectoffers.com",
-      "radar": false,
-      "url": "https://collectoffers.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:43:08.304355Z",
-      "domain": "hafelevietnam.vn",
-      "radar": false,
-      "url": "https://hafelevietnam.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:43:08.304355Z",
-      "domain": "dienmaycholon.com",
-      "radar": false,
-      "url": "https://dienmaycholon.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:43:08.304355Z",
-      "domain": "jysk.vn",
-      "radar": false,
-      "url": "https://jysk.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:43:08.304355Z",
-      "domain": "giadunghoangviet.com",
-      "radar": false,
-      "url": "https://giadunghoangviet.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:43:08.304355Z",
-      "domain": "instock.vn",
-      "radar": false,
-      "url": "https://instock.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:43:08.304355Z",
-      "domain": "homefurni.vn",
-      "radar": false,
-      "url": "https://homefurni.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:43:08.304355Z",
-      "domain": "noithatgiadung.com.vn",
-      "radar": false,
-      "url": "https://noithatgiadung.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:43:08.304355Z",
-      "domain": "noithatvito.vn",
-      "radar": false,
-      "url": "https://noithatvito.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:43:08.304355Z",
-      "domain": "shop.spacet.vn",
-      "radar": false,
-      "url": "https://shop.spacet.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:56:17.936506Z",
-      "domain": "afamily.vn",
-      "radar": false,
-      "url": "https://afamily.vn/me-tphcm-khuyen-ban-than-ngay-con-do-dai-hoc-o-nho-nha-ba-con-tuong-re-nhung-doi-khi-con-dat-hon-ca-tien-bac-236260816133232582.chn",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-16T11:56:17.936506Z",
-      "domain": "vi.wikipedia.org",
-      "radar": false,
-      "url": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T11:56:17.936506Z",
-      "domain": "gongcha.com.vn",
-      "radar": false,
-      "url": "https://gongcha.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:56:17.936506Z",
-      "domain": "kiotviet.vn",
-      "radar": false,
-      "url": "https://kiotviet.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:56:17.936506Z",
-      "domain": "baomoi.com",
-      "radar": false,
-      "url": "https://baomoi.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:56:17.936506Z",
-      "domain": "thecoffeehousevoucher.vn",
-      "radar": true,
-      "url": "https://thecoffeehousevoucher.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:56:17.936506Z",
-      "domain": "posapp.vn",
-      "radar": false,
-      "url": "https://posapp.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:56:17.936506Z",
-      "domain": "voucheranuong.com",
-      "radar": true,
-      "url": "https://voucheranuong.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:56:17.936506Z",
-      "domain": "lypham.vn",
-      "radar": false,
-      "url": "https://lypham.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:56:17.936506Z",
-      "domain": "voucherhighlands.chanhtuoi.com",
-      "radar": true,
-      "url": "https://voucherhighlands.chanhtuoi.com/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-16T11:56:17.936506Z",
-      "domain": "corporate.visa.com",
-      "radar": false,
-      "url": "https://corporate.visa.com/en/resources/security-compliance.html",
-      "via": "sitemap"
-    },
-    {
-      "at": "2026-08-16T12:25:47.545218Z",
-      "domain": "highlandsvoucher.com",
-      "radar": true,
-      "url": "https://highlandsvoucher.com/",
-      "via": "radar_out"
-    },
     {
       "at": "2026-08-16T12:25:47.545218Z",
       "domain": "dingteavoucher.vn",
@@ -1164,6 +1010,160 @@
       "radar": false,
       "url": "https://ihg.com/content/vn/vi/offers",
       "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "specials.priceless.com",
+      "radar": false,
+      "url": "https://specials.priceless.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "rabbitcare.com",
+      "radar": false,
+      "url": "https://rabbitcare.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "ghn.vn",
+      "radar": false,
+      "url": "https://ghn.vn/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "giaohangtotnhat.vn",
+      "radar": false,
+      "url": "https://giaohangtotnhat.vn/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "ghtk.vn",
+      "radar": false,
+      "url": "https://ghtk.vn/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "jtexpress.vn",
+      "radar": false,
+      "url": "https://jtexpress.vn/vi",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "fptvietnam.vn",
+      "radar": false,
+      "url": "https://fptvietnam.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "fpttelecoms.vn",
+      "radar": false,
+      "url": "https://fpttelecoms.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "fptelecom.vn",
+      "radar": false,
+      "url": "https://fptelecom.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "fptnet.vn",
+      "radar": false,
+      "url": "https://fptnet.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "internet-viettel.com",
+      "radar": false,
+      "url": "https://internet-viettel.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "mangfpt.vn",
+      "radar": false,
+      "url": "https://mangfpt.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "internetviettel.vn",
+      "radar": false,
+      "url": "https://internetviettel.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "fpt.vn",
+      "radar": false,
+      "url": "https://fpt.vn/vi",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "viettel-telecom.net",
+      "radar": false,
+      "url": "https://viettel-telecom.net/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "viettelkhuyenmai.vn",
+      "radar": false,
+      "url": "https://viettelkhuyenmai.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "viettelnet.vn",
+      "radar": false,
+      "url": "https://viettelnet.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "viettelvt.com",
+      "radar": false,
+      "url": "https://viettelvt.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "fpt24.vn",
+      "radar": false,
+      "url": "https://fpt24.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "viettelvn.com",
+      "radar": false,
+      "url": "https://viettelvn.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "viettelinternet.vn",
+      "radar": false,
+      "url": "https://viettelinternet.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T14:43:52.731191Z",
+      "domain": "vieteltelecom.vn",
+      "radar": false,
+      "url": "https://vieteltelecom.vn/",
+      "via": "free_search"
     }
   ]
 }

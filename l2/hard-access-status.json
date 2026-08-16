@@ -2,12 +2,12 @@
   "counts": {
     "AUTHORIZED_ACCOUNT": 2,
     "INFRA_PENDING_ACCOUNT_PROFILE": 2,
-    "INFRA_PENDING_RESIDENTIAL": 11,
-    "RESIDENTIAL_REQUIRED": 11
+    "INFRA_PENDING_RESIDENTIAL": 12,
+    "RESIDENTIAL_REQUIRED": 12
   },
   "note": "No login is requested until an authorized persistent/self-hosted runner profile exists.",
   "production_write": false,
   "runner_ready": false,
   "schema": "promo.l2.hard_access_status.v1",
-  "total": 13
+  "total": 14
 }
