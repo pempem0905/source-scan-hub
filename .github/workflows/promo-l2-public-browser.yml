@@ -61,7 +61,7 @@ jobs:
       - name: Scan master-input public and JS-heavy sources in shadow mode
         run: python l2/public_browser_worker.py
 
-      - name: Apply L2 current-date gate
+      - name: Apply L2 current-date and technical-token gates
         if: always()
         run: python l2/date_gate_shadow.py
 
@@ -75,7 +75,7 @@ jobs:
           git config user.name "promo-l2-free-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           touch l2/public-results.jsonl l2/candidate-queue.jsonl
-          git add l2/public-state.json l2/public-results.jsonl l2/candidate-queue.jsonl
+          git add l2/public-state.json l2/public-results.jsonl l2/candidate-queue.jsonl l2/shadow-status.json
           if git diff --cached --quiet; then
             echo "No L2 state changes"
             exit 0
