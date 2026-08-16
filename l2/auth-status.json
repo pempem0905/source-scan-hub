@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "project_id": "PROMO-L2-ROUTER-V1",
+  "updated_at": "2026-08-16T17:43:00+07:00",
+  "alert_states": ["LOGIN_REQUIRED", "NEEDS_RELOGIN", "PERMISSION_REQUIRED"],
+  "platforms": {
+    "grabfood": {
+      "access_class": "AUTHORIZED_ACCOUNT",
+      "status": "INFRA_PENDING",
+      "profile_id": "grabfood-main",
+      "credential_storage": "local-runner-only"
+    },
+    "shopeefood": {
+      "access_class": "AUTHORIZED_ACCOUNT",
+      "status": "INFRA_PENDING",
+      "profile_id": "shopeefood-main",
+      "credential_storage": "local-runner-only"
+    },
+    "tiktok": {
+      "access_class": "AUTHORIZED_ACCOUNT",
+      "status": "INFRA_PENDING",
+      "profile_id": "tiktok-main",
+      "credential_storage": "local-runner-only"
+    },
+    "loyalty-generic": {
+      "access_class": "AUTHORIZED_ACCOUNT",
+      "status": "INFRA_PENDING",
+      "profile_id": "loyalty-generic",
+      "credential_storage": "local-runner-only"
+    }
+  },
+  "policy": {
+    "passwords_in_github": false,
+    "cookies_in_github": false,
+    "otp_in_github": false,
+    "session_profile_location": "self-hosted runner local disk",
+    "on_session_expiry": "set NEEDS_RELOGIN and pause only affected platform"
+  }
+}
