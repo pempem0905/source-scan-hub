@@ -5,6 +5,64 @@ async function admin(): Promise<any> {
   return supabaseAdmin;
 }
 
+async function getApifyOverview() {
+  const token = process.env.APIFY_TOKEN;
+  if (!token) return null;
+
+  const get = async (path: string) => {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 8_000);
+    try {
+      const res = await fetch(`https://api.apify.com/v2${path}`, {
+        signal: controller.signal,
+        headers: { authorization: `Bearer ${token}`, accept: "application/json" },
+      });
+      if (!res.ok) throw new Error(`Apify ${path} ${res.status}`);
+      const payload = await res.json();
+      return payload?.data ?? payload;
+    } finally {
+      clearTimeout(timer);
+    }
+  };
+
+  try {
+    const [limits, queues, actors] = await Promise.all([
+      get("/users/me/limits"),
+      get("/request-queues?limit=1000"),
+      get("/acts?limit=1000"),
+    ]);
+
+    const taskQueue = (queues?.items ?? []).find((q: any) => q.name === "source-scan-native-tasks-v1");
+    const masterQueue = (queues?.items ?? []).find((q: any) => q.name === "source-scan-native-master-v1");
+    const workerActor = (actors?.items ?? []).find((a: any) => a.name === "source-scan-native-worker");
+    const orchestratorActor = (actors?.items ?? []).find((a: any) => a.name === "source-scan-native-orchestrator");
+
+    const [taskInfo, masterInfo, workerRuns, orchestratorRuns] = await Promise.all([
+      taskQueue ? get(`/request-queues/${encodeURIComponent(taskQueue.id)}`) : null,
+      masterQueue ? get(`/request-queues/${encodeURIComponent(masterQueue.id)}`) : null,
+      workerActor ? get(`/acts/${encodeURIComponent(workerActor.id)}/runs?desc=1&limit=100`) : null,
+      orchestratorActor ? get(`/acts/${encodeURIComponent(orchestratorActor.id)}/runs?desc=1&limit=20`) : null,
+    ]);
+
+    const active = (items: any[] = []) =>
+      items.filter((r: any) => r.status === "RUNNING" || r.status === "READY").length;
+
+    return {
+      taskTotal: Number(taskInfo?.totalRequestCount ?? 0),
+      taskPending: Number(taskInfo?.pendingRequestCount ?? 0),
+      taskHandled: Number(taskInfo?.handledRequestCount ?? 0),
+      nativeMasterUrls: Number(masterInfo?.totalRequestCount ?? 0),
+      activeWorkers: active(workerRuns?.items ?? []),
+      activeOrchestrators: active(orchestratorRuns?.items ?? []),
+      activeActorJobs: Number(limits?.current?.activeActorJobCount ?? 0),
+      maxConcurrentActorJobs: Number(limits?.limits?.maxConcurrentActorJobs ?? 0),
+      monthlyUsageUsd: Number(limits?.current?.monthlyUsageUsd ?? 0),
+      maxMonthlyUsageUsd: Number(limits?.limits?.maxMonthlyUsageUsd ?? 0),
+    };
+  } catch {
+    return null;
+  }
+}
 
 export const getOverview = createServerFn({ method: "GET" }).handler(async () => {
   const db = await admin();
@@ -19,97 +77,106 @@ export const getOverview = createServerFn({ method: "GET" }).handler(async () =>
     return c ?? 0;
   };
 
-  const [
-    radarSources,
-    candidateSources,
-    officialSources,
-    merchants,
-    resolvedOrigins,
-    unresolvedOrigins,
-    queueDepth,
-    activeWorkers,
-    totalSources,
-  ] = await Promise.all([
-    count("sources", (q) => q.eq("is_radar", true)),
+  const [candidateSources, officialSourceUrls, totalSourceRows, radarSourceRows, apify] = await Promise.all([
     count("source_candidates"),
     count("sources", (q) => q.eq("is_official", true)),
-    count("merchants"),
-    count("sources", (q) => q.eq("resolution_status", "resolved")),
-    count("sources", (q) => q.neq("resolution_status", "resolved")),
-    count("scan_queue", (q) => q.in("status", ["pending", "running", "retry"])),
-    count("worker_stats", (q) => q.eq("status", "running")),
     count("sources"),
+    count("sources", (q) => q.eq("is_radar", true)),
+    getApifyOverview(),
   ]);
 
-  const { data: workers } = await db
-    .from("worker_stats")
-    .select("requests_total, qualified_sources_total, errors_total, rate_403, rate_429");
+  const sourceRows: any[] = [];
+  const pageSize = 1000;
+  for (let offset = 0; offset < 100_000; offset += pageSize) {
+    const { data, error } = await db
+      .from("sources")
+      .select("id, domain, canonical_domain, is_official, is_radar, created_at")
+      .order("id", { ascending: true })
+      .range(offset, offset + pageSize - 1);
+    if (error) break;
+    const rows = data ?? [];
+    sourceRows.push(...rows);
+    if (rows.length < pageSize) break;
+  }
 
-  const { data: usage } = await db.from("api_usage").select("requests, credits, cost_usd");
+  const domainOf = (r: any) => String(r.canonical_domain ?? r.domain ?? "").trim().toLowerCase();
+  const masterDomains = new Set<string>();
+  const officialDomains = new Set<string>();
+  const radarDomains = new Set<string>();
+  const newDomainsHour = new Set<string>();
+  const hourAgo = Date.now() - 3600_000;
+
+  for (const row of sourceRows) {
+    const d = domainOf(row);
+    if (!d) continue;
+    masterDomains.add(d);
+    if (row.is_official) officialDomains.add(d);
+    if (row.is_radar) radarDomains.add(d);
+    if (row.created_at && new Date(row.created_at).getTime() >= hourAgo) newDomainsHour.add(d);
+  }
+
+  const cutoff = new Date(Date.now() - 120_000).toISOString();
+  const { data: liveRows } = await db
+    .from("worker_stats")
+    .select("worker_id, requests_total, qualified_sources_total, errors_total, rate_403, rate_429, last_heartbeat, status")
+    .eq("status", "running")
+    .gte("last_heartbeat", cutoff);
+
+  const live = liveRows ?? [];
+  const workers = live.filter((r: any) => !String(r.worker_id ?? "").startsWith("native-orchestrator-"));
+  const orchestrators = live.filter((r: any) => String(r.worker_id ?? "").startsWith("native-orchestrator-"));
+  const sum = (rows: any[], k: string) => rows.reduce((a: number, r: any) => a + Number(r[k] ?? 0), 0);
+  const avg = (rows: any[], k: string) =>
+    rows.length ? rows.reduce((a: number, r: any) => a + Number(r[k] ?? 0), 0) / rows.length : 0;
+
+  const requests = sum(workers, "requests_total");
+  const qualified = sum(workers, "qualified_sources_total");
+  const errors = sum(workers, "errors_total");
 
   const { data: recentSources } = await db
     .from("sources")
     .select("id")
-    .gte("created_at", new Date(Date.now() - 3600_000).toISOString());
+    .gte("created_at", new Date(hourAgo).toISOString());
 
-  const w = workers ?? [];
-  const sum = (k: string) => w.reduce((a: number, r: any) => a + Number(r[k] ?? 0), 0);
-  const avg = (k: string) =>
-    w.length ? w.reduce((a: number, r: any) => a + Number(r[k] ?? 0), 0) / w.length : 0;
-
-  const requests = sum("requests_total");
-  const qualified = sum("qualified_sources_total");
-  const errors = sum("errors_total");
-
-  const { count: dupCandidates } = await db
-    .from("source_candidates")
-    .select("*", { count: "exact", head: true })
-    .eq("status", "duplicate");
-
-  const costUsd = (usage ?? []).reduce((a: number, r: any) => a + Number(r.cost_usd ?? 0), 0);
-  const apiRequests = (usage ?? []).reduce((a: number, r: any) => a + Number(r.requests ?? 0), 0);
-  const credits = (usage ?? []).reduce((a: number, r: any) => a + Number(r.credits ?? 0), 0);
-
-  const { data: budgetRows } = await db
-    .from("system_config")
-    .select("key, value")
-    .in("key", ["daily_budget_usd", "project_budget_usd"]);
-
-  const budget = (key: string): number | null => {
-    const row = (budgetRows ?? []).find((r: any) => r.key === key);
-    if (!row) return null;
-    const v: any = row.value;
-    const n = typeof v === "object" && v !== null ? Number(v.value ?? v.amount) : Number(v);
-    return Number.isFinite(n) ? n : null;
-  };
+  const activeWorkers = apify?.activeWorkers ?? workers.length;
+  const activeOrchestrators = apify?.activeOrchestrators ?? orchestrators.length;
+  const masterSourceUrls = apify?.nativeMasterUrls || totalSourceRows;
+  const monthlyLimit = apify?.maxMonthlyUsageUsd ?? 0;
+  const monthlyUsage = apify?.monthlyUsageUsd ?? 0;
 
   return {
     kpis: {
-      radarSources,
+      masterDomains: masterDomains.size,
+      officialDomains: officialDomains.size,
+      masterSourceUrls,
       candidateSources,
-      officialSources,
-      merchants,
-      resolvedOrigins,
-      unresolvedOrigins,
-      queueDepth,
+      officialSourceUrls,
+      radarDomains: radarDomains.size || radarSourceRows,
+      nativeQueuePending: apify?.taskPending ?? 0,
       activeWorkers,
     },
     metrics: {
       sourcesPerHour: recentSources?.length ?? 0,
+      domainsPerHour: newDomainsHour.size,
       qualifiedPer1k: requests > 0 ? (qualified / requests) * 1000 : 0,
-      duplicateRate:
-        candidateSources > 0 ? ((dupCandidates ?? 0) / candidateSources) * 100 : 0,
-      rate403: avg("rate_403"),
-      rate429: avg("rate_429"),
+      officialDomainRatio: masterDomains.size > 0 ? (officialDomains.size / masterDomains.size) * 100 : 0,
+      rate403: avg(workers, "rate_403"),
+      rate429: avg(workers, "rate_429"),
       errorRate: requests > 0 ? (errors / requests) * 100 : 0,
-      saturation: totalSources > 0 ? Math.min(100, (qualified / (totalSources || 1)) * 100) : 0,
-      costUsd,
-      apiRequests,
-      credits,
-      dailyBudget: budget("daily_budget_usd"),
-      projectBudget: budget("project_budget_usd"),
-      hasWorkerData: w.length > 0,
-      hasUsageData: (usage ?? []).length > 0,
+      liveRequests: requests,
+      nativeQueueTotal: apify?.taskTotal ?? 0,
+      nativeQueueHandled: apify?.taskHandled ?? 0,
+      nativeQueuePending: apify?.taskPending ?? 0,
+      activeWorkers,
+      activeOrchestrators,
+      activeActorJobs: apify?.activeActorJobs ?? activeWorkers + activeOrchestrators,
+      maxConcurrentActorJobs: apify?.maxConcurrentActorJobs ?? 0,
+      monthlyUsageUsd: monthlyUsage,
+      maxMonthlyUsageUsd: monthlyLimit,
+      monthlyRemainingUsd: monthlyLimit > 0 ? Math.max(0, monthlyLimit - monthlyUsage) : 0,
+      monthlyUsagePct: monthlyLimit > 0 ? (monthlyUsage / monthlyLimit) * 100 : 0,
+      hasWorkerData: workers.length > 0,
+      hasApifyData: Boolean(apify),
     },
   };
 });
