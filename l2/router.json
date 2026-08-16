@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "project_id": "PROMO-L2-ROUTER-V1",
+  "upstream_project": "PROMO-SRC-HUNTER-V1",
+  "input_contract": "integration/project-manifest.json",
+  "purpose": "Route promo/voucher extraction sources to the cheapest suitable access lane without duplicating source discovery.",
+  "lanes": {
+    "PUBLIC_HTTP": {
+      "runner": "github-hosted",
+      "mode": "http",
+      "account_required": false
+    },
+    "JS_BROWSER": {
+      "runner": "github-hosted",
+      "mode": "playwright",
+      "account_required": false
+    },
+    "PERSISTENT_PUBLIC": {
+      "runner": "persistent-free-vm",
+      "mode": "browser-profile",
+      "account_required": false
+    },
+    "AUTHORIZED_ACCOUNT": {
+      "runner": "self-hosted-residential",
+      "mode": "persistent-browser-profile",
+      "account_required": true,
+      "session_policy": "reuse-valid-user-session"
+    },
+    "RESIDENTIAL_REQUIRED": {
+      "runner": "self-hosted-residential",
+      "mode": "persistent-browser-profile",
+      "account_required": "only-if-source-requires-it"
+    },
+    "MANUAL_ONLY": {
+      "runner": null,
+      "mode": "record-and-wait",
+      "account_required": "unknown"
+    }
+  },
+  "routing_priority": [
+    "PUBLIC_HTTP",
+    "JS_BROWSER",
+    "PERSISTENT_PUBLIC",
+    "AUTHORIZED_ACCOUNT",
+    "RESIDENTIAL_REQUIRED",
+    "MANUAL_ONLY"
+  ],
+  "rules": {
+    "source_discovery_owner": "PROMO-SRC-HUNTER-V1",
+    "promo_workers_do_not_broadly_discover_sources": true,
+    "do_not_commit_credentials": true,
+    "do_not_commit_cookies": true,
+    "do_not_commit_refresh_tokens": true,
+    "no_automatic_account_registration": true,
+    "no_captcha_bypass": true,
+    "no_otp_bypass": true,
+    "user_owned_or_authorized_accounts_only": true,
+    "login_failure_action": "set NEEDS_RELOGIN and stop that source",
+    "do_not_retry_login_aggressively": true
+  }
+}
