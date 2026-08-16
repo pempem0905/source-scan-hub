@@ -56,11 +56,49 @@ jobs:
         run: python3 free-source-hunter/free_search_discovery.py
       - name: Validate and expand free frontier
         run: python3 free-source-hunter/hunter.py
-      - name: Persist frontier and master domains
+      - name: Build static monitor snapshot
+        run: |
+          mkdir -p docs/data
+          python3 <<'PY'
+          import datetime as dt
+          import json
+          from pathlib import Path
+          root=Path('free-source-hunter')
+          def read_json(p, default):
+              try: return json.loads(p.read_text())
+              except Exception: return default
+          status=read_json(root/'status.json', {})
+          state=read_json(root/'state.json', {})
+          recent=[]
+          ep=root/'evidence.jsonl'
+          if ep.exists():
+              lines=ep.read_text(errors='replace').splitlines()[-120:]
+              for line in lines:
+                  try: recent.append(json.loads(line))
+                  except Exception: pass
+          snapshot={
+              'generated_at': dt.datetime.now(dt.timezone.utc).isoformat().replace('+00:00','Z'),
+              'legacy_baseline_domains': 6117,
+              'status': status,
+              'discovery': {
+                  'free_search_last_added': state.get('free_search_last_added',0),
+                  'free_search_last_errors': state.get('free_search_last_errors',0),
+                  'free_search_last_queries': state.get('free_search_last_queries',[]),
+                  'cc_domain_last_added': state.get('cc_domain_last_added',0),
+                  'cc_domain_pattern': state.get('cc_domain_pattern'),
+                  'cc_domain_page': state.get('cc_domain_page'),
+              },
+              'recent_sources': recent,
+          }
+          Path('docs/data/engine.json').write_text(json.dumps(snapshot,ensure_ascii=False,indent=2)+'\n')
+          src=root/'master_domains.txt'
+          Path('docs/data/master_domains.txt').write_text(src.read_text(errors='replace') if src.exists() else '')
+          PY
+      - name: Persist frontier, master domains and monitor snapshot
         run: |
           git config user.name "source-scan-free-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add free-source-hunter/state.json free-source-hunter/status.json free-source-hunter/master_domains.txt free-source-hunter/seen_urls.txt free-source-hunter/evidence.jsonl
+          git add free-source-hunter/state.json free-source-hunter/status.json free-source-hunter/master_domains.txt free-source-hunter/seen_urls.txt free-source-hunter/evidence.jsonl docs/data/engine.json docs/data/master_domains.txt
           if git diff --cached --quiet; then
             echo "No state changes"
             exit 0
