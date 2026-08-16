@@ -1,0 +1,14 @@
+{
+  "counts": {
+    "SHADOW_EXPIRED": 4,
+    "SHADOW_REJECT_TECHNICAL": 18,
+    "SHADOW_REVIEW_DATE": 20
+  },
+  "generated_at": "2026-08-16T11:24:34.058161Z",
+  "note": "SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion.",
+  "production_eligible_automatically": 0,
+  "production_write": false,
+  "schema": "promo.l2.shadow_status.v1",
+  "today": "2026-08-16",
+  "total": 42
+}
