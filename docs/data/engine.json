@@ -1,46 +1,46 @@
 {
-  "generated_at": "2026-08-16T09:59:19.830592Z",
+  "generated_at": "2026-08-16T10:06:14.745125Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1200.0,
-    "frontier_pending": 6281,
-    "last_6_runs_new_domains": 3,
+    "frontier_pending": 8483,
+    "last_6_runs_new_domains": 7,
     "last_run": {
-      "at": "2026-08-16T09:57:58.637766Z",
+      "at": "2026-08-16T10:01:56.901585Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vn/*uu-dai*",
-        "*.com/vn/*voucher*"
+        "*.com/vn/*promotion*",
+        "*.com/vi-vn/*khuyen-mai*"
       ],
-      "duration_s": 81.1,
-      "errors": 4,
-      "frontier_pending": 6281,
-      "new_domains": 0,
+      "duration_s": 257.7,
+      "errors": 85,
+      "frontier_pending": 8483,
+      "new_domains": 6,
       "processed": 320,
       "rate403": 0.0,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-25",
-    "master_domains": 36,
+    "master_domains": 42,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 8,
+    "run_count": 9,
     "running": true,
-    "seen_urls": 8841,
-    "updated_at": "2026-08-16T09:59:19.731006Z"
+    "seen_urls": 11363,
+    "updated_at": "2026-08-16T10:06:14.650811Z"
   },
   "discovery": {
-    "free_search_last_added": 10,
+    "free_search_last_added": 12,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "cửa hàng tiện lợi khuyến mãi Việt Nam",
-      "cửa hàng tiện lợi ưu đãi Việt Nam",
-      "cửa hàng tiện lợi voucher Việt Nam",
-      "cửa hàng tiện lợi promotion Vietnam"
+      "thực phẩm sạch khuyến mãi Việt Nam",
+      "thực phẩm sạch ưu đãi Việt Nam",
+      "thực phẩm sạch voucher Việt Nam",
+      "thực phẩm sạch promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 5
+    "cc_domain_page": 6
   },
   "recent_sources": [
     {
@@ -294,6 +294,48 @@
       "radar": false,
       "url": "https://growth-public.grab.com/grabfood-com/sitemap/sitemap_index.xml",
       "via": "new_domain_sitemap"
+    },
+    {
+      "at": "2026-08-16T10:01:56.901585Z",
+      "domain": "smember.com.vn",
+      "radar": false,
+      "url": "https://smember.com.vn/login",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-16T10:01:56.901585Z",
+      "domain": "hotro.tiki.vn",
+      "radar": false,
+      "url": "https://hotro.tiki.vn/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T10:01:56.901585Z",
+      "domain": "noti.sale",
+      "radar": false,
+      "url": "https://noti.sale/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T10:01:56.901585Z",
+      "domain": "magiamgia.com",
+      "radar": true,
+      "url": "https://magiamgia.com/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T10:01:56.901585Z",
+      "domain": "help.shopee.vn",
+      "radar": false,
+      "url": "https://help.shopee.vn/portal/4/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T10:01:56.901585Z",
+      "domain": "help.cs.shopeepay.vn",
+      "radar": false,
+      "url": "https://help.cs.shopeepay.vn/portal/100/",
+      "via": "radar_out"
     }
   ]
 }

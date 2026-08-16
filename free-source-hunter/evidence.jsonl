@@ -34,3 +34,9 @@
 {"at": "2026-08-16T09:22:40.503353Z", "domain": "lotteria.vn", "radar": false, "url": "https://lotteria.vn/", "via": "curated_seed"}
 {"at": "2026-08-16T09:22:40.503353Z", "domain": "pages.lazada.vn", "radar": false, "url": "https://pages.lazada.vn/", "via": "radar_out"}
 {"at": "2026-08-16T09:25:48.428562Z", "domain": "growth-public.grab.com", "radar": false, "url": "https://growth-public.grab.com/grabfood-com/sitemap/sitemap_index.xml", "via": "new_domain_sitemap"}
+{"at": "2026-08-16T10:01:56.901585Z", "domain": "smember.com.vn", "radar": false, "url": "https://smember.com.vn/login", "via": "external_promo"}
+{"at": "2026-08-16T10:01:56.901585Z", "domain": "hotro.tiki.vn", "radar": false, "url": "https://hotro.tiki.vn/", "via": "radar_out"}
+{"at": "2026-08-16T10:01:56.901585Z", "domain": "noti.sale", "radar": false, "url": "https://noti.sale/", "via": "radar_out"}
+{"at": "2026-08-16T10:01:56.901585Z", "domain": "magiamgia.com", "radar": true, "url": "https://magiamgia.com/", "via": "radar_out"}
+{"at": "2026-08-16T10:01:56.901585Z", "domain": "help.shopee.vn", "radar": false, "url": "https://help.shopee.vn/portal/4/", "via": "radar_out"}
+{"at": "2026-08-16T10:01:56.901585Z", "domain": "help.cs.shopeepay.vn", "radar": false, "url": "https://help.cs.shopeepay.vn/portal/100/", "via": "radar_out"}

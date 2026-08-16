@@ -11,14 +11,19 @@ gigamall.com.vn
 grab.com
 growth-public.grab.com
 hdbank.com.vn
+help.cs.shopeepay.vn
+help.shopee.vn
 homefarm.vn
+hotro.tiki.vn
 juno.vn
 lazada.vn
 lottemallwestlakehanoi.vn
 lotteria.vn
+magiamgia.com
 mbbank.com.vn
 mmvietnam.com
 nhathuoclongchau.com.vn
+noti.sale
 ocb.com.vn
 pages.lazada.vn
 pharmacity.vn
@@ -27,6 +32,7 @@ picodi.com
 pnj.com.vn
 shopee.vn
 shopping.saigoncentre.com.vn
+smember.com.vn
 techcombank.com
 thisomallsala.vn
 vietcombank.com.vn
