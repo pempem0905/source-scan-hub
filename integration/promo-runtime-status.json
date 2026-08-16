@@ -1,6 +1,6 @@
 {
   "schema": "promo.runtime_status.v1",
-  "generated_at": "2026-08-16T19:11:00Z",
+  "generated_at": "2026-08-16T19:29:00Z",
   "source": "live_verified_canonical_plus_worker_exports",
   "canonical": {
     "batch": 86,
@@ -10,9 +10,9 @@
     "actionable_offers": 319,
     "voucher_benefit_records": null,
     "literal_codes": 66,
-    "ready_queue": 0,
+    "ready_queue": 1,
     "last_commit_at": "2026-08-16T18:08:38.748904Z",
-    "note": "Live durable Supabase canonical state verified at B86 / SRC-491; ledger row B85→B86 matches promo_master_state. Candidate queue has no READY rows. voucher_benefit_records remains null because no explicit canonical DB count was measured."
+    "note": "Live durable Supabase canonical state verified at B86 / SRC-491; ledger B86 matches promo_master_state. One new CLEAN READY exact-code record is held below commit threshold."
   },
   "workers": {
     "PROMO Banks Shard": {
@@ -35,16 +35,16 @@
     },
     "PROMO Turbo Scan": {
       "state": "ACTIVE",
-      "last_run_at": "2026-08-16T18:27:34Z",
-      "code_sources_read": 4,
-      "offers_found": 0,
-      "voucher_benefits_found": 0,
-      "literal_codes_found": 0,
-      "validated": 0,
+      "last_run_at": "2026-08-16T19:29:00Z",
+      "code_sources_read": 6,
+      "offers_found": 1,
+      "voucher_benefits_found": 1,
+      "literal_codes_found": 1,
+      "validated": 1,
       "rejected": 0,
       "committed": 0,
       "literal_codes_committed": 0,
-      "batch": 85
+      "batch": 86
     },
     "PROMO GPT Infra + Dispatch": {
       "state": "ACTIVE",
@@ -58,9 +58,9 @@
       "relayed": 0,
       "commit_stall": false,
       "repairs_performed": [
-        "runtime telemetry canonical refreshed B85\u2192B86"
+        "runtime telemetry canonical refreshed B85→B86"
       ],
-      "worker_health": "Banks/Retail/Turbo/Infra enabled and fresh; canonical queue has no READY rows; ledger B86 matches promo_master_state (registered 470, scanned 326, offers 319, codes 66)."
+      "worker_health": "Banks/Retail/Turbo/Infra enabled and fresh; canonical ledger B86 matches promo_master_state."
     }
   }
 }
