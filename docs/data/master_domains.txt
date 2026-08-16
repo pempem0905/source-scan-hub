@@ -64,8 +64,23 @@
 3flab.vn
 3fstore.vn
 3gang.vn
+3mp.vn
+3mpic.vn
+3msolutions.vn
+3mvina.vn
+3ncom.vn
+3pcorp.vn
+3peyecare.vn
+3pigdigital.vn
+3piston.vn
+3pointsaviation.vn
+3pos.vn
+3ptech.vn
 3q.360mobi.vn
 3q.360play.vn
+3qchayngaydi.vn
+3qgroup.vn
+3rmedia.vn
 3sach.vn
 acb.com.vn
 aeon.com.vn
@@ -132,6 +147,7 @@ disneycatch.360game.vn
 docbo.360game.vn
 eholiday.vn
 elly.vn
+en.3pointsaviation.vn
 eropi.com
 eximbank.com.vn
 familynes.vn
@@ -147,6 +163,7 @@ fptelecom.vn
 fptnet.vn
 fpttelecoms.vn
 fptvietnam.vn
+gdshop.vn
 generali.vn
 ghn.vn
 ghtk.vn
@@ -154,6 +171,7 @@ giadunghoangviet.com
 giaidau.360mobi.vn
 giaidau.360play.vn
 giaidau.moba.360mobi.vn
+giaoduc.net.vn
 giaohangtotnhat.vn
 gigamall.com.vn
 godi.asia
@@ -173,6 +191,7 @@ help.shopee.vn
 heyu.vn
 highlandsvoucher.com
 hoangcung2.360mobi.vn
+hoanghamobile.com
 hoathuongco.357games.vn
 hoathuongco.357gen.vn
 homefarm.vn
@@ -214,6 +233,7 @@ lottemart.vn
 lotteria.vn
 lv.360game.vn
 lypham.vn
+macplanet.vn
 magiamgia.com
 magiamgialazada.vn
 maisononline.vn
@@ -305,6 +325,7 @@ thientuong.360game.vn
 thisomallsala.vn
 thoibaonganhang.vn
 timo.vn
+tinhte.vn
 tjc.com.vn
 tl3d.360game.vn
 tlbb.360game.vn
@@ -328,6 +349,7 @@ vietnamairlines.com
 vietnambiz.vn
 vietnambooking.com
 vietnambusinessinsider.vn
+vietnammonitor.net
 vietnamnet.vn
 vietstock.vn
 viettel-telecom.net
@@ -356,6 +378,7 @@ vnba.org.vn
 vneconomy.vn
 vnexpress.net
 vnpay.vn
+vnreview.vn
 voshop.vn
 voucheranuong.com
 voucherhighlands.chanhtuoi.com
