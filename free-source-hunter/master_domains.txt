@@ -1,7 +1,9 @@
 3sach.vn
 acb.com.vn
 aeon.com.vn
+afamily.vn
 aldoshoes.vn
+baomoi.com
 beautybox.com.vn
 bemiie.com
 bibomart.com.vn
@@ -16,6 +18,7 @@ clickbuy.com.vn
 co-opmart.com.vn
 cocoonvietnam.com
 collectoffers.com
+corporate.visa.com
 crescentmall.com.vn
 crocs.com.vn
 danhgiathuonghieu.vn
@@ -31,6 +34,7 @@ farmersmarket.vn
 food.grab.com
 giadunghoangviet.com
 gigamall.com.vn
+gongcha.com.vn
 grab.com
 growth-public.grab.com
 gs25.com.vn
@@ -52,12 +56,14 @@ khosithucpham.vn
 kidsplaza.vn
 kinhtedouong.vn
 kiotsoft.com
+kiotviet.vn
 lazada.vn
 locphuc.com.vn
 lottemallwestlakehanoi.vn
 lottemart.com.vn
 lottemart.vn
 lotteria.vn
+lypham.vn
 magiamgia.com
 magiamgialazada.vn
 maisononline.vn
@@ -90,6 +96,7 @@ phuclong.com.vn
 picodi.com
 pnj.com.vn
 pos365.vn
+posapp.vn
 prime.vpbank.com.vn
 rfoods.com.vn
 sammishop.com
@@ -107,6 +114,7 @@ supersports.com.vn
 swavi.vn
 techcombank.com
 temdientu.com.vn
+thecoffeehousevoucher.vn
 thisomallsala.vn
 thoibaonganhang.vn
 tjc.com.vn
@@ -114,6 +122,7 @@ toplist.vn
 trangsuc.doji.vn
 upbeauty.vn
 upharma.vn
+vi.wikipedia.org
 vietcombank.com.vn
 vietnam.vn
 vietnambusinessinsider.vn
@@ -132,6 +141,8 @@ vnba.org.vn
 vneconomy.vn
 vnexpress.net
 voshop.vn
+voucheranuong.com
+voucherhighlands.chanhtuoi.com
 vpbank.com.vn
 winmart.vn
 wscpearl.com

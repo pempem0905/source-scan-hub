@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-16T11:47:10.561273Z",
+  "generated_at": "2026-08-16T12:02:06.540274Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 8009,
-    "frontier_deferred_pending": 36793,
-    "frontier_pending": 44802,
-    "last_6_runs_new_domains": 95,
+    "frontier_active_pending": 7540,
+    "frontier_deferred_pending": 38736,
+    "frontier_pending": 46276,
+    "last_6_runs_new_domains": 89,
     "last_run": {
-      "at": "2026-08-16T11:43:08.304355Z",
+      "at": "2026-08-16T11:56:17.936506Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.net/vn/*uu-dai*",
-        "*.com/vietnam/*promotion*",
-        "*.vn/*khuyen-mai*",
-        "*.vn/*khuyenmai*"
+        "*.vn/*uu-dai*",
+        "*.vn/*uudai*",
+        "*.vn/*voucher*",
+        "*.vn/*promotion*"
       ],
-      "duration_s": 241.6,
-      "errors": 146,
-      "frontier_pending": 44802,
-      "new_domains": 12,
-      "processed": 1067,
-      "rate403": 0.094,
-      "rate429": 0.0
+      "duration_s": 347.8,
+      "errors": 158,
+      "frontier_pending": 46276,
+      "new_domains": 11,
+      "processed": 1264,
+      "rate403": 0.396,
+      "rate429": 1.266
     },
     "latest_common_crawl": "CC-MAIN-2026-25",
-    "master_domains": 138,
+    "master_domains": 149,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 16,
+    "run_count": 17,
     "running": true,
-    "seen_urls": 60856,
-    "updated_at": "2026-08-16T11:47:09.860329Z"
+    "seen_urls": 68416,
+    "updated_at": "2026-08-16T12:02:05.768352Z"
   },
   "master_input": {
-    "active_input_count": 92,
+    "active_input_count": 93,
     "counts": {
-      "ACTIVE_INPUT": 92,
+      "ACTIVE_INPUT": 93,
       "AUTHORIZED_ACCOUNT": 2,
-      "BANK_CARD": 20,
-      "DISCOVERY_ONLY": 5,
-      "FOOD_BEVERAGE": 10,
-      "GENERAL": 85,
+      "BANK_CARD": 21,
+      "DISCOVERY_ONLY": 7,
+      "FOOD_BEVERAGE": 12,
+      "GENERAL": 92,
       "LOYALTY_REWARDS": 6,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 25,
       "PROMO_L2": 13,
-      "PROMO_RETAIL": 54,
-      "PUBLIC_HTTP": 175,
+      "PROMO_RETAIL": 55,
+      "PUBLIC_HTTP": 185,
       "RESIDENTIAL_REQUIRED": 11,
       "RETAIL_ECOMMERCE": 53,
-      "REVIEW_INPUT": 91,
-      "SOURCE_HUNTER": 5,
-      "SOURCE_REVIEW": 91,
+      "REVIEW_INPUT": 98,
+      "SOURCE_HUNTER": 7,
+      "SOURCE_REVIEW": 98,
       "TRAVEL_MOBILITY": 7
     },
     "dedupe_key": "registrable_domain",
-    "discovery_only_count": 5,
-    "generated_at": "2026-08-16T11:47:10.411091Z",
+    "discovery_only_count": 7,
+    "generated_at": "2026-08-16T12:02:06.382187Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 188,
-    "review_input_count": 91,
+    "record_count": 198,
+    "review_input_count": 98,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 138,
+    "source_hunter_domains": 149,
     "url_key": "canonical_url"
   },
   "l2_shadow": {
@@ -76,7 +76,7 @@
       "SHADOW_REJECT_TECHNICAL": 18,
       "SHADOW_REVIEW_DATE": 20
     },
-    "generated_at": "2026-08-16T11:32:13.361970Z",
+    "generated_at": "2026-08-16T11:51:52.553040Z",
     "note": "SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion.",
     "production_eligible_automatically": 0,
     "production_write": false,
@@ -101,104 +101,27 @@
     "free_search_last_added": 11,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "nội thất gia dụng khuyến mãi Việt Nam",
-      "nội thất gia dụng ưu đãi Việt Nam",
-      "nội thất gia dụng voucher Việt Nam",
-      "nội thất gia dụng promotion Vietnam"
+      "nhà hàng cafe trà sữa khuyến mãi Việt Nam",
+      "nhà hàng cafe trà sữa ưu đãi Việt Nam",
+      "nhà hàng cafe trà sữa voucher Việt Nam",
+      "nhà hàng cafe trà sữa promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 13,
+    "cc_domain_page": 14,
     "frontier_scheduler": {
-      "active": 1067,
+      "active": 1264,
       "base_per_host_batch": 16,
-      "deferred": 36793,
+      "deferred": 38736,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 120
+      "unique_hosts": 121
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T09:16:26.359097Z",
-      "domain": "crescentmall.com.vn",
-      "radar": false,
-      "url": "https://crescentmall.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "at": "2026-08-16T09:16:26.359097Z",
-      "domain": "gigamall.com.vn",
-      "radar": false,
-      "url": "https://gigamall.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "at": "2026-08-16T09:19:42.752690Z",
-      "domain": "centralretail.com.vn",
-      "radar": false,
-      "url": "https://centralretail.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "at": "2026-08-16T09:19:42.752690Z",
-      "domain": "homefarm.vn",
-      "radar": false,
-      "url": "https://homefarm.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "at": "2026-08-16T09:19:42.752690Z",
-      "domain": "winmart.vn",
-      "radar": false,
-      "url": "https://winmart.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "at": "2026-08-16T09:19:42.752690Z",
-      "domain": "co-opmart.com.vn",
-      "radar": false,
-      "url": "https://co-opmart.com.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "at": "2026-08-16T09:19:42.752690Z",
-      "domain": "mmvietnam.com",
-      "radar": false,
-      "url": "https://mmvietnam.com/sitemap_index.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "at": "2026-08-16T09:19:42.752690Z",
-      "domain": "cellphones.com.vn",
-      "radar": false,
-      "url": "https://cellphones.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "at": "2026-08-16T09:19:42.752690Z",
-      "domain": "viettelstore.vn",
-      "radar": false,
-      "url": "https://viettelstore.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "at": "2026-08-16T09:19:42.752690Z",
-      "domain": "nhathuoclongchau.com.vn",
-      "radar": false,
-      "url": "https://nhathuoclongchau.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "at": "2026-08-16T09:19:42.752690Z",
-      "domain": "pharmacity.vn",
-      "radar": false,
-      "url": "https://pharmacity.vn/",
-      "via": "curated_seed"
-    },
     {
       "at": "2026-08-16T09:19:42.752690Z",
       "domain": "pnj.com.vn",
@@ -961,6 +884,83 @@
       "radar": false,
       "url": "https://shop.spacet.vn/",
       "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:56:17.936506Z",
+      "domain": "afamily.vn",
+      "radar": false,
+      "url": "https://afamily.vn/me-tphcm-khuyen-ban-than-ngay-con-do-dai-hoc-o-nho-nha-ba-con-tuong-re-nhung-doi-khi-con-dat-hon-ca-tien-bac-236260816133232582.chn",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-16T11:56:17.936506Z",
+      "domain": "vi.wikipedia.org",
+      "radar": false,
+      "url": "https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T11:56:17.936506Z",
+      "domain": "gongcha.com.vn",
+      "radar": false,
+      "url": "https://gongcha.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:56:17.936506Z",
+      "domain": "kiotviet.vn",
+      "radar": false,
+      "url": "https://kiotviet.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:56:17.936506Z",
+      "domain": "baomoi.com",
+      "radar": false,
+      "url": "https://baomoi.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:56:17.936506Z",
+      "domain": "thecoffeehousevoucher.vn",
+      "radar": true,
+      "url": "https://thecoffeehousevoucher.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:56:17.936506Z",
+      "domain": "posapp.vn",
+      "radar": false,
+      "url": "https://posapp.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:56:17.936506Z",
+      "domain": "voucheranuong.com",
+      "radar": true,
+      "url": "https://voucheranuong.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:56:17.936506Z",
+      "domain": "lypham.vn",
+      "radar": false,
+      "url": "https://lypham.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:56:17.936506Z",
+      "domain": "voucherhighlands.chanhtuoi.com",
+      "radar": true,
+      "url": "https://voucherhighlands.chanhtuoi.com/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-16T11:56:17.936506Z",
+      "domain": "corporate.visa.com",
+      "radar": false,
+      "url": "https://corporate.visa.com/en/resources/security-compliance.html",
+      "via": "sitemap"
     }
   ]
 }
