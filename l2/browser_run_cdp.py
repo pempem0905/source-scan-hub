@@ -6,11 +6,11 @@ IDs, websocket URLs, Live View URLs, cookies/storage and handoff identifiers are
 never printed or persisted.
 
 Modes:
-  probe   - create a real Browser Run CDP session and verify browser control.
+  probe   - create a real Browser Run session and verify browser control.
   handoff - navigate to an authorized platform, request structured human handoff,
-            disconnect without closing the remote browser, rediscover the live
-            session through Cloudflare's private API, reconnect from a fresh CDP
-            connection, and verify authenticated state reuse.
+            keep the remote browser active while the operator works, rediscover
+            the live session, reconnect from a fresh CDP connection, and verify
+            authenticated-state reuse.
 """
 from __future__ import annotations
 
@@ -20,10 +20,12 @@ import os
 import re
 import ssl
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Any
 
@@ -35,8 +37,9 @@ KEEP_ALIVE_MS = max(10_000, min(600_000, int(os.environ.get("L2_BROWSER_KEEP_ALI
 HANDOFF_TIMEOUT_MS = max(60_000, min(1_800_000, int(os.environ.get("L2_HANDOFF_TIMEOUT_MS", "1800000"))))
 TAKEOVER_MARKER = os.environ.get("L2_TAKEOVER_READY_MARKER", "").strip()
 CDP_CALL_TIMEOUT_S = max(10, min(90, int(os.environ.get("L2_CDP_CALL_TIMEOUT_S", "45"))))
+HEARTBEAT_S = max(30, min(180, int(os.environ.get("L2_HANDOFF_HEARTBEAT_S", "120"))))
+BACKOFF_MARKER = Path("/tmp/promo-l2-cdp/rate-limit-until")
 API_HTTP = f"https://api.cloudflare.com/client/v4/accounts/{urllib.parse.quote(ACCOUNT_ID, safe='')}/browser-rendering/devtools"
-LAUNCH_WS = f"wss://api.cloudflare.com/client/v4/accounts/{urllib.parse.quote(ACCOUNT_ID, safe='')}/browser-run/devtools/browser?keep_alive={KEEP_ALIVE_MS}"
 LOGIN_RE = re.compile(r"/(?:login|signin|sign-in|auth)(?:[/?#]|$)", re.I)
 
 
@@ -91,6 +94,46 @@ def rate_limit_kind(exc: BaseException) -> str | None:
     return "RATE_LIMIT"
 
 
+def retry_after_seconds(exc: BaseException) -> int | None:
+    if not isinstance(exc, urllib.error.HTTPError):
+        return None
+    raw = exc.headers.get("Retry-After") if exc.headers else None
+    if not raw:
+        return None
+    raw = str(raw).strip()
+    try:
+        return max(1, min(3600, int(float(raw))))
+    except Exception:
+        pass
+    try:
+        when = parsedate_to_datetime(raw)
+        if when.tzinfo is None:
+            return None
+        return max(1, min(3600, int(when.timestamp() - time.time())))
+    except Exception:
+        return None
+
+
+def arm_local_backoff(seconds: int) -> None:
+    BACKOFF_MARKER.parent.mkdir(parents=True, exist_ok=True)
+    BACKOFF_MARKER.write_text(str(int(time.time()) + max(30, min(1800, seconds))) + "\n")
+    os.chmod(BACKOFF_MARKER, 0o600)
+
+
+def local_backoff_active() -> bool:
+    try:
+        until = int(BACKOFF_MARKER.read_text().strip())
+    except Exception:
+        return False
+    if until <= int(time.time()):
+        try:
+            BACKOFF_MARKER.unlink()
+        except Exception:
+            pass
+        return False
+    return True
+
+
 def safe_diagnostic(exc: BaseException) -> str:
     status = exception_status(exc)
     suffix = f" http_status={status}" if status is not None else ""
@@ -115,6 +158,35 @@ def http_json(url: str) -> Any:
     )
     with urllib.request.urlopen(req, timeout=30, context=ssl.create_default_context()) as resp:
         return json.loads(resp.read().decode("utf-8"))
+
+
+def acquire_browser_ws() -> str:
+    """Acquire one Browser Run session through the HTTP session API.
+
+    Using HTTP acquisition lets us classify 429 response bodies/Retry-After
+    without printing any session material. The returned websocket URL remains
+    memory-only.
+    """
+    url = f"{API_HTTP}/browser?keep_alive={KEEP_ALIVE_MS}"
+    req = urllib.request.Request(
+        url,
+        method="POST",
+        data=b"",
+        headers={"Authorization": f"Bearer {API_TOKEN}", "Accept": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=45, context=ssl.create_default_context()) as resp:
+        payload = json.loads(resp.read().decode("utf-8"))
+    if isinstance(payload, dict) and isinstance(payload.get("result"), dict):
+        payload = payload["result"]
+    if not isinstance(payload, dict):
+        raise RuntimeError("invalid Browser Run acquire response")
+    ws = payload.get("webSocketDebuggerUrl")
+    sid = payload.get("sessionId")
+    if ws:
+        return str(ws)
+    if sid:
+        return f"wss://api.cloudflare.com/client/v4/accounts/{urllib.parse.quote(ACCOUNT_ID, safe='')}/browser-rendering/devtools/browser/{urllib.parse.quote(str(sid), safe='')}"
+    raise RuntimeError("Browser Run session endpoint missing")
 
 
 @dataclass
@@ -142,13 +214,40 @@ class CDP:
                 raise RuntimeError(f"CDP command failed: {method}")
             return msg.get("result") or {}
 
-    async def wait_event(self, method: str, session_id: str | None = None, timeout_ms: int = 60_000) -> dict:
-        async def _wait() -> dict:
-            while True:
-                msg = json.loads(await self.ws.recv())
-                if msg.get("method") == method and (session_id is None or msg.get("sessionId") == session_id):
-                    return msg.get("params") or {}
-        return await asyncio.wait_for(_wait(), timeout=timeout_ms / 1000)
+    async def wait_event_with_heartbeat(
+        self,
+        method: str,
+        session_id: str | None = None,
+        timeout_ms: int = 60_000,
+    ) -> dict:
+        """Wait for a Cloudflare event while keeping the Browser Run session active."""
+        loop = asyncio.get_running_loop()
+        deadline = loop.time() + timeout_ms / 1000
+        while True:
+            remaining = deadline - loop.time()
+            if remaining <= 0:
+                raise TimeoutError(f"event timeout: {method}")
+            try:
+                msg = json.loads(await asyncio.wait_for(self.ws.recv(), timeout=min(HEARTBEAT_S, remaining)))
+            except asyncio.TimeoutError:
+                self.seq += 1
+                ping_id = self.seq
+                await self.ws.send(json.dumps({"id": ping_id, "method": "Browser.getVersion", "params": {}}, separators=(",", ":")))
+                ping_deadline = loop.time() + min(CDP_CALL_TIMEOUT_S, max(1.0, deadline - loop.time()))
+                while True:
+                    left = ping_deadline - loop.time()
+                    if left <= 0:
+                        raise TimeoutError("Browser Run heartbeat timeout")
+                    ping_msg = json.loads(await asyncio.wait_for(self.ws.recv(), timeout=left))
+                    if ping_msg.get("method") == method and (session_id is None or ping_msg.get("sessionId") == session_id):
+                        return ping_msg.get("params") or {}
+                    if ping_msg.get("id") == ping_id:
+                        if "error" in ping_msg:
+                            raise RuntimeError("Browser Run heartbeat failed")
+                        break
+                continue
+            if msg.get("method") == method and (session_id is None or msg.get("sessionId") == session_id):
+                return msg.get("params") or {}
 
 
 async def open_socket(endpoint: str):
@@ -245,8 +344,16 @@ def discover_live_session_for_host(host: str) -> str | None:
     return None
 
 
+async def new_browser_socket():
+    if local_backoff_active():
+        print("BRIDGE_RATE_LIMIT kind=LOCAL_BACKOFF", file=sys.stderr)
+        raise SystemExit(75)
+    endpoint = acquire_browser_ws()
+    return await open_socket(endpoint)
+
+
 async def probe(platform: str, start_url: str) -> None:
-    ws = await open_socket(LAUNCH_WS)
+    ws = await new_browser_socket()
     try:
         cdp = CDP(ws)
         version = await cdp.call("Browser.getVersion")
@@ -269,13 +376,13 @@ async def handoff(platform: str, start_url: str) -> None:
     if not expected_host:
         raise RuntimeError("invalid start host")
 
-    ws = await open_socket(LAUNCH_WS)
+    ws = await new_browser_socket()
     cdp = CDP(ws)
     _, page_session = await attach_page(cdp, start_url)
 
     live = await cdp.call(
         "Cloudflare.getLiveView",
-        {"mode": "tab", "expiresInMs": 300_000},
+        {"mode": "tab", "expiresInMs": min(3_600_000, max(300_000, HANDOFF_TIMEOUT_MS))},
         session_id=page_session,
     )
     if not live.get("devtoolsFrontendUrl"):
@@ -293,7 +400,7 @@ async def handoff(platform: str, start_url: str) -> None:
     write_takeover_marker(platform)
     print(f"HUMAN_TAKEOVER_REQUIRED platform={safe_platform(platform)} surface=cloudflare_dashboard_live_sessions")
 
-    result = await cdp.wait_event(
+    result = await cdp.wait_event_with_heartbeat(
         "Cloudflare.handoffComplete",
         session_id=page_session,
         timeout_ms=HANDOFF_TIMEOUT_MS + 15_000,
@@ -359,6 +466,8 @@ async def main() -> None:
     except Exception as exc:
         kind = rate_limit_kind(exc)
         if kind:
+            if kind != "DAILY_BROWSER_QUOTA":
+                arm_local_backoff(max(120, retry_after_seconds(exc) or 0))
             print(f"BRIDGE_RATE_LIMIT kind={kind}", file=sys.stderr)
             raise SystemExit(76 if kind == "DAILY_BROWSER_QUOTA" else 75)
         print(f"BRIDGE_DIAGNOSTIC {safe_diagnostic(exc)}", file=sys.stderr)
