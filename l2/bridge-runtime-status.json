@@ -1,10 +1,10 @@
 {
   "schema": "promo.l2.bridge_runtime_status.v3",
   "provider": "CLOUDFLARE_BROWSER_RUN",
-  "checked_at": "2026-08-16T19:31:05.806124Z",
+  "checked_at": "2026-08-16T20:29:31.425418Z",
   "last_verified_at": null,
   "mode": "handoff",
-  "platform": "uniqlo",
+  "platform": "grabfood",
   "state": "TRANSIENT_RATE_LIMIT",
   "browser_session_created": true,
   "human_handoff_exercised": false,
