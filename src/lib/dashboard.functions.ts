@@ -6,7 +6,7 @@ async function admin(): Promise<any> {
 }
 
 async function getApifyOverview() {
-  const token = process.env.APIFY_TOKEN;
+  const token = process.env['APIFY_TOKEN'];
   if (!token) return null;
 
   const get = async (path: string) => {
