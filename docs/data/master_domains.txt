@@ -44,6 +44,17 @@
 361.vn
 365cafe.vn
 365energy.vn
+3adesign.vn
+3ae.vn
+3ai.vn
+3alogistics.vn
+3arack.vn
+3asoft.vn
+3atech.vn
+3big.vn
+3boutique.vn
+3brothersfoods.vn
+3bscitech.vn
 3q.360mobi.vn
 3q.360play.vn
 3sach.vn
@@ -59,7 +70,10 @@ apple.com
 atrip.vn
 baomoi.com
 baotintuc.vn
+baoviet-online.vn
+baoviet.com
 baovietbank.vn
+baovietonline.com.vn
 baydep.vn
 beautybox.com.vn
 bemiie.com
@@ -118,6 +132,7 @@ fingo.vn
 flchotelsresorts.com
 food.grab.com
 fordbacgiang.0to.vn
+generali.vn
 giadunghoangviet.com
 giaidau.360mobi.vn
 giaidau.360play.vn
@@ -149,13 +164,17 @@ hotro.tiki.vn
 hsbc.com.vn
 huyenthoaidota.357games.vn
 huyetkiem.360game.vn
+ibaohiem.vn
+ibaoviet.vn
 id.357games.vn
+ihg.com
 ijc.vn
 instock.vn
 jettzy.com.vn
 juno.vn
 jysk.vn
 kamereo.vn
+kenh14.vn
 khoahoc.2target.vn
 khosithucpham.vn
 kidsplaza.vn
@@ -177,6 +196,7 @@ lypham.vn
 magiamgia.com
 magiamgialazada.vn
 maisononline.vn
+manulife.com.vn
 marsovn.com
 mbbank.com.vn
 mbmart.com.vn
@@ -209,6 +229,7 @@ noti.sale
 ocb.com.vn
 offers.vn
 oldsailor.com.vn
+onlinebaoviet.com
 onlinepacking.360group.vn
 onways.com
 organicfood.vn
@@ -222,6 +243,7 @@ pnj.com.vn
 pos365.vn
 posapp.vn
 prime.vpbank.com.vn
+prudential.com.vn
 quantrimang.com
 qvht.360game.vn
 rabbitcare.vn
@@ -232,6 +254,7 @@ sammishop.com
 sapo.vn
 sharehomevn.com
 shinhanfinance.com.vn
+shinhanlifevn.com.vn
 shop.highlandscoffee.com.vn
 shop.spacet.vn
 shopee.vn
@@ -246,6 +269,7 @@ smiletrip.vn
 soha.vn
 supersports.com.vn
 swavi.vn
+tapchicongthuong.vn
 td.360game.vn
 techcombank.com
 temdientu.com.vn
