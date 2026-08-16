@@ -1,7 +1,7 @@
 {
   "schema_version": 4,
   "project_id": "PROMO-L2-ROUTER-V1",
-  "updated_at": "2026-08-16T22:30:43.138567Z",
+  "updated_at": "2026-08-16T23:29:00Z",
   "mode": "PROACTIVE_PREAUTH",
   "alert_states": [
     "LOGIN_REQUIRED",
@@ -29,37 +29,37 @@
   "platforms": {
     "uniqlo": {
       "access_class": "AUTHORIZED_ACCOUNT",
-      "status": "HANDOFF_READY",
+      "status": "PREAUTH_PENDING_SESSION",
       "profile_id": "uniqlo-vn-main",
       "credential_storage": "runtime-browser-session-only"
     },
     "smember": {
       "access_class": "AUTHORIZED_ACCOUNT",
-      "status": "HANDOFF_READY_OR_RESIDENTIAL_FALLBACK",
+      "status": "PREAUTH_PENDING_SESSION",
       "profile_id": "smember-main",
       "credential_storage": "runtime-browser-session-only"
     },
     "grabfood": {
       "access_class": "AUTHORIZED_ACCOUNT",
-      "status": "HANDOFF_READY",
+      "status": "PREAUTH_RETRY_PENDING",
       "profile_id": "grabfood-main",
       "credential_storage": "runtime-browser-session-only"
     },
     "shopeefood": {
       "access_class": "AUTHORIZED_ACCOUNT",
-      "status": "HANDOFF_READY",
+      "status": "PREAUTH_PENDING_SESSION",
       "profile_id": "shopeefood-main",
       "credential_storage": "runtime-browser-session-only"
     },
     "tiktok": {
       "access_class": "AUTHORIZED_ACCOUNT",
-      "status": "HANDOFF_READY",
+      "status": "PREAUTH_PENDING_SESSION",
       "profile_id": "tiktok-main",
       "credential_storage": "runtime-browser-session-only"
     },
     "tiktokshop": {
       "access_class": "AUTHORIZED_ACCOUNT",
-      "status": "HANDOFF_READY",
+      "status": "PREAUTH_PENDING_SESSION",
       "profile_id": "tiktokshop-main",
       "credential_storage": "runtime-browser-session-only"
     },
