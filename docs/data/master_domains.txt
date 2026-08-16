@@ -1,9 +1,13 @@
+2sao.vn
 3sach.vn
 acb.com.vn
 aeon.com.vn
 afamily.vn
+agoda.com
 aldoshoes.vn
+apple.com
 baomoi.com
+baovietbank.vn
 beautybox.com.vn
 bemiie.com
 bibomart.com.vn
@@ -23,17 +27,20 @@ corporate.visa.com
 crescentmall.com.vn
 crocs.com.vn
 danhgiathuonghieu.vn
+dealgiadung.vn
 dealngon.vn
 decathlon.vn
 didongviet.vn
 dienmaycholon.com
 dingteavoucher.vn
+eholiday.vn
 elly.vn
 eropi.com
 eximbank.com.vn
 familynes.vn
 famimax.com
 farmersmarket.vn
+flchotelsresorts.com
 food.grab.com
 giadunghoangviet.com
 gigamall.com.vn
@@ -61,6 +68,7 @@ kidsplaza.vn
 kinhtedouong.vn
 kiotsoft.com
 kiotviet.vn
+kvoucher.vn
 lazada.vn
 locphuc.com.vn
 lottemallwestlakehanoi.vn
@@ -83,6 +91,7 @@ moveek.com
 mytour.vn
 namanmarket.com
 nanakids.vn
+napas.com.vn
 nhathuoclientam.com.vn
 nhathuoclongchau.com.vn
 nhathuocviet.com
@@ -107,6 +116,8 @@ rapchieuphim.com
 rfoods.com.vn
 sammishop.com
 sapo.vn
+sharehomevn.com
+shinhanfinance.com.vn
 shop.spacet.vn
 shopee.vn
 shopping.saigoncentre.com.vn
@@ -120,6 +131,7 @@ supersports.com.vn
 swavi.vn
 techcombank.com
 temdientu.com.vn
+thecoffeehouse.com
 thecoffeehousevoucher.vn
 thisomallsala.vn
 thoibaonganhang.vn
@@ -131,6 +143,7 @@ upharma.vn
 vi.wikipedia.org
 vietcombank.com.vn
 vietnam.vn
+vietnambooking.com
 vietnambusinessinsider.vn
 vietnamnet.vn
 vietstock.vn

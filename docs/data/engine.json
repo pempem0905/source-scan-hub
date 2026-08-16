@@ -1,74 +1,208 @@
 {
-  "generated_at": "2026-08-16T12:29:43.748375Z",
+  "generated_at": "2026-08-16T13:06:20.962857Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 6597,
-    "frontier_deferred_pending": 38969,
-    "frontier_pending": 45566,
-    "last_6_runs_new_domains": 80,
+    "frontier_active_pending": 6818,
+    "frontier_deferred_pending": 39066,
+    "frontier_pending": 45884,
+    "last_6_runs_new_domains": 77,
     "last_run": {
-      "at": "2026-08-16T12:25:47.545218Z",
+      "at": "2026-08-16T13:02:11.793280Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*offers*",
-        "*.vn/*deals*",
-        "*.vn/*sale*",
-        "*.com/vn/*khuyen-mai*"
+        "*.com/vn/*uu-dai*",
+        "*.com/vn/*voucher*",
+        "*.com/vn/*promotion*",
+        "*.com/vi-vn/*khuyen-mai*"
       ],
-      "duration_s": 235.4,
-      "errors": 104,
-      "frontier_pending": 45566,
-      "new_domains": 7,
-      "processed": 1031,
-      "rate403": 0.485,
+      "duration_s": 248.5,
+      "errors": 75,
+      "frontier_pending": 45884,
+      "new_domains": 12,
+      "processed": 934,
+      "rate403": 0.749,
       "rate429": 0.0
     },
-    "latest_common_crawl": "CC-MAIN-2026-25",
-    "master_domains": 156,
+    "latest_common_crawl": "CC-MAIN-2026-30",
+    "master_domains": 169,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 18,
+    "run_count": 19,
     "running": true,
-    "seen_urls": 75028,
-    "updated_at": "2026-08-16T12:29:42.990910Z"
+    "seen_urls": 81868,
+    "updated_at": "2026-08-16T13:06:20.244174Z"
   },
   "master_input": {
-    "active_input_count": 93,
+    "active_input_count": 94,
     "counts": {
-      "ACTIVE_INPUT": 93,
+      "ACTIVE_INPUT": 94,
       "AUTHORIZED_ACCOUNT": 2,
-      "BANK_CARD": 21,
-      "DISCOVERY_ONLY": 10,
+      "BANK_CARD": 23,
+      "DISCOVERY_ONLY": 11,
       "FOOD_BEVERAGE": 13,
-      "GENERAL": 96,
+      "GENERAL": 103,
       "LOYALTY_REWARDS": 6,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 25,
       "PROMO_L2": 13,
-      "PROMO_RETAIL": 55,
-      "PUBLIC_HTTP": 191,
+      "PROMO_RETAIL": 56,
+      "PUBLIC_HTTP": 202,
       "RESIDENTIAL_REQUIRED": 11,
       "RETAIL_ECOMMERCE": 54,
-      "REVIEW_INPUT": 101,
-      "SOURCE_HUNTER": 10,
-      "SOURCE_REVIEW": 101,
-      "TRAVEL_MOBILITY": 7
+      "REVIEW_INPUT": 110,
+      "SOURCE_HUNTER": 11,
+      "SOURCE_REVIEW": 110,
+      "TRAVEL_MOBILITY": 9
     },
     "dedupe_key": "registrable_domain",
-    "discovery_only_count": 10,
-    "generated_at": "2026-08-16T12:29:43.590890Z",
+    "discovery_only_count": 11,
+    "generated_at": "2026-08-16T13:06:20.814233Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 204,
-    "review_input_count": 101,
+    "record_count": 215,
+    "review_input_count": 110,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 156,
+    "source_hunter_domains": 169,
     "url_key": "canonical_url"
+  },
+  "promo_workers": {
+    "schema_version": 2,
+    "project": "PROMO_MASTER",
+    "project_id": "PROMO-GPT-PIPELINE-V1",
+    "purpose": "Version-controlled mirror of the ChatGPT PROMO worker architecture. Canonical PROMO transaction state remains in the live durable writer; canonical source input is published by PROMO-SRC-HUNTER-V1.",
+    "runtime": {
+      "scheduler": "ChatGPT Scheduled Tasks",
+      "cadence": "hourly",
+      "active_workers": 4,
+      "paused_workers": [
+        "PROMO Hub + L2 Sync"
+      ],
+      "canonical_state": "Supabase via Source Scan Hub",
+      "source_input": "integration/master_input_sources_v1.jsonl",
+      "dispatch_plan": "integration/promo_dispatch_plan_v1.jsonl",
+      "l2_shadow_queue": "l2/candidate-queue.jsonl",
+      "value_filter": "ACTIONABLE-VALUE-V2",
+      "master_rule": "single-writer",
+      "migration_mode": "BRIDGE_SHADOW"
+    },
+    "workers": [
+      {
+        "name": "PROMO Banks Shard",
+        "state": "ACTIVE",
+        "role": "extraction-producer",
+        "input_mode": "MASTER_INPUT_CONSUMER",
+        "scope": [
+          "BANK_CARD",
+          "PAYMENT_WALLET",
+          "TRAVEL_MOBILITY"
+        ],
+        "responsibilities": [
+          "consume assigned sources",
+          "read official promo/detail/terms",
+          "normalize actionable economics",
+          "enqueue clean candidates"
+        ],
+        "broad_source_discovery": false
+      },
+      {
+        "name": "PROMO Retail Shard",
+        "state": "ACTIVE",
+        "role": "extraction-producer",
+        "input_mode": "MASTER_INPUT_CONSUMER",
+        "scope": [
+          "RETAIL_ECOMMERCE",
+          "FOOD_BEVERAGE",
+          "LOYALTY_REWARDS",
+          "GENERAL"
+        ],
+        "responsibilities": [
+          "consume assigned sources",
+          "read official promo/detail/terms",
+          "normalize actionable economics",
+          "enqueue clean candidates"
+        ],
+        "broad_source_discovery": false
+      },
+      {
+        "name": "PROMO Hub + L2 Sync",
+        "state": "PAUSED",
+        "role": "legacy-discovery-producer",
+        "replacement": [
+          "PROMO-SRC-HUNTER-V1",
+          "PROMO-L2-ROUTER-V1"
+        ],
+        "pause_reason": "Avoid duplicate discovery and keep one scheduled-task slot for PROMO L2 Login Watch."
+      },
+      {
+        "name": "PROMO Turbo Scan",
+        "state": "ACTIVE",
+        "role": "single-writer-quality-gate",
+        "responsibilities": [
+          "global dedup",
+          "validate READY queue",
+          "validate L2 candidates only after promotion from shadow",
+          "atomic commit",
+          "post-commit verification"
+        ],
+        "crawl_sources": false
+      },
+      {
+        "name": "PROMO GPT Infra + Commit",
+        "state": "ACTIVE",
+        "role": "dispatcher-health-relay",
+        "responsibilities": [
+          "read master input and dispatch plan",
+          "worker health",
+          "producer-stall detection",
+          "commit-stall detection",
+          "queue relay",
+          "writer verification",
+          "source registry export",
+          "status/dashboard health"
+        ],
+        "broad_source_discovery": false
+      }
+    ],
+    "support_automations": [
+      {
+        "name": "PROMO L2 Login Watch",
+        "state": "ACTIVE",
+        "role": "conditional-auth-alert",
+        "source": "l2/auth-status.json",
+        "alert_states": [
+          "LOGIN_REQUIRED",
+          "NEEDS_RELOGIN",
+          "PERMISSION_REQUIRED"
+        ]
+      }
+    ],
+    "subsystems": {
+      "source_hunter": {
+        "project_id": "PROMO-SRC-HUNTER-V1",
+        "role": "only broad source discovery and master-input writer"
+      },
+      "l2_router": {
+        "project_id": "PROMO-L2-ROUTER-V1",
+        "role": "hard access lanes and shadow extraction",
+        "production_write": false
+      }
+    },
+    "data_rules": {
+      "official_source_first": true,
+      "child_detail_terms_override_hubs": true,
+      "literal_code_requires_exact_visible_contextual_evidence": true,
+      "raw_regex_code_match_is_never_a_verified_code": true,
+      "dynamic_account_qr_otp_referral_contest_ids_are_not_literal_codes": true,
+      "expired_and_non_actionable_offers_are_rejected": true,
+      "global_dedup_required": true,
+      "new_source_discovered_downstream_is_returned_as_SOURCE_CANDIDATE": true
+    },
+    "sync_note": "Do not hard-code live batch counters here. Worker prompt changes should remain consistent with this mirror. Never store API keys, passwords, cookies, OTPs or refresh tokens in GitHub."
   },
   "l2_shadow": {
     "counts": {
@@ -97,115 +231,74 @@
     "schema": "promo.l2.hard_access_status.v1",
     "total": 13
   },
+  "l2_auth": {
+    "schema_version": 1,
+    "project_id": "PROMO-L2-ROUTER-V1",
+    "updated_at": "2026-08-16T17:43:00+07:00",
+    "alert_states": [
+      "LOGIN_REQUIRED",
+      "NEEDS_RELOGIN",
+      "PERMISSION_REQUIRED"
+    ],
+    "platforms": {
+      "grabfood": {
+        "access_class": "AUTHORIZED_ACCOUNT",
+        "status": "INFRA_PENDING",
+        "profile_id": "grabfood-main",
+        "credential_storage": "local-runner-only"
+      },
+      "shopeefood": {
+        "access_class": "AUTHORIZED_ACCOUNT",
+        "status": "INFRA_PENDING",
+        "profile_id": "shopeefood-main",
+        "credential_storage": "local-runner-only"
+      },
+      "tiktok": {
+        "access_class": "AUTHORIZED_ACCOUNT",
+        "status": "INFRA_PENDING",
+        "profile_id": "tiktok-main",
+        "credential_storage": "local-runner-only"
+      },
+      "loyalty-generic": {
+        "access_class": "AUTHORIZED_ACCOUNT",
+        "status": "INFRA_PENDING",
+        "profile_id": "loyalty-generic",
+        "credential_storage": "local-runner-only"
+      }
+    },
+    "policy": {
+      "passwords_in_github": false,
+      "cookies_in_github": false,
+      "otp_in_github": false,
+      "session_profile_location": "self-hosted runner local disk",
+      "on_session_expiry": "set NEEDS_RELOGIN and pause only affected platform"
+    }
+  },
   "discovery": {
-    "free_search_last_added": 7,
+    "free_search_last_added": 14,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "rạp chiếu phim khuyến mãi Việt Nam",
-      "rạp chiếu phim ưu đãi Việt Nam",
-      "rạp chiếu phim voucher Việt Nam",
-      "rạp chiếu phim promotion Vietnam"
+      "khách sạn resort khuyến mãi Việt Nam",
+      "khách sạn resort ưu đãi Việt Nam",
+      "khách sạn resort voucher Việt Nam",
+      "khách sạn resort promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 15,
+    "cc_domain_page": 16,
     "frontier_scheduler": {
-      "active": 1031,
+      "active": 934,
       "base_per_host_batch": 16,
-      "deferred": 38969,
+      "deferred": 39066,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 1.266,
+      "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 126
+      "unique_hosts": 111
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T10:01:56.901585Z",
-      "domain": "smember.com.vn",
-      "radar": false,
-      "url": "https://smember.com.vn/login",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-16T10:01:56.901585Z",
-      "domain": "hotro.tiki.vn",
-      "radar": false,
-      "url": "https://hotro.tiki.vn/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T10:01:56.901585Z",
-      "domain": "noti.sale",
-      "radar": false,
-      "url": "https://noti.sale/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T10:01:56.901585Z",
-      "domain": "magiamgia.com",
-      "radar": true,
-      "url": "https://magiamgia.com/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T10:01:56.901585Z",
-      "domain": "help.shopee.vn",
-      "radar": false,
-      "url": "https://help.shopee.vn/portal/4/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T10:01:56.901585Z",
-      "domain": "help.cs.shopeepay.vn",
-      "radar": false,
-      "url": "https://help.cs.shopeepay.vn/portal/100/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T10:24:11.173692Z",
-      "domain": "prime.vpbank.com.vn",
-      "radar": false,
-      "url": "https://prime.vpbank.com.vn/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-16T10:45:16.871575Z",
-      "domain": "vinmart.com",
-      "radar": false,
-      "url": "https://vinmart.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T10:45:16.871575Z",
-      "domain": "smileswallet.com",
-      "radar": false,
-      "url": "https://smileswallet.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T10:45:16.871575Z",
-      "domain": "lottemart.vn",
-      "radar": false,
-      "url": "https://lottemart.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T10:45:16.871575Z",
-      "domain": "sieuthi-go.vn",
-      "radar": false,
-      "url": "https://sieuthi-go.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T10:45:16.871575Z",
-      "domain": "lottemart.com.vn",
-      "radar": false,
-      "url": "https://lottemart.com.vn/",
-      "via": "free_search"
-    },
     {
       "at": "2026-08-16T10:45:16.871575Z",
       "domain": "vnexpress.net",
@@ -961,6 +1054,90 @@
       "radar": false,
       "url": "https://vnpay.vn/",
       "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T13:02:11.793280Z",
+      "domain": "napas.com.vn",
+      "radar": false,
+      "url": "https://napas.com.vn/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-16T13:02:11.793280Z",
+      "domain": "baovietbank.vn",
+      "radar": false,
+      "url": "https://baovietbank.vn/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-16T13:02:11.793280Z",
+      "domain": "shinhanfinance.com.vn",
+      "radar": false,
+      "url": "https://shinhanfinance.com.vn/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-16T13:02:11.793280Z",
+      "domain": "thecoffeehouse.com",
+      "radar": false,
+      "url": "https://thecoffeehouse.com/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T13:02:11.793280Z",
+      "domain": "kvoucher.vn",
+      "radar": true,
+      "url": "https://kvoucher.vn/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T13:02:11.793280Z",
+      "domain": "dealgiadung.vn",
+      "radar": false,
+      "url": "https://dealgiadung.vn/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T13:02:11.793280Z",
+      "domain": "agoda.com",
+      "radar": false,
+      "url": "https://agoda.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T13:02:11.793280Z",
+      "domain": "flchotelsresorts.com",
+      "radar": false,
+      "url": "https://flchotelsresorts.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T13:02:11.793280Z",
+      "domain": "eholiday.vn",
+      "radar": false,
+      "url": "https://eholiday.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T13:02:11.793280Z",
+      "domain": "sharehomevn.com",
+      "radar": false,
+      "url": "https://sharehomevn.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T13:02:11.793280Z",
+      "domain": "vietnambooking.com",
+      "radar": false,
+      "url": "https://vietnambooking.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T13:02:11.793280Z",
+      "domain": "apple.com",
+      "radar": false,
+      "url": "https://apple.com/vn/legal/sales-support/",
+      "via": "internal_promo"
     }
   ]
 }

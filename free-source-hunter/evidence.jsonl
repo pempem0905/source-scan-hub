@@ -154,3 +154,15 @@
 {"at": "2026-08-16T12:25:47.545218Z", "domain": "rapchieuphim.com", "radar": false, "url": "https://rapchieuphim.com/", "via": "free_search"}
 {"at": "2026-08-16T12:25:47.545218Z", "domain": "cinestar.com.vn", "radar": false, "url": "https://cinestar.com.vn/", "via": "free_search"}
 {"at": "2026-08-16T12:25:47.545218Z", "domain": "vnpay.vn", "radar": false, "url": "https://vnpay.vn/", "via": "free_search"}
+{"at": "2026-08-16T13:02:11.793280Z", "domain": "napas.com.vn", "radar": false, "url": "https://napas.com.vn/", "via": "external_promo"}
+{"at": "2026-08-16T13:02:11.793280Z", "domain": "baovietbank.vn", "radar": false, "url": "https://baovietbank.vn/", "via": "external_promo"}
+{"at": "2026-08-16T13:02:11.793280Z", "domain": "shinhanfinance.com.vn", "radar": false, "url": "https://shinhanfinance.com.vn/", "via": "external_promo"}
+{"at": "2026-08-16T13:02:11.793280Z", "domain": "thecoffeehouse.com", "radar": false, "url": "https://thecoffeehouse.com/", "via": "radar_out"}
+{"at": "2026-08-16T13:02:11.793280Z", "domain": "kvoucher.vn", "radar": true, "url": "https://kvoucher.vn/", "via": "radar_out"}
+{"at": "2026-08-16T13:02:11.793280Z", "domain": "dealgiadung.vn", "radar": false, "url": "https://dealgiadung.vn/", "via": "radar_out"}
+{"at": "2026-08-16T13:02:11.793280Z", "domain": "agoda.com", "radar": false, "url": "https://agoda.com/", "via": "free_search"}
+{"at": "2026-08-16T13:02:11.793280Z", "domain": "flchotelsresorts.com", "radar": false, "url": "https://flchotelsresorts.com/", "via": "free_search"}
+{"at": "2026-08-16T13:02:11.793280Z", "domain": "eholiday.vn", "radar": false, "url": "https://eholiday.vn/", "via": "free_search"}
+{"at": "2026-08-16T13:02:11.793280Z", "domain": "sharehomevn.com", "radar": false, "url": "https://sharehomevn.com/", "via": "free_search"}
+{"at": "2026-08-16T13:02:11.793280Z", "domain": "vietnambooking.com", "radar": false, "url": "https://vietnambooking.com/", "via": "free_search"}
+{"at": "2026-08-16T13:02:11.793280Z", "domain": "apple.com", "radar": false, "url": "https://apple.com/vn/legal/sales-support/", "via": "internal_promo"}
