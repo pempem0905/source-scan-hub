@@ -1,0 +1,54 @@
+{
+  "schema": "promo.runtime_status.v1",
+  "generated_at": "2026-08-16T13:30:00Z",
+  "source": "latest_verified_baseline_then_live_worker_exports",
+  "canonical": {
+    "batch": 56,
+    "source_high_watermark": "SRC-341",
+    "registered_sources": 320,
+    "scanned_sources": 176,
+    "actionable_offers": 169,
+    "voucher_benefit_records": null,
+    "literal_codes": 42,
+    "ready_queue": null,
+    "last_commit_at": null,
+    "note": "Baseline is the latest verified canonical snapshot available to this GitHub bridge. Null fields are intentionally not guessed and must be filled from live durable state by PROMO GPT Infra + Dispatch."
+  },
+  "workers": {
+    "PROMO Banks Shard": {
+      "state": "ACTIVE",
+      "last_run_at": null,
+      "sources_read": null,
+      "offers_found": null,
+      "voucher_benefits_found": null,
+      "literal_codes_found": null,
+      "enqueued": null
+    },
+    "PROMO Retail Shard": {
+      "state": "ACTIVE",
+      "last_run_at": null,
+      "sources_read": null,
+      "offers_found": null,
+      "voucher_benefits_found": null,
+      "literal_codes_found": null,
+      "enqueued": null
+    },
+    "PROMO Turbo Scan": {
+      "state": "ACTIVE",
+      "last_run_at": null,
+      "validated": null,
+      "rejected": null,
+      "committed": null,
+      "literal_codes_committed": null,
+      "batch": null
+    },
+    "PROMO GPT Infra + Dispatch": {
+      "state": "ACTIVE",
+      "last_run_at": null,
+      "ready_queue": null,
+      "relayed": null,
+      "commit_stall": null,
+      "worker_health": null
+    }
+  }
+}
