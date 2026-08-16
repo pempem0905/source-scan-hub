@@ -17,12 +17,12 @@
   "workers": {
     "PROMO Banks Shard": {
       "state": "ACTIVE",
-      "last_run_at": null,
-      "sources_read": null,
-      "offers_found": null,
-      "voucher_benefits_found": null,
-      "literal_codes_found": null,
-      "enqueued": null
+      "last_run_at": "2026-08-16T14:29:19Z",
+      "sources_read": 5,
+      "offers_found": 5,
+      "voucher_benefits_found": 1,
+      "literal_codes_found": 0,
+      "enqueued": 5
     },
     "PROMO Retail Shard": {
       "state": "ACTIVE",
