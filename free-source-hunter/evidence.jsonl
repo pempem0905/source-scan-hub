@@ -40,3 +40,4 @@
 {"at": "2026-08-16T10:01:56.901585Z", "domain": "magiamgia.com", "radar": true, "url": "https://magiamgia.com/", "via": "radar_out"}
 {"at": "2026-08-16T10:01:56.901585Z", "domain": "help.shopee.vn", "radar": false, "url": "https://help.shopee.vn/portal/4/", "via": "radar_out"}
 {"at": "2026-08-16T10:01:56.901585Z", "domain": "help.cs.shopeepay.vn", "radar": false, "url": "https://help.cs.shopeepay.vn/portal/100/", "via": "radar_out"}
+{"at": "2026-08-16T10:24:11.173692Z", "domain": "prime.vpbank.com.vn", "radar": false, "url": "https://prime.vpbank.com.vn/", "via": "external_promo"}
