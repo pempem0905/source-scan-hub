@@ -1,16 +1,24 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "project_id": "PROMO-L2-ROUTER-V1",
-  "updated_at": "2026-08-16T20:43:00+07:00",
+  "updated_at": "2026-08-16T23:58:00+07:00",
   "mode": "PROACTIVE_PREAUTH",
   "alert_states": ["LOGIN_REQUIRED", "NEEDS_RELOGIN", "PERMISSION_REQUIRED"],
   "preauth": {
     "enabled": true,
     "registry": "l2/preauth-platforms.json",
-    "bridge_status": "PENDING_BROWSER_SESSION_CONTROL",
+    "bridge_status": "PERMISSION_REQUIRED",
+    "bridge_status_file": "l2/bridge-status.json",
     "preferred_handoff": "CLOUDFLARE_BROWSER_RUN_HUMAN_IN_LOOP",
     "residential_fallback": true,
-    "login_before_demand": true
+    "login_before_demand": true,
+    "permission_required": {
+      "runtime_setting": "CLOUDFLARE_ACCOUNT_ID",
+      "secret": "CLOUDFLARE_BROWSER_RUN_API_TOKEN",
+      "required_permission": "Browser Rendering - Edit",
+      "private_runtime_setting": "L2_PRIVATE_HANDOFF_PATH",
+      "note": "Do not place token values or takeover URLs in GitHub files, logs, chat, or public dashboard."
+    }
   },
   "platforms": {
     "uniqlo": {
@@ -56,6 +64,7 @@
     "otp_in_github": false,
     "refresh_tokens_in_github": false,
     "takeover_urls_in_github": false,
+    "takeover_urls_in_logs": false,
     "session_profile_location": "runtime browser session or self-hosted residential profile",
     "on_session_expiry": "set NEEDS_RELOGIN and pause only affected platform",
     "on_cloud_ip_block": "route platform to self-hosted-residential persistent profile",
