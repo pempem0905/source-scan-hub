@@ -13,6 +13,7 @@ on:
       - 'free-source-hunter/reconcile_frontier_status.py'
       - 'integration/build_master_input.py'
       - 'integration/quality_gate_sources.py'
+      - 'integration/build_hard_access_queue.py'
       - 'integration/legacy-source-seed.jsonl'
       - 'integration/promo-source-export.jsonl'
   schedule:
@@ -69,10 +70,11 @@ jobs:
         run: python3 free-source-hunter/hunter.py
       - name: Reconcile active and deferred frontier status
         run: python3 free-source-hunter/reconcile_frontier_status.py
-      - name: Build canonical master input and dispatch plan
+      - name: Build canonical master input, quality gate and hard-access queue
         run: |
           python3 integration/build_master_input.py
           python3 integration/quality_gate_sources.py
+          python3 integration/build_hard_access_queue.py
       - name: Build static monitor snapshot
         run: |
           mkdir -p docs/data
@@ -88,6 +90,7 @@ jobs:
           state=read_json(root/'state.json', {})
           master_input=read_json(Path('integration/master_input_status.json'), {})
           l2_shadow=read_json(Path('l2/shadow-status.json'), {})
+          l2_hard=read_json(Path('l2/hard-access-status.json'), {})
           recent=[]
           ep=root/'evidence.jsonl'
           if ep.exists():
@@ -101,6 +104,7 @@ jobs:
               'status': status,
               'master_input': master_input,
               'l2_shadow': l2_shadow,
+              'l2_hard_access': l2_hard,
               'discovery': {
                   'free_search_last_added': state.get('free_search_last_added',0),
                   'free_search_last_errors': state.get('free_search_last_errors',0),
@@ -120,7 +124,7 @@ jobs:
         run: |
           git config user.name "source-scan-free-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add free-source-hunter/state.json free-source-hunter/status.json free-source-hunter/master_domains.txt free-source-hunter/seen_urls.txt free-source-hunter/evidence.jsonl docs/data/engine.json docs/data/master_domains.txt integration/master_input_sources_v1.jsonl integration/master_input_status.json integration/promo_dispatch_plan_v1.jsonl
+          git add free-source-hunter/state.json free-source-hunter/status.json free-source-hunter/master_domains.txt free-source-hunter/seen_urls.txt free-source-hunter/evidence.jsonl docs/data/engine.json docs/data/master_domains.txt integration/master_input_sources_v1.jsonl integration/master_input_status.json integration/promo_dispatch_plan_v1.jsonl l2/hard-access-queue.jsonl l2/hard-access-status.json
           if git diff --cached --quiet; then
             echo "No state changes"
             exit 0
