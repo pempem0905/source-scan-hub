@@ -1,0 +1,43 @@
+name: PROMO L2 Bridge Static Selftest
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'l2/browser_run_cdp.py'
+      - 'l2/reconcile_bridge_status.py'
+      - 'l2/bridge_selftest.py'
+      - 'l2/bridge-status.json'
+      - 'l2/bridge-runtime-status.json'
+      - 'l2/auth-status.json'
+      - 'l2/preauth-platforms.json'
+      - 'l2/handoff-request.json'
+      - 'docs/login-center.html'
+      - '.github/workflows/promo-l2-bridge-selftest.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: promo-l2-bridge-static-selftest
+  cancel-in-progress: true
+
+jobs:
+  selftest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile bridge components
+        run: python -m py_compile l2/browser_run_cdp.py l2/reconcile_bridge_status.py l2/bridge_selftest.py l2/session_manager.py
+      - name: Verify bridge/status/security invariants
+        run: python l2/bridge_selftest.py
