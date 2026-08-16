@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """Reconcile non-secret L2 bridge/auth status from sanitized runtime evidence.
 
-This script is deterministic and monotonic: transient or later probe failures do
-not erase previously verified Browser Run capability, and READY can only be set
-when fresh-connection authenticated session reuse has actually been verified.
-No sensitive runtime material is read or written.
+Transient or later probe failures never erase previously verified Browser Run
+capability. READY is set only after fresh-connection authenticated session reuse.
+TAKEOVER_READY is temporary and means a real secure human handoff is active.
 """
 from __future__ import annotations
 
@@ -46,10 +45,12 @@ def main() -> None:
     transient = bool(runtime.get("transient_failure"))
     runtime_state = str(runtime.get("state") or "UNKNOWN")
 
-    runtime_verified = prior_runtime_verified or created or runtime_state == "BROWSER_RUN_PROBE_VERIFIED"
+    runtime_verified = prior_runtime_verified or created or runtime_state in {"BROWSER_RUN_PROBE_VERIFIED", "TAKEOVER_READY", "SESSION_REUSE_VERIFIED"}
     e2e = prior_e2e or reuse
     if e2e:
         status = "SESSION_REUSE_VERIFIED"
+    elif runtime_state == "TAKEOVER_READY" and runtime_verified:
+        status = "TAKEOVER_READY"
     elif runtime_verified:
         status = "BROWSER_RUN_PROBE_VERIFIED_HANDOFF_PENDING"
     elif transient:
@@ -71,7 +72,7 @@ def main() -> None:
                 "github_actions_secret_presence_verified_without_readback": True,
                 "browser_run_session_creation_verified": bool(runtime_verified),
                 "cdp_control_verified": bool(runtime_verified),
-                "live_view_handoff_exercised": bool(handoff or prior_e2e),
+                "live_view_handoff_exercised": bool(handoff or runtime_state == "TAKEOVER_READY" or prior_e2e),
                 "authenticated_session_reuse_verified": bool(e2e),
                 "fresh_connection_reuse_required": True,
                 "last_runtime_state": runtime_state,
@@ -102,14 +103,15 @@ def main() -> None:
     preauth["end_to_end_verified"] = bool(e2e)
     auth["updated_at"] = now_iso()
 
-    # Platform status changes are intentionally conservative. Merely verifying
-    # infrastructure never fabricates a logged-in state. A platform becomes
-    # READY only through a platform-specific successful handoff run.
     platform = str(runtime.get("platform") or "")
     platforms = auth.get("platforms") if isinstance(auth.get("platforms"), dict) else {}
     if platform in platforms and runtime.get("mode") == "handoff":
         if reuse:
             platforms[platform]["status"] = "SESSION_REUSE_VERIFIED"
+        elif runtime_state == "TAKEOVER_READY":
+            # Only now does a real secure Live Session exist, so the Telegram
+            # monitor may alert for this one platform.
+            platforms[platform]["status"] = "LOGIN_REQUIRED"
         elif runtime_state in {"HANDOFF_FAILED", "HANDOFF_REUSE_UNVERIFIED"}:
             platforms[platform]["status"] = "HANDOFF_READY"
 
