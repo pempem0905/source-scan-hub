@@ -6,6 +6,8 @@ This project was built with [Lovable](https://lovable.dev).
 
 **Live app**: https://source-scan-hub.lovable.app
 
+**Live monitoring**: https://source-scan-hub.lovable.app/promo — PROMO master progress, writer health, candidate queue and commit ledger. All live metrics are read from the canonical Supabase master tables (`promo_master_state`, `promo_writer_health`, `promo_candidate_queue`, `promo_master_commits`, `worker_stats`); no values are hard-coded.
+
 ## Build with Lovable
 
 Continue developing this project in the [Lovable editor](https://lovable.dev/projects/531b7c18-ea2e-45bb-897c-9de8a6ca020d).

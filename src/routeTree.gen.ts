@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ApiCostRouteImport } from './routes/api-cost'
+import { Route as PromoRouteImport } from './routes/promo'
 import { Route as QueueRouteImport } from './routes/queue'
 import { Route as RadarRouteImport } from './routes/radar'
 import { Route as ResolverRouteImport } from './routes/resolver'
@@ -32,6 +33,11 @@ const IndexRoute = IndexRouteImport.update({
 const ApiCostRoute = ApiCostRouteImport.update({
   id: '/api-cost',
   path: '/api-cost',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PromoRoute = PromoRouteImport.update({
+  id: '/promo',
+  path: '/promo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QueueRoute = QueueRouteImport.update({
@@ -98,6 +104,7 @@ const ApiSourceEngineActionRoute = ApiSourceEngineActionRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/api-cost': typeof ApiCostRoute
+  '/promo': typeof PromoRoute
   '/queue': typeof QueueRoute
   '/radar': typeof RadarRoute
   '/resolver': typeof ResolverRoute
@@ -114,6 +121,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/api-cost': typeof ApiCostRoute
+  '/promo': typeof PromoRoute
   '/queue': typeof QueueRoute
   '/radar': typeof RadarRoute
   '/resolver': typeof ResolverRoute
@@ -131,6 +139,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/api-cost': typeof ApiCostRoute
+  '/promo': typeof PromoRoute
   '/queue': typeof QueueRoute
   '/radar': typeof RadarRoute
   '/resolver': typeof ResolverRoute
@@ -149,6 +158,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/api-cost'
+    | '/promo'
     | '/queue'
     | '/radar'
     | '/resolver'
@@ -165,6 +175,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/api-cost'
+    | '/promo'
     | '/queue'
     | '/radar'
     | '/resolver'
@@ -181,6 +192,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/api-cost'
+    | '/promo'
     | '/queue'
     | '/radar'
     | '/resolver'
@@ -198,6 +210,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ApiCostRoute: typeof ApiCostRoute
+  PromoRoute: typeof PromoRoute
   QueueRoute: typeof QueueRoute
   RadarRoute: typeof RadarRoute
   ResolverRoute: typeof ResolverRoute
@@ -226,6 +239,13 @@ declare module '@tanstack/react-router' {
       path: '/api-cost'
       fullPath: '/api-cost'
       preLoaderRoute: typeof ApiCostRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/promo': {
+      id: '/promo'
+      path: '/promo'
+      fullPath: '/promo'
+      preLoaderRoute: typeof PromoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/queue': {
@@ -318,6 +338,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ApiCostRoute: ApiCostRoute,
+  PromoRoute: PromoRoute,
   QueueRoute: QueueRoute,
   RadarRoute: RadarRoute,
   ResolverRoute: ResolverRoute,

@@ -9,10 +9,12 @@ import {
   Radar,
   Settings,
   Share2,
+  Ticket,
 } from "lucide-react";
 
 const NAV = [
   { to: "/", label: "Overview", icon: Gauge, exact: true },
+  { to: "/promo", label: "PROMO Master", icon: Ticket, exact: false },
   { to: "/sources", label: "Source Explorer", icon: Database, exact: false },
   { to: "/radar", label: "Radar", icon: Radar, exact: false },
   { to: "/resolver", label: "Origin Resolver", icon: Share2, exact: false },
