@@ -1,7 +1,131 @@
 {
-  "schema_version": 1,
+  "history": [
+    {
+      "at": "2026-08-16T10:51:16Z",
+      "attempted": 20,
+      "blocked": 0,
+      "code_candidates": 42,
+      "errors": 1,
+      "js_browser": 0,
+      "login_required": 0,
+      "promo_candidates": 12,
+      "public_ok": 19
+    }
+  ],
+  "last_run": {
+    "attempted": 20,
+    "blocked": 0,
+    "code_candidates": 42,
+    "errors": 1,
+    "js_browser": 0,
+    "login_required": 0,
+    "promo_candidates": 12,
+    "public_ok": 19
+  },
   "project_id": "PROMO-L2-ROUTER-V1",
-  "run_count": 0,
-  "seen": {},
-  "history": []
+  "run_count": 1,
+  "schema_version": 1,
+  "seen": {
+    "https://centralretail.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:51:12Z",
+      "content_hash": "9dbb40617de5e891d9ab0891b0371fbf412161ee26f0170595a9f89ad07f89c2"
+    },
+    "https://food.grab.com/sg/en/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:50:03Z",
+      "content_hash": "5caaabc32b6a9d391aa3f1f2b18fba6ff68a8b87c0ced4809affa438d3261f2b"
+    },
+    "https://grab.com/vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:50:28Z",
+      "content_hash": "db2a486aee32c24f9a922214f30dce5dea5ad4f404bf5c8990dd37cb25a1e909"
+    },
+    "https://growth-public.grab.com/grabfood-com/sitemap/sitemap_index.xml": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:50:17Z",
+      "content_hash": "b3ac25baa78f69911fd4f6b2f540b1f92b1b9127af91c006d47c98ceebac67b1"
+    },
+    "https://help.cs.shopeepay.vn/portal/100/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:50:17Z",
+      "content_hash": "54826b9cc1e46b2c829c07bdfc4f74e34142cea33e2968b1845508786a360ec2"
+    },
+    "https://help.shopee.vn/portal/4/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:50:12Z",
+      "content_hash": "7f84e8ba74d34f1f023ac9e1cf9a7fd3d95532240399eace64b7a55752131078"
+    },
+    "https://homefarm.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:51:14Z",
+      "content_hash": "d145acd5a47f7591c29f66f5728ce6aeb9137af67865fa43ea11a5b10258008c"
+    },
+    "https://hotro.tiki.vn/": {
+      "access_state": "ERROR",
+      "at": "2026-08-16T10:50:55Z",
+      "content_hash": null
+    },
+    "https://lotteria.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:51:02Z",
+      "content_hash": "3e66039f44ef21730e48dce3399f792bce2608ebf6a57d2a7153b1d1ec256ee4"
+    },
+    "https://magiamgia.com/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:50:29Z",
+      "content_hash": "22ad2cb38937449c58f754d0d4c6d87935025becacb0521ae179fc3cc238eff4"
+    },
+    "https://mbbank.com.vn/khuyenmai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:50:05Z",
+      "content_hash": null
+    },
+    "https://mmvietnam.com/sitemap_index.xml": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:51:16Z",
+      "content_hash": "04b62f5d4db7ce2151586817b58666a7dc30874db7d669ef4380a5c7cb7b1fb8"
+    },
+    "https://noti.sale/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:50:56Z",
+      "content_hash": "208e7e9e336eb3f4877d3c49187eeaf4ea988d752dcd78caa85ff6ff94d72cbb"
+    },
+    "https://pages.lazada.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:51:06Z",
+      "content_hash": "a9a58fe6a00029df1016a8e878dcebbe48a1576e8f74a00185851df9565319f0"
+    },
+    "https://pnj.com.vn/khuyen-mai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:50:02Z",
+      "content_hash": "09e3a9adfcc207e0cb95c39122ba8f9690a6cbaf9bcdb68cf5af04cf8e3e913c"
+    },
+    "https://prime.vpbank.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:50:32Z",
+      "content_hash": "bbca6ab39e24dd6b8c087783af567da8583b796fba24e24cb7bd3db35300ccd5"
+    },
+    "https://shopee.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:50:26Z",
+      "content_hash": "5fe33ff40cc9424e716e1fe940c2cee829b048f58b47706d7ea2c487201b1cc2"
+    },
+    "https://smember.com.vn/login": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:50:40Z",
+      "content_hash": "d8aa8ca310fc71f289c5bfcacde1ef106b5abea81a8b9904f8d2213c306941f6"
+    },
+    "https://viettelstore.vn/khuyenmai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:50:01Z",
+      "content_hash": "4cc5d5a2e06d772274256248caee87b8de3ec5adb5b5d54c22bd7e8fc3bf9b61"
+    },
+    "https://winmart.vn/khuyen-mai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T10:50:00Z",
+      "content_hash": "820d72003553c7dd218eee11ac0cfdc5453c5c5780653d43359dcae99c8a24a4"
+    }
+  },
+  "updated_at": "2026-08-16T10:51:16Z"
 }
