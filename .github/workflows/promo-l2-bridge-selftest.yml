@@ -11,12 +11,16 @@ on:
       - 'l2/reconcile_bridge_status.py'
       - 'l2/retry_handoff_request.py'
       - 'l2/bridge_selftest.py'
+      - 'l2/session_manager.py'
       - 'l2/bridge-status.json'
       - 'l2/bridge-runtime-status.json'
       - 'l2/auth-status.json'
       - 'l2/preauth-platforms.json'
       - 'l2/handoff-request.json'
       - 'docs/login-center.html'
+      - '.github/workflows/promo-l2-browser-run-bridge.yml'
+      - '.github/workflows/promo-l2-secure-login-bridge.yml'
+      - '.github/workflows/promo-l2-handoff-retry.yml'
       - '.github/workflows/promo-l2-bridge-selftest.yml'
 
 permissions:
