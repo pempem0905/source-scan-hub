@@ -9,6 +9,8 @@ on:
       - 'free-source-hunter/bootstrap_free.py'
       - 'free-source-hunter/cc_domain_discovery.py'
       - 'free-source-hunter/free_search_discovery.py'
+      - 'free-source-hunter/frontier_scheduler.py'
+      - 'free-source-hunter/reconcile_frontier_status.py'
       - 'integration/build_master_input.py'
       - 'integration/quality_gate_sources.py'
       - 'integration/legacy-source-seed.jsonl'
@@ -34,6 +36,8 @@ jobs:
       FREE_HUNTER_HTTP_WORKERS: '8'
       FREE_HUNTER_CC_PATTERNS: '4'
       FREE_HUNTER_CC_LIMIT: '500'
+      FREE_HUNTER_PER_HOST_BATCH: '16'
+      FREE_HUNTER_ACTIVE_FRONTIER: '1800'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -58,8 +62,12 @@ jobs:
         run: python3 free-source-hunter/cc_domain_discovery.py
       - name: Free web-search discovery fallback
         run: python3 free-source-hunter/free_search_discovery.py
+      - name: Diversify active frontier across hosts
+        run: python3 free-source-hunter/frontier_scheduler.py
       - name: Validate and expand free frontier
         run: python3 free-source-hunter/hunter.py
+      - name: Reconcile active and deferred frontier status
+        run: python3 free-source-hunter/reconcile_frontier_status.py
       - name: Build canonical master input and dispatch plan
         run: |
           python3 integration/build_master_input.py
@@ -97,6 +105,7 @@ jobs:
                   'cc_domain_last_added': state.get('cc_domain_last_added',0),
                   'cc_domain_pattern': state.get('cc_domain_pattern'),
                   'cc_domain_page': state.get('cc_domain_page'),
+                  'frontier_scheduler': state.get('frontier_scheduler',{}),
               },
               'recent_sources': recent,
           }
