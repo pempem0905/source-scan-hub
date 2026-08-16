@@ -41,6 +41,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 1
       - name: Pin current Common Crawl index and disable blocked legacy import
         run: |
@@ -86,6 +87,7 @@ jobs:
           status=read_json(root/'status.json', {})
           state=read_json(root/'state.json', {})
           master_input=read_json(Path('integration/master_input_status.json'), {})
+          l2_shadow=read_json(Path('l2/shadow-status.json'), {})
           recent=[]
           ep=root/'evidence.jsonl'
           if ep.exists():
@@ -98,6 +100,7 @@ jobs:
               'legacy_baseline_domains': 6117,
               'status': status,
               'master_input': master_input,
+              'l2_shadow': l2_shadow,
               'discovery': {
                   'free_search_last_added': state.get('free_search_last_added',0),
                   'free_search_last_errors': state.get('free_search_last_errors',0),
