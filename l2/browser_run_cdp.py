@@ -34,6 +34,7 @@ API_TOKEN = os.environ.get("CLOUDFLARE_BROWSER_RUN_API_TOKEN", "").strip()
 KEEP_ALIVE_MS = max(10_000, min(600_000, int(os.environ.get("L2_BROWSER_KEEP_ALIVE_MS", "600000"))))
 HANDOFF_TIMEOUT_MS = max(60_000, min(1_800_000, int(os.environ.get("L2_HANDOFF_TIMEOUT_MS", "1800000"))))
 TAKEOVER_MARKER = os.environ.get("L2_TAKEOVER_READY_MARKER", "").strip()
+CDP_CALL_TIMEOUT_S = max(10, min(90, int(os.environ.get("L2_CDP_CALL_TIMEOUT_S", "45"))))
 API_HTTP = f"https://api.cloudflare.com/client/v4/accounts/{urllib.parse.quote(ACCOUNT_ID, safe='')}/browser-rendering/devtools"
 LAUNCH_WS = f"wss://api.cloudflare.com/client/v4/accounts/{urllib.parse.quote(ACCOUNT_ID, safe='')}/browser-run/devtools/browser?keep_alive={KEEP_ALIVE_MS}"
 LOGIN_RE = re.compile(r"/(?:login|signin|sign-in|auth)(?:[/?#]|$)", re.I)
@@ -59,12 +60,35 @@ def exception_status(exc: BaseException) -> int | None:
         return None
 
 
-def transient_rate_limit(exc: BaseException) -> bool:
+def _safe_exception_text(exc: BaseException) -> str:
+    """Internal-only text used for classification; never returned or printed raw."""
+    parts = [str(exc)]
+    response = getattr(exc, "response", None)
+    body = getattr(response, "body", None)
+    if isinstance(body, bytes):
+        parts.append(body[:8192].decode("utf-8", "replace"))
+    elif isinstance(body, str):
+        parts.append(body[:8192])
+    if isinstance(exc, urllib.error.HTTPError):
+        try:
+            parts.append(exc.read(8192).decode("utf-8", "replace"))
+        except Exception:
+            pass
+    return " ".join(parts).lower()
+
+
+def rate_limit_kind(exc: BaseException) -> str | None:
     status = exception_status(exc)
-    if status == 429:
-        return True
-    text = str(exc).lower()
-    return "429" in text or "rate limit" in text or "too many requests" in text
+    text = _safe_exception_text(exc)
+    if status != 429 and not any(x in text for x in ("429", "rate limit", "too many requests")):
+        return None
+    if "browser time limit exceeded" in text or "time limit exceeded for today" in text:
+        return "DAILY_BROWSER_QUOTA"
+    if "concurrent" in text or "maxconcurrent" in text:
+        return "CONCURRENCY_LIMIT"
+    if "acquisition" in text or "new browser" in text or "per second" in text or "per minute" in text:
+        return "ACQUISITION_RATE"
+    return "RATE_LIMIT"
 
 
 def safe_diagnostic(exc: BaseException) -> str:
@@ -74,7 +98,6 @@ def safe_diagnostic(exc: BaseException) -> str:
 
 
 def write_takeover_marker(platform: str) -> None:
-    """Write only a non-secret readiness marker to /tmp for the CI coordinator."""
     if not TAKEOVER_MARKER:
         return
     path = Path(TAKEOVER_MARKER).resolve()
@@ -106,8 +129,13 @@ class CDP:
         if session_id:
             payload["sessionId"] = session_id
         await self.ws.send(json.dumps(payload, separators=(",", ":")))
+        loop = asyncio.get_running_loop()
+        deadline = loop.time() + CDP_CALL_TIMEOUT_S
         while True:
-            msg = json.loads(await self.ws.recv())
+            remaining = deadline - loop.time()
+            if remaining <= 0:
+                raise TimeoutError(f"CDP response timeout: {method}")
+            msg = json.loads(await asyncio.wait_for(self.ws.recv(), timeout=remaining))
             if msg.get("id") != request_id:
                 continue
             if "error" in msg:
@@ -329,9 +357,10 @@ async def main() -> None:
     except SystemExit:
         raise
     except Exception as exc:
-        if transient_rate_limit(exc):
-            print("BRIDGE_TRANSIENT_RATE_LIMIT", file=sys.stderr)
-            raise SystemExit(75)
+        kind = rate_limit_kind(exc)
+        if kind:
+            print(f"BRIDGE_RATE_LIMIT kind={kind}", file=sys.stderr)
+            raise SystemExit(76 if kind == "DAILY_BROWSER_QUOTA" else 75)
         print(f"BRIDGE_DIAGNOSTIC {safe_diagnostic(exc)}", file=sys.stderr)
         fail("Cloudflare Browser Run operation failed")
 
