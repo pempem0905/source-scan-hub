@@ -1,0 +1,25 @@
+{
+  "counts": {
+    "BANK_CARD": 16,
+    "FOOD_BEVERAGE": 8,
+    "GENERAL": 50,
+    "LOYALTY_REWARDS": 4,
+    "PAYMENT_WALLET": 5,
+    "PROMO_BANKS": 24,
+    "PROMO_RETAIL": 91,
+    "PUBLIC_HTTP": 115,
+    "RETAIL_ECOMMERCE": 29,
+    "TRAVEL_MOBILITY": 3
+  },
+  "dedupe_key": "registrable_domain",
+  "generated_at": "2026-08-16T11:06:07.128316Z",
+  "legacy_seed_present": true,
+  "mode": "BRIDGE_SHADOW",
+  "production_write": false,
+  "project_id": "PROMO-SRC-HUNTER-V1",
+  "promo_export_present": false,
+  "record_count": 115,
+  "schema": "promo.master_input_status.v1",
+  "source_hunter_domains": 60,
+  "url_key": "canonical_url"
+}
