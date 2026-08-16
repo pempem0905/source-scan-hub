@@ -1,85 +1,121 @@
 {
-  "generated_at": "2026-08-16T11:20:57.022920Z",
+  "generated_at": "2026-08-16T11:37:40.255486Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_pending": 3283,
-    "last_6_runs_new_domains": 55,
+    "frontier_active_pending": 29579,
+    "frontier_deferred_pending": 1510,
+    "frontier_pending": 31089,
+    "last_6_runs_new_domains": 79,
     "last_run": {
-      "at": "2026-08-16T11:15:24.564686Z",
+      "at": "2026-08-16T11:28:43.019507Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*offers*",
-        "*.vn/*deals*",
-        "*.vn/*sale*",
-        "*.com/vn/*khuyen-mai*"
+        "*.com/vn/*uu-dai*",
+        "*.com/vn/*voucher*",
+        "*.com/vn/*promotion*",
+        "*.com/vi-vn/*khuyen-mai*"
       ],
-      "duration_s": 332.3,
-      "errors": 933,
-      "frontier_pending": 3283,
-      "new_domains": 15,
-      "processed": 2500,
-      "rate403": 0.24,
-      "rate429": 32.88
+      "duration_s": 536.8,
+      "errors": 262,
+      "frontier_pending": 31089,
+      "new_domains": 24,
+      "processed": 1800,
+      "rate403": 0.444,
+      "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-25",
-    "master_domains": 91,
+    "master_domains": 115,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 13,
+    "run_count": 14,
     "running": true,
-    "seen_urls": 15544,
-    "updated_at": "2026-08-16T11:20:56.851933Z"
+    "seen_urls": 45149,
+    "updated_at": "2026-08-16T11:37:39.833348Z"
   },
   "master_input": {
     "active_input_count": 89,
     "counts": {
       "ACTIVE_INPUT": 89,
-      "AUTHORIZED_ACCOUNT": 1,
-      "BANK_CARD": 18,
+      "AUTHORIZED_ACCOUNT": 2,
+      "BANK_CARD": 19,
       "DISCOVERY_ONLY": 5,
       "FOOD_BEVERAGE": 10,
-      "GENERAL": 48,
+      "GENERAL": 65,
       "LOYALTY_REWARDS": 6,
       "PAYMENT_WALLET": 7,
-      "PROMO_BANKS": 27,
-      "PROMO_L2": 5,
-      "PROMO_RETAIL": 57,
-      "PUBLIC_HTTP": 136,
-      "RESIDENTIAL_REQUIRED": 4,
-      "RETAIL_ECOMMERCE": 46,
-      "REVIEW_INPUT": 47,
+      "PROMO_BANKS": 25,
+      "PROMO_L2": 13,
+      "PROMO_RETAIL": 51,
+      "PUBLIC_HTTP": 152,
+      "RESIDENTIAL_REQUIRED": 11,
+      "RETAIL_ECOMMERCE": 51,
+      "REVIEW_INPUT": 71,
       "SOURCE_HUNTER": 5,
-      "SOURCE_REVIEW": 47,
-      "TRAVEL_MOBILITY": 6
+      "SOURCE_REVIEW": 71,
+      "TRAVEL_MOBILITY": 7
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 5,
-    "generated_at": "2026-08-16T11:20:56.948249Z",
+    "generated_at": "2026-08-16T11:37:40.158634Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 141,
-    "review_input_count": 47,
+    "record_count": 165,
+    "review_input_count": 71,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 91,
+    "source_hunter_domains": 115,
     "url_key": "canonical_url"
   },
+  "l2_shadow": {
+    "counts": {
+      "SHADOW_EXPIRED": 4,
+      "SHADOW_REJECT_TECHNICAL": 18,
+      "SHADOW_REVIEW_DATE": 20
+    },
+    "generated_at": "2026-08-16T11:27:02.377710Z",
+    "note": "SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion.",
+    "production_eligible_automatically": 0,
+    "production_write": false,
+    "schema": "promo.l2.shadow_status.v1",
+    "today": "2026-08-16",
+    "total": 42
+  },
+  "l2_hard_access": {
+    "counts": {
+      "AUTHORIZED_ACCOUNT": 2,
+      "INFRA_PENDING_ACCOUNT_PROFILE": 2,
+      "INFRA_PENDING_RESIDENTIAL": 11,
+      "RESIDENTIAL_REQUIRED": 11
+    },
+    "note": "No login is requested until an authorized persistent/self-hosted runner profile exists.",
+    "production_write": false,
+    "runner_ready": false,
+    "schema": "promo.l2.hard_access_status.v1",
+    "total": 13
+  },
   "discovery": {
-    "free_search_last_added": 9,
+    "free_search_last_added": 12,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "mỹ phẩm làm đẹp khuyến mãi Việt Nam",
-      "mỹ phẩm làm đẹp ưu đãi Việt Nam",
-      "mỹ phẩm làm đẹp voucher Việt Nam",
-      "mỹ phẩm làm đẹp promotion Vietnam"
+      "thời trang giày dép khuyến mãi Việt Nam",
+      "thời trang giày dép ưu đãi Việt Nam",
+      "thời trang giày dép voucher Việt Nam",
+      "thời trang giày dép promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 10
+    "cc_domain_page": 11,
+    "frontier_scheduler": {
+      "active": 1800,
+      "deferred": 1510,
+      "max_active": 1800,
+      "per_host_batch": 16,
+      "unique_hosts": 108
+    }
   },
   "recent_sources": [
     {
@@ -718,6 +754,174 @@
       "radar": false,
       "url": "https://momo.vn/",
       "via": "external_promo"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "vn.trip.com",
+      "radar": false,
+      "url": "https://vn.trip.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "eximbank.com.vn",
+      "radar": false,
+      "url": "https://eximbank.com.vn/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "onways.com",
+      "radar": false,
+      "url": "https://onways.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "beautybox.com.vn",
+      "radar": false,
+      "url": "https://beautybox.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "aldoshoes.vn",
+      "radar": false,
+      "url": "https://aldoshoes.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "crocs.com.vn",
+      "radar": false,
+      "url": "https://crocs.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "chothuocvang.com",
+      "radar": false,
+      "url": "https://chothuocvang.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "hasaki.vn",
+      "radar": false,
+      "url": "https://hasaki.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "cocoonvietnam.com",
+      "radar": false,
+      "url": "https://cocoonvietnam.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "danhgiathuonghieu.vn",
+      "radar": false,
+      "url": "https://danhgiathuonghieu.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "elly.vn",
+      "radar": false,
+      "url": "https://elly.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "maisononline.vn",
+      "radar": false,
+      "url": "https://maisononline.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "supersports.com.vn",
+      "radar": false,
+      "url": "https://supersports.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "nhathuoclientam.com.vn",
+      "radar": false,
+      "url": "https://nhathuoclientam.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "sammishop.com",
+      "radar": false,
+      "url": "https://sammishop.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "hotdeal.vn",
+      "radar": false,
+      "url": "https://hotdeal.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "sieuthilamdep.com",
+      "radar": false,
+      "url": "https://sieuthilamdep.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "nhathuocviet.com",
+      "radar": false,
+      "url": "https://nhathuocviet.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "upbeauty.vn",
+      "radar": false,
+      "url": "https://upbeauty.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "upharma.vn",
+      "radar": false,
+      "url": "https://upharma.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "vn.puma.com",
+      "radar": false,
+      "url": "https://vn.puma.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "temdientu.com.vn",
+      "radar": false,
+      "url": "https://temdientu.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "voshop.vn",
+      "radar": false,
+      "url": "https://voshop.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:28:43.019507Z",
+      "domain": "vivita.vn",
+      "radar": false,
+      "url": "https://vivita.vn/",
+      "via": "free_search"
     }
   ]
 }
