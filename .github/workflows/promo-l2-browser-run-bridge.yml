@@ -24,6 +24,7 @@ on:
     paths:
       - '.github/workflows/promo-l2-browser-run-bridge.yml'
       - 'l2/browser_run_cdp.py'
+      - 'l2/reconcile_bridge_status.py'
       - 'l2/preauth-platforms.json'
 
 permissions:
@@ -83,7 +84,7 @@ jobs:
           mkdir -p /tmp/promo-l2-cdp
           cp l2/browser_run_cdp.py /tmp/promo-l2-cdp/bridge.py
           python -m pip install --disable-pip-version-check --no-cache-dir 'websockets>=13,<16' >/dev/null
-          python -m py_compile /tmp/promo-l2-cdp/bridge.py
+          python -m py_compile /tmp/promo-l2-cdp/bridge.py l2/reconcile_bridge_status.py
           echo 'Isolated Browser Run CDP runtime prepared.'
 
       - name: Execute secure Browser Run bridge with transient backoff
@@ -140,15 +141,18 @@ jobs:
           p.write_text(json.dumps(payload,indent=2)+'\n')
           PY
 
-      - name: Persist only sanitized runtime status
+      - name: Reconcile bridge and auth status
+        run: python3 l2/reconcile_bridge_status.py
+
+      - name: Persist only sanitized runtime and readiness status
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "promo-l2-bridge-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add l2/bridge-runtime-status.json
+          git add l2/bridge-runtime-status.json l2/bridge-status.json l2/auth-status.json
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "PROMO L2 bridge runtime status [skip ci]"
+          git commit -m "PROMO L2 bridge readiness status [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main
 
