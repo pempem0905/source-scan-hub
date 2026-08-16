@@ -1,5 +1,6 @@
 name: PROMO Telegram Monitor 30m
 
+# self-test after Telegram chat ID update
 on:
   schedule:
     - cron: '*/30 * * * *'
