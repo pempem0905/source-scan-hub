@@ -55,5 +55,5 @@
   },
   "readiness_rule": "Do not mark READY until a real Browser Run session has been created, structured human takeover has completed, and the authenticated session has been rediscovered and reused from a fresh L2 CDP connection without persisting sensitive session material.",
   "fallback_readiness_rule": "For cloud/datacenter-blocked sites, require an online self-hosted residential runner with a platform-isolated persistent profile before marking that platform READY.",
-  "last_reconciled_at": "2026-08-16T18:37:06.340606Z"
+  "last_reconciled_at": "2026-08-16T18:39:11.150540Z"
 }
