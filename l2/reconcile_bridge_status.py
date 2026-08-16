@@ -105,6 +105,15 @@ def main() -> None:
 
     platform = str(runtime.get("platform") or "")
     platforms = auth.get("platforms") if isinstance(auth.get("platforms"), dict) else {}
+
+    # Never advertise HANDOFF_READY unless a real secure takeover surface is
+    # actually active. Static config/runtime capability only means PREAUTH pending.
+    for key, entry in platforms.items():
+        if not isinstance(entry, dict):
+            continue
+        if entry.get("status") in {"HANDOFF_READY", "HANDOFF_READY_OR_RESIDENTIAL_FALLBACK"}:
+            entry["status"] = "PREAUTH_PENDING_SESSION"
+
     if platform in platforms and runtime.get("mode") == "handoff":
         if reuse:
             platforms[platform]["status"] = "SESSION_REUSE_VERIFIED"
@@ -112,8 +121,10 @@ def main() -> None:
             # Only now does a real secure Live Session exist, so the Telegram
             # monitor may alert for this one platform.
             platforms[platform]["status"] = "LOGIN_REQUIRED"
+        elif runtime_state in {"TRANSIENT_RATE_LIMIT", "DAILY_QUOTA_WAIT"}:
+            platforms[platform]["status"] = "PREAUTH_RETRY_PENDING"
         elif runtime_state in {"HANDOFF_FAILED", "HANDOFF_REUSE_UNVERIFIED"}:
-            platforms[platform]["status"] = "HANDOFF_READY"
+            platforms[platform]["status"] = "PREAUTH_PENDING_SESSION"
 
     write(BRIDGE, bridge)
     write(AUTH, auth)
