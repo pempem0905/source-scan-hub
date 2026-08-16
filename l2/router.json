@@ -1,50 +1,28 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "project_id": "PROMO-L2-ROUTER-V1",
   "upstream_project": "PROMO-SRC-HUNTER-V1",
-  "input_contract": "integration/project-manifest.json",
-  "purpose": "Route promo/voucher extraction sources to the cheapest suitable access lane without duplicating source discovery.",
+  "input": "integration/master_input_sources_v1.jsonl",
+  "shadow_output": "l2/candidate-queue.jsonl",
+  "purpose": "Route canonical promo/voucher input sources to the cheapest suitable access lane without duplicating source discovery, and produce quality-gated shadow candidates for difficult sources.",
   "lanes": {
-    "PUBLIC_HTTP": {
-      "runner": "github-hosted",
-      "mode": "http",
-      "account_required": false
-    },
-    "JS_BROWSER": {
-      "runner": "github-hosted",
-      "mode": "playwright",
-      "account_required": false
-    },
-    "PERSISTENT_PUBLIC": {
-      "runner": "persistent-free-vm",
-      "mode": "browser-profile",
-      "account_required": false
-    },
-    "AUTHORIZED_ACCOUNT": {
-      "runner": "self-hosted-residential",
-      "mode": "persistent-browser-profile",
-      "account_required": true,
-      "session_policy": "reuse-valid-user-session"
-    },
-    "RESIDENTIAL_REQUIRED": {
-      "runner": "self-hosted-residential",
-      "mode": "persistent-browser-profile",
-      "account_required": "only-if-source-requires-it"
-    },
-    "MANUAL_ONLY": {
-      "runner": null,
-      "mode": "record-and-wait",
-      "account_required": "unknown"
-    }
+    "PUBLIC_HTTP": {"runner": "github-hosted", "mode": "http", "account_required": false},
+    "JS_BROWSER": {"runner": "github-hosted", "mode": "playwright", "account_required": false},
+    "PERSISTENT_PUBLIC": {"runner": "persistent-free-vm", "mode": "browser-profile", "account_required": false},
+    "AUTHORIZED_ACCOUNT": {"runner": "self-hosted-residential", "mode": "persistent-browser-profile", "account_required": true, "session_policy": "reuse-valid-user-session"},
+    "RESIDENTIAL_REQUIRED": {"runner": "self-hosted-residential", "mode": "persistent-browser-profile", "account_required": "only-if-source-requires-it"},
+    "MANUAL_ONLY": {"runner": null, "mode": "record-and-wait", "account_required": "unknown"}
   },
-  "routing_priority": [
-    "PUBLIC_HTTP",
-    "JS_BROWSER",
-    "PERSISTENT_PUBLIC",
-    "AUTHORIZED_ACCOUNT",
-    "RESIDENTIAL_REQUIRED",
-    "MANUAL_ONLY"
-  ],
+  "routing_priority": ["PUBLIC_HTTP", "JS_BROWSER", "PERSISTENT_PUBLIC", "AUTHORIZED_ACCOUNT", "RESIDENTIAL_REQUIRED", "MANUAL_ONLY"],
+  "quality_gate": {
+    "mode": "SHADOW",
+    "production_write": false,
+    "raw_regex_match_is_verified_code": false,
+    "literal_code_requires_context": true,
+    "reject_product_sku_model_context": true,
+    "reject_xml_sitemap_code_extraction": true,
+    "required_before_promotion": ["exact_literal_string", "promo_code_context", "actionable_economics_or_explicit_code_instruction", "canonical_dedup", "current_validity_review"]
+  },
   "rules": {
     "source_discovery_owner": "PROMO-SRC-HUNTER-V1",
     "promo_workers_do_not_broadly_discover_sources": true,
