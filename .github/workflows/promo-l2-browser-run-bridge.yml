@@ -1,0 +1,157 @@
+name: PROMO L2 Browser Run Bridge
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "probe or handoff"
+        required: true
+        default: "probe"
+        type: choice
+        options:
+          - probe
+          - handoff
+      platform:
+        description: "authorized platform key"
+        required: false
+        default: "probe"
+        type: string
+      start_url:
+        description: "authorized login/start URL"
+        required: false
+        default: "https://example.com/"
+        type: string
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/promo-l2-browser-run-bridge.yml'
+      - 'l2/browser_run_bridge.mjs'
+      - 'l2/session_manager.py'
+      - 'l2/preauth-platforms.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: promo-l2-browser-run-bridge
+  cancel-in-progress: false
+
+jobs:
+  bridge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_BROWSER_RUN_API_TOKEN: ${{ secrets.CLOUDFLARE_BROWSER_RUN_API_TOKEN }}
+      L2_BROWSER_KEEP_ALIVE_MS: '600000'
+      L2_HANDOFF_TIMEOUT_MS: '1800000'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Validate non-secret inputs
+        id: inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          MODE='${{ github.event.inputs.mode || 'probe' }}'
+          PLATFORM='${{ github.event.inputs.platform || 'probe' }}'
+          START_URL='${{ github.event.inputs.start_url || 'https://example.com/' }}'
+          case "$MODE" in probe|handoff) ;; *) echo 'invalid mode'; exit 2;; esac
+          if ! [[ "$PLATFORM" =~ ^[A-Za-z0-9._-]{1,64}$ ]]; then echo 'invalid platform'; exit 2; fi
+          if ! [[ "$START_URL" =~ ^https?:// ]]; then echo 'invalid start URL'; exit 2; fi
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+          echo "platform=$PLATFORM" >> "$GITHUB_OUTPUT"
+          echo "start_url=$START_URL" >> "$GITHUB_OUTPUT"
+
+      - name: Verify secret presence without revealing values
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "${CLOUDFLARE_ACCOUNT_ID:-}" || { echo 'CLOUDFLARE_ACCOUNT_ID unavailable to runtime'; exit 10; }
+          test -n "${CLOUDFLARE_BROWSER_RUN_API_TOKEN:-}" || { echo 'CLOUDFLARE_BROWSER_RUN_API_TOKEN unavailable to runtime'; exit 11; }
+          echo 'Cloudflare runtime settings are present (values suppressed).'
+
+      - name: Install remote CDP client only
+        run: npm install --no-save --ignore-scripts playwright-core@1.55.0
+
+      - name: Execute secure Browser Run bridge
+        id: bridge
+        continue-on-error: true
+        env:
+          BRIDGE_MODE: ${{ steps.inputs.outputs.mode }}
+          BRIDGE_PLATFORM: ${{ steps.inputs.outputs.platform }}
+          BRIDGE_START_URL: ${{ steps.inputs.outputs.start_url }}
+        shell: bash
+        run: |
+          set +e
+          node l2/browser_run_bridge.mjs "$BRIDGE_MODE" "$BRIDGE_PLATFORM" "$BRIDGE_START_URL"
+          RC=$?
+          echo "rc=$RC" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Write non-secret bridge runtime status
+        env:
+          BRIDGE_MODE: ${{ steps.inputs.outputs.mode }}
+          BRIDGE_PLATFORM: ${{ steps.inputs.outputs.platform }}
+          BRIDGE_RC: ${{ steps.bridge.outputs.rc }}
+        run: |
+          python3 - <<'PY'
+          import datetime as dt, json, os
+          from pathlib import Path
+          mode=os.environ.get('BRIDGE_MODE','probe')
+          platform=os.environ.get('BRIDGE_PLATFORM','probe')
+          rc=int(os.environ.get('BRIDGE_RC','99') or 99)
+          now=dt.datetime.now(dt.timezone.utc).isoformat().replace('+00:00','Z')
+          if mode=='probe':
+              state='BROWSER_RUN_PROBE_VERIFIED' if rc==0 else 'BROWSER_RUN_PROBE_FAILED'
+              created = rc==0
+              handoff=False
+              reuse=False
+          else:
+              state='SESSION_REUSE_VERIFIED' if rc==0 else ('HANDOFF_REUSE_UNVERIFIED' if rc==3 else 'HANDOFF_FAILED')
+              created = rc in (0,3)
+              handoff = rc in (0,3)
+              reuse = rc==0
+          payload={
+            'schema':'promo.l2.bridge_runtime_status.v1',
+            'provider':'CLOUDFLARE_BROWSER_RUN',
+            'checked_at':now,
+            'mode':mode,
+            'platform':platform,
+            'state':state,
+            'browser_session_created':created,
+            'human_handoff_exercised':handoff,
+            'authenticated_session_reuse_verified':reuse,
+            'ready': bool(mode=='handoff' and rc==0),
+            'secret_values_observable':False,
+            'sensitive_runtime_material_persisted':False,
+            'note':'No session IDs, websocket endpoints, Live View URLs, cookies, credentials, OTPs or CAPTCHA data are persisted.'
+          }
+          Path('l2/bridge-runtime-status.json').write_text(json.dumps(payload,indent=2)+'\n')
+          PY
+
+      - name: Persist only sanitized runtime status
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "promo-l2-bridge-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add l2/bridge-runtime-status.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "PROMO L2 bridge runtime status [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Enforce verified result
+        env:
+          BRIDGE_RC: ${{ steps.bridge.outputs.rc }}
+        shell: bash
+        run: |
+          test "${BRIDGE_RC:-99}" = '0'
