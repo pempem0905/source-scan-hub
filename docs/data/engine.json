@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-16T23:43:02.591895Z",
+  "generated_at": "2026-08-16T23:55:57.947629Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 3097,
-    "frontier_deferred_pending": 39353,
-    "frontier_pending": 42450,
-    "last_6_runs_new_domains": 12,
+    "frontier_active_pending": 3980,
+    "frontier_deferred_pending": 39549,
+    "frontier_pending": 43529,
+    "last_6_runs_new_domains": 11,
     "last_run": {
-      "at": "2026-08-16T23:39:30.898594Z",
+      "at": "2026-08-16T23:53:52.828415Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*offers*",
-        "*.vn/*deals*",
-        "*.vn/*sale*",
-        "*.com/vn/*khuyen-mai*"
+        "*.com/vn/*uu-dai*",
+        "*.com/vn/*voucher*",
+        "*.com/vn/*promotion*",
+        "*.com/vi-vn/*khuyen-mai*"
       ],
-      "duration_s": 210.8,
-      "errors": 142,
-      "frontier_pending": 42450,
-      "new_domains": 3,
-      "processed": 647,
-      "rate403": 1.082,
+      "duration_s": 124.4,
+      "errors": 45,
+      "frontier_pending": 43529,
+      "new_domains": 1,
+      "processed": 451,
+      "rate403": 0.222,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 816,
+    "master_domains": 819,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 58,
+    "run_count": 59,
     "running": true,
-    "seen_urls": 271077,
-    "updated_at": "2026-08-16T23:43:01.694746Z"
+    "seen_urls": 275086,
+    "updated_at": "2026-08-16T23:55:57.209065Z"
   },
   "master_input": {
     "active_input_count": 106,
@@ -39,35 +39,35 @@
       "ACTIVE_INPUT": 106,
       "AUTHORIZED_ACCOUNT": 2,
       "BANK_CARD": 33,
-      "DISCOVERY_ONLY": 14,
+      "DISCOVERY_ONLY": 15,
       "FOOD_BEVERAGE": 22,
-      "GENERAL": 548,
+      "GENERAL": 550,
       "LOYALTY_REWARDS": 9,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 14,
       "PROMO_RETAIL": 61,
-      "PUBLIC_HTTP": 693,
+      "PUBLIC_HTTP": 696,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 73,
-      "REVIEW_INPUT": 587,
-      "SOURCE_HUNTER": 14,
-      "SOURCE_REVIEW": 587,
+      "RETAIL_ECOMMERCE": 74,
+      "REVIEW_INPUT": 589,
+      "SOURCE_HUNTER": 15,
+      "SOURCE_REVIEW": 589,
       "TRAVEL_MOBILITY": 15
     },
     "dedupe_key": "registrable_domain",
-    "discovery_only_count": 14,
-    "generated_at": "2026-08-16T23:43:02.419804Z",
+    "discovery_only_count": 15,
+    "generated_at": "2026-08-16T23:55:57.818728Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 707,
-    "review_input_count": 587,
+    "record_count": 710,
+    "review_input_count": 589,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 816,
+    "source_hunter_domains": 819,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -210,7 +210,7 @@
       "SHADOW_REJECT_TECHNICAL": 18,
       "SHADOW_REVIEW_DATE": 24
     },
-    "generated_at": "2026-08-16T23:28:47.059645Z",
+    "generated_at": "2026-08-16T23:48:00.778454Z",
     "note": "SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion.",
     "production_eligible_automatically": 0,
     "production_write": false,
@@ -320,37 +320,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 4,
+    "free_search_last_added": 2,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "loyalty membership khuyến mãi Việt Nam",
-      "loyalty membership ưu đãi Việt Nam",
-      "loyalty membership voucher Việt Nam",
-      "loyalty membership promotion Vietnam"
+      "trung tâm thương mại khuyến mãi Việt Nam",
+      "trung tâm thương mại ưu đãi Việt Nam",
+      "trung tâm thương mại voucher Việt Nam",
+      "trung tâm thương mại promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 50,
+    "cc_domain_page": 51,
     "frontier_scheduler": {
-      "active": 647,
+      "active": 451,
       "base_per_host_batch": 16,
-      "deferred": 39353,
+      "deferred": 39549,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 105
+      "unique_hosts": 54
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T15:23:48.272129Z",
-      "domain": "cenvi.vn",
-      "radar": false,
-      "url": "https://cenvi.vn/",
-      "via": "common_crawl_domain"
-    },
     {
       "at": "2026-08-16T15:23:48.272129Z",
       "domain": "citigym.asia",
@@ -1182,6 +1175,13 @@
       "domain": "lacoste.com.vn",
       "radar": false,
       "url": "https://lacoste.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T23:53:52.828415Z",
+      "domain": "vanhanhmall.com",
+      "radar": false,
+      "url": "https://vanhanhmall.com/",
       "via": "free_search"
     }
   ]
