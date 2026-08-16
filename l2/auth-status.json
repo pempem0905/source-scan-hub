@@ -1,39 +1,65 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "project_id": "PROMO-L2-ROUTER-V1",
-  "updated_at": "2026-08-16T17:43:00+07:00",
+  "updated_at": "2026-08-16T20:43:00+07:00",
+  "mode": "PROACTIVE_PREAUTH",
   "alert_states": ["LOGIN_REQUIRED", "NEEDS_RELOGIN", "PERMISSION_REQUIRED"],
+  "preauth": {
+    "enabled": true,
+    "registry": "l2/preauth-platforms.json",
+    "bridge_status": "PENDING_BROWSER_SESSION_CONTROL",
+    "preferred_handoff": "CLOUDFLARE_BROWSER_RUN_HUMAN_IN_LOOP",
+    "residential_fallback": true,
+    "login_before_demand": true
+  },
   "platforms": {
+    "uniqlo": {
+      "access_class": "AUTHORIZED_ACCOUNT",
+      "status": "PREAUTH_PENDING_SESSION",
+      "profile_id": "uniqlo-vn-main",
+      "credential_storage": "runtime-browser-session-only"
+    },
+    "smember": {
+      "access_class": "AUTHORIZED_ACCOUNT",
+      "status": "PREAUTH_PENDING_SESSION",
+      "profile_id": "smember-main",
+      "credential_storage": "runtime-browser-session-only"
+    },
     "grabfood": {
       "access_class": "AUTHORIZED_ACCOUNT",
-      "status": "INFRA_PENDING",
+      "status": "PREAUTH_PENDING_SESSION",
       "profile_id": "grabfood-main",
-      "credential_storage": "local-runner-only"
+      "credential_storage": "runtime-browser-session-only"
     },
     "shopeefood": {
       "access_class": "AUTHORIZED_ACCOUNT",
-      "status": "INFRA_PENDING",
+      "status": "PREAUTH_PENDING_SESSION",
       "profile_id": "shopeefood-main",
-      "credential_storage": "local-runner-only"
+      "credential_storage": "runtime-browser-session-only"
     },
     "tiktok": {
       "access_class": "AUTHORIZED_ACCOUNT",
-      "status": "INFRA_PENDING",
+      "status": "PREAUTH_PENDING_SESSION",
       "profile_id": "tiktok-main",
-      "credential_storage": "local-runner-only"
+      "credential_storage": "runtime-browser-session-only"
     },
     "loyalty-generic": {
       "access_class": "AUTHORIZED_ACCOUNT",
-      "status": "INFRA_PENDING",
+      "status": "WAIT_SOURCE_MAPPING",
       "profile_id": "loyalty-generic",
-      "credential_storage": "local-runner-only"
+      "credential_storage": "runtime-browser-session-only"
     }
   },
   "policy": {
     "passwords_in_github": false,
     "cookies_in_github": false,
     "otp_in_github": false,
-    "session_profile_location": "self-hosted runner local disk",
-    "on_session_expiry": "set NEEDS_RELOGIN and pause only affected platform"
+    "refresh_tokens_in_github": false,
+    "takeover_urls_in_github": false,
+    "session_profile_location": "runtime browser session or self-hosted residential profile",
+    "on_session_expiry": "set NEEDS_RELOGIN and pause only affected platform",
+    "on_cloud_ip_block": "route platform to self-hosted-residential persistent profile",
+    "no_captcha_bypass": true,
+    "user_owned_or_authorized_accounts_only": true
   }
 }
