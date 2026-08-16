@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/bootstrap-master-input.yml'
+      - 'integration/build_master_input.py'
+      - 'integration/legacy-source-seed.jsonl'
+      - 'integration/promo-source-export.jsonl'
   workflow_dispatch:
 
 permissions:
