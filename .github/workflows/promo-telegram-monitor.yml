@@ -1,6 +1,5 @@
 name: PROMO Telegram Monitor 30m
 
-# self-test after Telegram chat ID update
 on:
   schedule:
     - cron: '*/30 * * * *'
@@ -12,6 +11,10 @@ on:
 
 permissions:
   contents: read
+
+concurrency:
+  group: promo-telegram-monitor
+  cancel-in-progress: false
 
 jobs:
   notify:
@@ -26,6 +29,15 @@ jobs:
         with:
           ref: main
           fetch-depth: 1
+
+      - name: Restore previous PROMO monitor snapshot
+        id: promo-state
+        uses: actions/cache/restore@v4
+        with:
+          path: .promo-monitor-state
+          key: promo-telegram-state-${{ github.run_id }}
+          restore-keys: |
+            promo-telegram-state-
 
       - name: Build and send PROMO status to Telegram
         shell: bash
@@ -46,11 +58,29 @@ jobs:
               except Exception:
                   return {}
 
+          def num(v):
+              return v if isinstance(v, (int, float)) and not isinstance(v, bool) else None
+
+          def val(v):
+              return '—' if v is None else str(v)
+
+          def delta(cur, old):
+              cur, old = num(cur), num(old)
+              if cur is None:
+                  return ''
+              if old is None:
+                  return ' (mốc đầu)'
+              d = cur - old
+              if isinstance(d, float) and d.is_integer():
+                  d = int(d)
+              return f' ({d:+})'
+
           engine = load('docs/data/engine.json')
           promo = load('integration/promo-runtime-status.json')
           auth = load('l2/auth-status.json')
           hard = load('l2/hard-access-status.json')
           l2 = load('l2/public-state.json')
+          previous = load('.promo-monitor-state/snapshot.json')
 
           s = engine.get('status', {})
           m = engine.get('master_input', {})
@@ -59,20 +89,41 @@ jobs:
           platforms = auth.get('platforms', {})
           lr = l2.get('last_run', {})
 
-          login_needed = [k for k,v in platforms.items() if v.get('status') in {'LOGIN_REQUIRED','NEEDS_RELOGIN','PERMISSION_REQUIRED'}]
+          snapshot = {
+              'hunter_domains': num(s.get('master_domains')),
+              'seen_urls': num(s.get('seen_urls')),
+              'frontier_pending': num(s.get('frontier_pending')),
+              'master_input_total': num(m.get('record_count')),
+              'master_input_active': num(m.get('active_input_count')),
+              'registered_sources': num(pc.get('registered_sources')),
+              'scanned_sources': num(pc.get('scanned_sources')),
+              'actionable_offers': num(pc.get('actionable_offers')),
+              'literal_codes': num(pc.get('literal_codes')),
+              'batch': num(pc.get('batch')),
+              'ready_queue': num(pc.get('ready_queue')),
+              'l2_run_count': num(l2.get('run_count')),
+          }
+
+          login_needed = [
+              k for k, v in platforms.items()
+              if isinstance(v, dict) and v.get('status') in {'LOGIN_REQUIRED','NEEDS_RELOGIN','PERMISSION_REQUIRED'}
+          ]
           bridge = pre.get('bridge_status', 'UNKNOWN')
           ready_login = bool(login_needed) and bridge in {'READY','TAKEOVER_READY','SESSION_READY'}
 
-          def val(x):
-              return '—' if x is None else str(x)
-
           now = datetime.now(ZoneInfo('Asia/Bangkok')).strftime('%d/%m %H:%M')
+          first = not bool(previous)
+          period = 'mốc đầu' if first else 'so với báo cáo trước (~30p)'
+
           lines = [
               f'📡 PROMO Monitor · {now}',
-              f'🔎 Source Hunter: {val(s.get("master_domains"))} domains · {val(s.get("seen_urls"))} URLs · frontier {val(s.get("frontier_pending"))}',
-              f'📚 Master Input: {val(m.get("record_count"))} total · {val(m.get("active_input_count"))} active · {val(m.get("review_input_count"))} review',
-              f'🎟 PROMO: {val(pc.get("scanned_sources"))} scanned · {val(pc.get("actionable_offers"))} offers · {val(pc.get("literal_codes"))} codes · batch {val(pc.get("batch"))}',
-              f'🧩 L2: run {val(l2.get("run_count"))} · attempted {val(lr.get("attempted"))} · promo {val(lr.get("promo_candidates"))} · errors {val(lr.get("errors"))}',
+              f'📈 Δ {period}',
+              f'🔎 Hunter sources: {val(snapshot["hunter_domains"])}{delta(snapshot["hunter_domains"], previous.get("hunter_domains"))} · URLs {val(snapshot["seen_urls"])}{delta(snapshot["seen_urls"], previous.get("seen_urls"))}',
+              f'📚 Master Input: {val(snapshot["master_input_total"])}{delta(snapshot["master_input_total"], previous.get("master_input_total"))} · active {val(snapshot["master_input_active"])}{delta(snapshot["master_input_active"], previous.get("master_input_active"))}',
+              f'🎯 PROMO Sources: {val(snapshot["registered_sources"])}{delta(snapshot["registered_sources"], previous.get("registered_sources"))} · scanned {val(snapshot["scanned_sources"])}{delta(snapshot["scanned_sources"], previous.get("scanned_sources"))}',
+              f'🎟 Offers: {val(snapshot["actionable_offers"])}{delta(snapshot["actionable_offers"], previous.get("actionable_offers"))} · Codes: {val(snapshot["literal_codes"])}{delta(snapshot["literal_codes"], previous.get("literal_codes"))}',
+              f'🧱 Batch: B{val(snapshot["batch"])}{delta(snapshot["batch"], previous.get("batch"))} · READY {val(snapshot["ready_queue"])}{delta(snapshot["ready_queue"], previous.get("ready_queue"))}',
+              f'🧩 L2: run {val(snapshot["l2_run_count"])}{delta(snapshot["l2_run_count"], previous.get("l2_run_count"))} · attempted {val(lr.get("attempted"))} · promo {val(lr.get("promo_candidates"))} · errors {val(lr.get("errors"))}',
               f'🔐 Login bridge: {bridge} · hard runner ready: {val(hard.get("runner_ready"))}',
           ]
 
@@ -82,16 +133,24 @@ jobs:
           elif login_needed:
               lines.append('⚠ Có platform cần login nhưng secure session chưa sẵn sàng: ' + ', '.join(login_needed))
           else:
-              pending = [k for k,v in platforms.items() if v.get('status') == 'PREAUTH_PENDING_SESSION']
+              pending = [
+                  k for k, v in platforms.items()
+                  if isinstance(v, dict) and v.get('status') == 'PREAUTH_PENDING_SESSION'
+              ]
               if pending:
-                  lines.append('⏳ Pre-auth đang chờ secure session: ' + ', '.join(pending))
+                  lines.append('⏳ Pre-auth chờ secure session: ' + ', '.join(pending))
 
           text = '\n'.join(lines)
           token = os.environ['TELEGRAM_BOT_TOKEN']
           chat_id = os.environ['TELEGRAM_CHAT_ID']
           url = f'https://api.telegram.org/bot{token}/sendMessage'
-          data = urllib.parse.urlencode({'chat_id': chat_id, 'text': text, 'disable_web_page_preview': 'true'}).encode()
+          data = urllib.parse.urlencode({
+              'chat_id': chat_id,
+              'text': text,
+              'disable_web_page_preview': 'true'
+          }).encode()
           req = urllib.request.Request(url, data=data, method='POST')
+
           try:
               with urllib.request.urlopen(req, timeout=20) as r:
                   body = r.read().decode('utf-8', 'replace')
@@ -106,5 +165,20 @@ jobs:
               except Exception:
                   detail = f'HTTP {e.code}'
               raise SystemExit(f'Telegram send failed: {detail}')
-          print('Telegram status sent.')
+
+          state_dir = Path('.promo-monitor-state')
+          state_dir.mkdir(parents=True, exist_ok=True)
+          snapshot['reported_at'] = datetime.now(ZoneInfo('Asia/Bangkok')).isoformat()
+          (state_dir / 'snapshot.json').write_text(
+              json.dumps(snapshot, ensure_ascii=False, indent=2),
+              encoding='utf-8'
+          )
+          print('Telegram status sent with delta metrics.')
           PY
+
+      - name: Save PROMO monitor snapshot
+        if: success()
+        uses: actions/cache/save@v4
+        with:
+          path: .promo-monitor-state
+          key: promo-telegram-state-${{ github.run_id }}
