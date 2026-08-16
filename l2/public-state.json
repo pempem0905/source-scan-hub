@@ -46,32 +46,129 @@
       "promo_candidates": 0,
       "public_ok": 0,
       "shadow_ready": 0
+    },
+    {
+      "at": "2026-08-16T11:09:07Z",
+      "attempted": 30,
+      "blocked": 4,
+      "code_candidates": 12,
+      "errors": 4,
+      "js_browser": 0,
+      "login_required": 0,
+      "promo_candidates": 18,
+      "public_ok": 22,
+      "shadow_ready": 12
     }
   ],
   "last_run": {
-    "attempted": 0,
-    "blocked": 0,
-    "code_candidates": 0,
-    "errors": 0,
+    "attempted": 30,
+    "blocked": 4,
+    "code_candidates": 12,
+    "errors": 4,
     "js_browser": 0,
     "login_required": 0,
-    "promo_candidates": 0,
-    "public_ok": 0,
-    "shadow_ready": 0
+    "promo_candidates": 18,
+    "public_ok": 22,
+    "shadow_ready": 12
   },
   "project_id": "PROMO-L2-ROUTER-V1",
-  "run_count": 4,
+  "run_count": 5,
   "schema_version": 2,
   "seen": {
+    "https://acb.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:02Z",
+      "content_hash": "e1ea8d99824ba2d992c87791848724e58a556251e6c551256f1f7b0779472cf7"
+    },
+    "https://acb.com.vn/sitemap.xml": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:03Z",
+      "content_hash": "1784643972a41ade879dc16a5cf2c64b0bc9f58393904d6e4151a0073fcce6d4"
+    },
+    "https://acb.com.vn/uu-dai-the": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:07:57Z",
+      "content_hash": "c98fd59960ca4892c829e00bfd1958d879d39efde8a2653d95d8fdf308f46e7c"
+    },
+    "https://acfc.com.vn/loyalty": {
+      "access_state": "BLOCKED_DATACENTER",
+      "at": "2026-08-16T11:08:04Z",
+      "content_hash": null
+    },
+    "https://bachhoaxanh.com/khuyen-mai": {
+      "access_state": "ERROR",
+      "at": "2026-08-16T11:08:04Z",
+      "content_hash": null
+    },
+    "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:08Z",
+      "content_hash": "50f4689c4cfc47353dcecdf77ef602d5cda138ceeed543a5551aa8c34a6f1f67"
+    },
+    "https://card.apply.hsbc.com.vn/daily-offers/en": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:31Z",
+      "content_hash": "f9dd4ba5faa1d5a9d94492d6c26efcfc656afaeb2d4deaad1e554e8b6a2ee03f"
+    },
+    "https://cellphones.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:11Z",
+      "content_hash": "eebe83cae57ef5f2dc97229998d2c68dc56156b81da8e5ae023bb77806ebe9c0"
+    },
+    "https://cellphones.com.vn/danh-sach-khuyen-mai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:10Z",
+      "content_hash": "221062f63405b025c02df54df00cb600310875e096a253795f77abfdd0e02871"
+    },
     "https://centralretail.com.vn/": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:51:12Z",
       "content_hash": "9dbb40617de5e891d9ab0891b0371fbf412161ee26f0170595a9f89ad07f89c2"
     },
+    "https://circlek.com.vn/vi/uu-dai-dac-biet/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:13Z",
+      "content_hash": "4b517c25c3484a62326860f1d78ca94777b25d3142192c788e79a81617713874"
+    },
+    "https://concung.com/tin-khuyen-mai.html": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:15Z",
+      "content_hash": "d6061ba3e970cffa00bd3675bd2770a0c7cf023636e3030e18b74c27513385c1"
+    },
+    "https://dienmaycholon.vn/khuyen-mai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:18Z",
+      "content_hash": "80b5b2ab6dc42dd2f82276f75c6e97076329bd3bff22f9810e2bb21f1fd437fd"
+    },
+    "https://dienmayxanh.com/khuyen-mai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:21Z",
+      "content_hash": "1e0c33c5b827305352a42bf8e29442b4e4d5aac8e53bd329a000157f59610edb"
+    },
+    "https://emart.com.vn/chuong-trinh-khuyen-mai/an-pham-khuyen-mai/": {
+      "access_state": "ERROR",
+      "at": "2026-08-16T11:08:22Z",
+      "content_hash": null
+    },
     "https://food.grab.com/sg/en/": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:50:03Z",
       "content_hash": "5caaabc32b6a9d391aa3f1f2b18fba6ff68a8b87c0ced4809affa438d3261f2b"
+    },
+    "https://fptshop.com.vn/ctkm/kho-vang-uu-dai": {
+      "access_state": "BLOCKED_DATACENTER",
+      "at": "2026-08-16T11:08:22Z",
+      "content_hash": null
+    },
+    "https://galaxycine.vn/khuyen-mai/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:27Z",
+      "content_hash": null
+    },
+    "https://go-vietnam.vn/khuyen-mai/": {
+      "access_state": "ERROR",
+      "at": "2026-08-16T11:08:29Z",
+      "content_hash": null
     },
     "https://grab.com/vn/": {
       "access_state": "PUBLIC_OK",
@@ -103,6 +200,21 @@
       "at": "2026-08-16T10:50:55Z",
       "content_hash": null
     },
+    "https://jollibee.com.vn/khuyen-mai": {
+      "access_state": "BLOCKED_DATACENTER",
+      "at": "2026-08-16T11:08:31Z",
+      "content_hash": null
+    },
+    "https://lottemallwestlakehanoi.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:35Z",
+      "content_hash": "64a1de18f0db96da26df719add2d425de48f953a2dcc48f7fb57d9374cdfc1fa"
+    },
+    "https://lottemallwestlakehanoi.vn/promotion/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:33Z",
+      "content_hash": "32df50726a5bec89e3363033e2002cad1b796235a8fa50704a0fdcae261a7ac1"
+    },
     "https://lotteria.vn/": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:51:02Z",
@@ -113,15 +225,45 @@
       "at": "2026-08-16T10:50:29Z",
       "content_hash": "22ad2cb38937449c58f754d0d4c6d87935025becacb0521ae179fc3cc238eff4"
     },
+    "https://mbbank.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:36Z",
+      "content_hash": null
+    },
     "https://mbbank.com.vn/khuyenmai": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:50:05Z",
       "content_hash": null
     },
+    "https://mediamart.vn/tin-khuyen-mai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:38Z",
+      "content_hash": "fd2129da0e666e68740ef926bb869516be8247bfa6c2c3866dd4741f20cd7ce9"
+    },
     "https://mmvietnam.com/sitemap_index.xml": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:51:16Z",
       "content_hash": "04b62f5d4db7ce2151586817b58666a7dc30874db7d669ef4380a5c7cb7b1fb8"
+    },
+    "https://moit.gov.vn/tin-tuc/bo-cong-thuong-to-chuc-chuong-trinh-khuyen-mai-tap-trung-quoc-gia-lan-1-nam-2026-the-first-vietnam-grand-sale-in-2026.html": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:54Z",
+      "content_hash": "00a0feb530964a9e655f0a7c97ad57df96750d4bc1ddabbac62e2b5987503cb1"
+    },
+    "https://momo.vn/uu-dai": {
+      "access_state": "ERROR",
+      "at": "2026-08-16T11:08:55Z",
+      "content_hash": null
+    },
+    "https://nhathuoclongchau.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:56Z",
+      "content_hash": "96434240a6c3bef9318615be5aa54a51c0454de8adda96de5af07be172e8b0a6"
+    },
+    "https://nhathuoclongchau.com.vn/bai-viet/tin-khuyen-mai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:56Z",
+      "content_hash": "586372a035c227e9c5e4fb9839c12fd7d63d4e6b83a162b1ddcc60496b342033"
     },
     "https://noti.sale/": {
       "access_state": "PUBLIC_OK",
@@ -133,9 +275,29 @@
       "at": "2026-08-16T10:51:06Z",
       "content_hash": "a9a58fe6a00029df1016a8e878dcebbe48a1576e8f74a00185851df9565319f0"
     },
+    "https://phuclong.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:09:07Z",
+      "content_hash": "6c08e962f508b89891ae3f16af5d2660500268c3bacde5cb579dfd83579699e4"
+    },
+    "https://phuclong.com.vn/khuyen-mai/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:08:58Z",
+      "content_hash": "939cea9a1141d02e9ee0edc33221a3ab443f07baed20aac604093309795d19f1"
+    },
+    "https://pnj.com.vn/": {
+      "access_state": "BLOCKED_DATACENTER",
+      "at": "2026-08-16T11:07:53Z",
+      "content_hash": null
+    },
     "https://pnj.com.vn/khuyen-mai": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:50:02Z",
+      "content_hash": "09e3a9adfcc207e0cb95c39122ba8f9690a6cbaf9bcdb68cf5af04cf8e3e913c"
+    },
+    "https://pnj.com.vn/khuyen-mai/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:07:53Z",
       "content_hash": "09e3a9adfcc207e0cb95c39122ba8f9690a6cbaf9bcdb68cf5af04cf8e3e913c"
     },
     "https://prime.vpbank.com.vn/": {
@@ -164,5 +326,5 @@
       "content_hash": "820d72003553c7dd218eee11ac0cfdc5453c5c5780653d43359dcae99c8a24a4"
     }
   },
-  "updated_at": "2026-08-16T11:05:05Z"
+  "updated_at": "2026-08-16T11:09:07Z"
 }
