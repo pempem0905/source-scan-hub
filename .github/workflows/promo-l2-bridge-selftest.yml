@@ -9,6 +9,7 @@ on:
     paths:
       - 'l2/browser_run_cdp.py'
       - 'l2/reconcile_bridge_status.py'
+      - 'l2/retry_handoff_request.py'
       - 'l2/bridge_selftest.py'
       - 'l2/bridge-status.json'
       - 'l2/bridge-runtime-status.json'
@@ -38,6 +39,6 @@ jobs:
         with:
           python-version: '3.12'
       - name: Compile bridge components
-        run: python -m py_compile l2/browser_run_cdp.py l2/reconcile_bridge_status.py l2/bridge_selftest.py l2/session_manager.py
+        run: python -m py_compile l2/browser_run_cdp.py l2/reconcile_bridge_status.py l2/retry_handoff_request.py l2/bridge_selftest.py l2/session_manager.py
       - name: Verify bridge/status/security invariants
         run: python l2/bridge_selftest.py
