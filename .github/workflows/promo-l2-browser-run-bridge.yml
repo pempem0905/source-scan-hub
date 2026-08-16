@@ -25,6 +25,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/promo-l2-browser-run-bridge.yml'
+      - 'l2/browser_run_cdp.py'
       - 'l2/browser_run_bridge.mjs'
       - 'l2/session_manager.py'
       - 'l2/preauth-platforms.json'
@@ -51,9 +52,9 @@ jobs:
           ref: main
           fetch-depth: 1
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-python@v5
         with:
-          node-version: '22'
+          python-version: '3.12'
 
       - name: Validate non-secret inputs
         id: inputs
@@ -78,8 +79,8 @@ jobs:
           test -n "${CLOUDFLARE_BROWSER_RUN_API_TOKEN:-}" || { echo 'CLOUDFLARE_BROWSER_RUN_API_TOKEN unavailable to runtime'; exit 11; }
           echo 'Cloudflare runtime settings are present (values suppressed).'
 
-      - name: Install remote CDP client only
-        run: npm install --no-save --ignore-scripts playwright-core@1.55.0
+      - name: Install minimal CDP websocket dependency
+        run: python -m pip install --disable-pip-version-check --no-cache-dir 'websockets>=15,<16'
 
       - name: Execute secure Browser Run bridge
         id: bridge
@@ -91,7 +92,7 @@ jobs:
         shell: bash
         run: |
           set +e
-          node l2/browser_run_bridge.mjs "$BRIDGE_MODE" "$BRIDGE_PLATFORM" "$BRIDGE_START_URL"
+          python l2/browser_run_cdp.py "$BRIDGE_MODE" "$BRIDGE_PLATFORM" "$BRIDGE_START_URL"
           RC=$?
           echo "rc=$RC" >> "$GITHUB_OUTPUT"
           exit 0
