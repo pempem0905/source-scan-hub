@@ -366,3 +366,12 @@
 {"at": "2026-08-16T20:58:28.669058Z", "domain": "memart.vn", "radar": false, "url": "https://memart.vn/", "via": "free_search"}
 {"at": "2026-08-16T21:18:45.719982Z", "domain": "creditcard.com.vn", "radar": false, "url": "https://creditcard.com.vn/", "via": "free_search"}
 {"at": "2026-08-16T21:38:05.406826Z", "domain": "vtcpay.vn", "radar": false, "url": "https://vtcpay.vn/", "via": "free_search"}
+{"at": "2026-08-16T21:52:54.800364Z", "domain": "ambassador.koc.com.vn", "radar": false, "url": "https://ambassador.koc.com.vn/", "via": "radar_out"}
+{"at": "2026-08-16T21:52:54.800364Z", "domain": "cf.shopee.vn", "radar": false, "url": "https://cf.shopee.vn/", "via": "radar_out"}
+{"at": "2026-08-16T21:52:54.800364Z", "domain": "gitbook.com", "radar": false, "url": "https://gitbook.com/", "via": "radar_out"}
+{"at": "2026-08-16T21:52:54.800364Z", "domain": "cpr.accesstrade.vn", "radar": true, "url": "https://cpr.accesstrade.vn/", "via": "radar_out"}
+{"at": "2026-08-16T21:52:54.800364Z", "domain": "scalef.com", "radar": false, "url": "https://scalef.com/", "via": "radar_out"}
+{"at": "2026-08-16T21:52:54.800364Z", "domain": "mblife.vn", "radar": false, "url": "https://mblife.vn/", "via": "free_search"}
+{"at": "2026-08-16T21:52:54.800364Z", "domain": "dai-ichi-life.com.vn", "radar": false, "url": "https://dai-ichi-life.com.vn/", "via": "free_search"}
+{"at": "2026-08-16T21:52:54.800364Z", "domain": "fwd.com.vn", "radar": false, "url": "https://fwd.com.vn/vi/", "via": "free_search"}
+{"at": "2026-08-16T21:52:54.800364Z", "domain": "pjico.com.vn", "radar": false, "url": "https://pjico.com.vn/", "via": "free_search"}
