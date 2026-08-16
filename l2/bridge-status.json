@@ -1,35 +1,34 @@
 {
-  "schema": "promo.l2.bridge_status.v1",
+  "schema": "promo.l2.bridge_status.v2",
   "project_id": "PROMO-L2-ROUTER-V1",
   "provider": "CLOUDFLARE_BROWSER_RUN_HUMAN_IN_LOOP",
-  "status": "PERMISSION_REQUIRED",
+  "status": "BROWSER_RUN_PROBE_VERIFIED_HANDOFF_PENDING",
   "ready": false,
-  "verified": false,
+  "runtime_verified": true,
+  "end_to_end_verified": false,
   "runtime_components": {
     "session_manager": "l2/session_manager.py",
-    "human_takeover": "Cloudflare Browser Run Live View",
-    "session_transport": "CDP Browser Session",
-    "private_handoff": "runtime-local file outside repository",
-    "residential_fallback": "self-hosted persistent browser profile"
+    "secure_cdp_bridge": "l2/browser_run_cdp.py",
+    "workflow": ".github/workflows/promo-l2-browser-run-bridge.yml",
+    "human_takeover": "Cloudflare Dashboard > Browser Run > Live Sessions",
+    "session_transport": "Cloudflare Browser Run CDP",
+    "session_reuse": "disconnect -> private Cloudflare session discovery -> fresh CDP reconnect",
+    "residential_fallback": "self-hosted persistent browser profile only when cloud/datacenter blocked"
   },
-  "required_runtime_settings": [
-    {
-      "name": "CLOUDFLARE_ACCOUNT_ID",
-      "type": "runtime setting",
-      "reason": "Select the Cloudflare account that owns Browser Run."
-    },
-    {
-      "name": "CLOUDFLARE_BROWSER_RUN_API_TOKEN",
-      "type": "secret",
-      "required_permission": "Browser Rendering - Edit",
-      "reason": "Create/manage Browser Run CDP sessions and Live View handoff."
-    },
-    {
-      "name": "L2_PRIVATE_HANDOFF_PATH",
-      "type": "runtime-local path",
-      "reason": "Store ephemeral takeover URL outside GitHub with mode 0600."
-    }
-  ],
+  "runtime_verification": {
+    "github_actions_secret_presence_verified_without_readback": true,
+    "browser_run_session_creation_verified": true,
+    "cdp_control_verified": true,
+    "live_view_handoff_exercised": false,
+    "authenticated_session_reuse_verified": false,
+    "status_source": "l2/bridge-runtime-status.json"
+  },
+  "remaining_gate": {
+    "state": "PERMISSION_REQUIRED",
+    "reason": "A human must complete one authorized platform login through Cloudflare Browser Run Live Sessions so structured handoff and authenticated-session reuse can be verified end-to-end.",
+    "safe_action": "Run the PROMO L2 Browser Run Bridge workflow in handoff mode for a user-owned/authorized platform, then complete login/MFA/CAPTCHA only inside Cloudflare Live Sessions and mark the handoff Done.",
+    "do_not_share": ["password", "OTP", "cookie", "refresh token", "CAPTCHA data", "session ID", "websocket URL", "Live View/takeover URL"]
+  },
   "security_invariants": {
     "passwords_in_github": false,
     "otp_in_github": false,
@@ -37,10 +36,11 @@
     "refresh_tokens_in_github": false,
     "captcha_data_in_github": false,
     "session_ids_in_github": false,
+    "websocket_urls_in_github": false,
     "takeover_urls_in_github": false,
     "takeover_urls_in_logs": false,
     "one_platform_failure_pauses_others": false
   },
-  "readiness_rule": "Do not mark READY until a real Browser Run session has been created, a private Live View takeover has been delivered outside GitHub, human takeover has been exercised, and the authenticated session has been reused successfully by L2.",
+  "readiness_rule": "Do not mark READY until a real Browser Run session has been created, structured human takeover has completed, and the authenticated session has been rediscovered and reused from a fresh L2 CDP connection without persisting sensitive session material.",
   "fallback_readiness_rule": "For cloud/datacenter-blocked sites, require an online self-hosted residential runner with a platform-isolated persistent profile before marking that platform READY."
 }
