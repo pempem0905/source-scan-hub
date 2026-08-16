@@ -1,7 +1,7 @@
 {
   "schema_version": 4,
   "project_id": "PROMO-L2-ROUTER-V1",
-  "updated_at": "2026-08-16T19:31:05.833232Z",
+  "updated_at": "2026-08-16T20:26:00Z",
   "mode": "PROACTIVE_PREAUTH",
   "alert_states": [
     "LOGIN_REQUIRED",
@@ -55,6 +55,12 @@
       "access_class": "AUTHORIZED_ACCOUNT",
       "status": "HANDOFF_READY",
       "profile_id": "tiktok-main",
+      "credential_storage": "runtime-browser-session-only"
+    },
+    "tiktokshop": {
+      "access_class": "AUTHORIZED_ACCOUNT",
+      "status": "HANDOFF_READY",
+      "profile_id": "tiktokshop-main",
       "credential_storage": "runtime-browser-session-only"
     },
     "loyalty-generic": {
