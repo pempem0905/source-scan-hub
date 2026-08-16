@@ -16,6 +16,8 @@ on:
       - 'integration/build_hard_access_queue.py'
       - 'integration/legacy-source-seed.jsonl'
       - 'integration/promo-source-export.jsonl'
+      - 'config/promo-workers.json'
+      - 'l2/auth-status.json'
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
@@ -91,6 +93,8 @@ jobs:
           master_input=read_json(Path('integration/master_input_status.json'), {})
           l2_shadow=read_json(Path('l2/shadow-status.json'), {})
           l2_hard=read_json(Path('l2/hard-access-status.json'), {})
+          l2_auth=read_json(Path('l2/auth-status.json'), {})
+          worker_config=read_json(Path('config/promo-workers.json'), {})
           recent=[]
           ep=root/'evidence.jsonl'
           if ep.exists():
@@ -103,8 +107,10 @@ jobs:
               'legacy_baseline_domains': 6117,
               'status': status,
               'master_input': master_input,
+              'promo_workers': worker_config,
               'l2_shadow': l2_shadow,
               'l2_hard_access': l2_hard,
+              'l2_auth': l2_auth,
               'discovery': {
                   'free_search_last_added': state.get('free_search_last_added',0),
                   'free_search_last_errors': state.get('free_search_last_errors',0),
