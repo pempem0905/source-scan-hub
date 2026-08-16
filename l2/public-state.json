@@ -58,21 +58,33 @@
       "promo_candidates": 18,
       "public_ok": 22,
       "shadow_ready": 12
+    },
+    {
+      "at": "2026-08-16T11:13:51Z",
+      "attempted": 30,
+      "blocked": 2,
+      "code_candidates": 23,
+      "errors": 7,
+      "js_browser": 0,
+      "login_required": 2,
+      "promo_candidates": 20,
+      "public_ok": 19,
+      "shadow_ready": 23
     }
   ],
   "last_run": {
     "attempted": 30,
-    "blocked": 4,
-    "code_candidates": 12,
-    "errors": 4,
+    "blocked": 2,
+    "code_candidates": 23,
+    "errors": 7,
     "js_browser": 0,
-    "login_required": 0,
-    "promo_candidates": 18,
-    "public_ok": 22,
-    "shadow_ready": 12
+    "login_required": 2,
+    "promo_candidates": 20,
+    "public_ok": 19,
+    "shadow_ready": 23
   },
   "project_id": "PROMO-L2-ROUTER-V1",
-  "run_count": 5,
+  "run_count": 6,
   "schema_version": 2,
   "seen": {
     "https://acb.com.vn/": {
@@ -124,6 +136,16 @@
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:51:12Z",
       "content_hash": "9dbb40617de5e891d9ab0891b0371fbf412161ee26f0170595a9f89ad07f89c2"
+    },
+    "https://circlek.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:12:03Z",
+      "content_hash": "4b517c25c3484a62326860f1d78ca94777b25d3142192c788e79a81617713874"
+    },
+    "https://circlek.com.vn/vi/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:12:05Z",
+      "content_hash": "4b517c25c3484a62326860f1d78ca94777b25d3142192c788e79a81617713874"
     },
     "https://circlek.com.vn/vi/uu-dai-dac-biet/": {
       "access_state": "PUBLIC_OK",
@@ -305,26 +327,166 @@
       "at": "2026-08-16T10:50:32Z",
       "content_hash": "bbca6ab39e24dd6b8c087783af567da8583b796fba24e24cb7bd3db35300ccd5"
     },
+    "https://sacombank.com.vn/trang-chu/khuyen-mai/khcn/chuong-trinh-uu-dai.html": {
+      "access_state": "ERROR",
+      "at": "2026-08-16T11:12:06Z",
+      "content_hash": null
+    },
+    "https://samsung.com/vn/mypage/rewards/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:12:08Z",
+      "content_hash": "f1b130733db3a9e1c3ef48a8d85af0a8977b144a705463e6cf787076b94b951a"
+    },
+    "https://shb.com.vn/chuong-trinh-uu-dai/": {
+      "access_state": "ERROR",
+      "at": "2026-08-16T11:12:37Z",
+      "content_hash": null
+    },
     "https://shopee.vn/": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:50:26Z",
       "content_hash": "5fe33ff40cc9424e716e1fe940c2cee829b048f58b47706d7ea2c487201b1cc2"
+    },
+    "https://shopnext.vn/khuyen-mai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:12:39Z",
+      "content_hash": "e23f08fcc6b131bdc22ec4ae67f87a2f34cb4c3331f3d3ac2b802f1859cb13ba"
     },
     "https://smember.com.vn/login": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:50:40Z",
       "content_hash": "d8aa8ca310fc71f289c5bfcacde1ef106b5abea81a8b9904f8d2213c306941f6"
     },
+    "https://thegioididong.com/khuyen-mai": {
+      "access_state": "ERROR",
+      "at": "2026-08-16T11:12:40Z",
+      "content_hash": null
+    },
+    "https://topzone.vn/khuyen-mai": {
+      "access_state": "ERROR",
+      "at": "2026-08-16T11:12:55Z",
+      "content_hash": null
+    },
+    "https://toyota.com.vn/tin-tuc/khuyen-mai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:12:59Z",
+      "content_hash": "f997396b5e10211308b45efec3d9af3c563951714a2706e71979a872e76e942f"
+    },
+    "https://tpb.vn/khuyen-mai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:13:01Z",
+      "content_hash": "9c08eedab75f7b019c9492d8e3a1337ca6ef87582fcdc873b9a240f51477ab36"
+    },
+    "https://uniqlo.com/vn/vi/": {
+      "access_state": "LOGIN_REQUIRED",
+      "at": "2026-08-16T11:13:05Z",
+      "content_hash": "5d186892de9401f613e2c2c4600af8e79d47962e872deefeb986ec69fddea414"
+    },
+    "https://uniqlo.com/vn/vi/feature/limited-offers/men": {
+      "access_state": "LOGIN_REQUIRED",
+      "at": "2026-08-16T11:13:03Z",
+      "content_hash": "e123953ef920f73bbf71f7957c31fe15ad5b7421ec3c1edca845b3306b37d616"
+    },
+    "https://urbanrevivo.com.vn/pages/promotion": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:13:07Z",
+      "content_hash": "e65863a6e2cb2dbed1c7243e09e03af2816de44787666a451b2c5ba5c8f0dc7e"
+    },
+    "https://vib.com.vn/vn/uu-dai": {
+      "access_state": "ERROR",
+      "at": "2026-08-16T11:13:08Z",
+      "content_hash": null
+    },
+    "https://vietcombank.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:11:34Z",
+      "content_hash": "d0145bfc001e32763ade683eb384e611cbc181f478b77a4f8fd5ef31a737e57e"
+    },
+    "https://vietcombank.com.vn/vi-VN/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:11:32Z",
+      "content_hash": "f78123b9dcffe4101da29bae6b3e742b9589900223dcd4df44e9b3d8d0fbc93c"
+    },
+    "https://vietjetair.com/vi/pages/khuyen-mai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:13:24Z",
+      "content_hash": "d6c694033afec9d2bef87d5708896e66112dd15fb4525fc3e3a4b4d923debc4a"
+    },
+    "https://vietnamairlines.com/vn/en/monthly-offers": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:13:27Z",
+      "content_hash": "0a537785c9913438b7d6a9a6ff33c43eb32ee08fcf76092d0c460b78c3b94900"
+    },
+    "https://viettelstore.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:13:49Z",
+      "content_hash": "0c513216d4c6dfd9428cb289ae581906bdf1f3633086ae2a7ba2957a52af47e1"
+    },
     "https://viettelstore.vn/khuyenmai": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:50:01Z",
       "content_hash": "4cc5d5a2e06d772274256248caee87b8de3ec5adb5b5d54c22bd7e8fc3bf9b61"
     },
+    "https://vinpearl.com/vi/promotion": {
+      "access_state": "BLOCKED_DATACENTER",
+      "at": "2026-08-16T11:13:27Z",
+      "content_hash": null
+    },
+    "https://vnpay.vn/uu-dai": {
+      "access_state": "ERROR",
+      "at": "2026-08-16T11:13:28Z",
+      "content_hash": null
+    },
+    "https://vnptpay.vn/web/khuyenmai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:13:30Z",
+      "content_hash": "03a3ea609804750062d5b66ccb72487920680d26779f93feadc86251c1c90f7c"
+    },
+    "https://voucher.taptap.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:13:51Z",
+      "content_hash": "53af3de963f2105abb563524aa58fa766f7784a86e45631e9f545bb05a81c5d2"
+    },
+    "https://vpbank.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:11:50Z",
+      "content_hash": "783e819fce2eb2b652839d8558998480eba9d908bbca8765d14e399fc1f28ac2"
+    },
+    "https://vpbank.com.vn/uu-dai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:11:37Z",
+      "content_hash": "b620f675e1aa6bcba8a0dfef2a1392ecc176a9f74f081b03c69ff5ef5d0f3a12"
+    },
+    "https://watsons.vn/vi/promotion": {
+      "access_state": "BLOCKED_DATACENTER",
+      "at": "2026-08-16T11:13:31Z",
+      "content_hash": null
+    },
+    "https://winmart.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:12:00Z",
+      "content_hash": "6677d5d8321e0a1e553f4f65b1e3198222c5d5cb2fe19c355b87f2df6d987551"
+    },
     "https://winmart.vn/khuyen-mai": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:50:00Z",
       "content_hash": "820d72003553c7dd218eee11ac0cfdc5453c5c5780653d43359dcae99c8a24a4"
+    },
+    "https://yody.vn/khuyen-mai": {
+      "access_state": "ERROR",
+      "at": "2026-08-16T11:13:32Z",
+      "content_hash": null
+    },
+    "https://zalopay.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:13:36Z",
+      "content_hash": "344de86a71a81c0fb518056e528e43738ebf5237b9f4aa9f3880104d02d26366"
+    },
+    "https://zalopay.vn/khuyen-mai": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T11:13:34Z",
+      "content_hash": "41c02a4a827a8c2e4ceb581580f496de7cc787135ec22741ab4cd2501970091a"
     }
   },
-  "updated_at": "2026-08-16T11:09:07Z"
+  "updated_at": "2026-08-16T11:13:51Z"
 }
