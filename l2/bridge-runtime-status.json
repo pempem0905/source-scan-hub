@@ -1,10 +1,10 @@
 {
   "schema": "promo.l2.bridge_runtime_status.v3",
   "provider": "CLOUDFLARE_BROWSER_RUN",
-  "checked_at": "2026-08-16T20:31:08.248097Z",
+  "checked_at": "2026-08-16T22:30:43.107941Z",
   "last_verified_at": null,
-  "mode": "probe",
-  "platform": "probe",
+  "mode": "handoff",
+  "platform": "grabfood",
   "state": "TRANSIENT_RATE_LIMIT",
   "browser_session_created": true,
   "human_handoff_exercised": false,
