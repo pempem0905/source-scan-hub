@@ -3,6 +3,12 @@ name: Source Scan Hub CI
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'free-source-hunter/state.json'
+      - 'free-source-hunter/status.json'
+      - 'free-source-hunter/master_domains.txt'
+      - 'free-source-hunter/seen_urls.txt'
+      - 'free-source-hunter/evidence.jsonl'
   pull_request:
 
 permissions:
@@ -22,3 +28,4 @@ jobs:
       - run: node --check apify/orchestrator/src/main.js
       - run: node --check apify/native-worker/src/main.js
       - run: node --check apify/native-orchestrator/src/main.js
+      - run: python3 -m py_compile free-source-hunter/hunter.py
