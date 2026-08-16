@@ -9,6 +9,9 @@ on:
       - 'free-source-hunter/bootstrap_free.py'
       - 'free-source-hunter/cc_domain_discovery.py'
       - 'free-source-hunter/free_search_discovery.py'
+      - 'integration/build_master_input.py'
+      - 'integration/legacy-source-seed.jsonl'
+      - 'integration/promo-source-export.jsonl'
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
@@ -23,7 +26,7 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 13
+    timeout-minutes: 16
     env:
       FREE_HUNTER_MAX_SECONDS: '660'
       FREE_HUNTER_MAX_FETCHES: '2500'
@@ -56,6 +59,8 @@ jobs:
         run: python3 free-source-hunter/free_search_discovery.py
       - name: Validate and expand free frontier
         run: python3 free-source-hunter/hunter.py
+      - name: Build canonical master input and dispatch plan
+        run: python3 integration/build_master_input.py
       - name: Build static monitor snapshot
         run: |
           mkdir -p docs/data
@@ -69,6 +74,7 @@ jobs:
               except Exception: return default
           status=read_json(root/'status.json', {})
           state=read_json(root/'state.json', {})
+          master_input=read_json(Path('integration/master_input_status.json'), {})
           recent=[]
           ep=root/'evidence.jsonl'
           if ep.exists():
@@ -80,6 +86,7 @@ jobs:
               'generated_at': dt.datetime.now(dt.timezone.utc).isoformat().replace('+00:00','Z'),
               'legacy_baseline_domains': 6117,
               'status': status,
+              'master_input': master_input,
               'discovery': {
                   'free_search_last_added': state.get('free_search_last_added',0),
                   'free_search_last_errors': state.get('free_search_last_errors',0),
@@ -94,11 +101,11 @@ jobs:
           src=root/'master_domains.txt'
           Path('docs/data/master_domains.txt').write_text(src.read_text(errors='replace') if src.exists() else '')
           PY
-      - name: Persist frontier, master domains and monitor snapshot
+      - name: Persist frontier, master input and monitor snapshot
         run: |
           git config user.name "source-scan-free-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add free-source-hunter/state.json free-source-hunter/status.json free-source-hunter/master_domains.txt free-source-hunter/seen_urls.txt free-source-hunter/evidence.jsonl docs/data/engine.json docs/data/master_domains.txt
+          git add free-source-hunter/state.json free-source-hunter/status.json free-source-hunter/master_domains.txt free-source-hunter/seen_urls.txt free-source-hunter/evidence.jsonl docs/data/engine.json docs/data/master_domains.txt integration/master_input_sources_v1.jsonl integration/master_input_status.json integration/promo_dispatch_plan_v1.jsonl
           if git diff --cached --quiet; then
             echo "No state changes"
             exit 0
