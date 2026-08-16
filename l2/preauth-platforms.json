@@ -64,6 +64,15 @@
       "preferred_runner": "cloudflare-browser-run",
       "fallback_runner": "self-hosted-residential"
     },
+    "tiktokshop": {
+      "profile_id": "tiktokshop-main",
+      "access_class": "AUTHORIZED_ACCOUNT",
+      "start_url": "https://www.tiktok.com/login",
+      "post_login_target": "https://www.tiktok.com/shop",
+      "status": "PREAUTH_PENDING_SESSION",
+      "preferred_runner": "cloudflare-browser-run",
+      "fallback_runner": "self-hosted-residential"
+    },
     "loyalty-generic": {
       "profile_id": "loyalty-generic",
       "access_class": "AUTHORIZED_ACCOUNT",
