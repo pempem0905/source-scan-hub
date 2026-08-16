@@ -34,13 +34,13 @@
       "enqueued": 0
     },
     "PROMO Turbo Scan": {
-      "state": "DEGRADED",
-      "last_run_at": "2026-08-16T15:14:28Z",
-      "validated": null,
-      "rejected": null,
-      "committed": null,
-      "literal_codes_committed": null,
-      "batch": null
+      "state": "ACTIVE",
+      "last_run_at": "2026-08-16T16:25:46Z",
+      "validated": 0,
+      "rejected": 0,
+      "committed": 0,
+      "literal_codes_committed": 0,
+      "batch": 84
     },
     "PROMO GPT Infra + Dispatch": {
       "state": "ACTIVE",
