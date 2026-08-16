@@ -5,15 +5,19 @@
   "runtime": {
     "scheduler": "ChatGPT Scheduled Tasks",
     "cadence": "hourly",
-    "active_workers": 5,
+    "active_workers": 4,
+    "paused_workers": 1,
     "canonical_state": "Supabase via Source Scan Hub",
     "status_endpoint": "https://source-scan-hub.lovable.app/api/promo-status",
     "value_filter": "ACTIONABLE-VALUE-V2",
-    "master_rule": "single-writer"
+    "master_rule": "single-writer",
+    "source_discovery_owner": "PROMO-SRC-HUNTER-V1",
+    "l2_router": "PROMO-L2-ROUTER-V1"
   },
   "workers": [
     {
       "name": "PROMO Banks Shard",
+      "state": "ACTIVE",
       "role": "producer",
       "scope": ["banks", "cards", "payments", "travel", "hotel", "OTA", "airline", "transport"],
       "max_official_pages_per_run": 15,
@@ -21,6 +25,7 @@
     },
     {
       "name": "PROMO Retail Shard",
+      "state": "ACTIVE",
       "role": "producer",
       "scope": ["retail", "ecommerce", "electronics", "F&B", "cinema", "fashion", "beauty", "pharmacy", "mother-baby", "malls", "lifestyle"],
       "max_official_pages_per_run": 15,
@@ -28,14 +33,17 @@
     },
     {
       "name": "PROMO Hub + L2 Sync",
-      "role": "discovery-producer",
+      "state": "PAUSED",
+      "role": "legacy-discovery-producer",
       "scope": ["official promo hubs", "under-covered categories", "child/detail resolution"],
       "max_official_pages_per_run": 12,
       "layer2_optional": true,
-      "enqueue_clean_candidates_same_run": true
+      "enqueue_clean_candidates_same_run": true,
+      "pause_reason": "Source discovery is now owned by PROMO-SRC-HUNTER-V1; automation slot reassigned to PROMO L2 Login Watch. Can be resumed if needed."
     },
     {
       "name": "PROMO Turbo Scan",
+      "state": "ACTIVE",
       "role": "commit-coordinator",
       "commit_rule": {
         "normal_clean_ready_min": 3,
@@ -46,8 +54,18 @@
     },
     {
       "name": "PROMO GPT Infra + Commit",
+      "state": "ACTIVE",
       "role": "health-relay",
       "responsibilities": ["worker health", "producer-stall detection", "commit-stall detection", "queue relay", "writer verification", "status/dashboard health"]
+    }
+  ],
+  "support_automations": [
+    {
+      "name": "PROMO L2 Login Watch",
+      "state": "ACTIVE",
+      "role": "conditional-auth-alert",
+      "source": "l2/auth-status.json",
+      "alert_states": ["LOGIN_REQUIRED", "NEEDS_RELOGIN", "PERMISSION_REQUIRED"]
     }
   ],
   "data_rules": {
