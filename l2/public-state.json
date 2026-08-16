@@ -514,21 +514,33 @@
       "promo_candidates": 0,
       "public_ok": 0,
       "shadow_ready": 0
+    },
+    {
+      "at": "2026-08-16T23:48:00Z",
+      "attempted": 5,
+      "blocked": 0,
+      "code_candidates": 0,
+      "errors": 0,
+      "js_browser": 0,
+      "login_required": 0,
+      "promo_candidates": 5,
+      "public_ok": 5,
+      "shadow_ready": 0
     }
   ],
   "last_run": {
-    "attempted": 0,
+    "attempted": 5,
     "blocked": 0,
     "code_candidates": 0,
     "errors": 0,
     "js_browser": 0,
     "login_required": 0,
-    "promo_candidates": 0,
-    "public_ok": 0,
+    "promo_candidates": 5,
+    "public_ok": 5,
     "shadow_ready": 0
   },
   "project_id": "PROMO-L2-ROUTER-V1",
-  "run_count": 43,
+  "run_count": 44,
   "schema_version": 2,
   "seen": {
     "https://acb.com.vn/": {
@@ -560,6 +572,11 @@
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T17:46:31Z",
       "content_hash": "122240a7d4ce690e21e8f94b6e32243dc7edfca492dd33bce540fe1ecf52ce17"
+    },
+    "https://adahub.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T23:47:46Z",
+      "content_hash": "98ea99d4f630a710379fe04a8a14fb6c121f0df2b1b9f1ea4f5b2ea474703145"
     },
     "https://aeon.com.vn/": {
       "access_state": "PUBLIC_OK",
@@ -640,6 +657,16 @@
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T11:08:08Z",
       "content_hash": "50f4689c4cfc47353dcecdf77ef602d5cda138ceeed543a5551aa8c34a6f1f67"
+    },
+    "https://blog.adahub.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T23:47:53Z",
+      "content_hash": "893fae088cf735754382698f4abdc7f367b42f256aedbde7a2ba7f1963c4d611"
+    },
+    "https://blog.adahub.vn/sale-pipeline-cho-doanh-nghiep-b2b/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T23:48:00Z",
+      "content_hash": "7daeebf47f3e78822325eef5428aa084d10c41a1525231e96d0d2b2495652c6b"
     },
     "https://booking.com/": {
       "access_state": "PUBLIC_OK",
@@ -755,6 +782,11 @@
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T11:18:58Z",
       "content_hash": "25c41e1c3e5879cc694de1955e135dc26812cb1c29d3b232f342f5dc4c7a8c27"
+    },
+    "https://diamond.vpbank.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T23:47:45Z",
+      "content_hash": "13a6d42fb9640f130f71b2c52ad9b1ed6cc046bcde721edc7c64f256aef2e473"
     },
     "https://dienmaycholon.vn/khuyen-mai": {
       "access_state": "PUBLIC_OK",
@@ -1171,6 +1203,11 @@
       "at": "2026-08-16T11:12:39Z",
       "content_hash": "e23f08fcc6b131bdc22ec4ae67f87a2f34cb4c3331f3d3ac2b802f1859cb13ba"
     },
+    "https://signup.adahub.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T23:47:53Z",
+      "content_hash": "bd1a61889dabe6731330d132f1ac08f0540a158cb420ab55e9e526d2bdd95cac"
+    },
     "https://smember.com.vn/login": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:50:40Z",
@@ -1412,5 +1449,5 @@
       "content_hash": "41c02a4a827a8c2e4ceb581580f496de7cc787135ec22741ab4cd2501970091a"
     }
   },
-  "updated_at": "2026-08-16T23:28:47Z"
+  "updated_at": "2026-08-16T23:48:00Z"
 }
