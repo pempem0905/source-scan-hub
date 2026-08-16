@@ -1,0 +1,106 @@
+name: PROMO Telegram Monitor 30m
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TZ: Asia/Bangkok
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Build and send PROMO status to Telegram
+        shell: bash
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "Telegram secrets missing; skipping send."
+            exit 0
+          fi
+          python3 <<'PY'
+          import json, os, urllib.parse, urllib.request
+          from pathlib import Path
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          def load(path):
+              try:
+                  return json.loads(Path(path).read_text(encoding='utf-8'))
+              except Exception:
+                  return {}
+
+          engine = load('docs/data/engine.json')
+          promo = load('integration/promo-runtime-status.json')
+          auth = load('l2/auth-status.json')
+          hard = load('l2/hard-access-status.json')
+          l2 = load('l2/public-state.json')
+
+          s = engine.get('status', {})
+          m = engine.get('master_input', {})
+          pc = promo.get('canonical', {})
+          workers = promo.get('workers', {})
+          pre = auth.get('preauth', {})
+          platforms = auth.get('platforms', {})
+          lr = l2.get('last_run', {})
+
+          login_needed = [k for k,v in platforms.items() if v.get('status') in {'LOGIN_REQUIRED','NEEDS_RELOGIN','PERMISSION_REQUIRED'}]
+          bridge = pre.get('bridge_status', 'UNKNOWN')
+          ready_login = bool(login_needed) and bridge in {'READY','TAKEOVER_READY','SESSION_READY'}
+
+          def val(x):
+              return '—' if x is None else str(x)
+
+          active_workers = 0
+          for v in workers.values():
+              if isinstance(v, dict) and str(v.get('state','')).upper() in {'ACTIVE','RUNNING','OK'}:
+                  active_workers += 1
+
+          now = datetime.now(ZoneInfo('Asia/Bangkok')).strftime('%d/%m %H:%M')
+          lines = [
+              f'📡 PROMO Monitor · {now}',
+              f'🔎 Source Hunter: {val(s.get("master_domains"))} domains · {val(s.get("seen_urls"))} URLs · frontier {val(s.get("frontier_pending"))}',
+              f'📚 Master Input: {val(m.get("record_count"))} total · {val(m.get("active_input_count"))} active · {val(m.get("review_input_count"))} review',
+              f'🎟 PROMO: {val(pc.get("scanned_sources"))} scanned · {val(pc.get("actionable_offers"))} offers · {val(pc.get("literal_codes"))} codes · batch {val(pc.get("batch"))}',
+              f'🧩 L2: run {val(l2.get("run_count"))} · attempted {val(lr.get("attempted"))} · promo {val(lr.get("promo_candidates"))} · errors {val(lr.get("errors"))}',
+              f'🔐 Login bridge: {bridge} · hard runner ready: {val(hard.get("runner_ready"))}',
+          ]
+
+          if ready_login:
+              lines.append('🚨 CẦN LOGIN: ' + ', '.join(login_needed))
+              lines.append('Mở PROMO L2 Login Center để đăng nhập.')
+          elif login_needed:
+              lines.append('⚠ Có platform cần login nhưng secure session chưa sẵn sàng: ' + ', '.join(login_needed))
+          else:
+              pending = [k for k,v in platforms.items() if v.get('status') == 'PREAUTH_PENDING_SESSION']
+              if pending:
+                  lines.append('⏳ Pre-auth đang chờ secure session: ' + ', '.join(pending))
+
+          text = '\n'.join(lines)
+          token = os.environ['TELEGRAM_BOT_TOKEN']
+          chat_id = os.environ['TELEGRAM_CHAT_ID']
+          url = f'https://api.telegram.org/bot{token}/sendMessage'
+          data = urllib.parse.urlencode({
+              'chat_id': chat_id,
+              'text': text,
+              'disable_web_page_preview': 'true'
+          }).encode()
+          req = urllib.request.Request(url, data=data, method='POST')
+          with urllib.request.urlopen(req, timeout=20) as r:
+              body = r.read().decode('utf-8', 'replace')
+              out = json.loads(body)
+              if not out.get('ok'):
+                  raise SystemExit('Telegram API returned not ok')
+          print('Telegram status sent.')
+          PY
