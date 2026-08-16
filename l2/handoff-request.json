@@ -4,6 +4,6 @@
   "state": "REQUESTED",
   "attempt_day_utc": "2026-08-16",
   "attempts_today": 3,
-  "last_retry_requested_at": "2026-08-16T20:26:00Z",
+  "last_retry_requested_at": "2026-08-16T20:27:30Z",
   "purpose": "Verify structured human takeover and fresh-connection authenticated session reuse. Contains no credentials or session material."
 }
