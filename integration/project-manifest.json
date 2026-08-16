@@ -1,13 +1,13 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "project_id": "PROMO-SRC-HUNTER-V1",
   "call_code": "PROMO-SRC-HUNTER-V1|gh:pempem0905/source-scan-hub|manifest:integration/project-manifest.json",
   "name": "Vietnam Promo Source Hunter",
-  "phase": "PHASE_1_SOURCE_DISCOVERY",
+  "phase": "SOURCE_DISCOVERY_AND_INPUT_CONTROL",
   "status": "ACTIVE",
   "authoritative_repo": "pempem0905/source-scan-hub",
   "branch": "main",
-  "purpose": "Discover, validate, canonicalize and deduplicate internet sources serving the Vietnam promo/voucher market. This project produces source inputs; it is not the mass promo/code extraction engine.",
+  "purpose": "Discover, validate, canonicalize and deduplicate Vietnam-facing promo/voucher sources, then publish the canonical input registry consumed by downstream PROMO extraction workers.",
   "runtime": {
     "engine": "GitHub Actions free-source-hunter",
     "workflow": ".github/workflows/free-source-hunter.yml",
@@ -21,24 +21,36 @@
     "master_domains": "free-source-hunter/master_domains.txt",
     "seen_urls": "free-source-hunter/seen_urls.txt",
     "evidence": "free-source-hunter/evidence.jsonl",
+    "master_input": "integration/master_input_sources_v1.jsonl",
+    "master_input_status": "integration/master_input_status.json",
+    "dispatch_plan": "integration/promo_dispatch_plan_v1.jsonl",
     "monitor_snapshot": "docs/data/engine.json"
+  },
+  "optional_inputs": {
+    "legacy_seed": "integration/legacy-source-seed.jsonl",
+    "promo_canonical_export": "integration/promo-source-export.jsonl",
+    "l2_access_observations": "l2/public-state.json"
   },
   "data_contract": {
     "primary_dedupe_key": "registrable_domain",
     "url_dedupe_key": "canonical_url",
-    "market_scope": "Entire internet ecosystem serving Vietnam, regardless of TLD",
-    "source_of_truth": "GitHub files listed in authoritative_outputs",
+    "stable_source_key": "source_id",
+    "market_scope": "Internet ecosystem serving Vietnam, regardless of TLD",
+    "source_of_truth_for_downstream_input": "integration/master_input_sources_v1.jsonl",
     "never_equate": [
       "source URL rows with unique brands",
       "classifier Official with human-verified official",
-      "queue depth with coverage percentage"
+      "queue depth with coverage percentage",
+      "raw code candidate with verified literal promo code"
     ]
   },
   "coordination": {
-    "mode": "MULTI_TASK_READY",
-    "rule": "Before a peer task performs overlapping source discovery, read this manifest and integration/work-allocation.json. Peer tasks should publish their own project_id, repo, capabilities and output paths before work is repartitioned.",
+    "mode": "CENTRAL_INPUT_CONTROL",
+    "source_discovery_owner": "PROMO-SRC-HUNTER-V1",
+    "downstream_promo_project": "PROMO-GPT-PIPELINE-V1",
+    "l2_router_project": "PROMO-L2-ROUTER-V1",
     "merge_key": "registrable_domain",
     "preferred_handoff": "file_contract",
-    "write_policy": "Do not mutate native Source Hunter state from another task unless explicitly assigned in work-allocation.json. Peer results should be produced separately and merged deterministically."
+    "write_policy": "Downstream workers consume master input and may return SOURCE_CANDIDATE records, but only Source Hunter publishes the canonical source registry."
   }
 }
