@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "project_id": "PROMO-SRC-HUNTER-V1",
+  "call_code": "PROMO-SRC-HUNTER-V1|gh:pempem0905/source-scan-hub|manifest:integration/project-manifest.json",
+  "name": "Vietnam Promo Source Hunter",
+  "phase": "PHASE_1_SOURCE_DISCOVERY",
+  "status": "ACTIVE",
+  "authoritative_repo": "pempem0905/source-scan-hub",
+  "branch": "main",
+  "purpose": "Discover, validate, canonicalize and deduplicate internet sources serving the Vietnam promo/voucher market. This project produces source inputs; it is not the mass promo/code extraction engine.",
+  "runtime": {
+    "engine": "GitHub Actions free-source-hunter",
+    "workflow": ".github/workflows/free-source-hunter.yml",
+    "schedule": "*/5 * * * *",
+    "execution_model": "serialized near-continuous batches",
+    "cost_target_usd": 0
+  },
+  "authoritative_outputs": {
+    "status": "free-source-hunter/status.json",
+    "state": "free-source-hunter/state.json",
+    "master_domains": "free-source-hunter/master_domains.txt",
+    "seen_urls": "free-source-hunter/seen_urls.txt",
+    "evidence": "free-source-hunter/evidence.jsonl",
+    "monitor_snapshot": "docs/data/engine.json"
+  },
+  "data_contract": {
+    "primary_dedupe_key": "registrable_domain",
+    "url_dedupe_key": "canonical_url",
+    "market_scope": "Entire internet ecosystem serving Vietnam, regardless of TLD",
+    "source_of_truth": "GitHub files listed in authoritative_outputs",
+    "never_equate": [
+      "source URL rows with unique brands",
+      "classifier Official with human-verified official",
+      "queue depth with coverage percentage"
+    ]
+  },
+  "coordination": {
+    "mode": "MULTI_TASK_READY",
+    "rule": "Before a peer task performs overlapping source discovery, read this manifest and integration/work-allocation.json. Peer tasks should publish their own project_id, repo, capabilities and output paths before work is repartitioned.",
+    "merge_key": "registrable_domain",
+    "preferred_handoff": "file_contract",
+    "write_policy": "Do not mutate native Source Hunter state from another task unless explicitly assigned in work-allocation.json. Peer results should be produced separately and merged deterministically."
+  }
+}
