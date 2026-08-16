@@ -1,48 +1,48 @@
 {
-  "generated_at": "2026-08-16T10:57:31.206222Z",
+  "generated_at": "2026-08-16T11:07:44.441843Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_pending": 5191,
-    "last_6_runs_new_domains": 24,
+    "frontier_pending": 3281,
+    "last_6_runs_new_domains": 40,
     "last_run": {
-      "at": "2026-08-16T10:45:16.871575Z",
+      "at": "2026-08-16T11:00:24.062769Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.net/vn/*uu-dai*",
-        "*.com/vietnam/*promotion*",
-        "*.vn/*khuyen-mai*",
-        "*.vn/*khuyenmai*"
+        "*.vn/*uu-dai*",
+        "*.vn/*uudai*",
+        "*.vn/*voucher*",
+        "*.vn/*promotion*"
       ],
-      "duration_s": 734.2,
-      "errors": 15,
-      "frontier_pending": 5191,
-      "new_domains": 17,
-      "processed": 1881,
-      "rate403": 0.106,
+      "duration_s": 440.3,
+      "errors": 18,
+      "frontier_pending": 3281,
+      "new_domains": 16,
+      "processed": 2500,
+      "rate403": 0.04,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-25",
-    "master_domains": 60,
+    "master_domains": 76,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 11,
+    "run_count": 12,
     "running": true,
-    "seen_urls": 12452,
-    "updated_at": "2026-08-16T10:57:31.110014Z"
+    "seen_urls": 13042,
+    "updated_at": "2026-08-16T11:07:44.357096Z"
   },
   "discovery": {
-    "free_search_last_added": 6,
+    "free_search_last_added": 8,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "điện máy điện thoại laptop khuyến mãi Việt Nam",
-      "điện máy điện thoại laptop ưu đãi Việt Nam",
-      "điện máy điện thoại laptop voucher Việt Nam",
-      "điện máy điện thoại laptop promotion Vietnam"
+      "nhà thuốc khuyến mãi Việt Nam",
+      "nhà thuốc ưu đãi Việt Nam",
+      "nhà thuốc voucher Việt Nam",
+      "nhà thuốc promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 8
+    "cc_domain_page": 9
   },
   "recent_sources": [
     {
@@ -463,6 +463,118 @@
       "domain": "note8.vn",
       "radar": false,
       "url": "https://note8.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "mytour.vn",
+      "radar": false,
+      "url": "https://mytour.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "zalopay.vn",
+      "radar": false,
+      "url": "https://zalopay.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "kamereo.vn",
+      "radar": false,
+      "url": "https://kamereo.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "toplist.vn",
+      "radar": false,
+      "url": "https://toplist.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "sapo.vn",
+      "radar": false,
+      "url": "https://sapo.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "circlek.com.vn",
+      "radar": false,
+      "url": "https://circlek.com.vn/vi/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "gs25.com.vn",
+      "radar": false,
+      "url": "https://gs25.com.vn/vi",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "rfoods.com.vn",
+      "radar": false,
+      "url": "https://rfoods.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "3sach.vn",
+      "radar": false,
+      "url": "https://3sach.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "farmersmarket.vn",
+      "radar": false,
+      "url": "https://farmersmarket.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "khosithucpham.vn",
+      "radar": false,
+      "url": "https://khosithucpham.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "nongsandungha.com",
+      "radar": false,
+      "url": "https://nongsandungha.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "kiotsoft.com",
+      "radar": false,
+      "url": "https://kiotsoft.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "organicfood.vn",
+      "radar": false,
+      "url": "https://organicfood.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "pos365.vn",
+      "radar": false,
+      "url": "https://pos365.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:00:24.062769Z",
+      "domain": "biggreen.com.vn",
+      "radar": false,
+      "url": "https://biggreen.com.vn/website/home-page.aspx",
       "via": "free_search"
     }
   ]
