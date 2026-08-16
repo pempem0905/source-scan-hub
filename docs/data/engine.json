@@ -1,44 +1,44 @@
 {
-  "generated_at": "2026-08-16T21:00:44.134882Z",
+  "generated_at": "2026-08-16T21:20:28.055147Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 2907,
-    "frontier_deferred_pending": 39600,
-    "frontier_pending": 42507,
-    "last_6_runs_new_domains": 8,
+    "frontier_active_pending": 3811,
+    "frontier_deferred_pending": 39689,
+    "frontier_pending": 43500,
+    "last_6_runs_new_domains": 6,
     "last_run": {
-      "at": "2026-08-16T20:58:28.669058Z",
+      "at": "2026-08-16T21:18:45.719982Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*offers*",
-        "*.vn/*deals*",
-        "*.vn/*sale*",
-        "*.com/vn/*khuyen-mai*"
+        "*.com/vn/*uu-dai*",
+        "*.com/vn/*voucher*",
+        "*.com/vn/*promotion*",
+        "*.com/vi-vn/*khuyen-mai*"
       ],
-      "duration_s": 134.6,
-      "errors": 93,
-      "frontier_pending": 42507,
+      "duration_s": 101.4,
+      "errors": 13,
+      "frontier_pending": 43500,
       "new_domains": 1,
-      "processed": 400,
-      "rate403": 3.0,
+      "processed": 311,
+      "rate403": 0.0,
       "rate429": 0.0
     },
-    "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 650,
+    "latest_common_crawl": "CC-MAIN-2026-25",
+    "master_domains": 651,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 48,
+    "run_count": 49,
     "running": true,
-    "seen_urls": 228959,
-    "updated_at": "2026-08-16T21:00:43.259486Z"
+    "seen_urls": 232777,
+    "updated_at": "2026-08-16T21:20:27.156013Z"
   },
   "master_input": {
     "active_input_count": 105,
     "counts": {
       "ACTIVE_INPUT": 105,
       "AUTHORIZED_ACCOUNT": 2,
-      "BANK_CARD": 31,
+      "BANK_CARD": 32,
       "DISCOVERY_ONLY": 13,
       "FOOD_BEVERAGE": 22,
       "GENERAL": 434,
@@ -47,27 +47,27 @@
       "PROMO_BANKS": 31,
       "PROMO_L2": 14,
       "PROMO_RETAIL": 60,
-      "PUBLIC_HTTP": 573,
+      "PUBLIC_HTTP": 574,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 71,
-      "REVIEW_INPUT": 469,
+      "REVIEW_INPUT": 470,
       "SOURCE_HUNTER": 13,
-      "SOURCE_REVIEW": 469,
+      "SOURCE_REVIEW": 470,
       "TRAVEL_MOBILITY": 13
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 13,
-    "generated_at": "2026-08-16T21:00:43.963889Z",
+    "generated_at": "2026-08-16T21:20:27.886145Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 587,
-    "review_input_count": 469,
+    "record_count": 588,
+    "review_input_count": 470,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 650,
+    "source_hunter_domains": 651,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -320,37 +320,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 1,
+    "free_search_last_added": 3,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "giao đồ ăn gọi xe khuyến mãi Việt Nam",
-      "giao đồ ăn gọi xe ưu đãi Việt Nam",
-      "giao đồ ăn gọi xe voucher Việt Nam",
-      "giao đồ ăn gọi xe promotion Vietnam"
+      "ngân hàng thẻ tín dụng khuyến mãi Việt Nam",
+      "ngân hàng thẻ tín dụng ưu đãi Việt Nam",
+      "ngân hàng thẻ tín dụng voucher Việt Nam",
+      "ngân hàng thẻ tín dụng promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
     "cc_domain_page": 41,
     "frontier_scheduler": {
-      "active": 400,
+      "active": 311,
       "base_per_host_batch": 16,
-      "deferred": 39600,
+      "deferred": 39689,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 45
+      "unique_hosts": 36
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T14:20:16.388502Z",
-      "domain": "prudential.com.vn",
-      "radar": false,
-      "url": "https://prudential.com.vn/vi/",
-      "via": "free_search"
-    },
     {
       "at": "2026-08-16T14:20:16.388502Z",
       "domain": "ihg.com",
@@ -1182,6 +1175,13 @@
       "domain": "memart.vn",
       "radar": false,
       "url": "https://memart.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T21:18:45.719982Z",
+      "domain": "creditcard.com.vn",
+      "radar": false,
+      "url": "https://creditcard.com.vn/",
       "via": "free_search"
     }
   ]
