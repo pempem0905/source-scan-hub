@@ -34,6 +34,18 @@
       "promo_candidates": 0,
       "public_ok": 0,
       "shadow_ready": 0
+    },
+    {
+      "at": "2026-08-16T11:05:05Z",
+      "attempted": 0,
+      "blocked": 0,
+      "code_candidates": 0,
+      "errors": 0,
+      "js_browser": 0,
+      "login_required": 0,
+      "promo_candidates": 0,
+      "public_ok": 0,
+      "shadow_ready": 0
     }
   ],
   "last_run": {
@@ -48,7 +60,7 @@
     "shadow_ready": 0
   },
   "project_id": "PROMO-L2-ROUTER-V1",
-  "run_count": 3,
+  "run_count": 4,
   "schema_version": 2,
   "seen": {
     "https://centralretail.com.vn/": {
@@ -152,5 +164,5 @@
       "content_hash": "820d72003553c7dd218eee11ac0cfdc5453c5c5780653d43359dcae99c8a24a4"
     }
   },
-  "updated_at": "2026-08-16T11:02:58Z"
+  "updated_at": "2026-08-16T11:05:05Z"
 }
