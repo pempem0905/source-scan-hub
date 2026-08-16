@@ -356,3 +356,6 @@
 {"at": "2026-08-16T19:09:33.129983Z", "domain": "aas.com.vn", "radar": false, "url": "https://aas.com.vn/", "via": "common_crawl_domain"}
 {"at": "2026-08-16T19:09:33.129983Z", "domain": "columbia.vn", "radar": false, "url": "https://columbia.vn/", "via": "free_search"}
 {"at": "2026-08-16T19:09:33.129983Z", "domain": "timan.vn", "radar": false, "url": "https://timan.vn/", "via": "free_search"}
+{"at": "2026-08-16T19:47:00.270496Z", "domain": "beyours.vn", "radar": false, "url": "https://beyours.vn/", "via": "free_search"}
+{"at": "2026-08-16T19:47:00.270496Z", "domain": "made4home.com.vn", "radar": false, "url": "https://made4home.com.vn/", "via": "free_search"}
+{"at": "2026-08-16T19:47:00.270496Z", "domain": "nhaxinh.com", "radar": false, "url": "https://nhaxinh.com/", "via": "free_search"}

@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-16T19:33:16.484014Z",
+  "generated_at": "2026-08-16T19:49:23.596123Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 4192,
-    "frontier_deferred_pending": 39552,
-    "frontier_pending": 43744,
-    "last_6_runs_new_domains": 13,
+    "frontier_active_pending": 5475,
+    "frontier_deferred_pending": 39541,
+    "frontier_pending": 45016,
+    "last_6_runs_new_domains": 14,
     "last_run": {
-      "at": "2026-08-16T19:31:19.019170Z",
+      "at": "2026-08-16T19:47:00.270496Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*uu-dai*",
-        "*.vn/*uudai*",
-        "*.vn/*voucher*",
-        "*.vn/*promotion*"
+        "*.vn/*offers*",
+        "*.vn/*deals*",
+        "*.vn/*sale*",
+        "*.com/vn/*khuyen-mai*"
       ],
-      "duration_s": 116.6,
-      "errors": 49,
-      "frontier_pending": 43744,
-      "new_domains": 0,
-      "processed": 448,
-      "rate403": 0.223,
+      "duration_s": 142.5,
+      "errors": 62,
+      "frontier_pending": 45016,
+      "new_domains": 3,
+      "processed": 459,
+      "rate403": 0.436,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 614,
+    "master_domains": 624,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 42,
+    "run_count": 43,
     "running": true,
-    "seen_urls": 206918,
-    "updated_at": "2026-08-16T19:33:15.605460Z"
+    "seen_urls": 212482,
+    "updated_at": "2026-08-16T19:49:22.749842Z"
   },
   "master_input": {
     "active_input_count": 105,
@@ -41,33 +41,33 @@
       "BANK_CARD": 31,
       "DISCOVERY_ONLY": 13,
       "FOOD_BEVERAGE": 21,
-      "GENERAL": 406,
+      "GENERAL": 414,
       "LOYALTY_REWARDS": 9,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 14,
       "PROMO_RETAIL": 60,
-      "PUBLIC_HTTP": 542,
+      "PUBLIC_HTTP": 550,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 69,
-      "REVIEW_INPUT": 438,
+      "REVIEW_INPUT": 446,
       "SOURCE_HUNTER": 13,
-      "SOURCE_REVIEW": 438,
+      "SOURCE_REVIEW": 446,
       "TRAVEL_MOBILITY": 13
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 13,
-    "generated_at": "2026-08-16T19:33:16.316380Z",
+    "generated_at": "2026-08-16T19:49:23.435678Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 556,
-    "review_input_count": 438,
+    "record_count": 564,
+    "review_input_count": 446,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 614,
+    "source_hunter_domains": 624,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -234,7 +234,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-16T18:44:27.025592Z",
+    "updated_at": "2026-08-16T19:31:05.833232Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -314,51 +314,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 1,
+    "free_search_last_added": 3,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "trang sức khuyến mãi Việt Nam",
-      "trang sức ưu đãi Việt Nam",
-      "trang sức voucher Việt Nam",
-      "trang sức promotion Vietnam"
+      "nội thất gia dụng khuyến mãi Việt Nam",
+      "nội thất gia dụng ưu đãi Việt Nam",
+      "nội thất gia dụng voucher Việt Nam",
+      "nội thất gia dụng promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 37,
+    "cc_domain_page": 38,
     "frontier_scheduler": {
-      "active": 448,
+      "active": 459,
       "base_per_host_batch": 16,
-      "deferred": 39552,
+      "deferred": 39541,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 44
+      "unique_hosts": 65
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T14:20:16.388502Z",
-      "domain": "ibaohiem.vn",
-      "radar": false,
-      "url": "https://ibaohiem.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T14:20:16.388502Z",
-      "domain": "ibaoviet.vn",
-      "radar": false,
-      "url": "https://ibaoviet.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T14:20:16.388502Z",
-      "domain": "manulife.com.vn",
-      "radar": false,
-      "url": "https://manulife.com.vn/",
-      "via": "free_search"
-    },
     {
       "at": "2026-08-16T14:20:16.388502Z",
       "domain": "generali.vn",
@@ -1176,6 +1155,27 @@
       "domain": "timan.vn",
       "radar": false,
       "url": "https://timan.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T19:47:00.270496Z",
+      "domain": "beyours.vn",
+      "radar": false,
+      "url": "https://beyours.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T19:47:00.270496Z",
+      "domain": "made4home.com.vn",
+      "radar": false,
+      "url": "https://made4home.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T19:47:00.270496Z",
+      "domain": "nhaxinh.com",
+      "radar": false,
+      "url": "https://nhaxinh.com/",
       "via": "free_search"
     }
   ]
