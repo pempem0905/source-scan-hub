@@ -26,13 +26,14 @@ on:
       - 'l2/browser_run_cdp.py'
       - 'l2/reconcile_bridge_status.py'
       - 'l2/preauth-platforms.json'
+      - 'l2/handoff-request.json'
 
 permissions:
   contents: write
 
 concurrency:
   group: promo-l2-browser-run-bridge
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   bridge:
@@ -53,20 +54,39 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Validate non-secret inputs
+      - name: Resolve non-secret operation
         id: inputs
-        shell: bash
+        shell: python
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_MODE: ${{ inputs.mode }}
+          INPUT_PLATFORM: ${{ inputs.platform }}
+          INPUT_START_URL: ${{ inputs.start_url }}
         run: |
-          set -euo pipefail
-          MODE='${{ github.event.inputs.mode || 'probe' }}'
-          PLATFORM='${{ github.event.inputs.platform || 'probe' }}'
-          START_URL='${{ github.event.inputs.start_url || 'https://example.com/' }}'
-          case "$MODE" in probe|handoff) ;; *) echo 'invalid mode'; exit 2;; esac
-          if ! [[ "$PLATFORM" =~ ^[A-Za-z0-9._-]{1,64}$ ]]; then echo 'invalid platform'; exit 2; fi
-          if ! [[ "$START_URL" =~ ^https?:// ]]; then echo 'invalid start URL'; exit 2; fi
-          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
-          echo "platform=$PLATFORM" >> "$GITHUB_OUTPUT"
-          echo "start_url=$START_URL" >> "$GITHUB_OUTPUT"
+          import json, os, re
+          from pathlib import Path
+          event=os.environ.get('EVENT_NAME','')
+          mode=(os.environ.get('INPUT_MODE') or 'probe').strip()
+          platform=(os.environ.get('INPUT_PLATFORM') or 'probe').strip()
+          start_url=(os.environ.get('INPUT_START_URL') or 'https://example.com/').strip()
+          request={}
+          if event != 'workflow_dispatch':
+              try: request=json.loads(Path('l2/handoff-request.json').read_text())
+              except Exception: request={}
+              if request.get('state') == 'REQUESTED':
+                  mode='handoff'
+                  platform=str(request.get('platform') or '').strip()
+                  registry=json.loads(Path('l2/preauth-platforms.json').read_text())
+                  entry=(registry.get('platforms') or {}).get(platform) or {}
+                  start_url=str(entry.get('start_url') or '').strip()
+              else:
+                  mode='probe'; platform='probe'; start_url='https://example.com/'
+          if mode not in {'probe','handoff'}: raise SystemExit('invalid mode')
+          if not re.fullmatch(r'[A-Za-z0-9._-]{1,64}', platform): raise SystemExit('invalid platform')
+          if not start_url.startswith(('http://','https://')): raise SystemExit('invalid start URL')
+          out=Path(os.environ['GITHUB_OUTPUT'])
+          with out.open('a') as f:
+              f.write(f'mode={mode}\nplatform={platform}\nstart_url={start_url}\n')
 
       - name: Verify secret presence without revealing values
         shell: bash
@@ -85,46 +105,132 @@ jobs:
           cp l2/browser_run_cdp.py /tmp/promo-l2-cdp/bridge.py
           python -m pip install --disable-pip-version-check --no-cache-dir 'websockets>=13,<16' >/dev/null
           python -m py_compile /tmp/promo-l2-cdp/bridge.py l2/reconcile_bridge_status.py
-          echo 'Isolated Browser Run CDP runtime prepared.'
+          cat > /tmp/promo-l2-cdp/run-bridge.sh <<'SH'
+          #!/usr/bin/env bash
+          set +e
+          RC=99
+          : > /tmp/promo-l2-cdp/bridge.log
+          for DELAY in 0 20 60; do
+            if [ "$DELAY" -gt 0 ]; then sleep "$DELAY"; fi
+            python /tmp/promo-l2-cdp/bridge.py "$BRIDGE_MODE" "$BRIDGE_PLATFORM" "$BRIDGE_START_URL" >> /tmp/promo-l2-cdp/bridge.log 2>&1
+            RC=$?
+            [ "$RC" -eq 75 ] || break
+            echo 'BRIDGE_TRANSIENT_BACKOFF' >> /tmp/promo-l2-cdp/bridge.log
+          done
+          printf '%s\n' "$RC" > /tmp/promo-l2-cdp/bridge.rc
+          SH
+          chmod 700 /tmp/promo-l2-cdp/run-bridge.sh
 
-      - name: Execute secure Browser Run bridge with transient backoff
-        id: bridge
+      - name: Start bridge and detect real takeover surface
+        id: launch
         continue-on-error: true
         env:
           BRIDGE_MODE: ${{ steps.inputs.outputs.mode }}
           BRIDGE_PLATFORM: ${{ steps.inputs.outputs.platform }}
           BRIDGE_START_URL: ${{ steps.inputs.outputs.start_url }}
+          L2_TAKEOVER_READY_MARKER: /tmp/promo-l2-cdp/takeover.ready
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f /tmp/promo-l2-cdp/bridge.rc /tmp/promo-l2-cdp/takeover.ready
+          if [ "$BRIDGE_MODE" = 'probe' ]; then
+            /tmp/promo-l2-cdp/run-bridge.sh
+            echo "rc=$(cat /tmp/promo-l2-cdp/bridge.rc)" >> "$GITHUB_OUTPUT"
+            echo 'async=false' >> "$GITHUB_OUTPUT"
+            echo 'takeover_ready=false' >> "$GITHUB_OUTPUT"
+            cat /tmp/promo-l2-cdp/bridge.log
+            exit 0
+          fi
+          nohup /tmp/promo-l2-cdp/run-bridge.sh >/dev/null 2>&1 &
+          echo $! > /tmp/promo-l2-cdp/bridge.pid
+          READY=false
+          for _ in $(seq 1 60); do
+            if [ -f /tmp/promo-l2-cdp/takeover.ready ]; then READY=true; break; fi
+            if [ -f /tmp/promo-l2-cdp/bridge.rc ]; then break; fi
+            sleep 2
+          done
+          echo 'async=true' >> "$GITHUB_OUTPUT"
+          echo "takeover_ready=$READY" >> "$GITHUB_OUTPUT"
+          if [ -f /tmp/promo-l2-cdp/bridge.rc ]; then echo "rc=$(cat /tmp/promo-l2-cdp/bridge.rc)" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Publish active secure takeover readiness
+        if: steps.inputs.outputs.mode == 'handoff' && steps.launch.outputs.takeover_ready == 'true'
+        env:
+          BRIDGE_PLATFORM: ${{ steps.inputs.outputs.platform }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import datetime as dt, json, os
+          from pathlib import Path
+          now=dt.datetime.now(dt.timezone.utc).isoformat().replace('+00:00','Z')
+          p=Path('l2/bridge-runtime-status.json')
+          try: prev=json.loads(p.read_text())
+          except Exception: prev={}
+          payload={
+            'schema':'promo.l2.bridge_runtime_status.v3','provider':'CLOUDFLARE_BROWSER_RUN',
+            'checked_at':now,'last_verified_at':prev.get('last_verified_at'),'mode':'handoff',
+            'platform':os.environ['BRIDGE_PLATFORM'],'state':'TAKEOVER_READY',
+            'browser_session_created':True,'human_handoff_exercised':True,
+            'authenticated_session_reuse_verified':False,'fresh_connection_reuse_required':True,
+            'ready':False,'transient_failure':False,'secret_values_observable':False,
+            'sensitive_runtime_material_persisted':False,
+            'note':'A real Cloudflare Live Session is active. No session IDs, websocket endpoints, Live View URLs, cookies, credentials, OTPs or CAPTCHA data are persisted.'}
+          p.write_text(json.dumps(payload,indent=2)+'\n')
+          PY
+          python3 l2/reconcile_bridge_status.py
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('l2/handoff-request.json')
+          try: d=json.loads(p.read_text())
+          except Exception: d={}
+          if d.get('state')=='REQUESTED':
+              d['state']='ACTIVE'; p.write_text(json.dumps(d,indent=2)+'\n')
+          PY
+          git config user.name "promo-l2-bridge-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add l2/bridge-runtime-status.json l2/bridge-status.json l2/auth-status.json l2/handoff-request.json
+          if ! git diff --cached --quiet; then
+            git commit -m "PROMO L2 secure takeover ready [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Wait for handoff completion
+        if: steps.inputs.outputs.mode == 'handoff' && steps.launch.outputs.async == 'true'
+        id: wait
         shell: bash
         run: |
           set +e
-          RC=99
-          for DELAY in 0 20 60; do
-            if [ "$DELAY" -gt 0 ]; then sleep "$DELAY"; fi
-            python /tmp/promo-l2-cdp/bridge.py "$BRIDGE_MODE" "$BRIDGE_PLATFORM" "$BRIDGE_START_URL"
-            RC=$?
-            [ "$RC" -eq 75 ] || break
-            echo 'Transient Browser Run rate limit; backing off without invalidating prior verification.'
+          for _ in $(seq 1 370); do
+            [ -f /tmp/promo-l2-cdp/bridge.rc ] && break
+            sleep 5
           done
+          if [ ! -f /tmp/promo-l2-cdp/bridge.rc ]; then echo 124 > /tmp/promo-l2-cdp/bridge.rc; fi
+          RC=$(cat /tmp/promo-l2-cdp/bridge.rc)
           echo "rc=$RC" >> "$GITHUB_OUTPUT"
+          cat /tmp/promo-l2-cdp/bridge.log
           exit 0
 
-      - name: Write monotonic non-secret bridge runtime status
+      - name: Write final monotonic non-secret runtime status
         env:
           BRIDGE_MODE: ${{ steps.inputs.outputs.mode }}
           BRIDGE_PLATFORM: ${{ steps.inputs.outputs.platform }}
-          BRIDGE_RC: ${{ steps.bridge.outputs.rc }}
+          LAUNCH_RC: ${{ steps.launch.outputs.rc }}
+          WAIT_RC: ${{ steps.wait.outputs.rc }}
         run: |
           python3 - <<'PY'
           import datetime as dt, json, os
           from pathlib import Path
           mode=os.environ.get('BRIDGE_MODE','probe'); platform=os.environ.get('BRIDGE_PLATFORM','probe')
-          rc=int(os.environ.get('BRIDGE_RC','99') or 99); now=dt.datetime.now(dt.timezone.utc).isoformat().replace('+00:00','Z')
+          raw=os.environ.get('WAIT_RC') or os.environ.get('LAUNCH_RC') or '99'
+          rc=int(raw); now=dt.datetime.now(dt.timezone.utc).isoformat().replace('+00:00','Z')
           p=Path('l2/bridge-runtime-status.json')
           try: prev=json.loads(p.read_text())
           except Exception: prev={}
-          previously_verified=bool(prev.get('browser_session_created')) or prev.get('state') in {'BROWSER_RUN_PROBE_VERIFIED','SESSION_REUSE_VERIFIED'}
-          prev_handoff=bool(prev.get('human_handoff_exercised'))
-          prev_reuse=bool(prev.get('authenticated_session_reuse_verified'))
+          previously_verified=bool(prev.get('browser_session_created')) or prev.get('state') in {'BROWSER_RUN_PROBE_VERIFIED','TAKEOVER_READY','SESSION_REUSE_VERIFIED'}
+          prev_handoff=bool(prev.get('human_handoff_exercised')); prev_reuse=bool(prev.get('authenticated_session_reuse_verified'))
           if mode=='probe' and rc==0:
               state='BROWSER_RUN_PROBE_VERIFIED'; created=True; handoff=prev_handoff; reuse=prev_reuse; last_verified_at=now
           elif mode=='probe' and rc==75:
@@ -136,32 +242,44 @@ jobs:
           elif rc==75:
               state='TRANSIENT_RATE_LIMIT'; created=previously_verified; handoff=prev_handoff; reuse=prev_reuse; last_verified_at=prev.get('last_verified_at')
           else:
-              state='HANDOFF_REUSE_UNVERIFIED' if rc==3 else 'HANDOFF_FAILED'; created=previously_verified; handoff=prev_handoff or rc==3; reuse=prev_reuse; last_verified_at=prev.get('last_verified_at')
+              state='HANDOFF_REUSE_UNVERIFIED' if rc==3 else 'HANDOFF_FAILED'; created=previously_verified; handoff=prev_handoff; reuse=prev_reuse; last_verified_at=prev.get('last_verified_at')
           payload={'schema':'promo.l2.bridge_runtime_status.v3','provider':'CLOUDFLARE_BROWSER_RUN','checked_at':now,'last_verified_at':last_verified_at,'mode':mode,'platform':platform,'state':state,'browser_session_created':created,'human_handoff_exercised':handoff,'authenticated_session_reuse_verified':reuse,'fresh_connection_reuse_required':True,'ready':bool(reuse),'transient_failure':rc==75,'secret_values_observable':False,'sensitive_runtime_material_persisted':False,'note':'No session IDs, websocket endpoints, Live View URLs, cookies, credentials, OTPs or CAPTCHA data are persisted.'}
           p.write_text(json.dumps(payload,indent=2)+'\n')
           PY
+          python3 l2/reconcile_bridge_status.py
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          p=Path('l2/handoff-request.json')
+          if not p.exists(): raise SystemExit(0)
+          try: d=json.loads(p.read_text())
+          except Exception: raise SystemExit(0)
+          if d.get('state') in {'REQUESTED','ACTIVE'}:
+              rt=json.loads(Path('l2/bridge-runtime-status.json').read_text())
+              d['state']='DONE' if rt.get('state')=='SESSION_REUSE_VERIFIED' else 'FAILED'
+              p.write_text(json.dumps(d,indent=2)+'\n')
+          PY
 
-      - name: Reconcile bridge and auth status
-        run: python3 l2/reconcile_bridge_status.py
-
-      - name: Persist only sanitized runtime and readiness status
+      - name: Persist final sanitized readiness status
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "promo-l2-bridge-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add l2/bridge-runtime-status.json l2/bridge-status.json l2/auth-status.json
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m "PROMO L2 bridge readiness status [skip ci]"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          [ -f l2/handoff-request.json ] && git add l2/handoff-request.json
+          if ! git diff --cached --quiet; then
+            git commit -m "PROMO L2 bridge readiness status [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
 
       - name: Security invariant check
         if: always()
         shell: bash
         run: |
           set -euo pipefail
-          if git status --porcelain | grep -E 'l2/.*(session|handoff|cookie|token|takeover|websocket)' >/dev/null; then
+          if git status --porcelain | grep -E 'l2/.*(session|cookie|token|takeover|websocket)' >/dev/null; then
             echo 'Unexpected sensitive-looking runtime artifact detected.'
             exit 3
           fi
@@ -169,11 +287,13 @@ jobs:
 
       - name: Enforce verified result
         env:
-          BRIDGE_RC: ${{ steps.bridge.outputs.rc }}
+          LAUNCH_RC: ${{ steps.launch.outputs.rc }}
+          WAIT_RC: ${{ steps.wait.outputs.rc }}
         shell: bash
         run: |
-          if [ "${BRIDGE_RC:-99}" = '75' ]; then
+          RC="${WAIT_RC:-${LAUNCH_RC:-99}}"
+          if [ "$RC" = '75' ]; then
             echo 'Transient Cloudflare rate limit; preserving prior verified state.'
             exit 0
           fi
-          test "${BRIDGE_RC:-99}" = '0'
+          test "$RC" = '0'
