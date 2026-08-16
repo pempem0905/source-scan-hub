@@ -7,12 +7,16 @@
   "runtime_verified": true,
   "end_to_end_verified": false,
   "runtime_components": {
-    "session_manager": "l2/session_manager.py",
+    "profile_policy": "l2/preauth-platforms.json",
     "secure_cdp_bridge": "l2/browser_run_cdp.py",
+    "status_reconciler": "l2/reconcile_bridge_status.py",
+    "handoff_request": "l2/handoff-request.json",
+    "bounded_retry": "l2/retry_handoff_request.py",
+    "static_selftest": "l2/bridge_selftest.py",
     "workflow": ".github/workflows/promo-l2-browser-run-bridge.yml",
     "human_takeover": "Cloudflare Dashboard > Browser Run > Live Sessions",
     "session_transport": "Cloudflare Browser Run CDP",
-    "session_reuse": "disconnect -> private Cloudflare session discovery -> fresh CDP reconnect",
+    "session_reuse": "private Cloudflare session discovery -> independent fresh CDP connection",
     "residential_fallback": "self-hosted persistent browser profile only when cloud/datacenter blocked"
   },
   "runtime_verification": {
@@ -28,8 +32,9 @@
   },
   "remaining_gate": {
     "state": "PERMISSION_REQUIRED",
-    "reason": "A human must complete one authorized platform login through Cloudflare Browser Run Live Sessions so structured handoff and authenticated-session reuse can be verified end-to-end.",
-    "safe_action": "Run the PROMO L2 Browser Run Bridge workflow in handoff mode for a user-owned/authorized platform, then complete login/MFA/CAPTCHA only inside Cloudflare Live Sessions and mark the handoff Done.",
+    "reason": "One authorized platform must complete a real Cloudflare structured handoff and then pass authenticated-session reuse from an independent fresh L2 connection.",
+    "safe_action": "No login action is required until status becomes TAKEOVER_READY. When Telegram/Login Center reports LOGIN_REQUIRED, open Cloudflare Dashboard > Browser Run > Live Sessions and complete login/MFA/CAPTCHA only there, then mark the handoff complete.",
+    "automatic_retry": "Rate-limited handoff requests are re-armed after a bounded cooldown without lowering the previously verified Browser Run baseline.",
     "do_not_share": [
       "password",
       "OTP",
@@ -53,7 +58,7 @@
     "takeover_urls_in_logs": false,
     "one_platform_failure_pauses_others": false
   },
-  "readiness_rule": "Do not mark READY until a real Browser Run session has been created, structured human takeover has completed, and the authenticated session has been rediscovered and reused from a fresh L2 CDP connection without persisting sensitive session material.",
+  "readiness_rule": "Do not mark READY until a real Browser Run session has been created, structured human takeover has completed, and the authenticated session has been rediscovered and reused from an independent fresh L2 CDP connection without persisting sensitive session material.",
   "fallback_readiness_rule": "For cloud/datacenter-blocked sites, require an online self-hosted residential runner with a platform-isolated persistent profile before marking that platform READY.",
   "last_reconciled_at": "2026-08-16T18:44:27.025576Z"
 }
