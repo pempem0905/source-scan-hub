@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 const APIFY_BASE = "https://api.apify.com/v2";
 const ONE_SHOT = "resume120-20260816-1449-x7p4";
 const DISPLAY_BASE_URL = "https://source-scan-hub.lovable.app";
-const EXPIRES_AT = Date.parse("2026-08-16T08:30:00Z");
+const EXPIRES_AT = Date.parse("2026-08-16T08:45:00Z");
 
 function secret(name:string){ const v=process.env[name]; if(!v) throw new Error(`${name} missing`); return v; }
 async function apify(path:string, init:RequestInit={}){
@@ -19,8 +19,8 @@ export const Route=createFileRoute("/api/temp-resume-apify120")({server:{handler
     const [schedules,actors,limitsBefore,stores]=await Promise.all([
       apify("/schedules?limit=1000"),apify("/acts?limit=1000"),apify("/users/me/limits"),apify("/key-value-stores?limit=1000")
     ]);
-    if(Number(limitsBefore?.limits?.maxMonthlyUsageUsd??0)<120){
-      await apify("/users/me/limits",{method:"PUT",body:JSON.stringify({maxMonthlyUsageUsd:120})});
+    if(Number(limitsBefore?.limits?.maxMonthlyUsageUsd??0)<100){
+      await apify("/users/me/limits",{method:"PUT",body:JSON.stringify({maxMonthlyUsageUsd:100})});
     }
     const limits=await apify("/users/me/limits");
     const schedule=(schedules.items??[]).find((s:any)=>s.name==="source-scan-native-autopilot");
@@ -29,13 +29,13 @@ export const Route=createFileRoute("/api/temp-resume-apify120")({server:{handler
     if(!schedule||!orchestrator||!worker) throw new Error("native schedule/actors missing");
     const action=schedule.actions?.[0];
     const oldInput=action?.runInput?.body?JSON.parse(action.runInput.body):{};
-    const runInput={...oldInput,workerActorId:worker.id,dailyBudgetUsd:60,projectBudgetUsd:120,maxConcurrentJobs:Math.max(2,Number(limits?.limits?.maxConcurrentActorJobs??32)),displayBaseUrl:DISPLAY_BASE_URL,displayToken:secret("SOURCE_WORKER_TOKEN")};
+    const runInput={...oldInput,workerActorId:worker.id,dailyBudgetUsd:60,projectBudgetUsd:100,maxConcurrentJobs:Math.max(2,Number(limits?.limits?.maxConcurrentActorJobs??32)),displayBaseUrl:DISPLAY_BASE_URL,displayToken:secret("SOURCE_WORKER_TOKEN")};
     const scheduleBody={name:schedule.name,title:schedule.title,description:schedule.description,isEnabled:true,isExclusive:true,cronExpression:"*/15 * * * *",timezone:"Asia/Ho_Chi_Minh",actions:[{...action,runInput:{body:JSON.stringify(runInput),contentType:"application/json; charset=utf-8"}}]};
     const updated=await apify(`/schedules/${encodeURIComponent(schedule.id)}`,{method:"PUT",body:JSON.stringify(scheduleBody)});
     const runtime=(stores.items??[]).find((s:any)=>s.name==="source-scan-native-runtime-v1");
     const budget=runtime?await apify(`/key-value-stores/${runtime.id}/records/BUDGET`).catch(()=>null):null;
     const params=new URLSearchParams({memory:"256",timeout:"10800",build:"latest",maxTotalChargeUsd:"0.75",forcePermissionLevel:"FULL_PERMISSIONS"});
     const run=await apify(`/acts/${encodeURIComponent(orchestrator.id)}/runs?${params.toString()}`,{method:"POST",body:JSON.stringify({...runInput,forceLease:true})});
-    return Response.json({ok:true,dailyBudgetUsd:60,projectBudgetUsd:120,budget,monthly:{beforeLimitUsd:limitsBefore?.limits?.maxMonthlyUsageUsd,currentUsageUsd:limits?.current?.monthlyUsageUsd,afterLimitUsd:limits?.limits?.maxMonthlyUsageUsd},schedule:{id:updated.id,enabled:updated.isEnabled,nextRunAt:updated.nextRunAt},limits:{max:limits?.limits?.maxConcurrentActorJobs,active:limits?.current?.activeActorJobCount},run:{id:run.id,status:run.status}});
+    return Response.json({ok:true,dailyBudgetUsd:60,projectBudgetUsd:100,budget,monthly:{beforeLimitUsd:limitsBefore?.limits?.maxMonthlyUsageUsd,currentUsageUsd:limits?.current?.monthlyUsageUsd,afterLimitUsd:limits?.limits?.maxMonthlyUsageUsd},schedule:{id:updated.id,enabled:updated.isEnabled,nextRunAt:updated.nextRunAt},limits:{max:limits?.limits?.maxConcurrentActorJobs,active:limits?.current?.activeActorJobCount},run:{id:run.id,status:run.status}});
   }catch(e){return Response.json({ok:false,error:e instanceof Error?e.message:String(e)},{status:500})}
 }}}});
