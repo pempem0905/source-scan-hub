@@ -9,6 +9,7 @@ decathlon.vn
 food.grab.com
 gigamall.com.vn
 grab.com
+growth-public.grab.com
 hdbank.com.vn
 homefarm.vn
 juno.vn
