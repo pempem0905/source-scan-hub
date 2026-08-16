@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 const APIFY_BASE = "https://api.apify.com/v2";
 const ONE_SHOT = "resume120-20260816-1449-x7p4";
 const DISPLAY_BASE_URL = "https://source-scan-hub.lovable.app";
-const EXPIRES_AT = Date.parse("2026-08-16T08:15:00Z");
+const EXPIRES_AT = Date.parse("2026-08-16T08:30:00Z");
 
 function secret(name:string){ const v=process.env[name]; if(!v) throw new Error(`${name} missing`); return v; }
 async function apify(path:string, init:RequestInit={}){
@@ -16,9 +16,13 @@ export const Route=createFileRoute("/api/temp-resume-apify120")({server:{handler
   try{
     if(Date.now()>EXPIRES_AT) return Response.json({ok:false,error:"expired"},{status:410});
     if(request.headers.get("x-one-shot")!==ONE_SHOT) return Response.json({ok:false},{status:401});
-    const [schedules,actors,limits,stores]=await Promise.all([
+    const [schedules,actors,limitsBefore,stores]=await Promise.all([
       apify("/schedules?limit=1000"),apify("/acts?limit=1000"),apify("/users/me/limits"),apify("/key-value-stores?limit=1000")
     ]);
+    if(Number(limitsBefore?.limits?.maxMonthlyUsageUsd??0)<120){
+      await apify("/users/me/limits",{method:"PUT",body:JSON.stringify({maxMonthlyUsageUsd:120})});
+    }
+    const limits=await apify("/users/me/limits");
     const schedule=(schedules.items??[]).find((s:any)=>s.name==="source-scan-native-autopilot");
     const orchestrator=(actors.items??[]).find((a:any)=>a.name==="source-scan-native-orchestrator");
     const worker=(actors.items??[]).find((a:any)=>a.name==="source-scan-native-worker");
@@ -32,6 +36,6 @@ export const Route=createFileRoute("/api/temp-resume-apify120")({server:{handler
     const budget=runtime?await apify(`/key-value-stores/${runtime.id}/records/BUDGET`).catch(()=>null):null;
     const params=new URLSearchParams({memory:"256",timeout:"10800",build:"latest",maxTotalChargeUsd:"0.75",forcePermissionLevel:"FULL_PERMISSIONS"});
     const run=await apify(`/acts/${encodeURIComponent(orchestrator.id)}/runs?${params.toString()}`,{method:"POST",body:JSON.stringify({...runInput,forceLease:true})});
-    return Response.json({ok:true,dailyBudgetUsd:60,projectBudgetUsd:120,budget,schedule:{id:updated.id,enabled:updated.isEnabled,nextRunAt:updated.nextRunAt},limits:{max:limits?.limits?.maxConcurrentActorJobs,active:limits?.current?.activeActorJobCount},run:{id:run.id,status:run.status}});
+    return Response.json({ok:true,dailyBudgetUsd:60,projectBudgetUsd:120,budget,monthly:{beforeLimitUsd:limitsBefore?.limits?.maxMonthlyUsageUsd,currentUsageUsd:limits?.current?.monthlyUsageUsd,afterLimitUsd:limits?.limits?.maxMonthlyUsageUsd},schedule:{id:updated.id,enabled:updated.isEnabled,nextRunAt:updated.nextRunAt},limits:{max:limits?.limits?.maxConcurrentActorJobs,active:limits?.current?.activeActorJobCount},run:{id:run.id,status:run.status}});
   }catch(e){return Response.json({ok:false,error:e instanceof Error?e.message:String(e)},{status:500})}
 }}}});
