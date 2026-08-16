@@ -46,11 +46,31 @@ def fail(message: str, code: int = 2) -> None:
     raise SystemExit(code)
 
 
+def exception_status(exc: BaseException) -> int | None:
+    if isinstance(exc, urllib.error.HTTPError):
+        return int(exc.code)
+    response = getattr(exc, "response", None)
+    status = getattr(response, "status_code", None) or getattr(response, "status", None)
+    try:
+        return int(status) if status is not None else None
+    except Exception:
+        return None
+
+
 def transient_rate_limit(exc: BaseException) -> bool:
-    if isinstance(exc, urllib.error.HTTPError) and exc.code == 429:
+    status = exception_status(exc)
+    if status == 429:
         return True
     text = str(exc).lower()
     return "429" in text or "rate limit" in text or "too many requests" in text
+
+
+def safe_diagnostic(exc: BaseException) -> str:
+    # Intentionally expose only exception class and numeric HTTP status. Never
+    # include exception text because websocket/HTTP errors can contain URLs.
+    status = exception_status(exc)
+    suffix = f" http_status={status}" if status is not None else ""
+    return f"type={type(exc).__name__}{suffix}"
 
 
 def http_json(url: str) -> Any:
@@ -256,8 +276,6 @@ async def handoff(platform: str, start_url: str) -> None:
         print(f"HANDOFF_COMPLETE_REUSE_UNVERIFIED platform={safe_platform(platform)}")
         raise SystemExit(3)
 
-    # Disconnect only. Do not issue Browser.close: the remote browser must remain
-    # alive long enough for a completely fresh L2 control connection to reuse it.
     await ws.close()
     await asyncio.sleep(1.5)
     reconnect_endpoint = discover_live_session_for_host(expected_host)
@@ -276,7 +294,6 @@ async def handoff(platform: str, start_url: str) -> None:
             raise SystemExit(3)
         print(f"HANDOFF_COMPLETE_SESSION_REUSE_VERIFIED platform={safe_platform(platform)} reconnect=fresh")
     finally:
-        # Disconnect the L2 consumer without closing the remote Browser Run session.
         await ws2.close()
 
 
@@ -301,6 +318,7 @@ async def main() -> None:
         if transient_rate_limit(exc):
             print("BRIDGE_TRANSIENT_RATE_LIMIT", file=sys.stderr)
             raise SystemExit(75)
+        print(f"BRIDGE_DIAGNOSTIC {safe_diagnostic(exc)}", file=sys.stderr)
         fail("Cloudflare Browser Run operation failed")
 
 
