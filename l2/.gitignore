@@ -1,0 +1,10 @@
+profiles/
+sessions/
+playwright/.auth/
+*storage-state*.json
+*cookies*.json
+*session*.json
+*.har
+*.trace.zip
+.env
+.env.*
