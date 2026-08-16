@@ -26,13 +26,14 @@ TRACKING = {
     "subid", "sub_id", "ref", "referrer",
 }
 RADAR_RE = re.compile(r"(bloggiamgia|picodi|magiamgia|giamgia|coupon|voucher|sandeal|dealhot|dealngon|accesstrade|adpia|masoffer|involve\.asia|ecomobi|noti\.sale)", re.I)
-BANK_RE = re.compile(r"(bank|ngan.?hang|ngân.?hàng|vpbank|vietcombank|techcombank|acb|mbbank|hdbank|ocb|vib|sacombank|card|visa|mastercard|jcb)", re.I)
-PAY_RE = re.compile(r"(momo|zalopay|vnpay|shopeepay|wallet|payment|paylater|spaylater)", re.I)
-TRAVEL_RE = re.compile(r"(travel|hotel|airline|flight|booking|agoda|traveloka|trip\.com|grab|transport|mobility)", re.I)
-FOOD_RE = re.compile(r"(food|restaurant|coffee|cafe|kfc|jollibee|lotteria|phuclong|highlands|pizza|grabfood|shopeefood)", re.I)
-RETAIL_RE = re.compile(r"(shop|store|retail|mart|mall|shopee|lazada|tiki|fptshop|cellphones|dienmay|thegioididong|winmart|aeon|pnj|pharmacy|pharmacity|longchau|fashion|beauty)", re.I)
-LOYALTY_RE = re.compile(r"(loyalty|reward|member|membership|smember|point|redeem|đổi.?quà|doi.?qua)", re.I)
+BANK_RE = re.compile(r"(bank|ngan.?hang|ngân.?hàng|vpbank|vietcombank|techcombank|acb|mbbank|hdbank|ocb|vib|sacombank|bidv|tpbank|\btpb\b|\bshb\b|hsbc|citibank|standard.?chartered|shinhan|woori|seabank|eximbank|msb|namabank|vietinbank|agribank|card|visa|mastercard|jcb)", re.I)
+PAY_RE = re.compile(r"(momo|zalopay|vnpay|vnpt.?pay|vnpt.?money|shopeepay|wallet|payment|paylater|spaylater|ví.?điện.?tử|vi.?dien.?tu)", re.I)
+TRAVEL_RE = re.compile(r"(travel|hotel|airline|flight|booking|agoda|traveloka|trip\.com|vietjet|vietnam.?airlines|klook|vinpearl|transport|mobility)", re.I)
+FOOD_RE = re.compile(r"(food|restaurant|coffee|cafe|kfc|jollibee|lotteria|phuclong|phúc.?long|highlands|pizza|grabfood|shopeefood|thecoffeehouse|coffee.?house)", re.I)
+RETAIL_RE = re.compile(r"(shop|store|retail|mart|mall|supermarket|siêu.?thị|sieu.?thi|bách.?hóa|bach.?hoa|circle.?k|coop|shopee|lazada|tiki|fptshop|cellphones|dienmay|điện.?máy|thegioididong|winmart|aeon|pnj|pharmacy|pharmacity|longchau|guardian|watsons|fashion|beauty|cinema|cine|cgv|lottecinema|yody|uniqlo|nike|decathlon|concung|con.?cưng)", re.I)
+LOYALTY_RE = re.compile(r"(loyalty|reward|member|membership|smember|point|redeem|đổi.?quà|doi.?qua|taptap|urbox|gotit)", re.I)
 PROMO_PATH_RE = re.compile(r"(khuyen|uu-dai|uudai|voucher|coupon|promo|offer|deal|sale|reward|loyalty)", re.I)
+LOGIN_PATH_RE = re.compile(r"/(login|signin|sign-in|dang-nhap)(?:/|$|\?)", re.I)
 
 
 def now():
@@ -95,8 +96,8 @@ def source_id(domain):
 
 def vertical_for(text):
     text = text or ""
-    if BANK_RE.search(text): return "BANK_CARD"
     if PAY_RE.search(text): return "PAYMENT_WALLET"
+    if BANK_RE.search(text): return "BANK_CARD"
     if LOYALTY_RE.search(text): return "LOYALTY_REWARDS"
     if TRAVEL_RE.search(text): return "TRAVEL_MOBILITY"
     if FOOD_RE.search(text): return "FOOD_BEVERAGE"
@@ -109,8 +110,6 @@ def worker_for(vertical, access_class):
         return "PROMO_L2"
     if vertical in {"BANK_CARD", "PAYMENT_WALLET", "TRAVEL_MOBILITY"}:
         return "PROMO_BANKS"
-    if vertical in {"RETAIL_ECOMMERCE", "FOOD_BEVERAGE", "LOYALTY_REWARDS", "GENERAL"}:
-        return "PROMO_RETAIL"
     return "PROMO_RETAIL"
 
 
@@ -154,35 +153,31 @@ def main():
 
     if EVIDENCE.exists():
         for line in EVIDENCE.read_text(errors="replace").splitlines():
-            try:
-                r = json.loads(line)
-            except Exception:
-                continue
+            try: r = json.loads(line)
+            except Exception: continue
             add(url=r.get("url"), domain=r.get("domain"), origin="SOURCE_HUNTER_EVIDENCE", via=r.get("via"))
 
     for path, origin in ((PROMO_EXPORT, "PROMO_CANONICAL_EXPORT"), (LEGACY_SEED, "PROMO_LEGACY_SEED")):
         if not path.exists():
             continue
         for line in path.read_text(errors="replace").splitlines():
-            try:
-                r = json.loads(line)
-            except Exception:
-                continue
+            try: r = json.loads(line)
+            except Exception: continue
             url = r.get("source_url") or r.get("canonical_url") or r.get("url")
             domain = r.get("registrable_domain") or r.get("official_domain") or r.get("domain")
             if domain and "/" in domain and not domain.startswith("http"):
                 domain = domain.split("/", 1)[0]
             add(url=url, domain=domain, name=r.get("source_brand") or r.get("brand") or r.get("name"), origin=origin, via=r.get("via") or r.get("source_type"), extra=r)
 
-    records = []
-    dispatch = []
+    records, dispatch = [], []
     counts = defaultdict(int)
     for rd, g in groups.items():
         eps = sorted(g["entry_points"], key=lambda u: (0 if PROMO_PATH_RE.search(urlsplit(u).path) else 1, len(u), u))
         text = " ".join([rd, " ".join(g["names"]), " ".join(eps[:8])])
         vertical = vertical_for(text)
         obs = g["access_observations"]
-        if obs.get("LOGIN_REQUIRED"):
+        explicit_login = any(LOGIN_PATH_RE.search(urlsplit(u).path) for u in eps)
+        if obs.get("LOGIN_REQUIRED") or explicit_login:
             access = "AUTHORIZED_ACCOUNT"
         elif obs.get("BLOCKED_DATACENTER"):
             access = "RESIDENTIAL_REQUIRED"
@@ -197,45 +192,33 @@ def main():
         source_type = "DISCOVERY_NODE" if radar else "DIRECT_SOURCE_CANDIDATE"
         worker = worker_for(vertical, access)
         rec = {
-            "schema": "promo.master_input_source.v1",
-            "source_id": g["source_id"],
-            "registrable_domain": rd,
-            "hostnames": sorted(g["hostnames"]),
-            "canonical_root_url": f"https://{rd}/",
-            "entry_points": eps[:40],
-            "representative_names": sorted(g["names"])[:12],
-            "source_type": source_type,
-            "vertical": vertical,
-            "access_class": access,
-            "crawl_priority": priority,
-            "origins": sorted(g["origins"]),
-            "discovery_methods": sorted(g["discovery_methods"]),
-            "legacy_first_batch": g["legacy_first_batch"],
-            "legacy_last_batch": g["legacy_last_batch"],
-            "status": "ACTIVE_INPUT",
-            "writer": "PROMO-SRC-HUNTER-V1",
+            "schema": "promo.master_input_source.v1", "source_id": g["source_id"],
+            "registrable_domain": rd, "hostnames": sorted(g["hostnames"]),
+            "canonical_root_url": f"https://{rd}/", "entry_points": eps[:40],
+            "representative_names": sorted(g["names"])[:12], "source_type": source_type,
+            "vertical": vertical, "access_class": access, "crawl_priority": priority,
+            "origins": sorted(g["origins"]), "discovery_methods": sorted(g["discovery_methods"]),
+            "legacy_first_batch": g["legacy_first_batch"], "legacy_last_batch": g["legacy_last_batch"],
+            "status": "ACTIVE_INPUT", "writer": "PROMO-SRC-HUNTER-V1",
         }
         records.append(rec)
         dispatch.append({
-            "schema": "promo.dispatch.v1", "source_id": g["source_id"],
-            "registrable_domain": rd, "vertical": vertical, "access_class": access,
-            "assigned_lane": worker, "priority": priority, "status": "ELIGIBLE",
+            "schema": "promo.dispatch.v1", "source_id": g["source_id"], "registrable_domain": rd,
+            "vertical": vertical, "access_class": access, "assigned_lane": worker,
+            "priority": priority, "status": "ELIGIBLE",
         })
-        counts[vertical] += 1
-        counts[access] += 1
-        counts[worker] += 1
+        counts[vertical] += 1; counts[access] += 1; counts[worker] += 1
 
     records.sort(key=lambda r: (-r["crawl_priority"], r["registrable_domain"]))
     dispatch.sort(key=lambda r: (-r["priority"], r["registrable_domain"]))
     OUT.write_text("".join(json.dumps(r, ensure_ascii=False, sort_keys=True) + "\n" for r in records), encoding="utf-8")
     DISPATCH.write_text("".join(json.dumps(r, ensure_ascii=False, sort_keys=True) + "\n" for r in dispatch), encoding="utf-8")
     status = {
-        "schema": "promo.master_input_status.v1", "generated_at": now(),
-        "project_id": "PROMO-SRC-HUNTER-V1", "record_count": len(records),
-        "source_hunter_domains": sum(1 for _ in DOMAINS.read_text(errors="replace").splitlines() if _.strip()) if DOMAINS.exists() else 0,
+        "schema": "promo.master_input_status.v1", "generated_at": now(), "project_id": "PROMO-SRC-HUNTER-V1",
+        "record_count": len(records),
+        "source_hunter_domains": sum(1 for x in DOMAINS.read_text(errors="replace").splitlines() if x.strip()) if DOMAINS.exists() else 0,
         "promo_export_present": PROMO_EXPORT.exists(), "legacy_seed_present": LEGACY_SEED.exists(),
-        "counts": dict(sorted(counts.items())),
-        "dedupe_key": "registrable_domain", "url_key": "canonical_url",
+        "counts": dict(sorted(counts.items())), "dedupe_key": "registrable_domain", "url_key": "canonical_url",
         "production_write": False, "mode": "BRIDGE_SHADOW",
     }
     STATUS.write_text(json.dumps(status, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
