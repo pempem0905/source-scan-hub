@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
 """Secure Cloudflare Browser Run CDP bridge for PROMO L2.
 
-This runtime intentionally keeps all sensitive Browser Run material in memory:
-API tokens, browser/session IDs, target IDs, websocket URLs, Live View URLs,
-cookies/storage and handoff identifiers are never printed or persisted.
+Sensitive Browser Run material stays in memory only: API tokens, browser/session
+IDs, websocket URLs, Live View URLs, cookies/storage and handoff identifiers are
+never printed or persisted.
 
 Modes:
   probe   - create a real Browser Run CDP session and verify browser control.
   handoff - navigate to an authorized platform, request structured human handoff,
-            then disconnect, rediscover the live session via Cloudflare API,
-            reconnect as a fresh L2 consumer and verify authenticated state reuse.
-
-The human takeover surface is Cloudflare Dashboard > Browser Run > Live Sessions;
-the ephemeral Live View URL is generated to prove capability but is not exposed.
+            disconnect without closing the remote browser, rediscover the live
+            session through Cloudflare's private API, reconnect from a fresh CDP
+            connection, and verify authenticated state reuse.
 """
 from __future__ import annotations
 
@@ -22,6 +20,7 @@ import os
 import re
 import ssl
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
@@ -43,9 +42,15 @@ def safe_platform(value: str) -> str:
 
 
 def fail(message: str, code: int = 2) -> None:
-    # Keep errors generic. Never include exception repr/URLs/session material.
     print(f"BRIDGE_ERROR {message[:180]}", file=sys.stderr)
     raise SystemExit(code)
+
+
+def transient_rate_limit(exc: BaseException) -> bool:
+    if isinstance(exc, urllib.error.HTTPError) and exc.code == 429:
+        return True
+    text = str(exc).lower()
+    return "429" in text or "rate limit" in text or "too many requests" in text
 
 
 def http_json(url: str) -> Any:
@@ -72,7 +77,6 @@ class CDP:
         while True:
             msg = json.loads(await self.ws.recv())
             if msg.get("id") != request_id:
-                # Events are intentionally ignored here; handoff uses wait_event.
                 continue
             if "error" in msg:
                 raise RuntimeError(f"CDP command failed: {method}")
@@ -97,9 +101,24 @@ async def open_socket(endpoint: str):
     )
 
 
-async def attach_page(cdp: CDP, start_url: str | None = None) -> tuple[str, str]:
+def host_of(url: str) -> str:
+    try:
+        return (urllib.parse.urlsplit(url).hostname or "").lower()
+    except Exception:
+        return ""
+
+
+def same_host_or_subdomain(candidate: str, expected: str) -> bool:
+    return candidate == expected or candidate.endswith("." + expected) or expected.endswith("." + candidate)
+
+
+async def attach_page(cdp: CDP, start_url: str | None = None, desired_host: str | None = None) -> tuple[str, str]:
     targets = (await cdp.call("Target.getTargets")).get("targetInfos", [])
-    page = next((t for t in targets if t.get("type") == "page"), None)
+    pages = [t for t in targets if t.get("type") == "page"]
+    page = None
+    if desired_host:
+        page = next((t for t in pages if same_host_or_subdomain(host_of(str(t.get("url") or "")), desired_host)), None)
+    page = page or next((t for t in pages if str(t.get("url") or "") != "about:blank"), None) or (pages[0] if pages else None)
     if page is None:
         created = await cdp.call("Target.createTarget", {"url": start_url or "about:blank"})
         target_id = created.get("targetId")
@@ -134,20 +153,12 @@ async def cookie_count(cdp: CDP, session_id: str) -> int:
     return len(result.get("cookies") or [])
 
 
-def host_of(url: str) -> str:
-    try:
-        return (urllib.parse.urlsplit(url).hostname or "").lower()
-    except Exception:
-        return ""
-
-
 def discover_live_session_for_host(host: str) -> str | None:
     sessions = http_json(f"{API_HTTP}/session")
     if isinstance(sessions, dict) and "result" in sessions:
         sessions = sessions.get("result")
     if not isinstance(sessions, list):
         return None
-    # Newest first where timestamps are available.
     sessions = sorted(sessions, key=lambda x: x.get("lastUpdated") or x.get("startTime") or 0, reverse=True)
     for item in sessions:
         sid = item.get("sessionId")
@@ -159,12 +170,16 @@ def discover_live_session_for_host(host: str) -> str | None:
                 targets = targets.get("result")
             if not isinstance(targets, list):
                 continue
-            if not any(host_of(str(t.get("url") or "")) == host for t in targets):
+            if not any(same_host_or_subdomain(host_of(str(t.get("url") or "")), host) for t in targets):
                 continue
             ws = item.get("webSocketDebuggerUrl")
             if ws:
                 return str(ws)
             return f"wss://api.cloudflare.com/client/v4/accounts/{urllib.parse.quote(ACCOUNT_ID, safe='')}/browser-rendering/devtools/browser/{urllib.parse.quote(str(sid), safe='')}"
+        except urllib.error.HTTPError as exc:
+            if exc.code == 429:
+                raise
+            continue
         except Exception:
             continue
     return None
@@ -181,7 +196,6 @@ async def probe(platform: str, start_url: str) -> None:
         if not (await current_url(cdp, page_session)).startswith(("http://", "https://")):
             raise RuntimeError("navigation verification failed")
         print(f"BROWSER_SESSION_CREATE_VERIFIED platform={safe_platform(platform)} cdp_control=true")
-        # Probe does not need persistence; close the browser process explicitly.
         try:
             await cdp.call("Browser.close")
         except Exception:
@@ -199,7 +213,6 @@ async def handoff(platform: str, start_url: str) -> None:
     cdp = CDP(ws)
     _, page_session = await attach_page(cdp, start_url)
 
-    # Generate Live View to prove human takeover capability but never expose URL.
     live = await cdp.call(
         "Cloudflare.getLiveView",
         {"mode": "tab", "expiresInMs": 300_000},
@@ -227,7 +240,6 @@ async def handoff(platform: str, start_url: str) -> None:
         await ws.close()
         raise RuntimeError("handoff not completed")
 
-    before_url = await current_url(cdp, page_session)
     before_count = await cookie_count(cdp, page_session)
     await cdp.call("Page.reload", {"ignoreCache": False}, session_id=page_session)
     await asyncio.sleep(2.0)
@@ -237,18 +249,17 @@ async def handoff(platform: str, start_url: str) -> None:
         after_url.startswith(("http://", "https://"))
         and before_count > 0
         and after_count > 0
-        and (not LOGIN_RE.search(after_url) or not LOGIN_RE.search(before_url))
+        and not LOGIN_RE.search(after_url)
     )
     if not first_pass:
         await ws.close()
         print(f"HANDOFF_COMPLETE_REUSE_UNVERIFIED platform={safe_platform(platform)}")
         raise SystemExit(3)
 
-    # Disconnect without Browser.close, then rediscover the live session using only
-    # Cloudflare's private API. This proves L2 can reuse the authenticated browser
-    # from a fresh control connection without persisting a session identifier.
+    # Disconnect only. Do not issue Browser.close: the remote browser must remain
+    # alive long enough for a completely fresh L2 control connection to reuse it.
     await ws.close()
-    await asyncio.sleep(1.0)
+    await asyncio.sleep(1.5)
     reconnect_endpoint = discover_live_session_for_host(expected_host)
     if not reconnect_endpoint:
         print(f"HANDOFF_COMPLETE_REUSE_UNVERIFIED platform={safe_platform(platform)}")
@@ -257,14 +268,15 @@ async def handoff(platform: str, start_url: str) -> None:
     ws2 = await open_socket(reconnect_endpoint)
     try:
         cdp2 = CDP(ws2)
-        _, page_session2 = await attach_page(cdp2)
+        _, page_session2 = await attach_page(cdp2, desired_host=expected_host)
         url2 = await current_url(cdp2, page_session2)
         cookies2 = await cookie_count(cdp2, page_session2)
-        if cookies2 <= 0 or LOGIN_RE.search(url2):
+        if cookies2 <= 0 or LOGIN_RE.search(url2) or not same_host_or_subdomain(host_of(url2), expected_host):
             print(f"HANDOFF_COMPLETE_REUSE_UNVERIFIED platform={safe_platform(platform)}")
             raise SystemExit(3)
-        print(f"HANDOFF_COMPLETE_SESSION_REUSE_VERIFIED platform={safe_platform(platform)} reconnect=true")
+        print(f"HANDOFF_COMPLETE_SESSION_REUSE_VERIFIED platform={safe_platform(platform)} reconnect=fresh")
     finally:
+        # Disconnect the L2 consumer without closing the remote Browser Run session.
         await ws2.close()
 
 
@@ -285,7 +297,10 @@ async def main() -> None:
             await handoff(platform, start_url)
     except SystemExit:
         raise
-    except Exception:
+    except Exception as exc:
+        if transient_rate_limit(exc):
+            print("BRIDGE_TRANSIENT_RATE_LIMIT", file=sys.stderr)
+            raise SystemExit(75)
         fail("Cloudflare Browser Run operation failed")
 
 
