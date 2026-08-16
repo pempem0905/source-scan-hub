@@ -13,6 +13,7 @@ cellphones.com.vn
 centralretail.com.vn
 chanhtuoi.com
 chothuocvang.com
+cinestar.com.vn
 circlek.com.vn
 clickbuy.com.vn
 co-opmart.com.vn
@@ -22,9 +23,11 @@ corporate.visa.com
 crescentmall.com.vn
 crocs.com.vn
 danhgiathuonghieu.vn
+dealngon.vn
 decathlon.vn
 didongviet.vn
 dienmaycholon.com
+dingteavoucher.vn
 elly.vn
 eropi.com
 eximbank.com.vn
@@ -43,6 +46,7 @@ hasaki.vn
 hdbank.com.vn
 help.cs.shopeepay.vn
 help.shopee.vn
+highlandsvoucher.com
 homefarm.vn
 homefurni.vn
 hotdeal.vn
@@ -75,6 +79,7 @@ meoi.com.vn
 metric.vn
 mmvietnam.com
 momo.vn
+moveek.com
 mytour.vn
 namanmarket.com
 nanakids.vn
@@ -98,6 +103,7 @@ pnj.com.vn
 pos365.vn
 posapp.vn
 prime.vpbank.com.vn
+rapchieuphim.com
 rfoods.com.vn
 sammishop.com
 sapo.vn
@@ -140,6 +146,7 @@ vn.trip.com
 vnba.org.vn
 vneconomy.vn
 vnexpress.net
+vnpay.vn
 voshop.vn
 voucheranuong.com
 voucherhighlands.chanhtuoi.com

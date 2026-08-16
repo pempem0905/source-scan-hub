@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-16T12:02:06.540274Z",
+  "generated_at": "2026-08-16T12:29:43.748375Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 7540,
-    "frontier_deferred_pending": 38736,
-    "frontier_pending": 46276,
-    "last_6_runs_new_domains": 89,
+    "frontier_active_pending": 6597,
+    "frontier_deferred_pending": 38969,
+    "frontier_pending": 45566,
+    "last_6_runs_new_domains": 80,
     "last_run": {
-      "at": "2026-08-16T11:56:17.936506Z",
+      "at": "2026-08-16T12:25:47.545218Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*uu-dai*",
-        "*.vn/*uudai*",
-        "*.vn/*voucher*",
-        "*.vn/*promotion*"
+        "*.vn/*offers*",
+        "*.vn/*deals*",
+        "*.vn/*sale*",
+        "*.com/vn/*khuyen-mai*"
       ],
-      "duration_s": 347.8,
-      "errors": 158,
-      "frontier_pending": 46276,
-      "new_domains": 11,
-      "processed": 1264,
-      "rate403": 0.396,
-      "rate429": 1.266
+      "duration_s": 235.4,
+      "errors": 104,
+      "frontier_pending": 45566,
+      "new_domains": 7,
+      "processed": 1031,
+      "rate403": 0.485,
+      "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-25",
-    "master_domains": 149,
+    "master_domains": 156,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 17,
+    "run_count": 18,
     "running": true,
-    "seen_urls": 68416,
-    "updated_at": "2026-08-16T12:02:05.768352Z"
+    "seen_urls": 75028,
+    "updated_at": "2026-08-16T12:29:42.990910Z"
   },
   "master_input": {
     "active_input_count": 93,
@@ -39,35 +39,35 @@
       "ACTIVE_INPUT": 93,
       "AUTHORIZED_ACCOUNT": 2,
       "BANK_CARD": 21,
-      "DISCOVERY_ONLY": 7,
-      "FOOD_BEVERAGE": 12,
-      "GENERAL": 92,
+      "DISCOVERY_ONLY": 10,
+      "FOOD_BEVERAGE": 13,
+      "GENERAL": 96,
       "LOYALTY_REWARDS": 6,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 25,
       "PROMO_L2": 13,
       "PROMO_RETAIL": 55,
-      "PUBLIC_HTTP": 185,
+      "PUBLIC_HTTP": 191,
       "RESIDENTIAL_REQUIRED": 11,
-      "RETAIL_ECOMMERCE": 53,
-      "REVIEW_INPUT": 98,
-      "SOURCE_HUNTER": 7,
-      "SOURCE_REVIEW": 98,
+      "RETAIL_ECOMMERCE": 54,
+      "REVIEW_INPUT": 101,
+      "SOURCE_HUNTER": 10,
+      "SOURCE_REVIEW": 101,
       "TRAVEL_MOBILITY": 7
     },
     "dedupe_key": "registrable_domain",
-    "discovery_only_count": 7,
-    "generated_at": "2026-08-16T12:02:06.382187Z",
+    "discovery_only_count": 10,
+    "generated_at": "2026-08-16T12:29:43.590890Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 198,
-    "review_input_count": 98,
+    "record_count": 204,
+    "review_input_count": 101,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 149,
+    "source_hunter_domains": 156,
     "url_key": "canonical_url"
   },
   "l2_shadow": {
@@ -76,7 +76,7 @@
       "SHADOW_REJECT_TECHNICAL": 18,
       "SHADOW_REVIEW_DATE": 20
     },
-    "generated_at": "2026-08-16T11:51:52.553040Z",
+    "generated_at": "2026-08-16T12:12:59.540657Z",
     "note": "SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion.",
     "production_eligible_automatically": 0,
     "production_write": false,
@@ -98,79 +98,30 @@
     "total": 13
   },
   "discovery": {
-    "free_search_last_added": 11,
+    "free_search_last_added": 7,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "nhà hàng cafe trà sữa khuyến mãi Việt Nam",
-      "nhà hàng cafe trà sữa ưu đãi Việt Nam",
-      "nhà hàng cafe trà sữa voucher Việt Nam",
-      "nhà hàng cafe trà sữa promotion Vietnam"
+      "rạp chiếu phim khuyến mãi Việt Nam",
+      "rạp chiếu phim ưu đãi Việt Nam",
+      "rạp chiếu phim voucher Việt Nam",
+      "rạp chiếu phim promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 14,
+    "cc_domain_page": 15,
     "frontier_scheduler": {
-      "active": 1264,
+      "active": 1031,
       "base_per_host_batch": 16,
-      "deferred": 38736,
+      "deferred": 38969,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.0,
+      "previous_429_rate": 1.266,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 121
+      "unique_hosts": 126
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T09:19:42.752690Z",
-      "domain": "pnj.com.vn",
-      "radar": false,
-      "url": "https://pnj.com.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "at": "2026-08-16T09:19:42.752690Z",
-      "domain": "decathlon.vn",
-      "radar": false,
-      "url": "https://decathlon.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "at": "2026-08-16T09:19:42.752690Z",
-      "domain": "juno.vn",
-      "radar": false,
-      "url": "https://juno.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "at": "2026-08-16T09:19:42.752690Z",
-      "domain": "phuclong.com.vn",
-      "radar": false,
-      "url": "https://phuclong.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "at": "2026-08-16T09:22:40.503353Z",
-      "domain": "lotteria.vn",
-      "radar": false,
-      "url": "https://lotteria.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "at": "2026-08-16T09:22:40.503353Z",
-      "domain": "pages.lazada.vn",
-      "radar": false,
-      "url": "https://pages.lazada.vn/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T09:25:48.428562Z",
-      "domain": "growth-public.grab.com",
-      "radar": false,
-      "url": "https://growth-public.grab.com/grabfood-com/sitemap/sitemap_index.xml",
-      "via": "new_domain_sitemap"
-    },
     {
       "at": "2026-08-16T10:01:56.901585Z",
       "domain": "smember.com.vn",
@@ -961,6 +912,55 @@
       "radar": false,
       "url": "https://corporate.visa.com/en/resources/security-compliance.html",
       "via": "sitemap"
+    },
+    {
+      "at": "2026-08-16T12:25:47.545218Z",
+      "domain": "highlandsvoucher.com",
+      "radar": true,
+      "url": "https://highlandsvoucher.com/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T12:25:47.545218Z",
+      "domain": "dingteavoucher.vn",
+      "radar": true,
+      "url": "https://dingteavoucher.vn/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T12:25:47.545218Z",
+      "domain": "dealngon.vn",
+      "radar": true,
+      "url": "https://dealngon.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T12:25:47.545218Z",
+      "domain": "moveek.com",
+      "radar": false,
+      "url": "https://moveek.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T12:25:47.545218Z",
+      "domain": "rapchieuphim.com",
+      "radar": false,
+      "url": "https://rapchieuphim.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T12:25:47.545218Z",
+      "domain": "cinestar.com.vn",
+      "radar": false,
+      "url": "https://cinestar.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T12:25:47.545218Z",
+      "domain": "vnpay.vn",
+      "radar": false,
+      "url": "https://vnpay.vn/",
+      "via": "free_search"
     }
   ]
 }
