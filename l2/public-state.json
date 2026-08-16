@@ -298,21 +298,33 @@
       "promo_candidates": 6,
       "public_ok": 6,
       "shadow_ready": 0
+    },
+    {
+      "at": "2026-08-16T16:58:09Z",
+      "attempted": 3,
+      "blocked": 0,
+      "code_candidates": 0,
+      "errors": 0,
+      "js_browser": 0,
+      "login_required": 0,
+      "promo_candidates": 2,
+      "public_ok": 3,
+      "shadow_ready": 0
     }
   ],
   "last_run": {
-    "attempted": 6,
+    "attempted": 3,
     "blocked": 0,
     "code_candidates": 0,
     "errors": 0,
     "js_browser": 0,
     "login_required": 0,
-    "promo_candidates": 6,
-    "public_ok": 6,
+    "promo_candidates": 2,
+    "public_ok": 3,
     "shadow_ready": 0
   },
   "project_id": "PROMO-L2-ROUTER-V1",
-  "run_count": 25,
+  "run_count": 26,
   "schema_version": 2,
   "seen": {
     "https://acb.com.vn/": {
@@ -404,6 +416,11 @@
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T11:18:14Z",
       "content_hash": "2384988294f9316d63b8a5649704b57b527e3272489a69bdc701d9d83770c2c3"
+    },
+    "https://bidv.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T16:58:09Z",
+      "content_hash": "f9a1cef5031051ce4a35e48b18f607b5fbdcbb3647d5c158a6cde3d765e2bd5c"
     },
     "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai": {
       "access_state": "PUBLIC_OK",
@@ -1090,6 +1107,16 @@
       "at": "2026-08-16T11:13:28Z",
       "content_hash": null
     },
+    "https://vnptpay.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T16:58:06Z",
+      "content_hash": "5ac502fe07830962ea266fe4a1b62591f2d5893f524cbb0419ba193d6c21e2ae"
+    },
+    "https://vnptpay.vn/web/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T16:58:07Z",
+      "content_hash": "5ac502fe07830962ea266fe4a1b62591f2d5893f524cbb0419ba193d6c21e2ae"
+    },
     "https://vnptpay.vn/web/khuyenmai": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T11:13:30Z",
@@ -1156,5 +1183,5 @@
       "content_hash": "41c02a4a827a8c2e4ceb581580f496de7cc787135ec22741ab4cd2501970091a"
     }
   },
-  "updated_at": "2026-08-16T16:36:09Z"
+  "updated_at": "2026-08-16T16:58:09Z"
 }
