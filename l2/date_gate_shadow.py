@@ -13,6 +13,8 @@ DMY_RE = re.compile(r"\b(\d{1,2})[/-](\d{1,2})[/-](20\d{2})\b")
 ENG_RE = re.compile(r"\b(\d{1,2})\s+(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(20\d{2})\b", re.I)
 YEAR_RE = re.compile(r"\b(20\d{2})\b")
 CURRENT_SIGNAL_RE = re.compile(r"(valid|validity|till|until|through|promotion period|thời gian|hiệu lực|áp dụng|den ngay|đến ngày|từ ngày)", re.I)
+TECH_CODE_RE = re.compile(r"(^|_)(TEXT|IMARK|DESCRIPTION|DESC|LABEL|TITLE|VALUE|KEY|BUTTON|PLACEHOLDER|ERROR|MESSAGE|CONFIG|OPTION|PRODUCT|VARIANT)(_|\d|$)", re.I)
+TECH_CONTEXT_RE = re.compile(r"(text_[a-z0-9_]+|i18n|translation|locale|json|description\d*\s*[:=]|imark_description|placeholder|localization)", re.I)
 
 
 def dates_from(text):
@@ -24,6 +26,20 @@ def dates_from(text):
         try: out.append(dt.date(int(y),MONTHS[m.lower()],int(d)))
         except Exception: pass
     return out
+
+
+def technical_token(code, text):
+    code=(code or "").strip().upper()
+    text=text or ""
+    if not code:
+        return True, "empty_code"
+    if "_" in code:
+        return True, "underscore_technical_token"
+    if TECH_CODE_RE.search(code):
+        return True, "technical_code_pattern"
+    if TECH_CONTEXT_RE.search(text) and not re.search(r"(promo\s*code|voucher\s*code|coupon\s*code|mã\s+(?:giảm\s*giá|ưu\s*đãi|khuyến\s*mãi)|nhập\s*mã|use\s*code|apply\s*code)\s*[:\-]?\s*"+re.escape(code), text, re.I):
+        return True, "technical_context"
+    return False, None
 
 
 def classify(text):
@@ -56,7 +72,11 @@ def main():
     for line in QUEUE.read_text(errors="replace").splitlines():
         try: r=json.loads(line)
         except Exception: continue
-        status,validity,reason=classify(r.get("context") or "")
+        is_tech,tech_reason=technical_token(r.get("literal_code"), r.get("context") or "")
+        if is_tech:
+            status,validity,reason="SHADOW_REJECT_TECHNICAL",None,tech_reason
+        else:
+            status,validity,reason=classify(r.get("context") or "")
         r["status"]=status
         r["validity_hint"]=validity
         r["date_gate_reason"]=reason
