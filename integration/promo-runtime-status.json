@@ -1,18 +1,18 @@
 {
   "schema": "promo.runtime_status.v1",
-  "generated_at": "2026-08-16T15:14:28Z",
-  "source": "latest_verified_baseline_then_live_worker_exports",
+  "generated_at": "2026-08-16T15:20:54Z",
+  "source": "live_verified_canonical_plus_worker_exports",
   "canonical": {
-    "batch": 83,
-    "source_high_watermark": "SRC-471",
-    "registered_sources": 450,
-    "scanned_sources": 306,
-    "actionable_offers": 299,
+    "batch": 84,
+    "source_high_watermark": "SRC-479",
+    "registered_sources": 458,
+    "scanned_sources": 314,
+    "actionable_offers": 307,
     "voucher_benefit_records": null,
     "literal_codes": 60,
-    "ready_queue": 2,
-    "last_commit_at": "2026-08-16T12:18:32.094117Z",
-    "note": "Live durable Supabase canonical state verified by PROMO GPT Infra + Dispatch; voucher_benefit_records remains null because no explicit canonical DB count was verified."
+    "ready_queue": 0,
+    "last_commit_at": "2026-08-16T15:20:54.418372Z",
+    "note": "Live durable Supabase canonical state verified after atomic B84 commit; voucher_benefit_records remains null because no explicit canonical DB count was verified."
   },
   "workers": {
     "PROMO Banks Shard": {
@@ -44,11 +44,11 @@
     },
     "PROMO GPT Infra + Dispatch": {
       "state": "ACTIVE",
-      "last_run_at": "2026-08-16T14:21:41Z",
-      "ready_queue": 2,
+      "last_run_at": "2026-08-16T15:20:54Z",
+      "ready_queue": 0,
       "relayed": 0,
       "commit_stall": false,
-      "worker_health": "CANONICAL_OK; ledger head B83 matches master; 2 READY below immediate threshold and oldest <2h; shared input BRIDGE_SHADOW active_input=99."
+      "worker_health": "CANONICAL_OK; detected 8 READY and committed atomically as B84; ledger/master/queue verified; shared input BRIDGE_SHADOW active_input=100."
     }
   }
 }
