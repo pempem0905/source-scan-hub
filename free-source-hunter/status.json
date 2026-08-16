@@ -1,18 +1,18 @@
 {
   "cost_target_usd": 0,
   "estimated_monthly_github_minutes": 1200.0,
-  "frontier_pending": 5166,
+  "frontier_pending": 4856,
   "last_6_runs_new_domains": 36,
   "last_run": {
-    "at": "2026-08-16T09:29:09.073303Z",
+    "at": "2026-08-16T09:31:50.033121Z",
     "cc_added": 0,
     "cc_patterns": [
-      "*.vn/*voucher*",
-      "*.vn/*promotion*"
+      "*.vn/*offers*",
+      "*.vn/*deals*"
     ],
-    "duration_s": 104.1,
-    "errors": 33,
-    "frontier_pending": 5166,
+    "duration_s": 88.1,
+    "errors": 15,
+    "frontier_pending": 4856,
     "new_domains": 0,
     "processed": 320,
     "rate403": 0.0,
@@ -21,8 +21,8 @@
   "latest_common_crawl": "CC-MAIN-2026-25",
   "master_domains": 36,
   "mode": "FREE_COMMON_CRAWL_GITHUB",
-  "run_count": 5,
+  "run_count": 6,
   "running": true,
-  "seen_urls": 6766,
-  "updated_at": "2026-08-16T09:30:53.139956Z"
+  "seen_urls": 6776,
+  "updated_at": "2026-08-16T09:33:18.128936Z"
 }

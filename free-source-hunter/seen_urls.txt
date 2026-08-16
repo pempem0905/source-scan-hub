@@ -1972,12 +1972,15 @@ https://crescentmall.com.vn/en/c-rewards/c-club-explore
 https://crescentmall.com.vn/en/c-rewards/c-rewards
 https://crescentmall.com.vn/en/c-rewards/crescent-mall-gift-voucher
 https://crescentmall.com.vn/en/c-rewards/crescent-mall-mobile
+https://crescentmall.com.vn/en/c-rewards/promotion
 https://crescentmall.com.vn/en/cookies-policy
 https://crescentmall.com.vn/en/crescent-mall
 https://crescentmall.com.vn/en/dine
+https://crescentmall.com.vn/en/event/2023-end-of-season-sale
 https://crescentmall.com.vn/en/event/events
 https://crescentmall.com.vn/en/event/hot-deals
 https://crescentmall.com.vn/en/event/moments
+https://crescentmall.com.vn/en/event/sale-event
 https://crescentmall.com.vn/en/personal-data-protection-policy
 https://crescentmall.com.vn/en/play
 https://crescentmall.com.vn/en/shop
@@ -2093,6 +2096,7 @@ https://crescentmall.com.vn/vi/c-rewards/crescent-mall-gift-voucher
 https://crescentmall.com.vn/vi/c-rewards/crescent-mall-mobile
 https://crescentmall.com.vn/vi/c-rewards/doi-tac
 https://crescentmall.com.vn/vi/c-rewards/kham-pha-c-club
+https://crescentmall.com.vn/vi/c-rewards/promotions
 https://crescentmall.com.vn/vi/chinh-sach-bao-ve-du-lieu-ca-nhan
 https://crescentmall.com.vn/vi/chinh-sach-cookie
 https://crescentmall.com.vn/vi/crescent-mall
@@ -4436,6 +4440,8 @@ https://lottemallwestlakehanoi.vn/uu-dai
 https://lottemallwestlakehanoi.vn/uudai
 https://lottemallwestlakehanoi.vn/voucher
 https://lottemallwestlakehanoi.vn/vouchers
+https://lottemart.com.vn/
+https://lottemart.vn/
 https://lotteria.vn/
 https://lotteria.vn/deals
 https://lotteria.vn/khuyen-mai
@@ -4984,8 +4990,10 @@ https://shopping.saigoncentre.com.vn/vi/thuong-hieu/som-ตำ-thai
 https://shopping.saigoncentre.com.vn/vi/thuong-hieu/uniqlo
 https://shopping.saigoncentre.com.vn/voucher
 https://shopping.saigoncentre.com.vn/vouchers
+https://sieuthi-go.vn/
 https://smeconnect.vpbank.com.vn/
 https://smember.com.vn/
+https://smileswallet.com/
 https://sunphuquocairways.com/
 https://t.me/
 https://techcombank.com/
@@ -6389,6 +6397,8 @@ https://vincom.com.vn/uu-dai?page=4
 https://vincom.com.vn/uudai
 https://vincom.com.vn/voucher
 https://vincom.com.vn/vouchers
+https://vinmart.com/
+https://vnexpress.net/
 https://vpbank.com.vn/
 https://vpbank.com.vn/-/media/vpbank-latest/3SME/Promotion/Huong-dan-thao-tac-den-man-hinh-QR-code-trong-NEOBiz
 https://vpbank.com.vn/-/media/vpbank-latest/3sme/Promotion/2025/Debit-Cashback/CTKM-VPBIZ-DEBIT
