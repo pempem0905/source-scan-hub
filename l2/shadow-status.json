@@ -4,7 +4,7 @@
     "SHADOW_REJECT_TECHNICAL": 18,
     "SHADOW_REVIEW_DATE": 20
   },
-  "generated_at": "2026-08-16T13:04:20.512027Z",
+  "generated_at": "2026-08-16T13:41:52.932180Z",
   "note": "SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion.",
   "production_eligible_automatically": 0,
   "production_write": false,

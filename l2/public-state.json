@@ -190,21 +190,33 @@
       "promo_candidates": 1,
       "public_ok": 1,
       "shadow_ready": 0
+    },
+    {
+      "at": "2026-08-16T13:41:52Z",
+      "attempted": 5,
+      "blocked": 0,
+      "code_candidates": 0,
+      "errors": 0,
+      "js_browser": 0,
+      "login_required": 0,
+      "promo_candidates": 4,
+      "public_ok": 5,
+      "shadow_ready": 0
     }
   ],
   "last_run": {
-    "attempted": 1,
+    "attempted": 5,
     "blocked": 0,
     "code_candidates": 0,
     "errors": 0,
     "js_browser": 0,
     "login_required": 0,
-    "promo_candidates": 1,
-    "public_ok": 1,
+    "promo_candidates": 4,
+    "public_ok": 5,
     "shadow_ready": 0
   },
   "project_id": "PROMO-L2-ROUTER-V1",
-  "run_count": 16,
+  "run_count": 17,
   "schema_version": 2,
   "seen": {
     "https://acb.com.vn/": {
@@ -242,6 +254,11 @@
       "at": "2026-08-16T12:12:59Z",
       "content_hash": "140aea53197c8193d26a66df769f3aabc4af696bc15007bde7f8fa18f5b344f6"
     },
+    "https://agoda.com/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T13:41:52Z",
+      "content_hash": "7c3074376e74fe75faac43bc402a3309b36a3c0fa23198dbb643471df498409f"
+    },
     "https://agoda.com/c/visamy": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T11:18:13Z",
@@ -250,6 +267,16 @@
     "https://all.accor.com/": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T11:18:07Z",
+      "content_hash": null
+    },
+    "https://apple.com/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T13:41:45Z",
+      "content_hash": "7f46ed227b049839c8dd21f58d3a50aba54a492ac65722b86f548c15471ed091"
+    },
+    "https://apple.com/vn/legal/sales-support/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T13:41:46Z",
       "content_hash": null
     },
     "https://bachhoaxanh.com/khuyen-mai": {
@@ -792,6 +819,16 @@
       "at": "2026-08-16T11:13:24Z",
       "content_hash": "d6c694033afec9d2bef87d5708896e66112dd15fb4525fc3e3a4b4d923debc4a"
     },
+    "https://vietnamairlines.com/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T13:41:45Z",
+      "content_hash": "06033b03acd7393ece9ad937fbd7fb079988a6a3dd66083bed57352fb94c6999"
+    },
+    "https://vietnamairlines.com/us/en/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T13:41:45Z",
+      "content_hash": "06033b03acd7393ece9ad937fbd7fb079988a6a3dd66083bed57352fb94c6999"
+    },
     "https://vietnamairlines.com/vn/en/monthly-offers": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T11:13:27Z",
@@ -893,5 +930,5 @@
       "content_hash": "41c02a4a827a8c2e4ceb581580f496de7cc787135ec22741ab4cd2501970091a"
     }
   },
-  "updated_at": "2026-08-16T13:04:20Z"
+  "updated_at": "2026-08-16T13:41:52Z"
 }
