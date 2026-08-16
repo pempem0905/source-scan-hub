@@ -1,0 +1,76 @@
+{
+  "schema": "promo.l2.preauth.v1",
+  "project_id": "PROMO-L2-ROUTER-V1",
+  "mode": "PROACTIVE_PREAUTH",
+  "proactive_login": true,
+  "bridge": {
+    "preferred": "CLOUDFLARE_BROWSER_RUN_HUMAN_IN_LOOP",
+    "fallback": "SELF_HOSTED_RESIDENTIAL_PERSISTENT_PROFILE",
+    "status": "PENDING_BROWSER_SESSION_CONTROL",
+    "takeover_url_source": "runtime_only",
+    "store_takeover_url_in_github": false
+  },
+  "session_policy": {
+    "reuse_valid_session": true,
+    "keep_platform_profiles_separate": true,
+    "passwords_in_github": false,
+    "cookies_in_github": false,
+    "otp_in_github": false,
+    "refresh_tokens_in_github": false,
+    "captcha_bypass": false,
+    "registration_automation": false,
+    "user_owned_or_authorized_accounts_only": true
+  },
+  "platforms": {
+    "uniqlo": {
+      "profile_id": "uniqlo-vn-main",
+      "access_class": "AUTHORIZED_ACCOUNT",
+      "source_id": "SRCV1-21122434C741",
+      "start_url": "https://www.uniqlo.com/vn/vi/",
+      "status": "PREAUTH_PENDING_SESSION",
+      "preferred_runner": "cloudflare-browser-run",
+      "fallback_runner": "self-hosted-residential"
+    },
+    "smember": {
+      "profile_id": "smember-main",
+      "access_class": "AUTHORIZED_ACCOUNT",
+      "source_id": "SRCV1-E4D11C625678",
+      "start_url": "https://smember.com.vn/login",
+      "status": "PREAUTH_PENDING_SESSION",
+      "preferred_runner": "self-hosted-residential",
+      "fallback_runner": "cloudflare-browser-run"
+    },
+    "grabfood": {
+      "profile_id": "grabfood-main",
+      "access_class": "AUTHORIZED_ACCOUNT",
+      "start_url": "https://food.grab.com/vn/vi/",
+      "status": "PREAUTH_PENDING_SESSION",
+      "preferred_runner": "cloudflare-browser-run",
+      "fallback_runner": "self-hosted-residential"
+    },
+    "shopeefood": {
+      "profile_id": "shopeefood-main",
+      "access_class": "AUTHORIZED_ACCOUNT",
+      "start_url": "https://shopeefood.vn/",
+      "status": "PREAUTH_PENDING_SESSION",
+      "preferred_runner": "cloudflare-browser-run",
+      "fallback_runner": "self-hosted-residential"
+    },
+    "tiktok": {
+      "profile_id": "tiktok-main",
+      "access_class": "AUTHORIZED_ACCOUNT",
+      "start_url": "https://www.tiktok.com/login",
+      "status": "PREAUTH_PENDING_SESSION",
+      "preferred_runner": "cloudflare-browser-run",
+      "fallback_runner": "self-hosted-residential"
+    },
+    "loyalty-generic": {
+      "profile_id": "loyalty-generic",
+      "access_class": "AUTHORIZED_ACCOUNT",
+      "start_url": null,
+      "status": "WAIT_SOURCE_MAPPING",
+      "preferred_runner": "self-hosted-residential",
+      "fallback_runner": "cloudflare-browser-run"
+    }
+  }
+}
