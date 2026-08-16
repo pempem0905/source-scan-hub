@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-16T20:22:48.970934Z",
+  "generated_at": "2026-08-16T20:30:10.677294Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 2109,
-    "frontier_deferred_pending": 39622,
-    "frontier_pending": 41731,
-    "last_6_runs_new_domains": 14,
+    "frontier_active_pending": 3400,
+    "frontier_deferred_pending": 39683,
+    "frontier_pending": 43083,
+    "last_6_runs_new_domains": 12,
     "last_run": {
-      "at": "2026-08-16T20:20:02.564558Z",
+      "at": "2026-08-16T20:27:39.901176Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vi-vn/*uu-dai*",
-        "*.com/vi-vn/*voucher*",
-        "*.com/vi-vn/*promotion*",
-        "*.net/vn/*khuyen-mai*"
+        "*.net/vn/*uu-dai*",
+        "*.com/vietnam/*promotion*",
+        "*.vn/*khuyen-mai*",
+        "*.vn/*khuyenmai*"
       ],
-      "duration_s": 165.6,
-      "errors": 32,
-      "frontier_pending": 41731,
+      "duration_s": 149.9,
+      "errors": 13,
+      "frontier_pending": 43083,
       "new_domains": 0,
-      "processed": 378,
-      "rate403": 0.265,
-      "rate429": 0.0
+      "processed": 317,
+      "rate403": 0.631,
+      "rate429": 0.315
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
     "master_domains": 633,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 45,
+    "run_count": 46,
     "running": true,
-    "seen_urls": 219568,
-    "updated_at": "2026-08-16T20:22:48.121729Z"
+    "seen_urls": 222988,
+    "updated_at": "2026-08-16T20:30:09.820294Z"
   },
   "master_input": {
     "active_input_count": 105,
@@ -57,7 +57,7 @@
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 13,
-    "generated_at": "2026-08-16T20:22:48.804230Z",
+    "generated_at": "2026-08-16T20:30:10.511571Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
@@ -234,7 +234,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-16T19:31:05.833232Z",
+    "updated_at": "2026-08-16T20:26:00Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -290,6 +290,12 @@
         "profile_id": "tiktok-main",
         "credential_storage": "runtime-browser-session-only"
       },
+      "tiktokshop": {
+        "access_class": "AUTHORIZED_ACCOUNT",
+        "status": "HANDOFF_READY",
+        "profile_id": "tiktokshop-main",
+        "credential_storage": "runtime-browser-session-only"
+      },
       "loyalty-generic": {
         "access_class": "AUTHORIZED_ACCOUNT",
         "status": "WAIT_SOURCE_MAPPING",
@@ -314,27 +320,27 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 0,
+    "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "rạp chiếu phim khuyến mãi Việt Nam",
-      "rạp chiếu phim ưu đãi Việt Nam",
-      "rạp chiếu phim voucher Việt Nam",
-      "rạp chiếu phim promotion Vietnam"
+      "khách sạn resort khuyến mãi Việt Nam",
+      "khách sạn resort ưu đãi Việt Nam",
+      "khách sạn resort voucher Việt Nam",
+      "khách sạn resort promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
     "cc_domain_page": 40,
     "frontier_scheduler": {
-      "active": 378,
+      "active": 317,
       "base_per_host_batch": 16,
-      "deferred": 39622,
+      "deferred": 39683,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 38
+      "unique_hosts": 36
     }
   },
   "recent_sources": [

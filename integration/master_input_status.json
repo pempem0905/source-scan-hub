@@ -22,7 +22,7 @@
   },
   "dedupe_key": "registrable_domain",
   "discovery_only_count": 13,
-  "generated_at": "2026-08-16T20:22:48.804230Z",
+  "generated_at": "2026-08-16T20:30:10.511571Z",
   "legacy_seed_present": true,
   "mode": "BRIDGE_SHADOW",
   "production_write": false,
