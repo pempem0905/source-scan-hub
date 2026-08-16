@@ -3,11 +3,13 @@ acb.com.vn
 aeon.com.vn
 aldoshoes.vn
 beautybox.com.vn
+bemiie.com
 bibomart.com.vn
 biggreen.com.vn
 bloggiamgia.vn
 cellphones.com.vn
 centralretail.com.vn
+chanhtuoi.com
 chothuocvang.com
 circlek.com.vn
 clickbuy.com.vn
@@ -19,6 +21,7 @@ danhgiathuonghieu.vn
 decathlon.vn
 didongviet.vn
 elly.vn
+eropi.com
 eximbank.com.vn
 familynes.vn
 famimax.com
@@ -35,6 +38,7 @@ help.shopee.vn
 homefarm.vn
 hotdeal.vn
 hotro.tiki.vn
+ijc.vn
 juno.vn
 kamereo.vn
 khosithucpham.vn
@@ -42,6 +46,7 @@ kidsplaza.vn
 kinhtedouong.vn
 kiotsoft.com
 lazada.vn
+locphuc.com.vn
 lottemallwestlakehanoi.vn
 lottemart.com.vn
 lottemart.vn
@@ -58,6 +63,7 @@ metric.vn
 mmvietnam.com
 momo.vn
 mytour.vn
+namanmarket.com
 nanakids.vn
 nhathuoclientam.com.vn
 nhathuoclongchau.com.vn
@@ -66,6 +72,7 @@ nongsandungha.com
 note8.vn
 noti.sale
 ocb.com.vn
+oldsailor.com.vn
 onways.com
 organicfood.vn
 pages.lazada.vn
@@ -87,16 +94,20 @@ smember.com.vn
 smileswallet.com
 soha.vn
 supersports.com.vn
+swavi.vn
 techcombank.com
 temdientu.com.vn
 thisomallsala.vn
 thoibaonganhang.vn
+tjc.com.vn
 toplist.vn
+trangsuc.doji.vn
 upbeauty.vn
 upharma.vn
 vietcombank.com.vn
 vietnam.vn
 vietnambusinessinsider.vn
+vietnamnet.vn
 vietstock.vn
 viettelstore.vn
 vincom.com.vn
