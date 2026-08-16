@@ -1,8 +1,7 @@
 {
-  "schema_version": 1,
-  "project_id": "PROMO-SRC-HUNTER-V1",
-  "allocation_version": "2026-08-16-v1",
-  "owner_task": {
+  "schema_version": 2,
+  "allocation_version": "2026-08-16-v2",
+  "source_owner": {
     "project_id": "PROMO-SRC-HUNTER-V1",
     "repo": "pempem0905/source-scan-hub",
     "role": [
@@ -10,31 +9,41 @@
       "source_validation",
       "canonicalization",
       "domain_deduplication",
-      "source_evidence"
+      "source_evidence",
+      "master_input_publication"
     ]
   },
-  "peer_task": {
-    "project_id": null,
-    "repo": null,
-    "role": [],
-    "status": "WAITING_FOR_PEER_MANIFEST"
-  },
+  "peers": [
+    {
+      "project_id": "PROMO-GPT-PIPELINE-V1",
+      "repo": "pempem0905/source-scan-hub",
+      "role": ["offer_extraction", "voucher_extraction", "literal_code_validation", "global_dedup", "single_writer_commit", "health_dispatch"],
+      "input": "integration/master_input_sources_v1.jsonl",
+      "discovery_mode": "CONSUME_ONLY_EXCEPT_SOURCE_CANDIDATE_FEEDBACK",
+      "status": "MIGRATING_TO_SHARED_INPUT"
+    },
+    {
+      "project_id": "PROMO-L2-ROUTER-V1",
+      "repo": "pempem0905/source-scan-hub",
+      "role": ["hard_public_fetch", "js_browser_fetch", "access_class_observation", "authorized_account_routing", "shadow_candidate_extraction"],
+      "input": "integration/master_input_sources_v1.jsonl",
+      "output": "l2/candidate-queue.jsonl",
+      "production_write": false,
+      "status": "SHADOW_MODE"
+    }
+  ],
   "rules": {
-    "no_duplicate_crawling": true,
+    "no_duplicate_broad_discovery": true,
     "merge_key": "registrable_domain",
-    "source_hunter_remains_authoritative_for_phase1_master": true,
-    "peer_should_not_write_source_hunter_state_directly": true,
-    "repartition_only_after_peer_capabilities_are_known": true
+    "source_hunter_is_only_master_input_writer": true,
+    "downstream_workers_do_not_mutate_source_hunter_state": true,
+    "promo_master_single_writer": true,
+    "l2_shadow_candidates_require_quality_gate_before_production": true,
+    "source_candidate_feedback_returns_to_source_hunter": true
   },
-  "recommended_peer_contract": {
-    "required_fields": [
-      "project_id",
-      "repo",
-      "purpose",
-      "capabilities",
-      "authoritative_outputs",
-      "runtime"
-    ],
-    "suggested_path": "integration/project-manifest.json"
+  "migration": {
+    "stage": "BRIDGE_SHADOW",
+    "cutover_guard": "Do not remove legacy PROMO discovery behavior until master input exists, dispatch coverage is nonzero and shadow quality checks pass.",
+    "next": ["build_master_input", "verify_dispatch", "harden_l2_quality", "switch_producers_to_consume_only", "enable_dynamic_dispatch"]
   }
 }
