@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-16T18:55:29.952296Z",
+  "generated_at": "2026-08-16T19:12:03.808547Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 3433,
-    "frontier_deferred_pending": 39516,
-    "frontier_pending": 42949,
-    "last_6_runs_new_domains": 11,
+    "frontier_active_pending": 3586,
+    "frontier_deferred_pending": 39596,
+    "frontier_pending": 43182,
+    "last_6_runs_new_domains": 16,
     "last_run": {
-      "at": "2026-08-16T18:53:07.425378Z",
+      "at": "2026-08-16T19:09:33.129983Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vi-vn/*uu-dai*",
-        "*.com/vi-vn/*voucher*",
-        "*.com/vi-vn/*promotion*",
-        "*.net/vn/*khuyen-mai*"
+        "*.net/vn/*uu-dai*",
+        "*.com/vietnam/*promotion*",
+        "*.vn/*khuyen-mai*",
+        "*.vn/*khuyenmai*"
       ],
-      "duration_s": 141.7,
-      "errors": 106,
-      "frontier_pending": 42949,
-      "new_domains": 2,
-      "processed": 484,
-      "rate403": 0.0,
+      "duration_s": 149.8,
+      "errors": 56,
+      "frontier_pending": 43182,
+      "new_domains": 7,
+      "processed": 404,
+      "rate403": 1.238,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 593,
+    "master_domains": 612,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 40,
+    "run_count": 41,
     "running": true,
-    "seen_urls": 199067,
-    "updated_at": "2026-08-16T18:55:29.126747Z"
+    "seen_urls": 202709,
+    "updated_at": "2026-08-16T19:12:02.978053Z"
   },
   "master_input": {
     "active_input_count": 105,
@@ -41,33 +41,33 @@
       "BANK_CARD": 30,
       "DISCOVERY_ONLY": 13,
       "FOOD_BEVERAGE": 21,
-      "GENERAL": 388,
+      "GENERAL": 405,
       "LOYALTY_REWARDS": 9,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 14,
       "PROMO_RETAIL": 60,
-      "PUBLIC_HTTP": 522,
+      "PUBLIC_HTTP": 540,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 68,
-      "REVIEW_INPUT": 418,
+      "RETAIL_ECOMMERCE": 69,
+      "REVIEW_INPUT": 436,
       "SOURCE_HUNTER": 13,
-      "SOURCE_REVIEW": 418,
+      "SOURCE_REVIEW": 436,
       "TRAVEL_MOBILITY": 13
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 13,
-    "generated_at": "2026-08-16T18:55:29.784824Z",
+    "generated_at": "2026-08-16T19:12:03.647172Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 536,
-    "review_input_count": 418,
+    "record_count": 554,
+    "review_input_count": 436,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 593,
+    "source_hunter_domains": 612,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -210,7 +210,7 @@
       "SHADOW_REJECT_TECHNICAL": 18,
       "SHADOW_REVIEW_DATE": 24
     },
-    "generated_at": "2026-08-16T18:40:14.090160Z",
+    "generated_at": "2026-08-16T19:02:03.263795Z",
     "note": "SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion.",
     "production_eligible_automatically": 0,
     "production_write": false,
@@ -314,79 +314,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 0,
+    "free_search_last_added": 7,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "mỹ phẩm làm đẹp khuyến mãi Việt Nam",
-      "mỹ phẩm làm đẹp ưu đãi Việt Nam",
-      "mỹ phẩm làm đẹp voucher Việt Nam",
-      "mỹ phẩm làm đẹp promotion Vietnam"
+      "thời trang giày dép khuyến mãi Việt Nam",
+      "thời trang giày dép ưu đãi Việt Nam",
+      "thời trang giày dép voucher Việt Nam",
+      "thời trang giày dép promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 35,
+    "cc_domain_page": 36,
     "frontier_scheduler": {
-      "active": 484,
+      "active": 404,
       "base_per_host_batch": 16,
-      "deferred": 39516,
+      "deferred": 39596,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 63
+      "unique_hosts": 51
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T13:57:58.294402Z",
-      "domain": "visasoutheasteurope.com",
-      "radar": false,
-      "url": "https://visasoutheasteurope.com/albania/promotions/air-alo.html",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-16T13:57:58.294402Z",
-      "domain": "visa.com.ng",
-      "radar": false,
-      "url": "https://visa.com.ng/pay-with-visa/benefits-and-offers/global-customer-assistance.html",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-16T13:57:58.294402Z",
-      "domain": "africa.visa.com",
-      "radar": false,
-      "url": "https://africa.visa.com/en_MW/pay-with-visa/benefits-and-offers/global-customer-assistance.html",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-16T13:57:58.294402Z",
-      "domain": "visa.co.ke",
-      "radar": false,
-      "url": "https://visa.co.ke/pay-with-visa/benefits-and-offers/global-customer-assistance.html",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-16T14:20:16.388502Z",
-      "domain": "baoviet.com",
-      "radar": false,
-      "url": "https://baoviet.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T14:20:16.388502Z",
-      "domain": "baoviet-online.vn",
-      "radar": false,
-      "url": "https://baoviet-online.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T14:20:16.388502Z",
-      "domain": "baovietonline.com.vn",
-      "radar": false,
-      "url": "https://baovietonline.com.vn/",
-      "via": "free_search"
-    },
     {
       "at": "2026-08-16T14:20:16.388502Z",
       "domain": "ibaohiem.vn",
@@ -1177,6 +1128,55 @@
       "radar": false,
       "url": "https://nhathuocbaochau.com/chuong-trinh-khuyen-mai/",
       "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-16T19:09:33.129983Z",
+      "domain": "skechersvn.vn",
+      "radar": false,
+      "url": "https://skechersvn.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T19:09:33.129983Z",
+      "domain": "saigonsneaker.com",
+      "radar": false,
+      "url": "https://saigonsneaker.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T19:09:33.129983Z",
+      "domain": "bitis.com.vn",
+      "radar": false,
+      "url": "https://bitis.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T19:09:33.129983Z",
+      "domain": "sneakerdaily.vn",
+      "radar": false,
+      "url": "https://sneakerdaily.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T19:09:33.129983Z",
+      "domain": "aas.com.vn",
+      "radar": false,
+      "url": "https://aas.com.vn/",
+      "via": "common_crawl_domain"
+    },
+    {
+      "at": "2026-08-16T19:09:33.129983Z",
+      "domain": "columbia.vn",
+      "radar": false,
+      "url": "https://columbia.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T19:09:33.129983Z",
+      "domain": "timan.vn",
+      "radar": false,
+      "url": "https://timan.vn/",
+      "via": "free_search"
     }
   ]
 }
