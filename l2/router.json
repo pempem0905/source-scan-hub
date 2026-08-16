@@ -1,19 +1,42 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "project_id": "PROMO-L2-ROUTER-V1",
   "upstream_project": "PROMO-SRC-HUNTER-V1",
   "input": "integration/master_input_sources_v1.jsonl",
   "shadow_output": "l2/candidate-queue.jsonl",
-  "purpose": "Route canonical promo/voucher input sources to the cheapest suitable access lane without duplicating source discovery, and produce quality-gated shadow candidates for difficult sources.",
+  "preauth_registry": "l2/preauth-platforms.json",
+  "purpose": "Route canonical promo/voucher input sources to the cheapest suitable access lane without duplicating source discovery, proactively prepare authorized sessions, and produce quality-gated shadow candidates for difficult sources.",
   "lanes": {
     "PUBLIC_HTTP": {"runner": "github-hosted", "mode": "http", "account_required": false},
     "JS_BROWSER": {"runner": "github-hosted", "mode": "playwright", "account_required": false},
     "PERSISTENT_PUBLIC": {"runner": "persistent-free-vm", "mode": "browser-profile", "account_required": false},
-    "AUTHORIZED_ACCOUNT": {"runner": "self-hosted-residential", "mode": "persistent-browser-profile", "account_required": true, "session_policy": "reuse-valid-user-session"},
-    "RESIDENTIAL_REQUIRED": {"runner": "self-hosted-residential", "mode": "persistent-browser-profile", "account_required": "only-if-source-requires-it"},
+    "AUTHORIZED_ACCOUNT": {
+      "runner": "cloudflare-browser-run-or-self-hosted-residential",
+      "mode": "persistent-browser-profile",
+      "account_required": true,
+      "session_policy": "proactive-preauth-and-reuse-valid-user-session",
+      "human_handoff": "live-view",
+      "fallback_on_cloud_block": "self-hosted-residential"
+    },
+    "RESIDENTIAL_REQUIRED": {
+      "runner": "self-hosted-residential",
+      "mode": "persistent-browser-profile",
+      "account_required": "only-if-source-requires-it",
+      "session_policy": "reuse-valid-user-session-if-present"
+    },
     "MANUAL_ONLY": {"runner": null, "mode": "record-and-wait", "account_required": "unknown"}
   },
   "routing_priority": ["PUBLIC_HTTP", "JS_BROWSER", "PERSISTENT_PUBLIC", "AUTHORIZED_ACCOUNT", "RESIDENTIAL_REQUIRED", "MANUAL_ONLY"],
+  "preauth": {
+    "enabled": true,
+    "login_before_demand": true,
+    "known_platforms": ["uniqlo", "smember", "grabfood", "shopeefood", "tiktok", "loyalty-generic"],
+    "preferred_bridge": "CLOUDFLARE_BROWSER_RUN_HUMAN_IN_LOOP",
+    "fallback_bridge": "SELF_HOSTED_RESIDENTIAL_PERSISTENT_PROFILE",
+    "session_expiry_action": "NEEDS_RELOGIN",
+    "cloud_block_action": "ROUTE_TO_RESIDENTIAL",
+    "do_not_pause_other_platforms_on_one_login_failure": true
+  },
   "quality_gate": {
     "mode": "SHADOW",
     "production_write": false,
@@ -36,11 +59,12 @@
     "do_not_commit_credentials": true,
     "do_not_commit_cookies": true,
     "do_not_commit_refresh_tokens": true,
+    "do_not_commit_takeover_urls": true,
     "no_automatic_account_registration": true,
     "no_captcha_bypass": true,
     "no_otp_bypass": true,
     "user_owned_or_authorized_accounts_only": true,
-    "login_failure_action": "set NEEDS_RELOGIN and stop that source",
+    "login_failure_action": "set NEEDS_RELOGIN and stop only that platform/source",
     "do_not_retry_login_aggressively": true
   }
 }
