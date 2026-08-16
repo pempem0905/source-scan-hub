@@ -24,6 +24,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any
 
 import websockets
@@ -32,6 +33,7 @@ ACCOUNT_ID = os.environ.get("CLOUDFLARE_ACCOUNT_ID", "").strip()
 API_TOKEN = os.environ.get("CLOUDFLARE_BROWSER_RUN_API_TOKEN", "").strip()
 KEEP_ALIVE_MS = max(10_000, min(600_000, int(os.environ.get("L2_BROWSER_KEEP_ALIVE_MS", "600000"))))
 HANDOFF_TIMEOUT_MS = max(60_000, min(1_800_000, int(os.environ.get("L2_HANDOFF_TIMEOUT_MS", "1800000"))))
+TAKEOVER_MARKER = os.environ.get("L2_TAKEOVER_READY_MARKER", "").strip()
 API_HTTP = f"https://api.cloudflare.com/client/v4/accounts/{urllib.parse.quote(ACCOUNT_ID, safe='')}/browser-rendering/devtools"
 LAUNCH_WS = f"wss://api.cloudflare.com/client/v4/accounts/{urllib.parse.quote(ACCOUNT_ID, safe='')}/browser-run/devtools/browser?keep_alive={KEEP_ALIVE_MS}"
 LOGIN_RE = re.compile(r"/(?:login|signin|sign-in|auth)(?:[/?#]|$)", re.I)
@@ -66,11 +68,21 @@ def transient_rate_limit(exc: BaseException) -> bool:
 
 
 def safe_diagnostic(exc: BaseException) -> str:
-    # Intentionally expose only exception class and numeric HTTP status. Never
-    # include exception text because websocket/HTTP errors can contain URLs.
     status = exception_status(exc)
     suffix = f" http_status={status}" if status is not None else ""
     return f"type={type(exc).__name__}{suffix}"
+
+
+def write_takeover_marker(platform: str) -> None:
+    """Write only a non-secret readiness marker to /tmp for the CI coordinator."""
+    if not TAKEOVER_MARKER:
+        return
+    path = Path(TAKEOVER_MARKER).resolve()
+    if not path.is_absolute() or not path.is_relative_to(Path("/tmp")):
+        raise RuntimeError("takeover marker path must be under /tmp")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps({"platform": safe_platform(platform), "state": "TAKEOVER_READY"}) + "\n")
+    os.chmod(path, 0o600)
 
 
 def http_json(url: str) -> Any:
@@ -242,7 +254,6 @@ async def handoff(platform: str, start_url: str) -> None:
         await ws.close()
         raise RuntimeError("live view unavailable")
 
-    print(f"HUMAN_TAKEOVER_REQUIRED platform={safe_platform(platform)} surface=cloudflare_dashboard_live_sessions")
     await cdp.call(
         "Cloudflare.handoff",
         {
@@ -251,6 +262,9 @@ async def handoff(platform: str, start_url: str) -> None:
         },
         session_id=page_session,
     )
+    write_takeover_marker(platform)
+    print(f"HUMAN_TAKEOVER_REQUIRED platform={safe_platform(platform)} surface=cloudflare_dashboard_live_sessions")
+
     result = await cdp.wait_event(
         "Cloudflare.handoffComplete",
         session_id=page_session,
