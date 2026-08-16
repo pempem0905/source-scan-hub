@@ -1,6 +1,9 @@
 {
   "schema": "promo.l2.handoff_request.v1",
   "platform": "uniqlo",
-  "state": "FAILED",
+  "state": "RETRY_PENDING",
+  "retry_after_utc": "2026-08-16T19:15:00Z",
+  "attempt_day_utc": "2026-08-16",
+  "attempts_today": 1,
   "purpose": "Verify structured human takeover and fresh-connection authenticated session reuse. Contains no credentials or session material."
 }
