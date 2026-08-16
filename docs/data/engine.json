@@ -1,48 +1,85 @@
 {
-  "generated_at": "2026-08-16T11:07:44.441843Z",
+  "generated_at": "2026-08-16T11:20:57.022920Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_pending": 3281,
-    "last_6_runs_new_domains": 40,
+    "frontier_pending": 3283,
+    "last_6_runs_new_domains": 55,
     "last_run": {
-      "at": "2026-08-16T11:00:24.062769Z",
+      "at": "2026-08-16T11:15:24.564686Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*uu-dai*",
-        "*.vn/*uudai*",
-        "*.vn/*voucher*",
-        "*.vn/*promotion*"
+        "*.vn/*offers*",
+        "*.vn/*deals*",
+        "*.vn/*sale*",
+        "*.com/vn/*khuyen-mai*"
       ],
-      "duration_s": 440.3,
-      "errors": 18,
-      "frontier_pending": 3281,
-      "new_domains": 16,
+      "duration_s": 332.3,
+      "errors": 933,
+      "frontier_pending": 3283,
+      "new_domains": 15,
       "processed": 2500,
-      "rate403": 0.04,
-      "rate429": 0.0
+      "rate403": 0.24,
+      "rate429": 32.88
     },
     "latest_common_crawl": "CC-MAIN-2026-25",
-    "master_domains": 76,
+    "master_domains": 91,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 12,
+    "run_count": 13,
     "running": true,
-    "seen_urls": 13042,
-    "updated_at": "2026-08-16T11:07:44.357096Z"
+    "seen_urls": 15544,
+    "updated_at": "2026-08-16T11:20:56.851933Z"
+  },
+  "master_input": {
+    "active_input_count": 89,
+    "counts": {
+      "ACTIVE_INPUT": 89,
+      "AUTHORIZED_ACCOUNT": 1,
+      "BANK_CARD": 18,
+      "DISCOVERY_ONLY": 5,
+      "FOOD_BEVERAGE": 10,
+      "GENERAL": 48,
+      "LOYALTY_REWARDS": 6,
+      "PAYMENT_WALLET": 7,
+      "PROMO_BANKS": 27,
+      "PROMO_L2": 5,
+      "PROMO_RETAIL": 57,
+      "PUBLIC_HTTP": 136,
+      "RESIDENTIAL_REQUIRED": 4,
+      "RETAIL_ECOMMERCE": 46,
+      "REVIEW_INPUT": 47,
+      "SOURCE_HUNTER": 5,
+      "SOURCE_REVIEW": 47,
+      "TRAVEL_MOBILITY": 6
+    },
+    "dedupe_key": "registrable_domain",
+    "discovery_only_count": 5,
+    "generated_at": "2026-08-16T11:20:56.948249Z",
+    "legacy_seed_present": true,
+    "mode": "BRIDGE_SHADOW",
+    "production_write": false,
+    "project_id": "PROMO-SRC-HUNTER-V1",
+    "promo_export_present": false,
+    "quality_gate": "SOURCE_QUALITY_V1",
+    "record_count": 141,
+    "review_input_count": 47,
+    "schema": "promo.master_input_status.v1",
+    "source_hunter_domains": 91,
+    "url_key": "canonical_url"
   },
   "discovery": {
-    "free_search_last_added": 8,
+    "free_search_last_added": 9,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "nhà thuốc khuyến mãi Việt Nam",
-      "nhà thuốc ưu đãi Việt Nam",
-      "nhà thuốc voucher Việt Nam",
-      "nhà thuốc promotion Vietnam"
+      "mỹ phẩm làm đẹp khuyến mãi Việt Nam",
+      "mỹ phẩm làm đẹp ưu đãi Việt Nam",
+      "mỹ phẩm làm đẹp voucher Việt Nam",
+      "mỹ phẩm làm đẹp promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 9
+    "cc_domain_page": 10
   },
   "recent_sources": [
     {
@@ -576,6 +613,111 @@
       "radar": false,
       "url": "https://biggreen.com.vn/website/home-page.aspx",
       "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:15:24.564686Z",
+      "domain": "magiamgialazada.vn",
+      "radar": true,
+      "url": "https://magiamgialazada.vn/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T11:15:24.564686Z",
+      "domain": "familynes.vn",
+      "radar": false,
+      "url": "https://familynes.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:15:24.564686Z",
+      "domain": "marsovn.com",
+      "radar": false,
+      "url": "https://marsovn.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:15:24.564686Z",
+      "domain": "bibomart.com.vn",
+      "radar": false,
+      "url": "https://bibomart.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:15:24.564686Z",
+      "domain": "mbmart.com.vn",
+      "radar": false,
+      "url": "https://mbmart.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:15:24.564686Z",
+      "domain": "famimax.com",
+      "radar": false,
+      "url": "https://famimax.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:15:24.564686Z",
+      "domain": "nanakids.vn",
+      "radar": false,
+      "url": "https://nanakids.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:15:24.564686Z",
+      "domain": "kidsplaza.vn",
+      "radar": false,
+      "url": "https://kidsplaza.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:15:24.564686Z",
+      "domain": "meoi.com.vn",
+      "radar": false,
+      "url": "https://meoi.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:15:24.564686Z",
+      "domain": "visa.com.vn",
+      "radar": false,
+      "url": "https://visa.com.vn/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-16T11:15:24.564686Z",
+      "domain": "clickbuy.com.vn",
+      "radar": false,
+      "url": "https://clickbuy.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:15:24.564686Z",
+      "domain": "mediamart.vn",
+      "radar": false,
+      "url": "https://mediamart.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:15:24.564686Z",
+      "domain": "sieuthidienmayxanh.vn",
+      "radar": false,
+      "url": "https://sieuthidienmayxanh.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:15:24.564686Z",
+      "domain": "didongviet.vn",
+      "radar": false,
+      "url": "https://didongviet.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T11:15:24.564686Z",
+      "domain": "momo.vn",
+      "radar": false,
+      "url": "https://momo.vn/",
+      "via": "external_promo"
     }
   ]
 }
