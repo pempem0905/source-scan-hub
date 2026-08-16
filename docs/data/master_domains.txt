@@ -135,6 +135,11 @@
 584nhatrang.vn
 5boxing.vn
 5chome.vn
+5saotravel.vn
+5sc.vn
+5scoffee.vn
+5sfashion.vn
+5smedia.vn
 abc-mart.com.vn
 acb.com.vn
 aeon.com.vn
@@ -149,6 +154,7 @@ anz.2te.vn
 api-ht.568play.vn
 apple.com
 atrip.vn
+bambooairways.com
 bannha.net
 baomoi.com
 baotintuc.vn
@@ -177,6 +183,7 @@ cake.vn
 camera.0511.vn
 card.apply.hsbc.com.vn
 card.highlandscoffee.com.vn
+cdn.5sfashion.vn
 cellphones.com.vn
 centralretail.com.vn
 cenvi.3sgroup.vn
@@ -307,6 +314,7 @@ khuyenmai.unityfitness.vn
 kidsplaza.vn
 kiemkhach.360mobi.vn
 kinhtedouong.vn
+kinhtetieudung.vn
 kiotsoft.com
 kiotviet.vn
 kk.360game.vn
@@ -324,6 +332,7 @@ lotteria.vn
 loyalty.nuti.vn
 lv.360game.vn
 lypham.vn
+m.oto.com.vn
 macplanet.vn
 magiamgia.com
 magiamgialazada.vn
@@ -421,6 +430,7 @@ smileswallet.com
 smiletrip.vn
 soha.vn
 specials.priceless.com
+static.5sfashion.vn
 supersports.com.vn
 support.568play.vn
 swavi.vn
@@ -454,6 +464,7 @@ tripwise.vn
 trogiup.mogi.vn
 tt.360game.vn
 tttmcentralpremium.com
+tuyendung.5sfashion.vn
 tvc.360game.vn
 tvl.360game.vn
 tw.2te.vn
