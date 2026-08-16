@@ -10,6 +10,7 @@ on:
       - 'free-source-hunter/cc_domain_discovery.py'
       - 'free-source-hunter/free_search_discovery.py'
       - 'integration/build_master_input.py'
+      - 'integration/quality_gate_sources.py'
       - 'integration/legacy-source-seed.jsonl'
       - 'integration/promo-source-export.jsonl'
   schedule:
@@ -60,7 +61,9 @@ jobs:
       - name: Validate and expand free frontier
         run: python3 free-source-hunter/hunter.py
       - name: Build canonical master input and dispatch plan
-        run: python3 integration/build_master_input.py
+        run: |
+          python3 integration/build_master_input.py
+          python3 integration/quality_gate_sources.py
       - name: Build static monitor snapshot
         run: |
           mkdir -p docs/data
