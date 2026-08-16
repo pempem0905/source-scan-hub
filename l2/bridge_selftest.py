@@ -85,8 +85,14 @@ def main() -> None:
         name for name, cfg in auth_platforms.items()
         if isinstance(cfg, dict) and cfg.get("status") == "LOGIN_REQUIRED"
     ]
+    premature_ready = [
+        name for name, cfg in auth_platforms.items()
+        if isinstance(cfg, dict) and cfg.get("status") in {"HANDOFF_READY", "HANDOFF_READY_OR_RESIDENTIAL_FALLBACK"}
+    ]
+    assert not premature_ready, f"premature handoff readiness without a live takeover surface: {premature_ready}"
     if login_required:
         assert bridge_state == "TAKEOVER_READY", "LOGIN_REQUIRED allowed only while a real takeover is active"
+        assert runtime.get("state") == "TAKEOVER_READY", "LOGIN_REQUIRED requires runtime takeover readiness"
         assert len(login_required) == 1, "only the affected platform may be LOGIN_REQUIRED"
     if bridge_state == "TAKEOVER_READY":
         assert runtime.get("state") == "TAKEOVER_READY"
