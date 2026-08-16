@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "project_id": "PROMO-SRC-HUNTER-V1",
+  "allocation_version": "2026-08-16-v1",
+  "owner_task": {
+    "project_id": "PROMO-SRC-HUNTER-V1",
+    "repo": "pempem0905/source-scan-hub",
+    "role": [
+      "broad_source_discovery",
+      "source_validation",
+      "canonicalization",
+      "domain_deduplication",
+      "source_evidence"
+    ]
+  },
+  "peer_task": {
+    "project_id": null,
+    "repo": null,
+    "role": [],
+    "status": "WAITING_FOR_PEER_MANIFEST"
+  },
+  "rules": {
+    "no_duplicate_crawling": true,
+    "merge_key": "registrable_domain",
+    "source_hunter_remains_authoritative_for_phase1_master": true,
+    "peer_should_not_write_source_hunter_state_directly": true,
+    "repartition_only_after_peer_capabilities_are_known": true
+  },
+  "recommended_peer_contract": {
+    "required_fields": [
+      "project_id",
+      "repo",
+      "purpose",
+      "capabilities",
+      "authoritative_outputs",
+      "runtime"
+    ],
+    "suggested_path": "integration/project-manifest.json"
+  }
+}
