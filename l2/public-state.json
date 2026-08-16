@@ -226,21 +226,33 @@
       "promo_candidates": 4,
       "public_ok": 6,
       "shadow_ready": 4
+    },
+    {
+      "at": "2026-08-16T14:31:54Z",
+      "attempted": 13,
+      "blocked": 2,
+      "code_candidates": 0,
+      "errors": 0,
+      "js_browser": 0,
+      "login_required": 0,
+      "promo_candidates": 10,
+      "public_ok": 11,
+      "shadow_ready": 0
     }
   ],
   "last_run": {
-    "attempted": 6,
-    "blocked": 0,
-    "code_candidates": 4,
+    "attempted": 13,
+    "blocked": 2,
+    "code_candidates": 0,
     "errors": 0,
     "js_browser": 0,
     "login_required": 0,
-    "promo_candidates": 4,
-    "public_ok": 6,
-    "shadow_ready": 4
+    "promo_candidates": 10,
+    "public_ok": 11,
+    "shadow_ready": 0
   },
   "project_id": "PROMO-L2-ROUTER-V1",
-  "run_count": 19,
+  "run_count": 20,
   "schema_version": 2,
   "seen": {
     "https://acb.com.vn/": {
@@ -278,6 +290,16 @@
       "at": "2026-08-16T12:12:59Z",
       "content_hash": "140aea53197c8193d26a66df769f3aabc4af696bc15007bde7f8fa18f5b344f6"
     },
+    "https://africa.visa.com/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:31:47Z",
+      "content_hash": "18f7fb06416269a1cc39a56347b689c93bb9e7f47d68e92e0e751a260d5508f5"
+    },
+    "https://africa.visa.com/en_MW/pay-with-visa/benefits-and-offers/global-customer-assistance.html": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:31:47Z",
+      "content_hash": "40e80d703ed5ecb4e572d76a6a1f2133144a421a7b1d84f812aceb834a3eef82"
+    },
     "https://agoda.com/": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T13:41:52Z",
@@ -287,6 +309,16 @@
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T11:18:13Z",
       "content_hash": "bf9006e0174231f4838efc855700ab2f7d285cca14ba187716a84ee77d1992fa"
+    },
+    "https://alibabacloud.com/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:31:53Z",
+      "content_hash": "022664c33f8ac4a925b3ab8c386cbebf4f64fcadd35c975a9cdee4c74bf0d302"
+    },
+    "https://alibabacloud.com/en/contact-sales?_p_lc=1": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:31:54Z",
+      "content_hash": "ef59da666d87cbbb2d70ff8b20814adc2c14b4a61bb91b782e4cab01e1a5e3a9"
     },
     "https://all.accor.com/": {
       "access_state": "PUBLIC_OK",
@@ -541,6 +573,21 @@
     "https://hotro.tiki.vn/": {
       "access_state": "ERROR",
       "at": "2026-08-16T10:50:55Z",
+      "content_hash": null
+    },
+    "https://hsbc.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:31:46Z",
+      "content_hash": "a8aa31b2faabf72809ddf071488f3b29a1da9f5c24ca9dffa21ac9be7bbc785d"
+    },
+    "https://ihg.com/": {
+      "access_state": "BLOCKED_DATACENTER",
+      "at": "2026-08-16T14:31:50Z",
+      "content_hash": null
+    },
+    "https://ihg.com/content/vn/vi/offers": {
+      "access_state": "BLOCKED_DATACENTER",
+      "at": "2026-08-16T14:31:49Z",
       "content_hash": null
     },
     "https://jollibee.com.vn/khuyen-mai": {
@@ -908,6 +955,36 @@
       "at": "2026-08-16T11:13:27Z",
       "content_hash": null
     },
+    "https://visa.co.ke/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:31:48Z",
+      "content_hash": "df0875d4c1dd1156f56b66075e9fc0eddfed92bdcaa56f8adba71d552984ebc9"
+    },
+    "https://visa.co.ke/pay-with-visa/benefits-and-offers/global-customer-assistance.html": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:31:48Z",
+      "content_hash": "1ddca7ef4fe7a7a074df75e0a19bda506247c73f38a4694ba60c4b13d39f6e83"
+    },
+    "https://visa.com.ng/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:31:49Z",
+      "content_hash": "d3c1826f7b270ffa7d7068d3cf711925a08d66622368397310a27a55a87386bd"
+    },
+    "https://visa.com.ng/pay-with-visa/benefits-and-offers/global-customer-assistance.html": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:31:49Z",
+      "content_hash": "181773dab62b683bb9fdb73dbd28c6a804c45184212834a60caeb86d78fab149"
+    },
+    "https://visasoutheasteurope.com/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:31:50Z",
+      "content_hash": "1f6a0839447ec75fcb9b7ebad70ca96cde6d5e37996f4983895c7ab24fc55f83"
+    },
+    "https://visasoutheasteurope.com/albania/promotions/air-alo.html": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:31:50Z",
+      "content_hash": "b85a83ab280de82a04c5557c91aa68451866ad2792ddfdec0a62b8cfcec6bcd3"
+    },
     "https://vnpay.vn/": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T13:04:20Z",
@@ -984,5 +1061,5 @@
       "content_hash": "41c02a4a827a8c2e4ceb581580f496de7cc787135ec22741ab4cd2501970091a"
     }
   },
-  "updated_at": "2026-08-16T14:00:25Z"
+  "updated_at": "2026-08-16T14:31:54Z"
 }
