@@ -8,6 +8,8 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/promo-telegram-monitor.yml'
+      - 'l2/auth-status.json'
+      - 'l2/bridge-status.json'
 
 permissions:
   contents: read
@@ -78,6 +80,7 @@ jobs:
           engine = load('docs/data/engine.json')
           promo = load('integration/promo-runtime-status.json')
           auth = load('l2/auth-status.json')
+          bridge_status = load('l2/bridge-status.json')
           hard = load('l2/hard-access-status.json')
           l2 = load('l2/public-state.json')
           previous = load('.promo-monitor-state/snapshot.json')
@@ -108,7 +111,7 @@ jobs:
               k for k, v in platforms.items()
               if isinstance(v, dict) and v.get('status') in {'LOGIN_REQUIRED','NEEDS_RELOGIN','PERMISSION_REQUIRED'}
           ]
-          bridge = pre.get('bridge_status', 'UNKNOWN')
+          bridge = pre.get('bridge_status', bridge_status.get('status', 'UNKNOWN'))
           ready_login = bool(login_needed) and bridge in {'READY','TAKEOVER_READY','SESSION_READY'}
 
           now = datetime.now(ZoneInfo('Asia/Bangkok')).strftime('%d/%m %H:%M')
@@ -126,6 +129,12 @@ jobs:
               f'🧩 L2: run {val(snapshot["l2_run_count"])}{delta(snapshot["l2_run_count"], previous.get("l2_run_count"))} · attempted {val(lr.get("attempted"))} · promo {val(lr.get("promo_candidates"))} · errors {val(lr.get("errors"))}',
               f'🔐 Login bridge: {bridge} · hard runner ready: {val(hard.get("runner_ready"))}',
           ]
+
+          permission = pre.get('permission_required') or {}
+          if bridge == 'PERMISSION_REQUIRED':
+              token_name = permission.get('secret', 'CLOUDFLARE_BROWSER_RUN_API_TOKEN')
+              perm_name = permission.get('required_permission', 'Browser Rendering - Edit')
+              lines.append(f'⚠ L2 bridge cần quyền: GitHub/secure runtime secret {token_name} với Cloudflare permission `{perm_name}`; takeover URL vẫn chỉ ở private runtime.')
 
           if ready_login:
               lines.append('🚨 CẦN LOGIN: ' + ', '.join(login_needed))
