@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'l2/browser_run_bridge.mjs'
+      - 'l2/browser_run_cdp.py'
       - '.github/workflows/promo-l2-secure-login-bridge.yml'
   workflow_dispatch:
     inputs:
@@ -31,26 +31,31 @@ concurrency:
 jobs:
   bridge:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     env:
-      # Repository secrets are injected only into this runner process. Never echo them.
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       CLOUDFLARE_BROWSER_RUN_API_TOKEN: ${{ secrets.CLOUDFLARE_BROWSER_RUN_API_TOKEN }}
       L2_BROWSER_KEEP_ALIVE_MS: '600000'
-      L2_HANDOFF_TIMEOUT_MS: '600000'
+      L2_HANDOFF_TIMEOUT_MS: '1800000'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-python@v5
         with:
-          node-version: '22'
+          python-version: '3.12'
 
-      - name: Install CDP client
-        run: npm install --no-save --ignore-scripts playwright-core
+      - name: Install isolated CDP client
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/promo-l2-cdp
+          mkdir -p /tmp/promo-l2-cdp
+          cp l2/browser_run_cdp.py /tmp/promo-l2-cdp/bridge.py
+          python -m pip install --disable-pip-version-check --no-cache-dir 'websockets>=13,<16' >/dev/null
+          python -m py_compile /tmp/promo-l2-cdp/bridge.py
 
       - name: Validate runtime secrets without exposing values
         shell: bash
@@ -98,15 +103,13 @@ jobs:
           START_URL: ${{ steps.target.outputs.start_url }}
         run: |
           set -euo pipefail
-          node l2/browser_run_bridge.mjs "$OPERATION" "$PLATFORM" "$START_URL"
+          python /tmp/promo-l2-cdp/bridge.py "$OPERATION" "$PLATFORM" "$START_URL"
 
       - name: Security invariant check
         if: always()
         shell: bash
         run: |
           set -euo pipefail
-          # The workflow deliberately has read-only repository permissions and
-          # must not create files containing handoff/session material.
           if git status --porcelain | grep -E 'l2/.*(session|handoff|cookie|token|takeover|websocket)' >/dev/null; then
             echo 'Unexpected sensitive-looking runtime artifact detected.'
             exit 3
