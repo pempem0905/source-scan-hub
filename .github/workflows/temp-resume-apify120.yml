@@ -1,0 +1,28 @@
+name: Resume Apify 120 Once
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/temp-resume-apify120.yml
+permissions:
+  contents: read
+jobs:
+  resume:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for production publish
+        run: sleep 45
+      - name: Raise caps and resume
+        run: |
+          node <<'NODE'
+          (async()=>{
+            const res=await fetch('https://source-scan-hub.lovable.app/api/temp-resume-apify120',{
+              method:'POST',
+              headers:{'content-type':'application/json','x-one-shot':'resume120-20260816-1449-x7p4'},
+              body:'{}'
+            });
+            const text=await res.text();
+            console.log(text);
+            if(!res.ok) process.exit(1);
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
