@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - 'l2/public_browser_worker.py'
+      - 'l2/date_gate_shadow.py'
       - 'l2/router.json'
       - 'integration/master_input_sources_v1.jsonl'
       - '.github/workflows/promo-l2-public-browser.yml'
@@ -58,6 +59,10 @@ jobs:
 
       - name: Scan master-input public and JS-heavy sources in shadow mode
         run: python l2/public_browser_worker.py
+
+      - name: Apply L2 current-date gate
+        if: always()
+        run: python l2/date_gate_shadow.py
 
       - name: Restore canonical master input working copy
         if: always()
