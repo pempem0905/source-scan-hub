@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Static/runtime consistency self-test for the PROMO L2 secure login bridge.
 
-No network access and no secrets are required. This validates only repository
-artifacts and security/readiness invariants so it can run frequently without
-consuming Browser Run quota.
+No network access and no secrets are required. This validates repository
+artifacts, workflow wiring and security/readiness invariants so it can run
+frequently without consuming Browser Run quota.
 """
 from __future__ import annotations
 
@@ -102,6 +102,23 @@ def main() -> None:
     login_html = (ROOT / "docs" / "login-center.html").read_text(encoding="utf-8")
     assert "Cloudflare Dashboard" in login_html and "Live Sessions" in login_html
     assert "password" in login_html and "OTP" in login_html
+
+    bridge_py = (L2 / "browser_run_cdp.py").read_text(encoding="utf-8")
+    for marker in ("acquire_browser_ws", "wait_event_with_heartbeat", "BACKOFF_MARKER", "authenticated_session_reuse"):
+        assert marker in bridge_py, f"bridge regression: missing {marker}"
+
+    request_workflow = (ROOT / ".github" / "workflows" / "promo-l2-browser-run-bridge.yml").read_text(encoding="utf-8")
+    assert "l2/handoff-request.json" in request_workflow, "request-driven bridge trigger missing"
+    assert "CLOUDFLARE_BROWSER_RUN_API_TOKEN" in request_workflow and "CLOUDFLARE_ACCOUNT_ID" in request_workflow
+    assert "secrets.CLOUDFLARE_BROWSER_RUN_API_TOKEN" in request_workflow
+    assert "secrets.CLOUDFLARE_ACCOUNT_ID" in request_workflow
+
+    manual_workflow = (ROOT / ".github" / "workflows" / "promo-l2-secure-login-bridge.yml").read_text(encoding="utf-8")
+    assert "tiktokshop" in manual_workflow, "manual bridge must expose TikTok Shop"
+    # Real Browser Run sessions are intentionally NOT launched on code pushes;
+    # static selftest owns code-change validation so free quota is conserved.
+    on_header = manual_workflow.split("permissions:", 1)[0]
+    assert "push:" not in on_header, "manual secure bridge must not auto-probe on push"
 
     print(
         "L2_BRIDGE_SELFTEST_OK "
