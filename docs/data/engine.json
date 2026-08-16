@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-16T17:34:23.477109Z",
+  "generated_at": "2026-08-16T17:39:04.133519Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 5033,
+    "frontier_active_pending": 4259,
     "frontier_deferred_pending": 39196,
-    "frontier_pending": 44229,
-    "last_6_runs_new_domains": 37,
+    "frontier_pending": 43455,
+    "last_6_runs_new_domains": 31,
     "last_run": {
-      "at": "2026-08-16T17:30:15.407892Z",
+      "at": "2026-08-16T17:34:47.010483Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vn/*uu-dai*",
-        "*.com/vn/*voucher*",
-        "*.com/vn/*promotion*",
-        "*.com/vi-vn/*khuyen-mai*"
+        "*.com/vi-vn/*uu-dai*",
+        "*.com/vi-vn/*voucher*",
+        "*.com/vi-vn/*promotion*",
+        "*.net/vn/*khuyen-mai*"
       ],
-      "duration_s": 247.2,
-      "errors": 42,
-      "frontier_pending": 44229,
-      "new_domains": 3,
+      "duration_s": 256.3,
+      "errors": 50,
+      "frontier_pending": 43455,
+      "new_domains": 2,
       "processed": 804,
       "rate403": 0.124,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 539,
+    "master_domains": 542,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 34,
+    "run_count": 35,
     "running": true,
-    "seen_urls": 173993,
-    "updated_at": "2026-08-16T17:34:22.608708Z"
+    "seen_urls": 178286,
+    "updated_at": "2026-08-16T17:39:03.265813Z"
   },
   "master_input": {
     "active_input_count": 103,
@@ -41,33 +41,33 @@
       "BANK_CARD": 29,
       "DISCOVERY_ONLY": 13,
       "FOOD_BEVERAGE": 20,
-      "GENERAL": 349,
+      "GENERAL": 352,
       "LOYALTY_REWARDS": 9,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 30,
       "PROMO_L2": 14,
       "PROMO_RETAIL": 59,
-      "PUBLIC_HTTP": 476,
+      "PUBLIC_HTTP": 479,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 64,
-      "REVIEW_INPUT": 374,
+      "REVIEW_INPUT": 377,
       "SOURCE_HUNTER": 13,
-      "SOURCE_REVIEW": 374,
+      "SOURCE_REVIEW": 377,
       "TRAVEL_MOBILITY": 12
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 13,
-    "generated_at": "2026-08-16T17:34:23.317925Z",
+    "generated_at": "2026-08-16T17:39:03.966284Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 490,
-    "review_input_count": 374,
+    "record_count": 493,
+    "review_input_count": 377,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 539,
+    "source_hunter_domains": 542,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -232,9 +232,9 @@
     "total": 14
   },
   "l2_auth": {
-    "schema_version": 3,
+    "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-16T23:58:00+07:00",
+    "updated_at": "2026-08-17T00:33:00+07:00",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -244,47 +244,48 @@
     "preauth": {
       "enabled": true,
       "registry": "l2/preauth-platforms.json",
-      "bridge_status": "PERMISSION_REQUIRED",
+      "bridge_status": "BROWSER_RUN_PROBE_VERIFIED_HANDOFF_PENDING",
       "bridge_status_file": "l2/bridge-status.json",
+      "runtime_status_file": "l2/bridge-runtime-status.json",
       "preferred_handoff": "CLOUDFLARE_BROWSER_RUN_HUMAN_IN_LOOP",
       "residential_fallback": true,
       "login_before_demand": true,
+      "runtime_probe_verified": true,
       "permission_required": {
-        "runtime_setting": "CLOUDFLARE_ACCOUNT_ID",
-        "secret": "CLOUDFLARE_BROWSER_RUN_API_TOKEN",
-        "required_permission": "Browser Rendering - Edit",
-        "private_runtime_setting": "L2_PRIVATE_HANDOFF_PATH",
-        "note": "Do not place token values or takeover URLs in GitHub files, logs, chat, or public dashboard."
+        "state": "PERMISSION_REQUIRED",
+        "reason": "One authorized platform login must be completed through Cloudflare Browser Run Live Sessions to verify structured human takeover and authenticated-session reuse end-to-end.",
+        "safe_action": "Run PROMO L2 Browser Run Bridge in handoff mode for a user-owned/authorized platform, open that active session from Cloudflare Dashboard > Browser Run > Live Sessions, complete login/MFA/CAPTCHA there, then mark the handoff Done.",
+        "note": "Do not place passwords, OTPs, cookies, refresh tokens, CAPTCHA data, session IDs, websocket URLs, or takeover URLs in GitHub files, logs, chat, or public dashboard."
       }
     },
     "platforms": {
       "uniqlo": {
         "access_class": "AUTHORIZED_ACCOUNT",
-        "status": "PREAUTH_PENDING_SESSION",
+        "status": "HANDOFF_READY",
         "profile_id": "uniqlo-vn-main",
         "credential_storage": "runtime-browser-session-only"
       },
       "smember": {
         "access_class": "AUTHORIZED_ACCOUNT",
-        "status": "PREAUTH_PENDING_SESSION",
+        "status": "HANDOFF_READY_OR_RESIDENTIAL_FALLBACK",
         "profile_id": "smember-main",
         "credential_storage": "runtime-browser-session-only"
       },
       "grabfood": {
         "access_class": "AUTHORIZED_ACCOUNT",
-        "status": "PREAUTH_PENDING_SESSION",
+        "status": "HANDOFF_READY",
         "profile_id": "grabfood-main",
         "credential_storage": "runtime-browser-session-only"
       },
       "shopeefood": {
         "access_class": "AUTHORIZED_ACCOUNT",
-        "status": "PREAUTH_PENDING_SESSION",
+        "status": "HANDOFF_READY",
         "profile_id": "shopeefood-main",
         "credential_storage": "runtime-browser-session-only"
       },
       "tiktok": {
         "access_class": "AUTHORIZED_ACCOUNT",
-        "status": "PREAUTH_PENDING_SESSION",
+        "status": "HANDOFF_READY",
         "profile_id": "tiktok-main",
         "credential_storage": "runtime-browser-session-only"
       },
@@ -302,25 +303,27 @@
       "refresh_tokens_in_github": false,
       "takeover_urls_in_github": false,
       "takeover_urls_in_logs": false,
-      "session_profile_location": "runtime browser session or self-hosted residential profile",
+      "session_ids_in_github": false,
+      "websocket_urls_in_github": false,
+      "session_profile_location": "Cloudflare Browser Run session; self-hosted residential profile only for cloud/datacenter-blocked platforms",
       "on_session_expiry": "set NEEDS_RELOGIN and pause only affected platform",
-      "on_cloud_ip_block": "route platform to self-hosted-residential persistent profile",
+      "on_cloud_ip_block": "route only affected platform to self-hosted-residential persistent profile",
       "no_captcha_bypass": true,
       "user_owned_or_authorized_accounts_only": true
     }
   },
   "discovery": {
-    "free_search_last_added": 3,
+    "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "chuỗi bán lẻ khuyến mãi Việt Nam",
-      "chuỗi bán lẻ ưu đãi Việt Nam",
-      "chuỗi bán lẻ voucher Việt Nam",
-      "chuỗi bán lẻ promotion Vietnam"
+      "cửa hàng tiện lợi khuyến mãi Việt Nam",
+      "cửa hàng tiện lợi ưu đãi Việt Nam",
+      "cửa hàng tiện lợi voucher Việt Nam",
+      "cửa hàng tiện lợi promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 29,
+    "cc_domain_page": 30,
     "frontier_scheduler": {
       "active": 804,
       "base_per_host_batch": 16,
@@ -330,24 +333,10 @@
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 73
+      "unique_hosts": 74
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T13:50:06.581256Z",
-      "domain": "360auto.net",
-      "radar": false,
-      "url": "https://360auto.net/tai-auto/",
-      "via": "common_crawl_domain"
-    },
-    {
-      "at": "2026-08-16T13:50:06.581256Z",
-      "domain": "cis.visa.com",
-      "radar": false,
-      "url": "https://cis.visa.com/visa-in-moldova/promotions/air-alo.html",
-      "via": "internal_promo"
-    },
     {
       "at": "2026-08-16T13:57:58.294402Z",
       "domain": "alibabacloud.com",
@@ -1172,6 +1161,20 @@
       "domain": "kinhtetieudung.vn",
       "radar": false,
       "url": "https://kinhtetieudung.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T17:34:47.010483Z",
+      "domain": "3gvinaphone.com.vn",
+      "radar": false,
+      "url": "https://3gvinaphone.com.vn/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-16T17:34:47.010483Z",
+      "domain": "cokhivietthang.vn",
+      "radar": false,
+      "url": "https://cokhivietthang.vn/",
       "via": "free_search"
     }
   ]
