@@ -146,6 +146,19 @@
 737.vn
 769audio.vn
 7799wedding.vn
+88elevenshop.vn
+88lab.vn
+88mobile.vn
+88trip.vn
+89design.vn
+89sgroup.vn
+8congnghe.vn
+8elements.vn
+8en.vn
+8game.vn
+8pos.vn
+8tech.vn
+8trip.vn
 abc-mart.com.vn
 acb.com.vn
 acronis.com
@@ -161,6 +174,7 @@ alibabacloud.com
 anfoodvn.com
 anz.2te.vn
 api-ht.568play.vn
+api.8pos.vn
 apple.com
 atrip.vn
 bambooairways.com
@@ -228,6 +242,7 @@ dbd.028.vn
 dealgiadung.vn
 dealngon.vn
 decathlon.vn
+dichvudidong.vn
 didongviet.vn
 dienmaycholon.com
 dingtea.vn
@@ -446,6 +461,7 @@ smiletrip.vn
 soha.vn
 specials.priceless.com
 static.5sfashion.vn
+suachuadientu.8tech.vn
 supersports.com.vn
 support.568play.vn
 swavi.vn

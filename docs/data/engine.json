@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-16T17:58:00.615516Z",
+  "generated_at": "2026-08-16T18:20:31.019262Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 4093,
-    "frontier_deferred_pending": 39465,
-    "frontier_pending": 43558,
-    "last_6_runs_new_domains": 15,
+    "frontier_active_pending": 4810,
+    "frontier_deferred_pending": 39462,
+    "frontier_pending": 44272,
+    "last_6_runs_new_domains": 12,
     "last_run": {
-      "at": "2026-08-16T17:55:55.425397Z",
+      "at": "2026-08-16T18:18:03.674060Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*uu-dai*",
-        "*.vn/*uudai*",
-        "*.vn/*voucher*",
-        "*.vn/*promotion*"
+        "*.vn/*offers*",
+        "*.vn/*deals*",
+        "*.vn/*sale*",
+        "*.com/vn/*khuyen-mai*"
       ],
-      "duration_s": 124.4,
-      "errors": 48,
-      "frontier_pending": 43558,
-      "new_domains": 2,
-      "processed": 535,
+      "duration_s": 146.6,
+      "errors": 58,
+      "frontier_pending": 44272,
+      "new_domains": 1,
+      "processed": 538,
       "rate403": 0.0,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 555,
+    "master_domains": 571,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 37,
+    "run_count": 38,
     "running": true,
-    "seen_urls": 186340,
-    "updated_at": "2026-08-16T17:57:59.792087Z"
+    "seen_urls": 191215,
+    "updated_at": "2026-08-16T18:20:30.241896Z"
   },
   "master_input": {
     "active_input_count": 104,
@@ -41,33 +41,33 @@
       "BANK_CARD": 29,
       "DISCOVERY_ONLY": 13,
       "FOOD_BEVERAGE": 21,
-      "GENERAL": 359,
+      "GENERAL": 372,
       "LOYALTY_REWARDS": 9,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 30,
       "PROMO_L2": 14,
       "PROMO_RETAIL": 60,
-      "PUBLIC_HTTP": 488,
+      "PUBLIC_HTTP": 502,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 65,
-      "REVIEW_INPUT": 385,
+      "RETAIL_ECOMMERCE": 66,
+      "REVIEW_INPUT": 399,
       "SOURCE_HUNTER": 13,
-      "SOURCE_REVIEW": 385,
+      "SOURCE_REVIEW": 399,
       "TRAVEL_MOBILITY": 12
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 13,
-    "generated_at": "2026-08-16T17:58:00.457905Z",
+    "generated_at": "2026-08-16T18:20:30.881918Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 502,
-    "review_input_count": 385,
+    "record_count": 516,
+    "review_input_count": 399,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 555,
+    "source_hunter_domains": 571,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -210,7 +210,7 @@
       "SHADOW_REJECT_TECHNICAL": 18,
       "SHADOW_REVIEW_DATE": 24
     },
-    "generated_at": "2026-08-16T17:46:31.520269Z",
+    "generated_at": "2026-08-16T18:00:20.275348Z",
     "note": "SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion.",
     "production_eligible_automatically": 0,
     "production_write": false,
@@ -313,21 +313,21 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 2,
+    "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "mẹ và bé khuyến mãi Việt Nam",
-      "mẹ và bé ưu đãi Việt Nam",
-      "mẹ và bé voucher Việt Nam",
-      "mẹ và bé promotion Vietnam"
+      "điện máy điện thoại laptop khuyến mãi Việt Nam",
+      "điện máy điện thoại laptop ưu đãi Việt Nam",
+      "điện máy điện thoại laptop voucher Việt Nam",
+      "điện máy điện thoại laptop promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 32,
+    "cc_domain_page": 33,
     "frontier_scheduler": {
-      "active": 535,
+      "active": 538,
       "base_per_host_batch": 16,
-      "deferred": 39465,
+      "deferred": 39462,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
@@ -337,13 +337,6 @@
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T13:57:58.294402Z",
-      "domain": "quantrimang.com",
-      "radar": false,
-      "url": "https://quantrimang.com/",
-      "via": "free_search"
-    },
     {
       "at": "2026-08-16T13:57:58.294402Z",
       "domain": "vn.my-best.com",
@@ -1176,6 +1169,13 @@
       "radar": false,
       "url": "https://m.tichluy.vn/?tl_source=old_msite",
       "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T18:18:03.674060Z",
+      "domain": "dichvudidong.vn",
+      "radar": false,
+      "url": "https://dichvudidong.vn/",
+      "via": "external_promo"
     }
   ]
 }
