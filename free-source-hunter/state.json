@@ -1,1624 +1,24 @@
 {
   "cc_bootstrap_error": "HTTPError",
   "cc_domain_last_new_domains": 0,
-  "cc_domain_last_page": 2,
+  "cc_domain_last_page": 3,
   "cc_domain_last_pattern": "*.vn/",
   "cc_domain_last_rows": 0,
-  "cc_domain_page": 3,
+  "cc_domain_page": 4,
   "cc_domain_pattern_cursor": 0,
   "cc_index": "CC-MAIN-2026-25",
-  "cc_pattern_cursor": 8,
-  "free_search_cursor": 8,
-  "free_search_last_added": 6,
+  "cc_pattern_cursor": 10,
+  "free_search_cursor": 12,
+  "free_search_last_added": 13,
   "free_search_last_errors": 0,
   "free_search_last_queries": [
-    "siêu thị khuyến mãi Việt Nam",
-    "siêu thị ưu đãi Việt Nam",
-    "siêu thị voucher Việt Nam",
-    "siêu thị promotion Vietnam"
+    "chuỗi bán lẻ khuyến mãi Việt Nam",
+    "chuỗi bán lẻ ưu đãi Việt Nam",
+    "chuỗi bán lẻ voucher Việt Nam",
+    "chuỗi bán lẻ promotion Vietnam"
   ],
-  "free_search_last_results": 20,
+  "free_search_last_results": 19,
   "frontier": [
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/geox-uu-dai-cuoi-nam",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/geox-uu-dai-cuoi-nam-giam-50-cho-san-pham-thu-2",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/geox-uu-dai-mung-dai-le-20-4-02-5",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/independence-day-sale",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/lacoste-end-of-season-sale",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/mango-end-of-season-sale-phase-2",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/mid-night-sale-crescent-mall-sale-khung-den-nua-dem",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/minigood-mung-le-lon-uu-dai-lon-den-het-02-05",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/nha-sach-nha-thom-cung-yankee-candle-tet-sales-49",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/old-navy-mid-season-sale-hoan-tien-hap-dan-19-04-02-05",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/sale-khung-den-nua-dem-tai-crescent-mall",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/san-sale-tai-nha-voi-uu-dai-len-den-50-cung-fila",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/shooz-uu-dai-cuoi-nam",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/the-big-crescent-sale-2022",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/the-big-crescent-sale-3-day-sale",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/typo-sale-up-tp-50-tu-nay-den-het-2-5",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/womens-wednesday-sale-01-03-to-31-03",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/events/womens-wednesday-sale-uu-dai-dac-biet-danh-cho-phai-nu-trong-thang-3",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/happenings-moments/big-crescent-sale-2021",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/happenings-moments/con-bao-giam-gia-cuoi-mua-sale-end-of-season-sale-2019",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/happenings-moments/double-mid-night-sale-2020",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/happenings-moments/double-midnight-sale-2022",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/happenings-moments/double-midnight-sale-2025",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/happenings-moments/double-midnight-sale-23-24-11-18",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/happenings-moments/double-midnight-sale-29-30-11-2019",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/happenings-moments/end-of-season-sale-2022",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/happenings-moments/hoanh-trang-mid-night-sale-crescent-mall",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/happenings-moments/sale-khung-den-nua-dem-05-09-2015",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/happenings-moments/sale-khung-den-nua-dem-11-2017-midnight-sale-12-2017",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/happenings-moments/the-big-crescent-sale-20-21-22-april-2018",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://crescentmall.com.vn/happenings-moments/the-big-crescent-sale-3-ngay-sale-khung-19-20-21-04",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/clip-trai-nghiem/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/trai-nghiem-gian-bep-cong-nghe-cho-doi-tay-thanh-thoi-tai-gigamall-cuoi-tuan-nay/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/tang-toc-chinh-phuc-giai-dua-go-kart-mua-he-2026-tai-alpha-games/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/pop-up-locknlock-do-bo-tang-1-gigamall-cung-loat-sieu-pham-giam-den-50/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/nhanh-tay-san-qua-conan-tai-gigo/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/gigaversal-cong-vien-cong-nghe-giai-tri-da-tang-dang-cap-quoc-te-chinh-thuc-ra-mat-ngay-2472026-tai-gigamall/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/bat-che-do-quay-he-cung-lich-trinh-day-hap-dan-tai-dem-khai-mac-gigamall-fruit-summer-festival/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/khuyen-mai-uniqlo-co-han-chi-tu-195000d/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/tiec-he-bung-no-cung-routine-hang-dep-gia-tot-chi-tu-149000d/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/back-to-school-rang-ro-mua-khai-truong-rinh-tron-qua-xin-cho-be-tai-gigamall/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/an-lau-cuc-dinh-be-choi-cuc-da-combo-gan-ket-gia-dinh-tron-ven-cung-tiniworld-va-hadilao/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/thang-8-nay-ru-hoi-ban-di-3-chi-tinh-tien-2-tai-sakaya-gigamall/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/cung-coopxtra-bay-den-dao-quoc-su-tu-trai-nghiem-chuan-vi-singapore-ngay-tai-nha/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/clip-trai-nghiem/trien-lam-tuong-tac-da-giac-quan-vincent-van-gogh-claude-monet-art-lighting-experience-limited-version/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/clip-trai-nghiem/rainbow-fun-khu-vui-choi-dang-cap-the-gioi-da-co-mat-tai-viet-nam/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/clip-trai-nghiem/van-gogh-art-lighting-experience-viet-nam/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/clip-trai-nghiem/co-gi-hap-dan-tai-le-hoi/",
-      "via": "internal_promo"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/16/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/giai-tri/van-gogh-monet-art-lighting-experience-viet-nam",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/gioi-thieu/ve-gigamall",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/am-thuc/galbi-house",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/am-thuc/yamazaki",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/am-thuc/pizza-4p39s",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/am-thuc/chang-kang-kung-hap-thuy-nhiet-hong-kong",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/su-kien-am-nhac-mung-sinh-nhat-gigamall-don-tuoi-moi-don-van-dieu-ky",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/hot-di-5-tinh-tien-3-mung-khai-truong-gia-re-bat-ngo-chi-tu-199k",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/electric/cho-lon-electronics-supermarket",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/infinity-world-ra-mat-sieu-pham-12d-bi-an-duoi-day-dai-duong-dai-chien-hanh-tinh-lua",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/beauty-health/store262",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/tai-app-giga-nhan-qua-cung-van-gogh-art-lighting-experience",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/am-thuc",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/so-do-tang",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/am-thuc/aka-house",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/le-hoi-thanh-xuan-len-8",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/floor-map",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/giai-tri/san-ca-led",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/am-thuc/texas-chicken",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/chuoi-su-kien-giang-sinh-an-lanh",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/am-thuc/grill-cheer",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/-khoe-dep-tu-ben-trong-nhan-ngay-cap-ve-bay-singapore-mien-phi",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/chuong-trinh-nap-nhanh-sieu-toc-gia-lai-cuc-boc",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1448",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/giao-duc/fahasa",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/tich-diem-doi-qua-cung-app-gigamall",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/he-ruc-ro-shondo-sale-up-to-50",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/haidilao-khao-deal-giam-15-cho-hoc-sinh-sinh-vien",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/fb/store255",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/giai-tri/jp-bowling-game-center",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/news-events/events/article511",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/recruitment/gigamall-recruitment/2",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/am-thuc/asiana-food-town",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/sakura-fair-menu-udon-bo-bbq-ca-chua-hokkaido",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/dien-may/dien-may-cho-lon",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/giai-tri/tiniworld",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/am-thuc/papparoti",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/cua-hang-tien-ich/minigood",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/gia-dung",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/beauty-health/aeon-wellness",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/thuong-hieu",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/am-thuc/saizeriya",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/fashion-accessories",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/news-events/events/article914",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/gia-dung/kohnan-japan",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/events/article1949",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/am-thuc/subin-bbq",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/cua-hang-tien-ich/autobot-phu-kien-cong-nghe",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/news-events/events/article523",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/thoi-trang-phu-kien",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article70",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tuyen-dung/tuyen-dung-gigamall/gigamall-thong-bao-tuyen-dung-nhan-vien-bai-xe",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/html/banner-home/article2016/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/ve-early-bird-cua-the-lost-world-lac-vao-the-gioi-ao-immersive-12d-da-mo-ban/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/den-ngay-gigamall-nhan-lien-tay-ma-grab-free-40k-nao/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/news-events/events/article550/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/tiet-kiem-dien-nang-bao-ve-trai-dat/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tuyen-dung/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/news-events/events/article733/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tuyen-dung/tuyen-dung-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tuyen-dung/tuyen-dung-nhan-hang/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/lam-dep-suc-khoe/the-colorist/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/lam-dep-suc-khoe/california-fitness-yoga/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/the-thao/reebok/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/cap-nhat-thoi-gian-hoat-dong-tai-tttm-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/gigaversal-cong-vien-cong-nghe-giai-tri-trong-nha-dau-tien-tai-viet-nam-co-gi/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/am-thuc/nha-hang-lau-haidilao/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article373/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/don-giang-sinh-rinh-qua-nam-moi/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/home-furnishing/kohnan-japan/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/recruitment/gigamall-recruitment/article1880/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/am-thuc/gogi-house/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/len-lich-den-gigamall-fruit-summer-festival-ngay-0707-uong-nuoc-dua-mien-phi/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/thuong-hieu/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/am-thuc/cloud-pot-lau-hap-thuy-nhiet/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tuyen-dung/tuyen-dung-gigamall/gigamall-thong-bao-tuyen-dung-thang-72026/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/tich-diem-doi-giay-nhanh-tay-keo-lo/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/khu-vui-choi-tre-em-o-pham-van-dong-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/27/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/giang-sinh-dieu-ky-tai-thien-duong-do-choi-sieu-bao-sale-50/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1102/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/events/article1974/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/amazing-summer-sale-mua-1-trung-2/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/shondo-tung-deal-giay-hot-dong-gia-tu-233000d-tai-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/events/article1624/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/thanh-toan-zalopay-uu-dai-me-say/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/end-of-season-sale-crocs-uu-dai-len-den-50/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1483/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/deethai-to-go-tra-sua-thai-dat-sao-michelin-xin-chao-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/alpha-games-khao-uu-dai-cung-be-len-ga-gia-nhap-duong-dua-tet/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/49/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/chan-dong-sakaya-gigamall-dai-tiec-lau-nuong-nhat-ban-chi-tu-200000d/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/ra-mat-combo-5-khu-vui-choi-cho-be-cuc-xin-choi-tung-bung-tet-nay/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/don-black-friday-sieu-sale-lon-nhat-nam-cung-kohnan-uu-dai-len-den-70/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1953/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/mung-83-tiniworld-tang-5-tang-qua-mat-lanh/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1291/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1066/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1330/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article49/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/thu-4-vui-ve-gia-chi-tu-45k/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/chuc-mung-quoc-te-phu-nu-83/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1927/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/posts/article1689/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1317/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1942/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article722/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/events/article1768/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1874/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/tri-an-thanh-vien-dac-quyen-cuc-da/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/khu-vui-choi-tre-em-thu-duc-tai-gigamall-2026/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/giam-gia-cuoi-mua-uu-dai-khung-len-den-50/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/3/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article189/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article529/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/24/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/13/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1284/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/an-nhat-wellness-trai-nghiem-tam-khoang-nong-wellness-chuan-nhat-ngay-tai-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article426/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/vua-duoc-quay-da-doi-vua-duoc-relax-voi-an-nhat-wellness/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/events/article1945/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/an-gi-o-thu-duc-ngon-goi-y-tu-local-guide/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/66/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/infinity-world-ra-mat-sieu-pham-12d-bi-an-duoi-day-dai-duong-dai-chien-hanh-tinh-lua/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/events/article1585/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/thong-bao-lich-hoat-dong-tet-at-ty-2025/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/events/article1723/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/khuyen-mai-xe-dap-tre-em/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/events/article1771/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/chuong-trinh-boc-tham-trung-thuong-gigamall-7-tuoi-trai-nghiem-da-sac-bung-khoanh-khac-vui/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/tphcm-lan-dau-tien-ra-mat-vuon-thu-cong-nghe-khong-lo-magical-zootai-tttm-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1565/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/vong-xoay-may-man-co-xoa-la-co-qua/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/events/article1956/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/21/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/15/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/khu-vui-choi-tre-em-gigamall-gigaversal-magical-zoo/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/mung-dai-le-sale-vo-ke/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/48/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/promotions/68/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/gia-choi-bowling-tai-gigamall-tips-cho-nguoi-moi/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1472/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/mua-sam-tha-ga-vi-da-co-tada/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/uu-dai-dac-biet-mua-he-chi-tu-97000d-cung-uniqlo/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/choi-bowling-gan-day-den-gigamall-thu-duc-ngay/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/tttm-gigamall-canh-bao-website-app-lua-dao-gia-mao/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/28/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/king-bbq-giam-ngay-15-khi-check-in-lan-3-giam-ngay-10-khi-check-in-lan-2/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/vui-sinh-nhat-trai-nghiem-cung-coopxtra-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/events/article1766/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/tin-vui-cho-ba-me-tiniworld-giam-50-cho-thanh-vien-moi/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article587/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/combo-trai-nghiem-5-khu-cong-nghe-kham-pha-cong-nghe-robot-ai-thuc-te-ao-12d-hang-dau-khu-vuc/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/infinity-world-12d-tai-xuat-voi-khong-gian-vo-cuc-hoan-toan-moi/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/bingxue-nhan-loc-tet-xin-kem-ngon-tu-10000d/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/nitipon-clinic-mung-khai-truong-chi-nhanh-thu-9/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1934/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/texas-chicken-x-shopeefood-khao-combo-5-mieng-ga-chi-99000d-voucher-60000d/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/promotions/27/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/hanh-trinh-cua-sam-ngoc-linh-tai-le-hoi-ca-phe-tra-viet-2026/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/cuoc-thi-dua-xe-f1-tai-gigamall-da-chinh-thuc-tro-lai/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/san-deal-thuong-hieu-nitipon/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/kham-pha-huong-vi-moi-cung-ga-gion-sot-tom-yum-tai-texas-chicken/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/di-xanh-toi-gigamall-vui-tron-tet/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/events/29/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article44/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/sumo-giam-10-cho-nhan-vien-lam-tai-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article427/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1339/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1340/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1341/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/ngay-vang-thanh-vien-nhan-uu-dai-kep-trong-sinh-nhat-myk-2022/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/chuong-trinh-khuyen-mai-cuc-hot-uu-dai-mua-nhieu-giam-nhieu/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1336/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1337/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1338/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1727/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/08-thang-3-trao-qua-tran-quy-cung-phai-dep-vuot-ngan-trung-khoi/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/dem-nguoc-den-hoi-sach-online-2024-tu-sach-dong-gia-9k-va-99k/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/kymdan-khuyen-mai-mua-nem-tang-nhieu-qua-tang/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/thang-cua-nang-gui-ngan-tri-an-thay-loi-yeu-thuong-danh-tang-mot-nua-cua-the-gioi/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/events/article1939/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/vo-sieu-sale-cho-hoc-ki-moi-giam-50/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/dap-tan-con-nong-voi-sieu-bao-thang-6-cung-nanaralife/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/qua-tang-so-cute-cho-xe-iu/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article145/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article107/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article992/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/li-xi-tet-ket-loc-xuan/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/boom-sale-bung-no-uu-dai-tu-ninh-khuong/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article760/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1063/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/mua-1-duoc-2-nhan-ngay-uu-dai/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/mua-lien-tay-khong-can-tra-ngay/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/khu-vui-choi-o-tphcm-dang-ghe-nhat-2025/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/kham-pha-day-du-cung-vi-lau-dai-loan-tai-manwah-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/check-list-mua-tet-2026-tai-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/bung-no-cam-xuc-voi-bi-an-duoi-day-dai-duong-va-dai-chien-hanh-tinh-lua-tai-infinity-world/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1856/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/chuc-mung-nhung-khach-hang-trung-thuong-dai-tiec-qua-tang-tai-sinh-nhat-gigamall-7-tuoi/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/lyly-trinh-dien-tai-sieu-su-kien-sinh-nhat-gigamall-7-tuoi/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/alo-em-oi-24h-dem-nay-happy-sale-cua-juno-bat-dau-thich-gi-nhan-anh/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/an-ngon-tha-ga-tiet-kiem-toi-da/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/choi-bowling-o-tphcm-trai-nghiem-dinh-tai-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/chinh-thuc-ra-mat-trien-lam-vincent-van-gogh-claude-monet-limited-version-tang-8-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article168/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/gigaversal-x-chang-kang-kung-bat-tay-don-tet-tron-ven-niem-vui/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/khai-xuan-nghe-thuat-van-gogh-li-xi-30-gia-ve/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/hay-bat-dau-ngay-moi-thu-thai-voi-ly-tra-phuc-long-sang-khoai/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/mua-cua-tang-cua-chi-rieng-trong-thang-4/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/65/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1046/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article408/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/black-fry-day-uu-dai-nhan-doi-deal-hoi-that-dinh/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/hang-loat-san-pham-duoc-yeu-thich-cho-ca-gia-dinh-duoc-ap-dung-gia-uu-dai-tu-195000d/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/onoff-black-friday-2021-sale-up-to-30/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/doi-diem-app-gigamall-nhan-e-voucher-qua-tang-tu-banh-sau-rieng-9-sach/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/khuyen-mai-lon-cuoi-he-chi-tu-97000vnd/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/back-to-school-bat-mood-den-truong-rinh-tram-deal-chat/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/haidilao-tung-uu-dai-cung-hi-fans-tung-bung-chao-don-summer/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/chao-mung-nha-hang-lau-haidilao/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/thang-10-yeu-thuong-danh-tang-phai-dep/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article543/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/khong-the-bo-lo-qua-tang-hap-dan-dip-khai-truong-uniqlo-sensense-city-pvd-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/nhanh-tay-thi-con-cham-tay-thi/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/gigamall-diem-den-mang-lai-su-gan-ket-va-hanh-phuc-cho-moi-nguoi/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/don-he-sang-sale-ron-rang/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article892/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/doc-chieu-san-choi-4-chieu-cua-milo-sap-do-bo-tai-tang-1-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/them-vitamin-c-cho-nang-them-tuoi-tan-tai-marugame-udon-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/ogawa-trao-suc-khoe-goi-yeu-thuong/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article815/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/an-co-thong-bao-cap-nhat-mon-moi-tu-mrdakgalbi/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article1083/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/events/article1816/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/chill-he-dung-chuan-la-phai-vua-dep-vua-doc/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1783/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/tuan-le-vang-ngap-tran-uu-dai/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/valentine39s-sweet-set/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/gigaversal-x-haidilao-bat-tay-khuay-dong-mua-tet-2026/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/hi-tech-hi-tet-gigamall-2026-duong-hoa-tet-cong-nghe-dau-tien-tai-tp-hcm/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/don-amazing-summer-ruc-ro-voi-chuoi-trai-nghiem-cong-nghe-va-mua-sam-doc-dao-tai-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/khuay-dong-he-cung-be-lego-mua-1-tang-1-tai-cua-hang-my-kingdom/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/khu-vui-choi-o-sai-gon-cho-tre-em-gia-dinh/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/nap-nang-luong-don-ngay-moi-voi-combo-mat-lanh-ngay-he-chi-tu-69000d/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/black-five-days-nhan-doi-uu-dai-grill-cheer-di/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions-events/events/5/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/gigaversal-ra-mat-sieu-pham-thuc-te-ao-dai-chien-vung-bang-tuyet-tai-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/sakura-cosplay-festival-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/ban-moi-hay-ban-cu-he-du-mat-la-pizza/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article703/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article335/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article190/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/2/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/khu-vui-choi-cho-tre-em-o-tphcm-dang-ghe-2025/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/3/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/4/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/san-sang-cho-mua-he-nang-dong-cung-uniqlo-tai-gigamall/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/2/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/en/promotions/article777/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/hai-loc-dau-nam-li-xi-may-man/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/pedro-atrium-sale-sale-up-to-50/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/mon-qua-mua-thu-tai-trien-lam-van-gogh-monet/",
-      "via": "sitemap"
-    },
-    {
-      "seed": false,
-      "url": "https://gigamall.com.vn/vn/khuyen-mai/deal-ngon-giam-20-di-mall-tiec-tung-thit-nuong/",
-      "via": "sitemap"
-    },
     {
       "seed": false,
       "url": "https://gigamall.com.vn/en/promotions/article1274/",
@@ -24298,6 +22698,3676 @@
       "seed": false,
       "url": "https://crescentmall.com.vn/en/event/2023-end-of-season-sale",
       "via": "internal_promo"
+    },
+    {
+      "seed": true,
+      "url": "https://vnba.org.vn/",
+      "via": "free_search"
+    },
+    {
+      "seed": true,
+      "url": "https://metric.vn/",
+      "via": "free_search"
+    },
+    {
+      "seed": true,
+      "url": "https://dps.media/",
+      "via": "free_search"
+    },
+    {
+      "seed": true,
+      "url": "https://soha.vn/",
+      "via": "free_search"
+    },
+    {
+      "seed": true,
+      "url": "https://vneconomy.vn/",
+      "via": "free_search"
+    },
+    {
+      "seed": true,
+      "url": "https://thoibaonganhang.vn/",
+      "via": "free_search"
+    },
+    {
+      "seed": true,
+      "url": "https://vietnam.vn/",
+      "via": "free_search"
+    },
+    {
+      "seed": true,
+      "url": "https://vietnambusinessinsider.vn/",
+      "via": "free_search"
+    },
+    {
+      "seed": true,
+      "url": "https://kinhtedouong.vn/",
+      "via": "free_search"
+    },
+    {
+      "seed": true,
+      "url": "https://vn.tradingview.com/",
+      "via": "free_search"
+    },
+    {
+      "seed": true,
+      "url": "https://vietstock.vn/",
+      "via": "free_search"
+    },
+    {
+      "seed": true,
+      "url": "https://saigonday.vn/",
+      "via": "free_search"
+    },
+    {
+      "seed": true,
+      "url": "https://note8.vn/",
+      "via": "free_search"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/udon-creamy-tomyum-hoa-quyen-kem-sua-chua-cay-cuon-hut/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/tau-luon-sac-mau-cham-den-the-gioi-ky-ao-sap-do-bo-infinity-world/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/chi-trong-7-ngay-san-ngay-cac-thiet-ke-yeu-thich-voi-uu-dai-tu-97000d-tai-uniqlo/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/4/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/5/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/6/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/7/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/2",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/clip-experience/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/clip-trai-nghiem/2/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/clip-trai-nghiem/2",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/mua-2-tinh-1-duy-nhat-tai-kohnan-pop-up-sale-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/su-kien-ra-mat-dong-cham-soc-toc-huong-nuoc-hoa-ma-cherie-tu-nhat-ban/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/5/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/6/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/7/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/2",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/posts/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/le-hoi-hoa-anh-dao-gigamall-2026-lap-ky-luc-hon-2-trieu-luot-khach-tham-quan/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/hanh-trinh-7-tuan-le-sakura-2026-toa-sang-ruc-ro-va-dem-hoi-van-hoa-cong-nghe-man-nhan-khang-dinh-dang-cap-quo-1850/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/ky-nghi-le-304-15-gigamall-kin-khach-gioi-tre-do-xo-check-in-khu-giai-tri-cong-nghe-gigaversal/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/gigaversal-bowling-cup-2026-chinh-thuc-khoi-tranh-tai-gigamall-tong-giai-thuong-den-60-trieu-dong/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/le-3004-nin-tho-voi-hanh-trinh-bay-xuyen-ngoi-nha-ma-am-12d-lan-dau-xuat-hien-tai-tp-ho-chi-minh/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/gigamall-huong-ung-gio-trai-dat-2026-tu-tat-den-den-van-hanh-ben-vung/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/dong-nguoi-do-ve-gigamall-du-xuan-khu-game-cong-nghe-tro-thanh-tam-diem-giai-tri-dau-nam/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/4/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/5/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/6/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/7/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/2",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article2043/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article2040/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article2037/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article2014/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article2036/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article2042/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article2031/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article2041/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/clip-experience/article1614/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/clip-experience/article1613/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/clip-experience/article1686/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article2030/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article2029/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/clip-experience/article1615/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/nhanh-tay-tai-app-nhan-combo-voucher-xin-220k/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/chuong-trinh-livestream-cung-giga-tour-san-deal-gia-hoi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/flash-sale-cuoi-thang-uu-dai-xa-lang-den-70/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/15",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/13/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/14/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/15/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/17/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/18/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/19/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/17",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/ghe-galbi-house-cung-quay-chiec-vong-than-ky-tai-galbi-house-hcm-de-co-co-hoi-rinh-hang-ngan-qua-tang-gia-tri--1330/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/check-in-google-map-nhan-ngay-ve-mien-phi-khi-mua-1-ve-trien-lam-bat-ky/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/thuong-ngoan-du-xuan-huong-uu-dai-mua-1-tang-1/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/happy-1st-anniversary-tri-an-1-nam-dong-hanh/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/happy-birthday-claude-monet-trien-lam-gui-uu-dai-mua-1-tang-1/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/ban-co-mot-thong-diep-tu-trien-lam-van-gogh-monet/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mung-thang-moi-uu-dai-moi-1-/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/vi-phu-nu-la-de-yeu-thuong/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1530/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1529/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1528/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/tung-bung-cuoi-nam-uu-dai-cuc-soc/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/menu-trua-nay-an-gi-nay-co-them-vi-moi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/ngay-vang-ngut-ngan-uu-dai/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/tai-app-hom-nay-nhan-voucher-an-uong-lien-tay/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/tich-hoa-don-ngay-san-voucher-thai-market-lien-tay/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1587/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1548/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1522/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1513/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1324/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/gap-gap-lam-roi-chi-4-ngay-cuoi-cung-nhan-tui-xinh-voucher-100k/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mua-uu-dai-combo-chi-tu-13900vndnguoi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/nao-minh-cung-mo-tet-dam-da-rinh-pepsi-ve-nha-aka-ers-oi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/chuc-mung-sinh-nhat-cac-ban-thang-12-aka-house-tang-ban-1-ve-buffet-premium/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/bua-trua-vui-ve/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/don-giang-sinh-rinh-khuyen-mai/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/gion-tan-5-mieng-99-canh-mot-trong-nhung-combo-dang-hot-nhat-tai-texas-chicken-mua-le-hoi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/vui-le-hoi-ron-rang-mam-ga-ran-gion-tan-1575/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/deal-hot-rung-minh-don-halloween-linh-dinh/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/burger-bong-dem-nem-ngay-cho-chi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/ga-sot-habanero-cay-ngot-mam-la-me-ngay/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/vui-trang-ket-noi-goi-tron-vi-ngon-tai-texas-chicken/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/vui-nhap-hoc-deal-tung-nocccc/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mam-ga-tha-ga-trung-qua-olympic-cung-texas-chicken/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/4-mon-ngon-dinh-99000d-da-tro-lai/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/khai-he-bung-no-voi-summer-combo-chop-co-hoi-den-han-quoc-thu-lam-idol-k-pop/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/gap-doi-my-ngon-cho-tuan-moi-nhu-y/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/vui-don-trang-tron-mam-ga-gion-texas-1195/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/bat-mood-vui-he-deal-ngon-het-say/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/et-o-et-et-o-et-cap-bao-khan-ga-sot-8-vi-cay-cay-ngon-bung-chay-chinh-thuc-xuat-hien/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/happy-combo-chiec-deal-thiet-ke-rieng-danh-cho-cap-doi-me-gan-ran-1063/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/happy-combo-tai-ga-gion-texas/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/tu-hop-cuoi-nam-chot-ngay-deal-dinh/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/tiec-ga-tha-ga-nhan-ngay-qua-chat/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/um-ba-la-uu-dai-mo-ra-4-mieng-ga-99k-mam-ga-tha-ga/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/4-mieng-ga-chi-99k-ga-gion-cay-ngon-ngat-ngay/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/bung-no-vi-cay-xuan-vui-het-say/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/vui-don-trang-tron-mam-ga-gion-texas/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/ga-bap-rang-bo-ngo-thoi-da-them-mam-ngay-cho-chi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/he-that-chill-gia-that-iu-cung-summer-combo-chi-139k/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/5-mieng-ga-mam-tha-ga/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/texas-mua-5-tinh-tien-3-mam-ga-tha-ga-yeu-thuong-suot-thang-ba/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/ha-canh-mam-ga-yuzu-tai-texas-chicken/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mua-5-tinh-tien-3-mam-ga-texas-tha-ga-525/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mua-5-tinh-tien-3-mam-ga-texas-tha-ga/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/uu-dai-lon-mung-texas-chicken-vietnam-tron-7-tuoi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/giang-sinh-ron-rang-tai-grill-cheer/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/7mm-len-10mm-khoai-tay-day-hon-nhan-doi-da-them/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/grill-cheer-happy-birthday-thuc-than-cung-nhan-ma/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/ai-la-thien-yet-den-ngay-grill-cheer-nhan-qua-tang-sinh-nhat/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/sinh-nhat-cung-thien-binh-xinh-dep-tai-gioi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/-d-d-/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/-d-d-d-/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/ban-se-dan-nguoi-ay-di-dau-vao-ngay-valentine/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/black-friday-den-grill-cheer-xem-co-gi-nao/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/uu-dai-suong-suong-danh-rieng-cho-hoi-u23-dip-halloween/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1538/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/ngay-doi-deal-hoi-jollibee-tung-deal-chi-99000-dong/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/sam-cang-nhieu-giam-cang-sau-gia-hap-dan-hon-khi-mua-tu-03-san-pham/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article654/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/aldo-end-of-season-sale-upto-50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/spicy-box-giam-50-gia-thit-bo/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mung-thang-sinh-nhat-fahasa-jump-arena-tung-uu-dai-cuc-kool/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1445/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1444/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1862/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/don-he-thoai-mai-cung-loat-uu-dai-hap-dan-tu-uniqlo-1861/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/sieu-pham-do-bo-mua-le-chot-deal-cuc-hoi-tai-coopxtra-gigamall-1858/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/yakimono-nuong-lau-pho-nhat-da-co-mat-tai-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1605/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/tri-an-10-nam-trung-thuong-100/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/khuyen-mai-ngap-tran-san-sang-don-tet/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1821/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/kohnan-gigamall-chinh-thuc-tro-lai-voi-uu-dai-bung-no/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/co-hen-voi-udon-day-tai-marugame-udon-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/ngay-hoi-me-be-me-mua-gia-hoi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/thu-cu-doi-moi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/bo-phieu-mua-hang/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/tai-sao-dien-may-cho-lon-re-hon/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/uu-dai-ve-cong-danh-cho-be-xiu-tai-tiniworld/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/bung-no-uu-dai-ngat-ngay-cho-thang-5-me-say/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/den-tini-don-he-nhu-y-tai-sao-khong/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/ve-than-ky-di-tat-ca-tini/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/sinh-nhat-tuyet-voi-nhat-den-tini-cuc-chat/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/vao-cong-mien-phi-voi-the-tini-kim-cuong/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/khoi-dong-mua-he-soi-noi-cung-voi-tini-bang-nhung-hoat-dong-vui-khong-tuong/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/tich-luy-thanh-vien-len-ngay-the-vang-nhan-ngan-uu-dai/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/combo-sieu-tiet-kiem/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mung-dai-le-3004-0105-sale-sale-tung-bung-uu-giam-gia-len-den-50-70-va-nhieu-san-pham-khac-sale-sieu-hot/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/uu-dai-chao-mung-ngay-quoc-khanh-2-9-1191/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/uu-dai-chao-mung-ngay-quoc-te-thieu-nhi-16/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/uu-dai-chao-mung-dai-le-304-15/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/happy-women39s-day/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/minigood-black-friday-sale-up-to-50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mung-ngay-phu-nu-viet-nam-cung-minigood/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mung-le-lon-sale-up-to-50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/san-deal-thuong-hieu-minigood/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/black-friday-san-ngay-hang-hot-cung-minigood/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/uu-dai-chao-mung-ngay-quoc-khanh-2-9/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article926/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/lam-dep-suc-khoe/salena/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/chuong-trinh-truoc-them-don-tet-nham-dan/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/combo-khang-khuan-thiet-yeu-cho-ca-nha/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/kohnan-japan-dich-vu-dat-hang-va-giao-tan-nha/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/san-deal-black-friday-tau-ngay-vat-dung-tien-ich-cho-gia-dinh/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/giam-gia-den-50-hang-noi-that-nhat-ban-kohnan-japan/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1940/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1932/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1928/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1929/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1702/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/hoat-dong-tet-2026-tung-bung-tai-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/ma-dao-khao-deal-dai-tiec-sale-tet-bung-no-tai-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/thong-bao-lich-hoat-dong-tet-binh-ngo-2026/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/duong-hoa-tet-cong-nghe-2026-tai-gigamall-chinh-thuc-mo-cua/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/khong-gian-phu-led-vo-cuc-infinity-world-lan-dau-tien-xuat-hien-tai-viet-nam/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/save-electricity-save-our-earth/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/uu-dai-sieu-mat-lanh/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/giam-gia-cuc-lon-den-50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/-mua-nhieu-giam-nhieu-hon/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/happy-womens-day/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/reebok-co-li-xi-danh-cho-ban/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/thu-6-den-toi-sale-up-to-50-san-deal-gap-boi-cung-reebok/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/reebok-mid-season-sale-up-to-50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/thu-6-den-toi-deal-ve-muon-loi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/end-of-season-sale-chong-mat-up-to-50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/black-friday-len-den-50-tu-2011-den-212-ban-da-san-sang/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/he-ron-rang-ngap-tran-uu-dai/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1717/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/tet-2026-goi-ten-ga-sot-mala-bbq-da-co-mat-tai-texas-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/giam-gia-tet-uu-dai-lon-tai-shikimart-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/kymdan-uu-dai-khai-loc-mung-xuan-khoi-dau-an-lanh/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/qua-hay-tet-day-mykingdom-uu-dai-den-50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/khai-xuan-binh-ngo-uu-dai-len-den-50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article967/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/bung-no-uu-dai-len-toi-30-chot-deal-giang-sinh-linh-dinh-mua-sam/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/shopping-le-hoi-san-voi-uu-dai-toi-50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1546/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1152/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1105/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article999/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article874/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article765/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article759/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/check-in-buffet-chi-199000-dong-nhan-ngay-nuoc-ngot-cuc-da/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/nuong-gap-gogi-ti-ti-hot-deal/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/treo-thuong-den-9-chi-vang-cho-tho-nuong-deal-luyen-tin-duoc-hong/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mo-party-chat-quay-gogi-cuc-sung/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mot-lan-thu-suc-buffet-nuong-chi-199knguoi-trong-60-phut/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/my-vi-bien-khoi-me-dam-vi-ngot-tu-nhien-tu-hai-san-nhat/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/uu-dai-dac-quyen-cho-hoi-me-gym/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mung-be-giang-iu-dai-15-tai-cloud-pot/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/cloud-pot-gigamall-thuong-tang-ban-nhieu-uu-dai-hap-dan/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/posts/article1984/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/thuong-thuc-combo-mon-moi-chi-tu-20k-duy-nhat-tai-xing-fu-tang-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/menu-dong-gia-39k-giai-phap-cho-nhung-ngay-an-gi-cung-duoc/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/duy-nhat-8-ngay-tang-01-buffet-premium-tai-sumo-yakiniku/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/25-nam-kfc-viet-nam-ga-sieu-ngon-qua-cuc-da/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/26",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/24/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/25/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/29/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/30/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/28",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/sieu-sale-hang-hieu-vstyle/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1895/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/1-cham-dong-dieu-nhip-tho-tao-mo-khong-gian/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/su-kien-trai-nghiem-san-pham-xiaomi-17t-series-va-nhan-hang-loat-uu-dai-hap-dan/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/tttm-gigamall-hoa-thanh-thanh-pho-le-hoi-trong-dip-quoc-te-thieu-nhi-16/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/your-home-gallery-cung-dang-van-lam-nang-tam-trai-nghiem-bong-da-tai-gia/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/dip-0106-nay-dua-be-bay-xuyen-ky-jura-ngam-khung-long-sieu-thuc-tai-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/man-nhan-voi-nhung-cu-strike-dinh-cao-va-dem-tranh-tai-nghet-tho-tai-gigaversal-bowling-cup-2026/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1792/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/su-kien-khai-mac-le-hoi-hoa-anh-dao-gigamall-2026-cung-duong-vang-sakura/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/mykingdom-mung-sinh-nhat-16-nam-uu-dai-len-den-40/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/the-le-cuoc-thi-gigamall-sakura-cosplay-contest-2026/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/le-hoi-hoa-anh-dao-2026-cung-duong-vang-sakura-lon-nhat-viet-nam/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/dai-le-sale-to-trung-lon-100-trung-qua/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1620/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1619/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1618/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1617/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1612/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1611/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1517/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/luong-da-ve-va-voucher-60000-dong-sap-duoc-guardian-tung-ra/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/tung-bung-le-hoi-sam-dep-toan-dien-voi-uu-dai-den-50-va-qua-tang-hap-dan/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1269/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/50-sale-off-deal-he-ruc-ro/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mua-sam-xanh-song-an-lanh/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1661/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/kham-pha-le-hoi-oktoberfest-tai-coopxtra/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/vi-vu-trung-thu-ruoc-den-dung-gu-tu-shondo/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/be-x-gigamall-uu-dai-dat-xe-be-den-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/luong-ve-la-phai-nap-nang-luong39-mcdonald39s-tung-deal-flash-sale-ga-ran/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1481/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1480/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1479/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1606/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/uu-dai-30-ban-tiec-osaka-course/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/uu-dai-cuc-soc-giam-gia-len-den-50-da-re-nay-con-re-hon/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/cam-nang-mua-sam-moi-tu-ngay-1411-den-2711/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/bua-trua-no-ne-gia-ca-mien-che/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/dong-gia-29k-cho-3-mon-nuoc-than-thanh-tai-passio-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/den-guardian-de-so-huu-lan-da-sang-min-khoe-khoan/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/giam-20-bo-tu-tra-ngon/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/nhan-doi-so-luong-chi-con-nua-gia/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/bi-gheo-thi-cho-keo-bi-doa-ma-thi-chien-pizza/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/48",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/46/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/47/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/51/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/52/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/50",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/cham-tai-app-nhan-ve-choi-vui-khuay-dong-he-ruc-ro-tai-jp-sport-games/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/sieu-hoc-bong-lon-nhat-nam-tu-ila-dang-ky-1-duoc-hoc-2-khoa-tieng-anh-chuan-quoc-te/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1951/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1941/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1769/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/moi-dang-ky-gian-hang-nhat-ban-tai-le-hoi-hoa-anh-dao-gigamall-2026/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/mo-app-giga-nhan-qua-83-xinh-xan/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/gigamall-danh-tang-ban-hoa-va-qua-mien-phi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/hanh-trinh-an-ngon-kham-pha-thu-vi-cho-ngay-83-tai-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/momo-bonbon-nhan-ca-phe-ngon/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/𝐄𝐍𝐃-𝐎𝐅-𝐒𝐄𝐀𝐒𝐎𝐍-𝐒𝐀𝐋𝐄/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1288/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1287/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1065/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1064/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article45/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article42/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article48/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1329/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1328/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1326/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1073/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/aldo-thang-cua-nang-uu-dai-ngap-tran/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/ngay-cua-nang-qua-ngap-tran/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/thach-thuc-moi-gioi-han-bat-dau-tu-chinh-ban/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1924/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1923/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/posts/article1616/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/hay-cung-the-gioi-kim-cuong-to-them-sac-tham-cho-mua-xuan-nay-de-khoi-dau-mot-nam-moi-that-may-man-voi-uu-dai--1317/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1316/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1315/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1314/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1933/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1763/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1761/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1759/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1758/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1872/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1871/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/sakura-wonderland-le-hoi-hoa-anh-dao-2025-tai-tttm-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/thu-xe-chat-nhan-qua-cuc-da-trai-nghiem-valentine-ngot-ngao/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/gigamall-thoa-loi-yeu-y-nao-cung-chieu/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/posts/article1978/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/mo-app-zalopay-nhan-uu-dai-he-ruc-ro-dinh-noc-kich-tran-tai-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/deal-gia-dinh-sale-het-minh-san-qua-khung-vui-mua-sam/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/doi-diem-ngay-rinh-voucher-watsons-cuc-xin-tren-app-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/ban-da-san-sang-voi-hada-labo-summer-tour-2026-tai-tang-1-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/summer-sale-uu-dai-don-he-chi-tu-195000vnd/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/toty-giam-gia-cuc-soc-den-50-tai-amazing-summer-sale-tang-1-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/pop-up-canifa-da-chinh-thuc-co-mat-tai-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/san-deal-chat-tai-amazing-summer-sale-gigamall-cung-4men/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/bien-qua-he-mo-app-cham-tay-co-ngay-qua-tang-cuc-chat-tai-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/suu-tam-sticker-3d-tini-kham-pha-the-gioi-tiniworld/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/thoai-mai-don-he-cung-khuyen-mai-co-han-tu-195000d-tai-uniqlo/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/doi-diem-tich-luy-tren-app-gigamall-nhan-ngay-uu-dai-khung-tu-thai-market/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/4",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article624/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mua-1-tang-2-tuoi-moi-moi-ngay/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/fan-cua-phuc-long-se-thich-dieu-nay/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article187/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article186/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article185/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/better-two-gether-tuyet-voi-nhat-la-khi-co-nhau/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article526/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article525/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article522/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1335/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1322/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/23",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/21/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/22/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/23/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/25/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/26/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/25",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1536/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1535/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1533/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1532/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1523/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1521/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1520/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1519/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1516/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/12",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/10/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/12/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/14/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/15/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/16/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/14",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1690/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/watsons-gigamall-khai-truong-tung-bung/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/giai-nhiet-tha-ga-dong-gia-/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1283/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1279/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1278/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/giang-sinh-vuikhui-qua-khung-chi-co-tai-my-kingdom/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article425/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article412/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article411/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1735/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/checklist-ngay-valentine-tai-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/mung-xuan-binh-ngo-thanh-vien-app-giga-nhan-ngay-bao-li-xi-tet/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/udon-day-2026-thu-3-cuoi-cung-cua-thang/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/uu-dai-dac-biet-tang-1-ve-trien-lam-khi-mua-1-ve-bat-ky-va-de-lai-review-tren-gg-maps/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1925/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/posts/article1964/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/ban-co-muon-tham-gia-cuoc-vien-chinh-thu-vi-mang-ten-city-sale/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/65",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/54/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/55/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/56/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/57/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/58/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/59/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/60/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1599/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/sale-tet-ron-rang-ngap-tran-uu-dai-len-den-50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/alpha-games-chinh-thuc-khai-truong-ngay-1201-khu-vui-choi-lien-hoan-dang-cap-viet-nam/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/sieu-sale-noel-deal-xin-no-end-len-den-50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1721/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1720/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1718/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1716/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1714/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article541/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/phuc-long-barista-couple/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/gigaversal-kham-pha-the-gioi-khung-long-va-vu-tru-12d-tai-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/infinity-world-ra-mat-cung-luc-2-vu-tru-thi-giac-moi-tai-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/amazing-summer-sale-da-chinh-thuc-co-mat-voi-qua-tang-cuc-khung-len-den-hang-chuc-trieu-dong/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1770/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mua-kinh-sang-ruoc-loc-vang-the-cao-may-man-100-trung-qua/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1564/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1563/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article687/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/uu-dai-mua-1-tang-1-tang-suc-de-khang-up-mood-tung-bung/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/thom-ngon-nong-gion-combo-banh-mi-tra-u-lanh-cafe-tra-sua-chi-tu-45000d/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1670/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/noel-2025-con-duong-anh-sang-mo-cua-tu-ngay-312/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/mung-tan-gia-watsons-tai-gigamall-tung-ngan-uu-dai/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/banh-tuoi-quoc-dan-nhat-ban-yamazaki-da-co-mat-tai-tang-b1/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/le-hoi-halloween-trick-or-sweet-ngap-tran-ngot-ngao-va-niem-vui-tai-gigamal/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/kkv-chinh-thuc-do-bo-tang-2-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/dien-mao-moi-cua-phuc-long-tang-4-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1394/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1393/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1392/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1384/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1383/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1382/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1381/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1380/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1379/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1378/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1376/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1377/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/20",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/18/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/20/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/24/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/22",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/posts/article2000/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/quan-ca-phe-co-khu-vui-choi-tre-em-tphcm-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/-d-/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/tung-bung-don-he-cung-onways-summer-sale-2022/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/sieu-deal-phuc-hoi-gia-tiet-kiem-den-50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/cu-trua-la-bee-ngoi-len-nhac-ban-iu-combo-1-phan-com-ga-mam-toi-nuoc-va-canh-chi-co-45000d-thui-do-/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/tang-fen-them-voucher-quay-ki-cheese-them-vui/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/deal-ca-rem-leng-keng-chi-con-10-ngay-de-thu/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/trua-nay-khong-biet-an-gi-de-bee-goi-y-com-ga-mam-toi-nha/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/thang-thien-binh-deal-sieu-dinh-uu-dai-mua-01-tang-01/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/deal-ga-hop-gu-an-vui-bung-mood/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/14",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/12/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/13/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/14/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/16/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/17/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/18/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/16",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/black-friday-giam-50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/bao-ga-18k-quet-qua-moi-nha-hang-kfc/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/tuan-le-black-friday-giam-ngay-30-pizza-co-lon/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/guardian-black-friday-voi-super-deal/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/nhay-sap-san-uu-dai-ngap-tran/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/giam-50-toan-bo-san-pham-baby/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/couple-tx-sale-cham-dich/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/black-friday-starts-now/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/sieu-pham-mua-sale-cuoi-nam-tai-blook/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/black-friday-uu-dai-don-dap-tran-ngap-niem-vui/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/47",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/45/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/49",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/67",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/54/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/55/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/56/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/57/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/58/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/59/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/60/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article2028/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article2027/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article2026/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article2013/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article2012/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article2011/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/2/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/3/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/4/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/6/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/7/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/2",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/bung-mood-hop-ca-deal-ga-hop-gu/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1471/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1470/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1468/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/happy-hour-39000-d-gio-vang-vui-choi-cuc-da-tai-tiniworld-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/uu-dai-gau-bong-soi-xam-chi-85000d-khi-mua-tu-4-ve-dai-chien-vung-bang-tuyet/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/kham-pha-san-pham-cuc-hot-tai-cua-hang-delta-tang-4-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/posts/article2005/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/bai-viet/khai-mac-chuong-trinh-khuyen-mai-tap-trung-mua-mua-sam-shopping-season-2022-tai-tttm-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/trua-nay-an-gi-thuc-don-bua-trua-linh-dinh-chi-tu-39000dphan/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/new-year-better-me/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/thong-bao-ban-da-nhan-duoc-1-tui-uniqlo-mien-phi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/chi-59000d-thoa-suc-mix-match-combo-yeu-thich-tai-tiniworld/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/-cung-uniqlo-gigamall-kham-pha-uu-dai-tuan-le-cam-on/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1757/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/tuan-le-gia-dinh-viet-nam-coopxtra-tang-nhieu-diem-thuon/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/don-he-bat-tan-highlands-coffee-co-deal-bao-ho/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/dong-chi-xinh-dep-len-do-cung-do-bo-den-beauty-box-san-uu-dai-hot-dau-thang-thoi-nao/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/skinny-jeans-sale-uu-dai-mua-he-den-tu-levis/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/chao-he-sang-tao-cung-lego-uu-dai-30/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/tgif-thank-god-its-freeze-day-thu-sau-tan-huong-binh-tinh-cho-luong/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/thuong-vi-tuoi-mat-sang-khoai-ngay-he/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/27",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/27/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/31/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/29",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1782/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/thang-3-ruc-ro-van-gogh-gui-tang-ban-uu-dai-mua-1-tang-1/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1749/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/tet-cong-nghe-show-dien-robot-ai-mien-phi-duy-nhat-tai-tang-6-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/li-xi-dau-nam-cho-thanh-vien-app-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/chuc-mung-nam-moi-2026/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/cung-shondo-pha-dao-gigaversal/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/uu-dai-duy-nhat-tet-nay-combo-game-moi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/dai-tiec-sale-do-tet-up-to-70-cung-colorbox/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/ra-mat-combo-5-khu-vui-choi-cho-be-cuc-xin-choi-tung-bung-tet-nay/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1931/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1930/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1558/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/starbucks-khao-uu-dai-dac-biet-mua-le-hoi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/trua-nay-ban-se-lai-chon-cam-chiu-dieu-gi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1219/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1203/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1200/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1199/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1198/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1197/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1195/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1192/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1191/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1171/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1170/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1169/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/26",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/28/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/29/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/30/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/28",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/checklist-nhung-thuong-hieu-tham-gia-le-hoi-ca-phe-tra-viet-2026/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/check-in-cung-duong-vang-sakura-san-ngay-combo-qua-xin/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/gigamall-tran-trong-cam-on-quy-doi-tac-dong-hanh-le-hoi-hoa-anh-dao-2026/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/tai-app-gigamall-ngap-tran-qua-xin/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/thu-pin-doi-cay-bat-tinh-yeu-trai-dat-cung-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1787/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/sale-up-to-50-flash-sale-thang-cua-nang/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/thu-5-den-coopxtra-sam-xanh-nhe-vi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/kohnan-pop-up-sale-giam-len-den-50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/cinetour-phim-tai-gap-go-my-tam-va-mai-tai-phen-tai-cgv-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/com-nieu-singapore-dimsum-hai-su-khai-truong-tung-bung/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/28",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/26/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/27/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/28/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/30/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/31/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/32/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/30",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1628/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1076/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1722/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1719/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mien-nam-ly-diamond-99k-phien-ban-gioi-han-rinh-ngay-keo-lo/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1917/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1911/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/hoan-hy-money-li-xi-don-tet-tu-boo/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article141/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article132/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article143/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article103/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article104/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1602/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/tung-bung-le-hoi-deal-hoi-dan-loi-mua-1-duoc-3-phien-ban-dac-biet-mua-le-hoi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/tin-tuc-su-kien/su-kien/sieu-sale-hang-hieu-fashion-beauty-fair/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1061/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1060/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1056/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1080/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/sieu-uu-dai-huong-ung-ngay-trai-dat/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article546/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/khau-trang-organic-cotton/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/posts/article1985/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/khu-vui-choi-o-sai-gon-cho-nguoi-lon-2025/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1408/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/sinh-than-thang-6-an-ga-giam-gia-cung-mrdakgalbi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/cuc-pham-wagyu-a5-gia-dung-thu-uu-dai-den-30-chi-tu-329000-vnd/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/uniqlo-gigamall-uu-dai-mung-ngay-cua-me-chi-tu-195000vnd/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1855/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1853/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1852/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1724/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/thuong-udon-don-loc-lon-100-trung-qua/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/an-tin-lunch-box-tan-binh-am-thuc-moi-tai-tang-5-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/khong-khi-tet-da-ron-rang-khap-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1673/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1051/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/--1049/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mam-trua-ngon-ghe-ngay-kfc/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article403/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/posts/article1982/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/choi-bowling-o-dau-tai-tphcm-den-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1678/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article167/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article165/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article164/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1756/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1711/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/mua-ve-tiniworld-rinh-ngay-charm-ngua-nhi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/workshop-to-he-dang-tung-bung-don-khach-tai-duong-hoa-tet-cong-nghe/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/thanh-vien-app-gigamall-tang-qua-ngot-ngao-cho-phai-dep/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/tet-nay-be-co-qua-xin-tu-gigaversal-x-keo-ho-lo-hulu/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1512/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/-mua-la-co-qua-cung-sace-lady/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/uu-dai-lon-cho-nu-cuoi-rang-ro/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/khuyen-mai/64",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article405/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article404/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article930/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article2010/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1374/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/fresh-lucky-combo/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article724/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/chao-thang-10-tra-u-lanh-dong-gia-10000d/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/trung-thu-co-tich-do-choi-me-tit/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article893/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/combo-dinh-duong-mua-dich-tai-coopxtra-pham-van-dong/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/chon-deal-tiet-kiem-com-nha-chat-luong/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article538/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article537/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1352/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/-39-/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/giam-50-gia-ve-vao-cong-tai-gigamall-thu-duc/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1084/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/alo-alo-tai-aldo-gigamall-co-deal-hot-hon-nyc-nha/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/bung-no-euro-chill-cung-uniforia/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article875/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/set-lunch-chuan-vi-hong-kong-chi-88000d-tai-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1083/www.aldoshoes.com",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1081/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1077/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1814/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1808/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1806/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1807/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1804/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1803/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/cali-day-ngon-sieu-dinh-gia-sieu-rung-rinh/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/cao-cao-cao-la-trung-qua-khung/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/dui-ech-ran-horu-menu-khong-con-chan/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/promotions/article1764/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/dong-ho-longines-cho-cap-doi-dang-cap/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1709/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/posts/article1701/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1867/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/tttm-gigamall-thong-bao-thoi-gian-hoat-dong-dai-le-2026/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/dien-tap-phuong-an-chua-chay-va-cuu-nan-cuu-ho-tai-tttm-gigamall-nam-2026/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/thong-bao-dien-tap-phuong-an-chua-chay-va-cuu-nan-cuu-ho-nam-2026-tai-tttm-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/sieu-uu-dai-tai-coopxtra/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mua-1-tang-1-tiet-kiem-toi-da/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/uu-dai-thanh-vien-them-ngay-diem-thuong/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/posts/article1997/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1552/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/thu-6-den-toi-deal-crocs-ruc-choi/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/shopping-season-thoa-suc-mua-dua-suc-sam/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/black-friday-deal-ngat-ngay-matcha-latte-11000d/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1780/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1779/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1778/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1773/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1772/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/4",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/2/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/3/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/4/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/6/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/7/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/6",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/kohnan-pop-up-sale-hang-loat-sieu-pham-giam-den-50/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1466/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/pha-co-don-trang-cung-uu-dai-dac-biet-gioi-han/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/mixmatch-bua-an-theo-gu-cua-ban-chi-co-tai-mcdonald39s/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article701/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article700/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article699/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/3",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/flash-sale-chop-nhoang/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/posts/article2006/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/vui-le-hoi-anh-dao-an-uong-tha-ga-cung-app-gigamall/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/5",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/su-kien/4",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions-events/events/article1788/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article776/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article775/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article774/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai-su-kien/bai-viet/3",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article985/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/u-la-troi-tin-duoc-khong-thuong-tra-sen-vang-gia-chi-5k/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/deal-hot-dau-nam-2022-ga-gion-vui-ve-tet-cuoi-tha-ga/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1449/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/trung-thu-ron-rang-niem-vui-lan-toa-tai-phuc-long/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/dinh-noc-kich-tran-ran-ran-ca-tuan-voi-mua-1-tang-1/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/en/promotions/article1347/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/doc-quyen-thang-3-san-sale-tha-ga/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://gigamall.com.vn/vn/khuyen-mai/crocs-mid-of-season-offer-uu-dai-30-hang-loat-hot-item/",
+      "via": "internal_promo"
     }
   ],
   "history": [
@@ -24384,6 +26454,21 @@
       "processed": 320,
       "rate403": 0.0,
       "rate429": 0.0
+    },
+    {
+      "at": "2026-08-16T09:55:24.691445Z",
+      "cc_added": 0,
+      "cc_patterns": [
+        "*.vn/*sale*",
+        "*.com/vn/*khuyen-mai*"
+      ],
+      "duration_s": 87.9,
+      "errors": 1,
+      "frontier_pending": 5270,
+      "new_domains": 0,
+      "processed": 320,
+      "rate403": 0.0,
+      "rate429": 0.0
     }
   ],
   "legacy_import_complete": true,
@@ -24392,7 +26477,7 @@
   "legacy_imported_domains": 0,
   "legacy_seed_added_this_run": 0,
   "legacy_seed_cursor": 0,
-  "run_count": 6,
-  "updated_at": "2026-08-16T09:33:18.128936Z",
+  "run_count": 7,
+  "updated_at": "2026-08-16T09:56:52.622100Z",
   "version": 1
 }
