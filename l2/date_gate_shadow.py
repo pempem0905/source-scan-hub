@@ -6,6 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE = ROOT / "l2" / "candidate-queue.jsonl"
+SUMMARY = ROOT / "l2" / "shadow-status.json"
 TODAY = dt.date.today()
 MONTHS = {m.lower(): i for i, m in enumerate(["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], 1)}
 MONTHS.update({m.lower(): i for i, m in enumerate(["January","February","March","April","May","June","July","August","September","October","November","December"], 1)})
@@ -63,9 +64,24 @@ def classify(text):
     return "SHADOW_REVIEW_DATE", None, "no_validity_evidence"
 
 
+def write_summary(total, counts):
+    payload={
+        "schema":"promo.l2.shadow_status.v1",
+        "generated_at":dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00","Z"),
+        "today":TODAY.isoformat(),
+        "total":total,
+        "counts":dict(sorted(counts.items())),
+        "production_eligible_automatically":0,
+        "production_write":False,
+        "note":"SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion."
+    }
+    SUMMARY.write_text(json.dumps(payload,ensure_ascii=False,indent=2,sort_keys=True)+"\n",encoding="utf-8")
+
+
 def main():
     if not QUEUE.exists():
         QUEUE.write_text("")
+        write_summary(0,{})
         print('{"total":0}')
         return
     rows=[]; counts={}
@@ -84,6 +100,7 @@ def main():
         counts[status]=counts.get(status,0)+1
         rows.append(r)
     QUEUE.write_text(''.join(json.dumps(r,ensure_ascii=False,sort_keys=True)+'\n' for r in rows),encoding='utf-8')
+    write_summary(len(rows),counts)
     print(json.dumps({"total":len(rows),"counts":counts},ensure_ascii=False))
 
 if __name__ == '__main__':
