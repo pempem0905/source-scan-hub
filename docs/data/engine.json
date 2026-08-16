@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-16T21:20:28.055147Z",
+  "generated_at": "2026-08-16T21:40:01.172662Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 3811,
-    "frontier_deferred_pending": 39689,
-    "frontier_pending": 43500,
-    "last_6_runs_new_domains": 6,
+    "frontier_active_pending": 3195,
+    "frontier_deferred_pending": 39583,
+    "frontier_pending": 42778,
+    "last_6_runs_new_domains": 5,
     "last_run": {
-      "at": "2026-08-16T21:18:45.719982Z",
+      "at": "2026-08-16T21:38:05.406826Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vn/*uu-dai*",
-        "*.com/vn/*voucher*",
-        "*.com/vn/*promotion*",
-        "*.com/vi-vn/*khuyen-mai*"
+        "*.com/vi-vn/*uu-dai*",
+        "*.com/vi-vn/*voucher*",
+        "*.com/vi-vn/*promotion*",
+        "*.net/vn/*khuyen-mai*"
       ],
-      "duration_s": 101.4,
-      "errors": 13,
-      "frontier_pending": 43500,
+      "duration_s": 115.1,
+      "errors": 42,
+      "frontier_pending": 42778,
       "new_domains": 1,
-      "processed": 311,
+      "processed": 417,
       "rate403": 0.0,
       "rate429": 0.0
     },
-    "latest_common_crawl": "CC-MAIN-2026-25",
-    "master_domains": 651,
+    "latest_common_crawl": "CC-MAIN-2026-30",
+    "master_domains": 675,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 49,
+    "run_count": 50,
     "running": true,
-    "seen_urls": 232777,
-    "updated_at": "2026-08-16T21:20:27.156013Z"
+    "seen_urls": 236071,
+    "updated_at": "2026-08-16T21:40:00.470696Z"
   },
   "master_input": {
     "active_input_count": 105,
@@ -39,35 +39,35 @@
       "ACTIVE_INPUT": 105,
       "AUTHORIZED_ACCOUNT": 2,
       "BANK_CARD": 32,
-      "DISCOVERY_ONLY": 13,
+      "DISCOVERY_ONLY": 14,
       "FOOD_BEVERAGE": 22,
-      "GENERAL": 434,
+      "GENERAL": 437,
       "LOYALTY_REWARDS": 9,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 14,
       "PROMO_RETAIL": 60,
-      "PUBLIC_HTTP": 574,
+      "PUBLIC_HTTP": 577,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 71,
-      "REVIEW_INPUT": 470,
-      "SOURCE_HUNTER": 13,
-      "SOURCE_REVIEW": 470,
+      "REVIEW_INPUT": 472,
+      "SOURCE_HUNTER": 14,
+      "SOURCE_REVIEW": 472,
       "TRAVEL_MOBILITY": 13
     },
     "dedupe_key": "registrable_domain",
-    "discovery_only_count": 13,
-    "generated_at": "2026-08-16T21:20:27.886145Z",
+    "discovery_only_count": 14,
+    "generated_at": "2026-08-16T21:40:01.061377Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 588,
-    "review_input_count": 470,
+    "record_count": 591,
+    "review_input_count": 472,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 651,
+    "source_hunter_domains": 675,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -210,7 +210,7 @@
       "SHADOW_REJECT_TECHNICAL": 18,
       "SHADOW_REVIEW_DATE": 24
     },
-    "generated_at": "2026-08-16T20:52:38.976681Z",
+    "generated_at": "2026-08-16T21:22:02.402217Z",
     "note": "SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion.",
     "production_eligible_automatically": 0,
     "production_write": false,
@@ -320,37 +320,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 3,
+    "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "ngân hàng thẻ tín dụng khuyến mãi Việt Nam",
-      "ngân hàng thẻ tín dụng ưu đãi Việt Nam",
-      "ngân hàng thẻ tín dụng voucher Việt Nam",
-      "ngân hàng thẻ tín dụng promotion Vietnam"
+      "ví điện tử khuyến mãi Việt Nam",
+      "ví điện tử ưu đãi Việt Nam",
+      "ví điện tử voucher Việt Nam",
+      "ví điện tử promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 41,
+    "cc_domain_page": 42,
     "frontier_scheduler": {
-      "active": 311,
+      "active": 417,
       "base_per_host_batch": 16,
-      "deferred": 39689,
+      "deferred": 39583,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 36
+      "unique_hosts": 51
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T14:20:16.388502Z",
-      "domain": "ihg.com",
-      "radar": false,
-      "url": "https://ihg.com/content/vn/vi/offers",
-      "via": "internal_promo"
-    },
     {
       "at": "2026-08-16T14:43:52.731191Z",
       "domain": "specials.priceless.com",
@@ -1182,6 +1175,13 @@
       "domain": "creditcard.com.vn",
       "radar": false,
       "url": "https://creditcard.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T21:38:05.406826Z",
+      "domain": "vtcpay.vn",
+      "radar": false,
+      "url": "https://vtcpay.vn/",
       "via": "free_search"
     }
   ]
