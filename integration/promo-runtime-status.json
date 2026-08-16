@@ -1,18 +1,18 @@
 {
   "schema": "promo.runtime_status.v1",
-  "generated_at": "2026-08-16T18:27:34Z",
+  "generated_at": "2026-08-16T19:11:00Z",
   "source": "live_verified_canonical_plus_worker_exports",
   "canonical": {
-    "batch": 85,
-    "source_high_watermark": "SRC-485",
-    "registered_sources": 464,
-    "scanned_sources": 320,
-    "actionable_offers": 313,
+    "batch": 86,
+    "source_high_watermark": "SRC-491",
+    "registered_sources": 470,
+    "scanned_sources": 326,
+    "actionable_offers": 319,
     "voucher_benefit_records": null,
-    "literal_codes": 60,
+    "literal_codes": 66,
     "ready_queue": 0,
-    "last_commit_at": "2026-08-16T17:19:13.767475Z",
-    "note": "Live durable Supabase canonical state verified at B85 after an atomic six-row microbatch commit; voucher_benefit_records remains null because no explicit canonical DB count was verified."
+    "last_commit_at": "2026-08-16T18:08:38.748904Z",
+    "note": "Live durable Supabase canonical state verified at B86 / SRC-491; ledger row B85→B86 matches promo_master_state. Candidate queue has no READY rows. voucher_benefit_records remains null because no explicit canonical DB count was measured."
   },
   "workers": {
     "PROMO Banks Shard": {
@@ -48,11 +48,19 @@
     },
     "PROMO GPT Infra + Dispatch": {
       "state": "ACTIVE",
-      "last_run_at": "2026-08-16T17:19:30Z",
+      "last_run_at": "2026-08-16T19:11:00Z",
+      "fallback_sources_read": 0,
+      "offers_found": 0,
+      "voucher_benefits_found": 0,
+      "literal_codes_found": 0,
+      "enqueued": 0,
       "ready_queue": 0,
       "relayed": 0,
       "commit_stall": false,
-      "worker_health": "CANONICAL_OK; detected 6 READY and committed one atomic B85 microbatch; post-commit READY=0; ledger/master verified. Shared input BRIDGE_SHADOW active_input=103; dispatch plan uses ELIGIBLE + ACTIVE_INPUT routing."
+      "repairs_performed": [
+        "runtime telemetry canonical refreshed B85\u2192B86"
+      ],
+      "worker_health": "Banks/Retail/Turbo/Infra enabled and fresh; canonical queue has no READY rows; ledger B86 matches promo_master_state (registered 470, scanned 326, offers 319, codes 66)."
     }
   }
 }
