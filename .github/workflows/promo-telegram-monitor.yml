@@ -88,6 +88,7 @@ jobs:
           s = engine.get('status', {})
           m = engine.get('master_input', {})
           pc = promo.get('canonical', {})
+          workers = promo.get('workers', {})
           pre = auth.get('preauth', {})
           platforms = auth.get('platforms', {})
           lr = l2.get('last_run', {})
@@ -114,6 +115,23 @@ jobs:
           bridge = pre.get('bridge_status', bridge_status.get('status', 'UNKNOWN'))
           ready_login = bool(login_needed) and bridge in {'READY','TAKEOVER_READY','SESSION_READY'}
 
+          def worker_metric(name, key):
+              w = workers.get(name, {})
+              return w.get(key) if isinstance(w, dict) else None
+
+          def worker_yield(name, short):
+              offers = worker_metric(name, 'offers_found')
+              vouchers = worker_metric(name, 'voucher_benefits_found')
+              codes = worker_metric(name, 'literal_codes_found')
+              if codes is None:
+                  codes = worker_metric(name, 'literal_codes_committed')
+              read = worker_metric(name, 'sources_read')
+              if read is None:
+                  read = worker_metric(name, 'code_sources_read')
+              if read is None:
+                  read = worker_metric(name, 'fallback_sources_read')
+              return f'{short}: src {val(read)} · offer {val(offers)} · voucher {val(vouchers)} · code {val(codes)}'
+
           now = datetime.now(ZoneInfo('Asia/Bangkok')).strftime('%d/%m %H:%M')
           first = not bool(previous)
           period = 'mốc đầu' if first else 'so với báo cáo trước (~30p)'
@@ -126,6 +144,11 @@ jobs:
               f'🎯 PROMO Sources: {val(snapshot["registered_sources"])}{delta(snapshot["registered_sources"], previous.get("registered_sources"))} · scanned {val(snapshot["scanned_sources"])}{delta(snapshot["scanned_sources"], previous.get("scanned_sources"))}',
               f'🎟 Offers: {val(snapshot["actionable_offers"])}{delta(snapshot["actionable_offers"], previous.get("actionable_offers"))} · Codes: {val(snapshot["literal_codes"])}{delta(snapshot["literal_codes"], previous.get("literal_codes"))}',
               f'🧱 Batch: B{val(snapshot["batch"])}{delta(snapshot["batch"], previous.get("batch"))} · READY {val(snapshot["ready_queue"])}{delta(snapshot["ready_queue"], previous.get("ready_queue"))}',
+              '⚙️ Worker yield (lượt gần nhất):',
+              '  ' + worker_yield('PROMO Banks Shard', 'Banks'),
+              '  ' + worker_yield('PROMO Retail Shard', 'Retail'),
+              '  ' + worker_yield('PROMO Turbo Scan', 'Turbo'),
+              '  ' + worker_yield('PROMO GPT Infra + Dispatch', 'Infra'),
               f'🧩 L2: run {val(snapshot["l2_run_count"])}{delta(snapshot["l2_run_count"], previous.get("l2_run_count"))} · attempted {val(lr.get("attempted"))} · promo {val(lr.get("promo_candidates"))} · errors {val(lr.get("errors"))}',
               f'🔐 Login bridge: {bridge} · hard runner ready: {val(hard.get("runner_ready"))}',
           ]
@@ -134,7 +157,7 @@ jobs:
           if bridge == 'PERMISSION_REQUIRED':
               token_name = permission.get('secret', 'CLOUDFLARE_BROWSER_RUN_API_TOKEN')
               perm_name = permission.get('required_permission', 'Browser Rendering - Edit')
-              lines.append(f'⚠ L2 bridge cần quyền: GitHub/secure runtime secret {token_name} với Cloudflare permission `{perm_name}`; takeover URL vẫn chỉ ở private runtime.')
+              lines.append(f'⚠ L2 bridge đang ở PERMISSION_REQUIRED: {token_name} / {perm_name}. Nếu secret đã được thêm, chờ Bridge Builder xác minh runtime rồi trạng thái sẽ đổi; không coi file status cũ là bằng chứng secret còn thiếu.')
 
           if ready_login:
               lines.append('🚨 CẦN LOGIN: ' + ', '.join(login_needed))
@@ -182,7 +205,7 @@ jobs:
               json.dumps(snapshot, ensure_ascii=False, indent=2),
               encoding='utf-8'
           )
-          print('Telegram status sent with delta metrics.')
+          print('Telegram status sent with delta metrics and worker yield.')
           PY
 
       - name: Save PROMO monitor snapshot
