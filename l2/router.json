@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "project_id": "PROMO-L2-ROUTER-V1",
   "upstream_project": "PROMO-SRC-HUNTER-V1",
   "input": "integration/master_input_sources_v1.jsonl",
@@ -21,7 +21,14 @@
     "literal_code_requires_context": true,
     "reject_product_sku_model_context": true,
     "reject_xml_sitemap_code_extraction": true,
-    "required_before_promotion": ["exact_literal_string", "promo_code_context", "actionable_economics_or_explicit_code_instruction", "canonical_dedup", "current_validity_review"]
+    "reject_translation_json_technical_tokens": true,
+    "shadow_states": {
+      "SHADOW_REJECT_TECHNICAL": "Never promote; token is a technical/translation/config key rather than a voucher code.",
+      "SHADOW_EXPIRED": "Never promote to active production; explicit validity is in the past.",
+      "SHADOW_REVIEW_DATE": "Hold; code context exists but current validity is not established.",
+      "SHADOW_CURRENT": "Eligible only for independent final verification; not an automatic production record."
+    },
+    "required_before_promotion": ["exact_literal_string", "promo_code_context", "actionable_economics_or_explicit_code_instruction", "canonical_dedup", "current_or_future_validity", "independent_official_evidence_reopen"]
   },
   "rules": {
     "source_discovery_owner": "PROMO-SRC-HUNTER-V1",
