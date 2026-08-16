@@ -12,7 +12,7 @@ CANDIDATES = ROOT / "l2" / "candidate-queue.jsonl"
 MAX_ITEMS = int(os.getenv("L2_MAX_ITEMS", "20"))
 MAX_SECONDS = int(os.getenv("L2_MAX_SECONDS", "480"))
 START = time.time()
-UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131 Safari/537.36 PROMO-L2/2.0"
+UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131 Safari/537.36 PROMO-L2/2.1"
 
 PROMO_WORDS = ["khuyen mai", "khuyến mãi", "ưu đãi", "uu dai", "voucher", "promo", "coupon", "discount", "cashback", "hoàn tiền", "reward", "loyalty", "member", "deal", "sale", "giảm"]
 URL_HINTS = ["khuyenmai", "khuyen-mai", "uudai", "uu-dai", "promo", "voucher", "coupon", "reward", "loyalty", "deal", "offer"]
@@ -21,7 +21,8 @@ LOGIN_URL_RE = re.compile(r"/(login|signin|sign-in|dang-nhap)(?:/|$|\?)", re.I)
 CODE_RE = re.compile(r"(?P<trigger>mã(?:\s+(?:giảm\s*giá|ưu\s*đãi|khuyến\s*mãi))?|ma(?:\s+(?:giam\s*gia|uu\s*dai|khuyen\s*mai))?|promo\s*code|voucher\s*code|coupon\s*code|nhập\s*mã|nhap\s*ma|use\s*code|apply\s*code)\s*[:\-]?\s*(?P<code>[A-Z0-9][A-Z0-9_-]{3,19})", re.I)
 STRONG_TRIGGER_RE = re.compile(r"(mã\s+(?:giảm\s*giá|ưu\s*đãi|khuyến\s*mãi)|ma\s+(?:giam\s*gia|uu\s*dai|khuyen\s*mai)|promo\s*code|voucher\s*code|coupon\s*code|nhập\s*mã|nhap\s*ma|use\s*code|apply\s*code)", re.I)
 BENEFIT_RE = re.compile(r"(giảm|giam|discount|\boff\b|cashback|hoàn\s*tiền|hoan\s*tien|tặng|tang|miễn\s*phí|mien\s*phi|free|voucher|coupon|%|\b\d{1,3}[.,]?\d{3}\s*(?:đ|d|vnd)\b)", re.I)
-BAD_CODE_CONTEXT_RE = re.compile(r"(mã\s*sản\s*phẩm|ma\s*san\s*pham|product\s*code|sku|model|mã\s*hàng|ma\s*hang|mã\s*đơn|ma\s*don|order\s*code|collection|bộ\s*sưu\s*tập|bo\s*suu\s*tap)", re.I)
+BAD_CODE_CONTEXT_RE = re.compile(r"(mã\s*sản\s*phẩm|ma\s*san\s*pham|product\s*code|sku|model|mã\s*hàng|ma\s*hang|mã\s*đơn|ma\s*don|order\s*code|collection|bộ\s*sưu\s*tập|bo\s*suu\s*tap|text_[a-z0-9_]+|i18n|translation|localization|placeholder|imark_description)", re.I)
+TECH_CODE_RE = re.compile(r"(^|_)(TEXT|IMARK|DESCRIPTION|DESC|LABEL|TITLE|VALUE|KEY|BUTTON|PLACEHOLDER|ERROR|MESSAGE|CONFIG|OPTION|PRODUCT|VARIANT)(_|\d|$)", re.I)
 TAG_RE = re.compile(r"<[^>]+>")
 SPACE_RE = re.compile(r"\s+")
 CODE_STOP = {"HTML", "HTTP", "HTTPS", "LOGIN", "SIGNIN", "PROMO", "VOUCHER", "COUPON", "DISCOUNT", "UNDEFINED", "NULL", "TRUE", "FALSE"}
@@ -45,6 +46,11 @@ def extract_codes(text, content_type=""):
     for m in CODE_RE.finditer(text):
         code = m.group("code").upper().strip("_-")
         if len(code) < 4 or code in CODE_STOP:
+            continue
+        # Promo codes using underscores are extremely uncommon in this corpus while
+        # translation/config keys are common. Reject them at extraction time; the
+        # downstream technical-token gate remains as defense in depth.
+        if "_" in code or TECH_CODE_RE.search(code):
             continue
         left = max(0, m.start() - 140); right = min(len(text), m.end() + 180)
         context = text[left:right]
