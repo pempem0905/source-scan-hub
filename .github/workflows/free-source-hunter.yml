@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/free-source-hunter.yml'
       - 'free-source-hunter/hunter.py'
+      - 'free-source-hunter/bootstrap_free.py'
   schedule:
     - cron: '23 */6 * * *'
   workflow_dispatch:
@@ -31,6 +32,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
+      - name: Bootstrap latest Common Crawl and migrate legacy domain set
+        run: python3 free-source-hunter/bootstrap_free.py
       - name: Run free Common Crawl source hunter
         run: python3 free-source-hunter/hunter.py
       - name: Persist frontier and master domains
