@@ -26,7 +26,6 @@ def main():
     all_tasks=[]
     all_tasks.extend(s.get('frontier') or [])
     all_tasks.extend(s.get('frontier_deferred') or [])
-    # Stable dedup without touching hunter seen semantics.
     uniq={}
     for t in all_tasks:
         u=t.get('url') if isinstance(t,dict) else None
@@ -37,15 +36,13 @@ def main():
         buckets[h].sort(key=lambda t:(PRIORITY.get(t.get('via','frontier'),8), len(t.get('url','')), t.get('url','')))
     hosts=sorted(buckets, key=lambda h:(PRIORITY.get(buckets[h][0].get('via','frontier'),8), -len(buckets[h]), h))
     active=[]; deferred=[]
-    # First pass: strict per-host diversity.
-    for h in hosts:
+    for idx,h in enumerate(hosts):
         b=buckets[h]
         take=min(PER_HOST,len(b),max(0,MAX_ACTIVE-len(active)))
         active.extend(b[:take]); deferred.extend(b[take:])
         if len(active)>=MAX_ACTIVE:
-            for hh in hosts[hosts.index(h)+1:]: deferred.extend(buckets[hh])
+            for hh in hosts[idx+1:]: deferred.extend(buckets[hh])
             break
-    # If few hosts exist, fill a second wave round-robin but still avoid one-host domination.
     if len(active)<MAX_ACTIVE and deferred:
         db=defaultdict(deque)
         for t in deferred: db[host(t.get('url',''))].append(t)
@@ -54,15 +51,12 @@ def main():
         while dh and len(active)<MAX_ACTIVE:
             nxt=[]
             for h in dh:
-                if db[h] and len(active)<MAX_ACTIVE: active.append(db[h].popleft())
+                if db[h] and len(active)<MAX_ACTIVE:
+                    active.append(db[h].popleft())
                 if db[h]: nxt.append(h)
             dh=nxt
-        for h in dh: deferred.extend(db[h])
-        # Include buckets not in dh if loop ended at MAX_ACTIVE.
-        if len(active)>=MAX_ACTIVE:
-            for h,q in db.items():
-                while q: deferred.append(q.popleft())
-    combined=(active+deferred)[:MAX_TOTAL]
+        for q in db.values():
+            while q: deferred.append(q.popleft())
     s['frontier']=active[:MAX_ACTIVE]
     s['frontier_deferred']=deferred[:max(0,MAX_TOTAL-len(active))]
     s['frontier_scheduler']={
