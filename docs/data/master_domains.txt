@@ -132,6 +132,9 @@
 52batrieu.vn
 52duhang.vn
 568play.vn
+584nhatrang.vn
+5boxing.vn
+5chome.vn
 abc-mart.com.vn
 acb.com.vn
 aeon.com.vn
@@ -261,6 +264,7 @@ gu.2te.vn
 gunny.360game.vn
 gym.elitefitness.com.vn
 hafelevietnam.vn
+haitac.568play.vn
 hanoicentre.com.vn
 hasaki.vn
 hdbank.com.vn
@@ -283,6 +287,7 @@ huyetkiem.360game.vn
 ibaohiem.vn
 ibaoviet.vn
 id.357games.vn
+id.568play.vn
 idmvietnam.com
 ihg.com
 ijc.vn
@@ -347,6 +352,7 @@ namanmarket.com
 nanakids.vn
 nap.codm.360mobi.vn
 napas.com.vn
+naruto.568play.vn
 neufie.edu.vn
 ngoisao.vn
 nhancon.028.vn
@@ -388,6 +394,11 @@ rabbitcare.vn
 rapchieuphim.com
 redgo.vn
 rfoods.com.vn
+s232-ht.568play.vn
+s316-ht.568play.vn
+s54-ht.568play.vn
+s555-ht.568play.vn
+s82-ht.568play.vn
 saigonreview.vn
 sammishop.com
 sapo.vn
@@ -411,6 +422,7 @@ smiletrip.vn
 soha.vn
 specials.priceless.com
 supersports.com.vn
+support.568play.vn
 swavi.vn
 tapchicongthuong.vn
 td.360game.vn
@@ -472,6 +484,7 @@ viettelstore.vn
 viettelvn.com
 viettelvt.com
 vill.vn
+vinaphonedata.vn
 vinaphonehanoi.vnpt.vn
 vincom.com.vn
 vinfastmiennam.vn
