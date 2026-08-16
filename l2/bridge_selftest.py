@@ -104,7 +104,7 @@ def main() -> None:
     assert "password" in login_html and "OTP" in login_html
 
     bridge_py = (L2 / "browser_run_cdp.py").read_text(encoding="utf-8")
-    for marker in ("acquire_browser_ws", "wait_event_with_heartbeat", "BACKOFF_MARKER", "authenticated_session_reuse"):
+    for marker in ("acquire_browser_ws", "wait_event_with_heartbeat", "BACKOFF_MARKER", "HANDOFF_COMPLETE_SESSION_REUSE_VERIFIED"):
         assert marker in bridge_py, f"bridge regression: missing {marker}"
 
     request_workflow = (ROOT / ".github" / "workflows" / "promo-l2-browser-run-bridge.yml").read_text(encoding="utf-8")
@@ -115,8 +115,6 @@ def main() -> None:
 
     manual_workflow = (ROOT / ".github" / "workflows" / "promo-l2-secure-login-bridge.yml").read_text(encoding="utf-8")
     assert "tiktokshop" in manual_workflow, "manual bridge must expose TikTok Shop"
-    # Real Browser Run sessions are intentionally NOT launched on code pushes;
-    # static selftest owns code-change validation so free quota is conserved.
     on_header = manual_workflow.split("permissions:", 1)[0]
     assert "push:" not in on_header, "manual secure bridge must not auto-probe on push"
 
