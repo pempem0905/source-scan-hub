@@ -28,9 +28,10 @@ jobs:
       L2_MAX_ITEMS: '30'
       L2_MAX_SECONDS: '480'
     steps:
-      - name: Checkout
+      - name: Checkout latest main
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 1
 
       - name: Setup Python
