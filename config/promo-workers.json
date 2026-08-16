@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "project": "PROMO_MASTER",
+  "purpose": "Version-controlled mirror of the ChatGPT PROMO worker architecture. Runtime state remains authoritative in ChatGPT Automations and the Source Scan Hub database.",
+  "runtime": {
+    "scheduler": "ChatGPT Scheduled Tasks",
+    "cadence": "hourly",
+    "active_workers": 5,
+    "canonical_state": "Supabase via Source Scan Hub",
+    "status_endpoint": "https://source-scan-hub.lovable.app/api/promo-status",
+    "value_filter": "ACTIONABLE-VALUE-V2",
+    "master_rule": "single-writer"
+  },
+  "workers": [
+    {
+      "name": "PROMO Banks Shard",
+      "role": "producer",
+      "scope": ["banks", "cards", "payments", "travel", "hotel", "OTA", "airline", "transport"],
+      "max_official_pages_per_run": 15,
+      "enqueue_clean_candidates_same_run": true
+    },
+    {
+      "name": "PROMO Retail Shard",
+      "role": "producer",
+      "scope": ["retail", "ecommerce", "electronics", "F&B", "cinema", "fashion", "beauty", "pharmacy", "mother-baby", "malls", "lifestyle"],
+      "max_official_pages_per_run": 15,
+      "enqueue_clean_candidates_same_run": true
+    },
+    {
+      "name": "PROMO Hub + L2 Sync",
+      "role": "discovery-producer",
+      "scope": ["official promo hubs", "under-covered categories", "child/detail resolution"],
+      "max_official_pages_per_run": 12,
+      "layer2_optional": true,
+      "enqueue_clean_candidates_same_run": true
+    },
+    {
+      "name": "PROMO Turbo Scan",
+      "role": "commit-coordinator",
+      "commit_rule": {
+        "normal_clean_ready_min": 3,
+        "normal_clean_ready_max": 6,
+        "small_batch_max_wait_hours": 2
+      },
+      "responsibilities": ["global dedup", "validate READY queue", "atomic commit", "post-commit verification"]
+    },
+    {
+      "name": "PROMO GPT Infra + Commit",
+      "role": "health-relay",
+      "responsibilities": ["worker health", "producer-stall detection", "commit-stall detection", "queue relay", "writer verification", "status/dashboard health"]
+    }
+  ],
+  "data_rules": {
+    "official_source_first": true,
+    "child_detail_terms_override_hubs": true,
+    "literal_code_requires_exact_visible_official_string": true,
+    "dynamic_account_qr_otp_referral_contest_ids_are_not_literal_codes": true,
+    "expired_and_non_actionable_offers_are_rejected": true,
+    "global_dedup_required": true
+  },
+  "sync_note": "Do not hard-code live batch counters in this file. Read current counters from the status endpoint/database. Changes to ChatGPT task prompts should be mirrored here when architecture or worker roles materially change."
+}
