@@ -210,3 +210,13 @@
 {"at": "2026-08-16T13:40:47.405679Z", "domain": "1000m.vn", "radar": false, "url": "http://1000m.vn/robots.txt", "via": "common_crawl"}
 {"at": "2026-08-16T13:40:47.405679Z", "domain": "1001carpets.vn", "radar": false, "url": "https://1001carpets.vn/", "via": "common_crawl"}
 {"at": "2026-08-16T13:40:47.405679Z", "domain": "1001show.vn", "radar": false, "url": "http://1001show.vn/", "via": "common_crawl"}
+{"at": "2026-08-16T13:50:06.581256Z", "domain": "temu.com", "radar": false, "url": "https://temu.com/", "via": "radar_out"}
+{"at": "2026-08-16T13:50:06.581256Z", "domain": "cake.vn", "radar": false, "url": "https://cake.vn/", "via": "free_search"}
+{"at": "2026-08-16T13:50:06.581256Z", "domain": "card.apply.hsbc.com.vn", "radar": false, "url": "https://card.apply.hsbc.com.vn/", "via": "free_search"}
+{"at": "2026-08-16T13:50:06.581256Z", "domain": "fingo.vn", "radar": false, "url": "https://fingo.vn/", "via": "free_search"}
+{"at": "2026-08-16T13:50:06.581256Z", "domain": "neufie.edu.vn", "radar": false, "url": "https://neufie.edu.vn/", "via": "free_search"}
+{"at": "2026-08-16T13:50:06.581256Z", "domain": "offers.vn", "radar": false, "url": "https://offers.vn/", "via": "free_search"}
+{"at": "2026-08-16T13:50:06.581256Z", "domain": "timo.vn", "radar": false, "url": "https://timo.vn/", "via": "free_search"}
+{"at": "2026-08-16T13:50:06.581256Z", "domain": "vietbank.com.vn", "radar": false, "url": "https://vietbank.com.vn/", "via": "free_search"}
+{"at": "2026-08-16T13:50:06.581256Z", "domain": "360auto.net", "radar": false, "url": "https://360auto.net/tai-auto/", "via": "common_crawl_domain"}
+{"at": "2026-08-16T13:50:06.581256Z", "domain": "cis.visa.com", "radar": false, "url": "https://cis.visa.com/visa-in-moldova/promotions/air-alo.html", "via": "internal_promo"}

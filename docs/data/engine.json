@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-16T13:49:38.144606Z",
+  "generated_at": "2026-08-16T13:57:09.677222Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 4767,
-    "frontier_deferred_pending": 38956,
-    "frontier_pending": 43723,
-    "last_6_runs_new_domains": 86,
+    "frontier_active_pending": 4555,
+    "frontier_deferred_pending": 38755,
+    "frontier_pending": 43310,
+    "last_6_runs_new_domains": 84,
     "last_run": {
-      "at": "2026-08-16T13:40:47.405679Z",
-      "cc_added": 496,
+      "at": "2026-08-16T13:50:06.581256Z",
+      "cc_added": 0,
       "cc_patterns": [
-        "*.net/vn/*uu-dai*",
-        "*.com/vietnam/*promotion*",
-        "*.vn/*khuyen-mai*",
-        "*.vn/*khuyenmai*"
+        "*.vn/*uu-dai*",
+        "*.vn/*uudai*",
+        "*.vn/*voucher*",
+        "*.vn/*promotion*"
       ],
-      "duration_s": 530.0,
-      "errors": 317,
-      "frontier_pending": 43723,
-      "new_domains": 32,
-      "processed": 1540,
-      "rate403": 1.104,
-      "rate429": 4.026
+      "duration_s": 422.4,
+      "errors": 265,
+      "frontier_pending": 43310,
+      "new_domains": 10,
+      "processed": 1245,
+      "rate403": 0.643,
+      "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 223,
+    "master_domains": 247,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 21,
+    "run_count": 22,
     "running": true,
-    "seen_urls": 94521,
-    "updated_at": "2026-08-16T13:49:37.402085Z"
+    "seen_urls": 99215,
+    "updated_at": "2026-08-16T13:57:08.955701Z"
   },
   "master_input": {
-    "active_input_count": 94,
+    "active_input_count": 95,
     "counts": {
-      "ACTIVE_INPUT": 94,
+      "ACTIVE_INPUT": 95,
       "AUTHORIZED_ACCOUNT": 2,
-      "BANK_CARD": 23,
+      "BANK_CARD": 24,
       "DISCOVERY_ONLY": 13,
       "FOOD_BEVERAGE": 17,
-      "GENERAL": 138,
+      "GENERAL": 154,
       "LOYALTY_REWARDS": 6,
       "PAYMENT_WALLET": 7,
-      "PROMO_BANKS": 25,
+      "PROMO_BANKS": 26,
       "PROMO_L2": 13,
       "PROMO_RETAIL": 56,
-      "PUBLIC_HTTP": 242,
+      "PUBLIC_HTTP": 259,
       "RESIDENTIAL_REQUIRED": 11,
       "RETAIL_ECOMMERCE": 55,
-      "REVIEW_INPUT": 148,
+      "REVIEW_INPUT": 164,
       "SOURCE_HUNTER": 13,
-      "SOURCE_REVIEW": 148,
+      "SOURCE_REVIEW": 164,
       "TRAVEL_MOBILITY": 9
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 13,
-    "generated_at": "2026-08-16T13:49:37.977343Z",
+    "generated_at": "2026-08-16T13:57:09.523742Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 255,
-    "review_input_count": 148,
+    "record_count": 272,
+    "review_input_count": 164,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 223,
+    "source_hunter_domains": 247,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -210,7 +210,7 @@
       "SHADOW_REJECT_TECHNICAL": 18,
       "SHADOW_REVIEW_DATE": 20
     },
-    "generated_at": "2026-08-16T13:04:20.512027Z",
+    "generated_at": "2026-08-16T13:48:08.112635Z",
     "note": "SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion.",
     "production_eligible_automatically": 0,
     "production_write": false,
@@ -232,143 +232,99 @@
     "total": 13
   },
   "l2_auth": {
-    "schema_version": 1,
+    "schema_version": 2,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-16T17:43:00+07:00",
+    "updated_at": "2026-08-16T20:43:00+07:00",
+    "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
       "NEEDS_RELOGIN",
       "PERMISSION_REQUIRED"
     ],
+    "preauth": {
+      "enabled": true,
+      "registry": "l2/preauth-platforms.json",
+      "bridge_status": "PENDING_BROWSER_SESSION_CONTROL",
+      "preferred_handoff": "CLOUDFLARE_BROWSER_RUN_HUMAN_IN_LOOP",
+      "residential_fallback": true,
+      "login_before_demand": true
+    },
     "platforms": {
+      "uniqlo": {
+        "access_class": "AUTHORIZED_ACCOUNT",
+        "status": "PREAUTH_PENDING_SESSION",
+        "profile_id": "uniqlo-vn-main",
+        "credential_storage": "runtime-browser-session-only"
+      },
+      "smember": {
+        "access_class": "AUTHORIZED_ACCOUNT",
+        "status": "PREAUTH_PENDING_SESSION",
+        "profile_id": "smember-main",
+        "credential_storage": "runtime-browser-session-only"
+      },
       "grabfood": {
         "access_class": "AUTHORIZED_ACCOUNT",
-        "status": "INFRA_PENDING",
+        "status": "PREAUTH_PENDING_SESSION",
         "profile_id": "grabfood-main",
-        "credential_storage": "local-runner-only"
+        "credential_storage": "runtime-browser-session-only"
       },
       "shopeefood": {
         "access_class": "AUTHORIZED_ACCOUNT",
-        "status": "INFRA_PENDING",
+        "status": "PREAUTH_PENDING_SESSION",
         "profile_id": "shopeefood-main",
-        "credential_storage": "local-runner-only"
+        "credential_storage": "runtime-browser-session-only"
       },
       "tiktok": {
         "access_class": "AUTHORIZED_ACCOUNT",
-        "status": "INFRA_PENDING",
+        "status": "PREAUTH_PENDING_SESSION",
         "profile_id": "tiktok-main",
-        "credential_storage": "local-runner-only"
+        "credential_storage": "runtime-browser-session-only"
       },
       "loyalty-generic": {
         "access_class": "AUTHORIZED_ACCOUNT",
-        "status": "INFRA_PENDING",
+        "status": "WAIT_SOURCE_MAPPING",
         "profile_id": "loyalty-generic",
-        "credential_storage": "local-runner-only"
+        "credential_storage": "runtime-browser-session-only"
       }
     },
     "policy": {
       "passwords_in_github": false,
       "cookies_in_github": false,
       "otp_in_github": false,
-      "session_profile_location": "self-hosted runner local disk",
-      "on_session_expiry": "set NEEDS_RELOGIN and pause only affected platform"
+      "refresh_tokens_in_github": false,
+      "takeover_urls_in_github": false,
+      "session_profile_location": "runtime browser session or self-hosted residential profile",
+      "on_session_expiry": "set NEEDS_RELOGIN and pause only affected platform",
+      "on_cloud_ip_block": "route platform to self-hosted-residential persistent profile",
+      "no_captcha_bypass": true,
+      "user_owned_or_authorized_accounts_only": true
     }
   },
   "discovery": {
-    "free_search_last_added": 10,
+    "free_search_last_added": 12,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "giao đồ ăn gọi xe khuyến mãi Việt Nam",
-      "giao đồ ăn gọi xe ưu đãi Việt Nam",
-      "giao đồ ăn gọi xe voucher Việt Nam",
-      "giao đồ ăn gọi xe promotion Vietnam"
+      "ngân hàng thẻ tín dụng khuyến mãi Việt Nam",
+      "ngân hàng thẻ tín dụng ưu đãi Việt Nam",
+      "ngân hàng thẻ tín dụng voucher Việt Nam",
+      "ngân hàng thẻ tín dụng promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 17,
+    "cc_domain_page": 18,
     "frontier_scheduler": {
-      "active": 1044,
+      "active": 1245,
       "base_per_host_batch": 16,
-      "deferred": 38956,
+      "deferred": 38755,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.74,
+      "previous_429_rate": 4.026,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 113
+      "unique_hosts": 150
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T11:28:43.019507Z",
-      "domain": "eximbank.com.vn",
-      "radar": false,
-      "url": "https://eximbank.com.vn/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-16T11:28:43.019507Z",
-      "domain": "onways.com",
-      "radar": false,
-      "url": "https://onways.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-16T11:28:43.019507Z",
-      "domain": "beautybox.com.vn",
-      "radar": false,
-      "url": "https://beautybox.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:28:43.019507Z",
-      "domain": "aldoshoes.vn",
-      "radar": false,
-      "url": "https://aldoshoes.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:28:43.019507Z",
-      "domain": "crocs.com.vn",
-      "radar": false,
-      "url": "https://crocs.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:28:43.019507Z",
-      "domain": "chothuocvang.com",
-      "radar": false,
-      "url": "https://chothuocvang.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:28:43.019507Z",
-      "domain": "hasaki.vn",
-      "radar": false,
-      "url": "https://hasaki.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:28:43.019507Z",
-      "domain": "cocoonvietnam.com",
-      "radar": false,
-      "url": "https://cocoonvietnam.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:28:43.019507Z",
-      "domain": "danhgiathuonghieu.vn",
-      "radar": false,
-      "url": "https://danhgiathuonghieu.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T11:28:43.019507Z",
-      "domain": "elly.vn",
-      "radar": false,
-      "url": "https://elly.vn/",
-      "via": "free_search"
-    },
     {
       "at": "2026-08-16T11:28:43.019507Z",
       "domain": "maisononline.vn",
@@ -1138,6 +1094,76 @@
       "radar": false,
       "url": "http://1001show.vn/",
       "via": "common_crawl"
+    },
+    {
+      "at": "2026-08-16T13:50:06.581256Z",
+      "domain": "temu.com",
+      "radar": false,
+      "url": "https://temu.com/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-16T13:50:06.581256Z",
+      "domain": "cake.vn",
+      "radar": false,
+      "url": "https://cake.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T13:50:06.581256Z",
+      "domain": "card.apply.hsbc.com.vn",
+      "radar": false,
+      "url": "https://card.apply.hsbc.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T13:50:06.581256Z",
+      "domain": "fingo.vn",
+      "radar": false,
+      "url": "https://fingo.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T13:50:06.581256Z",
+      "domain": "neufie.edu.vn",
+      "radar": false,
+      "url": "https://neufie.edu.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T13:50:06.581256Z",
+      "domain": "offers.vn",
+      "radar": false,
+      "url": "https://offers.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T13:50:06.581256Z",
+      "domain": "timo.vn",
+      "radar": false,
+      "url": "https://timo.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T13:50:06.581256Z",
+      "domain": "vietbank.com.vn",
+      "radar": false,
+      "url": "https://vietbank.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-16T13:50:06.581256Z",
+      "domain": "360auto.net",
+      "radar": false,
+      "url": "https://360auto.net/tai-auto/",
+      "via": "common_crawl_domain"
+    },
+    {
+      "at": "2026-08-16T13:50:06.581256Z",
+      "domain": "cis.visa.com",
+      "radar": false,
+      "url": "https://cis.visa.com/visa-in-moldova/promotions/air-alo.html",
+      "via": "internal_promo"
     }
   ]
 }
