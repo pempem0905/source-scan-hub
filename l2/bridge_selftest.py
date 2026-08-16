@@ -12,6 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 L2 = ROOT / "l2"
+REQUIRED_LOGIN_PLATFORMS = {"grabfood", "shopeefood", "tiktok", "tiktokshop"}
 
 
 def load(path: Path) -> dict:
@@ -63,6 +64,11 @@ def main() -> None:
 
     platforms = preauth.get("platforms") or {}
     auth_platforms = auth.get("platforms") or {}
+    missing = REQUIRED_LOGIN_PLATFORMS - set(platforms)
+    assert not missing, f"missing required login platforms in registry: {sorted(missing)}"
+    missing_auth = REQUIRED_LOGIN_PLATFORMS - set(auth_platforms)
+    assert not missing_auth, f"missing required login platforms in auth status: {sorted(missing_auth)}"
+
     profile_ids = []
     for name, cfg in platforms.items():
         pid = cfg.get("profile_id")
