@@ -40,10 +40,31 @@ jobs:
       - name: Install Playwright client
         run: python -m pip install --disable-pip-version-check playwright
 
+      - name: Prepare quality-gated active input
+        run: |
+          cp integration/master_input_sources_v1.jsonl /tmp/master_input_sources_v1.jsonl
+          python3 <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('integration/master_input_sources_v1.jsonl')
+          rows=[]
+          for line in p.read_text(errors='replace').splitlines():
+              try: r=json.loads(line)
+              except Exception: continue
+              if r.get('status') == 'ACTIVE_INPUT': rows.append(r)
+          p.write_text(''.join(json.dumps(r,ensure_ascii=False,sort_keys=True)+'\n' for r in rows))
+          print(f'active_input={len(rows)}')
+          PY
+
       - name: Scan master-input public and JS-heavy sources in shadow mode
         run: python l2/public_browser_worker.py
 
+      - name: Restore canonical master input working copy
+        if: always()
+        run: mv /tmp/master_input_sources_v1.jsonl integration/master_input_sources_v1.jsonl
+
       - name: Persist L2 state and shadow candidates
+        if: always()
         run: |
           git config user.name "promo-l2-free-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
