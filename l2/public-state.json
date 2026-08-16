@@ -214,21 +214,33 @@
       "promo_candidates": 0,
       "public_ok": 0,
       "shadow_ready": 0
+    },
+    {
+      "at": "2026-08-16T14:00:25Z",
+      "attempted": 6,
+      "blocked": 0,
+      "code_candidates": 4,
+      "errors": 0,
+      "js_browser": 0,
+      "login_required": 0,
+      "promo_candidates": 4,
+      "public_ok": 6,
+      "shadow_ready": 4
     }
   ],
   "last_run": {
-    "attempted": 0,
+    "attempted": 6,
     "blocked": 0,
-    "code_candidates": 0,
+    "code_candidates": 4,
     "errors": 0,
     "js_browser": 0,
     "login_required": 0,
-    "promo_candidates": 0,
-    "public_ok": 0,
-    "shadow_ready": 0
+    "promo_candidates": 4,
+    "public_ok": 6,
+    "shadow_ready": 4
   },
   "project_id": "PROMO-L2-ROUTER-V1",
-  "run_count": 18,
+  "run_count": 19,
   "schema_version": 2,
   "seen": {
     "https://acb.com.vn/": {
@@ -311,6 +323,11 @@
       "at": "2026-08-16T11:18:22Z",
       "content_hash": "3513abbac130c5913259911c7ca19d525cb3dab92672728599de6f07dbf1ef4c"
     },
+    "https://card.apply.hsbc.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:00:21Z",
+      "content_hash": "171d9607e0365dbba386246425a3cb261152af9128ae9d0368833dea12575e2f"
+    },
     "https://card.apply.hsbc.com.vn/daily-offers/en": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T11:08:31Z",
@@ -351,6 +368,16 @@
       "at": "2026-08-16T11:08:13Z",
       "content_hash": "4b517c25c3484a62326860f1d78ca94777b25d3142192c788e79a81617713874"
     },
+    "https://cis.visa.com/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:00:21Z",
+      "content_hash": "93f1d9d68c5abf8bd54277d5ac15e12bf73226a81a732a0555e95274a5a34bce"
+    },
+    "https://cis.visa.com/visa-in-moldova/promotions/air-alo.html": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:00:21Z",
+      "content_hash": "889b86de558a550c6b6a2fe5501a7fe5f9ccbbfc3962d1a584b2f73d27af9209"
+    },
     "https://concung.com/tin-khuyen-mai.html": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T11:08:15Z",
@@ -360,6 +387,16 @@
       "access_state": "ERROR",
       "at": "2026-08-16T11:18:46Z",
       "content_hash": null
+    },
+    "https://corporate.visa.com/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:00:21Z",
+      "content_hash": "6a6e52bfa38a3871ec193d3ca58c180266826653a7429c812eeec7e0228064b0"
+    },
+    "https://corporate.visa.com/en/resources/security-compliance.html": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:00:22Z",
+      "content_hash": "a9516d0ec3a2d4bd10b1561b7f7fe1995125e0250229d2d621892d199bb6f84a"
     },
     "https://crescentmall.com.vn/": {
       "access_state": "PUBLIC_OK",
@@ -726,6 +763,11 @@
       "at": "2026-08-16T11:18:07Z",
       "content_hash": null
     },
+    "https://shop.highlandscoffee.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-16T14:00:25Z",
+      "content_hash": "249b833cb5ed5e894f3cc0806c5db3871645975607f7952cf9392bb0e6126f96"
+    },
     "https://shopee.vn/": {
       "access_state": "PUBLIC_OK",
       "at": "2026-08-16T10:50:26Z",
@@ -942,5 +984,5 @@
       "content_hash": "41c02a4a827a8c2e4ceb581580f496de7cc787135ec22741ab4cd2501970091a"
     }
   },
-  "updated_at": "2026-08-16T13:48:08Z"
+  "updated_at": "2026-08-16T14:00:25Z"
 }
