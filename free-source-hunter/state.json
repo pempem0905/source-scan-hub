@@ -1,1607 +1,8 @@
 {
+  "cc_bootstrap_error": "HTTPError",
   "cc_index": null,
   "cc_pattern_cursor": 0,
   "frontier": [
-    {
-      "seed": true,
-      "url": "https://gigamall.com.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://gigamall.com.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://centralretail.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://centralretail.com.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://centralretail.com.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://centralretail.com.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://centralretail.com.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://centralretail.com.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://centralretail.com.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://centralretail.com.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://centralretail.com.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://centralretail.com.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://centralretail.com.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://centralretail.com.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://centralretail.com.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://centralretail.com.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://homefarm.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://homefarm.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://homefarm.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://homefarm.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://homefarm.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://homefarm.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://homefarm.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://homefarm.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://homefarm.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://homefarm.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://homefarm.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://homefarm.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://homefarm.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://homefarm.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://winmart.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://winmart.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://winmart.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://winmart.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://winmart.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://winmart.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://winmart.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://winmart.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://winmart.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://winmart.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://winmart.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://winmart.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://winmart.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://winmart.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://co-opmart.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://co-opmart.com.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://co-opmart.com.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://co-opmart.com.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://co-opmart.com.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://co-opmart.com.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://co-opmart.com.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://co-opmart.com.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://co-opmart.com.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://co-opmart.com.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://co-opmart.com.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://co-opmart.com.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://co-opmart.com.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://co-opmart.com.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://mmvietnam.com/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://mmvietnam.com/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://mmvietnam.com/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://mmvietnam.com/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://mmvietnam.com/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://mmvietnam.com/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://mmvietnam.com/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://mmvietnam.com/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://mmvietnam.com/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://mmvietnam.com/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://mmvietnam.com/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://mmvietnam.com/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://mmvietnam.com/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://mmvietnam.com/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://emart.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://emart.com.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://emart.com.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://emart.com.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://emart.com.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://emart.com.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://emart.com.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://emart.com.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://emart.com.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://emart.com.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://emart.com.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://emart.com.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://emart.com.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://emart.com.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://thegioididong.com/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://thegioididong.com/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://thegioididong.com/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://thegioididong.com/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://thegioididong.com/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://thegioididong.com/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://thegioididong.com/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://thegioididong.com/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://thegioididong.com/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://thegioididong.com/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://thegioididong.com/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://thegioididong.com/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://thegioididong.com/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://thegioididong.com/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://dienmayxanh.com/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://dienmayxanh.com/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://dienmayxanh.com/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://dienmayxanh.com/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://dienmayxanh.com/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://dienmayxanh.com/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://dienmayxanh.com/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://dienmayxanh.com/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://dienmayxanh.com/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://dienmayxanh.com/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://dienmayxanh.com/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://dienmayxanh.com/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://dienmayxanh.com/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://dienmayxanh.com/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://fptshop.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://fptshop.com.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://fptshop.com.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://fptshop.com.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://fptshop.com.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://fptshop.com.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://fptshop.com.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://fptshop.com.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://fptshop.com.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://fptshop.com.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://fptshop.com.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://fptshop.com.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://fptshop.com.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://fptshop.com.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://cellphones.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://cellphones.com.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://cellphones.com.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://cellphones.com.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://cellphones.com.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://cellphones.com.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://cellphones.com.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://cellphones.com.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://cellphones.com.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://cellphones.com.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://cellphones.com.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://cellphones.com.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://cellphones.com.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://cellphones.com.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://viettelstore.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://viettelstore.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://viettelstore.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://viettelstore.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://viettelstore.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://viettelstore.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://viettelstore.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://viettelstore.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://viettelstore.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://viettelstore.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://viettelstore.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://viettelstore.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://viettelstore.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://viettelstore.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://nhathuoclongchau.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://nhathuoclongchau.com.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://nhathuoclongchau.com.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://nhathuoclongchau.com.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://nhathuoclongchau.com.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://nhathuoclongchau.com.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://nhathuoclongchau.com.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://nhathuoclongchau.com.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://nhathuoclongchau.com.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://nhathuoclongchau.com.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://nhathuoclongchau.com.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://nhathuoclongchau.com.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://nhathuoclongchau.com.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://nhathuoclongchau.com.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pharmacity.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://pharmacity.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://pharmacity.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pharmacity.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pharmacity.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pharmacity.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pharmacity.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pharmacity.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pharmacity.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pharmacity.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pharmacity.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pharmacity.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pharmacity.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pharmacity.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://guardian.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://guardian.com.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://guardian.com.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://guardian.com.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://guardian.com.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://guardian.com.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://guardian.com.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://guardian.com.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://guardian.com.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://guardian.com.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://guardian.com.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://guardian.com.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://guardian.com.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://guardian.com.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://watsons.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://watsons.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://watsons.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://watsons.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://watsons.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://watsons.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://watsons.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://watsons.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://watsons.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://watsons.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://watsons.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://watsons.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://watsons.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://watsons.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pnj.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://pnj.com.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://pnj.com.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pnj.com.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pnj.com.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pnj.com.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pnj.com.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pnj.com.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pnj.com.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pnj.com.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pnj.com.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pnj.com.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pnj.com.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://pnj.com.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://uniqlo.com/vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://uniqlo.com/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://uniqlo.com/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://uniqlo.com/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://uniqlo.com/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://uniqlo.com/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://uniqlo.com/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://uniqlo.com/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://uniqlo.com/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://uniqlo.com/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://uniqlo.com/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://uniqlo.com/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://uniqlo.com/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://uniqlo.com/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://decathlon.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://decathlon.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://decathlon.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://decathlon.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://decathlon.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://decathlon.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://decathlon.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://decathlon.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://decathlon.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://decathlon.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://decathlon.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://decathlon.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://decathlon.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://decathlon.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://canifa.com/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://canifa.com/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://canifa.com/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://canifa.com/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://canifa.com/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://canifa.com/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://canifa.com/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://canifa.com/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://canifa.com/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://canifa.com/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://canifa.com/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://canifa.com/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://canifa.com/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://canifa.com/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://juno.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://juno.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://juno.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://juno.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://juno.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://juno.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://juno.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://juno.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://juno.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://juno.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://juno.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://juno.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://juno.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://juno.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://highlandscoffee.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://highlandscoffee.com.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://highlandscoffee.com.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://highlandscoffee.com.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://highlandscoffee.com.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://highlandscoffee.com.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://highlandscoffee.com.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://highlandscoffee.com.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://highlandscoffee.com.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://highlandscoffee.com.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://highlandscoffee.com.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://highlandscoffee.com.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://highlandscoffee.com.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://highlandscoffee.com.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://phuclong.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://phuclong.com.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://phuclong.com.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://phuclong.com.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://phuclong.com.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://phuclong.com.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://phuclong.com.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://phuclong.com.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://phuclong.com.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://phuclong.com.vn/promotions",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://phuclong.com.vn/promo",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://phuclong.com.vn/offers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://phuclong.com.vn/deals",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://phuclong.com.vn/sale",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://kfcvietnam.com.vn/",
-      "via": "curated_seed"
-    },
-    {
-      "seed": true,
-      "url": "https://kfcvietnam.com.vn/sitemap.xml",
-      "via": "seed_sitemap"
-    },
-    {
-      "seed": true,
-      "url": "https://kfcvietnam.com.vn/khuyen-mai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://kfcvietnam.com.vn/khuyenmai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://kfcvietnam.com.vn/uu-dai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://kfcvietnam.com.vn/uudai",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://kfcvietnam.com.vn/voucher",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://kfcvietnam.com.vn/vouchers",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://kfcvietnam.com.vn/promotion",
-      "via": "seed_promo_path"
-    },
-    {
-      "seed": true,
-      "url": "https://kfcvietnam.com.vn/promotions",
-      "via": "seed_promo_path"
-    },
     {
       "seed": true,
       "url": "https://kfcvietnam.com.vn/promo",
@@ -10546,6 +8947,1881 @@
       "seed": false,
       "url": "https://gigamall.com.vn/vn/khuyen-mai/san-deal-thuong-hieu-texas-chicken/",
       "via": "sitemap"
+    },
+    {
+      "seed": true,
+      "url": "https://food.grab.com/promotion",
+      "via": "legacy_migration"
+    },
+    {
+      "seed": false,
+      "url": "https://centralretail.com.vn/offer-for-lease/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://homefarm.vn/blogs/khuyen-mai",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://homefarm.vn/blogs/khuyen-mai/mang-tinh-hoa-am-thuc-canada",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://homefarm.vn/blogs/khuyen-mai/giam-toi",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://homefarm.vn/blogs/khuyen-mai/san-ca-hoi-na-uy-tuoi-giam-gia-den-50-duy-nhat-18-20-07-2025",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://homefarm.vn/blogs/khuyen-mai/san-deal-hoi-he-hung-khoi-giam-toi-35-cung-homefarm",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://homefarm.vn/blogs/khuyen-mai/he-sang-deal-moi-giam-toi-30-chi-co-tai-homefarm",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://homefarm.vn/blogs/khuyen-mai/mo-tiec-sinh-nhat-11-tuoi-homefarm-khao-deal-sieu-hoi-giam-toi-40",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://homefarm.vn/blogs/khuyen-mai-hcm",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://homefarm.vn/sitemap_products_1.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://homefarm.vn/sitemap_blogs_1.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://homefarm.vn/sitemap_pages_1.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://homefarm.vn/sitemap_collections_1.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://homefarm.vn/blogs/khuyen-mai?page=2",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://homefarm.vn/blogs/khuyen-mai?page=3",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://homefarm.vn/blogs/khuyen-mai?page=90",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/trang-chu",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/home",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/he-thong-sieu-thi",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/supermarket-chain",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/tin-tuc-su-kien",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/chung-tay-vi-cong-dong",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/chung-tay-vi-cong-dong/tin-chung-tay-vi-cong-dong",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/cam-nang-mien-bac",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/cam-nang-mien-trung",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/cam-nang-mua-sam",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/cam-nang-tay-nguyen",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/cam-nang-dong-nam-bo",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/cam-nang-tay-nam-bo",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/ve-chung-toi",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/tin-khuyen-mai",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/khuyen-mai-tai-khu-cho-thue",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/chung-tay-vi-cong-dong/hinh-anh",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/chung-tay-vi-cong-dong/video",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/dich-vu",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/dich-vu/dich-vu-giao-hang",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/dich-vu/dich-vu-thu-ho-co-op",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/dich-vu/dich-vu-thanh-toan-khong-tien-mat",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/thong-tin-lien-he",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/cho-thue-mat-bang",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/huong-dan-chao-hang-moi",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/huong-dan-chao-hang-moi/chao-hang-truc-tiep",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/khach-hang-thanh-vien",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/the-le-chuong-trinh",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/dich-vu/dich-vu-doi-tra",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/mua-sam-da-kenh",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/khuyen-mai-thuc-pham-tuoi-song",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/khuyen-mai-thuc-pham-tuoi-song/quy-trinh-giao-nhan-hai-san",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/hang-nhan-rieng-co-op",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/categories",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/change-password",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/checkout",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/checkout-alternative",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/first-login",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/forgot-pass",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/help",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/hoi-vien-win",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/index",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/login",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/lucky-draw",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/mega-sales",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/mega-sales-2023",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/membership",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/hoivienvip",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/my-setting",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/Notification-detail",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/Notification-list",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/Notifications",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/order",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/order-fail",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/order-follow",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/order-received",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/order-success",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/privacy",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/register",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/register-success",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/san-pham-da-mua",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/sieu-sale-nganh-hang",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/super-brand-day",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/terms",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/thuc-pham-healthy-tet",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tim-kiem",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tin-tuc",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/verify",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/verify-input",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/verify-otp",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/verify-phone",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/404",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/cart",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/cate-fair-unilever",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/meat-deli",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/about",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/customer-support",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/danh-sach-cua-hang",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/delivery-policy",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/incentives-shopping",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/payment-policy",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/privacy-policy-and-info-sharing",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/quan-ly-chat-luong",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/return-and-exchange-policy",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/transaction-policy",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/gia-sieu-re--c114",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/uu-dai-hoi-vien--c51",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/sua-cac-loai--c08",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/sua-tuoi--c0133",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/sua-hat-sua-dau--c0134",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/sua-bot--c0135",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/bo-sua-pho-mai--c0138",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/sua-dac--c01161",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/sua-chua-vang-sua--c01169",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/rau-cu-trai-cay--c02",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/rau-la--c01167",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/cu-qua--c01168",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/trai-cay-tuoi--c01173",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/hoa-pham-tay-rua--c10",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/nuoc-giat--c01140",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/nuoc-xa--c01144",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/nuoc-rua-chen--c01142",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/binh-xit-con-trung--c01139",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/nuoc-lau-san-lau-kinh--c01141",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/nuoc-tay-rua--c01143",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/cham-soc-ca-nhan--c11",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/cham-soc-rang-mieng--c0147",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/cham-soc-da--c0146",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/cham-soc-toc--c0145",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/cham-soc-phu-nu--c0148",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/cham-soc-ca-nhan-khac--c0149",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/my-pham--c0150",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/khan-giay-khan-uot--c0151",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tin-tuc/uu-dai-cuc-soc-duy-nhat-tai-mot-so-sieu-thi-winmart",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tin-tuc/tuan-le-thuong-hieu-comfort-deal-soc-nuoc-giat-mua-1-tang-1-mmuqsg",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tin-tuc/den-vinmart-san-deal-duong-toc-dep-voi-bi-quyet-tu-thien-nhien-khap-xu-cua-dove-phy0yv",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tin-tuc/cua-hang-win-mien-bac-mung-1-tuoi-trieu-hang-sale-k0iqf1",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tin-tuc/chuong-trinh-boc-tham-may-man-trung-voucher-cuc-da-tu-ngay-1508-28082025-tai-sieu-thi-winmart-sa-dec-8k35q1",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tin-tuc/ra-mat-comfort-cham-soc-chuyen-sau-moi-khuyen-mai-cuc-hap-dan-thang-11-tai-vinmart",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tin-tuc/khai-truong-vinmart-ocean-park-ngay-11.12-tang-cu-dan-vinhomes-tron-bo-voucher-6.000.000d-5ebisy",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tin-tuc/hoi-vien-win-mien-phi-hoan-toan-vo-van-uu-dai-effevy",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tin-tuc/ofood-viet-nam-sieu-khuyen-mai-tai-le-hoi-am-thuc-thang-3",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tin-tuc/chuong-trinh-khuyen-mai-hoi-vien-moi-hoi-vien-01012025-12022025-yitv4m",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tin-tuc/winmart-novia-bung-no-sale-soc-67nzqv",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tin-tuc/cua-hang-win-mien-nam-mung-1-tuoi-trieu-hang-sale-u9vzl2",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tin-tuc/uu-dai-cuc-soc-duy-nhat-tai-sieu-thi-winmart-3-thang-2-oihp0q",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/tin-tuc/sieu-khuyen-mai-mung-sinh-nhat-vinmart-vinmart-va-miwon",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/hello-vietnam/khuyen-mai",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/hello-vietnam/uu-dai-do-dung-gia-dinh-tien-ich",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://winmart.vn/hello-vietnam/uu-dai-rau-cu-tuoi-moi-ngay",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/tin-khuyen-mai/sua-dutch-lady-thung-24-bich-moi-nhan-ngay-phieu-mua-hang-30-000vnd-khi-mua-01-thung-",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/tin-khuyen-mai/anlene-them-nhieu-lua-chon-chieu-long-ca-nha",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/tin-khuyen-mai/dutch-lady-omegasmart-da-co-mat-tai-co-opmart-voi-gia-dung-thu-chi-34-500d-loc-180ml-",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/tin-khuyen-mai/chung-tay-cung-con-bo-cuoi-saigon-co-op-gop-bua-xay-san-cho-em-tron-phat-trien",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/tin-khuyen-mai/moi-lua-chon-cua-ban-cung-co-opmart-laurier-thap-sang-hanh-trinh-xanh-nu-cuoi-hong-",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/tin-khuyen-mai/-nhan-3-diem-thuong-doi-qua-nhanh-gap-3-",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/tin-khuyen-mai/-mua-anlene-chuan-xin-nhan-qua-sieu-hot-tai-co-opmart-co-opxtra",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/tin-khuyen-mai/-lactacyd-ban-sac-moi-uu-dai-hap-dan-tai-co-opmart-",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/tin-khuyen-mai/tin-vui-cho-hoi-me-trang-suc-uu-dai-len-den-1-300-000d-khi-mua-trang-suc-pnj-",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://co-opmart.com.vn/tin-khuyen-mai/thanh-toan-visa-bang-apple-pay-nhan-ngay-qua-tang-tu-co-opmart",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "http://mmvietnam.com/post-sitemap.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "http://mmvietnam.com/post-sitemap2.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "http://mmvietnam.com/post-sitemap3.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "http://mmvietnam.com/page-sitemap.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "http://mmvietnam.com/block-job-sitemap.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://mmvietnam.com/chuong-trinh-khuyen-mai/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://mmvietnam.com/en/promotion/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://mmvietnam.com/chuong-trinh-khuyen-mai/chuong-trinh-danh-rieng-cho-thanh-vien-mcard/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://mmvietnam.com/chuong-trinh-khuyen-mai/%f0%9f%a5%b3-ngay-hoi-thanh-vien-tung-bung-deal-khung-%f0%9f%a5%b3/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://mmvietnam.com/chuong-trinh-khuyen-mai/%f0%9f%8f%a4-chao-nam-hoc-moi-cung-mm-vui-khoe-den-truong-%f0%9f%8f%a4/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://mmvietnam.com/chuong-trinh-khuyen-mai/%f0%9f%94%a5-don-he-vui-tuoi-gia-giam-cuc-hot-%f0%9f%94%a5/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://mmvietnam.com/chuong-trinh-khuyen-mai/%f0%9f%94%a5-mua-sam-tha-ga-gia-cuc-uu-dai-cung-mm-mega-market-%f0%9f%94%a5-2/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://mmvietnam.com/chuong-trinh-khuyen-mai/%f0%9f%8c%88vui-he-rang-ro-san-ngan-deal-hot-cung-mm%f0%9f%8c%88/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/flashsale",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-gia-dung-mua-nong",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-xa-kho",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-chien-dich-noi-com",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-tu-lanh",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-suc-khoe-lam-dep",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-dung-cu-nha-bep",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-gia-dung-lap-dat",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-campaign",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-aqua",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-germ",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-locknlock",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-elmich",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-paveden",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-sunhouse",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-fujihome",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-ukg",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-gaabor",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai-kocher",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai/vay-tieu-dung-qua-ngan-hang-so-cake-khi-mua-sam-1571207",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai/vay-tieu-dung-tien-loi-qua-app-ngan-hang-cathay-1570586",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai/can-tien-mat-dang-ky-vay-ca-nhan-kredivo-ngay-tai-dmx-1594951",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai/uu-dai-vay-den-70-trieu-voi-evo-money-khi-mua-sam-1594954",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai/combo-nha-moi-tron-goi-tien-nghi-1597191",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai/giai-ngan-nhanh-chong-voi-evo-money-1597133",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai/tat-tan-tat-ve-chuong-trinh-uu-dai-app-qua-tang-vi-1481870",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai/mua-mua-sale-to-1596878",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai/tang-pmh-may-giat-len-den-700k-1596823",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai/mua-mua-sale-to-sieu-uu-dai-1596613",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai/mega-livestream-dien-may-xanh-1596609",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai/vuot-troi-dich-vu-mua-may-giat-tai-dien-may-xanh-c-1581009",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai?p=1",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai?p=2",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai?p=3",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/khuyen-mai?p=101",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://dienmayxanh.com/kinh-nghiem-hay/tat-tan-tat-ve-chuong-trinh-uu-dai-app-qua-tang-vip-1481870",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://cellphones.com.vn/danh-sach-khuyen-mai",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://cellphones.com.vn/uu-dai-sinh-vien-hoc-sinh",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://smember.com.vn/",
+      "via": "external_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://cellphones.com.vn/uu-dai-doi-tac/kredivo",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://cellphones.com.vn/uu-dai-smember",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/chuyen-muc-tin/tin-khuyen-mai",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/landing/sieu-sale-12.html",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/landing/uu-dai-cua-ban.html",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/dien-thoai",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/iphone-hot",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/dtdd-apple-iphone",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/dtdd-samsung",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/dtdd-oppo",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/dtdd-xiaomi",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/dtdd-vivo",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/dtdd-honor",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/dtdd-tecno",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/dtdd-tcl",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/dtdd-nokia",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/dtdd-sumosim",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/dtdd-masstel",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/dtdd-itel",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/dtdd-xphone",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/dtdd-zte",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/laptop",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/laptop-apple-macbook",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/laptop-dell",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/laptop-hp",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/laptop-msi",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/apple",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/samsung",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/xiaomi",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/oppo",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/honor",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/vivo",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/may-tinh-bang",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tablet-apple-ipad",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tablet-samsung",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tablet-oppo",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tablet-xiaomi",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tablet-huawei",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tablet-honor",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tablet-masstel",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tablet-kindle",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tablet-pocketbook",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tablet-boox",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/thiet-bi-deo.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tbd-apple-watch",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tbd-samsung",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tbd-oppo",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tbd-xiaomi",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tbd-huawei",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tbd-viettel",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tbd-masstel",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tbd-kieslect",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tbd-myfirst",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tbd-zobo",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tbd-garmin",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tbd-wonlex",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/flycam-drone-pkid010005036.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/thiet-bi-ai-pkid010005035.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/thay-man-hinh-dien-thoai-pkid010005030.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/camera-pkid010005022.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/cap-sac-pkid010005014.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/loa-pkid010005003.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/chuot-pkid010005001.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/usb-pkid010005009.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/tam-dan-pkid010005013.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/bao-da-op-lung-pkid010005012.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/thiet-bi-mang-pkid010005015.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/may-in-pkid010005024.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/thiet-bi-bao-chay-pkid010005032.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/do-choi-tre-em-pkid010005034.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/thay-pin-dien-thoai-pkid010005028.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/pin-du-phong-pkid010005004.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/tai-nghe-pkid010005005.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/the-nho-pkid010005006.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/phu-kien-o-to-pkid010005025.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/phu-kien/phu-kien-khac-pkid010005019.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/gia-dung",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tivi",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/gia-dung/may-hut-am-gid010017023.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/gia-dung/noi-chien-khong-dau-gid010017002.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/gia-dung/dieu-hoa-gid010017030.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/gia-dung/may-loc-khong-khi-gid010017011.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/gia-dung/may-loc-nuoc-gid010017010.html",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/xem-ngay-livestream-deal-gia-tot-chot-lien-tay",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/flash-sale-gia-cuc-hoi-chua-tung-co-tai-viettel-store",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/samsung-galaxy-z-fold8-ultra-dang-ky-nhan-thong-tin-nhan-ngay-voucher-500k",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/dang-ky-nhan-thong-tin-samsung-galaxy-z-flip8-gia-tot-nhan-voucher-500k",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/samsung-galaxy-z-fold8-ultra-dang-ky-nhan-thong-tin-nhan-voucher-500k",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/khuyen-mai-mua-oppo-reno16f",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/dac-quyen-vip-tang-voucher-1-trieu-len-doi-galaxy-s26-ultra-danh-cho-khach-hang-than-thiet",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/sam-samsung-galaxy-uu-dai-den-500k-khi-tra-gop",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/mung-ngay-cua-cha-x3-uu-dai",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/flash-sale-gia-cuc-hoi-chua-tung-co",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/tang-voucher-1-trieu-len-doi-galaxy-s26-ultra-danh-cho-khach-hang-than-thiet",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/phu-kien-sieu-sale-giam-den-50-ap-dung-cho-khang-hang-chuan-hoa-thong-tin-thue-bao",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/uu-dai-dac-quyen-danh-cho-nganh-giao-duc-khi-mua-galaxy-tab-s-series",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/cac-chuong-trinh-uu-dai-dac-quyen-danh-cho-nguoi-dung-khi-mua-va-so-huu-galaxy-tab-s-series",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/cac-chuong-trinh-uu-dai-dac-quyen-danh-cho-nguoi-dung-khi-mua-va-so-huu-galaxy-tab-a11-plus-series",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/xiaomi-smart-band-10-pro-gia-uu-dai",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/don-xem-livestream-sinh-nhat-20-nam-viettel-store-bung-no-voi-hang-loat-uu-dai-cong-nghe-hap-dan",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/bung-no-flash-sale-tuan-moi",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/deal-gia-tot-chot-lien-tay",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/mung-sinh-nhat-tuoi-20-flash-sale-tiep-tuc-do-bo-san-deal-cong-nghe-cuc-hoi",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/tong-hop-cac-chuong-trinh-khuyen-mai-noi-bat-trong-dip-sinh-nhat-20-tuoi-viettel-store",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/mung-sinh-nhat-tuoi-20-dai-tiec-flash-sale-quay-tro-lai-voi-uu-dai-bung-no",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/sam-samsung-galaxy-uu-dai-den-500k-khi-tra-gop-qua-samsung-finance",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/livestream-mung-sinh-nhat-deal-cuc-hot-tro-lai-san-uu-dai-toi-50-tai-viettel-store",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://viettelstore.vn/tin-tuc/flash-sale-re-nhat-tu-truoc-den-nay-tuan-4",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/bai-viet/tin-khuyen-mai",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/khuyen-mai/10-diem-khoe-khoan",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/flash-sale/flash-sale-thang-8",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/bai-viet/the-le-chuong-trinh-flash-sale-2.html",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/bai-viet/the-le-chuong-trinh-khuyen-mai-13-06-ngay-nha-ta-an-mung.html",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_thuc-pham-chuc-nang.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_duoc-my-pham.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_cham-soc-ca-nhan.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_thuoc.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_trang-thiet-bi-y-te.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet1.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet2.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet3.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet4.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet5.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet6.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet7.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet8.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet9.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet10.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet11.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet12.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet13.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet14.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet15.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet16.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_baiviet17.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_category.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_thuocgoc.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/sitemap_benh.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/100-url-news.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/google-news.xml",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://nhathuoclongchau.com.vn/goc-suc-khoe.rss",
+      "via": "sitemap"
+    },
+    {
+      "seed": false,
+      "url": "https://pharmacity.vn/collection/uu-dai-to-mua-1-tang-1",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://pharmacity.vn/uu-dai-zalopay-2026.lp",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://pharmacity.vn/collection/sieu-deals-online",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://pharmacity.vn/collection/bao-deal-ngan-uu-dai",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://pnj.com.vn/khuyen-mai/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://pnj.com.vn/khuyen-mai/?position=menu-tab-sale",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://pnj.com.vn/khuyen-mai-2026/uu-dai-thang-082026/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://pnj.com.vn/uu-dai-online-ngay-doi-8-8/",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://pnj.com.vn/khuyen-mai/?atm_source=thanh_search&atm_medium=homepage&atm_campaign=&atm_content=thuhutKH_t6",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://pnj.com.vn/khuyen-mai/?atm_source=thanh_search&atm_medium=homepage&atm_campaign=&atm_content=tabsalet8",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://juno.vn/campaigns/tung-deal-len-mood",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://juno.vn/campaigns/special-deals",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://phuclong.com.vn/khuyen-mai/ket-qua-trung-thuong-chuong-trinh-xe-ly-rinh-qua-20260807105208",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://phuclong.com.vn/khuyen-mai/ra-mat-bo-suu-tap-tra-o-long-tu-quy-nho-mau-don-20260803022310",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://phuclong.com.vn/khuyen-mai/bat-chat-he-len-do-dung-dieu-lo-co-vibe-cung-phuc-long-20260713035100",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://phuclong.com.vn/khuyen-mai/vong-nguyet-thuong-danh-tra---dan-tinh-hoa-gan-ket-20260713023153",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://phuclong.com.vn/khuyen-mai/croissant-bo-premium-moi-chinh-thuc-gia-nhap-bo-doi-combo-he-20260706015123",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://phuclong.com.vn/khuyen-mai/sang-tao-vi-he-rinh-deal-dam-vi-cung-phuc-long-20260611021844",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://phuclong.com.vn/khuyen-mai/combo-he-dam-vi---tiep-suc-vi-vu-20260611020636",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://phuclong.com.vn/khuyen-mai/Phuc-Long-58-nam-20260311111933",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://phuclong.com.vn/khuyen-mai/bo-ba-my-nhan-da-san-sang-hoi-mo-dao-ron-rang-don-tam-giao-20260423113647",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://phuclong.com.vn/khuyen-mai/phuc-long-tu-hao-ra-mat-bst-quai-xach-ly-tron-mot-viet-nam-20260421092626",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://phuclong.com.vn/khuyen-mai/ket-qua-chuong-trinh-gieo-que-san-vang-20260402094655",
+      "via": "internal_promo"
+    },
+    {
+      "seed": false,
+      "url": "https://phuclong.com.vn/khuyen-mai/ly-doi-mau---moi-ly-mot-mood-moi-ngay-mot-vibe-20260305103941",
+      "via": "internal_promo"
     }
   ],
   "history": [
@@ -10560,9 +10836,26 @@
       "processed": 320,
       "rate403": 4.375,
       "rate429": 0.0
+    },
+    {
+      "at": "2026-08-16T09:19:42.752690Z",
+      "cc_added": 0,
+      "cc_patterns": [],
+      "duration_s": 89.4,
+      "errors": 248,
+      "frontier_pending": 2164,
+      "new_domains": 13,
+      "processed": 320,
+      "rate403": 20.938,
+      "rate429": 0.0
     }
   ],
-  "run_count": 1,
-  "updated_at": "2026-08-16T09:17:58.542791Z",
+  "legacy_import_new_domains": 0,
+  "legacy_import_status": "read_failed:HTTPError",
+  "legacy_imported_domains": 0,
+  "legacy_seed_added_this_run": 1,
+  "legacy_seed_cursor": 0,
+  "run_count": 2,
+  "updated_at": "2026-08-16T09:21:12.183752Z",
   "version": 1
 }

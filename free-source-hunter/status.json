@@ -1,25 +1,25 @@
 {
   "cost_target_usd": 0,
   "estimated_monthly_github_minutes": 1200.0,
-  "frontier_pending": 2109,
-  "last_6_runs_new_domains": 20,
+  "frontier_pending": 2164,
+  "last_6_runs_new_domains": 33,
   "last_run": {
-    "at": "2026-08-16T09:16:26.359097Z",
+    "at": "2026-08-16T09:19:42.752690Z",
     "cc_added": 0,
     "cc_patterns": [],
-    "duration_s": 92.2,
-    "errors": 181,
-    "frontier_pending": 2109,
-    "new_domains": 20,
+    "duration_s": 89.4,
+    "errors": 248,
+    "frontier_pending": 2164,
+    "new_domains": 13,
     "processed": 320,
-    "rate403": 4.375,
+    "rate403": 20.938,
     "rate429": 0.0
   },
   "latest_common_crawl": null,
-  "master_domains": 20,
+  "master_domains": 33,
   "mode": "FREE_COMMON_CRAWL_GITHUB",
-  "run_count": 1,
+  "run_count": 2,
   "running": true,
-  "seen_urls": 2429,
-  "updated_at": "2026-08-16T09:17:58.542791Z"
+  "seen_urls": 2804,
+  "updated_at": "2026-08-16T09:21:12.183752Z"
 }
