@@ -338,6 +338,20 @@ await Actor.main(async () => {
   let launchedRuns = 0;
   let batches = 0;
   const launched = [];
+  let lastDiscoveryRefillAt = Date.now();
+  let billingStopped = false;
+
+  async function refillDiscoveryIfDue(force = false) {
+    if (!force && Date.now() - lastDiscoveryRefillAt < 14 * 60_000) return null;
+    try {
+      const record = await seedDiscoveryWindow();
+      lastDiscoveryRefillAt = Date.now();
+      return record;
+    } catch (error) {
+      log.warning("Continuous discovery refill failed; will retry without stopping scan", { message: error instanceof Error ? error.message : String(error) });
+      return null;
+    }
+  }
 
   async function publishStatus(extra = {}) {
     const taskInfo = await taskQueue.getInfo().catch(() => null);
@@ -394,10 +408,15 @@ await Actor.main(async () => {
   async function waitBatch(runIds) {
     const done = new Map();
     while (done.size < runIds.length && Date.now() < deadline) {
+      await refillDiscoveryIfDue(false);
       for (const id of runIds) {
         if (done.has(id)) continue;
-        const run = await apify(`/actor-runs/${encodeURIComponent(id)}`);
-        if (TERMINAL.has(run.status)) done.set(id, run);
+        try {
+          const run = await apify(`/actor-runs/${encodeURIComponent(id)}`);
+          if (TERMINAL.has(run.status)) done.set(id, run);
+        } catch (error) {
+          log.warning("Transient worker status read failed; keeping orchestrator alive", { runId: id, message: error instanceof Error ? error.message : String(error) });
+        }
       }
       if (done.size < runIds.length) {
         await publishStatus({ batch: batches, batchRunning: runIds.length - done.size }).catch(() => {});
@@ -420,10 +439,16 @@ await Actor.main(async () => {
 
   await publishStatus({ bootstrap, curated, braveBootstrap, braveWindow, dailySeeded });
 
-  while (Date.now() < deadline) {
-    const taskInfo = await taskQueue.getInfo().catch(() => null);
-    const pending = Number(taskInfo?.pendingRequestCount ?? 0);
-    if (pending <= 0) break;
+  while (Date.now() < deadline && !billingStopped) {
+    await refillDiscoveryIfDue(false);
+    let taskInfo = await taskQueue.getInfo().catch(() => null);
+    let pending = Number(taskInfo?.pendingRequestCount ?? 0);
+    if (pending <= 0) {
+      await refillDiscoveryIfDue(true);
+      taskInfo = await taskQueue.getInfo().catch(() => null);
+      pending = Number(taskInfo?.pendingRequestCount ?? 0);
+      if (pending <= 0) { await sleep(30_000); continue; }
+    }
     const targetWorkerSlots = Math.max(1, maxConcurrentJobs - 1);
 
     const dailyRemaining = Math.max(0, dailyBudgetUsd - budget.dailySpentUsd);
@@ -444,6 +469,11 @@ await Actor.main(async () => {
         ids.push(await startWorker(i + 1));
       } catch (error) {
         const message = error instanceof Error ? error.message : String(error);
+        if (/monthly usage hard limit|platform-feature-disabled|insufficient.*credit|billing/i.test(message)) {
+          billingStopped = true;
+          log.info("Apify billing/credit boundary reached; pausing cleanly until account allows new runs", { message: message.slice(0, 300) });
+          break;
+        }
         if (/limit|concurrent|too many|capacity|quota|429/i.test(message)) {
           log.info("Account capacity reached; keeping every available slot full", { launched: ids.length, targetWorkerSlots, message: message.slice(0, 240) });
           break;
