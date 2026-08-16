@@ -30,6 +30,20 @@ export function AppShell({ children }: { children: ReactNode }) {
       <div className="sticky top-0 z-20 border-b border-warn/40 bg-warn/10 px-4 py-1.5 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-warn">
         Phase 1 — Source Discovery Only · no live crawling · no external API calls
       </div>
+      <nav className="flex gap-1 overflow-x-auto border-b border-border bg-sidebar px-2 py-1.5 md:hidden">
+        {NAV.map(({ to, label, icon: Icon, exact }) => (
+          <Link
+            key={to}
+            to={to}
+            activeOptions={{ exact }}
+            className="flex shrink-0 items-center gap-1 rounded px-2 py-1 text-[11px] text-sidebar-foreground/80"
+            activeProps={{ className: "bg-sidebar-accent text-sidebar-primary font-medium" }}
+          >
+            <Icon className="size-3" />
+            {label}
+          </Link>
+        ))}
+      </nav>
       <div className="flex">
         <aside className="sticky top-[30px] hidden h-[calc(100vh-30px)] w-56 shrink-0 flex-col border-r border-sidebar-border bg-sidebar px-2 py-3 md:flex">
           <div className="px-2 pb-3">
