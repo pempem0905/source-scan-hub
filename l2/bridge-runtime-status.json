@@ -1,10 +1,10 @@
 {
   "schema": "promo.l2.bridge_runtime_status.v3",
   "provider": "CLOUDFLARE_BROWSER_RUN",
-  "checked_at": "2026-08-16T18:39:11.123355Z",
+  "checked_at": "2026-08-16T18:40:49.563413Z",
   "last_verified_at": null,
-  "mode": "probe",
-  "platform": "probe",
+  "mode": "handoff",
+  "platform": "uniqlo",
   "state": "TRANSIENT_RATE_LIMIT",
   "browser_session_created": false,
   "human_handoff_exercised": false,

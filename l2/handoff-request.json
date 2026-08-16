@@ -1,6 +1,6 @@
 {
   "schema": "promo.l2.handoff_request.v1",
   "platform": "uniqlo",
-  "state": "REQUESTED",
+  "state": "FAILED",
   "purpose": "Verify structured human takeover and fresh-connection authenticated session reuse. Contains no credentials or session material."
 }
