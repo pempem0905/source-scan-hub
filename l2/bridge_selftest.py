@@ -78,6 +78,7 @@ def main() -> None:
             assert cfg.get("start_url"), f"missing start_url: {name}"
         if name in auth_platforms:
             assert auth_platforms[name].get("profile_id") == pid, f"profile mismatch: {name}"
+            assert auth_platforms[name].get("status") == cfg.get("status"), f"status mismatch: {name}"
     assert len(profile_ids) == len(set(profile_ids)), "platform profile IDs must be isolated and unique"
 
     bridge_state = bridge.get("status")
