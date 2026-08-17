@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-17T22:58:12.110836Z",
+  "generated_at": "2026-08-17T23:14:30.263741Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 9346,
+    "frontier_active_pending": 7397,
     "frontier_deferred_pending": 38200,
-    "frontier_pending": 47546,
-    "last_6_runs_new_domains": 65,
+    "frontier_pending": 45597,
+    "last_6_runs_new_domains": 52,
     "last_run": {
-      "at": "2026-08-17T22:53:36.077950Z",
+      "at": "2026-08-17T23:09:37.227774Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*uu-dai*",
-        "*.vn/*uudai*",
-        "*.vn/*voucher*",
-        "*.vn/*promotion*"
+        "*.vn/*offers*",
+        "*.vn/*deals*",
+        "*.vn/*sale*",
+        "*.com/vn/*khuyen-mai*"
       ],
-      "duration_s": 274.7,
-      "errors": 170,
-      "frontier_pending": 47546,
-      "new_domains": 10,
+      "duration_s": 291.8,
+      "errors": 155,
+      "frontier_pending": 45597,
+      "new_domains": 13,
       "processed": 1800,
-      "rate403": 1.333,
-      "rate429": 0.0
+      "rate403": 1.111,
+      "rate429": 0.278
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1401,
+    "master_domains": 1416,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 102,
+    "run_count": 103,
     "running": true,
-    "seen_urls": 466312,
-    "updated_at": "2026-08-17T22:58:10.753198Z"
+    "seen_urls": 473719,
+    "updated_at": "2026-08-17T23:14:28.996885Z"
   },
   "master_input": {
-    "active_input_count": 151,
+    "active_input_count": 154,
     "counts": {
-      "ACTIVE_INPUT": 151,
+      "ACTIVE_INPUT": 154,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 36,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 24,
-      "GENERAL": 1021,
+      "GENERAL": 1035,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 105,
-      "PUBLIC_HTTP": 1185,
+      "PROMO_RETAIL": 108,
+      "PUBLIC_HTTP": 1199,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 83,
-      "REVIEW_INPUT": 1034,
+      "REVIEW_INPUT": 1045,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1034,
+      "SOURCE_REVIEW": 1045,
       "TRAVEL_MOBILITY": 20
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-17T22:58:11.906203Z",
+    "generated_at": "2026-08-17T23:14:30.064271Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1201,
-    "review_input_count": 1034,
+    "record_count": 1215,
+    "review_input_count": 1045,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1401,
+    "source_hunter_domains": 1416,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -322,121 +322,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 2,
+    "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "giao đồ ăn gọi xe khuyến mãi Việt Nam",
-      "giao đồ ăn gọi xe ưu đãi Việt Nam",
-      "giao đồ ăn gọi xe voucher Việt Nam",
-      "giao đồ ăn gọi xe promotion Vietnam"
+      "ngân hàng thẻ tín dụng khuyến mãi Việt Nam",
+      "ngân hàng thẻ tín dụng ưu đãi Việt Nam",
+      "ngân hàng thẻ tín dụng voucher Việt Nam",
+      "ngân hàng thẻ tín dụng promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 91,
+    "cc_domain_page": 92,
     "frontier_scheduler": {
       "active": 1800,
       "base_per_host_batch": 16,
       "deferred": 38200,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.333,
+      "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 317
+      "unique_hosts": 333
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-17T18:52:06.004063Z",
-      "domain": "now.iseeit.com",
-      "radar": false,
-      "url": "https://now.iseeit.com/category/sales-fun/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T18:52:06.004063Z",
-      "domain": "walnut.io",
-      "radar": false,
-      "url": "https://walnut.io/blog/sales-tips/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T18:52:06.004063Z",
-      "domain": "leadsquared.com",
-      "radar": false,
-      "url": "https://leadsquared.com/learn/sales/page/3/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T19:18:03.511764Z",
-      "domain": "salesmate.io",
-      "radar": false,
-      "url": "https://salesmate.io/crm-for-sales-reps/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T19:18:03.511764Z",
-      "domain": "markinblog.com",
-      "radar": false,
-      "url": "https://markinblog.com/sales-funnel-builders/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T19:18:03.511764Z",
-      "domain": "tableau.com",
-      "radar": false,
-      "url": "https://tableau.com/about/contact/global-sales",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T19:18:03.511764Z",
-      "domain": "alexandergroup.com",
-      "radar": false,
-      "url": "https://alexandergroup.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T19:18:03.511764Z",
-      "domain": "insivia.com",
-      "radar": false,
-      "url": "https://insivia.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T19:18:03.511764Z",
-      "domain": "marketplace.atlassian.com",
-      "radar": false,
-      "url": "https://marketplace.atlassian.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T19:18:03.511764Z",
-      "domain": "prnewswire.com",
-      "radar": false,
-      "url": "https://prnewswire.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T19:18:03.511764Z",
-      "domain": "robertwalters.cn",
-      "radar": false,
-      "url": "https://robertwalters.cn/expertise/sales.html",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T19:18:03.511764Z",
-      "domain": "thuocsi.vn",
-      "radar": false,
-      "url": "https://thuocsi.vn/home?login=true&redirectUrl=%2Fdashboard",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-17T19:18:03.511764Z",
-      "domain": "microsoft.com",
-      "radar": false,
-      "url": "https://microsoft.com/en-us/software-development-companies/offers-benefits/marketplace-rewards/activate",
-      "via": "internal_promo"
-    },
     {
       "at": "2026-08-17T19:45:37.989988Z",
       "domain": "salestechstar.com",
@@ -1185,6 +1094,97 @@
       "radar": false,
       "url": "https://amvietnam.com/",
       "via": "common_crawl_domain"
+    },
+    {
+      "at": "2026-08-17T23:09:37.227774Z",
+      "domain": "the-level-group.hirehive.com",
+      "radar": false,
+      "url": "https://the-level-group.hirehive.com/wholesale-intern-milan-zSKfLD",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T23:09:37.227774Z",
+      "domain": "careers.ing.com",
+      "radar": false,
+      "url": "https://careers.ing.com/en",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T23:09:37.227774Z",
+      "domain": "filteradvisors.squarespace.com",
+      "radar": false,
+      "url": "https://filteradvisors.squarespace.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T23:09:37.227774Z",
+      "domain": "iowadot.gov",
+      "radar": false,
+      "url": "https://iowadot.gov/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T23:09:37.227774Z",
+      "domain": "knightfrank.com",
+      "radar": false,
+      "url": "https://knightfrank.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T23:09:37.227774Z",
+      "domain": "mercuri.hr",
+      "radar": false,
+      "url": "https://mercuri.hr/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T23:09:37.227774Z",
+      "domain": "mikebrunel.com",
+      "radar": false,
+      "url": "https://mikebrunel.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T23:09:37.227774Z",
+      "domain": "simon-kucher.com",
+      "radar": false,
+      "url": "https://simon-kucher.com/en",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T23:09:37.227774Z",
+      "domain": "surfandsales.com",
+      "radar": false,
+      "url": "https://surfandsales.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T23:09:37.227774Z",
+      "domain": "xpotentialselling.com",
+      "radar": false,
+      "url": "https://xpotentialselling.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T23:09:37.227774Z",
+      "domain": "anyleads.com",
+      "radar": false,
+      "url": "https://anyleads.com/what-breaks-when-a-remote-sales-team-runs-telegram-from-five-countries",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T23:09:37.227774Z",
+      "domain": "lagrowthmachine.com",
+      "radar": false,
+      "url": "https://lagrowthmachine.com/es/sales-marketing-lagrowthmachine/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T23:09:37.227774Z",
+      "domain": "amtech.vn",
+      "radar": false,
+      "url": "https://amtech.vn/pr-lexar-trinh-dien-loat-san-pham-hang-dau-moi-nhat-tai-computex-2024-7546/",
+      "via": "sitemap"
     }
   ]
 }
