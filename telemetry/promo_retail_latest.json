@@ -1,0 +1,18 @@
+{
+  "schema": "promo.retail.telemetry.v1",
+  "source_worker": "PROMO Retail Shard",
+  "sources_read": 8,
+  "code_likely_sources_read": 3,
+  "no_code_reads": 8,
+  "family_rotations": 3,
+  "offers_found": 3,
+  "voucher_benefits_found": 2,
+  "literal_codes_found": 0,
+  "codes_per_10_reads": 0.0,
+  "enqueued": 3,
+  "blocked": 0,
+  "duplicates": 0,
+  "last_run_at": "2026-08-17T13:58:00+07:00",
+  "lovable_calls": 0,
+  "notes": "Read only GitHub-dispatched PROMO_RETAIL sources. Expired Circle K Aug promo and Shopee 8.8 sale were rejected. CellphoneS World Cup offer was expired. Exact reusable literal codes were not visible in contextual official evidence, so none were recorded."
+}
