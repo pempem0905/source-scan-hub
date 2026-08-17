@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parent
 RUNTIME = ROOT / "bridge-runtime-status.json"
 BRIDGE = ROOT / "bridge-status.json"
 AUTH = ROOT / "auth-status.json"
+PREAUTH = ROOT / "preauth-platforms.json"
 HANDOFF_REQUEST = ROOT / "handoff-request.json"
 
 
@@ -50,6 +51,7 @@ def main() -> None:
     runtime = read(RUNTIME, {})
     bridge = read(BRIDGE, {})
     auth = read(AUTH, {})
+    preauth_registry = read(PREAUTH, {})
     request = read(HANDOFF_REQUEST, {})
 
     prior_runtime_verified = bool(bridge.get("runtime_verified"))
@@ -168,8 +170,21 @@ def main() -> None:
         elif runtime_state in {"TRANSIENT_RATE_LIMIT", "DAILY_QUOTA_WAIT", "HANDOFF_FAILED", "HANDOFF_REUSE_UNVERIFIED", "HANDOFF_WINDOW_EXPIRED"}:
             platforms[platform]["status"] = "PREAUTH_RETRY_PENDING"
 
+    # Keep the public, non-secret registry aligned with auth-status so the Login
+    # Center never shows stale readiness/retry state. The registry carries no
+    # credentials or runtime session material.
+    reg_platforms = preauth_registry.get("platforms") if isinstance(preauth_registry.get("platforms"), dict) else {}
+    for key, auth_entry in platforms.items():
+        if key in reg_platforms and isinstance(auth_entry, dict) and isinstance(reg_platforms[key], dict):
+            reg_platforms[key]["status"] = auth_entry.get("status")
+    reg_bridge = preauth_registry.setdefault("bridge", {})
+    reg_bridge["status"] = status
+    reg_bridge["runtime_verified"] = bool(runtime_verified)
+    reg_bridge["end_to_end_verified"] = bool(e2e)
+
     write(BRIDGE, bridge)
     write(AUTH, auth)
+    write(PREAUTH, preauth_registry)
     print(f"BRIDGE_STATUS_RECONCILED status={status} runtime_verified={str(runtime_verified).lower()} e2e={str(e2e).lower()} quota_wait={str(quota_wait).lower()}")
 
 
