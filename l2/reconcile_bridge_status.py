@@ -101,6 +101,23 @@ def main() -> None:
     preauth["bridge_status"] = status
     preauth["runtime_probe_verified"] = bool(runtime_verified)
     preauth["end_to_end_verified"] = bool(e2e)
+    # Do not surface PERMISSION_REQUIRED before a real secure takeover window
+    # exists. This prevents Telegram/status alerts from asking the operator to
+    # login into a stale or nonexistent Browser Run session.
+    if status == "TAKEOVER_READY":
+        preauth["permission_required"] = {
+            "state": "PERMISSION_REQUIRED",
+            "reason": "A real secure Cloudflare Browser Run takeover window is active for one authorized platform.",
+            "safe_action": "Open Cloudflare Dashboard > Browser Run > Live Sessions and complete login/MFA/CAPTCHA only inside the active secure session.",
+            "note": "Do not place passwords, OTPs, cookies, refresh tokens, CAPTCHA data, session IDs, websocket URLs, or takeover URLs in GitHub files, logs, chat, or public dashboard."
+        }
+    else:
+        preauth["permission_required"] = {
+            "state": "WAITING_RUNTIME_WINDOW",
+            "reason": "No real secure takeover surface is active right now.",
+            "safe_action": "No user action is required until bridge_status becomes TAKEOVER_READY.",
+            "note": "The bridge will retry autonomously; sensitive login material remains runtime-only."
+        }
     auth["updated_at"] = now_iso()
 
     platform = str(runtime.get("platform") or "")
