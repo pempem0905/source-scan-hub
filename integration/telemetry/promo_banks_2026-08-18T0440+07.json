@@ -1,0 +1,40 @@
+{
+  "schema": "promo.banks.telemetry.v2",
+  "source_worker": "PROMO Banks Shard",
+  "mode": "GPT_AUTOMATIONS_GITHUB_ONLY",
+  "pipeline": "TURBO_SCAN_PIPELINE_V2",
+  "fast_probes": 26,
+  "shortlisted": 7,
+  "deep_validations": 3,
+  "cache_skips": 4,
+  "sources_read": 12,
+  "code_likely_sources_read": 6,
+  "no_code_reads": 9,
+  "family_rotations": 3,
+  "offers_found": 3,
+  "voucher_benefits_found": 3,
+  "literal_codes_found": 3,
+  "codes_per_10_reads": 2.5,
+  "enqueued": 3,
+  "blocked": 0,
+  "duplicates": 1,
+  "duplicate_hits": [
+    "MCVN7 already present in consolidated PROMO handoff via BIDV Mastercard/Expedia campaign"
+  ],
+  "expired_or_rejected_hits": [
+    "VISAAIRPORT HSBC/Grab expired 2026-03-31",
+    "VISAFOOD HSBC/Grab expired 2026-03-31",
+    "Sacombank referral code flow is user-specific and excluded",
+    "BIDV Klook Visa voucher is account-issued/dynamic and excluded"
+  ],
+  "notes": [
+    "VPBank Traveloka current official page produced VPFLY200 and VPSTAY150.",
+    "VPBank Qatar Airways current section produced official reusable code MASTERCARD through 2026-12-31.",
+    "Vietcombank evergreen e-vouchers and HSBC Shopee offers were no-literal/dynamic or auto-applied.",
+    "Zero Lovable calls used."
+  ],
+  "handoff_path": "integration/handoffs/promo_banks_2026-08-18T0440+07.jsonl",
+  "handoff_commit": "556d25205fc6923f279260070eb5dfa5f6b4e44e",
+  "last_run_at": "2026-08-18T04:40:53+07:00",
+  "lovable_calls": 0
+}
