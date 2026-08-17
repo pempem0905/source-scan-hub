@@ -6,7 +6,9 @@
   "bridge": {
     "preferred": "CLOUDFLARE_BROWSER_RUN_HUMAN_IN_LOOP",
     "fallback": "SELF_HOSTED_RESIDENTIAL_PERSISTENT_PROFILE",
-    "status": "PENDING_BROWSER_SESSION_CONTROL",
+    "status": "BROWSER_RUN_PROBE_VERIFIED_HANDOFF_PENDING",
+    "runtime_verified": true,
+    "end_to_end_verified": false,
     "takeover_url_source": "runtime_only",
     "store_takeover_url_in_github": false
   },
