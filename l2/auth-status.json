@@ -1,7 +1,7 @@
 {
   "schema_version": 4,
   "project_id": "PROMO-L2-ROUTER-V1",
-  "updated_at": "2026-08-17T00:30:30.951376Z",
+  "updated_at": "2026-08-17T00:40:32.522194Z",
   "mode": "PROACTIVE_PREAUTH",
   "alert_states": [
     "LOGIN_REQUIRED",
@@ -11,7 +11,7 @@
   "preauth": {
     "enabled": true,
     "registry": "l2/preauth-platforms.json",
-    "bridge_status": "TAKEOVER_READY",
+    "bridge_status": "BROWSER_RUN_PROBE_VERIFIED_HANDOFF_PENDING",
     "bridge_status_file": "l2/bridge-status.json",
     "runtime_status_file": "l2/bridge-runtime-status.json",
     "preferred_handoff": "CLOUDFLARE_BROWSER_RUN_HUMAN_IN_LOOP",
@@ -41,7 +41,7 @@
     },
     "grabfood": {
       "access_class": "AUTHORIZED_ACCOUNT",
-      "status": "LOGIN_REQUIRED",
+      "status": "PREAUTH_PENDING_SESSION",
       "profile_id": "grabfood-main",
       "credential_storage": "runtime-browser-session-only"
     },

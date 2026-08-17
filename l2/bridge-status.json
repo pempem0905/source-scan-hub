@@ -2,7 +2,7 @@
   "schema": "promo.l2.bridge_status.v3",
   "project_id": "PROMO-L2-ROUTER-V1",
   "provider": "CLOUDFLARE_BROWSER_RUN_HUMAN_IN_LOOP",
-  "status": "TAKEOVER_READY",
+  "status": "BROWSER_RUN_PROBE_VERIFIED_HANDOFF_PENDING",
   "ready": false,
   "runtime_verified": true,
   "end_to_end_verified": false,
@@ -26,7 +26,7 @@
     "live_view_handoff_exercised": true,
     "authenticated_session_reuse_verified": false,
     "fresh_connection_reuse_required": true,
-    "last_runtime_state": "TAKEOVER_READY",
+    "last_runtime_state": "HANDOFF_FAILED",
     "transient_failure": false,
     "status_source": "l2/bridge-runtime-status.json"
   },
@@ -60,5 +60,5 @@
   },
   "readiness_rule": "Do not mark READY until a real Browser Run session has been created, structured human takeover has completed, and the authenticated session has been rediscovered and reused from an independent fresh L2 CDP connection without persisting sensitive session material.",
   "fallback_readiness_rule": "For cloud/datacenter-blocked sites, require an online self-hosted residential runner with a platform-isolated persistent profile before marking that platform READY.",
-  "last_reconciled_at": "2026-08-17T00:30:30.951360Z"
+  "last_reconciled_at": "2026-08-17T00:40:32.522180Z"
 }
