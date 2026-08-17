@@ -18,6 +18,7 @@ RUNTIME = ROOT / "bridge-runtime-status.json"
 BRIDGE = ROOT / "bridge-status.json"
 DEFAULT_COOLDOWN = dt.timedelta(minutes=30)
 MAX_ATTEMPTS_PER_UTC_DAY = 8
+GENERIC_RATE_LIMIT_ATTEMPTS_BEFORE_DAILY_BACKOFF = 2
 RETRYABLE_REQUEST_STATES = {"RETRY_PENDING", "FAILED"}
 
 
@@ -35,6 +36,11 @@ def parse_iso(value: str | None) -> dt.datetime | None:
         return dt.datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(dt.timezone.utc)
     except Exception:
         return None
+
+
+def next_utc_reset(now: dt.datetime) -> str:
+    next_day = now.date() + dt.timedelta(days=1)
+    return f"{next_day.isoformat()}T00:05:00Z"
 
 
 def main() -> None:
@@ -57,6 +63,29 @@ def main() -> None:
         return
 
     now = dt.datetime.now(dt.timezone.utc)
+    day = now.date().isoformat()
+    attempt_day = str(req.get("attempt_day_utc") or "")
+    attempts = int(req.get("attempts_today") or 0) if attempt_day == day else 0
+
+    # A generic 429 that repeats after a real Browser Run session has already been
+    # verified is commonly a quota-style condition rather than a useful short
+    # acquisition retry. Cloudflare Workers Free Browser Run is capped by daily
+    # browser time, so after two same-day attempts we stop hammering the API and
+    # wait for the next UTC usage window. This remains safe for Paid plans: one
+    # fresh attempt is automatically made after reset, without user involvement.
+    if (
+        runtime.get("state") == "TRANSIENT_RATE_LIMIT"
+        and runtime.get("browser_session_created") is True
+        and attempts >= GENERIC_RATE_LIMIT_ATTEMPTS_BEFORE_DAILY_BACKOFF
+    ):
+        req["state"] = "RETRY_PENDING"
+        req["retry_after_utc"] = next_utc_reset(now)
+        req["attempt_day_utc"] = day
+        req["attempts_today"] = attempts
+        REQUEST.write_text(json.dumps(req, indent=2) + "\n")
+        print("L2_HANDOFF_RETRY_RATE_LIMIT_DAILY_BACKOFF")
+        return
+
     retry_at = parse_iso(req.get("retry_after_utc"))
     if retry_at is None:
         checked = parse_iso(runtime.get("checked_at")) or now
@@ -65,13 +94,9 @@ def main() -> None:
         print("L2_HANDOFF_RETRY_COOLDOWN")
         return
 
-    day = now.date().isoformat()
-    attempt_day = str(req.get("attempt_day_utc") or "")
-    attempts = int(req.get("attempts_today") or 0) if attempt_day == day else 0
     if attempts >= MAX_ATTEMPTS_PER_UTC_DAY:
-        next_day = now.date() + dt.timedelta(days=1)
         req["state"] = "RETRY_PENDING"
-        req["retry_after_utc"] = f"{next_day.isoformat()}T00:05:00Z"
+        req["retry_after_utc"] = next_utc_reset(now)
         req["attempt_day_utc"] = day
         req["attempts_today"] = attempts
         REQUEST.write_text(json.dumps(req, indent=2) + "\n")
