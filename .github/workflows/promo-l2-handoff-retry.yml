@@ -55,7 +55,7 @@ jobs:
           git push origin HEAD:main
           echo 'changed=true' >> "$GITHUB_OUTPUT"
       - name: Dispatch request-driven Browser Run bridge explicitly
-        if: steps.persist.outputs.changed == 'true' && steps.persist.outputs.state == 'REQUESTED'
+        if: steps.persist.outputs.state == 'REQUESTED'
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
