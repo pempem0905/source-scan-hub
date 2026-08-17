@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-17T13:59:33.455782Z",
+  "generated_at": "2026-08-17T14:26:01.925599Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 4824,
-    "frontier_deferred_pending": 39631,
-    "frontier_pending": 44455,
-    "last_6_runs_new_domains": 8,
+    "frontier_active_pending": 2473,
+    "frontier_deferred_pending": 39584,
+    "frontier_pending": 42057,
+    "last_6_runs_new_domains": 9,
     "last_run": {
-      "at": "2026-08-17T13:57:22.522344Z",
+      "at": "2026-08-17T14:23:18.124502Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.net/vn/*uu-dai*",
-        "*.com/vietnam/*promotion*",
-        "*.vn/*khuyen-mai*",
-        "*.vn/*khuyenmai*"
+        "*.vn/*uu-dai*",
+        "*.vn/*uudai*",
+        "*.vn/*voucher*",
+        "*.vn/*promotion*"
       ],
-      "duration_s": 129.8,
-      "errors": 53,
-      "frontier_pending": 44455,
-      "new_domains": 1,
-      "processed": 369,
-      "rate403": 0.271,
-      "rate429": 0.0
+      "duration_s": 162.7,
+      "errors": 47,
+      "frontier_pending": 42057,
+      "new_domains": 2,
+      "processed": 416,
+      "rate403": 0.24,
+      "rate429": 0.24
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1030,
+    "master_domains": 1038,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 81,
+    "run_count": 82,
     "running": true,
-    "seen_urls": 339297,
-    "updated_at": "2026-08-17T13:59:32.286865Z"
+    "seen_urls": 341798,
+    "updated_at": "2026-08-17T14:26:00.870088Z"
   },
   "master_input": {
     "active_input_count": 110,
@@ -41,33 +41,33 @@
       "BANK_CARD": 36,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 24,
-      "GENERAL": 714,
+      "GENERAL": 722,
       "LOYALTY_REWARDS": 9,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 15,
       "PROMO_RETAIL": 64,
-      "PUBLIC_HTTP": 870,
+      "PUBLIC_HTTP": 878,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 80,
-      "REVIEW_INPUT": 760,
+      "REVIEW_INPUT": 768,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 760,
+      "SOURCE_REVIEW": 768,
       "TRAVEL_MOBILITY": 16
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-17T13:59:33.266435Z",
+    "generated_at": "2026-08-17T14:26:01.745548Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 886,
-    "review_input_count": 760,
+    "record_count": 894,
+    "review_input_count": 768,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1030,
+    "source_hunter_domains": 1038,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -322,44 +322,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 3,
+    "free_search_last_added": 2,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "phòng gym fitness khuyến mãi Việt Nam",
-      "phòng gym fitness ưu đãi Việt Nam",
-      "phòng gym fitness voucher Việt Nam",
-      "phòng gym fitness promotion Vietnam"
+      "spa thẩm mỹ khuyến mãi Việt Nam",
+      "spa thẩm mỹ ưu đãi Việt Nam",
+      "spa thẩm mỹ voucher Việt Nam",
+      "spa thẩm mỹ promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 73,
+    "cc_domain_page": 74,
     "frontier_scheduler": {
-      "active": 369,
+      "active": 416,
       "base_per_host_batch": 16,
-      "deferred": 39631,
+      "deferred": 39584,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 53
+      "unique_hosts": 43
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T16:18:28.687426Z",
-      "domain": "wiki.batdongsan.com.vn",
-      "radar": false,
-      "url": "https://wiki.batdongsan.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T16:18:28.687426Z",
-      "domain": "bds68.com.vn",
-      "radar": false,
-      "url": "https://bds68.com.vn/",
-      "via": "free_search"
-    },
     {
       "at": "2026-08-16T16:18:28.687426Z",
       "domain": "thoibaotaichinhvietnam.vn",
@@ -1184,6 +1170,20 @@
       "domain": "springfitness.vn",
       "radar": false,
       "url": "https://springfitness.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-17T14:23:18.124502Z",
+      "domain": "belasspa.vn",
+      "radar": false,
+      "url": "https://belasspa.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-17T14:23:18.124502Z",
+      "domain": "truongkieuxuan.com",
+      "radar": false,
+      "url": "https://truongkieuxuan.com/",
       "via": "free_search"
     }
   ]
