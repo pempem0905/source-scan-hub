@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-17T09:55:44.238595Z",
+  "generated_at": "2026-08-17T10:20:16.803384Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 2035,
-    "frontier_deferred_pending": 39613,
-    "frontier_pending": 41648,
-    "last_6_runs_new_domains": 19,
+    "frontier_active_pending": 3092,
+    "frontier_deferred_pending": 39721,
+    "frontier_pending": 42813,
+    "last_6_runs_new_domains": 21,
     "last_run": {
-      "at": "2026-08-17T09:53:09.118992Z",
+      "at": "2026-08-17T10:18:06.110875Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*offers*",
-        "*.vn/*deals*",
-        "*.vn/*sale*",
-        "*.com/vn/*khuyen-mai*"
+        "*.com/vn/*uu-dai*",
+        "*.com/vn/*voucher*",
+        "*.com/vn/*promotion*",
+        "*.com/vi-vn/*khuyen-mai*"
       ],
-      "duration_s": 154.1,
-      "errors": 41,
-      "frontier_pending": 41648,
-      "new_domains": 4,
-      "processed": 387,
-      "rate403": 0.0,
+      "duration_s": 129.6,
+      "errors": 22,
+      "frontier_pending": 42813,
+      "new_domains": 3,
+      "processed": 279,
+      "rate403": 0.717,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 956,
+    "master_domains": 960,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 73,
+    "run_count": 74,
     "running": true,
-    "seen_urls": 315287,
-    "updated_at": "2026-08-17T09:55:43.220069Z"
+    "seen_urls": 318383,
+    "updated_at": "2026-08-17T10:20:15.753725Z"
   },
   "master_input": {
     "active_input_count": 108,
     "counts": {
       "ACTIVE_INPUT": 108,
-      "AUTHORIZED_ACCOUNT": 3,
+      "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 33,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 24,
-      "GENERAL": 651,
+      "GENERAL": 653,
       "LOYALTY_REWARDS": 9,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
-      "PROMO_L2": 14,
-      "PROMO_RETAIL": 63,
-      "PUBLIC_HTTP": 804,
+      "PROMO_L2": 15,
+      "PROMO_RETAIL": 62,
+      "PUBLIC_HTTP": 805,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 79,
-      "REVIEW_INPUT": 695,
+      "REVIEW_INPUT": 697,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 695,
+      "SOURCE_REVIEW": 697,
       "TRAVEL_MOBILITY": 16
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-17T09:55:44.061243Z",
+    "generated_at": "2026-08-17T10:20:16.613429Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 819,
-    "review_input_count": 695,
+    "record_count": 821,
+    "review_input_count": 697,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 956,
+    "source_hunter_domains": 960,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -210,7 +210,7 @@
       "SHADOW_REJECT_TECHNICAL": 18,
       "SHADOW_REVIEW_DATE": 24
     },
-    "generated_at": "2026-08-17T09:09:44.679973Z",
+    "generated_at": "2026-08-17T09:56:46.691656Z",
     "note": "SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion.",
     "production_eligible_automatically": 0,
     "production_write": false,
@@ -220,8 +220,8 @@
   },
   "l2_hard_access": {
     "counts": {
-      "AUTHORIZED_ACCOUNT": 2,
-      "INFRA_PENDING_ACCOUNT_PROFILE": 2,
+      "AUTHORIZED_ACCOUNT": 3,
+      "INFRA_PENDING_ACCOUNT_PROFILE": 3,
       "INFRA_PENDING_RESIDENTIAL": 12,
       "RESIDENTIAL_REQUIRED": 12
     },
@@ -229,7 +229,7 @@
     "production_write": false,
     "runner_ready": false,
     "schema": "promo.l2.hard_access_status.v1",
-    "total": 14
+    "total": 15
   },
   "l2_auth": {
     "schema_version": 4,
@@ -320,51 +320,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 0,
+    "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "khách sạn resort khuyến mãi Việt Nam",
-      "khách sạn resort ưu đãi Việt Nam",
-      "khách sạn resort voucher Việt Nam",
-      "khách sạn resort promotion Vietnam"
+      "hãng bay du lịch khuyến mãi Việt Nam",
+      "hãng bay du lịch ưu đãi Việt Nam",
+      "hãng bay du lịch voucher Việt Nam",
+      "hãng bay du lịch promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 65,
+    "cc_domain_page": 66,
     "frontier_scheduler": {
-      "active": 387,
+      "active": 279,
       "base_per_host_batch": 16,
-      "deferred": 39613,
+      "deferred": 39721,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 44
+      "unique_hosts": 35
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T15:57:03.685964Z",
-      "domain": "wildwadi.com",
-      "radar": false,
-      "url": "https://wildwadi.com/en",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-16T15:57:03.685964Z",
-      "domain": "bonbanh.com",
-      "radar": false,
-      "url": "https://bonbanh.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T15:57:03.685964Z",
-      "domain": "vinfastmiennam.vn",
-      "radar": false,
-      "url": "https://vinfastmiennam.vn/",
-      "via": "free_search"
-    },
     {
       "at": "2026-08-16T15:57:03.685964Z",
       "domain": "oto.com.vn",
@@ -1183,6 +1162,27 @@
       "radar": false,
       "url": "https://salesforce.com/blog/sales/?bc=HL",
       "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T10:18:06.110875Z",
+      "domain": "blog.vexere.com",
+      "radar": false,
+      "url": "https://blog.vexere.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T10:18:06.110875Z",
+      "domain": "social.zalopay.vn",
+      "radar": false,
+      "url": "https://social.zalopay.vn/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T10:18:06.110875Z",
+      "domain": "khoahocdoisong.vn",
+      "radar": false,
+      "url": "https://khoahocdoisong.vn/",
+      "via": "free_search"
     }
   ]
 }

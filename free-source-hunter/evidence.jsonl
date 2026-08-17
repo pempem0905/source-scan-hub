@@ -422,3 +422,6 @@
 {"at": "2026-08-17T09:53:09.118992Z", "domain": "jangin.vn", "radar": false, "url": "https://jangin.vn/", "via": "external_promo"}
 {"at": "2026-08-17T09:53:09.118992Z", "domain": "khoahoc.coachio.ai", "radar": false, "url": "https://khoahoc.coachio.ai/", "via": "common_crawl_domain"}
 {"at": "2026-08-17T09:53:09.118992Z", "domain": "salesforce.com", "radar": false, "url": "https://salesforce.com/blog/sales/?bc=HL", "via": "internal_promo"}
+{"at": "2026-08-17T10:18:06.110875Z", "domain": "blog.vexere.com", "radar": false, "url": "https://blog.vexere.com/", "via": "external_promo"}
+{"at": "2026-08-17T10:18:06.110875Z", "domain": "social.zalopay.vn", "radar": false, "url": "https://social.zalopay.vn/", "via": "external_promo"}
+{"at": "2026-08-17T10:18:06.110875Z", "domain": "khoahocdoisong.vn", "radar": false, "url": "https://khoahocdoisong.vn/", "via": "free_search"}

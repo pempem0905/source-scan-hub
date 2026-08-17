@@ -1,7 +1,7 @@
 {
   "counts": {
-    "AUTHORIZED_ACCOUNT": 2,
-    "INFRA_PENDING_ACCOUNT_PROFILE": 2,
+    "AUTHORIZED_ACCOUNT": 3,
+    "INFRA_PENDING_ACCOUNT_PROFILE": 3,
     "INFRA_PENDING_RESIDENTIAL": 12,
     "RESIDENTIAL_REQUIRED": 12
   },
@@ -9,5 +9,5 @@
   "production_write": false,
   "runner_ready": false,
   "schema": "promo.l2.hard_access_status.v1",
-  "total": 14
+  "total": 15
 }

@@ -441,6 +441,7 @@ blog.6giay.vn
 blog.abit.vn
 blog.adahub.vn
 blog.admatic.admicro.vn
+blog.vexere.com
 bloggiamgia.vn
 bobapop.com.vn
 bonbanh.com
@@ -536,6 +537,7 @@ flexoffice.com
 food.grab.com
 fordbacgiang.0to.vn
 forum.568play.vn
+forum.aigato.vn
 fpt.vn
 fpt24.vn
 fptelecom.vn
@@ -624,6 +626,7 @@ kenh14.vn
 khanpoemy.aditi.vn
 khoahoc.2target.vn
 khoahoc.coachio.ai
+khoahocdoisong.vn
 khogonhua.3tc.vn
 khosithucpham.vn
 khuyenmai.unityfitness.vn
@@ -800,6 +803,7 @@ smember.com.vn
 smileswallet.com
 smiletrip.vn
 sneakerdaily.vn
+social.zalopay.vn
 soha.vn
 solutions.accesstrade.vn
 son.ai.vn
