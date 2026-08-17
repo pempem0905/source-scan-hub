@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-17T04:42:18.702537Z",
+  "generated_at": "2026-08-17T05:21:42.713780Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 2111,
-    "frontier_deferred_pending": 39758,
-    "frontier_pending": 41869,
-    "last_6_runs_new_domains": 6,
+    "frontier_active_pending": 3006,
+    "frontier_deferred_pending": 39768,
+    "frontier_pending": 42774,
+    "last_6_runs_new_domains": 4,
     "last_run": {
-      "at": "2026-08-17T04:40:41.269259Z",
+      "at": "2026-08-17T05:20:31.425804Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vi-vn/*uu-dai*",
-        "*.com/vi-vn/*voucher*",
-        "*.com/vi-vn/*promotion*",
-        "*.net/vn/*khuyen-mai*"
+        "*.net/vn/*uu-dai*",
+        "*.com/vietnam/*promotion*",
+        "*.vn/*khuyen-mai*",
+        "*.vn/*khuyenmai*"
       ],
-      "duration_s": 96.5,
-      "errors": 7,
-      "frontier_pending": 41869,
-      "new_domains": 2,
-      "processed": 242,
+      "duration_s": 70.3,
+      "errors": 33,
+      "frontier_pending": 42774,
+      "new_domains": 0,
+      "processed": 232,
       "rate403": 0.0,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
     "master_domains": 873,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 65,
+    "run_count": 66,
     "running": true,
-    "seen_urls": 293067,
-    "updated_at": "2026-08-17T04:42:17.729994Z"
+    "seen_urls": 296103,
+    "updated_at": "2026-08-17T05:21:41.757319Z"
   },
   "master_input": {
     "active_input_count": 107,
@@ -57,7 +57,7 @@
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 15,
-    "generated_at": "2026-08-17T04:42:18.521830Z",
+    "generated_at": "2026-08-17T05:21:42.544357Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
@@ -210,7 +210,7 @@
       "SHADOW_REJECT_TECHNICAL": 18,
       "SHADOW_REVIEW_DATE": 24
     },
-    "generated_at": "2026-08-17T04:24:00.839379Z",
+    "generated_at": "2026-08-17T05:09:32.128659Z",
     "note": "SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion.",
     "production_eligible_automatically": 0,
     "production_write": false,
@@ -320,27 +320,27 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 1,
+    "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "điện máy điện thoại laptop khuyến mãi Việt Nam",
-      "điện máy điện thoại laptop ưu đãi Việt Nam",
-      "điện máy điện thoại laptop voucher Việt Nam",
-      "điện máy điện thoại laptop promotion Vietnam"
+      "nhà thuốc khuyến mãi Việt Nam",
+      "nhà thuốc ưu đãi Việt Nam",
+      "nhà thuốc voucher Việt Nam",
+      "nhà thuốc promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 57,
+    "cc_domain_page": 58,
     "frontier_scheduler": {
-      "active": 242,
+      "active": 232,
       "base_per_host_batch": 16,
-      "deferred": 39758,
+      "deferred": 39768,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 24
+      "unique_hosts": 32
     }
   },
   "recent_sources": [
