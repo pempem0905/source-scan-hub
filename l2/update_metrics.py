@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build sanitized cumulative L2 outcome metrics from non-secret repo state."""
+"""Build sanitized L2 hard-only outcome metrics from non-secret repo state."""
 from __future__ import annotations
 import datetime as dt
 import json
@@ -16,9 +16,8 @@ def load_json(name: str, default):
 
 
 def main() -> None:
-    public = load_json("public-state.json", {})
     auth = load_json("auth-status.json", {})
-    history = public.get("history") or []
+    hard = load_json("hard-outcomes.json", {})
     platforms = auth.get("platforms") or {}
 
     login_ready_states = {"LOGIN_REQUIRED", "NEEDS_RELOGIN", "TAKEOVER_READY", "LOGIN_READY", "FULL_READY"}
@@ -28,16 +27,18 @@ def main() -> None:
     remaining = sum(1 for p in platforms.values() if p.get("status") not in {"FULL_READY"})
 
     metrics = {
-        "schema": "promo.l2.outcome_metrics.v1",
+        "schema": "promo.l2.outcome_metrics.v2",
+        "mode": "HARD_ONLY",
         "platforms_login_ready": ready,
         "platforms_logged_in": logged,
-        "l2_sources_scanned": sum(int(r.get("attempted") or 0) for r in history),
-        "l2_voucher_deals_found": sum(int(r.get("promo_candidates") or 0) for r in history),
-        "l2_literal_codes_found": sum(int(r.get("code_candidates") or 0) for r in history),
+        "l2_sources_scanned": int(hard.get("l2_sources_scanned") or 0),
+        "l2_voucher_deals_found": int(hard.get("l2_voucher_deals_found") or 0),
+        "l2_literal_codes_found": int(hard.get("l2_literal_codes_found") or 0),
         "remaining_platforms": remaining,
-        "last_run_at": public.get("updated_at") or (history[-1].get("at") if history else None),
+        "last_run_at": hard.get("last_run_at") or auth.get("updated_at"),
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z"),
-        "note": "Counts are sanitized cumulative L2 scan outcomes; candidates remain subject to date/technical/Turbo quality gates before production use."
+        "public_overlap_excluded": True,
+        "note": "L2 metrics count hard/authenticated/access-constrained outcomes only. Routine public crawling is owned by Layer1 and is excluded from L2 totals."
     }
     (ROOT / "metrics.json").write_text(json.dumps(metrics, ensure_ascii=False, indent=2) + "\n")
     print(json.dumps(metrics, ensure_ascii=False))
