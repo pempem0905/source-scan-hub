@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-17T20:06:37.662516Z",
+  "generated_at": "2026-08-17T20:39:27.287065Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 7149,
+    "frontier_active_pending": 7336,
     "frontier_deferred_pending": 38200,
-    "frontier_pending": 45349,
-    "last_6_runs_new_domains": 58,
+    "frontier_pending": 45536,
+    "last_6_runs_new_domains": 72,
     "last_run": {
-      "at": "2026-08-17T20:02:09.551533Z",
+      "at": "2026-08-17T20:35:37.010293Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vi-vn/*uu-dai*",
-        "*.com/vi-vn/*voucher*",
-        "*.com/vi-vn/*promotion*",
-        "*.net/vn/*khuyen-mai*"
+        "*.net/vn/*uu-dai*",
+        "*.com/vietnam/*promotion*",
+        "*.vn/*khuyen-mai*",
+        "*.vn/*khuyenmai*"
       ],
-      "duration_s": 267.0,
-      "errors": 184,
-      "frontier_pending": 45349,
-      "new_domains": 12,
+      "duration_s": 229.0,
+      "errors": 146,
+      "frontier_pending": 45536,
+      "new_domains": 16,
       "processed": 1800,
-      "rate403": 1.5,
-      "rate429": 0.556
+      "rate403": 1.778,
+      "rate429": 0.667
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1250,
+    "master_domains": 1269,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 95,
+    "run_count": 96,
     "running": true,
-    "seen_urls": 411519,
-    "updated_at": "2026-08-17T20:06:36.532966Z"
+    "seen_urls": 418869,
+    "updated_at": "2026-08-17T20:39:25.986825Z"
   },
   "master_input": {
-    "active_input_count": 131,
+    "active_input_count": 137,
     "counts": {
-      "ACTIVE_INPUT": 131,
+      "ACTIVE_INPUT": 137,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 36,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 24,
-      "GENERAL": 906,
+      "GENERAL": 923,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 85,
-      "PUBLIC_HTTP": 1069,
+      "PROMO_RETAIL": 91,
+      "PUBLIC_HTTP": 1086,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 83,
-      "REVIEW_INPUT": 938,
+      "REVIEW_INPUT": 949,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 938,
+      "SOURCE_REVIEW": 949,
       "TRAVEL_MOBILITY": 19
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-17T20:06:37.480623Z",
+    "generated_at": "2026-08-17T20:39:27.078947Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1085,
-    "review_input_count": 938,
+    "record_count": 1102,
+    "review_input_count": 949,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1250,
+    "source_hunter_domains": 1269,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -322,142 +322,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 1,
+    "free_search_last_added": 2,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "thời trang giày dép khuyến mãi Việt Nam",
-      "thời trang giày dép ưu đãi Việt Nam",
-      "thời trang giày dép voucher Việt Nam",
-      "thời trang giày dép promotion Vietnam"
+      "trang sức khuyến mãi Việt Nam",
+      "trang sức ưu đãi Việt Nam",
+      "trang sức voucher Việt Nam",
+      "trang sức promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 84,
+    "cc_domain_page": 85,
     "frontier_scheduler": {
       "active": 1800,
       "base_per_host_batch": 16,
       "deferred": 38200,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.056,
+      "previous_429_rate": 0.556,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 422
+      "unique_hosts": 408
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T23:23:11.458848Z",
-      "domain": "auto5.vn",
-      "radar": false,
-      "url": "https://auto5.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T23:28:29.909180Z",
-      "domain": "blog.adahub.vn",
-      "radar": false,
-      "url": "https://blog.adahub.vn/sale-pipeline-cho-doanh-nghiep-b2b/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-16T23:28:29.909180Z",
-      "domain": "batdongsan.baoxaydung.vn",
-      "radar": false,
-      "url": "https://batdongsan.baoxaydung.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T23:39:30.898594Z",
-      "domain": "diamond.vpbank.com.vn",
-      "radar": false,
-      "url": "https://diamond.vpbank.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T23:39:30.898594Z",
-      "domain": "lynkid.vn",
-      "radar": false,
-      "url": "https://lynkid.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T23:39:30.898594Z",
-      "domain": "lacoste.com.vn",
-      "radar": false,
-      "url": "https://lacoste.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T23:53:52.828415Z",
-      "domain": "vanhanhmall.com",
-      "radar": false,
-      "url": "https://vanhanhmall.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-17T00:27:47.025881Z",
-      "domain": "kolkoc.link",
-      "radar": false,
-      "url": "https://kolkoc.link/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-17T00:27:47.025881Z",
-      "domain": "newpub.adpia.vn",
-      "radar": true,
-      "url": "https://newpub.adpia.vn/login",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-17T01:32:37.863642Z",
-      "domain": "baoxaydung.vn",
-      "radar": false,
-      "url": "https://baoxaydung.vn/co-chinh-sach-uu-tien-dac-biet-de-khuyen-khich-nghi-ngay-khi-sap-xep-tinh-gon-bo-may-192241217114224658.htm",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T03:58:27.268828Z",
-      "domain": "topmom.com.vn",
-      "radar": false,
-      "url": "https://topmom.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-17T04:40:41.269259Z",
-      "domain": "limeorange.vn",
-      "radar": false,
-      "url": "https://limeorange.vn/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T04:40:41.269259Z",
-      "domain": "cpn.vn",
-      "radar": false,
-      "url": "https://cpn.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-17T05:54:58.928218Z",
-      "domain": "shondoshoes.com",
-      "radar": false,
-      "url": "https://shondoshoes.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-17T06:32:46.505864Z",
-      "domain": "hanoia.com",
-      "radar": false,
-      "url": "https://hanoia.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-17T07:35:48.285846Z",
-      "domain": "leejeans.vn",
-      "radar": false,
-      "url": "https://leejeans.vn/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-17T07:35:48.285846Z",
       "domain": "noithatgiakhanh.com",
@@ -1184,6 +1072,118 @@
       "domain": "salesoutcomes.com",
       "radar": false,
       "url": "https://salesoutcomes.com/b2b-sales-and-marketing-insights/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "ascenttrainings.com",
+      "radar": false,
+      "url": "https://ascenttrainings.com/feeds/service/saas-sales-coach",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "bitrix24.vn",
+      "radar": false,
+      "url": "https://bitrix24.vn/apps/app/bitrix.bic_deals_en/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "admin.salesforce.com",
+      "radar": false,
+      "url": "https://admin.salesforce.com/blog/2026/stop-ai-hallucinations-with-better-salesforce-metadata-podcast",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "getresponse.com",
+      "radar": false,
+      "url": "https://getresponse.com/blog/sales-funnel",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "apacsma.com",
+      "radar": false,
+      "url": "https://apacsma.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "data-axle.com",
+      "radar": false,
+      "url": "https://data-axle.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "deloittedigital.com",
+      "radar": false,
+      "url": "https://deloittedigital.com/us/en.html",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "docusign.com",
+      "radar": false,
+      "url": "https://docusign.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "hyperbound.ai",
+      "radar": false,
+      "url": "https://hyperbound.ai/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "zyxware.com",
+      "radar": false,
+      "url": "https://zyxware.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "saleduck.com.vn",
+      "radar": false,
+      "url": "https://saleduck.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "pandora.norbreeze.vn",
+      "radar": false,
+      "url": "https://pandora.norbreeze.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "activatedscale.com",
+      "radar": false,
+      "url": "https://activatedscale.com/hire-sales-talent",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "dealhub.io",
+      "radar": false,
+      "url": "https://dealhub.io/author/dealhub-team/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "greenpromocode.com",
+      "radar": false,
+      "url": "https://greenpromocode.com/coupons/lvnea/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T20:35:37.010293Z",
+      "domain": "signin.ebay.com",
+      "radar": false,
+      "url": "https://signin.ebay.com/ws/eBayISAPI.dll?SignIn=&UsingSSL=1&siteid=0&co_partnerId=2&pageType=2555984&ru=https%3A%2F%2Fwww.ebay.com%2Fmye%2Fmyebay%2Fbidsoffers&sgfl=sm&smuid=b84ff9e0-9a7b-11f1-9ff3-850125d5c768",
       "via": "internal_promo"
     }
   ]

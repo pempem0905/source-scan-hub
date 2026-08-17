@@ -235,6 +235,7 @@ acquyhaiphong.vn
 acquyhieuphat.vn
 acronis.com
 activatedcarbon.vn
+activatedscale.com
 activesolution.vn
 activstore.vn
 actled.vn
@@ -299,6 +300,7 @@ admatrix.vn
 admica.vn
 admicro.vn
 admin.ali.vn
+admin.salesforce.com
 adpia.vn
 adsawin.vn
 adsbase.vn
@@ -581,10 +583,13 @@ amatop.vn
 amavifurniture.vn
 amavinagroup.vn
 amaxhomes.vn
+amazinghalong.vn
+amazinghouse.vn
 ambassador.koc.com.vn
 anfoodvn.com
 anthonycoletraining.com
 anz.2te.vn
+apacsma.com
 api-ht.568play.vn
 api.8pos.vn
 apidocs.abit.vn
@@ -593,6 +598,7 @@ app.afada.vn
 app.aitoannang.vn
 app.alobo.vn
 apple.com
+ascenttrainings.com
 atac2024.aiotlab.vn
 atrip.vn
 auto5.vn
@@ -626,6 +632,7 @@ bibomart.com.vn
 bidv.com.vn
 biggreen.com.vn
 bitis.com.vn
+bitrix24.vn
 biz.accesstrade.vn
 bizfly.vn
 blog.6giay.vn
@@ -712,12 +719,15 @@ dangky.accesstrade.vn
 dangky.alobo.vn
 danhgiathuonghieu.vn
 dantri.com.vn
+data-axle.com
 datlich.alobo.vn
 datve.aitrip.vn
 dbd.028.vn
 dealgiadung.vn
+dealhub.io
 dealngon.vn
 decathlon.vn
+deloittedigital.com
 developers.accesstrade.vn
 diamond.vpbank.com.vn
 dichvudidong.vn
@@ -730,6 +740,7 @@ dingteavoucher.vn
 disneycatch.360game.vn
 docbo.360game.vn
 documentation.g2.com
+docusign.com
 ebay.com
 eccovietnam.vn
 edu.aditi.vn
@@ -775,6 +786,7 @@ fwd.com.vn
 gdshop.vn
 generali.vn
 getmagical.com
+getresponse.com
 ggi.3tc.vn
 ghn.vn
 ghtk.vn
@@ -797,6 +809,7 @@ gokaapp.vn
 gongcha.com.vn
 gps.3tbk.vn
 grab.com
+greenpromocode.com
 greensm.com
 grow.alive-web.vn
 growth-public.grab.com
@@ -836,6 +849,7 @@ hub.algotrade.vn
 huongdan.aditi.vn
 huyenthoaidota.357games.vn
 huyetkiem.360game.vn
+hyperbound.ai
 ibaohiem.vn
 ibaoviet.vn
 id.357games.vn
@@ -903,6 +917,7 @@ macplanet.vn
 made4home.com.vn
 magiamgia.com
 magiamgialazada.vn
+mail.amazingfitness.vn
 mailchimp.com
 maisononline.vn
 malls.vn
@@ -991,6 +1006,7 @@ organicfood.vn
 oto.com.vn
 packaging.allship.vn
 pages.lazada.vn
+pandora.norbreeze.vn
 partner.agileops.vn
 partnerhub.g2.com
 pay.357games.vn
@@ -1038,6 +1054,7 @@ saas.adscivil.vn
 saasrat.com
 saigonreview.vn
 saigonsneaker.com
+saleduck.com.vn
 sales.adsmo.vn
 salesforce.com
 salesmate.io
@@ -1063,6 +1080,7 @@ shopping.saigoncentre.com.vn
 sieuthi-go.vn
 sieuthidienmayxanh.vn
 sieuthilamdep.com
+signin.ebay.com
 signup.adahub.vn
 simpleshow.com
 skechersvn.vn
@@ -1248,3 +1266,4 @@ zema.com.vn
 zingspeed.360play.vn
 zippia.com
 zoho.com
+zyxware.com
