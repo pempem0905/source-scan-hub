@@ -9,6 +9,7 @@ on:
     paths:
       - 'l2/public_browser_worker.py'
       - 'l2/date_gate_shadow.py'
+      - 'l2/update_metrics.py'
       - 'l2/router.json'
       - 'integration/master_input_sources_v1.jsonl'
       - '.github/workflows/promo-l2-public-browser.yml'
@@ -65,17 +66,21 @@ jobs:
         if: always()
         run: python l2/date_gate_shadow.py
 
+      - name: Update sanitized cumulative L2 outcome metrics
+        if: always()
+        run: python l2/update_metrics.py
+
       - name: Restore canonical master input working copy
         if: always()
         run: mv /tmp/master_input_sources_v1.jsonl integration/master_input_sources_v1.jsonl
 
-      - name: Persist L2 state and shadow candidates
+      - name: Persist L2 state, shadow candidates and metrics
         if: always()
         run: |
           git config user.name "promo-l2-free-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           touch l2/public-results.jsonl l2/candidate-queue.jsonl
-          git add l2/public-state.json l2/public-results.jsonl l2/candidate-queue.jsonl l2/shadow-status.json
+          git add l2/public-state.json l2/public-results.jsonl l2/candidate-queue.jsonl l2/shadow-status.json l2/metrics.json
           if git diff --cached --quiet; then
             echo "No L2 state changes"
             exit 0
