@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-17T05:27:46.504119Z",
+  "generated_at": "2026-08-17T05:55:58.972603Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 2062,
-    "frontier_deferred_pending": 39810,
-    "frontier_pending": 41872,
-    "last_6_runs_new_domains": 3,
+    "frontier_active_pending": 2374,
+    "frontier_deferred_pending": 39821,
+    "frontier_pending": 42195,
+    "last_6_runs_new_domains": 4,
     "last_run": {
-      "at": "2026-08-17T05:26:39.754128Z",
+      "at": "2026-08-17T05:54:58.928218Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*uu-dai*",
-        "*.vn/*uudai*",
-        "*.vn/*voucher*",
-        "*.vn/*promotion*"
+        "*.vn/*offers*",
+        "*.vn/*deals*",
+        "*.vn/*sale*",
+        "*.com/vn/*khuyen-mai*"
       ],
-      "duration_s": 65.9,
+      "duration_s": 59.1,
       "errors": 1,
-      "frontier_pending": 41872,
-      "new_domains": 0,
-      "processed": 190,
+      "frontier_pending": 42195,
+      "new_domains": 1,
+      "processed": 179,
       "rate403": 0.0,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 873,
+    "master_domains": 874,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 67,
+    "run_count": 68,
     "running": true,
-    "seen_urls": 298165,
-    "updated_at": "2026-08-17T05:27:45.609975Z"
+    "seen_urls": 300540,
+    "updated_at": "2026-08-17T05:55:57.991705Z"
   },
   "master_input": {
     "active_input_count": 107,
@@ -41,33 +41,33 @@
       "BANK_CARD": 33,
       "DISCOVERY_ONLY": 15,
       "FOOD_BEVERAGE": 22,
-      "GENERAL": 589,
+      "GENERAL": 590,
       "LOYALTY_REWARDS": 9,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 14,
       "PROMO_RETAIL": 62,
-      "PUBLIC_HTTP": 738,
+      "PUBLIC_HTTP": 739,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 77,
-      "REVIEW_INPUT": 631,
+      "REVIEW_INPUT": 632,
       "SOURCE_HUNTER": 15,
-      "SOURCE_REVIEW": 631,
+      "SOURCE_REVIEW": 632,
       "TRAVEL_MOBILITY": 16
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 15,
-    "generated_at": "2026-08-17T05:27:46.369215Z",
+    "generated_at": "2026-08-17T05:55:58.795749Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 753,
-    "review_input_count": 631,
+    "record_count": 754,
+    "review_input_count": 632,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 873,
+    "source_hunter_domains": 874,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -210,7 +210,7 @@
       "SHADOW_REJECT_TECHNICAL": 18,
       "SHADOW_REVIEW_DATE": 24
     },
-    "generated_at": "2026-08-17T05:09:32.128659Z",
+    "generated_at": "2026-08-17T05:48:52.577051Z",
     "note": "SHADOW_CURRENT still requires independent Turbo verification before normal queue promotion.",
     "production_eligible_automatically": 0,
     "production_write": false,
@@ -234,7 +234,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-17T05:26:30Z",
+    "updated_at": "2026-08-17T05:27:01.430081Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -252,10 +252,10 @@
       "login_before_demand": true,
       "runtime_probe_verified": true,
       "permission_required": {
-        "state": "WAITING_RUNTIME_WINDOW",
-        "reason": "No real secure takeover surface is active right now.",
-        "safe_action": "No user action is required until bridge_status becomes TAKEOVER_READY.",
-        "note": "The bridge will retry autonomously; sensitive login material remains runtime-only."
+        "state": "PERMISSION_REQUIRED",
+        "reason": "One authorized platform must complete a real Cloudflare structured handoff and authenticated-session reuse verification before the login bridge can become end-to-end READY.",
+        "safe_action": "No login action is required until bridge_status becomes TAKEOVER_READY. The request/retry path opens the secure Live Session automatically; only then open Cloudflare Dashboard > Browser Run > Live Sessions, complete login/MFA/CAPTCHA there, and mark the handoff complete.",
+        "note": "Do not place passwords, OTPs, cookies, refresh tokens, CAPTCHA data, session IDs, websocket URLs, or takeover URLs in GitHub files, logs, chat, or public dashboard."
       },
       "end_to_end_verified": false
     },
@@ -320,37 +320,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 0,
+    "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "mỹ phẩm làm đẹp khuyến mãi Việt Nam",
-      "mỹ phẩm làm đẹp ưu đãi Việt Nam",
-      "mỹ phẩm làm đẹp voucher Việt Nam",
-      "mỹ phẩm làm đẹp promotion Vietnam"
+      "thời trang giày dép khuyến mãi Việt Nam",
+      "thời trang giày dép ưu đãi Việt Nam",
+      "thời trang giày dép voucher Việt Nam",
+      "thời trang giày dép promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 59,
+    "cc_domain_page": 60,
     "frontier_scheduler": {
-      "active": 190,
+      "active": 179,
       "base_per_host_batch": 16,
-      "deferred": 39810,
+      "deferred": 39821,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 16
+      "unique_hosts": 17
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T15:23:48.272129Z",
-      "domain": "evogym.com.vn",
-      "radar": false,
-      "url": "https://evogym.com.vn/",
-      "via": "free_search"
-    },
     {
       "at": "2026-08-16T15:23:48.272129Z",
       "domain": "khuyenmai.unityfitness.vn",
@@ -1182,6 +1175,13 @@
       "domain": "cpn.vn",
       "radar": false,
       "url": "https://cpn.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-17T05:54:58.928218Z",
+      "domain": "shondoshoes.com",
+      "radar": false,
+      "url": "https://shondoshoes.com/",
       "via": "free_search"
     }
   ]
