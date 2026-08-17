@@ -26,13 +26,15 @@ jobs:
         with:
           python-version: '3.12'
       - name: Validate bridge helpers
-        run: python -m py_compile l2/retry_handoff_request.py l2/reconcile_bridge_status.py l2/bridge_selftest.py l2/browser_run_cdp.py
+        run: python -m py_compile l2/retry_handoff_request.py l2/reconcile_bridge_status.py l2/bridge_selftest.py l2/browser_run_cdp.py l2/update_metrics.py
       - name: Verify bridge invariants before retry
         run: python l2/bridge_selftest.py
       - name: Re-arm retry if cooldown elapsed
         run: python l2/retry_handoff_request.py
       - name: Reconcile sanitized bridge and auth status
         run: python l2/reconcile_bridge_status.py
+      - name: Refresh hard-only outcome metrics
+        run: python l2/update_metrics.py
       - name: Verify bridge invariants after reconciliation
         run: python l2/bridge_selftest.py
       - name: Persist sanitized self-heal transition
@@ -51,7 +53,7 @@ jobs:
           echo "state=$STATE" >> "$GITHUB_OUTPUT"
           git config user.name "promo-l2-retry-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add l2/handoff-request.json l2/bridge-status.json l2/auth-status.json
+          git add l2/handoff-request.json l2/bridge-status.json l2/auth-status.json l2/metrics.json l2/hard-outcomes.json
           if git diff --cached --quiet; then
             echo 'changed=false' >> "$GITHUB_OUTPUT"
             exit 0
