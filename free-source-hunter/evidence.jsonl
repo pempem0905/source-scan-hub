@@ -397,3 +397,5 @@
 {"at": "2026-08-16T23:39:30.898594Z", "domain": "lynkid.vn", "radar": false, "url": "https://lynkid.vn/", "via": "free_search"}
 {"at": "2026-08-16T23:39:30.898594Z", "domain": "lacoste.com.vn", "radar": false, "url": "https://lacoste.com.vn/", "via": "free_search"}
 {"at": "2026-08-16T23:53:52.828415Z", "domain": "vanhanhmall.com", "radar": false, "url": "https://vanhanhmall.com/", "via": "free_search"}
+{"at": "2026-08-17T00:27:47.025881Z", "domain": "kolkoc.link", "radar": false, "url": "https://kolkoc.link/", "via": "radar_out"}
+{"at": "2026-08-17T00:27:47.025881Z", "domain": "newpub.adpia.vn", "radar": true, "url": "https://newpub.adpia.vn/login", "via": "radar_out"}
