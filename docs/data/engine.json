@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-17T23:14:30.263741Z",
+  "generated_at": "2026-08-17T23:38:55.418177Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 7397,
+    "frontier_active_pending": 6415,
     "frontier_deferred_pending": 38200,
-    "frontier_pending": 45597,
-    "last_6_runs_new_domains": 52,
+    "frontier_pending": 44615,
+    "last_6_runs_new_domains": 50,
     "last_run": {
-      "at": "2026-08-17T23:09:37.227774Z",
+      "at": "2026-08-17T23:34:06.290639Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*offers*",
-        "*.vn/*deals*",
-        "*.vn/*sale*",
-        "*.com/vn/*khuyen-mai*"
+        "*.com/vn/*uu-dai*",
+        "*.com/vn/*voucher*",
+        "*.com/vn/*promotion*",
+        "*.com/vi-vn/*khuyen-mai*"
       ],
-      "duration_s": 291.8,
-      "errors": 155,
-      "frontier_pending": 45597,
-      "new_domains": 13,
+      "duration_s": 287.8,
+      "errors": 255,
+      "frontier_pending": 44615,
+      "new_domains": 8,
       "processed": 1800,
       "rate403": 1.111,
-      "rate429": 0.278
+      "rate429": 0.056
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1416,
+    "master_domains": 1445,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 103,
+    "run_count": 104,
     "running": true,
-    "seen_urls": 473719,
-    "updated_at": "2026-08-17T23:14:28.996885Z"
+    "seen_urls": 480348,
+    "updated_at": "2026-08-17T23:38:54.061538Z"
   },
   "master_input": {
-    "active_input_count": 154,
+    "active_input_count": 159,
     "counts": {
-      "ACTIVE_INPUT": 154,
+      "ACTIVE_INPUT": 159,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 36,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 24,
-      "GENERAL": 1035,
+      "GENERAL": 1061,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 108,
-      "PUBLIC_HTTP": 1199,
+      "PROMO_RETAIL": 113,
+      "PUBLIC_HTTP": 1225,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 83,
-      "REVIEW_INPUT": 1045,
+      "REVIEW_INPUT": 1066,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1045,
+      "SOURCE_REVIEW": 1066,
       "TRAVEL_MOBILITY": 20
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-17T23:14:30.064271Z",
+    "generated_at": "2026-08-17T23:38:55.210515Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1215,
-    "review_input_count": 1045,
+    "record_count": 1241,
+    "review_input_count": 1066,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1416,
+    "source_hunter_domains": 1445,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -325,83 +325,27 @@
     "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "ngân hàng thẻ tín dụng khuyến mãi Việt Nam",
-      "ngân hàng thẻ tín dụng ưu đãi Việt Nam",
-      "ngân hàng thẻ tín dụng voucher Việt Nam",
-      "ngân hàng thẻ tín dụng promotion Vietnam"
+      "ví điện tử khuyến mãi Việt Nam",
+      "ví điện tử ưu đãi Việt Nam",
+      "ví điện tử voucher Việt Nam",
+      "ví điện tử promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 92,
+    "cc_domain_page": 93,
     "frontier_scheduler": {
       "active": 1800,
       "base_per_host_batch": 16,
       "deferred": 38200,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.0,
+      "previous_429_rate": 0.278,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 333
+      "unique_hosts": 345
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-17T19:45:37.989988Z",
-      "domain": "salestechstar.com",
-      "radar": false,
-      "url": "https://salestechstar.com/category/sales-dialer/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T19:45:37.989988Z",
-      "domain": "anthonycoletraining.com",
-      "radar": false,
-      "url": "https://anthonycoletraining.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T19:45:37.989988Z",
-      "domain": "cnbc.com",
-      "radar": false,
-      "url": "https://cnbc.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T19:45:37.989988Z",
-      "domain": "cpe.accountingtools.com",
-      "radar": false,
-      "url": "https://cpe.accountingtools.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T19:45:37.989988Z",
-      "domain": "computerworld.es",
-      "radar": false,
-      "url": "https://computerworld.es/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T19:45:37.989988Z",
-      "domain": "cloudgalacticos.co.uk",
-      "radar": false,
-      "url": "https://cloudgalacticos.co.uk/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T19:45:37.989988Z",
-      "domain": "mailchimp.com",
-      "radar": false,
-      "url": "https://mailchimp.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T19:45:37.989988Z",
-      "domain": "marketsandmarkets.com",
-      "radar": false,
-      "url": "https://marketsandmarkets.com/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-17T19:45:37.989988Z",
       "domain": "nooks.ai",
@@ -1185,6 +1129,62 @@
       "radar": false,
       "url": "https://amtech.vn/pr-lexar-trinh-dien-loat-san-pham-hang-dau-moi-nhat-tai-computex-2024-7546/",
       "via": "sitemap"
+    },
+    {
+      "at": "2026-08-17T23:34:06.290639Z",
+      "domain": "timesofindia.indiatimes.com",
+      "radar": false,
+      "url": "https://timesofindia.indiatimes.com/city/salem",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T23:34:06.290639Z",
+      "domain": "mercuri.ae",
+      "radar": false,
+      "url": "https://mercuri.ae/sales-consulting/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T23:34:06.290639Z",
+      "domain": "mercuri.pl",
+      "radar": false,
+      "url": "https://mercuri.pl/sales-training-2/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T23:34:06.290639Z",
+      "domain": "mercuri.cz",
+      "radar": false,
+      "url": "https://mercuri.cz/ai-for-sales-professionals/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T23:34:06.290639Z",
+      "domain": "artha.link",
+      "radar": false,
+      "url": "https://artha.link/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T23:34:06.290639Z",
+      "domain": "voucher.amiskr.vn",
+      "radar": true,
+      "url": "http://voucher.amiskr.vn/Login.aspx?ReturnUrl=%2F",
+      "via": "legacy_migration"
+    },
+    {
+      "at": "2026-08-17T23:34:06.290639Z",
+      "domain": "mercuri.it",
+      "radar": false,
+      "url": "https://mercuri.it/sales-excellence-2/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T23:34:06.290639Z",
+      "domain": "promotion.amiskr.vn",
+      "radar": false,
+      "url": "http://promotion.amiskr.vn/Login.aspx?ReturnUrl=%2F",
+      "via": "legacy_migration"
     }
   ]
 }
