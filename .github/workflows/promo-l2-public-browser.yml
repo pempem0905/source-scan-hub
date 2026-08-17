@@ -1,18 +1,7 @@
-name: PROMO L2 Public Browser
+name: PROMO L2 Public Browser (manual diagnostic only)
 
 on:
-  schedule:
-    - cron: '2-52/10 * * * *'
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'l2/public_browser_worker.py'
-      - 'l2/date_gate_shadow.py'
-      - 'l2/update_metrics.py'
-      - 'l2/router.json'
-      - 'integration/master_input_sources_v1.jsonl'
-      - '.github/workflows/promo-l2-public-browser.yml'
 
 permissions:
   contents: write
@@ -22,12 +11,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  scan:
+  diagnostic_scan:
     runs-on: ubuntu-latest
     timeout-minutes: 12
     env:
-      L2_MAX_ITEMS: '30'
-      L2_MAX_SECONDS: '480'
+      L2_MAX_ITEMS: '10'
+      L2_MAX_SECONDS: '240'
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
@@ -59,32 +48,28 @@ jobs:
           print(f'active_input={len(rows)}')
           PY
 
-      - name: Scan master-input public and JS-heavy sources in shadow mode
+      - name: Manual public diagnostic only
         run: python l2/public_browser_worker.py
 
       - name: Apply L2 current-date and technical-token gates
         if: always()
         run: python l2/date_gate_shadow.py
 
-      - name: Update sanitized cumulative L2 outcome metrics
-        if: always()
-        run: python l2/update_metrics.py
-
       - name: Restore canonical master input working copy
         if: always()
         run: mv /tmp/master_input_sources_v1.jsonl integration/master_input_sources_v1.jsonl
 
-      - name: Persist L2 state, shadow candidates and metrics
+      - name: Persist diagnostic state only
         if: always()
         run: |
           git config user.name "promo-l2-free-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           touch l2/public-results.jsonl l2/candidate-queue.jsonl
-          git add l2/public-state.json l2/public-results.jsonl l2/candidate-queue.jsonl l2/shadow-status.json l2/metrics.json
+          git add l2/public-state.json l2/public-results.jsonl l2/candidate-queue.jsonl l2/shadow-status.json
           if git diff --cached --quiet; then
-            echo "No L2 state changes"
+            echo "No L2 diagnostic state changes"
             exit 0
           fi
-          git commit -m "PROMO L2 shadow checkpoint [skip ci]"
+          git commit -m "PROMO L2 public diagnostic checkpoint [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main
