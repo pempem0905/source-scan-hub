@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Re-arm a sanitized L2 handoff request after a bounded cooldown.
 
-This never opens a browser itself. It only changes RETRY_PENDING -> REQUESTED
-when the cooldown has elapsed; the request-driven Browser Run workflow then owns
-the secure runtime. No secret or session material is read or written.
+This never opens a browser itself. It only changes a retryable non-secret request
+back to REQUESTED when cooldown has elapsed; the request-driven Browser Run
+workflow then owns the secure runtime. No secret or session material is read or
+written.
 """
 from __future__ import annotations
 
@@ -17,6 +18,7 @@ RUNTIME = ROOT / "bridge-runtime-status.json"
 BRIDGE = ROOT / "bridge-status.json"
 DEFAULT_COOLDOWN = dt.timedelta(minutes=30)
 MAX_ATTEMPTS_PER_UTC_DAY = 8
+RETRYABLE_REQUEST_STATES = {"RETRY_PENDING", "FAILED"}
 
 
 def load(path: Path, default: dict) -> dict:
@@ -39,8 +41,19 @@ def main() -> None:
     req = load(REQUEST, {})
     runtime = load(RUNTIME, {})
     bridge = load(BRIDGE, {})
-    if req.get("state") != "RETRY_PENDING" or bridge.get("ready") is True:
+    if req.get("state") not in RETRYABLE_REQUEST_STATES or bridge.get("ready") is True:
         print("L2_HANDOFF_RETRY_NOOP")
+        return
+
+    # A failed handoff after a previously verified takeover surface is retryable:
+    # Cloudflare Browser Run sessions have a bounded lifetime, so operator absence
+    # during a window must not permanently wedge the bridge.
+    if req.get("state") == "FAILED" and not (
+        runtime.get("browser_session_created") is True
+        and runtime.get("human_handoff_exercised") is True
+        and bridge.get("runtime_verified") is True
+    ):
+        print("L2_HANDOFF_RETRY_NOT_VERIFIED")
         return
 
     now = dt.datetime.now(dt.timezone.utc)
@@ -57,6 +70,7 @@ def main() -> None:
     attempts = int(req.get("attempts_today") or 0) if attempt_day == day else 0
     if attempts >= MAX_ATTEMPTS_PER_UTC_DAY:
         next_day = now.date() + dt.timedelta(days=1)
+        req["state"] = "RETRY_PENDING"
         req["retry_after_utc"] = f"{next_day.isoformat()}T00:05:00Z"
         req["attempt_day_utc"] = day
         req["attempts_today"] = attempts
