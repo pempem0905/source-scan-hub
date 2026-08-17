@@ -46,7 +46,7 @@
       "profile_id": "grabfood-main",
       "access_class": "AUTHORIZED_ACCOUNT",
       "start_url": "https://food.grab.com/vn/vi/",
-      "status": "PREAUTH_PENDING_SESSION",
+      "status": "PREAUTH_RETRY_PENDING",
       "preferred_runner": "cloudflare-browser-run",
       "fallback_runner": "self-hosted-residential"
     },
