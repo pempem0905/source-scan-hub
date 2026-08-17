@@ -670,21 +670,33 @@
       "promo_candidates": 1,
       "public_ok": 1,
       "shadow_ready": 0
+    },
+    {
+      "at": "2026-08-17T09:56:46Z",
+      "attempted": 3,
+      "blocked": 0,
+      "code_candidates": 0,
+      "errors": 0,
+      "js_browser": 0,
+      "login_required": 1,
+      "promo_candidates": 3,
+      "public_ok": 2,
+      "shadow_ready": 0
     }
   ],
   "last_run": {
-    "attempted": 1,
+    "attempted": 3,
     "blocked": 0,
     "code_candidates": 0,
     "errors": 0,
     "js_browser": 0,
-    "login_required": 0,
-    "promo_candidates": 1,
-    "public_ok": 1,
+    "login_required": 1,
+    "promo_candidates": 3,
+    "public_ok": 2,
     "shadow_ready": 0
   },
   "project_id": "PROMO-L2-ROUTER-V1",
-  "run_count": 56,
+  "run_count": 57,
   "schema_version": 2,
   "seen": {
     "https://acb.com.vn/": {
@@ -1322,10 +1334,25 @@
       "at": "2026-08-16T10:50:32Z",
       "content_hash": "bbca6ab39e24dd6b8c087783af567da8583b796fba24e24cb7bd3db35300ccd5"
     },
+    "https://promo.highlandscoffee.com.vn/": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-17T09:56:45Z",
+      "content_hash": "5029a6e95b0241977f8acc4ea4ec8e9ee52064b1e0ffadcf4c741f57c9dd3ab2"
+    },
     "https://sacombank.com.vn/trang-chu/khuyen-mai/khcn/chuong-trinh-uu-dai.html": {
       "access_state": "ERROR",
       "at": "2026-08-16T11:12:06Z",
       "content_hash": null
+    },
+    "https://salesforce.com/": {
+      "access_state": "LOGIN_REQUIRED",
+      "at": "2026-08-17T09:56:45Z",
+      "content_hash": "96fd55f69b4d51898ea6747f3a95f432dc4e485513bdc5e968212ab0c9f9a8fb"
+    },
+    "https://salesforce.com/blog/sales/?bc=HL": {
+      "access_state": "PUBLIC_OK",
+      "at": "2026-08-17T09:56:46Z",
+      "content_hash": "61d594be00a8a6eeb765f057c38392b8b297cd031417c3d1fdc13fe0eeab6d15"
     },
     "https://samsung.com/vn/mypage/rewards/": {
       "access_state": "PUBLIC_OK",
@@ -1613,5 +1640,5 @@
       "content_hash": "41c02a4a827a8c2e4ceb581580f496de7cc787135ec22741ab4cd2501970091a"
     }
   },
-  "updated_at": "2026-08-17T09:09:44Z"
+  "updated_at": "2026-08-17T09:56:46Z"
 }

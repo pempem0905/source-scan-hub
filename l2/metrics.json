@@ -2,11 +2,11 @@
   "schema": "promo.l2.outcome_metrics.v1",
   "platforms_login_ready": 0,
   "platforms_logged_in": 0,
-  "l2_sources_scanned": 185,
-  "l2_voucher_deals_found": 128,
+  "l2_sources_scanned": 188,
+  "l2_voucher_deals_found": 131,
   "l2_literal_codes_found": 88,
   "remaining_platforms": 7,
-  "last_run_at": "2026-08-17T09:09:44Z",
-  "generated_at": "2026-08-17T09:09:44.724344Z",
+  "last_run_at": "2026-08-17T09:56:46Z",
+  "generated_at": "2026-08-17T09:56:46.733002Z",
   "note": "Counts are sanitized cumulative L2 scan outcomes; candidates remain subject to date/technical/Turbo quality gates before production use."
 }
