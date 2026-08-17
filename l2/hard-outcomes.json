@@ -1,0 +1,10 @@
+{
+  "schema": "promo.l2.hard_outcomes.v1",
+  "mode": "HARD_ONLY",
+  "l2_sources_scanned": 0,
+  "l2_voucher_deals_found": 0,
+  "l2_literal_codes_found": 0,
+  "last_run_at": null,
+  "public_overlap_excluded": true,
+  "note": "Sanitized counters for authenticated/access-constrained L2 outcomes only. No credentials, cookies, tokens, session identifiers, takeover URLs, or public Layer1 overlap are stored here."
+}
