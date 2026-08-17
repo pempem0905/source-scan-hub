@@ -334,6 +334,15 @@ aemed.com.vn
 aeon.com.vn
 aeonmall-haiphong-lechan.com.vn
 aeonmall-tanphuceladon.com.vn
+aetel.vn
+aetshop.vn
+aeu.vn
+aev.vn
+afa.vn
+afaa.vn
+afacapital.vn
+afada.vn
+afagroup.vn
 afamily.vn
 africa.visa.com
 agoda.com
@@ -350,6 +359,7 @@ api-ht.568play.vn
 api.8pos.vn
 apidocs.abit.vn
 app.aditi.vn
+app.afada.vn
 apple.com
 atrip.vn
 auto5.vn
@@ -841,6 +851,7 @@ voucherthecoffeehouse.com
 vpbank.com.vn
 vtcpay.vn
 web.addme.vn
+wi.afacapital.vn
 wifimarketing.adsmo.vn
 wiki.batdongsan.com.vn
 wildwadi.com
