@@ -25,8 +25,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate retry helper
-        run: python -m py_compile l2/retry_handoff_request.py
+      - name: Validate bridge helpers
+        run: python -m py_compile l2/retry_handoff_request.py l2/reconcile_bridge_status.py l2/bridge_selftest.py l2/browser_run_cdp.py
+      - name: Verify bridge invariants before retry
+        run: python l2/bridge_selftest.py
       - name: Re-arm retry if cooldown elapsed
         run: python l2/retry_handoff_request.py
       - name: Persist sanitized request transition
