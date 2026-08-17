@@ -209,6 +209,7 @@ accgroup.vn
 acchcm.vn
 acchome.vn
 acckhanhhoa.vn
+accountingtools.com
 acervietnam.com.vn
 achaubooks.vn
 achaudecor.vn
@@ -608,6 +609,7 @@ cis.visa.com
 citigym.asia
 click.accesstrade.vn
 clickbuy.com.vn
+cloudtalk.io
 cms.360home.vn
 cnvloyalty.com
 co-opmart.com.vn
@@ -680,6 +682,7 @@ flchotelsresorts.com
 flexoffice.com
 food.grab.com
 fordbacgiang.0to.vn
+forecastio.ai
 forrester.com
 forum.568play.vn
 forum.aigato.vn
@@ -821,6 +824,7 @@ magiamgialazada.vn
 maisononline.vn
 malls.vn
 mamanbebe.vn
+mamibabi.com.vn
 mang-fpt.com
 mangfpt.vn
 manulife.com.vn
@@ -916,6 +920,7 @@ pp.3tc.vn
 prime.vpbank.com.vn
 proceeding.vap.ac.vn
 promo.highlandscoffee.com.vn
+promo.porchlightbooks.com
 prudential.com.vn
 pub2.accesstrade.vn
 quang.ac.vn
@@ -958,6 +963,7 @@ sieuthi-go.vn
 sieuthidienmayxanh.vn
 sieuthilamdep.com
 signup.adahub.vn
+simpleshow.com
 skechersvn.vn
 slack.com
 smartlock.ai.vn
@@ -1129,3 +1135,4 @@ yody.vn
 zalopay.vn
 zema.com.vn
 zingspeed.360play.vn
+zippia.com

@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-17T17:46:15.101176Z",
+  "generated_at": "2026-08-17T18:06:09.227166Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 4423,
-    "frontier_deferred_pending": 39040,
-    "frontier_pending": 43463,
-    "last_6_runs_new_domains": 12,
+    "frontier_active_pending": 7381,
+    "frontier_deferred_pending": 38889,
+    "frontier_pending": 46270,
+    "last_6_runs_new_domains": 19,
     "last_run": {
-      "at": "2026-08-17T17:43:08.908155Z",
+      "at": "2026-08-17T18:03:20.166540Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vi-vn/*uu-dai*",
-        "*.com/vi-vn/*voucher*",
-        "*.com/vi-vn/*promotion*",
-        "*.net/vn/*khuyen-mai*"
+        "*.net/vn/*uu-dai*",
+        "*.com/vietnam/*promotion*",
+        "*.vn/*khuyen-mai*",
+        "*.vn/*khuyenmai*"
       ],
-      "duration_s": 185.2,
-      "errors": 70,
-      "frontier_pending": 43463,
-      "new_domains": 2,
-      "processed": 960,
-      "rate403": 1.146,
-      "rate429": 0.208
+      "duration_s": 168.1,
+      "errors": 124,
+      "frontier_pending": 46270,
+      "new_domains": 7,
+      "processed": 1111,
+      "rate403": 1.08,
+      "rate429": 0.18
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1131,
+    "master_domains": 1138,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 90,
+    "run_count": 91,
     "running": true,
-    "seen_urls": 372883,
-    "updated_at": "2026-08-17T17:46:14.069786Z"
+    "seen_urls": 380346,
+    "updated_at": "2026-08-17T18:06:08.222649Z"
   },
   "master_input": {
-    "active_input_count": 112,
+    "active_input_count": 113,
     "counts": {
-      "ACTIVE_INPUT": 112,
+      "ACTIVE_INPUT": 113,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 36,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 24,
-      "GENERAL": 797,
+      "GENERAL": 804,
       "LOYALTY_REWARDS": 9,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 66,
-      "PUBLIC_HTTP": 954,
+      "PROMO_RETAIL": 67,
+      "PUBLIC_HTTP": 961,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 81,
-      "REVIEW_INPUT": 842,
+      "REVIEW_INPUT": 848,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 842,
+      "SOURCE_REVIEW": 848,
       "TRAVEL_MOBILITY": 16
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-17T17:46:14.957970Z",
+    "generated_at": "2026-08-17T18:06:09.101390Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 970,
-    "review_input_count": 842,
+    "record_count": 977,
+    "review_input_count": 848,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1131,
+    "source_hunter_domains": 1138,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -234,7 +234,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-17T16:49:12.500500Z",
+    "updated_at": "2026-08-17T17:47:51.292536Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -325,76 +325,27 @@
     "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "thực phẩm sạch khuyến mãi Việt Nam",
-      "thực phẩm sạch ưu đãi Việt Nam",
-      "thực phẩm sạch voucher Việt Nam",
-      "thực phẩm sạch promotion Vietnam"
+      "mẹ và bé khuyến mãi Việt Nam",
+      "mẹ và bé ưu đãi Việt Nam",
+      "mẹ và bé voucher Việt Nam",
+      "mẹ và bé promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
     "cc_domain_page": 80,
     "frontier_scheduler": {
-      "active": 960,
+      "active": 1111,
       "base_per_host_batch": 16,
-      "deferred": 39040,
+      "deferred": 38889,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.0,
+      "previous_429_rate": 0.208,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 156
+      "unique_hosts": 193
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T17:06:07.542526Z",
-      "domain": "vinaphonedata.vn",
-      "radar": false,
-      "url": "https://vinaphonedata.vn/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-16T17:30:15.407892Z",
-      "domain": "bambooairways.com",
-      "radar": false,
-      "url": "https://bambooairways.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-16T17:30:15.407892Z",
-      "domain": "m.oto.com.vn",
-      "radar": false,
-      "url": "https://m.oto.com.vn/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-16T17:30:15.407892Z",
-      "domain": "kinhtetieudung.vn",
-      "radar": false,
-      "url": "https://kinhtetieudung.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T17:34:47.010483Z",
-      "domain": "3gvinaphone.com.vn",
-      "radar": false,
-      "url": "https://3gvinaphone.com.vn/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-16T17:34:47.010483Z",
-      "domain": "cokhivietthang.vn",
-      "radar": false,
-      "url": "https://cokhivietthang.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T17:41:57.845455Z",
-      "domain": "acronis.com",
-      "radar": false,
-      "url": "https://acronis.com/en/contact-sales/",
-      "via": "internal_promo"
-    },
     {
       "at": "2026-08-16T17:41:57.845455Z",
       "domain": "aeonmall-tanphuceladon.com.vn",
@@ -1185,6 +1136,55 @@
       "radar": false,
       "url": "https://documentation.g2.com/",
       "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T18:03:20.166540Z",
+      "domain": "accountingtools.com",
+      "radar": false,
+      "url": "https://accountingtools.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T18:03:20.166540Z",
+      "domain": "forecastio.ai",
+      "radar": false,
+      "url": "https://forecastio.ai/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T18:03:20.166540Z",
+      "domain": "promo.porchlightbooks.com",
+      "radar": false,
+      "url": "https://promo.porchlightbooks.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T18:03:20.166540Z",
+      "domain": "simpleshow.com",
+      "radar": false,
+      "url": "https://simpleshow.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T18:03:20.166540Z",
+      "domain": "zippia.com",
+      "radar": false,
+      "url": "https://zippia.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T18:03:20.166540Z",
+      "domain": "mamibabi.com.vn",
+      "radar": false,
+      "url": "https://mamibabi.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-17T18:03:20.166540Z",
+      "domain": "cloudtalk.io",
+      "radar": false,
+      "url": "https://cloudtalk.io/nl/contact-center-software-voor-ondersteuning-en-sales/",
+      "via": "internal_promo"
     }
   ]
 }
