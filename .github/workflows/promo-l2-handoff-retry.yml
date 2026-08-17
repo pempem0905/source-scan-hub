@@ -2,7 +2,7 @@ name: PROMO L2 Handoff Retry
 
 on:
   schedule:
-    - cron: '47 * * * *'
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -54,8 +54,8 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
           echo 'changed=true' >> "$GITHUB_OUTPUT"
-      - name: Dispatch request-driven Browser Run bridge explicitly
-        if: steps.persist.outputs.state == 'REQUESTED'
+      - name: Dispatch only when request was already armed without a new push
+        if: steps.persist.outputs.state == 'REQUESTED' && steps.persist.outputs.changed == 'false'
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
