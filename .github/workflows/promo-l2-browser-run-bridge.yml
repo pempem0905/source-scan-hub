@@ -66,6 +66,7 @@ jobs:
           mode=(os.environ.get('INPUT_MODE') or 'probe').strip()
           platform=(os.environ.get('INPUT_PLATFORM') or 'probe').strip()
           start_url=(os.environ.get('INPUT_START_URL') or 'https://example.com/').strip()
+          run_runtime=True
           if event != 'workflow_dispatch':
               try: request=json.loads(Path('l2/handoff-request.json').read_text())
               except Exception: request={}
@@ -76,15 +77,23 @@ jobs:
                   entry=(registry.get('platforms') or {}).get(platform) or {}
                   start_url=str(entry.get('start_url') or '').strip()
               else:
-                  mode='probe'; platform='probe'; start_url='https://example.com/'
-          if mode not in {'probe','handoff'}: raise SystemExit('invalid mode')
+                  # Status/cooldown transitions also touch handoff-request.json.
+                  # They must not consume a Browser Run acquisition or overwrite
+                  # the last real handoff runtime with an unrelated probe 429.
+                  mode='idle'; run_runtime=False
+                  platform=str(request.get('platform') or 'idle').strip() or 'idle'
+                  start_url='https://example.com/'
+          if mode not in {'probe','handoff','idle'}: raise SystemExit('invalid mode')
           if not re.fullmatch(r'[A-Za-z0-9._-]{1,64}', platform): raise SystemExit('invalid platform')
-          if not start_url.startswith(('http://','https://')): raise SystemExit('invalid start URL')
+          if run_runtime and not start_url.startswith(('http://','https://')): raise SystemExit('invalid start URL')
           out=Path(os.environ['GITHUB_OUTPUT'])
           with out.open('a') as f:
               f.write(f'mode={mode}\nplatform={platform}\nstart_url={start_url}\n')
+              f.write(f'run_runtime={str(run_runtime).lower()}\n')
+          print(f'BRIDGE_OPERATION mode={mode} runtime={str(run_runtime).lower()}')
 
       - name: Verify secret presence without revealing values
+        if: steps.inputs.outputs.run_runtime == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -93,6 +102,7 @@ jobs:
           echo 'Cloudflare runtime settings are present (values suppressed).'
 
       - name: Prepare isolated CDP runtime
+        if: steps.inputs.outputs.run_runtime == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -122,6 +132,7 @@ jobs:
           chmod 700 /tmp/promo-l2-cdp/run-bridge.sh
 
       - name: Start bridge and detect real takeover surface
+        if: steps.inputs.outputs.run_runtime == 'true'
         id: launch
         continue-on-error: true
         env:
@@ -159,7 +170,7 @@ jobs:
           if [ -f /tmp/promo-l2-cdp/bridge.rc ]; then echo "rc=$(cat /tmp/promo-l2-cdp/bridge.rc)" >> "$GITHUB_OUTPUT"; fi
 
       - name: Publish active secure takeover readiness
-        if: steps.inputs.outputs.mode == 'handoff' && steps.launch.outputs.takeover_ready == 'true'
+        if: steps.inputs.outputs.run_runtime == 'true' && steps.inputs.outputs.mode == 'handoff' && steps.launch.outputs.takeover_ready == 'true'
         env:
           BRIDGE_PLATFORM: ${{ steps.inputs.outputs.platform }}
         shell: bash
@@ -201,7 +212,7 @@ jobs:
           done
 
       - name: Wait for handoff completion
-        if: steps.inputs.outputs.mode == 'handoff' && steps.launch.outputs.async == 'true'
+        if: steps.inputs.outputs.run_runtime == 'true' && steps.inputs.outputs.mode == 'handoff' && steps.launch.outputs.async == 'true'
         id: wait
         shell: bash
         run: |
@@ -217,6 +228,7 @@ jobs:
           exit 0
 
       - name: Write final monotonic non-secret runtime status
+        if: steps.inputs.outputs.run_runtime == 'true'
         env:
           BRIDGE_MODE: ${{ steps.inputs.outputs.mode }}
           BRIDGE_PLATFORM: ${{ steps.inputs.outputs.platform }}
@@ -266,6 +278,7 @@ jobs:
           PY
 
       - name: Persist final sanitized readiness status
+        if: steps.inputs.outputs.run_runtime == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -299,6 +312,7 @@ jobs:
           echo 'No sensitive bridge artifact was written to the repository.'
 
       - name: Enforce verified result
+        if: steps.inputs.outputs.run_runtime == 'true'
         env:
           LAUNCH_RC: ${{ steps.launch.outputs.rc }}
           WAIT_RC: ${{ steps.wait.outputs.rc }}
