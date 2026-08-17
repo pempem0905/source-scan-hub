@@ -1,6 +1,6 @@
 {
   "schema": "promo.runtime_status.v1",
-  "generated_at": "2026-08-17T12:32:44Z",
+  "generated_at": "2026-08-17T13:26:37Z",
   "source": "live_verified_canonical_plus_worker_exports",
   "canonical": {
     "batch": 86,
@@ -15,58 +15,9 @@
     "note": "Last live durable canonical state available to Turbo remains B86 / SRC-491; GitHub canonical migration is not verified complete, so canonical counters were not advanced from handoff/telemetry alone."
   },
   "workers": {
-    "PROMO Banks Shard": {
-      "state": "ACTIVE",
-      "last_run_at": "2026-08-16T16:30:11Z",
-      "sources_read": 4,
-      "offers_found": 3,
-      "voucher_benefits_found": 3,
-      "literal_codes_found": 0,
-      "enqueued": 3
-    },
-    "PROMO Retail Shard": {
-      "state": "ACTIVE",
-      "last_run_at": "2026-08-16T16:34:50Z",
-      "sources_read": 4,
-      "offers_found": 2,
-      "voucher_benefits_found": 2,
-      "literal_codes_found": 0,
-      "enqueued": 2
-    },
-    "PROMO Turbo Scan": {
-      "state": "ACTIVE",
-      "last_run_at": "2026-08-17T12:32:44Z",
-      "fast_probes": 25,
-      "shortlisted": 5,
-      "deep_validations": 2,
-      "cache_skips": 3,
-      "code_sources_read": 5,
-      "no_code_reads": 3,
-      "source_family_rotations": 3,
-      "offers_found": 6,
-      "voucher_benefits_found": 6,
-      "literal_codes_found": 6,
-      "codes_per_10_reads": 12.0,
-      "validated": 6,
-      "rejected": 0,
-      "committed": 0,
-      "literal_codes_committed": 0,
-      "batch": 86,
-      "lovable_calls": 0
-    },
-    "PROMO GPT Infra + Dispatch": {
-      "state": "ACTIVE",
-      "last_run_at": "2026-08-16T19:11:00Z",
-      "fallback_sources_read": 0,
-      "offers_found": 0,
-      "voucher_benefits_found": 0,
-      "literal_codes_found": 0,
-      "enqueued": 0,
-      "ready_queue": 0,
-      "relayed": 0,
-      "commit_stall": false,
-      "repairs_performed": ["runtime telemetry canonical refreshed B85→B86"],
-      "worker_health": "Banks/Retail/Turbo/Infra enabled; GitHub-only Turbo preserves READY handoffs until canonical migration is verified."
-    }
+    "PROMO Banks Shard": {"state":"ACTIVE","last_run_at":"2026-08-16T16:30:11Z","sources_read":4,"offers_found":3,"voucher_benefits_found":3,"literal_codes_found":0,"enqueued":3},
+    "PROMO Retail Shard": {"state":"ACTIVE","last_run_at":"2026-08-16T16:34:50Z","sources_read":4,"offers_found":2,"voucher_benefits_found":2,"literal_codes_found":0,"enqueued":2},
+    "PROMO Turbo Scan": {"state":"ACTIVE","last_run_at":"2026-08-17T13:26:37Z","fast_probes":25,"shortlisted":5,"deep_validations":2,"cache_skips":4,"code_sources_read":5,"no_code_reads":3,"source_family_rotations":3,"offers_found":5,"voucher_benefits_found":5,"literal_codes_found":5,"codes_per_10_reads":10.0,"validated":5,"rejected":0,"committed":0,"literal_codes_committed":0,"batch":86,"lovable_calls":0},
+    "PROMO GPT Infra + Dispatch": {"state":"ACTIVE","last_run_at":"2026-08-16T19:11:00Z","fallback_sources_read":0,"offers_found":0,"voucher_benefits_found":0,"literal_codes_found":0,"enqueued":0,"ready_queue":0,"relayed":0,"commit_stall":false,"repairs_performed":["runtime telemetry canonical refreshed B85→B86"],"worker_health":"Banks/Retail/Turbo/Infra enabled; GitHub-only Turbo preserves READY handoffs until canonical migration is verified."}
   }
 }
