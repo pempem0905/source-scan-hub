@@ -1,18 +1,18 @@
 {
   "schema": "promo.retail.telemetry.v1",
   "source_worker": "PROMO Retail Shard",
-  "sources_read": 20,
-  "code_likely_sources_read": 6,
-  "no_code_reads": 20,
-  "family_rotations": 10,
-  "offers_found": 0,
-  "voucher_benefits_found": 0,
+  "sources_read": 8,
+  "code_likely_sources_read": 3,
+  "no_code_reads": 8,
+  "family_rotations": 4,
+  "offers_found": 2,
+  "voucher_benefits_found": 1,
   "literal_codes_found": 0,
   "codes_per_10_reads": 0.0,
   "enqueued": 0,
   "blocked": 0,
-  "duplicates": 1,
-  "last_run_at": "2026-08-17T15:57:28+07:00",
+  "duplicates": 2,
+  "last_run_at": "2026-08-17T17:55:04+07:00",
   "lovable_calls": 0,
-  "notes": "GitHub-only run. Existing active CellphoneS ShopeePay/SPayLater candidate was already present and treated as duplicate. Fresh search results from assigned sources did not yield another clean ACTIVE actionable candidate with controlling official evidence; expired Samsung/Circle K campaigns were rejected, and user-specific emailed e-voucher was not counted as literal code."
+  "notes": "GitHub-only run. Revalidated existing active CellphoneS ShopeePay/SPayLater 5% capped 500,000 VND through 2026-09-30 and S-Edu 7-day used-device trial through 2026-08-31; both already exist in handoff and were deduplicated. Circle K August offer expired 2026-08-13 and was rejected. CellphoneS SMember page describes voucher/member benefits but no exact reusable contextual literal code was visible, so no code was recorded. No new clean candidate met ACTIONABLE-VALUE-V2 with controlling official evidence this run."
 }
