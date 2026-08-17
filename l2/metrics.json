@@ -7,8 +7,8 @@
   "l2_voucher_deals_found": 0,
   "l2_literal_codes_found": 0,
   "remaining_platforms": 7,
-  "last_run_at": "2026-08-17T13:09:33.857536Z",
-  "generated_at": "2026-08-17T13:09:33.892340Z",
+  "last_run_at": "2026-08-17T13:55:52.728599Z",
+  "generated_at": "2026-08-17T13:55:52.778447Z",
   "public_overlap_excluded": true,
   "note": "L2 metrics count hard/authenticated/access-constrained outcomes only. Routine public crawling is owned by Layer1 and is excluded from L2 totals."
 }
