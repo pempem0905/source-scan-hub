@@ -35,16 +35,16 @@
     },
     "PROMO Turbo Scan": {
       "state": "ACTIVE",
-      "last_run_at": "2026-08-17T03:24:45Z",
-      "code_sources_read": 8,
-      "offers_found": 0,
-      "voucher_benefits_found": 0,
-      "literal_codes_found": 0,
-      "validated": 0,
-      "rejected": 4,
-      "committed": 0,
-      "literal_codes_committed": 0,
-      "batch": 92
+      "last_run_at": "2026-08-17T04:27:05Z",
+      "code_sources_read": 6,
+      "offers_found": 3,
+      "voucher_benefits_found": 3,
+      "literal_codes_found": 3,
+      "validated": 4,
+      "rejected": 5,
+      "committed": 4,
+      "literal_codes_committed": 3,
+      "batch": 94
     },
     "PROMO GPT Infra + Dispatch": {
       "state": "ACTIVE",
