@@ -1,7 +1,7 @@
 {
   "schema": "promo.l2.handoff_request.v1",
   "platform": "grabfood",
-  "state": "REQUESTED",
+  "state": "ACTIVE",
   "attempt_day_utc": "2026-08-17",
   "attempts_today": 1,
   "last_retry_requested_at": "2026-08-17T00:29:37Z",
