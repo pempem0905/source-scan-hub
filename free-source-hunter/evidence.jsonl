@@ -401,3 +401,5 @@
 {"at": "2026-08-17T00:27:47.025881Z", "domain": "newpub.adpia.vn", "radar": true, "url": "https://newpub.adpia.vn/login", "via": "radar_out"}
 {"at": "2026-08-17T01:32:37.863642Z", "domain": "baoxaydung.vn", "radar": false, "url": "https://baoxaydung.vn/co-chinh-sach-uu-tien-dac-biet-de-khuyen-khich-nghi-ngay-khi-sap-xep-tinh-gon-bo-may-192241217114224658.htm", "via": "internal_promo"}
 {"at": "2026-08-17T03:58:27.268828Z", "domain": "topmom.com.vn", "radar": false, "url": "https://topmom.com.vn/", "via": "free_search"}
+{"at": "2026-08-17T04:40:41.269259Z", "domain": "limeorange.vn", "radar": false, "url": "https://limeorange.vn/", "via": "external_promo"}
+{"at": "2026-08-17T04:40:41.269259Z", "domain": "cpn.vn", "radar": false, "url": "https://cpn.vn/", "via": "free_search"}
