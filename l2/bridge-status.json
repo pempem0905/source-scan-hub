@@ -31,20 +31,9 @@
     "status_source": "l2/bridge-runtime-status.json"
   },
   "remaining_gate": {
-    "state": "PERMISSION_REQUIRED",
-    "reason": "One authorized platform must complete a real Cloudflare structured handoff and then pass authenticated-session reuse from an independent fresh L2 connection.",
-    "safe_action": "No login action is required until status becomes TAKEOVER_READY. When Telegram/Login Center reports LOGIN_REQUIRED, open Cloudflare Dashboard > Browser Run > Live Sessions and complete login/MFA/CAPTCHA only there, then mark the handoff complete.",
-    "automatic_retry": "Rate-limited handoff requests are re-armed after a bounded cooldown without lowering the previously verified Browser Run baseline.",
-    "do_not_share": [
-      "password",
-      "OTP",
-      "cookie",
-      "refresh token",
-      "CAPTCHA data",
-      "session ID",
-      "websocket URL",
-      "Live View/takeover URL"
-    ]
+    "state": "WAITING_FREE_DAILY_QUOTA",
+    "reason": "The verified free Browser Run lane is waiting for its next daily acquisition window.",
+    "safe_action": "No user action is required; the bridge will retry automatically after the recorded UTC retry time."
   },
   "security_invariants": {
     "passwords_in_github": false,
