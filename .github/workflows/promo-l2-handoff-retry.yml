@@ -54,8 +54,12 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
           echo 'changed=true' >> "$GITHUB_OUTPUT"
-      - name: Dispatch only when request was already armed without a new push
-        if: steps.persist.outputs.state == 'REQUESTED' && steps.persist.outputs.changed == 'false'
+      - name: Dispatch armed Browser Run request explicitly
+        # Commits made by this workflow use GITHUB_TOKEN. GitHub intentionally does
+        # not recursively trigger another push workflow from those commits, so an
+        # explicit workflow_dispatch is required whether or not the request file
+        # changed during this run.
+        if: steps.persist.outputs.state == 'REQUESTED'
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
