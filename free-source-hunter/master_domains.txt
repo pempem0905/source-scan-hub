@@ -563,8 +563,16 @@ alsuco.vn
 altaco.vn
 altacom.vn
 altamedia.vn
+amafurni.vn
+amago.vn
+amaha.vn
+amaisaigon.vn
+amak.vn
+amakstore.vn
+amala.vn
 ambassador.koc.com.vn
 anfoodvn.com
+anthonycoletraining.com
 anz.2te.vn
 api-ht.568play.vn
 api.8pos.vn
@@ -597,6 +605,7 @@ bds68.com.vn
 bdsonline.aditi.vn
 beautybox.com.vn
 belasspa.vn
+bellelab.co
 bemiie.com
 bentley.edu
 bestprice.vn
@@ -657,8 +666,10 @@ cis.visa.com
 citigym.asia
 click.accesstrade.vn
 clickbuy.com.vn
+cloudgalacticos.co.uk
 cloudtalk.io
 cms.360home.vn
+cnbc.com
 cnvloyalty.com
 co-opmart.com.vn
 cocoonvietnam.com
@@ -668,9 +679,11 @@ cokhivietthang.vn
 collectoffers.com
 columbia.vn
 computerworld.com
+computerworld.es
 congnghesohoa.com
 corporate.visa.com
 cotyphu.360mobi.vn
+cpe.accountingtools.com
 cpn.vn
 cpr.accesstrade.vn
 creatorforvietnam.com
@@ -874,6 +887,7 @@ macplanet.vn
 made4home.com.vn
 magiamgia.com
 magiamgialazada.vn
+mailchimp.com
 maisononline.vn
 malls.vn
 mamanbebe.vn
@@ -882,6 +896,7 @@ mang-fpt.com
 mangfpt.vn
 manulife.com.vn
 marketplace.atlassian.com
+marketsandmarkets.com
 markinblog.com
 marsovn.com
 math.ac.vn
@@ -937,6 +952,7 @@ noithathuyngoc.com
 noithatvito.vn
 nongsandungha.com
 nonspa.vn
+nooks.ai
 note8.vn
 noti.sale
 notion.com
@@ -1001,15 +1017,18 @@ s54-ht.568play.vn
 s555-ht.568play.vn
 s82-ht.568play.vn
 saas.adscivil.vn
+saasrat.com
 saigonreview.vn
 saigonsneaker.com
 sales.adsmo.vn
 salesforce.com
 salesmate.io
+salestechstar.com
 sammishop.com
 sapo.vn
 scalef.com
 scvivocity.com.vn
+semrush.com
 seoulcenter.vn
 seoulspa.vn
 sharehomevn.com
@@ -1043,6 +1062,7 @@ specials.priceless.com
 springfitness.vn
 static.5sfashion.vn
 static.accesstrade.vn
+static.amago.vn
 suachuadientu.8tech.vn
 suckhoe.ai.vn
 superbox.accesstrade.vn
@@ -1153,6 +1173,7 @@ visa.co.ke
 visa.com.ng
 visa.com.vn
 visasoutheasteurope.com
+visme.co
 vivita.vn
 vjs.ac.vn
 vju.ac.vn
@@ -1188,6 +1209,7 @@ wildwadi.com
 winmart.vn
 wionplatform.com
 woodentoys.055.vn
+wordstream.com
 workspace.accesstrade.vn
 workspace.allnet.vn
 wscpearl.com

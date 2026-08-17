@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-17T19:22:19.411132Z",
+  "generated_at": "2026-08-17T19:49:53.655233Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 10351,
-    "frontier_deferred_pending": 38501,
-    "frontier_pending": 48852,
-    "last_6_runs_new_domains": 40,
+    "frontier_active_pending": 8198,
+    "frontier_deferred_pending": 38200,
+    "frontier_pending": 46398,
+    "last_6_runs_new_domains": 49,
     "last_run": {
-      "at": "2026-08-17T19:18:03.511764Z",
+      "at": "2026-08-17T19:45:37.989988Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*offers*",
-        "*.vn/*deals*",
-        "*.vn/*sale*",
-        "*.com/vn/*khuyen-mai*"
+        "*.com/vn/*uu-dai*",
+        "*.com/vn/*voucher*",
+        "*.com/vn/*promotion*",
+        "*.com/vi-vn/*khuyen-mai*"
       ],
-      "duration_s": 254.7,
-      "errors": 215,
-      "frontier_pending": 48852,
-      "new_domains": 10,
-      "processed": 1499,
-      "rate403": 1.668,
-      "rate429": 0.0
+      "duration_s": 254.5,
+      "errors": 135,
+      "frontier_pending": 46398,
+      "new_domains": 14,
+      "processed": 1800,
+      "rate403": 1.778,
+      "rate429": 0.056
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1205,
+    "master_domains": 1227,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 93,
+    "run_count": 94,
     "running": true,
-    "seen_urls": 396095,
-    "updated_at": "2026-08-17T19:22:18.201581Z"
+    "seen_urls": 404327,
+    "updated_at": "2026-08-17T19:49:52.459235Z"
   },
   "master_input": {
-    "active_input_count": 124,
+    "active_input_count": 125,
     "counts": {
-      "ACTIVE_INPUT": 124,
+      "ACTIVE_INPUT": 125,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 36,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 24,
-      "GENERAL": 865,
+      "GENERAL": 884,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 78,
-      "PUBLIC_HTTP": 1027,
+      "PROMO_RETAIL": 79,
+      "PUBLIC_HTTP": 1047,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 82,
-      "REVIEW_INPUT": 903,
+      "RETAIL_ECOMMERCE": 83,
+      "REVIEW_INPUT": 922,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 903,
+      "SOURCE_REVIEW": 922,
       "TRAVEL_MOBILITY": 19
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-17T19:22:19.174518Z",
+    "generated_at": "2026-08-17T19:49:53.459524Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1043,
-    "review_input_count": 903,
+    "record_count": 1063,
+    "review_input_count": 922,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1205,
+    "source_hunter_domains": 1227,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -325,125 +325,27 @@
     "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "nhà thuốc khuyến mãi Việt Nam",
-      "nhà thuốc ưu đãi Việt Nam",
-      "nhà thuốc voucher Việt Nam",
-      "nhà thuốc promotion Vietnam"
+      "mỹ phẩm làm đẹp khuyến mãi Việt Nam",
+      "mỹ phẩm làm đẹp ưu đãi Việt Nam",
+      "mỹ phẩm làm đẹp voucher Việt Nam",
+      "mỹ phẩm làm đẹp promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 82,
+    "cc_domain_page": 83,
     "frontier_scheduler": {
-      "active": 1499,
+      "active": 1800,
       "base_per_host_batch": 16,
-      "deferred": 38501,
+      "deferred": 38200,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.078,
+      "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 291
+      "unique_hosts": 363
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T21:18:45.719982Z",
-      "domain": "creditcard.com.vn",
-      "radar": false,
-      "url": "https://creditcard.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T21:38:05.406826Z",
-      "domain": "vtcpay.vn",
-      "radar": false,
-      "url": "https://vtcpay.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T21:52:54.800364Z",
-      "domain": "ambassador.koc.com.vn",
-      "radar": false,
-      "url": "https://ambassador.koc.com.vn/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T21:52:54.800364Z",
-      "domain": "cf.shopee.vn",
-      "radar": false,
-      "url": "https://cf.shopee.vn/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T21:52:54.800364Z",
-      "domain": "gitbook.com",
-      "radar": false,
-      "url": "https://gitbook.com/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T21:52:54.800364Z",
-      "domain": "cpr.accesstrade.vn",
-      "radar": true,
-      "url": "https://cpr.accesstrade.vn/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T21:52:54.800364Z",
-      "domain": "scalef.com",
-      "radar": false,
-      "url": "https://scalef.com/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T21:52:54.800364Z",
-      "domain": "mblife.vn",
-      "radar": false,
-      "url": "https://mblife.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T21:52:54.800364Z",
-      "domain": "dai-ichi-life.com.vn",
-      "radar": false,
-      "url": "https://dai-ichi-life.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T21:52:54.800364Z",
-      "domain": "fwd.com.vn",
-      "radar": false,
-      "url": "https://fwd.com.vn/vi/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T21:52:54.800364Z",
-      "domain": "pjico.com.vn",
-      "radar": false,
-      "url": "https://pjico.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T22:01:13.914723Z",
-      "domain": "creatorforvietnam.com",
-      "radar": false,
-      "url": "https://creatorforvietnam.com/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T22:01:13.914723Z",
-      "domain": "nsqvietnam.com",
-      "radar": false,
-      "url": "https://nsqvietnam.com/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T22:01:13.914723Z",
-      "domain": "flexoffice.com",
-      "radar": false,
-      "url": "https://flexoffice.com/",
-      "via": "radar_out"
-    },
     {
       "at": "2026-08-16T22:01:13.914723Z",
       "domain": "rentracks.com.vn",
@@ -1185,6 +1087,104 @@
       "radar": false,
       "url": "https://microsoft.com/en-us/software-development-companies/offers-benefits/marketplace-rewards/activate",
       "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T19:45:37.989988Z",
+      "domain": "salestechstar.com",
+      "radar": false,
+      "url": "https://salestechstar.com/category/sales-dialer/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T19:45:37.989988Z",
+      "domain": "anthonycoletraining.com",
+      "radar": false,
+      "url": "https://anthonycoletraining.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T19:45:37.989988Z",
+      "domain": "cnbc.com",
+      "radar": false,
+      "url": "https://cnbc.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T19:45:37.989988Z",
+      "domain": "cpe.accountingtools.com",
+      "radar": false,
+      "url": "https://cpe.accountingtools.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T19:45:37.989988Z",
+      "domain": "computerworld.es",
+      "radar": false,
+      "url": "https://computerworld.es/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T19:45:37.989988Z",
+      "domain": "cloudgalacticos.co.uk",
+      "radar": false,
+      "url": "https://cloudgalacticos.co.uk/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T19:45:37.989988Z",
+      "domain": "mailchimp.com",
+      "radar": false,
+      "url": "https://mailchimp.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T19:45:37.989988Z",
+      "domain": "marketsandmarkets.com",
+      "radar": false,
+      "url": "https://marketsandmarkets.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T19:45:37.989988Z",
+      "domain": "nooks.ai",
+      "radar": false,
+      "url": "https://nooks.ai/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T19:45:37.989988Z",
+      "domain": "saasrat.com",
+      "radar": false,
+      "url": "https://saasrat.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T19:45:37.989988Z",
+      "domain": "semrush.com",
+      "radar": false,
+      "url": "https://semrush.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T19:45:37.989988Z",
+      "domain": "visme.co",
+      "radar": false,
+      "url": "https://visme.co/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T19:45:37.989988Z",
+      "domain": "wordstream.com",
+      "radar": false,
+      "url": "https://wordstream.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T19:45:37.989988Z",
+      "domain": "bellelab.co",
+      "radar": false,
+      "url": "https://bellelab.co/",
+      "via": "free_search"
     }
   ]
 }
