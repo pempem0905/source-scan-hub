@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-17T21:27:43.487579Z",
+  "generated_at": "2026-08-17T21:50:04.160358Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 6775,
+    "frontier_active_pending": 6855,
     "frontier_deferred_pending": 38200,
-    "frontier_pending": 44975,
-    "last_6_runs_new_domains": 88,
+    "frontier_pending": 45055,
+    "last_6_runs_new_domains": 84,
     "last_run": {
-      "at": "2026-08-17T21:24:24.371604Z",
+      "at": "2026-08-17T21:46:19.531988Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*offers*",
-        "*.vn/*deals*",
-        "*.vn/*sale*",
-        "*.com/vn/*khuyen-mai*"
+        "*.com/vn/*uu-dai*",
+        "*.com/vn/*voucher*",
+        "*.com/vn/*promotion*",
+        "*.com/vi-vn/*khuyen-mai*"
       ],
-      "duration_s": 197.9,
-      "errors": 268,
-      "frontier_pending": 44975,
-      "new_domains": 10,
+      "duration_s": 223.5,
+      "errors": 206,
+      "frontier_pending": 45055,
+      "new_domains": 6,
       "processed": 1800,
-      "rate403": 4.333,
-      "rate429": 0.222
+      "rate403": 2.278,
+      "rate429": 0.167
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1316,
+    "master_domains": 1333,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 98,
+    "run_count": 99,
     "running": true,
-    "seen_urls": 432323,
-    "updated_at": "2026-08-17T21:27:42.231612Z"
+    "seen_urls": 439255,
+    "updated_at": "2026-08-17T21:50:03.019893Z"
   },
   "master_input": {
-    "active_input_count": 143,
+    "active_input_count": 145,
     "counts": {
-      "ACTIVE_INPUT": 143,
+      "ACTIVE_INPUT": 145,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 36,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 24,
-      "GENERAL": 944,
+      "GENERAL": 960,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 97,
-      "PUBLIC_HTTP": 1108,
+      "PROMO_RETAIL": 99,
+      "PUBLIC_HTTP": 1124,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 83,
-      "REVIEW_INPUT": 965,
+      "REVIEW_INPUT": 979,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 965,
+      "SOURCE_REVIEW": 979,
       "TRAVEL_MOBILITY": 20
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-17T21:27:43.287444Z",
+    "generated_at": "2026-08-17T21:50:03.980707Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1124,
-    "review_input_count": 965,
+    "record_count": 1140,
+    "review_input_count": 979,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1316,
+    "source_hunter_domains": 1333,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -234,7 +234,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-17T20:47:00.256065Z",
+    "updated_at": "2026-08-17T21:44:12.258062Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -325,69 +325,27 @@
     "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "nhà hàng cafe trà sữa khuyến mãi Việt Nam",
-      "nhà hàng cafe trà sữa ưu đãi Việt Nam",
-      "nhà hàng cafe trà sữa voucher Việt Nam",
-      "nhà hàng cafe trà sữa promotion Vietnam"
+      "rạp chiếu phim khuyến mãi Việt Nam",
+      "rạp chiếu phim ưu đãi Việt Nam",
+      "rạp chiếu phim voucher Việt Nam",
+      "rạp chiếu phim promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 87,
+    "cc_domain_page": 88,
     "frontier_scheduler": {
       "active": 1800,
       "base_per_host_batch": 16,
       "deferred": 38200,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.167,
+      "previous_429_rate": 0.222,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 419
+      "unique_hosts": 400
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-17T15:55:24.044765Z",
-      "domain": "nytimes.com",
-      "radar": false,
-      "url": "https://nytimes.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T16:17:04.322978Z",
-      "domain": "xactlycorp.com",
-      "radar": false,
-      "url": "https://xactlycorp.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T16:49:01.474269Z",
-      "domain": "bain.com",
-      "radar": false,
-      "url": "https://bain.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T16:49:01.474269Z",
-      "domain": "partnerhub.g2.com",
-      "radar": false,
-      "url": "https://partnerhub.g2.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T16:49:01.474269Z",
-      "domain": "cio.com",
-      "radar": false,
-      "url": "https://cio.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T16:49:01.474269Z",
-      "domain": "socoselling.com",
-      "radar": false,
-      "url": "https://socoselling.com/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-17T16:49:01.474269Z",
       "domain": "logistic.allship.vn",
@@ -1184,6 +1142,48 @@
       "domain": "episodes.top1.fm",
       "radar": false,
       "url": "https://episodes.top1.fm/episode/200-428-and-the-show-must-go-on-onestreams-rosa-campagna-on-playing-the-long-game-in-enterprise-sales",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T21:46:19.531988Z",
+      "domain": "andrewchen.com",
+      "radar": false,
+      "url": "https://andrewchen.com/a-practitioners-guide-to-net-promoter-score/amp/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T21:46:19.531988Z",
+      "domain": "budget.com",
+      "radar": false,
+      "url": "https://budget.com/en/home",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T21:46:19.531988Z",
+      "domain": "irobot.com",
+      "radar": false,
+      "url": "https://irobot.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T21:46:19.531988Z",
+      "domain": "ring.com",
+      "radar": false,
+      "url": "https://ring.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T21:46:19.531988Z",
+      "domain": "deloitte.com",
+      "radar": false,
+      "url": "https://deloitte.com/us/en.html",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T21:46:19.531988Z",
+      "domain": "vendingtimes.com",
+      "radar": false,
+      "url": "https://vendingtimes.com/resources/from-tech-sales-to-vending-entrepreneurship-the-growth-journey-of-altitude-amenities/",
       "via": "internal_promo"
     }
   ]
