@@ -1,6 +1,6 @@
 {
   "schema": "promo.runtime_status.v1",
-  "generated_at": "2026-08-16T21:26:44Z",
+  "generated_at": "2026-08-17T06:30:00Z",
   "source": "live_verified_canonical_plus_worker_exports",
   "canonical": {
     "batch": 86,
@@ -35,15 +35,18 @@
     },
     "PROMO Turbo Scan": {
       "state": "ACTIVE",
-      "last_run_at": "2026-08-17T04:27:05Z",
-      "code_sources_read": 6,
-      "offers_found": 3,
-      "voucher_benefits_found": 3,
-      "literal_codes_found": 3,
-      "validated": 4,
-      "rejected": 5,
-      "committed": 4,
-      "literal_codes_committed": 3,
+      "last_run_at": "2026-08-17T06:30:00Z",
+      "code_sources_read": 15,
+      "no_code_reads": 6,
+      "source_family_rotations": 1,
+      "offers_found": 13,
+      "voucher_benefits_found": 9,
+      "literal_codes_found": 19,
+      "codes_per_10_reads": 12.67,
+      "validated": 1,
+      "rejected": 0,
+      "committed": 0,
+      "literal_codes_committed": 0,
       "batch": 94
     },
     "PROMO GPT Infra + Dispatch": {
