@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-17T12:33:02.286352Z",
+  "generated_at": "2026-08-17T13:24:34.784535Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 2507,
-    "frontier_deferred_pending": 39653,
-    "frontier_pending": 42160,
-    "last_6_runs_new_domains": 12,
+    "frontier_active_pending": 2533,
+    "frontier_deferred_pending": 39577,
+    "frontier_pending": 42110,
+    "last_6_runs_new_domains": 9,
     "last_run": {
-      "at": "2026-08-17T12:30:56.703252Z",
+      "at": "2026-08-17T13:22:27.101848Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vn/*uu-dai*",
-        "*.com/vn/*voucher*",
-        "*.com/vn/*promotion*",
-        "*.com/vi-vn/*khuyen-mai*"
+        "*.com/vi-vn/*uu-dai*",
+        "*.com/vi-vn/*voucher*",
+        "*.com/vi-vn/*promotion*",
+        "*.net/vn/*khuyen-mai*"
       ],
-      "duration_s": 124.5,
-      "errors": 27,
-      "frontier_pending": 42160,
-      "new_domains": 5,
-      "processed": 347,
-      "rate403": 0.288,
+      "duration_s": 126.7,
+      "errors": 99,
+      "frontier_pending": 42110,
+      "new_domains": 0,
+      "processed": 423,
+      "rate403": 2.6,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1000,
+    "master_domains": 1015,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 79,
+    "run_count": 80,
     "running": true,
-    "seen_urls": 331750,
-    "updated_at": "2026-08-17T12:33:01.208941Z"
+    "seen_urls": 334400,
+    "updated_at": "2026-08-17T13:24:33.788688Z"
   },
   "master_input": {
     "active_input_count": 110,
@@ -41,33 +41,33 @@
       "BANK_CARD": 36,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 24,
-      "GENERAL": 687,
+      "GENERAL": 700,
       "LOYALTY_REWARDS": 9,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 15,
       "PROMO_RETAIL": 64,
-      "PUBLIC_HTTP": 843,
+      "PUBLIC_HTTP": 856,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 80,
-      "REVIEW_INPUT": 733,
+      "REVIEW_INPUT": 746,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 733,
+      "SOURCE_REVIEW": 746,
       "TRAVEL_MOBILITY": 16
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-17T12:33:02.107142Z",
+    "generated_at": "2026-08-17T13:24:34.615154Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 859,
-    "review_input_count": 733,
+    "record_count": 872,
+    "review_input_count": 746,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1000,
+    "source_hunter_domains": 1015,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -234,7 +234,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-17T05:27:01.430081Z",
+    "updated_at": "2026-08-17T13:09:33.857536Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -252,12 +252,14 @@
       "login_before_demand": true,
       "runtime_probe_verified": true,
       "permission_required": {
-        "state": "PERMISSION_REQUIRED",
-        "reason": "One authorized platform must complete a real Cloudflare structured handoff and authenticated-session reuse verification before the login bridge can become end-to-end READY.",
-        "safe_action": "No login action is required until bridge_status becomes TAKEOVER_READY. The request/retry path opens the secure Live Session automatically; only then open Cloudflare Dashboard > Browser Run > Live Sessions, complete login/MFA/CAPTCHA there, and mark the handoff complete.",
-        "note": "Do not place passwords, OTPs, cookies, refresh tokens, CAPTCHA data, session IDs, websocket URLs, or takeover URLs in GitHub files, logs, chat, or public dashboard."
+        "state": "WAITING_FREE_DAILY_QUOTA",
+        "reason": "The verified free Browser Run lane is waiting for its next daily acquisition window.",
+        "safe_action": "No user action is required; the bridge will retry automatically after the recorded UTC retry time.",
+        "note": "No login alert is emitted until a real secure takeover surface is active."
       },
-      "end_to_end_verified": false
+      "end_to_end_verified": false,
+      "free_daily_quota_wait": true,
+      "next_retry_at": "2026-08-18T00:05:00Z"
     },
     "platforms": {
       "uniqlo": {
@@ -320,27 +322,27 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 4,
+    "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "viễn thông internet khuyến mãi Việt Nam",
-      "viễn thông internet ưu đãi Việt Nam",
-      "viễn thông internet voucher Việt Nam",
-      "viễn thông internet promotion Vietnam"
+      "giáo dục khuyến mãi Việt Nam",
+      "giáo dục ưu đãi Việt Nam",
+      "giáo dục voucher Việt Nam",
+      "giáo dục promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 71,
+    "cc_domain_page": 72,
     "frontier_scheduler": {
-      "active": 347,
+      "active": 423,
       "base_per_host_batch": 16,
-      "deferred": 39653,
+      "deferred": 39577,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 41
+      "unique_hosts": 66
     }
   },
   "recent_sources": [
