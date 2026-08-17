@@ -1,7 +1,7 @@
 {
   "schema_version": 4,
   "project_id": "PROMO-L2-ROUTER-V1",
-  "updated_at": "2026-08-17T00:40:32.522194Z",
+  "updated_at": "2026-08-17T01:33:00Z",
   "mode": "PROACTIVE_PREAUTH",
   "alert_states": [
     "LOGIN_REQUIRED",
@@ -41,7 +41,7 @@
     },
     "grabfood": {
       "access_class": "AUTHORIZED_ACCOUNT",
-      "status": "PREAUTH_PENDING_SESSION",
+      "status": "PREAUTH_RETRY_PENDING",
       "profile_id": "grabfood-main",
       "credential_storage": "runtime-browser-session-only"
     },
