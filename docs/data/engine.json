@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-17T19:49:53.655233Z",
+  "generated_at": "2026-08-17T20:06:37.662516Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 8198,
+    "frontier_active_pending": 7149,
     "frontier_deferred_pending": 38200,
-    "frontier_pending": 46398,
-    "last_6_runs_new_domains": 49,
+    "frontier_pending": 45349,
+    "last_6_runs_new_domains": 58,
     "last_run": {
-      "at": "2026-08-17T19:45:37.989988Z",
+      "at": "2026-08-17T20:02:09.551533Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vn/*uu-dai*",
-        "*.com/vn/*voucher*",
-        "*.com/vn/*promotion*",
-        "*.com/vi-vn/*khuyen-mai*"
+        "*.com/vi-vn/*uu-dai*",
+        "*.com/vi-vn/*voucher*",
+        "*.com/vi-vn/*promotion*",
+        "*.net/vn/*khuyen-mai*"
       ],
-      "duration_s": 254.5,
-      "errors": 135,
-      "frontier_pending": 46398,
-      "new_domains": 14,
+      "duration_s": 267.0,
+      "errors": 184,
+      "frontier_pending": 45349,
+      "new_domains": 12,
       "processed": 1800,
-      "rate403": 1.778,
-      "rate429": 0.056
+      "rate403": 1.5,
+      "rate429": 0.556
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1227,
+    "master_domains": 1250,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 94,
+    "run_count": 95,
     "running": true,
-    "seen_urls": 404327,
-    "updated_at": "2026-08-17T19:49:52.459235Z"
+    "seen_urls": 411519,
+    "updated_at": "2026-08-17T20:06:36.532966Z"
   },
   "master_input": {
-    "active_input_count": 125,
+    "active_input_count": 131,
     "counts": {
-      "ACTIVE_INPUT": 125,
+      "ACTIVE_INPUT": 131,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 36,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 24,
-      "GENERAL": 884,
+      "GENERAL": 906,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 79,
-      "PUBLIC_HTTP": 1047,
+      "PROMO_RETAIL": 85,
+      "PUBLIC_HTTP": 1069,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 83,
-      "REVIEW_INPUT": 922,
+      "REVIEW_INPUT": 938,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 922,
+      "SOURCE_REVIEW": 938,
       "TRAVEL_MOBILITY": 19
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-17T19:49:53.459524Z",
+    "generated_at": "2026-08-17T20:06:37.480623Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1063,
-    "review_input_count": 922,
+    "record_count": 1085,
+    "review_input_count": 938,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1227,
+    "source_hunter_domains": 1250,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -234,7 +234,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-17T19:00:56.216300Z",
+    "updated_at": "2026-08-17T19:45:21.501622Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -325,111 +325,27 @@
     "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "mỹ phẩm làm đẹp khuyến mãi Việt Nam",
-      "mỹ phẩm làm đẹp ưu đãi Việt Nam",
-      "mỹ phẩm làm đẹp voucher Việt Nam",
-      "mỹ phẩm làm đẹp promotion Vietnam"
+      "thời trang giày dép khuyến mãi Việt Nam",
+      "thời trang giày dép ưu đãi Việt Nam",
+      "thời trang giày dép voucher Việt Nam",
+      "thời trang giày dép promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 83,
+    "cc_domain_page": 84,
     "frontier_scheduler": {
       "active": 1800,
       "base_per_host_batch": 16,
       "deferred": 38200,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.0,
+      "previous_429_rate": 0.056,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 363
+      "unique_hosts": 422
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T22:01:13.914723Z",
-      "domain": "rentracks.com.vn",
-      "radar": false,
-      "url": "https://rentracks.com.vn/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T22:01:13.914723Z",
-      "domain": "pierre-cardin.vn",
-      "radar": false,
-      "url": "https://pierre-cardin.vn/",
-      "via": "radar_out"
-    },
-    {
-      "at": "2026-08-16T22:01:13.914723Z",
-      "domain": "achinhngach.com",
-      "radar": false,
-      "url": "https://achinhngach.com/",
-      "via": "common_crawl_domain"
-    },
-    {
-      "at": "2026-08-16T22:01:13.914723Z",
-      "domain": "viettelnet.com",
-      "radar": false,
-      "url": "https://viettelnet.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T22:01:13.914723Z",
-      "domain": "internet-fpt.com.vn",
-      "radar": false,
-      "url": "https://internet-fpt.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T22:01:13.914723Z",
-      "domain": "vn-fpt.com",
-      "radar": false,
-      "url": "https://vn-fpt.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T22:28:36.739337Z",
-      "domain": "dienthoaivui.com.vn",
-      "radar": false,
-      "url": "https://dienthoaivui.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T22:28:36.739337Z",
-      "domain": "xaydungchinhsach.chinhphu.vn",
-      "radar": false,
-      "url": "https://xaydungchinhsach.chinhphu.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T22:59:52.602071Z",
-      "domain": "nonspa.vn",
-      "radar": false,
-      "url": "https://nonspa.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T22:59:52.602071Z",
-      "domain": "ohbeauti.vn",
-      "radar": false,
-      "url": "https://ohbeauti.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T22:59:52.602071Z",
-      "domain": "aemed.com.vn",
-      "radar": false,
-      "url": "https://aemed.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-16T23:23:11.458848Z",
-      "domain": "giaxeoto.vn",
-      "radar": false,
-      "url": "https://giaxeoto.vn/",
-      "via": "free_search"
-    },
     {
       "at": "2026-08-16T23:23:11.458848Z",
       "domain": "auto5.vn",
@@ -1185,6 +1101,90 @@
       "radar": false,
       "url": "https://bellelab.co/",
       "via": "free_search"
+    },
+    {
+      "at": "2026-08-17T20:02:09.551533Z",
+      "domain": "financesonline.com",
+      "radar": false,
+      "url": "https://financesonline.com/sales-trends/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T20:02:09.551533Z",
+      "domain": "fiverr.com",
+      "radar": false,
+      "url": "https://fiverr.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T20:02:09.551533Z",
+      "domain": "getmagical.com",
+      "radar": false,
+      "url": "https://getmagical.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T20:02:09.551533Z",
+      "domain": "ebay.com",
+      "radar": false,
+      "url": "https://ebay.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T20:02:09.551533Z",
+      "domain": "stripe.com",
+      "radar": false,
+      "url": "https://stripe.com/contact/sales",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T20:02:09.551533Z",
+      "domain": "top1.fm",
+      "radar": false,
+      "url": "https://top1.fm/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T20:02:09.551533Z",
+      "domain": "yourcontentempire.com",
+      "radar": false,
+      "url": "https://yourcontentempire.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-17T20:02:09.551533Z",
+      "domain": "eccovietnam.vn",
+      "radar": false,
+      "url": "https://eccovietnam.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-17T20:02:09.551533Z",
+      "domain": "roofsalesmastery.com",
+      "radar": false,
+      "url": "https://roofsalesmastery.com/roof-sales-mastery/feed/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T20:02:09.551533Z",
+      "domain": "zapier.com",
+      "radar": false,
+      "url": "https://zapier.com/l/contact-sales?demo_source=cs_nav_header",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T20:02:09.551533Z",
+      "domain": "aloware.com",
+      "radar": false,
+      "url": "https://aloware.com/ai-voice-agent/automotive-dealerships",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T20:02:09.551533Z",
+      "domain": "salesoutcomes.com",
+      "radar": false,
+      "url": "https://salesoutcomes.com/b2b-sales-and-marketing-insights/",
+      "via": "internal_promo"
     }
   ]
 }
