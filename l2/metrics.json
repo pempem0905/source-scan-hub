@@ -1,12 +1,14 @@
 {
-  "schema": "promo.l2.outcome_metrics.v1",
+  "schema": "promo.l2.outcome_metrics.v2",
+  "mode": "HARD_ONLY",
   "platforms_login_ready": 0,
   "platforms_logged_in": 0,
-  "l2_sources_scanned": 188,
-  "l2_voucher_deals_found": 131,
-  "l2_literal_codes_found": 88,
+  "l2_sources_scanned": 0,
+  "l2_voucher_deals_found": 0,
+  "l2_literal_codes_found": 0,
   "remaining_platforms": 7,
-  "last_run_at": "2026-08-17T09:56:46Z",
-  "generated_at": "2026-08-17T09:56:46.733002Z",
-  "note": "Counts are sanitized cumulative L2 scan outcomes; candidates remain subject to date/technical/Turbo quality gates before production use."
+  "last_run_at": null,
+  "generated_at": "2026-08-17T10:32:00Z",
+  "public_overlap_excluded": true,
+  "note": "L2 metrics count hard/authenticated/access-constrained outcomes only. Routine public crawling is owned by Layer1 and is excluded from L2 totals. Historical public L2 counts were intentionally removed from L2 outcome totals."
 }
