@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-17T10:53:17.288096Z",
+  "generated_at": "2026-08-17T11:14:32.069726Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 2812,
-    "frontier_deferred_pending": 39642,
-    "frontier_pending": 42454,
-    "last_6_runs_new_domains": 22,
+    "frontier_active_pending": 2328,
+    "frontier_deferred_pending": 39711,
+    "frontier_pending": 42039,
+    "last_6_runs_new_domains": 17,
     "last_run": {
-      "at": "2026-08-17T10:50:44.169729Z",
+      "at": "2026-08-17T11:11:49.785107Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vi-vn/*uu-dai*",
-        "*.com/vi-vn/*voucher*",
-        "*.com/vi-vn/*promotion*",
-        "*.net/vn/*khuyen-mai*"
+        "*.net/vn/*uu-dai*",
+        "*.com/vietnam/*promotion*",
+        "*.vn/*khuyen-mai*",
+        "*.vn/*khuyenmai*"
       ],
-      "duration_s": 152.1,
-      "errors": 89,
-      "frontier_pending": 42454,
-      "new_domains": 2,
-      "processed": 358,
-      "rate403": 1.397,
-      "rate429": 0.0
+      "duration_s": 161.2,
+      "errors": 50,
+      "frontier_pending": 42039,
+      "new_domains": 1,
+      "processed": 289,
+      "rate403": 1.73,
+      "rate429": 0.346
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 962,
+    "master_domains": 965,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 75,
+    "run_count": 76,
     "running": true,
-    "seen_urls": 321268,
-    "updated_at": "2026-08-17T10:53:16.226148Z"
+    "seen_urls": 323615,
+    "updated_at": "2026-08-17T11:14:31.010498Z"
   },
   "master_input": {
     "active_input_count": 110,
     "counts": {
       "ACTIVE_INPUT": 110,
       "AUTHORIZED_ACCOUNT": 4,
-      "BANK_CARD": 33,
+      "BANK_CARD": 34,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 24,
-      "GENERAL": 655,
+      "GENERAL": 657,
       "LOYALTY_REWARDS": 9,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 15,
       "PROMO_RETAIL": 64,
-      "PUBLIC_HTTP": 807,
+      "PUBLIC_HTTP": 810,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 79,
-      "REVIEW_INPUT": 697,
+      "REVIEW_INPUT": 700,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 697,
+      "SOURCE_REVIEW": 700,
       "TRAVEL_MOBILITY": 16
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-17T10:53:17.108574Z",
+    "generated_at": "2026-08-17T11:14:31.889576Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 823,
-    "review_input_count": 697,
+    "record_count": 826,
+    "review_input_count": 700,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 962,
+    "source_hunter_domains": 965,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -320,37 +320,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 0,
+    "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "giao đồ ăn gọi xe khuyến mãi Việt Nam",
-      "giao đồ ăn gọi xe ưu đãi Việt Nam",
-      "giao đồ ăn gọi xe voucher Việt Nam",
-      "giao đồ ăn gọi xe promotion Vietnam"
+      "ngân hàng thẻ tín dụng khuyến mãi Việt Nam",
+      "ngân hàng thẻ tín dụng ưu đãi Việt Nam",
+      "ngân hàng thẻ tín dụng voucher Việt Nam",
+      "ngân hàng thẻ tín dụng promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 67,
+    "cc_domain_page": 68,
     "frontier_scheduler": {
-      "active": 358,
+      "active": 289,
       "base_per_host_batch": 16,
-      "deferred": 39642,
+      "deferred": 39711,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 65
+      "unique_hosts": 34
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T15:57:03.685964Z",
-      "domain": "yeumoto.com",
-      "radar": false,
-      "url": "https://yeumoto.com/",
-      "via": "free_search"
-    },
     {
       "at": "2026-08-16T15:57:03.685964Z",
       "domain": "tinxe.vn",
@@ -1183,6 +1176,13 @@
       "radar": false,
       "url": "https://theirstack.com/en/technology/salesforce",
       "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-17T11:11:49.785107Z",
+      "domain": "cimbbank.com.vn",
+      "radar": false,
+      "url": "https://cimbbank.com.vn/vi/personal/home.html",
+      "via": "free_search"
     }
   ]
 }
