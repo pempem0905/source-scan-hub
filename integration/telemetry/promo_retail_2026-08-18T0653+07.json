@@ -1,0 +1,22 @@
+{
+  "schema": "promo.retail.telemetry.v1",
+  "source_worker": "PROMO Retail Shard",
+  "fast_probes": 24,
+  "shortlisted": 5,
+  "deep_validations": 4,
+  "cache_skips": 7,
+  "sources_read": 17,
+  "code_likely_sources_read": 7,
+  "no_code_reads": 10,
+  "family_rotations": 8,
+  "offers_found": 2,
+  "voucher_benefits_found": 2,
+  "literal_codes_found": 0,
+  "codes_per_10_reads": 0.0,
+  "enqueued": 1,
+  "blocked": 0,
+  "duplicates": 4,
+  "last_run_at": "2026-08-18T06:53:00+07:00",
+  "lovable_calls": 0,
+  "notes": "GitHub-only TURBO SCAN V2. DMX new-customer 15% max500K PMH verified current and enqueued as account-issued voucher, literal_code=null. Known Pharmacity literals were duplicates; expired/referral/account-issued tokens excluded."
+}
