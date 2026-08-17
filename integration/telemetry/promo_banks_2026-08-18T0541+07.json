@@ -1,0 +1,43 @@
+{
+  "schema": "promo.banks.telemetry.v2",
+  "source_worker": "PROMO Banks Shard",
+  "mode": "GPT_AUTOMATIONS_GITHUB_ONLY",
+  "pipeline": "TURBO_SCAN_PIPELINE_V2",
+  "fast_probes": 24,
+  "shortlisted": 8,
+  "deep_validations": 5,
+  "cache_skips": 5,
+  "sources_read": 10,
+  "code_likely_sources_read": 6,
+  "no_code_reads": 9,
+  "family_rotations": 3,
+  "offers_found": 1,
+  "voucher_benefits_found": 1,
+  "literal_codes_found": 1,
+  "codes_per_10_reads": 1.0,
+  "enqueued": 1,
+  "blocked": 0,
+  "duplicates": 4,
+  "duplicate_hits": [
+    "BIDV Klook JCBJPWKND30 already present in consolidated handoff",
+    "BIDV Klook JCBWKND15 already present in consolidated handoff",
+    "BIDV Klook JCBNGAYDOI already present in consolidated handoff",
+    "BIDV Klook KLOOK10JCB already present in consolidated handoff"
+  ],
+  "expired_or_rejected_hits": [
+    "ACB travel voucher families ACBBUS35/ACBHT100/ACBCB100/ACBVC50/ACBBUSFS100 are 2025 windows and expired",
+    "ACB ACBDIFF150/500/300 and ACBHOALU current-page hits have already expired by 2026-08-18",
+    "VPBank Pay by Account merchant benefit is auto-applied, not a reusable literal code",
+    "ACB Expedia Corporate page exposes a claim-link flow but no exact reusable literal on-page"
+  ],
+  "notes": [
+    "New clean literal: BIDV Visa x Expedia Coupon VISAYR7, 7% off selected hotels; booking through 2026-12-31, travel through 2027-06-30.",
+    "VPBank family was down-ranked/rotated because current high-yield Traveloka/Qatar/Expedia literals were harvested in prior runs.",
+    "Only ELIGIBLE+ACTIVE_INPUT sources assigned PROMO_BANKS were consumed.",
+    "Zero Lovable calls used."
+  ],
+  "handoff_path": "integration/handoffs/promo_banks_2026-08-18T0541+07.jsonl",
+  "handoff_commit": "6f93ecf51b899aee806f46b27459d181646bc699",
+  "last_run_at": "2026-08-18T05:41:16+07:00",
+  "lovable_calls": 0
+}
