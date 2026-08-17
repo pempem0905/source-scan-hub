@@ -5,6 +5,6 @@
   "attempt_day_utc": "2026-08-17",
   "attempts_today": 5,
   "last_retry_requested_at": "2026-08-17T04:12:36.742056Z",
-  "retriggered_at": "2026-08-17T03:27:53Z",
+  "retriggered_at": "2026-08-17T04:29:30Z",
   "purpose": "Verify structured human takeover and fresh-connection authenticated session reuse. Contains no credentials or session material."
 }
