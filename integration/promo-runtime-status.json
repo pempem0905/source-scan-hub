@@ -1,6 +1,6 @@
 {
   "schema": "promo.runtime_status.v1",
-  "generated_at": "2026-08-17T08:23:51Z",
+  "generated_at": "2026-08-17T09:24:56Z",
   "source": "live_verified_canonical_plus_worker_exports",
   "canonical": {
     "batch": 86,
@@ -12,7 +12,7 @@
     "literal_codes": 66,
     "ready_queue": 1,
     "last_commit_at": "2026-08-16T18:08:38.748904Z",
-    "note": "Last live durable canonical state available to Turbo remains B86 / SRC-491; writer surface was not available in this run, so canonical counters were not advanced from telemetry alone."
+    "note": "Last live durable canonical state available to Turbo remains B86 / SRC-491; GitHub canonical migration is not verified complete, so canonical counters were not advanced from handoff/telemetry alone."
   },
   "workers": {
     "PROMO Banks Shard": {
@@ -35,16 +35,16 @@
     },
     "PROMO Turbo Scan": {
       "state": "ACTIVE",
-      "last_run_at": "2026-08-17T08:23:51Z",
-      "code_sources_read": 15,
-      "no_code_reads": 5,
-      "source_family_rotations": 4,
-      "offers_found": 11,
-      "voucher_benefits_found": 11,
-      "literal_codes_found": 11,
-      "codes_per_10_reads": 7.33,
+      "last_run_at": "2026-08-17T09:24:56Z",
+      "code_sources_read": 8,
+      "no_code_reads": 3,
+      "source_family_rotations": 5,
+      "offers_found": 9,
+      "voucher_benefits_found": 9,
+      "literal_codes_found": 9,
+      "codes_per_10_reads": 11.25,
       "validated": 5,
-      "rejected": 6,
+      "rejected": 4,
       "committed": 0,
       "literal_codes_committed": 0,
       "batch": 86,
@@ -64,7 +64,7 @@
       "repairs_performed": [
         "runtime telemetry canonical refreshed B85→B86"
       ],
-      "worker_health": "Banks/Retail/Turbo/Infra enabled and fresh; canonical ledger B86 matches promo_master_state."
+      "worker_health": "Banks/Retail/Turbo/Infra enabled; GitHub-only Turbo preserves READY handoffs until canonical migration is verified."
     }
   }
 }
