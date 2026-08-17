@@ -47,6 +47,15 @@ def parse_iso(value: str | None) -> dt.datetime | None:
         return None
 
 
+def parse_day(value: str | None) -> dt.date | None:
+    if not value:
+        return None
+    try:
+        return dt.date.fromisoformat(str(value))
+    except Exception:
+        return None
+
+
 def main() -> None:
     runtime = read(RUNTIME, {})
     bridge = read(BRIDGE, {})
@@ -77,11 +86,16 @@ def main() -> None:
 
     retry_after_raw = request.get("retry_after_utc")
     retry_after = parse_iso(retry_after_raw)
+    attempt_day = parse_day(request.get("attempt_day_utc"))
+    # Treat a retry explicitly deferred into a later UTC day as a free-tier daily
+    # quota wait for the entire remaining window. The previous >=6h heuristic
+    # became false during the final hours before reset and caused status churn.
     quota_wait = bool(
         request.get("state") == "RETRY_PENDING"
         and retry_after is not None
         and retry_after > now_utc()
-        and (retry_after - now_utc()) >= dt.timedelta(hours=6)
+        and attempt_day is not None
+        and retry_after.date() > attempt_day
     )
 
     bridge.update(
