@@ -53,7 +53,7 @@ jobs:
           echo "state=$STATE" >> "$GITHUB_OUTPUT"
           git config user.name "promo-l2-retry-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add l2/handoff-request.json l2/bridge-status.json l2/auth-status.json l2/metrics.json l2/hard-outcomes.json
+          git add l2/handoff-request.json l2/bridge-status.json l2/auth-status.json l2/preauth-platforms.json l2/metrics.json l2/hard-outcomes.json
           if git diff --cached --quiet; then
             echo 'changed=false' >> "$GITHUB_OUTPUT"
             exit 0
