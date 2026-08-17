@@ -12,8 +12,8 @@
   "enqueued": 3,
   "blocked": 0,
   "duplicates": 0,
-  "last_run_at": "2026-08-17T15:37:32+07:00",
+  "last_run_at": "2026-08-17T16:41:26+07:00",
   "lovable_calls": 0,
-  "handoff": "integration/handoffs/promo_banks_2026-08-17T1537+07.jsonl",
-  "note": "GitHub-only FREE handoff; canonical counters untouched. Current-source sweep found three clean actionable benefits but no new exact reusable literal codes; expired code-bearing results were rejected."
+  "handoff": "integration/handoffs/promo_banks_2026-08-17T1641+07.jsonl",
+  "note": "GitHub-only FREE handoff; canonical counters untouched. Three clean current actionable card benefits preserved; no new exact reusable literal code verified in this sweep."
 }
