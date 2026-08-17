@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-17T00:29:59.172231Z",
+  "generated_at": "2026-08-17T01:35:18.584012Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 2996,
-    "frontier_deferred_pending": 39549,
-    "frontier_pending": 42545,
-    "last_6_runs_new_domains": 13,
+    "frontier_active_pending": 2962,
+    "frontier_deferred_pending": 39621,
+    "frontier_pending": 42583,
+    "last_6_runs_new_domains": 11,
     "last_run": {
-      "at": "2026-08-17T00:27:47.025881Z",
+      "at": "2026-08-17T01:32:37.863642Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vi-vn/*uu-dai*",
-        "*.com/vi-vn/*voucher*",
-        "*.com/vi-vn/*promotion*",
-        "*.net/vn/*khuyen-mai*"
+        "*.net/vn/*uu-dai*",
+        "*.com/vietnam/*promotion*",
+        "*.vn/*khuyen-mai*",
+        "*.vn/*khuyenmai*"
       ],
-      "duration_s": 131.2,
-      "errors": 58,
-      "frontier_pending": 42545,
-      "new_domains": 2,
-      "processed": 451,
-      "rate403": 3.326,
+      "duration_s": 159.8,
+      "errors": 43,
+      "frontier_pending": 42583,
+      "new_domains": 1,
+      "processed": 379,
+      "rate403": 0.264,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 840,
+    "master_domains": 854,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 60,
+    "run_count": 61,
     "running": true,
-    "seen_urls": 278166,
-    "updated_at": "2026-08-17T00:29:58.223870Z"
+    "seen_urls": 281180,
+    "updated_at": "2026-08-17T01:35:17.683170Z"
   },
   "master_input": {
-    "active_input_count": 106,
+    "active_input_count": 107,
     "counts": {
-      "ACTIVE_INPUT": 106,
+      "ACTIVE_INPUT": 107,
       "AUTHORIZED_ACCOUNT": 3,
       "BANK_CARD": 33,
       "DISCOVERY_ONLY": 15,
       "FOOD_BEVERAGE": 22,
-      "GENERAL": 562,
+      "GENERAL": 573,
       "LOYALTY_REWARDS": 9,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 14,
-      "PROMO_RETAIL": 61,
-      "PUBLIC_HTTP": 708,
+      "PROMO_RETAIL": 62,
+      "PUBLIC_HTTP": 721,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 75,
-      "REVIEW_INPUT": 602,
+      "RETAIL_ECOMMERCE": 76,
+      "REVIEW_INPUT": 614,
       "SOURCE_HUNTER": 15,
-      "SOURCE_REVIEW": 602,
-      "TRAVEL_MOBILITY": 15
+      "SOURCE_REVIEW": 614,
+      "TRAVEL_MOBILITY": 16
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 15,
-    "generated_at": "2026-08-17T00:29:58.997065Z",
+    "generated_at": "2026-08-17T01:35:18.456996Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 723,
-    "review_input_count": 602,
+    "record_count": 736,
+    "review_input_count": 614,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 840,
+    "source_hunter_domains": 854,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -234,7 +234,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-16T23:58:18.143639Z",
+    "updated_at": "2026-08-17T01:33:00Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -320,37 +320,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 0,
+    "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "siêu thị khuyến mãi Việt Nam",
-      "siêu thị ưu đãi Việt Nam",
-      "siêu thị voucher Việt Nam",
-      "siêu thị promotion Vietnam"
+      "chuỗi bán lẻ khuyến mãi Việt Nam",
+      "chuỗi bán lẻ ưu đãi Việt Nam",
+      "chuỗi bán lẻ voucher Việt Nam",
+      "chuỗi bán lẻ promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 52,
+    "cc_domain_page": 53,
     "frontier_scheduler": {
-      "active": 451,
+      "active": 379,
       "base_per_host_batch": 16,
-      "deferred": 39549,
+      "deferred": 39621,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 58
+      "unique_hosts": 46
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-16T15:23:48.272129Z",
-      "domain": "mdfitness.vn",
-      "radar": false,
-      "url": "https://mdfitness.vn/",
-      "via": "free_search"
-    },
     {
       "at": "2026-08-16T15:23:48.272129Z",
       "domain": "ems-vietnam.vn",
@@ -1183,6 +1176,13 @@
       "radar": true,
       "url": "https://newpub.adpia.vn/login",
       "via": "radar_out"
+    },
+    {
+      "at": "2026-08-17T01:32:37.863642Z",
+      "domain": "baoxaydung.vn",
+      "radar": false,
+      "url": "https://baoxaydung.vn/co-chinh-sach-uu-tien-dac-biet-de-khuyen-khich-nghi-ngay-khi-sap-xep-tinh-gon-bo-may-192241217114224658.htm",
+      "via": "internal_promo"
     }
   ]
 }
