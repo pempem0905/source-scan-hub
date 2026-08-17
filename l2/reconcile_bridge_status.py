@@ -121,10 +121,10 @@ def main() -> None:
             # Only now does a real secure Live Session exist, so the Telegram
             # monitor may alert for this one platform.
             platforms[platform]["status"] = "LOGIN_REQUIRED"
-        elif runtime_state in {"TRANSIENT_RATE_LIMIT", "DAILY_QUOTA_WAIT"}:
+        elif runtime_state in {"TRANSIENT_RATE_LIMIT", "DAILY_QUOTA_WAIT", "HANDOFF_FAILED", "HANDOFF_REUSE_UNVERIFIED", "HANDOFF_WINDOW_EXPIRED"}:
+            # A previously verified takeover that closed before operator completion
+            # is recoverable and must stay in the retry lane, not wedge the platform.
             platforms[platform]["status"] = "PREAUTH_RETRY_PENDING"
-        elif runtime_state in {"HANDOFF_FAILED", "HANDOFF_REUSE_UNVERIFIED"}:
-            platforms[platform]["status"] = "PREAUTH_PENDING_SESSION"
 
     write(BRIDGE, bridge)
     write(AUTH, auth)
