@@ -418,3 +418,7 @@
 {"at": "2026-08-17T09:04:30.947596Z", "domain": "vexere.com", "radar": false, "url": "https://vexere.com/", "via": "radar_out"}
 {"at": "2026-08-17T09:04:30.947596Z", "domain": "kitmodule.vn", "radar": false, "url": "https://kitmodule.vn/", "via": "radar_out"}
 {"at": "2026-08-17T09:04:30.947596Z", "domain": "lichchieuphim.net", "radar": false, "url": "https://lichchieuphim.net/", "via": "free_search"}
+{"at": "2026-08-17T09:53:09.118992Z", "domain": "promo.highlandscoffee.com.vn", "radar": false, "url": "https://promo.highlandscoffee.com.vn/", "via": "radar_out"}
+{"at": "2026-08-17T09:53:09.118992Z", "domain": "jangin.vn", "radar": false, "url": "https://jangin.vn/", "via": "external_promo"}
+{"at": "2026-08-17T09:53:09.118992Z", "domain": "khoahoc.coachio.ai", "radar": false, "url": "https://khoahoc.coachio.ai/", "via": "common_crawl_domain"}
+{"at": "2026-08-17T09:53:09.118992Z", "domain": "salesforce.com", "radar": false, "url": "https://salesforce.com/blog/sales/?bc=HL", "via": "internal_promo"}
