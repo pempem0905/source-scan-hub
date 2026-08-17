@@ -419,6 +419,12 @@ airgood.vn
 airgroup.vn
 airimex.vn
 airko.vn
+airportcargo.vn
+airportconnects.vn
+airportskyview.vn
+airpull.vn
+airpullvietnam.vn
+airpurity.vn
 aivivu.com
 aldoshoes.vn
 alibabacloud.com
@@ -562,8 +568,10 @@ flchotelsresorts.com
 flexoffice.com
 food.grab.com
 fordbacgiang.0to.vn
+forrester.com
 forum.568play.vn
 forum.aigato.vn
+fpt-internet.vn
 fpt.vn
 fpt24.vn
 fptelecom.vn
@@ -696,6 +704,7 @@ magiamgialazada.vn
 maisononline.vn
 malls.vn
 mamanbebe.vn
+mang-fpt.com
 mangfpt.vn
 manulife.com.vn
 marsovn.com
@@ -730,6 +739,7 @@ nanakids.vn
 nap.codm.360mobi.vn
 napas.com.vn
 naruto.568play.vn
+netviettel.vn
 neufie.edu.vn
 newpub.adpia.vn
 ngoisao.vn
@@ -958,6 +968,7 @@ vneconomy.vn
 vnexpress.net
 vnmn.ac.vn
 vnpay.vn
+vnptgroup.vn
 vnptpay.vn
 vnreview.vn
 voshop.vn
