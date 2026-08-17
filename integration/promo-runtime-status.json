@@ -1,6 +1,6 @@
 {
   "schema": "promo.runtime_status.v1",
-  "generated_at": "2026-08-17T14:22:17Z",
+  "generated_at": "2026-08-17T15:27:52Z",
   "source": "live_verified_canonical_plus_worker_exports",
   "canonical": {
     "batch": 86,
@@ -17,7 +17,7 @@
   "workers": {
     "PROMO Banks Shard": {"state":"ACTIVE","last_run_at":"2026-08-16T16:30:11Z","sources_read":4,"offers_found":3,"voucher_benefits_found":3,"literal_codes_found":0,"enqueued":3},
     "PROMO Retail Shard": {"state":"ACTIVE","last_run_at":"2026-08-16T16:34:50Z","sources_read":4,"offers_found":2,"voucher_benefits_found":2,"literal_codes_found":0,"enqueued":2},
-    "PROMO Turbo Scan": {"state":"ACTIVE","last_run_at":"2026-08-17T14:22:17Z","fast_probes":25,"shortlisted":4,"deep_validations":2,"cache_skips":6,"code_sources_read":2,"no_code_reads":0,"source_family_rotations":2,"offers_found":6,"voucher_benefits_found":6,"literal_codes_found":6,"codes_per_10_reads":30.0,"validated":6,"rejected":0,"committed":0,"literal_codes_committed":0,"batch":86,"lovable_calls":0},
+    "PROMO Turbo Scan": {"state":"ACTIVE","last_run_at":"2026-08-17T15:27:52Z","fast_probes":25,"shortlisted":5,"deep_validations":2,"cache_skips":8,"code_sources_read":2,"no_code_reads":0,"source_family_rotations":3,"offers_found":2,"voucher_benefits_found":2,"literal_codes_found":2,"codes_per_10_reads":10.0,"validated":2,"rejected":0,"committed":0,"literal_codes_committed":0,"batch":86,"lovable_calls":0},
     "PROMO GPT Infra + Dispatch": {"state":"ACTIVE","last_run_at":"2026-08-16T19:11:00Z","fallback_sources_read":0,"offers_found":0,"voucher_benefits_found":0,"literal_codes_found":0,"enqueued":0,"ready_queue":0,"relayed":0,"commit_stall":false,"repairs_performed":["runtime telemetry canonical refreshed B85→B86"],"worker_health":"Banks/Retail/Turbo/Infra enabled; GitHub-only Turbo preserves READY handoffs until canonical migration is verified."}
   }
 }
