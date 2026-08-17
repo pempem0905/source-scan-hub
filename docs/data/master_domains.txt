@@ -474,6 +474,17 @@ alias.vn
 alibaba.vn
 alibabacloud.com
 alibabatours.vn
+aliorder.vn
+alis-lighting.vn
+alisale.vn
+alisport.vn
+alita.vn
+alittlelove.vn
+aliva.vn
+alive-web.vn
+alivietnam.vn
+alkalife.vn
+alkari.vn
 ambassador.koc.com.vn
 anfoodvn.com
 anz.2te.vn
@@ -605,6 +616,7 @@ eholiday.vn
 elly.vn
 ems-vietnam.vn
 en.3pointsaviation.vn
+en.alivietnam.vn
 eng.ain-clo.vn
 eofficesso.510.vn
 eropi.com
@@ -660,6 +672,7 @@ gongcha.com.vn
 gps.3tbk.vn
 grab.com
 greensm.com
+grow.alive-web.vn
 growth-public.grab.com
 growth.accesstrade.vn
 gs25.com.vn

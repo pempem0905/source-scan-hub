@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-17T15:13:00.468116Z",
+  "generated_at": "2026-08-17T15:38:58.039179Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 2808,
-    "frontier_deferred_pending": 39703,
-    "frontier_pending": 42511,
-    "last_6_runs_new_domains": 13,
+    "frontier_active_pending": 4402,
+    "frontier_deferred_pending": 39569,
+    "frontier_pending": 43971,
+    "last_6_runs_new_domains": 8,
     "last_run": {
-      "at": "2026-08-17T15:11:27.187747Z",
+      "at": "2026-08-17T15:36:59.045827Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vn/*uu-dai*",
-        "*.com/vn/*voucher*",
-        "*.com/vn/*promotion*",
-        "*.com/vi-vn/*khuyen-mai*"
+        "*.com/vi-vn/*uu-dai*",
+        "*.com/vi-vn/*voucher*",
+        "*.com/vi-vn/*promotion*",
+        "*.net/vn/*khuyen-mai*"
       ],
-      "duration_s": 92.3,
-      "errors": 38,
-      "frontier_pending": 42511,
-      "new_domains": 3,
-      "processed": 297,
-      "rate403": 0.0,
-      "rate429": 0.0
+      "duration_s": 118.0,
+      "errors": 68,
+      "frontier_pending": 43971,
+      "new_domains": 0,
+      "processed": 431,
+      "rate403": 0.696,
+      "rate429": 0.232
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1065,
+    "master_domains": 1078,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 84,
+    "run_count": 85,
     "running": true,
-    "seen_urls": 346580,
-    "updated_at": "2026-08-17T15:12:59.452389Z"
+    "seen_urls": 351059,
+    "updated_at": "2026-08-17T15:38:56.996251Z"
   },
   "master_input": {
     "active_input_count": 110,
@@ -41,33 +41,33 @@
       "BANK_CARD": 36,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 24,
-      "GENERAL": 743,
+      "GENERAL": 754,
       "LOYALTY_REWARDS": 9,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 15,
       "PROMO_RETAIL": 64,
-      "PUBLIC_HTTP": 899,
+      "PUBLIC_HTTP": 910,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 80,
-      "REVIEW_INPUT": 789,
+      "REVIEW_INPUT": 800,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 789,
+      "SOURCE_REVIEW": 800,
       "TRAVEL_MOBILITY": 16
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-17T15:13:00.291452Z",
+    "generated_at": "2026-08-17T15:38:57.854273Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 915,
-    "review_input_count": 789,
+    "record_count": 926,
+    "review_input_count": 800,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1065,
+    "source_hunter_domains": 1078,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -322,27 +322,27 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 3,
+    "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "bất động sản khuyến mãi Việt Nam",
-      "bất động sản ưu đãi Việt Nam",
-      "bất động sản voucher Việt Nam",
-      "bất động sản promotion Vietnam"
+      "loyalty membership khuyến mãi Việt Nam",
+      "loyalty membership ưu đãi Việt Nam",
+      "loyalty membership voucher Việt Nam",
+      "loyalty membership promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 76,
+    "cc_domain_page": 77,
     "frontier_scheduler": {
-      "active": 297,
+      "active": 431,
       "base_per_host_batch": 16,
-      "deferred": 39703,
+      "deferred": 39569,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 45
+      "unique_hosts": 78
     }
   },
   "recent_sources": [
