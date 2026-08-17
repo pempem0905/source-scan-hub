@@ -1,16 +1,18 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "project_id": "PROMO-L2-ROUTER-V1",
   "upstream_project": "PROMO-SRC-HUNTER-V1",
   "input": "integration/master_input_sources_v1.jsonl",
   "shadow_output": "l2/candidate-queue.jsonl",
   "preauth_registry": "l2/preauth-platforms.json",
-  "purpose": "Route canonical promo/voucher input sources to the cheapest suitable access lane without duplicating source discovery, proactively prepare authorized sessions, and produce quality-gated shadow candidates for difficult sources.",
+  "purpose": "Route only difficult promo/voucher sources that Layer1 cannot cover efficiently: authorized-account, persistent-session, residential-required, JS-hard or otherwise access-constrained targets. Public source discovery and routine public crawling belong to Layer1.",
+  "operating_mode": "HARD_ONLY",
   "lanes": {
-    "PUBLIC_HTTP": {"runner": "github-hosted", "mode": "http", "account_required": false},
-    "JS_BROWSER": {"runner": "github-hosted", "mode": "playwright", "account_required": false},
-    "PERSISTENT_PUBLIC": {"runner": "persistent-free-vm", "mode": "browser-profile", "account_required": false},
+    "PUBLIC_HTTP": {"enabled": false, "owner": "L1", "runner": null, "mode": "delegated-to-layer1", "account_required": false},
+    "JS_BROWSER": {"enabled": "hard-only", "runner": "github-hosted", "mode": "playwright", "account_required": false, "admit_if": "public HTTP/L1 cannot reliably extract required promo data"},
+    "PERSISTENT_PUBLIC": {"enabled": "hard-only", "runner": "persistent-free-vm", "mode": "browser-profile", "account_required": false, "admit_if": "stateful browser behavior is required and L1 cannot cover it"},
     "AUTHORIZED_ACCOUNT": {
+      "enabled": true,
       "runner": "cloudflare-browser-run-or-self-hosted-residential",
       "mode": "persistent-browser-profile",
       "account_required": true,
@@ -19,14 +21,15 @@
       "fallback_on_cloud_block": "self-hosted-residential"
     },
     "RESIDENTIAL_REQUIRED": {
+      "enabled": true,
       "runner": "self-hosted-residential",
       "mode": "persistent-browser-profile",
       "account_required": "only-if-source-requires-it",
       "session_policy": "reuse-valid-user-session-if-present"
     },
-    "MANUAL_ONLY": {"runner": null, "mode": "record-and-wait", "account_required": "unknown"}
+    "MANUAL_ONLY": {"enabled": true, "runner": null, "mode": "record-and-wait", "account_required": "unknown"}
   },
-  "routing_priority": ["PUBLIC_HTTP", "JS_BROWSER", "PERSISTENT_PUBLIC", "AUTHORIZED_ACCOUNT", "RESIDENTIAL_REQUIRED", "MANUAL_ONLY"],
+  "routing_priority": ["AUTHORIZED_ACCOUNT", "RESIDENTIAL_REQUIRED", "JS_BROWSER", "PERSISTENT_PUBLIC", "MANUAL_ONLY"],
   "preauth": {
     "enabled": true,
     "login_before_demand": true,
@@ -55,7 +58,11 @@
   },
   "rules": {
     "source_discovery_owner": "PROMO-SRC-HUNTER-V1",
+    "routine_public_crawl_owner": "L1",
     "promo_workers_do_not_broadly_discover_sources": true,
+    "l2_reject_public_overlap": true,
+    "l2_admit_only_if_l1_gap_or_access_constraint": true,
+    "cross_layer_duplicate_policy": "merge evidence; never count duplicate output twice",
     "do_not_commit_credentials": true,
     "do_not_commit_cookies": true,
     "do_not_commit_refresh_tokens": true,
