@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parent
 RUNTIME = ROOT / "bridge-runtime-status.json"
 BRIDGE = ROOT / "bridge-status.json"
 AUTH = ROOT / "auth-status.json"
+HANDOFF_REQUEST = ROOT / "handoff-request.json"
 
 
 def read(path: Path, default: dict) -> dict:
@@ -28,14 +29,28 @@ def write(path: Path, data: dict) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
 
 
+def now_utc() -> dt.datetime:
+    return dt.datetime.now(dt.timezone.utc)
+
+
 def now_iso() -> str:
-    return dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z")
+    return now_utc().isoformat().replace("+00:00", "Z")
+
+
+def parse_iso(value: str | None) -> dt.datetime | None:
+    if not value:
+        return None
+    try:
+        return dt.datetime.fromisoformat(str(value).replace("Z", "+00:00")).astimezone(dt.timezone.utc)
+    except Exception:
+        return None
 
 
 def main() -> None:
     runtime = read(RUNTIME, {})
     bridge = read(BRIDGE, {})
     auth = read(AUTH, {})
+    request = read(HANDOFF_REQUEST, {})
 
     prior_runtime_verified = bool(bridge.get("runtime_verified"))
     prior_e2e = bool(bridge.get("end_to_end_verified"))
@@ -57,6 +72,15 @@ def main() -> None:
         status = str(bridge.get("status") or "TRANSIENT_RATE_LIMIT")
     else:
         status = "BROWSER_RUN_PROBE_UNVERIFIED"
+
+    retry_after_raw = request.get("retry_after_utc")
+    retry_after = parse_iso(retry_after_raw)
+    quota_wait = bool(
+        request.get("state") == "RETRY_PENDING"
+        and retry_after is not None
+        and retry_after > now_utc()
+        and (retry_after - now_utc()) >= dt.timedelta(hours=6)
+    )
 
     bridge.update(
         {
@@ -101,15 +125,22 @@ def main() -> None:
     preauth["bridge_status"] = status
     preauth["runtime_probe_verified"] = bool(runtime_verified)
     preauth["end_to_end_verified"] = bool(e2e)
-    # Do not surface PERMISSION_REQUIRED before a real secure takeover window
-    # exists. This prevents Telegram/status alerts from asking the operator to
-    # login into a stale or nonexistent Browser Run session.
+    preauth["free_daily_quota_wait"] = quota_wait
+    preauth["next_retry_at"] = retry_after_raw if quota_wait else None
+
     if status == "TAKEOVER_READY":
         preauth["permission_required"] = {
             "state": "PERMISSION_REQUIRED",
             "reason": "A real secure Cloudflare Browser Run takeover window is active for one authorized platform.",
             "safe_action": "Open Cloudflare Dashboard > Browser Run > Live Sessions and complete login/MFA/CAPTCHA only inside the active secure session.",
             "note": "Do not place passwords, OTPs, cookies, refresh tokens, CAPTCHA data, session IDs, websocket URLs, or takeover URLs in GitHub files, logs, chat, or public dashboard."
+        }
+    elif quota_wait:
+        preauth["permission_required"] = {
+            "state": "WAITING_FREE_DAILY_QUOTA",
+            "reason": "The verified free Browser Run lane is waiting for its next daily acquisition window.",
+            "safe_action": "No user action is required; the bridge will retry automatically after the recorded UTC retry time.",
+            "note": "No login alert is emitted until a real secure takeover surface is active."
         }
     else:
         preauth["permission_required"] = {
@@ -123,8 +154,6 @@ def main() -> None:
     platform = str(runtime.get("platform") or "")
     platforms = auth.get("platforms") if isinstance(auth.get("platforms"), dict) else {}
 
-    # Never advertise HANDOFF_READY unless a real secure takeover surface is
-    # actually active. Static config/runtime capability only means PREAUTH pending.
     for key, entry in platforms.items():
         if not isinstance(entry, dict):
             continue
@@ -135,17 +164,13 @@ def main() -> None:
         if reuse:
             platforms[platform]["status"] = "SESSION_REUSE_VERIFIED"
         elif runtime_state == "TAKEOVER_READY":
-            # Only now does a real secure Live Session exist, so the Telegram
-            # monitor may alert for this one platform.
             platforms[platform]["status"] = "LOGIN_REQUIRED"
         elif runtime_state in {"TRANSIENT_RATE_LIMIT", "DAILY_QUOTA_WAIT", "HANDOFF_FAILED", "HANDOFF_REUSE_UNVERIFIED", "HANDOFF_WINDOW_EXPIRED"}:
-            # A previously verified takeover that closed before operator completion
-            # is recoverable and must stay in the retry lane, not wedge the platform.
             platforms[platform]["status"] = "PREAUTH_RETRY_PENDING"
 
     write(BRIDGE, bridge)
     write(AUTH, auth)
-    print(f"BRIDGE_STATUS_RECONCILED status={status} runtime_verified={str(runtime_verified).lower()} e2e={str(e2e).lower()}")
+    print(f"BRIDGE_STATUS_RECONCILED status={status} runtime_verified={str(runtime_verified).lower()} e2e={str(e2e).lower()} quota_wait={str(quota_wait).lower()}")
 
 
 if __name__ == "__main__":
