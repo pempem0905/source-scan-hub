@@ -113,11 +113,17 @@ def main() -> None:
     for marker in ("acquire_browser_ws", "wait_event_with_heartbeat", "BACKOFF_MARKER", "HANDOFF_COMPLETE_SESSION_REUSE_VERIFIED"):
         assert marker in bridge_py, f"bridge regression: missing {marker}"
 
+    retry_py = (L2 / "retry_handoff_request.py").read_text(encoding="utf-8")
+    assert "runtime_belongs_to_request" in retry_py, "retry policy must be scoped to the active handoff"
+    assert 'runtime.get("mode") == "handoff"' in retry_py, "probe failures must not extend platform handoff cooldowns"
+
     request_workflow = (ROOT / ".github" / "workflows" / "promo-l2-browser-run-bridge.yml").read_text(encoding="utf-8")
     assert "l2/handoff-request.json" in request_workflow, "request-driven bridge trigger missing"
     assert "CLOUDFLARE_BROWSER_RUN_API_TOKEN" in request_workflow and "CLOUDFLARE_ACCOUNT_ID" in request_workflow
     assert "secrets.CLOUDFLARE_BROWSER_RUN_API_TOKEN" in request_workflow
     assert "secrets.CLOUDFLARE_ACCOUNT_ID" in request_workflow
+    assert "mode='idle'; run_runtime=False" in request_workflow, "inactive request pushes must not acquire Browser Run"
+    assert "steps.inputs.outputs.run_runtime == 'true'" in request_workflow, "runtime steps must be gated by resolver output"
 
     manual_workflow = (ROOT / ".github" / "workflows" / "promo-l2-secure-login-bridge.yml").read_text(encoding="utf-8")
     assert "tiktokshop" in manual_workflow, "manual bridge must expose TikTok Shop"
