@@ -578,9 +578,11 @@ cenvi.3sgroup.vn
 cenvi.vn
 cf.shopee.vn
 chanhtuoi.com
+chargebee.com
 charleskeith.vn
 checkin.adpex.vn
 chienbinh.adenztravel.vn
+chothuenhapho.vn
 chothuexe.055.vn
 chothuocvang.com
 cimbbank.com.vn
@@ -632,6 +634,7 @@ dichvudidong.vn
 didongviet.vn
 dienmaycholon.com
 dienthoaivui.com.vn
+diginomica.com
 dingtea.vn
 dingteavoucher.vn
 disneycatch.360game.vn
