@@ -646,6 +646,18 @@
       "promo_candidates": 0,
       "public_ok": 0,
       "shadow_ready": 0
+    },
+    {
+      "at": "2026-08-17T08:22:28Z",
+      "attempted": 0,
+      "blocked": 0,
+      "code_candidates": 0,
+      "errors": 0,
+      "js_browser": 0,
+      "login_required": 0,
+      "promo_candidates": 0,
+      "public_ok": 0,
+      "shadow_ready": 0
     }
   ],
   "last_run": {
@@ -660,7 +672,7 @@
     "shadow_ready": 0
   },
   "project_id": "PROMO-L2-ROUTER-V1",
-  "run_count": 54,
+  "run_count": 55,
   "schema_version": 2,
   "seen": {
     "https://acb.com.vn/": {
@@ -1584,5 +1596,5 @@
       "content_hash": "41c02a4a827a8c2e4ceb581580f496de7cc787135ec22741ab4cd2501970091a"
     }
   },
-  "updated_at": "2026-08-17T07:33:44Z"
+  "updated_at": "2026-08-17T08:22:28Z"
 }

@@ -6,7 +6,7 @@
   "l2_voucher_deals_found": 127,
   "l2_literal_codes_found": 88,
   "remaining_platforms": 7,
-  "last_run_at": "2026-08-17T07:33:44Z",
-  "generated_at": "2026-08-17T07:33:44.275144Z",
+  "last_run_at": "2026-08-17T08:22:28Z",
+  "generated_at": "2026-08-17T08:22:28.338413Z",
   "note": "Counts are sanitized cumulative L2 scan outcomes; candidates remain subject to date/technical/Turbo quality gates before production use."
 }
