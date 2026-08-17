@@ -131,26 +131,44 @@ def main() -> None:
     preauth["next_retry_at"] = retry_after_raw if quota_wait else None
 
     if status == "TAKEOVER_READY":
-        preauth["permission_required"] = {
+        permission = {
             "state": "PERMISSION_REQUIRED",
             "reason": "A real secure Cloudflare Browser Run takeover window is active for one authorized platform.",
             "safe_action": "Open Cloudflare Dashboard > Browser Run > Live Sessions and complete login/MFA/CAPTCHA only inside the active secure session.",
             "note": "Do not place passwords, OTPs, cookies, refresh tokens, CAPTCHA data, session IDs, websocket URLs, or takeover URLs in GitHub files, logs, chat, or public dashboard."
         }
+        remaining_gate = {
+            "state": "PERMISSION_REQUIRED",
+            "reason": "A real secure login surface is active and requires the authorized user to complete login before session reuse can be verified.",
+            "safe_action": permission["safe_action"],
+        }
     elif quota_wait:
-        preauth["permission_required"] = {
+        permission = {
             "state": "WAITING_FREE_DAILY_QUOTA",
             "reason": "The verified free Browser Run lane is waiting for its next daily acquisition window.",
             "safe_action": "No user action is required; the bridge will retry automatically after the recorded UTC retry time.",
             "note": "No login alert is emitted until a real secure takeover surface is active."
         }
+        remaining_gate = {
+            "state": "WAITING_FREE_DAILY_QUOTA",
+            "reason": permission["reason"],
+            "safe_action": permission["safe_action"],
+        }
     else:
-        preauth["permission_required"] = {
+        permission = {
             "state": "WAITING_RUNTIME_WINDOW",
             "reason": "No real secure takeover surface is active right now.",
             "safe_action": "No user action is required until bridge_status becomes TAKEOVER_READY.",
             "note": "The bridge will retry autonomously; sensitive login material remains runtime-only."
         }
+        remaining_gate = {
+            "state": "WAITING_RUNTIME_WINDOW",
+            "reason": permission["reason"],
+            "safe_action": permission["safe_action"],
+        }
+
+    preauth["permission_required"] = permission
+    bridge["remaining_gate"] = remaining_gate
     auth["updated_at"] = now_iso()
 
     platform = str(runtime.get("platform") or "")
@@ -170,9 +188,6 @@ def main() -> None:
         elif runtime_state in {"TRANSIENT_RATE_LIMIT", "DAILY_QUOTA_WAIT", "HANDOFF_FAILED", "HANDOFF_REUSE_UNVERIFIED", "HANDOFF_WINDOW_EXPIRED"}:
             platforms[platform]["status"] = "PREAUTH_RETRY_PENDING"
 
-    # Keep the public, non-secret registry aligned with auth-status so the Login
-    # Center never shows stale readiness/retry state. The registry carries no
-    # credentials or runtime session material.
     reg_platforms = preauth_registry.get("platforms") if isinstance(preauth_registry.get("platforms"), dict) else {}
     for key, auth_entry in platforms.items():
         if key in reg_platforms and isinstance(auth_entry, dict) and isinstance(reg_platforms[key], dict):
