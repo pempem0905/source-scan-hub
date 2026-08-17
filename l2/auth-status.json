@@ -1,7 +1,7 @@
 {
   "schema_version": 4,
   "project_id": "PROMO-L2-ROUTER-V1",
-  "updated_at": "2026-08-17T05:26:30Z",
+  "updated_at": "2026-08-17T05:27:01.430081Z",
   "mode": "PROACTIVE_PREAUTH",
   "alert_states": [
     "LOGIN_REQUIRED",
@@ -19,10 +19,10 @@
     "login_before_demand": true,
     "runtime_probe_verified": true,
     "permission_required": {
-      "state": "WAITING_RUNTIME_WINDOW",
-      "reason": "No real secure takeover surface is active right now.",
-      "safe_action": "No user action is required until bridge_status becomes TAKEOVER_READY.",
-      "note": "The bridge will retry autonomously; sensitive login material remains runtime-only."
+      "state": "PERMISSION_REQUIRED",
+      "reason": "One authorized platform must complete a real Cloudflare structured handoff and authenticated-session reuse verification before the login bridge can become end-to-end READY.",
+      "safe_action": "No login action is required until bridge_status becomes TAKEOVER_READY. The request/retry path opens the secure Live Session automatically; only then open Cloudflare Dashboard > Browser Run > Live Sessions, complete login/MFA/CAPTCHA there, and mark the handoff complete.",
+      "note": "Do not place passwords, OTPs, cookies, refresh tokens, CAPTCHA data, session IDs, websocket URLs, or takeover URLs in GitHub files, logs, chat, or public dashboard."
     },
     "end_to_end_verified": false
   },
