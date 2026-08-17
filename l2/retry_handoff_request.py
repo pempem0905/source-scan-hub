@@ -43,6 +43,19 @@ def next_utc_reset(now: dt.datetime) -> str:
     return f"{next_day.isoformat()}T00:05:00Z"
 
 
+def runtime_belongs_to_request(runtime: dict, req: dict) -> bool:
+    """Only let a handoff attempt influence that same platform's retry policy.
+
+    Probe runs and another platform's failures are intentionally ignored here.
+    This prevents a harmless status-file push/probe from consuming the active
+    platform's retry budget or extending its cooldown.
+    """
+    return (
+        runtime.get("mode") == "handoff"
+        and str(runtime.get("platform") or "") == str(req.get("platform") or "")
+    )
+
+
 def main() -> None:
     req = load(REQUEST, {})
     runtime = load(RUNTIME, {})
@@ -51,11 +64,15 @@ def main() -> None:
         print("L2_HANDOFF_RETRY_NOOP")
         return
 
+    runtime_matches = runtime_belongs_to_request(runtime, req)
+
     # A failed handoff after a previously verified takeover surface is retryable:
     # Cloudflare Browser Run sessions have a bounded lifetime, so operator absence
-    # during a window must not permanently wedge the bridge.
+    # during a window must not permanently wedge the bridge. A generic probe must
+    # never be allowed to satisfy this platform-specific condition.
     if req.get("state") == "FAILED" and not (
-        runtime.get("browser_session_created") is True
+        runtime_matches
+        and runtime.get("browser_session_created") is True
         and runtime.get("human_handoff_exercised") is True
         and bridge.get("runtime_verified") is True
     ):
@@ -67,14 +84,13 @@ def main() -> None:
     attempt_day = str(req.get("attempt_day_utc") or "")
     attempts = int(req.get("attempts_today") or 0) if attempt_day == day else 0
 
-    # A generic 429 that repeats after a real Browser Run session has already been
-    # verified is commonly a quota-style condition rather than a useful short
-    # acquisition retry. Cloudflare Workers Free Browser Run is capped by daily
-    # browser time, so after two same-day attempts we stop hammering the API and
-    # wait for the next UTC usage window. This remains safe for Paid plans: one
-    # fresh attempt is automatically made after reset, without user involvement.
+    # A repeated generic 429 from the *same handoff/platform* is commonly a
+    # quota-style condition rather than a useful short acquisition retry.
+    # Crucially, probe-mode 429s and failures from other platforms do not enter
+    # this branch and therefore cannot push this request into a daily backoff.
     if (
-        runtime.get("state") == "TRANSIENT_RATE_LIMIT"
+        runtime_matches
+        and runtime.get("state") == "TRANSIENT_RATE_LIMIT"
         and runtime.get("browser_session_created") is True
         and attempts >= GENERIC_RATE_LIMIT_ATTEMPTS_BEFORE_DAILY_BACKOFF
     ):
@@ -88,8 +104,10 @@ def main() -> None:
 
     retry_at = parse_iso(req.get("retry_after_utc"))
     if retry_at is None:
-        checked = parse_iso(runtime.get("checked_at")) or now
-        retry_at = checked + DEFAULT_COOLDOWN
+        # Only a matching handoff runtime may seed a cooldown timestamp. If the
+        # latest runtime record is an unrelated probe, use now as the safe base.
+        checked = parse_iso(runtime.get("checked_at")) if runtime_matches else None
+        retry_at = (checked or now) + DEFAULT_COOLDOWN
     if now < retry_at:
         print("L2_HANDOFF_RETRY_COOLDOWN")
         return
