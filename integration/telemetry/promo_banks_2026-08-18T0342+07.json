@@ -1,0 +1,38 @@
+{
+  "schema": "promo.banks.telemetry.v2",
+  "source_worker": "PROMO Banks Shard",
+  "mode": "GPT_AUTOMATIONS_GITHUB_ONLY",
+  "pipeline": "TURBO_SCAN_PIPELINE_V2",
+  "fast_probes": 24,
+  "shortlisted": 9,
+  "deep_validations": 5,
+  "cache_skips": 3,
+  "sources_read": 14,
+  "code_likely_sources_read": 8,
+  "no_code_reads": 9,
+  "family_rotations": 3,
+  "offers_found": 5,
+  "voucher_benefits_found": 5,
+  "literal_codes_found": 5,
+  "codes_per_10_reads": 3.57,
+  "enqueued": 5,
+  "blocked": 0,
+  "duplicates": 0,
+  "expired_or_rejected_hits": [
+    "PESTBNEW2 Sacombank-PNJ expired 2025-09-30",
+    "MMWORLDCUP MoMo expired 2026-06-30",
+    "CUOITUAN MoMo expired 2026-06-30",
+    "MOMOGSMNGON MoMo expired 2026-06-30",
+    "SSXVPBANK VPBank-Samsung expired 2026-03-31"
+  ],
+  "notes": [
+    "Vietcombank Evergreen e-vouchers are dynamic/user-specific and were not counted as literal reusable codes.",
+    "VPBank VTVgo campaign issues voucher/code to notified eligible customers; no reusable public literal code counted.",
+    "Recent GitHub handoffs 00:38, 01:37 and 02:37 +07 were checked before enqueue to avoid recounting their known literal codes.",
+    "Zero Lovable calls used."
+  ],
+  "handoff_path": "integration/handoffs/promo_banks_2026-08-18T0342+07.jsonl",
+  "handoff_commit": "b367a029205794a5a2356726345e03327349ba70",
+  "last_run_at": "2026-08-18T03:42:43+07:00",
+  "lovable_calls": 0
+}
