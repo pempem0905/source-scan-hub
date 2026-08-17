@@ -1,0 +1,19 @@
+{
+  "schema": "promo.worker_telemetry.v1",
+  "worker": "PROMO Banks Shard",
+  "sources_read": 10,
+  "code_likely_sources_read": 8,
+  "no_code_reads": 5,
+  "family_rotations": 2,
+  "offers_found": 10,
+  "voucher_benefits_found": 10,
+  "literal_codes_found": 7,
+  "codes_per_10_reads": 7.0,
+  "enqueued": 8,
+  "blocked": 0,
+  "duplicates": 2,
+  "last_run_at": "2026-08-17T07:45:43Z",
+  "lovable_calls": 0,
+  "handoff": "integration/promo_banks_handoff_v1.jsonl",
+  "note": "GitHub-only FREE handoff; canonical counters untouched. Literal code count is unique strings; enqueued rows include SHB30 as two service-specific actionable records."
+}
