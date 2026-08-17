@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-17T05:21:42.713780Z",
+  "generated_at": "2026-08-17T05:27:46.504119Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 3006,
-    "frontier_deferred_pending": 39768,
-    "frontier_pending": 42774,
-    "last_6_runs_new_domains": 4,
+    "frontier_active_pending": 2062,
+    "frontier_deferred_pending": 39810,
+    "frontier_pending": 41872,
+    "last_6_runs_new_domains": 3,
     "last_run": {
-      "at": "2026-08-17T05:20:31.425804Z",
+      "at": "2026-08-17T05:26:39.754128Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.net/vn/*uu-dai*",
-        "*.com/vietnam/*promotion*",
-        "*.vn/*khuyen-mai*",
-        "*.vn/*khuyenmai*"
+        "*.vn/*uu-dai*",
+        "*.vn/*uudai*",
+        "*.vn/*voucher*",
+        "*.vn/*promotion*"
       ],
-      "duration_s": 70.3,
-      "errors": 33,
-      "frontier_pending": 42774,
+      "duration_s": 65.9,
+      "errors": 1,
+      "frontier_pending": 41872,
       "new_domains": 0,
-      "processed": 232,
+      "processed": 190,
       "rate403": 0.0,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
     "master_domains": 873,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 66,
+    "run_count": 67,
     "running": true,
-    "seen_urls": 296103,
-    "updated_at": "2026-08-17T05:21:41.757319Z"
+    "seen_urls": 298165,
+    "updated_at": "2026-08-17T05:27:45.609975Z"
   },
   "master_input": {
     "active_input_count": 107,
@@ -57,7 +57,7 @@
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 15,
-    "generated_at": "2026-08-17T05:21:42.544357Z",
+    "generated_at": "2026-08-17T05:27:46.369215Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
@@ -234,7 +234,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-17T04:32:21.117006Z",
+    "updated_at": "2026-08-17T05:26:30Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -252,10 +252,10 @@
       "login_before_demand": true,
       "runtime_probe_verified": true,
       "permission_required": {
-        "state": "PERMISSION_REQUIRED",
-        "reason": "One authorized platform must complete a real Cloudflare structured handoff and authenticated-session reuse verification before the login bridge can become end-to-end READY.",
-        "safe_action": "No login action is required until bridge_status becomes TAKEOVER_READY. The request/retry path opens the secure Live Session automatically; only then open Cloudflare Dashboard > Browser Run > Live Sessions, complete login/MFA/CAPTCHA there, and mark the handoff complete.",
-        "note": "Do not place passwords, OTPs, cookies, refresh tokens, CAPTCHA data, session IDs, websocket URLs, or takeover URLs in GitHub files, logs, chat, or public dashboard."
+        "state": "WAITING_RUNTIME_WINDOW",
+        "reason": "No real secure takeover surface is active right now.",
+        "safe_action": "No user action is required until bridge_status becomes TAKEOVER_READY.",
+        "note": "The bridge will retry autonomously; sensitive login material remains runtime-only."
       },
       "end_to_end_verified": false
     },
@@ -323,24 +323,24 @@
     "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "nhà thuốc khuyến mãi Việt Nam",
-      "nhà thuốc ưu đãi Việt Nam",
-      "nhà thuốc voucher Việt Nam",
-      "nhà thuốc promotion Vietnam"
+      "mỹ phẩm làm đẹp khuyến mãi Việt Nam",
+      "mỹ phẩm làm đẹp ưu đãi Việt Nam",
+      "mỹ phẩm làm đẹp voucher Việt Nam",
+      "mỹ phẩm làm đẹp promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 58,
+    "cc_domain_page": 59,
     "frontier_scheduler": {
-      "active": 232,
+      "active": 190,
       "base_per_host_batch": 16,
-      "deferred": 39768,
+      "deferred": 39810,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 32
+      "unique_hosts": 16
     }
   },
   "recent_sources": [
