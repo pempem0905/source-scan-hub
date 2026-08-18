@@ -1,31 +1,31 @@
 {
   "alerts": [
-    "Hunter 403 cao 62.3% → giảm retry host bị chặn, ưu tiên nguồn official/Common Crawl.",
+    "Hunter 403 cao 97.1% → giảm retry host bị chặn, ưu tiên nguồn official/Common Crawl.",
     "AccessTrade: chưa thấy campaign approved/pending qua API → tiếp tục kiểm tra trạng thái approval và fallback campaign endpoint.",
     "Ecomobi: credential đã nhận, endpoint API vẫn chưa resolve.",
     "MasOffer: credential đã nhận, endpoint/response vẫn chưa resolve.",
-    "PROMO canonical telemetry cũ 9h18 → cần ưu tiên đồng bộ counter writer/dashboard."
+    "PROMO canonical telemetry cũ 10h10 → cần ưu tiên đồng bộ counter writer/dashboard."
   ],
-  "generated_at": "2026-08-18T13:43:33.349564Z",
-  "local_time": "2026-08-18T20:43:33.349524+07:00",
+  "generated_at": "2026-08-18T14:35:36.580863Z",
+  "local_time": "2026-08-18T21:35:36.580825+07:00",
   "metrics": {
     "actionable_offers": 319,
-    "active_sources": 208,
+    "active_sources": 210,
     "at_campaigns": 0,
     "at_discounted_products": 0,
     "at_merchants": 2,
-    "at_offers": 2000,
+    "at_offers": 2070,
     "at_pending_campaigns": 0,
     "at_registered_campaigns": 0,
     "at_tiktok_products": 140,
     "ecomobi_candidates": 0,
-    "hunter_domains": 1723,
+    "hunter_domains": 1728,
     "literal_codes": 66,
     "masoffer_candidates": 0,
-    "master_sources": 1501,
+    "master_sources": 1506,
     "promo_scanned_sources": 326,
-    "review_sources": 1277,
-    "seen_urls": 664976
+    "review_sources": 1280,
+    "seen_urls": 671270
   },
   "platform_states": {
     "PREAUTH_PENDING_SESSION": 5,
@@ -33,5 +33,5 @@
     "WAIT_SOURCE_MAPPING": 1
   },
   "schema": "promo.hourly_summary.v1",
-  "text": "📊 PROMO MASTER — 20:43 18/08\n\n🔎 SOURCE\n• Master: 1501 (+1/1h) | Active 208 | Review 1277\n• Hunter: 1723 domains (+1/1h) | Seen 664,976\n• Lần quét gần nhất: +1 domains / 1606 URL | lỗi 309\n\n🎟 PROMO / CODE\n• Canonical B86: scanned 326 | deals 319 | codes 66 | READY 1\n• Telemetry age: 9h18\n\n🟠 ACCESSTRADE\n• Campaign: đăng ký 0 | approved 0 (+0/1h) | pending 0\n• Merchants có offer: 2 | top: shopee 1995, tikivn 5\n• Promo/deal: 2000 (+0/1h) | SP giảm giá: 0 (+0/1h)\n• TikTok Shop: 140 sản phẩm | AT state: OK/DEGRADED\n\n🟣 AFFILIATE KHÁC\n• Ecomobi: API_NOT_RESOLVED | candidates 0\n• MasOffer: API_NOT_RESOLVED | candidates 0\n\n🔐 L2\n• PROACTIVE_PREAUTH | bridge BROWSER_RUN_PROBE_VERIFIED_HANDOFF_PENDING | profiles 7\n\n🛠 PHÂN TÍCH / CẢI TIẾN\n• Hunter 403 cao 62.3% → giảm retry host bị chặn, ưu tiên nguồn official/Common Crawl.\n• AccessTrade: chưa thấy campaign approved/pending qua API → tiếp tục kiểm tra trạng thái approval và fallback campaign endpoint.\n• Ecomobi: credential đã nhận, endpoint API vẫn chưa resolve.\n• MasOffer: credential đã nhận, endpoint/response vẫn chưa resolve.\n• PROMO canonical telemetry cũ 9h18 → cần ưu tiên đồng bộ counter writer/dashboard."
+  "text": "📊 PROMO MASTER — 21:35 18/08\n\n🔎 SOURCE\n• Master: 1506 (+5/1h) | Active 210 | Review 1280\n• Hunter: 1728 domains (+5/1h) | Seen 671,270\n• Lần quét gần nhất: +5 domains / 1339 URL | lỗi 69\n\n🎟 PROMO / CODE\n• Canonical B86: scanned 326 | deals 319 | codes 66 | READY 1\n• Telemetry age: 10h10\n\n🟠 ACCESSTRADE\n• Campaign: đăng ký 0 | approved 0 (+0/1h) | pending 0\n• Merchants có offer: 2 | top: shopee 2064, tikivn 6\n• Promo/deal: 2070 (+70/1h) | SP giảm giá: 0 (+0/1h)\n• TikTok Shop: 140 sản phẩm | AT state: OK/DEGRADED\n\n🟣 AFFILIATE KHÁC\n• Ecomobi: API_NOT_RESOLVED | candidates 0\n• MasOffer: API_NOT_RESOLVED | candidates 0\n\n🔐 L2\n• PROACTIVE_PREAUTH | bridge BROWSER_RUN_PROBE_VERIFIED_HANDOFF_PENDING | profiles 7\n\n🛠 PHÂN TÍCH / CẢI TIẾN\n• Hunter 403 cao 97.1% → giảm retry host bị chặn, ưu tiên nguồn official/Common Crawl.\n• AccessTrade: chưa thấy campaign approved/pending qua API → tiếp tục kiểm tra trạng thái approval và fallback campaign endpoint.\n• Ecomobi: credential đã nhận, endpoint API vẫn chưa resolve.\n• MasOffer: credential đã nhận, endpoint/response vẫn chưa resolve.\n• PROMO canonical telemetry cũ 10h10 → cần ưu tiên đồng bộ counter writer/dashboard."
 }
