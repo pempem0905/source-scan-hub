@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-18T23:15:17.806438Z",
+  "generated_at": "2026-08-18T23:39:29.358165Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 6711,
-    "frontier_deferred_pending": 38510,
-    "frontier_pending": 45221,
-    "last_6_runs_new_domains": 13,
+    "frontier_active_pending": 7101,
+    "frontier_deferred_pending": 38484,
+    "frontier_pending": 45585,
+    "last_6_runs_new_domains": 15,
     "last_run": {
-      "at": "2026-08-18T23:09:30.270261Z",
+      "at": "2026-08-18T23:34:04.154463Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vn/*uu-dai*",
-        "*.com/vn/*voucher*",
-        "*.com/vn/*promotion*",
-        "*.com/vi-vn/*khuyen-mai*"
+        "*.com/vi-vn/*uu-dai*",
+        "*.com/vi-vn/*voucher*",
+        "*.com/vi-vn/*promotion*",
+        "*.net/vn/*khuyen-mai*"
       ],
-      "duration_s": 345.9,
-      "errors": 91,
-      "frontier_pending": 45221,
-      "new_domains": 1,
-      "processed": 1490,
-      "rate403": 0.738,
-      "rate429": 0.0
+      "duration_s": 323.4,
+      "errors": 117,
+      "frontier_pending": 45585,
+      "new_domains": 5,
+      "processed": 1516,
+      "rate403": 1.385,
+      "rate429": 0.132
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1928,
+    "master_domains": 1946,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 149,
+    "run_count": 150,
     "running": true,
-    "seen_urls": 805745,
-    "updated_at": "2026-08-18T23:15:16.164505Z"
+    "seen_urls": 812899,
+    "updated_at": "2026-08-18T23:39:27.521924Z"
   },
   "master_input": {
     "active_input_count": 226,
@@ -41,33 +41,33 @@
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 18,
       "FOOD_BEVERAGE": 28,
-      "GENERAL": 1465,
+      "GENERAL": 1478,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 33,
       "PROMO_L2": 15,
       "PROMO_RETAIL": 178,
-      "PUBLIC_HTTP": 1658,
+      "PUBLIC_HTTP": 1672,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 104,
-      "REVIEW_INPUT": 1430,
+      "RETAIL_ECOMMERCE": 105,
+      "REVIEW_INPUT": 1444,
       "SOURCE_HUNTER": 18,
-      "SOURCE_REVIEW": 1430,
+      "SOURCE_REVIEW": 1444,
       "TRAVEL_MOBILITY": 23
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 18,
-    "generated_at": "2026-08-18T23:15:17.593157Z",
+    "generated_at": "2026-08-18T23:39:29.135277Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1674,
-    "review_input_count": 1430,
+    "record_count": 1688,
+    "review_input_count": 1444,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1928,
+    "source_hunter_domains": 1946,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -386,62 +386,27 @@
     "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "thời trang giày dép khuyến mãi Việt Nam",
-      "thời trang giày dép ưu đãi Việt Nam",
-      "thời trang giày dép voucher Việt Nam",
-      "thời trang giày dép promotion Vietnam"
+      "trang sức khuyến mãi Việt Nam",
+      "trang sức ưu đãi Việt Nam",
+      "trang sức voucher Việt Nam",
+      "trang sức promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 126,
+    "cc_domain_page": 127,
     "frontier_scheduler": {
-      "active": 1490,
+      "active": 1516,
       "base_per_host_batch": 16,
-      "deferred": 38510,
+      "deferred": 38484,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 163
+      "unique_hosts": 176
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T09:55:03.714323Z",
-      "domain": "divano.com.au",
-      "radar": false,
-      "url": "https://divano.com.au/collections/eofy-sale?page=9",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T09:55:03.714323Z",
-      "domain": "salesforceben.com",
-      "radar": false,
-      "url": "https://salesforceben.com/a-day-in-the-life-of-a-salesforce-consultant/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T10:17:45.239764Z",
-      "domain": "teddybearland.co.uk",
-      "radar": false,
-      "url": "https://teddybearland.co.uk/product-category/sale/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T10:17:45.239764Z",
-      "domain": "revenue.nebraska.gov",
-      "radar": false,
-      "url": "https://revenue.nebraska.gov/businesses/nebraska-sales-and-use-tax",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T10:17:45.239764Z",
-      "domain": "tax.ri.gov",
-      "radar": false,
-      "url": "https://tax.ri.gov/tax-sections/sales-excise-taxes",
-      "via": "internal_promo"
-    },
     {
       "at": "2026-08-18T10:17:45.239764Z",
       "domain": "gtspirit.com",
@@ -1245,6 +1210,41 @@
       "domain": "pedroshoes.com",
       "radar": false,
       "url": "https://pedroshoes.com/sg",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-18T23:34:04.154463Z",
+      "domain": "christiesrealestate.com",
+      "radar": false,
+      "url": "https://christiesrealestate.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T23:34:04.154463Z",
+      "domain": "ca.monos.com",
+      "radar": false,
+      "url": "https://ca.monos.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T23:34:04.154463Z",
+      "domain": "eu.monos.com",
+      "radar": false,
+      "url": "https://eu.monos.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T23:34:04.154463Z",
+      "domain": "monos.au",
+      "radar": false,
+      "url": "https://monos.au/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T23:34:04.154463Z",
+      "domain": "vinhcara.com",
+      "radar": false,
+      "url": "https://vinhcara.com/",
       "via": "free_search"
     }
   ]
