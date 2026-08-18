@@ -1,0 +1,24 @@
+{
+  "schema": "promo.retail.probe_cache.delta.v1",
+  "source_worker": "PROMO Retail Shard",
+  "updated_at": "2026-08-19T00:55:26+07:00",
+  "entries": [
+    {
+      "url": "https://urbanrevivo.com.vn/pages/promotion",
+      "result": "LITERAL_CODES_ENQUEUED",
+      "code_signal": true,
+      "observed_literals": ["URFS08", "URPAY", "URWELCOME"],
+      "clean_literals": ["URFS08", "URPAY"],
+      "review_literals": ["URWELCOME"],
+      "notes": "URFS08 current through 31/08/2026 and URPAY through 30/09/2026 passed ACTIONABLE-VALUE-V2 and were enqueued. URWELCOME has concrete 10% new-member economics but no controlling end date, so REVIEW only.",
+      "checked_at": "2026-08-19T00:55:26+07:00"
+    },
+    {
+      "url": "https://shopee.vn/m/ma-giam-gia",
+      "result": "DYNAMIC_SAVE_VOUCHERS_NO_CLEAN_PLATFORM_LITERAL",
+      "code_signal": true,
+      "notes": "Official Shopee voucher surface instructs users to save vouchers to the account/voucher wallet; no clean platform-level current reusable literal token was exposed. Seller/product title tokens are not treated as Shopee platform promo codes.",
+      "checked_at": "2026-08-19T00:55:26+07:00"
+    }
+  ]
+}
