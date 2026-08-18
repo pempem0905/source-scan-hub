@@ -1,7 +1,7 @@
 {
   "alert_count": 5,
   "error": null,
-  "generated_at": "2026-08-18T15:33:36.850388Z",
+  "generated_at": "2026-08-18T16:33:52.889740Z",
   "schema": "promo.hourly_report_status.v1",
   "sent": true,
   "telegram_state": "SENT"
