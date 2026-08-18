@@ -1,6 +1,6 @@
 PROMO: 360 voucher/deal | 77 code
-Mới: +0 voucher/deal | +0 code | +27 source
-Source: 326/220 (148%)
+Mới: +0 voucher/deal | +0 code | +6 source
+Source: 326/223 (146%)
 L2: chưa login-ready; 7 profile đang xử lý
 ETA login: đang tự retry theo lượt free
 ETA all jobs: chưa đủ throughput canonical ổn định
