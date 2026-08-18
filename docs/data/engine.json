@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-18T00:28:10.634926Z",
+  "generated_at": "2026-08-18T02:00:52.282798Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 8060,
+    "frontier_active_pending": 6640,
     "frontier_deferred_pending": 38200,
-    "frontier_pending": 46260,
-    "last_6_runs_new_domains": 53,
+    "frontier_pending": 44840,
+    "last_6_runs_new_domains": 50,
     "last_run": {
-      "at": "2026-08-18T00:24:08.425457Z",
+      "at": "2026-08-18T01:55:25.712911Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.net/vn/*uu-dai*",
-        "*.com/vietnam/*promotion*",
-        "*.vn/*khuyen-mai*",
-        "*.vn/*khuyenmai*"
+        "*.vn/*uu-dai*",
+        "*.vn/*uudai*",
+        "*.vn/*voucher*",
+        "*.vn/*promotion*"
       ],
-      "duration_s": 240.9,
-      "errors": 118,
-      "frontier_pending": 46260,
-      "new_domains": 8,
+      "duration_s": 325.3,
+      "errors": 102,
+      "frontier_pending": 44840,
+      "new_domains": 5,
       "processed": 1800,
-      "rate403": 0.611,
+      "rate403": 0.389,
       "rate429": 0.056
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1478,
+    "master_domains": 1489,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 106,
+    "run_count": 107,
     "running": true,
-    "seen_urls": 497521,
-    "updated_at": "2026-08-18T00:28:09.359556Z"
+    "seen_urls": 504207,
+    "updated_at": "2026-08-18T02:00:50.976276Z"
   },
   "master_input": {
-    "active_input_count": 162,
+    "active_input_count": 164,
     "counts": {
-      "ACTIVE_INPUT": 162,
+      "ACTIVE_INPUT": 164,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 36,
       "DISCOVERY_ONLY": 16,
-      "FOOD_BEVERAGE": 24,
-      "GENERAL": 1092,
+      "FOOD_BEVERAGE": 25,
+      "GENERAL": 1100,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 116,
-      "PUBLIC_HTTP": 1256,
+      "PROMO_RETAIL": 118,
+      "PUBLIC_HTTP": 1265,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 83,
-      "REVIEW_INPUT": 1094,
+      "REVIEW_INPUT": 1101,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1094,
+      "SOURCE_REVIEW": 1101,
       "TRAVEL_MOBILITY": 20
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-18T00:28:10.436585Z",
+    "generated_at": "2026-08-18T02:00:52.141390Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1272,
-    "review_input_count": 1094,
+    "record_count": 1281,
+    "review_input_count": 1101,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1478,
+    "source_hunter_domains": 1489,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -234,7 +234,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-17T23:40:54.086988Z",
+    "updated_at": "2026-08-18T01:53:26.762628Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -252,14 +252,14 @@
       "login_before_demand": true,
       "runtime_probe_verified": true,
       "permission_required": {
-        "state": "WAITING_FREE_DAILY_QUOTA",
-        "reason": "The verified free Browser Run lane is waiting for its next daily acquisition window.",
-        "safe_action": "No user action is required; the bridge will retry automatically after the recorded UTC retry time.",
-        "note": "No login alert is emitted until a real secure takeover surface is active."
+        "state": "WAITING_RUNTIME_WINDOW",
+        "reason": "No real secure takeover surface is active right now.",
+        "safe_action": "No user action is required until bridge_status becomes TAKEOVER_READY.",
+        "note": "The bridge will retry autonomously; sensitive login material remains runtime-only."
       },
       "end_to_end_verified": false,
-      "free_daily_quota_wait": true,
-      "next_retry_at": "2026-08-18T00:05:00Z"
+      "free_daily_quota_wait": false,
+      "next_retry_at": null
     },
     "platforms": {
       "uniqlo": {
@@ -322,65 +322,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 3,
+    "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "viễn thông internet khuyến mãi Việt Nam",
-      "viễn thông internet ưu đãi Việt Nam",
-      "viễn thông internet voucher Việt Nam",
-      "viễn thông internet promotion Vietnam"
+      "giáo dục khuyến mãi Việt Nam",
+      "giáo dục ưu đãi Việt Nam",
+      "giáo dục voucher Việt Nam",
+      "giáo dục promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 94,
+    "cc_domain_page": 95,
     "frontier_scheduler": {
       "active": 1800,
       "base_per_host_batch": 16,
       "deferred": 38200,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.0,
+      "previous_429_rate": 0.056,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 268
+      "unique_hosts": 262
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-17T20:02:09.551533Z",
-      "domain": "roofsalesmastery.com",
-      "radar": false,
-      "url": "https://roofsalesmastery.com/roof-sales-mastery/feed/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T20:02:09.551533Z",
-      "domain": "zapier.com",
-      "radar": false,
-      "url": "https://zapier.com/l/contact-sales?demo_source=cs_nav_header",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T20:02:09.551533Z",
-      "domain": "aloware.com",
-      "radar": false,
-      "url": "https://aloware.com/ai-voice-agent/automotive-dealerships",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T20:02:09.551533Z",
-      "domain": "salesoutcomes.com",
-      "radar": false,
-      "url": "https://salesoutcomes.com/b2b-sales-and-marketing-insights/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T20:35:37.010293Z",
-      "domain": "ascenttrainings.com",
-      "radar": false,
-      "url": "https://ascenttrainings.com/feeds/service/saas-sales-coach",
-      "via": "internal_promo"
-    },
     {
       "at": "2026-08-17T20:35:37.010293Z",
       "domain": "bitrix24.vn",
@@ -1184,6 +1149,41 @@
       "domain": "jobs.sellwerk.de",
       "radar": false,
       "url": "https://jobs.sellwerk.de/karriere/Sales-Manager-mwd-de-f2329.html?sid=868abf0994e4ff3858573d1b3a5c561e",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T01:55:25.712911Z",
+      "domain": "prlog.org",
+      "radar": false,
+      "url": "https://prlog.org/news/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T01:55:25.712911Z",
+      "domain": "davidmeermanscott.com",
+      "radar": false,
+      "url": "https://davidmeermanscott.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T01:55:25.712911Z",
+      "domain": "knightfrank.co.uk",
+      "radar": false,
+      "url": "https://knightfrank.co.uk/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T01:55:25.712911Z",
+      "domain": "livespace.io",
+      "radar": false,
+      "url": "https://livespace.io/en/sales-chatbots/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T01:55:25.712911Z",
+      "domain": "salesforceway.com",
+      "radar": false,
+      "url": "https://salesforceway.com/podcast/ai-skills-salesforce-developers-need/",
       "via": "internal_promo"
     }
   ]
