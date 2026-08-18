@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-18T14:09:56.188885Z",
+  "generated_at": "2026-08-18T14:51:13.563408Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 6287,
-    "frontier_deferred_pending": 38661,
-    "frontier_pending": 44948,
-    "last_6_runs_new_domains": 30,
+    "frontier_active_pending": 6518,
+    "frontier_deferred_pending": 38598,
+    "frontier_pending": 45116,
+    "last_6_runs_new_domains": 31,
     "last_run": {
-      "at": "2026-08-18T14:06:01.474716Z",
+      "at": "2026-08-18T14:47:04.238244Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vn/*uu-dai*",
-        "*.com/vn/*voucher*",
-        "*.com/vn/*promotion*",
-        "*.com/vi-vn/*khuyen-mai*"
+        "*.com/vi-vn/*uu-dai*",
+        "*.com/vi-vn/*voucher*",
+        "*.com/vi-vn/*promotion*",
+        "*.net/vn/*khuyen-mai*"
       ],
-      "duration_s": 233.2,
-      "errors": 69,
-      "frontier_pending": 44948,
-      "new_domains": 5,
-      "processed": 1339,
-      "rate403": 0.971,
-      "rate429": 0.075
+      "duration_s": 247.8,
+      "errors": 205,
+      "frontier_pending": 45116,
+      "new_domains": 8,
+      "processed": 1402,
+      "rate403": 0.499,
+      "rate429": 6.277
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1728,
+    "master_domains": 1751,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 129,
+    "run_count": 130,
     "running": true,
-    "seen_urls": 671270,
-    "updated_at": "2026-08-18T14:09:54.657254Z"
+    "seen_urls": 677860,
+    "updated_at": "2026-08-18T14:51:11.997940Z"
   },
   "master_input": {
-    "active_input_count": 210,
+    "active_input_count": 217,
     "counts": {
-      "ACTIVE_INPUT": 210,
+      "ACTIVE_INPUT": 217,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 27,
-      "GENERAL": 1309,
+      "GENERAL": 1327,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 32,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 163,
-      "PUBLIC_HTTP": 1490,
+      "PROMO_RETAIL": 170,
+      "PUBLIC_HTTP": 1511,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 95,
-      "REVIEW_INPUT": 1280,
+      "RETAIL_ECOMMERCE": 98,
+      "REVIEW_INPUT": 1294,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1280,
+      "SOURCE_REVIEW": 1294,
       "TRAVEL_MOBILITY": 21
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-18T14:09:56.024988Z",
+    "generated_at": "2026-08-18T14:51:13.392484Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1506,
-    "review_input_count": 1280,
+    "record_count": 1527,
+    "review_input_count": 1294,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1728,
+    "source_hunter_domains": 1751,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -386,83 +386,27 @@
     "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "giao đồ ăn gọi xe khuyến mãi Việt Nam",
-      "giao đồ ăn gọi xe ưu đãi Việt Nam",
-      "giao đồ ăn gọi xe voucher Việt Nam",
-      "giao đồ ăn gọi xe promotion Vietnam"
+      "ngân hàng thẻ tín dụng khuyến mãi Việt Nam",
+      "ngân hàng thẻ tín dụng ưu đãi Việt Nam",
+      "ngân hàng thẻ tín dụng voucher Việt Nam",
+      "ngân hàng thẻ tín dụng promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 112,
+    "cc_domain_page": 113,
     "frontier_scheduler": {
-      "active": 1339,
+      "active": 1402,
       "base_per_host_batch": 16,
-      "deferred": 38661,
+      "deferred": 38598,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 8.032,
+      "previous_429_rate": 0.075,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 175
+      "unique_hosts": 203
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T01:55:25.712911Z",
-      "domain": "knightfrank.co.uk",
-      "radar": false,
-      "url": "https://knightfrank.co.uk/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T01:55:25.712911Z",
-      "domain": "livespace.io",
-      "radar": false,
-      "url": "https://livespace.io/en/sales-chatbots/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T01:55:25.712911Z",
-      "domain": "salesforceway.com",
-      "radar": false,
-      "url": "https://salesforceway.com/podcast/ai-skills-salesforce-developers-need/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T02:47:59.154341Z",
-      "domain": "wonderway.io",
-      "radar": false,
-      "url": "https://wonderway.io/ai-coach-sales-qa",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T02:47:59.154341Z",
-      "domain": "mercuri.se",
-      "radar": false,
-      "url": "https://mercuri.se/sales-training-banking/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T02:47:59.154341Z",
-      "domain": "mercuri.nl",
-      "radar": false,
-      "url": "https://mercuri.nl/sales-training/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T02:47:59.154341Z",
-      "domain": "mercuri.si",
-      "radar": false,
-      "url": "https://mercuri.si/sales-consulting/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T02:47:59.154341Z",
-      "domain": "mercuri.fi",
-      "radar": false,
-      "url": "https://mercuri.fi/the-future-state-of-sales-skills-2025-tutkimus/",
-      "via": "internal_promo"
-    },
     {
       "at": "2026-08-18T02:47:59.154341Z",
       "domain": "nygci.com",
@@ -1245,6 +1189,62 @@
       "domain": "9to5toys.com",
       "radar": false,
       "url": "https://9to5toys.com/2026/08/04/tuesday-apple-tv-deals-best/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T14:47:04.238244Z",
+      "domain": "jossandmain.com",
+      "radar": false,
+      "url": "https://jossandmain.com/m/shop-sale",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T14:47:04.238244Z",
+      "domain": "coxautoinc.com",
+      "radar": false,
+      "url": "https://coxautoinc.com/deal-central/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T14:47:04.238244Z",
+      "domain": "shopmelissa.com",
+      "radar": false,
+      "url": "https://shopmelissa.com/collections/adult-sale",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T14:47:04.238244Z",
+      "domain": "knix.com",
+      "radar": false,
+      "url": "https://knix.com/collections/active-offers",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T14:47:04.238244Z",
+      "domain": "frame-store.com",
+      "radar": false,
+      "url": "https://frame-store.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T14:47:04.238244Z",
+      "domain": "military.com",
+      "radar": false,
+      "url": "https://military.com/about-us/advertising-and-sales",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T14:47:04.238244Z",
+      "domain": "madeincookware.com",
+      "radar": false,
+      "url": "https://madeincookware.com/industry/dealer-inquiries",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T14:47:04.238244Z",
+      "domain": "360smsapp.com",
+      "radar": false,
+      "url": "https://360smsapp.com/salesforce-zalo/",
       "via": "internal_promo"
     }
   ]
