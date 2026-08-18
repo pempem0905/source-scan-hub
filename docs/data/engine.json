@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-18T17:46:06.322435Z",
+  "generated_at": "2026-08-18T18:05:58.245232Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 5508,
-    "frontier_deferred_pending": 38739,
-    "frontier_pending": 44247,
-    "last_6_runs_new_domains": 28,
+    "frontier_active_pending": 5683,
+    "frontier_deferred_pending": 38711,
+    "frontier_pending": 44394,
+    "last_6_runs_new_domains": 8,
     "last_run": {
-      "at": "2026-08-18T17:41:55.474430Z",
+      "at": "2026-08-18T18:01:26.462412Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.net/vn/*uu-dai*",
-        "*.com/vietnam/*promotion*",
-        "*.vn/*khuyen-mai*",
-        "*.vn/*khuyenmai*"
+        "*.vn/*uu-dai*",
+        "*.vn/*uudai*",
+        "*.vn/*voucher*",
+        "*.vn/*promotion*"
       ],
-      "duration_s": 249.2,
-      "errors": 61,
-      "frontier_pending": 44247,
-      "new_domains": 1,
-      "processed": 1261,
-      "rate403": 0.397,
-      "rate429": 0.0
+      "duration_s": 269.9,
+      "errors": 131,
+      "frontier_pending": 44394,
+      "new_domains": 4,
+      "processed": 1289,
+      "rate403": 0.853,
+      "rate429": 0.155
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1836,
+    "master_domains": 1840,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 136,
+    "run_count": 137,
     "running": true,
-    "seen_urls": 722942,
-    "updated_at": "2026-08-18T17:46:04.635206Z"
+    "seen_urls": 728725,
+    "updated_at": "2026-08-18T18:05:56.367631Z"
   },
   "master_input": {
-    "active_input_count": 218,
+    "active_input_count": 219,
     "counts": {
-      "ACTIVE_INPUT": 218,
+      "ACTIVE_INPUT": 219,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 27,
-      "GENERAL": 1387,
+      "GENERAL": 1391,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 32,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 171,
-      "PUBLIC_HTTP": 1571,
+      "PROMO_RETAIL": 172,
+      "PUBLIC_HTTP": 1575,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 98,
-      "REVIEW_INPUT": 1353,
+      "REVIEW_INPUT": 1356,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1353,
+      "SOURCE_REVIEW": 1356,
       "TRAVEL_MOBILITY": 21
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-18T17:46:06.112322Z",
+    "generated_at": "2026-08-18T18:05:58.060018Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1587,
-    "review_input_count": 1353,
+    "record_count": 1591,
+    "review_input_count": 1356,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1836,
+    "source_hunter_domains": 1840,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -295,7 +295,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-18T16:49:38.771696Z",
+    "updated_at": "2026-08-18T17:45:13.672630Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -386,55 +386,27 @@
     "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "spa thẩm mỹ khuyến mãi Việt Nam",
-      "spa thẩm mỹ ưu đãi Việt Nam",
-      "spa thẩm mỹ voucher Việt Nam",
-      "spa thẩm mỹ promotion Vietnam"
+      "ô tô xe máy khuyến mãi Việt Nam",
+      "ô tô xe máy ưu đãi Việt Nam",
+      "ô tô xe máy voucher Việt Nam",
+      "ô tô xe máy promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
     "cc_domain_page": 117,
     "frontier_scheduler": {
-      "active": 1261,
+      "active": 1289,
       "base_per_host_batch": 16,
-      "deferred": 38739,
+      "deferred": 38711,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.14,
+      "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 141
+      "unique_hosts": 194
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T07:06:34.248259Z",
-      "domain": "braveheartsales.com",
-      "radar": false,
-      "url": "https://braveheartsales.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T07:06:34.248259Z",
-      "domain": "learn.salesenablementcollective.com",
-      "radar": false,
-      "url": "https://learn.salesenablementcollective.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T07:06:34.248259Z",
-      "domain": "thitruongvietnam.vn",
-      "radar": false,
-      "url": "https://thitruongvietnam.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-18T07:06:34.248259Z",
-      "domain": "abchome.com",
-      "radar": false,
-      "url": "https://abchome.com/collections/on-sale-furniture.atom",
-      "via": "internal_promo"
-    },
     {
       "at": "2026-08-18T07:06:34.248259Z",
       "domain": "reviewjournal.com",
@@ -1245,6 +1217,34 @@
       "domain": "taynguyen.seoulcenter.com.vn",
       "radar": false,
       "url": "https://taynguyen.seoulcenter.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-18T18:01:26.462412Z",
+      "domain": "xbox.com",
+      "radar": false,
+      "url": "https://xbox.com/en-us/xbox-game-pass/deals?xr=shellnav",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T18:01:26.462412Z",
+      "domain": "lisasaysgah.com",
+      "radar": false,
+      "url": "https://lisasaysgah.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T18:01:26.462412Z",
+      "domain": "outerknown.com",
+      "radar": false,
+      "url": "https://outerknown.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T18:01:26.462412Z",
+      "domain": "24h.com.vn",
+      "radar": false,
+      "url": "https://24h.com.vn/",
       "via": "free_search"
     }
   ]
