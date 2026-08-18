@@ -1,0 +1,70 @@
+name: Affiliate Network Feeds
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/affiliate-network-feeds.yml'
+      - 'integration/affiliate_networks_ingest.py'
+  schedule:
+    - cron: '9,39 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: promo-affiliate-network-feeds
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      ECOMOBI_API_KEY: ${{ secrets.ECOMOBI_API_KEY }}
+      ECOMOBI_API_SECRET: ${{ secrets.ECOMOBI_API_SECRET }}
+      ECOMOBI_API_TOKEN: ${{ secrets.ECOMOBI_API_TOKEN }}
+      MASOFFER_API_TOKEN: ${{ secrets.MASOFFER_API_TOKEN }}
+      MASOFFER_PUBLISHER_TOKEN: ${{ secrets.MASOFFER_PUBLISHER_TOKEN }}
+      ECOMOBI_API_URLS: ${{ vars.ECOMOBI_API_URLS }}
+      MASOFFER_API_URLS: ${{ vars.MASOFFER_API_URLS }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Ingest Ecomobi Passio and MasOffer feeds
+        run: python3 integration/affiliate_networks_ingest.py
+
+      - name: Validate generated feed
+        run: |
+          python3 -m py_compile integration/affiliate_networks_ingest.py
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          for name in ('ecomobi_handoff_v1.jsonl','masoffer_handoff_v1.jsonl'):
+              p=Path('integration')/name
+              if not p.exists():
+                  raise SystemExit(f'missing {name}')
+              for line in p.read_text(errors='replace').splitlines():
+                  json.loads(line)
+          status=json.loads(Path('integration/affiliate_networks_status.json').read_text())
+          assert status.get('production_write') is False
+          assert status.get('verification_required') is True
+          print('Affiliate feed validation OK')
+          PY
+
+      - name: Persist affiliate network feeds
+        run: |
+          git config user.name "promo-affiliate-feed-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add integration/ecomobi_handoff_v1.jsonl integration/masoffer_handoff_v1.jsonl integration/affiliate_networks_status.json
+          if git diff --cached --quiet; then
+            echo "No affiliate feed changes"
+            exit 0
+          fi
+          git commit -m "Refresh Ecomobi and MasOffer feeds [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
