@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-18T17:16:54.046169Z",
+  "generated_at": "2026-08-18T17:46:06.322435Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 6631,
-    "frontier_deferred_pending": 38574,
-    "frontier_pending": 45205,
-    "last_6_runs_new_domains": 35,
+    "frontier_active_pending": 5508,
+    "frontier_deferred_pending": 38739,
+    "frontier_pending": 44247,
+    "last_6_runs_new_domains": 28,
     "last_run": {
-      "at": "2026-08-18T17:11:58.442906Z",
+      "at": "2026-08-18T17:41:55.474430Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vi-vn/*uu-dai*",
-        "*.com/vi-vn/*voucher*",
-        "*.com/vi-vn/*promotion*",
-        "*.net/vn/*khuyen-mai*"
+        "*.net/vn/*uu-dai*",
+        "*.com/vietnam/*promotion*",
+        "*.vn/*khuyen-mai*",
+        "*.vn/*khuyenmai*"
       ],
-      "duration_s": 293.8,
-      "errors": 46,
-      "frontier_pending": 45205,
-      "new_domains": 3,
-      "processed": 1426,
-      "rate403": 0.07,
-      "rate429": 0.14
+      "duration_s": 249.2,
+      "errors": 61,
+      "frontier_pending": 44247,
+      "new_domains": 1,
+      "processed": 1261,
+      "rate403": 0.397,
+      "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1835,
+    "master_domains": 1836,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 135,
+    "run_count": 136,
     "running": true,
-    "seen_urls": 717437,
-    "updated_at": "2026-08-18T17:16:52.194426Z"
+    "seen_urls": 722942,
+    "updated_at": "2026-08-18T17:46:04.635206Z"
   },
   "master_input": {
     "active_input_count": 218,
@@ -41,33 +41,33 @@
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 27,
-      "GENERAL": 1386,
+      "GENERAL": 1387,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 32,
       "PROMO_L2": 15,
       "PROMO_RETAIL": 171,
-      "PUBLIC_HTTP": 1570,
+      "PUBLIC_HTTP": 1571,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 98,
-      "REVIEW_INPUT": 1352,
+      "REVIEW_INPUT": 1353,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1352,
+      "SOURCE_REVIEW": 1353,
       "TRAVEL_MOBILITY": 21
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-18T17:16:53.763306Z",
+    "generated_at": "2026-08-18T17:46:06.112322Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1586,
-    "review_input_count": 1352,
+    "record_count": 1587,
+    "review_input_count": 1353,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1835,
+    "source_hunter_domains": 1836,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -383,37 +383,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 0,
+    "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "phòng gym fitness khuyến mãi Việt Nam",
-      "phòng gym fitness ưu đãi Việt Nam",
-      "phòng gym fitness voucher Việt Nam",
-      "phòng gym fitness promotion Vietnam"
+      "spa thẩm mỹ khuyến mãi Việt Nam",
+      "spa thẩm mỹ ưu đãi Việt Nam",
+      "spa thẩm mỹ voucher Việt Nam",
+      "spa thẩm mỹ promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
     "cc_domain_page": 117,
     "frontier_scheduler": {
-      "active": 1426,
+      "active": 1261,
       "base_per_host_batch": 16,
-      "deferred": 38574,
+      "deferred": 38739,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.667,
+      "previous_429_rate": 0.14,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 152
+      "unique_hosts": 141
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T07:06:34.248259Z",
-      "domain": "coevera.com",
-      "radar": false,
-      "url": "https://coevera.com/crm/software/sales-reports/",
-      "via": "internal_promo"
-    },
     {
       "at": "2026-08-18T07:06:34.248259Z",
       "domain": "braveheartsales.com",
@@ -1246,6 +1239,13 @@
       "radar": false,
       "url": "https://metro.co.uk/2025/11/28/best-black-friday-2025-uk-deals-ps5-xbox-switch-2-24887088/",
       "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T17:41:55.474430Z",
+      "domain": "taynguyen.seoulcenter.com.vn",
+      "radar": false,
+      "url": "https://taynguyen.seoulcenter.com.vn/",
+      "via": "free_search"
     }
   ]
 }
