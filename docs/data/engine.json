@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-18T10:54:17.394443Z",
+  "generated_at": "2026-08-18T11:07:41.537684Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 8661,
-    "frontier_deferred_pending": 38420,
-    "frontier_pending": 47081,
-    "last_6_runs_new_domains": 39,
+    "frontier_active_pending": 6337,
+    "frontier_deferred_pending": 38416,
+    "frontier_pending": 44753,
+    "last_6_runs_new_domains": 38,
     "last_run": {
-      "at": "2026-08-18T10:49:45.699919Z",
+      "at": "2026-08-18T11:03:35.869801Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*uu-dai*",
-        "*.vn/*uudai*",
-        "*.vn/*voucher*",
-        "*.vn/*promotion*"
+        "*.vn/*offers*",
+        "*.vn/*deals*",
+        "*.vn/*sale*",
+        "*.com/vn/*khuyen-mai*"
       ],
-      "duration_s": 270.2,
-      "errors": 101,
-      "frontier_pending": 47081,
-      "new_domains": 6,
-      "processed": 1580,
-      "rate403": 0.316,
-      "rate429": 0.063
+      "duration_s": 244.2,
+      "errors": 117,
+      "frontier_pending": 44753,
+      "new_domains": 4,
+      "processed": 1584,
+      "rate403": 0.379,
+      "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1641,
+    "master_domains": 1657,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 122,
+    "run_count": 123,
     "running": true,
-    "seen_urls": 620082,
-    "updated_at": "2026-08-18T10:54:15.915142Z"
+    "seen_urls": 626483,
+    "updated_at": "2026-08-18T11:07:40.030166Z"
   },
   "master_input": {
-    "active_input_count": 202,
+    "active_input_count": 203,
     "counts": {
-      "ACTIVE_INPUT": 202,
+      "ACTIVE_INPUT": 203,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 27,
-      "GENERAL": 1228,
+      "GENERAL": 1243,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 32,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 155,
-      "PUBLIC_HTTP": 1408,
+      "PROMO_RETAIL": 156,
+      "PUBLIC_HTTP": 1423,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 94,
-      "REVIEW_INPUT": 1206,
+      "REVIEW_INPUT": 1220,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1206,
+      "SOURCE_REVIEW": 1220,
       "TRAVEL_MOBILITY": 21
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-18T10:54:17.184265Z",
+    "generated_at": "2026-08-18T11:07:41.326759Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1424,
-    "review_input_count": 1206,
+    "record_count": 1439,
+    "review_input_count": 1220,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1641,
+    "source_hunter_domains": 1657,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -86,6 +86,12 @@
       "source_input": "integration/master_input_sources_v1.jsonl",
       "dispatch_plan": "integration/promo_dispatch_plan_v1.jsonl",
       "l2_shadow_queue": "l2/candidate-queue.jsonl",
+      "external_candidate_feeds": [
+        "integration/accesstrade_handoff_v1.jsonl"
+      ],
+      "affiliate_product_feeds": [
+        "integration/accesstrade_tiktok_feed.jsonl"
+      ],
       "value_filter": "ACTIONABLE-VALUE-V2",
       "master_rule": "single-writer",
       "migration_mode": "BRIDGE_SHADOW"
@@ -146,6 +152,7 @@
           "global dedup",
           "validate READY queue",
           "validate L2 candidates only after promotion from shadow",
+          "validate affiliate-feed candidates against merchant/official source",
           "atomic commit",
           "post-commit verification"
         ],
@@ -157,6 +164,7 @@
         "role": "dispatcher-health-relay",
         "responsibilities": [
           "read master input and dispatch plan",
+          "read external candidate feed manifests",
           "worker health",
           "producer-stall detection",
           "commit-stall detection",
@@ -190,10 +198,20 @@
         "project_id": "PROMO-L2-ROUTER-V1",
         "role": "hard access lanes and shadow extraction",
         "production_write": false
+      },
+      "accesstrade_feed": {
+        "project_id": "PROMO-ACCESSTRADE-FEED-V1",
+        "role": "fast affiliate voucher/deal discovery plus TikTok Shop product feed",
+        "candidate_feed": "integration/accesstrade_handoff_v1.jsonl",
+        "tiktok_feed": "integration/accesstrade_tiktok_feed.jsonl",
+        "production_write": false,
+        "verification_required": true
       }
     },
     "data_rules": {
       "official_source_first": true,
+      "affiliate_feed_requires_official_verification": true,
+      "affiliate_links_are_never_primary_evidence": true,
       "child_detail_terms_override_hubs": true,
       "literal_code_requires_exact_visible_contextual_evidence": true,
       "raw_regex_code_match_is_never_a_verified_code": true,
@@ -322,58 +340,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 0,
+    "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "thời trang giày dép khuyến mãi Việt Nam",
-      "thời trang giày dép ưu đãi Việt Nam",
-      "thời trang giày dép voucher Việt Nam",
-      "thời trang giày dép promotion Vietnam"
+      "trang sức khuyến mãi Việt Nam",
+      "trang sức ưu đãi Việt Nam",
+      "trang sức voucher Việt Nam",
+      "trang sức promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 107,
+    "cc_domain_page": 108,
     "frontier_scheduler": {
-      "active": 1580,
+      "active": 1584,
       "base_per_host_batch": 16,
-      "deferred": 38420,
+      "deferred": 38416,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 5.463,
+      "previous_429_rate": 0.063,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 186
+      "unique_hosts": 192
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-17T23:09:37.227774Z",
-      "domain": "iowadot.gov",
-      "radar": false,
-      "url": "https://iowadot.gov/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T23:09:37.227774Z",
-      "domain": "knightfrank.com",
-      "radar": false,
-      "url": "https://knightfrank.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T23:09:37.227774Z",
-      "domain": "mercuri.hr",
-      "radar": false,
-      "url": "https://mercuri.hr/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T23:09:37.227774Z",
-      "domain": "mikebrunel.com",
-      "radar": false,
-      "url": "https://mikebrunel.com/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-17T23:09:37.227774Z",
       "domain": "simon-kucher.com",
@@ -1184,6 +1174,34 @@
       "domain": "popsci.com",
       "radar": false,
       "url": "https://popsci.com/gear/rosetta-stone-new-years-deal-2026/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T11:03:35.869801Z",
+      "domain": "livingsocial.com",
+      "radar": false,
+      "url": "https://livingsocial.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T11:03:35.869801Z",
+      "domain": "skims.com",
+      "radar": false,
+      "url": "https://skims.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T11:03:35.869801Z",
+      "domain": "trangsucdaquy.vn",
+      "radar": false,
+      "url": "https://trangsucdaquy.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-18T11:03:35.869801Z",
+      "domain": "tax.thomsonreuters.com",
+      "radar": false,
+      "url": "https://tax.thomsonreuters.com/en/corporation-solutions/c/automate-tax-returns-with-onesource-sales-and-use-tax-ai",
       "via": "internal_promo"
     }
   ]
