@@ -1,0 +1,22 @@
+{
+  "schema": "promo.retail.telemetry.v1",
+  "source_worker": "PROMO Retail Shard",
+  "fast_probes": 24,
+  "shortlisted": 7,
+  "deep_validations": 7,
+  "cache_skips": 8,
+  "sources_read": 16,
+  "code_likely_sources_read": 7,
+  "no_code_reads": 9,
+  "family_rotations": 6,
+  "offers_found": 8,
+  "voucher_benefits_found": 7,
+  "literal_codes_found": 0,
+  "codes_per_10_reads": 0.0,
+  "enqueued": 0,
+  "blocked": 0,
+  "duplicates": 4,
+  "last_run_at": "2026-08-18T15:54:37+07:00",
+  "lovable_calls": 0,
+  "notes": "GitHub-only TURBO SCAN V2. No new exact reusable public code survived ACTIVE/actionable/dedup validation. Four current Pharmacity Q3 ZaloPay literals were duplicates already in handoff. Expired literals and undated GALAXYQ8 were rejected. Canonical counters untouched."
+}
