@@ -1,0 +1,29 @@
+{
+  "schema": "promo.retail.telemetry.v1",
+  "source_worker": "PROMO Retail Shard",
+  "pipeline": "TURBO_SCAN_V2",
+  "fast_probes": 30,
+  "shortlisted": 5,
+  "deep_validations": 5,
+  "cache_skips": 0,
+  "sources_read": 10,
+  "code_likely_sources_read": 5,
+  "no_code_reads": 6,
+  "family_rotations": 3,
+  "offers_found": 2,
+  "voucher_benefits_found": 2,
+  "literal_codes_found": 4,
+  "codes_per_10_reads": 4.0,
+  "enqueued": 1,
+  "blocked": 0,
+  "duplicates": 5,
+  "last_run_at": "2026-08-19T02:57:54+07:00",
+  "lovable_calls": 0,
+  "notes": [
+    "Observed current exact Pharmacity literals ZPPMC15, TRASAUPMC35, ZPPMC, TRASAUPMC; all already present in GitHub retail handoff, so not re-enqueued.",
+    "Galaxy x ShopeePay August voucher is current but already present in GitHub retail handoff.",
+    "Galaxy x KFC exposes account-issued e-vouchers rather than a reusable public literal; not counted as literal code.",
+    "Expired Bách hóa XANH ZLPBHX and Galaxy PHIMVIET evidence rejected by current-date gate.",
+    "New clean actionable no-literal CellphoneS x Nam A Bank JCB offer written to same-run handoff."
+  ]
+}
