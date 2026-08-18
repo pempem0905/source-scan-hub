@@ -12,8 +12,9 @@ REPO = ROOT.parent
 STATE = ROOT / "state.json"
 DOMAINS = ROOT / "master_domains.txt"
 SEEN = ROOT / "seen_urls.txt"
+CATALOG = REPO / "integration" / "consumer_coverage_catalog.json"
 ENV = REPO / ".env"
-UA = "SourceScanFree/1.0 (Vietnam promo source discovery; GitHub Actions)"
+UA = "SourceScanFree/1.1 (Vietnam promo source discovery; GitHub Actions)"
 CTX = ssl.create_default_context()
 
 
@@ -70,6 +71,18 @@ def normalize_domain(v):
     return v
 
 
+def coverage_catalog_domains():
+    data = load_json(CATALOG, {"categories": []})
+    out = []
+    for category in data.get("categories") or []:
+        for target in category.get("targets") or []:
+            for raw in target.get("domains") or []:
+                d = normalize_domain(raw)
+                if d and d not in out:
+                    out.append(d)
+    return out
+
+
 def import_legacy_domains():
     env = read_env()
     base = env.get("SUPABASE_URL") or env.get("VITE_SUPABASE_URL")
@@ -100,6 +113,27 @@ def main():
     state = load_json(STATE, {"version": 1, "run_count": 0, "cc_pattern_cursor": 0, "frontier": [], "history": []})
     domains = set(lines(DOMAINS))
     seen = set(lines(SEEN))
+    frontier = list(state.get("frontier") or [])
+    max_frontier = 40000
+
+    # Catalog thực dụng được seed trước long-tail discovery.
+    catalog = coverage_catalog_domains()
+    before_catalog = len(domains)
+    domains.update(catalog)
+    catalog_domain_added = len(domains) - before_catalog
+    catalog_seed_added = 0
+    promo = ["khuyen-mai", "uu-dai", "voucher", "promotion"]
+    for d in catalog:
+        root = f"https://{d}/"
+        candidates = [root, root + "sitemap.xml"] + [root + p for p in promo]
+        for u in candidates:
+            if len(frontier) >= max_frontier:
+                break
+            if u in seen:
+                continue
+            seen.add(u)
+            frontier.append({"url": u, "via": "coverage_catalog", "seed": True})
+            catalog_seed_added += 1
 
     try:
         cc = latest_cc()
@@ -117,15 +151,11 @@ def main():
         if status in {"ok", "capped"}:
             state["legacy_import_complete"] = True
         state["legacy_import_new_domains"] = len(domains) - before
-        save_lines(DOMAINS, domains)
 
     ordered = sorted(domains)
     cursor = int(state.get("legacy_seed_cursor", 0))
-    frontier = list(state.get("frontier") or [])
-    max_frontier = 40000
     added = 0
     batch_domains = ordered[cursor:cursor + 220]
-    promo = ["khuyen-mai", "uu-dai", "voucher", "promotion"]
     for d in batch_domains:
         root = f"https://{d}/"
         candidates = [root, root + "sitemap.xml"] + [root + p for p in promo]
@@ -139,16 +169,22 @@ def main():
             added += 1
     if ordered:
         state["legacy_seed_cursor"] = (cursor + len(batch_domains)) % len(ordered)
+
+    state["coverage_catalog_domains"] = len(catalog)
+    state["coverage_catalog_new_domains"] = catalog_domain_added
+    state["coverage_catalog_seed_added_this_run"] = catalog_seed_added
     state["legacy_seed_added_this_run"] = added
     state["frontier"] = frontier[:max_frontier]
     STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
     save_lines(SEEN, seen)
-    if not DOMAINS.exists():
-        save_lines(DOMAINS, domains)
+    save_lines(DOMAINS, domains)
     print(json.dumps({
         "cc_index": state.get("cc_index"),
         "legacy_import_status": state.get("legacy_import_status"),
         "legacy_imported_domains": state.get("legacy_imported_domains", 0),
+        "coverage_catalog_domains": len(catalog),
+        "coverage_catalog_new_domains": catalog_domain_added,
+        "coverage_catalog_seed_added": catalog_seed_added,
         "master_domains": len(domains),
         "legacy_seed_added": added,
         "frontier": len(frontier),
