@@ -941,6 +941,7 @@ appseeding.vn
 appsheet.vn
 appsim.vn
 appstore.vn
+apshop.vn
 ar.macduggal.com
 artha.link
 ascenttrainings.com
@@ -1022,6 +1023,7 @@ builtin.com
 business.admatrix.vn
 business.qld.gov.au
 business2community.com
+buzzfeed.com
 c.accesstrade.vn
 ca.macduggal.com
 cafebiz.vn
@@ -1305,6 +1307,7 @@ ign.com
 ihg.com
 ijc.vn
 imh.ac.vn
+in.mashable.com
 indiatoday.in
 infoworld.com
 insivia.com
@@ -1495,6 +1498,7 @@ nhathuoclientam.com.vn
 nhathuoclongchau.com.vn
 nhathuocviet.com
 nhaxinh.com
+ninewest.com
 nl.fiverr.com
 nl.macduggal.com
 nl.semrush.com

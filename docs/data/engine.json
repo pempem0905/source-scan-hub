@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-18T21:52:54.939615Z",
+  "generated_at": "2026-08-18T22:06:05.063561Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 5163,
-    "frontier_deferred_pending": 38541,
-    "frontier_pending": 43704,
-    "last_6_runs_new_domains": 17,
+    "frontier_active_pending": 7605,
+    "frontier_deferred_pending": 38592,
+    "frontier_pending": 46197,
+    "last_6_runs_new_domains": 16,
     "last_run": {
-      "at": "2026-08-18T21:48:09.906891Z",
+      "at": "2026-08-18T22:01:11.079506Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vi-vn/*uu-dai*",
-        "*.com/vi-vn/*voucher*",
-        "*.com/vi-vn/*promotion*",
-        "*.net/vn/*khuyen-mai*"
+        "*.net/vn/*uu-dai*",
+        "*.com/vietnam/*promotion*",
+        "*.vn/*khuyen-mai*",
+        "*.vn/*khuyenmai*"
       ],
-      "duration_s": 283.3,
-      "errors": 80,
-      "frontier_pending": 43704,
+      "duration_s": 292.3,
+      "errors": 69,
+      "frontier_pending": 46197,
       "new_domains": 3,
-      "processed": 1459,
-      "rate403": 0.685,
+      "processed": 1408,
+      "rate403": 0.71,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1901,
+    "master_domains": 1905,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 145,
+    "run_count": 146,
     "running": true,
-    "seen_urls": 777047,
-    "updated_at": "2026-08-18T21:52:53.166121Z"
+    "seen_urls": 784651,
+    "updated_at": "2026-08-18T22:06:03.345810Z"
   },
   "master_input": {
-    "active_input_count": 224,
+    "active_input_count": 225,
     "counts": {
-      "ACTIVE_INPUT": 224,
+      "ACTIVE_INPUT": 225,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 18,
       "FOOD_BEVERAGE": 28,
-      "GENERAL": 1440,
+      "GENERAL": 1443,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 33,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 176,
-      "PUBLIC_HTTP": 1631,
+      "PROMO_RETAIL": 177,
+      "PUBLIC_HTTP": 1635,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 102,
-      "REVIEW_INPUT": 1405,
+      "RETAIL_ECOMMERCE": 103,
+      "REVIEW_INPUT": 1408,
       "SOURCE_HUNTER": 18,
-      "SOURCE_REVIEW": 1405,
+      "SOURCE_REVIEW": 1408,
       "TRAVEL_MOBILITY": 23
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 18,
-    "generated_at": "2026-08-18T21:52:54.769349Z",
+    "generated_at": "2026-08-18T22:06:04.851737Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1647,
-    "review_input_count": 1405,
+    "record_count": 1651,
+    "review_input_count": 1408,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1901,
+    "source_hunter_domains": 1905,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -295,7 +295,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-18T21:40:25.243184Z",
+    "updated_at": "2026-08-18T21:59:36.207929Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -386,48 +386,27 @@
     "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "mẹ và bé khuyến mãi Việt Nam",
-      "mẹ và bé ưu đãi Việt Nam",
-      "mẹ và bé voucher Việt Nam",
-      "mẹ và bé promotion Vietnam"
+      "điện máy điện thoại laptop khuyến mãi Việt Nam",
+      "điện máy điện thoại laptop ưu đãi Việt Nam",
+      "điện máy điện thoại laptop voucher Việt Nam",
+      "điện máy điện thoại laptop promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 122,
+    "cc_domain_page": 123,
     "frontier_scheduler": {
-      "active": 1459,
+      "active": 1408,
       "base_per_host_batch": 16,
-      "deferred": 38541,
+      "deferred": 38592,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.069,
+      "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 162
+      "unique_hosts": 144
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T09:23:48.504953Z",
-      "domain": "seemarketingny.com",
-      "radar": false,
-      "url": "https://seemarketingny.com/claire-p-caldwell-human-first-sales/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T09:23:48.504953Z",
-      "domain": "demandsage.com",
-      "radar": false,
-      "url": "https://demandsage.com/category/coupon/feed/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T09:23:48.504953Z",
-      "domain": "markets.financialcontent.com",
-      "radar": false,
-      "url": "https://markets.financialcontent.com/stocks/news/topic/initial%20public%20offering?CurrentPage=12",
-      "via": "internal_promo"
-    },
     {
       "at": "2026-08-18T09:55:03.714323Z",
       "domain": "androidpolice.com",
@@ -1246,6 +1225,27 @@
       "radar": false,
       "url": "https://bleepingcomputer.com/offer/deals/gift-dad-language-classes-with-257-off-rosetta-stone/",
       "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T22:01:11.079506Z",
+      "domain": "in.mashable.com",
+      "radar": false,
+      "url": "https://in.mashable.com/deals",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T22:01:11.079506Z",
+      "domain": "buzzfeed.com",
+      "radar": false,
+      "url": "https://buzzfeed.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T22:01:11.079506Z",
+      "domain": "ninewest.com",
+      "radar": false,
+      "url": "https://ninewest.com/",
+      "via": "external_promo"
     }
   ]
 }
