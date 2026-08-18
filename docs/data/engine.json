@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-18T20:23:31.672057Z",
+  "generated_at": "2026-08-18T20:48:20.783846Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 6568,
-    "frontier_deferred_pending": 38692,
-    "frontier_pending": 45260,
-    "last_6_runs_new_domains": 14,
+    "frontier_active_pending": 5811,
+    "frontier_deferred_pending": 38649,
+    "frontier_pending": 44460,
+    "last_6_runs_new_domains": 17,
     "last_run": {
-      "at": "2026-08-18T20:19:35.630898Z",
+      "at": "2026-08-18T20:43:58.826545Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.net/vn/*uu-dai*",
-        "*.com/vietnam/*promotion*",
-        "*.vn/*khuyen-mai*",
-        "*.vn/*khuyenmai*"
+        "*.vn/*uu-dai*",
+        "*.vn/*uudai*",
+        "*.vn/*voucher*",
+        "*.vn/*promotion*"
       ],
-      "duration_s": 234.3,
-      "errors": 227,
-      "frontier_pending": 45260,
-      "new_domains": 1,
-      "processed": 1308,
-      "rate403": 0.535,
-      "rate429": 6.651
+      "duration_s": 259.4,
+      "errors": 69,
+      "frontier_pending": 44460,
+      "new_domains": 4,
+      "processed": 1351,
+      "rate403": 0.074,
+      "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1879,
+    "master_domains": 1883,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 141,
+    "run_count": 142,
     "running": true,
-    "seen_urls": 753413,
-    "updated_at": "2026-08-18T20:23:29.905354Z"
+    "seen_urls": 759223,
+    "updated_at": "2026-08-18T20:48:18.240942Z"
   },
   "master_input": {
-    "active_input_count": 220,
+    "active_input_count": 221,
     "counts": {
-      "ACTIVE_INPUT": 220,
+      "ACTIVE_INPUT": 221,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 18,
       "FOOD_BEVERAGE": 27,
-      "GENERAL": 1425,
+      "GENERAL": 1428,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
-      "PROMO_BANKS": 32,
+      "PROMO_BANKS": 33,
       "PROMO_L2": 15,
       "PROMO_RETAIL": 173,
-      "PUBLIC_HTTP": 1612,
+      "PUBLIC_HTTP": 1616,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 100,
-      "REVIEW_INPUT": 1390,
+      "REVIEW_INPUT": 1393,
       "SOURCE_HUNTER": 18,
-      "SOURCE_REVIEW": 1390,
-      "TRAVEL_MOBILITY": 22
+      "SOURCE_REVIEW": 1393,
+      "TRAVEL_MOBILITY": 23
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 18,
-    "generated_at": "2026-08-18T20:23:31.453053Z",
+    "generated_at": "2026-08-18T20:48:20.177962Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1628,
-    "review_input_count": 1390,
+    "record_count": 1632,
+    "review_input_count": 1393,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1879,
+    "source_hunter_domains": 1883,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -295,7 +295,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-18T19:59:32.584035Z",
+    "updated_at": "2026-08-18T20:42:04.491274Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -386,55 +386,27 @@
     "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "siêu thị khuyến mãi Việt Nam",
-      "siêu thị ưu đãi Việt Nam",
-      "siêu thị voucher Việt Nam",
-      "siêu thị promotion Vietnam"
+      "chuỗi bán lẻ khuyến mãi Việt Nam",
+      "chuỗi bán lẻ ưu đãi Việt Nam",
+      "chuỗi bán lẻ voucher Việt Nam",
+      "chuỗi bán lẻ promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
     "cc_domain_page": 121,
     "frontier_scheduler": {
-      "active": 1308,
+      "active": 1351,
       "base_per_host_batch": 16,
-      "deferred": 38692,
+      "deferred": 38649,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.081,
+      "previous_429_rate": 6.651,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 178
+      "unique_hosts": 157
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T08:17:27.872158Z",
-      "domain": "tibi.com",
-      "radar": false,
-      "url": "https://tibi.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T08:17:27.872158Z",
-      "domain": "resume-example.com",
-      "radar": false,
-      "url": "https://resume-example.com/builder/terms-and-conditions-of-sale",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T08:17:27.872158Z",
-      "domain": "forma-ai.webflow.io",
-      "radar": false,
-      "url": "https://forma-ai.webflow.io/resources/article/charming-the-cobra-how-to-avoid-perverse-incentives-in-sales-compensation",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T08:55:38.599033Z",
-      "domain": "apps.shopify.com",
-      "radar": false,
-      "url": "https://apps.shopify.com/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-18T08:55:38.599033Z",
       "domain": "bose.ca",
@@ -1246,6 +1218,34 @@
       "radar": true,
       "url": "https://mavoucher.vn/",
       "via": "radar_out"
+    },
+    {
+      "at": "2026-08-18T20:43:58.826545Z",
+      "domain": "jeffreycampbellshoes.com",
+      "radar": false,
+      "url": "https://jeffreycampbellshoes.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T20:43:58.826545Z",
+      "domain": "dagnedover.com",
+      "radar": false,
+      "url": "https://dagnedover.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T20:43:58.826545Z",
+      "domain": "vi.wordpress.org",
+      "radar": false,
+      "url": "https://vi.wordpress.org/",
+      "via": "radar_out"
+    },
+    {
+      "at": "2026-08-18T20:43:58.826545Z",
+      "domain": "geekspin.co",
+      "radar": false,
+      "url": "https://geekspin.co/japan-offers-free-flights-to-american-tourists/",
+      "via": "internal_promo"
     }
   ]
 }
