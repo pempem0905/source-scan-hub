@@ -1,0 +1,30 @@
+{
+  "schema": "promo.retail.telemetry.v1",
+  "source_worker": "PROMO Retail Shard",
+  "pipeline": "TURBO_SCAN_V2",
+  "fast_probes": 30,
+  "shortlisted": 4,
+  "deep_validations": 4,
+  "cache_skips": 11,
+  "sources_read": 19,
+  "code_likely_sources_read": 8,
+  "no_code_reads": 15,
+  "family_rotations": 6,
+  "offers_found": 2,
+  "voucher_benefits_found": 2,
+  "literal_codes_found": 3,
+  "codes_per_10_reads": 1.58,
+  "enqueued": 0,
+  "blocked": 0,
+  "duplicates": 6,
+  "last_run_at": "2026-08-19T03:57:33+07:00",
+  "lovable_calls": 0,
+  "notes": [
+    "Consumed only ELIGIBLE + ACTIVE_INPUT sources assigned PROMO_RETAIL from integration/promo_dispatch_plan_v1.jsonl.",
+    "Prior no-code/account-issued/expired results were skipped or down-ranked using integration/promo_retail_probe_cache.json; no deep read on unchanged low-signal pages.",
+    "Pharmacity Q3 ZaloPay literals ZPPMC15, TRASAUPMC35, ZPPMC and TRASAUPMC remain current but are already present in GitHub retail handoff, so no re-enqueue.",
+    "Galaxy x ShopeePay August 2026 remains current/actionable but uses claimed account vouchers and is already represented; Galaxy x KFC uses account-issued e-vouchers, not reusable public literals.",
+    "Thegioididong surfaces exposed TGDD200, VNPAY567 and MMDIENTU on current/legacy product content, but controlling official promo terms found for TGDD200 are from 2023 and no current/future controlling validity was resolved for the others; none passed the clean current-validity gate.",
+    "Historical PHIMVIET, ZALO.2M2026 and older GO!/MediaMart literals/benefits were expired and rejected. No canonical counters mutated. Zero Lovable usage."
+  ]
+}
