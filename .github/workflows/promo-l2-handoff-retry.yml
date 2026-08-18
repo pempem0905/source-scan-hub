@@ -36,6 +36,35 @@ jobs:
         run: python -m py_compile l2/retry_handoff_request.py l2/reconcile_bridge_status.py l2/bridge_selftest.py l2/browser_run_cdp.py l2/update_metrics.py
       - name: Verify bridge invariants before retry
         run: python l2/bridge_selftest.py
+      - name: Mark stale runtime evidence safely
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import datetime as dt
+          import json
+          from pathlib import Path
+          p=Path('l2/bridge-runtime-status.json')
+          try:
+              d=json.loads(p.read_text())
+          except Exception:
+              raise SystemExit(0)
+          raw=d.get('checked_at')
+          try:
+              checked=dt.datetime.fromisoformat(str(raw).replace('Z','+00:00')).astimezone(dt.timezone.utc)
+          except Exception:
+              checked=None
+          now=dt.datetime.now(dt.timezone.utc)
+          stale=checked is None or (now-checked).total_seconds() > 7200
+          if stale and d.get('state') not in {'TAKEOVER_READY','SESSION_REUSE_VERIFIED'}:
+              d['observation_stale']=True
+              d['stale_after_seconds']=7200
+              d['last_observed_state']=d.get('state')
+              d['state']='STALE_RUNTIME_EVIDENCE'
+              d['ready']=False
+              d['transient_failure']=False
+              d['note']='Runtime observation is stale; historical capability verification is retained separately. No login surface is considered active from stale evidence, and no sensitive runtime material is persisted.'
+              p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n')
+          PY
       - name: Re-arm retry if cooldown elapsed
         run: python l2/retry_handoff_request.py
       - name: Reconcile sanitized bridge and auth status
@@ -60,7 +89,7 @@ jobs:
           echo "state=$STATE" >> "$GITHUB_OUTPUT"
           git config user.name "promo-l2-retry-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add l2/handoff-request.json l2/bridge-status.json l2/auth-status.json l2/preauth-platforms.json l2/metrics.json l2/hard-outcomes.json
+          git add l2/handoff-request.json l2/bridge-status.json l2/bridge-runtime-status.json l2/auth-status.json l2/preauth-platforms.json l2/metrics.json l2/hard-outcomes.json
           if git diff --cached --quiet; then
             echo 'changed=false' >> "$GITHUB_OUTPUT"
             exit 0
