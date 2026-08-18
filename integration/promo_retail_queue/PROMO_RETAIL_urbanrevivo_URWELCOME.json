@@ -1,0 +1,23 @@
+{
+  "schema": "promo.candidate.v1",
+  "idempotency_key": "PROMO_RETAIL|urbanrevivo.com.vn|URWELCOME|first-order|open-ended",
+  "source_worker": "PROMO Retail Shard",
+  "source_id": "SRCV1-9EC95365E04C",
+  "registrable_domain": "urbanrevivo.com.vn",
+  "vertical": "GENERAL",
+  "source_url": "https://urbanrevivo.com.vn/pages/promotion",
+  "merchant": "Urban Revivo Vietnam",
+  "title": "Ưu đãi thành viên mới 10% với mã URWELCOME",
+  "benefit_type": "PERCENT_DISCOUNT_CODE",
+  "benefit_value": "10%",
+  "benefit_cap_vnd": null,
+  "min_spend_vnd": null,
+  "start_date": null,
+  "end_date": null,
+  "eligibility": "Khách hàng đăng ký thành viên tại website; áp dụng cho đơn hàng nguyên giá đầu tiên; mỗi khách hàng dùng mã 1 lần; website only.",
+  "literal_code": "URWELCOME",
+  "status": "ACTIVE",
+  "evidence": "Official Urban Revivo promotion page currently displays 'Ưu đãi 10% cho đơn hàng đầu tiên | Nhập mã: URWELCOME' and states membership registration plus one-use-per-customer conditions. No end date is published.",
+  "evidence_checked_at": "2026-08-19T05:53:33+07:00",
+  "value_filter_version": "ACTIONABLE-VALUE-V2"
+}
