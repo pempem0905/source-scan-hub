@@ -921,6 +921,7 @@ app.aditi.vn
 app.afada.vn
 app.aitoannang.vn
 app.alobo.vn
+app.appsheet.vn
 app24h.vn
 app365.vn
 appapa.vn
@@ -932,7 +933,14 @@ appi.vn
 appkaraoke.vn
 applastic.vn
 apple.com
+appongtho.vn
+apppump.vn
+apprenticeship.vn
 apps.shopify.com
+appseeding.vn
+appsheet.vn
+appsim.vn
+appstore.vn
 ar.macduggal.com
 artha.link
 ascenttrainings.com
@@ -946,6 +954,7 @@ badgermapping.com
 bain.com
 bambooairways.com
 bannha.net
+bansibp.appservice.vn
 baohanh.alaska.vn
 baomoi.com
 baotintuc.vn
@@ -979,6 +988,7 @@ bitis.com.vn
 bitrix24.vn
 biz.accesstrade.vn
 bizfly.vn
+bleepingcomputer.com
 blog.6giay.vn
 blog.abit.vn
 blog.adahub.vn
@@ -1220,6 +1230,7 @@ giaoduc.net.vn
 giaohangtotnhat.vn
 giaxeoto.vn
 gigamall.com.vn
+git.appservice.vn
 gitbook.com
 global.antler.com
 gmsgroup.vn
@@ -1508,6 +1519,7 @@ nypost.com
 nytimes.com
 ocb.com.vn
 odoo.com
+offe.market
 offers.vn
 ohbeauti.vn
 old.amarket.vn
@@ -1642,6 +1654,7 @@ simpleshow.com
 skechersvn.vn
 skims.com
 slack.com
+smallable.com
 smartcompany.com.au
 smartlock.ai.vn
 smember.com.vn

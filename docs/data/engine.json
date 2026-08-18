@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-18T21:34:02.249801Z",
+  "generated_at": "2026-08-18T21:52:54.939615Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 6492,
-    "frontier_deferred_pending": 38545,
-    "frontier_pending": 45037,
-    "last_6_runs_new_domains": 14,
+    "frontier_active_pending": 5163,
+    "frontier_deferred_pending": 38541,
+    "frontier_pending": 43704,
+    "last_6_runs_new_domains": 17,
     "last_run": {
-      "at": "2026-08-18T21:28:40.557550Z",
+      "at": "2026-08-18T21:48:09.906891Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vn/*uu-dai*",
-        "*.com/vn/*voucher*",
-        "*.com/vn/*promotion*",
-        "*.com/vi-vn/*khuyen-mai*"
+        "*.com/vi-vn/*uu-dai*",
+        "*.com/vi-vn/*voucher*",
+        "*.com/vi-vn/*promotion*",
+        "*.net/vn/*khuyen-mai*"
       ],
-      "duration_s": 320.0,
-      "errors": 57,
-      "frontier_pending": 45037,
+      "duration_s": 283.3,
+      "errors": 80,
+      "frontier_pending": 43704,
       "new_domains": 3,
-      "processed": 1455,
-      "rate403": 0.687,
-      "rate429": 0.069
+      "processed": 1459,
+      "rate403": 0.685,
+      "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1888,
+    "master_domains": 1901,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 144,
+    "run_count": 145,
     "running": true,
-    "seen_urls": 771849,
-    "updated_at": "2026-08-18T21:34:00.604276Z"
+    "seen_urls": 777047,
+    "updated_at": "2026-08-18T21:52:53.166121Z"
   },
   "master_input": {
-    "active_input_count": 223,
+    "active_input_count": 224,
     "counts": {
-      "ACTIVE_INPUT": 223,
+      "ACTIVE_INPUT": 224,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 18,
       "FOOD_BEVERAGE": 28,
-      "GENERAL": 1431,
+      "GENERAL": 1440,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 33,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 175,
-      "PUBLIC_HTTP": 1620,
+      "PROMO_RETAIL": 176,
+      "PUBLIC_HTTP": 1631,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 100,
-      "REVIEW_INPUT": 1395,
+      "RETAIL_ECOMMERCE": 102,
+      "REVIEW_INPUT": 1405,
       "SOURCE_HUNTER": 18,
-      "SOURCE_REVIEW": 1395,
+      "SOURCE_REVIEW": 1405,
       "TRAVEL_MOBILITY": 23
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 18,
-    "generated_at": "2026-08-18T21:34:02.046830Z",
+    "generated_at": "2026-08-18T21:52:54.769349Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1636,
-    "review_input_count": 1395,
+    "record_count": 1647,
+    "review_input_count": 1405,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1888,
+    "source_hunter_domains": 1901,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -295,7 +295,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-18T21:02:12.701959Z",
+    "updated_at": "2026-08-18T21:40:25.243184Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -383,51 +383,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 3,
+    "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "thực phẩm sạch khuyến mãi Việt Nam",
-      "thực phẩm sạch ưu đãi Việt Nam",
-      "thực phẩm sạch voucher Việt Nam",
-      "thực phẩm sạch promotion Vietnam"
+      "mẹ và bé khuyến mãi Việt Nam",
+      "mẹ và bé ưu đãi Việt Nam",
+      "mẹ và bé voucher Việt Nam",
+      "mẹ và bé promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 121,
+    "cc_domain_page": 122,
     "frontier_scheduler": {
-      "active": 1455,
+      "active": 1459,
       "base_per_host_batch": 16,
-      "deferred": 38545,
+      "deferred": 38541,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 2.808,
+      "previous_429_rate": 0.069,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 147
+      "unique_hosts": 162
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T09:23:48.504953Z",
-      "domain": "vertexinc.com",
-      "radar": false,
-      "url": "https://vertexinc.com/solutions/tax-type/sales-use-tax",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T09:23:48.504953Z",
-      "domain": "global.antler.com",
-      "radar": false,
-      "url": "https://global.antler.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T09:23:48.504953Z",
-      "domain": "purple.com",
-      "radar": false,
-      "url": "https://purple.com/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-18T09:23:48.504953Z",
       "domain": "seemarketingny.com",
@@ -1245,6 +1224,27 @@
       "domain": "au.lifehacker.com",
       "radar": false,
       "url": "https://au.lifehacker.com/tech/116971/deal/you-can-get-rosetta-stone-lifetime-access-on-sale-right-now",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T21:48:09.906891Z",
+      "domain": "offe.market",
+      "radar": false,
+      "url": "https://offe.market/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T21:48:09.906891Z",
+      "domain": "smallable.com",
+      "radar": false,
+      "url": "https://smallable.com/en",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T21:48:09.906891Z",
+      "domain": "bleepingcomputer.com",
+      "radar": false,
+      "url": "https://bleepingcomputer.com/offer/deals/gift-dad-language-classes-with-257-off-rosetta-stone/",
       "via": "internal_promo"
     }
   ]
