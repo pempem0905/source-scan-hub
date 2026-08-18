@@ -1,0 +1,23 @@
+{
+  "schema": "promo.candidate.v1",
+  "idempotency_key": "PROMO_RETAIL|urbanrevivo.com.vn|URPAY|2026-06-09|2026-09-30",
+  "source_worker": "PROMO Retail Shard",
+  "source_id": "SRCV1-9EC95365E04C",
+  "registrable_domain": "urbanrevivo.com.vn",
+  "vertical": "GENERAL",
+  "source_url": "https://urbanrevivo.com.vn/pages/promotion",
+  "merchant": "Urban Revivo Vietnam",
+  "title": "Ưu đãi thanh toán trực tuyến 10% với mã URPAY",
+  "benefit_type": "PERCENT_DISCOUNT_CODE",
+  "benefit_value": "10%",
+  "benefit_cap_vnd": 100000,
+  "min_spend_vnd": null,
+  "start_date": "2026-06-09",
+  "end_date": "2026-09-30",
+  "eligibility": "Tất cả đơn hàng tại urbanrevivo.com.vn thanh toán trực tuyến; không áp dụng cùng chương trình khác trên website theo điều khoản chính thức.",
+  "literal_code": "URPAY",
+  "status": "ACTIVE",
+  "evidence": "Official Urban Revivo promotion page explicitly states 'Nhập URPAY | Giảm 10% cho đơn hàng thanh toán trực tuyến', maximum discount 100,000 VND, valid 09/06-30/09/2026.",
+  "evidence_checked_at": "2026-08-19T05:53:33+07:00",
+  "value_filter_version": "ACTIONABLE-VALUE-V2"
+}
