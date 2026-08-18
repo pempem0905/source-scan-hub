@@ -1,0 +1,31 @@
+{
+  "schema": "promo.worker_telemetry.v2",
+  "worker": "PROMO Banks Shard",
+  "pipeline": "TURBO_SCAN_PIPELINE_V2",
+  "fast_probes": 20,
+  "shortlisted": 5,
+  "deep_validations": 4,
+  "cache_skips": 6,
+  "sources_read": 5,
+  "code_likely_sources_read": 2,
+  "no_code_reads": 3,
+  "family_rotations": 3,
+  "offers_found": 4,
+  "voucher_benefits_found": 5,
+  "literal_codes_found": 4,
+  "codes_per_10_reads": 8.0,
+  "enqueued": 4,
+  "blocked": 0,
+  "duplicates": 8,
+  "expired_rejected": 4,
+  "last_run_at": "2026-08-19T04:37:34+07:00",
+  "lovable_calls": 0,
+  "handoff": "integration/handoffs/promo_banks_2026-08-19T0437+07.jsonl",
+  "codes": ["JCB14", "JCB12", "JCB10", "JCB8"],
+  "notes": [
+    "Only GitHub ELIGIBLE + ACTIVE_INPUT PROMO_BANKS dispatch was consumed.",
+    "Exact literals JCB14/JCB12/JCB10/JCB8 were validated on the official BIDV JCB x Trip.com detail page and enqueued to GitHub handoff.",
+    "No reusable literal was accepted from automatic/account-wallet voucher mechanics; expired or user-specific/contest campaigns were rejected.",
+    "No canonical counters mutated; lovable_calls=0."
+  ]
+}
