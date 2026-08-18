@@ -3,12 +3,12 @@
   "mode": "HARD_ONLY",
   "platforms_login_ready": 0,
   "platforms_logged_in": 0,
-  "l2_sources_scanned": 0,
-  "l2_voucher_deals_found": 0,
-  "l2_literal_codes_found": 0,
+  "l2_sources_scanned": 1,
+  "l2_voucher_deals_found": 2,
+  "l2_literal_codes_found": 1,
   "remaining_platforms": 7,
-  "last_run_at": "2026-08-17T23:40:54.086988Z",
-  "generated_at": "2026-08-17T23:40:54.136045Z",
+  "last_run_at": "2026-08-18T01:30:00Z",
+  "generated_at": "2026-08-18T01:31:00Z",
   "public_overlap_excluded": true,
   "note": "L2 metrics count hard/authenticated/access-constrained outcomes only. Routine public crawling is owned by Layer1 and is excluded from L2 totals."
 }
