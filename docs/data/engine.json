@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-18T07:53:41.520001Z",
+  "generated_at": "2026-08-18T08:22:20.916678Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 9085,
-    "frontier_deferred_pending": 38326,
-    "frontier_pending": 47411,
-    "last_6_runs_new_domains": 22,
+    "frontier_active_pending": 7457,
+    "frontier_deferred_pending": 38292,
+    "frontier_pending": 45749,
+    "last_6_runs_new_domains": 23,
     "last_run": {
-      "at": "2026-08-18T07:49:20.470583Z",
+      "at": "2026-08-18T08:17:27.872158Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.net/vn/*uu-dai*",
-        "*.com/vietnam/*promotion*",
-        "*.vn/*khuyen-mai*",
-        "*.vn/*khuyenmai*"
+        "*.vn/*uu-dai*",
+        "*.vn/*uudai*",
+        "*.vn/*voucher*",
+        "*.vn/*promotion*"
       ],
-      "duration_s": 259.6,
-      "errors": 80,
-      "frontier_pending": 47411,
-      "new_domains": 6,
-      "processed": 1674,
-      "rate403": 0.657,
-      "rate429": 0.06
+      "duration_s": 291.7,
+      "errors": 125,
+      "frontier_pending": 45749,
+      "new_domains": 5,
+      "processed": 1708,
+      "rate403": 0.82,
+      "rate429": 0.117
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1565,
+    "master_domains": 1582,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 116,
+    "run_count": 117,
     "running": true,
-    "seen_urls": 573423,
-    "updated_at": "2026-08-18T07:53:40.059721Z"
+    "seen_urls": 580927,
+    "updated_at": "2026-08-18T08:22:19.598493Z"
   },
   "master_input": {
-    "active_input_count": 183,
+    "active_input_count": 185,
     "counts": {
-      "ACTIVE_INPUT": 183,
+      "ACTIVE_INPUT": 185,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 25,
-      "GENERAL": 1166,
+      "GENERAL": 1181,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 32,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 136,
-      "PUBLIC_HTTP": 1336,
+      "PROMO_RETAIL": 138,
+      "PUBLIC_HTTP": 1352,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 87,
-      "REVIEW_INPUT": 1153,
+      "RETAIL_ECOMMERCE": 88,
+      "REVIEW_INPUT": 1167,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1153,
+      "SOURCE_REVIEW": 1167,
       "TRAVEL_MOBILITY": 20
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-18T07:53:41.310842Z",
+    "generated_at": "2026-08-18T08:22:20.777008Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1352,
-    "review_input_count": 1153,
+    "record_count": 1368,
+    "review_input_count": 1167,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1565,
+    "source_hunter_domains": 1582,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -234,7 +234,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-18T07:06:02.891673Z",
+    "updated_at": "2026-08-18T07:55:33.080336Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -325,62 +325,27 @@
     "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "cửa hàng tiện lợi khuyến mãi Việt Nam",
-      "cửa hàng tiện lợi ưu đãi Việt Nam",
-      "cửa hàng tiện lợi voucher Việt Nam",
-      "cửa hàng tiện lợi promotion Vietnam"
+      "thực phẩm sạch khuyến mãi Việt Nam",
+      "thực phẩm sạch ưu đãi Việt Nam",
+      "thực phẩm sạch voucher Việt Nam",
+      "thực phẩm sạch promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 101,
+    "cc_domain_page": 102,
     "frontier_scheduler": {
-      "active": 1674,
+      "active": 1708,
       "base_per_host_batch": 16,
-      "deferred": 38326,
+      "deferred": 38292,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.0,
+      "previous_429_rate": 0.06,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 213
+      "unique_hosts": 268
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-17T21:24:24.371604Z",
-      "domain": "br.pro.fiverr.com",
-      "radar": false,
-      "url": "https://br.pro.fiverr.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T21:24:24.371604Z",
-      "domain": "dmnews.com",
-      "radar": false,
-      "url": "https://dmnews.com/dmn-r-ohios-data-center-sales-tax-exemption-cost-the-state-nearly-1-6-billion-last-year-and-governor-dewine-has-now-frozen-it-through-the-end-of-his-term-leaving-the-next-governor-to-decide-whether-ta/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T21:24:24.371604Z",
-      "domain": "insycle.com",
-      "radar": false,
-      "url": "https://insycle.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T21:24:24.371604Z",
-      "domain": "lenovo.com",
-      "radar": false,
-      "url": "https://lenovo.com/us/en/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T21:24:24.371604Z",
-      "domain": "process.st",
-      "radar": false,
-      "url": "https://process.st/case-study-salesforce/",
-      "via": "internal_promo"
-    },
     {
       "at": "2026-08-17T21:24:24.371604Z",
       "domain": "shawncasemore.com",
@@ -1184,6 +1149,41 @@
       "domain": "lifehacker.com",
       "radar": false,
       "url": "https://lifehacker.com/deals/page/100",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T08:17:27.872158Z",
+      "domain": "corp.ign.com",
+      "radar": false,
+      "url": "https://corp.ign.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T08:17:27.872158Z",
+      "domain": "indiatoday.in",
+      "radar": false,
+      "url": "https://indiatoday.in/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T08:17:27.872158Z",
+      "domain": "tibi.com",
+      "radar": false,
+      "url": "https://tibi.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T08:17:27.872158Z",
+      "domain": "resume-example.com",
+      "radar": false,
+      "url": "https://resume-example.com/builder/terms-and-conditions-of-sale",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T08:17:27.872158Z",
+      "domain": "forma-ai.webflow.io",
+      "radar": false,
+      "url": "https://forma-ai.webflow.io/resources/article/charming-the-cobra-how-to-avoid-perverse-incentives-in-sales-compensation",
       "via": "internal_promo"
     }
   ]
