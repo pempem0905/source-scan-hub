@@ -1,0 +1,18 @@
+{
+  "schema": "promo.handoff.actionable_value_v2",
+  "source_worker": "PROMO Turbo Scan",
+  "status": "READY",
+  "idempotency_key": "promo-turbo-scan|hsbc-vn|fusion-hotel-group|BANKFUSION|2026-12-31",
+  "merchant": "Fusion Hotel Group",
+  "issuer": "HSBC Vietnam",
+  "literal_code": "BANKFUSION",
+  "benefit": "10% off room rates on top of existing offers",
+  "eligibility": "Eligible HSBC card products per programme; booking directly on Fusion Hotel Group/property websites; valid HSBC card required at check-in/payment",
+  "constraints": "Minimum 2 consecutive nights; not applicable to third-party sites or existing reservations; cannot combine with other promotion/discount/code/package",
+  "valid_through": "2026-12-31",
+  "source_url": "https://card.apply.hsbc.com.vn/daily-offers/liveplusdining/?cid=HBAP_PWS_PLATCVP_EDM",
+  "source_type": "official_bank",
+  "actionable_value_v2": true,
+  "validated_at": "2026-08-18T11:25:00Z",
+  "writer_note": "READY handoff only; canonical advancement must be verified by the single final writer."
+}
