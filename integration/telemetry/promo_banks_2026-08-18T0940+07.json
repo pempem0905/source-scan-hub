@@ -1,0 +1,23 @@
+{
+  "schema": "promo.worker_telemetry.v2",
+  "worker": "PROMO Banks Shard",
+  "fast_probes": 20,
+  "shortlisted": 10,
+  "deep_validations": 6,
+  "cache_skips": 4,
+  "sources_read": 12,
+  "code_likely_sources_read": 8,
+  "no_code_reads": 8,
+  "family_rotations": 4,
+  "offers_found": 18,
+  "voucher_benefits_found": 7,
+  "literal_codes_found": 0,
+  "codes_per_10_reads": 0.0,
+  "enqueued": 0,
+  "blocked": 0,
+  "duplicates": 4,
+  "last_run_at": "2026-08-18T09:40:28+07:00",
+  "lovable_calls": 0,
+  "handoff": null,
+  "note": "GitHub-backed exact-code V2 run. Consumed only ELIGIBLE+ACTIVE_INPUT sources assigned PROMO_BANKS. No new clean current reusable literal survived validation. Current BIDV Klook literals JCBJPWKND30/JCBWKND15/JCBNGAYDOI/KLOOK10JCB were already known and deduped. VISAAIRPORT/VISAFOOD, JCB15WKND/KLOOKJCB10, ACBDIFF150/ACBDIFF500/ACBDIFF300/ACBHOALU, ACBFLY200/ACBSTAY200 and ACBBUSNTS50/ACBBUSFS100/ACBHTNTS250/ACBCBNTS300/ACBVCNTS100 were rejected as expired. ACB Trip.com/Traveloka/Green SM/Corporate Expedia, Techcombank Grab U-Point, Sacombank Grab/Klook/Agoda and BIDV Agoda exposed concrete benefits but no exact public reusable literal; dynamic/account-issued vouchers were not counted. No canonical counters mutated; lovable_calls=0."
+}
