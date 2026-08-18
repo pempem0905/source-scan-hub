@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-17T23:56:49.749731Z",
+  "generated_at": "2026-08-18T00:28:10.634926Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 8962,
+    "frontier_active_pending": 8060,
     "frontier_deferred_pending": 38200,
-    "frontier_pending": 47162,
-    "last_6_runs_new_domains": 50,
+    "frontier_pending": 46260,
+    "last_6_runs_new_domains": 53,
     "last_run": {
-      "at": "2026-08-17T23:52:14.974251Z",
+      "at": "2026-08-18T00:24:08.425457Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vi-vn/*uu-dai*",
-        "*.com/vi-vn/*voucher*",
-        "*.com/vi-vn/*promotion*",
-        "*.net/vn/*khuyen-mai*"
+        "*.net/vn/*uu-dai*",
+        "*.com/vietnam/*promotion*",
+        "*.vn/*khuyen-mai*",
+        "*.vn/*khuyenmai*"
       ],
-      "duration_s": 273.4,
-      "errors": 173,
-      "frontier_pending": 47162,
-      "new_domains": 6,
+      "duration_s": 240.9,
+      "errors": 118,
+      "frontier_pending": 46260,
+      "new_domains": 8,
       "processed": 1800,
-      "rate403": 0.944,
-      "rate429": 0.0
+      "rate403": 0.611,
+      "rate429": 0.056
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1470,
+    "master_domains": 1478,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 105,
+    "run_count": 106,
     "running": true,
-    "seen_urls": 489438,
-    "updated_at": "2026-08-17T23:56:48.386002Z"
+    "seen_urls": 497521,
+    "updated_at": "2026-08-18T00:28:09.359556Z"
   },
   "master_input": {
-    "active_input_count": 161,
+    "active_input_count": 162,
     "counts": {
-      "ACTIVE_INPUT": 161,
+      "ACTIVE_INPUT": 162,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 36,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 24,
-      "GENERAL": 1085,
+      "GENERAL": 1092,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 31,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 115,
-      "PUBLIC_HTTP": 1249,
+      "PROMO_RETAIL": 116,
+      "PUBLIC_HTTP": 1256,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 83,
-      "REVIEW_INPUT": 1088,
+      "REVIEW_INPUT": 1094,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1088,
+      "SOURCE_REVIEW": 1094,
       "TRAVEL_MOBILITY": 20
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-17T23:56:49.532960Z",
+    "generated_at": "2026-08-18T00:28:10.436585Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1265,
-    "review_input_count": 1088,
+    "record_count": 1272,
+    "review_input_count": 1094,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1470,
+    "source_hunter_domains": 1478,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -322,13 +322,13 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 0,
+    "free_search_last_added": 3,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "bảo hiểm khuyến mãi Việt Nam",
-      "bảo hiểm ưu đãi Việt Nam",
-      "bảo hiểm voucher Việt Nam",
-      "bảo hiểm promotion Vietnam"
+      "viễn thông internet khuyến mãi Việt Nam",
+      "viễn thông internet ưu đãi Việt Nam",
+      "viễn thông internet voucher Việt Nam",
+      "viễn thông internet promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
@@ -339,69 +339,13 @@
       "deferred": 38200,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.056,
+      "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 282
+      "unique_hosts": 268
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-17T20:02:09.551533Z",
-      "domain": "financesonline.com",
-      "radar": false,
-      "url": "https://financesonline.com/sales-trends/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T20:02:09.551533Z",
-      "domain": "fiverr.com",
-      "radar": false,
-      "url": "https://fiverr.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T20:02:09.551533Z",
-      "domain": "getmagical.com",
-      "radar": false,
-      "url": "https://getmagical.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T20:02:09.551533Z",
-      "domain": "ebay.com",
-      "radar": false,
-      "url": "https://ebay.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T20:02:09.551533Z",
-      "domain": "stripe.com",
-      "radar": false,
-      "url": "https://stripe.com/contact/sales",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T20:02:09.551533Z",
-      "domain": "top1.fm",
-      "radar": false,
-      "url": "https://top1.fm/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T20:02:09.551533Z",
-      "domain": "yourcontentempire.com",
-      "radar": false,
-      "url": "https://yourcontentempire.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T20:02:09.551533Z",
-      "domain": "eccovietnam.vn",
-      "radar": false,
-      "url": "https://eccovietnam.vn/",
-      "via": "free_search"
-    },
     {
       "at": "2026-08-17T20:02:09.551533Z",
       "domain": "roofsalesmastery.com",
@@ -1184,6 +1128,62 @@
       "domain": "salesfocusinc.com",
       "radar": false,
       "url": "https://salesfocusinc.com/sales-focus-inc-south-carolina-business-review-2025/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T00:24:08.425457Z",
+      "domain": "appexchange.salesforce.com",
+      "radar": false,
+      "url": "https://appexchange.salesforce.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T00:24:08.425457Z",
+      "domain": "bts.com",
+      "radar": false,
+      "url": "https://bts.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T00:24:08.425457Z",
+      "domain": "irobot.fr",
+      "radar": false,
+      "url": "https://irobot.fr/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T00:24:08.425457Z",
+      "domain": "irobot.be",
+      "radar": false,
+      "url": "https://irobot.be/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T00:24:08.425457Z",
+      "domain": "ign.com",
+      "radar": false,
+      "url": "https://ign.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T00:24:08.425457Z",
+      "domain": "fptpro.vn",
+      "radar": false,
+      "url": "https://fptpro.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-18T00:24:08.425457Z",
+      "domain": "fpttelecom.net.vn",
+      "radar": false,
+      "url": "https://fpttelecom.net.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-18T00:24:08.425457Z",
+      "domain": "jobs.sellwerk.de",
+      "radar": false,
+      "url": "https://jobs.sellwerk.de/karriere/Sales-Manager-mwd-de-f2329.html?sid=868abf0994e4ff3858573d1b3a5c561e",
       "via": "internal_promo"
     }
   ]

@@ -706,6 +706,7 @@ app.aditi.vn
 app.afada.vn
 app.aitoannang.vn
 app.alobo.vn
+appexchange.salesforce.com
 apple.com
 artha.link
 ascenttrainings.com
@@ -764,6 +765,7 @@ bookingcare.vn
 br.fiverr.com
 br.pro.fiverr.com
 brands.accesstrade.vn
+bts.com
 budget.com
 builtin.com
 business.admatrix.vn
@@ -917,6 +919,8 @@ fpt.vn
 fpt24.vn
 fptelecom.vn
 fptnet.vn
+fptpro.vn
+fpttelecom.net.vn
 fpttelecoms.vn
 fptvietnam.vn
 fr.fiverr.com
@@ -994,6 +998,7 @@ ibaoviet.vn
 id.357games.vn
 id.568play.vn
 idmvietnam.com
+ign.com
 ihg.com
 ijc.vn
 imh.ac.vn
@@ -1006,14 +1011,17 @@ internet-viettel.com
 internetviettel.vn
 invest.abs.vn
 iowadot.gov
+irobot.be
 irobot.ca
 irobot.co.uk
 irobot.com
+irobot.fr
 it.fiverr.com
 it.semrush.com
 ja.semrush.com
 jangin.vn
 jettzy.com.vn
+jobs.sellwerk.de
 jtexpress.vn
 juno.vn
 jysk.vn
