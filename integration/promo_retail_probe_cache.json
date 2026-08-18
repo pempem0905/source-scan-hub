@@ -1,6 +1,6 @@
 {
   "schema": "promo.retail.probe_cache.v1",
-  "updated_at": "2026-08-18T19:55:38+07:00",
+  "updated_at": "2026-08-18T20:54:20+07:00",
   "source_worker": "PROMO Retail Shard",
   "entries": [
     {
@@ -59,6 +59,28 @@
       "code_signal": false,
       "notes": "Visible early-August merchant promos were expired by run date; no exact reusable literal token found.",
       "checked_at": "2026-08-18T19:55:38+07:00"
+    },
+    {
+      "url": "https://www.galaxycine.vn/binh-luan-phim/giam-25-khi-dat-xe-den-galaxy-parc-mall-q8/",
+      "result": "LITERAL_CODE_UNDATED_REVIEW",
+      "code_signal": true,
+      "observed_literals": ["GALAXYQ8"],
+      "notes": "Official page exposes exact GALAXYQ8 and 25% discount capped 50,000 VND for be trips to/from Galaxy Parc Mall Q8, but no controlling validity dates were visible; not eligible for clean enqueue until current/future validity is resolved.",
+      "checked_at": "2026-08-18T20:54:20+07:00"
+    },
+    {
+      "url": "https://shopeefood.vn/",
+      "result": "DYNAMIC_MERCHANT_DISCOUNTS_NO_LITERAL",
+      "code_signal": true,
+      "notes": "Current merchant cards expose dynamic 'Mã giảm' percentages/amounts but not exact reusable public token strings; do not treat labels as literal codes.",
+      "checked_at": "2026-08-18T20:54:20+07:00"
+    },
+    {
+      "url": "https://urbox.vn/thu-vien/chuong-trinh-khuyen-mai/dau-tu-cho-gan-ket-nhan-them-dac-quyen",
+      "result": "EXPIRED_NO_LITERAL",
+      "code_signal": false,
+      "notes": "Actionable enterprise e-voucher tiers ran 01/07-31/07/2026 and are expired as of 2026-08-18; no reusable literal code.",
+      "checked_at": "2026-08-18T20:54:20+07:00"
     }
   ]
 }
