@@ -3,13 +3,33 @@
   "approved_campaign_count": 0,
   "category_breakdown": {},
   "errors": [],
-  "generated_at": "2026-08-18T11:40:15.664580Z",
+  "generated_at": "2026-08-18T11:45:19.130783Z",
   "pending_campaign_count": 0,
   "registered_campaign_count": 0,
-  "schema": "promo.accesstrade_campaign_registration_status.v1",
+  "schema": "promo.accesstrade_campaign_registration_status.v3",
   "token_slots_used": [
-    0
+    0,
+    1
   ],
+  "token_stats": {
+    "0": {
+      "api_ok": true,
+      "approval_breakdown": {},
+      "approved_rows": 0,
+      "pending_rows": 0,
+      "registered_rows": 0,
+      "total_campaign_rows": 0
+    },
+    "1": {
+      "api_ok": true,
+      "approval_breakdown": {},
+      "approved_rows": 0,
+      "pending_rows": 0,
+      "registered_rows": 0,
+      "total_campaign_rows": 0
+    }
+  },
   "tokens_configured": 2,
-  "top_merchants": {}
+  "top_merchants": {},
+  "unique_campaign_count": 0
 }
