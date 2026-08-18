@@ -1,18 +1,18 @@
 {
   "schema": "promo.l2.bridge_runtime_status.v3",
   "provider": "CLOUDFLARE_BROWSER_RUN",
-  "checked_at": "2026-08-17T05:27:01.401279Z",
+  "checked_at": "2026-08-18T01:28:29.728540Z",
   "last_verified_at": null,
-  "mode": "probe",
-  "platform": "probe",
-  "state": "TRANSIENT_RATE_LIMIT",
+  "mode": "handoff",
+  "platform": "grabfood",
+  "state": "TAKEOVER_READY",
   "browser_session_created": true,
   "human_handoff_exercised": true,
   "authenticated_session_reuse_verified": false,
   "fresh_connection_reuse_required": true,
   "ready": false,
-  "transient_failure": true,
+  "transient_failure": false,
   "secret_values_observable": false,
   "sensitive_runtime_material_persisted": false,
-  "note": "No session IDs, websocket endpoints, Live View URLs, cookies, credentials, OTPs or CAPTCHA data are persisted."
+  "note": "A real Cloudflare Live Session is active. No session IDs, websocket endpoints, Live View URLs, cookies, credentials, OTPs or CAPTCHA data are persisted."
 }
