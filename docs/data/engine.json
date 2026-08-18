@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-18T07:10:52.772970Z",
+  "generated_at": "2026-08-18T07:53:41.520001Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 7085,
-    "frontier_deferred_pending": 38367,
-    "frontier_pending": 45452,
+    "frontier_active_pending": 9085,
+    "frontier_deferred_pending": 38326,
+    "frontier_pending": 47411,
     "last_6_runs_new_domains": 22,
     "last_run": {
-      "at": "2026-08-18T07:06:34.248259Z",
+      "at": "2026-08-18T07:49:20.470583Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vi-vn/*uu-dai*",
-        "*.com/vi-vn/*voucher*",
-        "*.com/vi-vn/*promotion*",
-        "*.net/vn/*khuyen-mai*"
+        "*.net/vn/*uu-dai*",
+        "*.com/vietnam/*promotion*",
+        "*.vn/*khuyen-mai*",
+        "*.vn/*khuyenmai*"
       ],
-      "duration_s": 257.1,
-      "errors": 65,
-      "frontier_pending": 45452,
+      "duration_s": 259.6,
+      "errors": 80,
+      "frontier_pending": 47411,
       "new_domains": 6,
-      "processed": 1633,
-      "rate403": 0.919,
-      "rate429": 0.0
+      "processed": 1674,
+      "rate403": 0.657,
+      "rate429": 0.06
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1558,
+    "master_domains": 1565,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 115,
+    "run_count": 116,
     "running": true,
-    "seen_urls": 564335,
-    "updated_at": "2026-08-18T07:10:51.312021Z"
+    "seen_urls": 573423,
+    "updated_at": "2026-08-18T07:53:40.059721Z"
   },
   "master_input": {
-    "active_input_count": 181,
+    "active_input_count": 183,
     "counts": {
-      "ACTIVE_INPUT": 181,
+      "ACTIVE_INPUT": 183,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 25,
-      "GENERAL": 1159,
+      "GENERAL": 1166,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 32,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 134,
-      "PUBLIC_HTTP": 1329,
+      "PROMO_RETAIL": 136,
+      "PUBLIC_HTTP": 1336,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 87,
-      "REVIEW_INPUT": 1148,
+      "REVIEW_INPUT": 1153,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1148,
+      "SOURCE_REVIEW": 1153,
       "TRAVEL_MOBILITY": 20
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-18T07:10:52.559553Z",
+    "generated_at": "2026-08-18T07:53:41.310842Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1345,
-    "review_input_count": 1148,
+    "record_count": 1352,
+    "review_input_count": 1153,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1558,
+    "source_hunter_domains": 1565,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -322,72 +322,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 1,
+    "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "chuỗi bán lẻ khuyến mãi Việt Nam",
-      "chuỗi bán lẻ ưu đãi Việt Nam",
-      "chuỗi bán lẻ voucher Việt Nam",
-      "chuỗi bán lẻ promotion Vietnam"
+      "cửa hàng tiện lợi khuyến mãi Việt Nam",
+      "cửa hàng tiện lợi ưu đãi Việt Nam",
+      "cửa hàng tiện lợi voucher Việt Nam",
+      "cửa hàng tiện lợi promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 100,
+    "cc_domain_page": 101,
     "frontier_scheduler": {
-      "active": 1633,
+      "active": 1674,
       "base_per_host_batch": 16,
-      "deferred": 38367,
+      "deferred": 38326,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 219
+      "unique_hosts": 213
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-17T20:58:12.663122Z",
-      "domain": "kukahome.com.vn",
-      "radar": false,
-      "url": "https://kukahome.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-17T20:58:12.663122Z",
-      "domain": "noithatviva.vn",
-      "radar": false,
-      "url": "https://noithatviva.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-17T20:58:12.663122Z",
-      "domain": "blog.salesflare.com",
-      "radar": false,
-      "url": "https://blog.salesflare.com/sv/salesforce-kontrakt",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T21:24:24.371604Z",
-      "domain": "wayfair.com",
-      "radar": false,
-      "url": "https://wayfair.com/daily-sales",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T21:24:24.371604Z",
-      "domain": "support.6sense.com",
-      "radar": false,
-      "url": "https://support.6sense.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T21:24:24.371604Z",
-      "domain": "amyfranko.com",
-      "radar": false,
-      "url": "https://amyfranko.com/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-17T21:24:24.371604Z",
       "domain": "br.pro.fiverr.com",
@@ -1184,6 +1142,48 @@
       "domain": "reviewjournal.com",
       "radar": false,
       "url": "https://reviewjournal.com/homes/resale-news/real-estate-breifs-nov-30-1903476/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T07:49:20.470583Z",
+      "domain": "tomreillytraining.com",
+      "radar": false,
+      "url": "https://tomreillytraining.com/tom-reillys-sales-bytes/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T07:49:20.470583Z",
+      "domain": "cbsnews.com",
+      "radar": false,
+      "url": "https://cbsnews.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T07:49:20.470583Z",
+      "domain": "bose.com",
+      "radar": false,
+      "url": "https://bose.com/home",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T07:49:20.470583Z",
+      "domain": "crozdesk.com",
+      "radar": false,
+      "url": "https://crozdesk.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T07:49:20.470583Z",
+      "domain": "vw.ca",
+      "radar": false,
+      "url": "https://vw.ca/en.html",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T07:49:20.470583Z",
+      "domain": "lifehacker.com",
+      "radar": false,
+      "url": "https://lifehacker.com/deals/page/100",
       "via": "internal_promo"
     }
   ]
