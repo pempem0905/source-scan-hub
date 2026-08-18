@@ -1,53 +1,53 @@
 {
-  "generated_at": "2026-08-18T20:48:20.783846Z",
+  "generated_at": "2026-08-18T21:05:46.217934Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 5811,
-    "frontier_deferred_pending": 38649,
-    "frontier_pending": 44460,
-    "last_6_runs_new_domains": 17,
+    "frontier_active_pending": 6140,
+    "frontier_deferred_pending": 38540,
+    "frontier_pending": 44680,
+    "last_6_runs_new_domains": 15,
     "last_run": {
-      "at": "2026-08-18T20:43:58.826545Z",
+      "at": "2026-08-18T21:00:29.436564Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*uu-dai*",
-        "*.vn/*uudai*",
-        "*.vn/*voucher*",
-        "*.vn/*promotion*"
+        "*.vn/*offers*",
+        "*.vn/*deals*",
+        "*.vn/*sale*",
+        "*.com/vn/*khuyen-mai*"
       ],
-      "duration_s": 259.4,
-      "errors": 69,
-      "frontier_pending": 44460,
-      "new_domains": 4,
-      "processed": 1351,
-      "rate403": 0.074,
-      "rate429": 0.0
+      "duration_s": 314.9,
+      "errors": 118,
+      "frontier_pending": 44680,
+      "new_domains": 2,
+      "processed": 1460,
+      "rate403": 0.411,
+      "rate429": 2.808
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1883,
+    "master_domains": 1885,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 142,
+    "run_count": 143,
     "running": true,
-    "seen_urls": 759223,
-    "updated_at": "2026-08-18T20:48:18.240942Z"
+    "seen_urls": 765359,
+    "updated_at": "2026-08-18T21:05:44.326953Z"
   },
   "master_input": {
-    "active_input_count": 221,
+    "active_input_count": 223,
     "counts": {
-      "ACTIVE_INPUT": 221,
+      "ACTIVE_INPUT": 223,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 18,
       "FOOD_BEVERAGE": 27,
-      "GENERAL": 1428,
+      "GENERAL": 1430,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 33,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 173,
-      "PUBLIC_HTTP": 1616,
+      "PROMO_RETAIL": 175,
+      "PUBLIC_HTTP": 1618,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 100,
       "REVIEW_INPUT": 1393,
@@ -57,17 +57,17 @@
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 18,
-    "generated_at": "2026-08-18T20:48:20.177962Z",
+    "generated_at": "2026-08-18T21:05:45.989169Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1632,
+    "record_count": 1634,
     "review_input_count": 1393,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1883,
+    "source_hunter_domains": 1885,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -386,41 +386,27 @@
     "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "chuỗi bán lẻ khuyến mãi Việt Nam",
-      "chuỗi bán lẻ ưu đãi Việt Nam",
-      "chuỗi bán lẻ voucher Việt Nam",
-      "chuỗi bán lẻ promotion Vietnam"
+      "cửa hàng tiện lợi khuyến mãi Việt Nam",
+      "cửa hàng tiện lợi ưu đãi Việt Nam",
+      "cửa hàng tiện lợi voucher Việt Nam",
+      "cửa hàng tiện lợi promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
     "cc_domain_page": 121,
     "frontier_scheduler": {
-      "active": 1351,
+      "active": 1460,
       "base_per_host_batch": 16,
-      "deferred": 38649,
+      "deferred": 38540,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 6.651,
+      "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 157
+      "unique_hosts": 159
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T08:55:38.599033Z",
-      "domain": "bose.ca",
-      "radar": false,
-      "url": "https://bose.ca/en/home",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T08:55:38.599033Z",
-      "domain": "sea.ign.com",
-      "radar": false,
-      "url": "https://sea.ign.com/amazon-deals?page=10",
-      "via": "internal_promo"
-    },
     {
       "at": "2026-08-18T08:55:38.599033Z",
       "domain": "goodcarbadcar.net",
@@ -1245,6 +1231,20 @@
       "domain": "geekspin.co",
       "radar": false,
       "url": "https://geekspin.co/japan-offers-free-flights-to-american-tourists/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T21:00:29.436564Z",
+      "domain": "cnet.com",
+      "radar": false,
+      "url": "https://cnet.com/deals/rosetta-stone-deal/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T21:00:29.436564Z",
+      "domain": "zdnet.com",
+      "radar": false,
+      "url": "https://zdnet.com/home-and-office/best-memorial-day-2025-tech-deals/",
       "via": "internal_promo"
     }
   ]
