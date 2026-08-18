@@ -2,12 +2,12 @@
   "schema": "promo.retail.telemetry.v1",
   "source_worker": "PROMO Retail Shard",
   "fast_probes": 30,
-  "shortlisted": 2,
-  "deep_validations": 1,
-  "cache_skips": 8,
-  "sources_read": 22,
-  "code_likely_sources_read": 9,
-  "no_code_reads": 20,
+  "shortlisted": 3,
+  "deep_validations": 2,
+  "cache_skips": 9,
+  "sources_read": 21,
+  "code_likely_sources_read": 8,
+  "no_code_reads": 21,
   "family_rotations": 7,
   "offers_found": 0,
   "voucher_benefits_found": 0,
@@ -16,7 +16,7 @@
   "enqueued": 0,
   "blocked": 0,
   "duplicates": 4,
-  "last_run_at": "2026-08-18T20:54:20+07:00",
+  "last_run_at": "2026-08-19T01:55:17+07:00",
   "lovable_calls": 0,
-  "notes": "GitHub-only TURBO SCAN V2. Consumed only ELIGIBLE+ACTIVE_INPUT assigned PROMO_RETAIL. No new clean exact reusable literal survived validity and dedup gates. GALAXYQ8 is an exact official hit with actionable economics but lacks a controlling current/future validity period, so it remains review-only in probe cache. ShopeeFood current 'Mã giảm' labels are dynamic merchant discounts rather than literal token strings; UrBox current indexed material was voucher issuance or expired campaigns. Existing Pharmacity literals were duplicates. Canonical counters untouched; zero Lovable usage."
+  "notes": "GitHub-only TURBO SCAN V2. No new clean reusable literal passed current/future validity and dedup. GALAXYQ8 remains REVIEW because the official Galaxy page still has no controlling validity dates. WinMart exposes a voucher-code lookup page without visible reusable tokens. Existing active Pharmacity Q3 literals are duplicates; expired literals rejected. Canonical counters untouched."
 }
