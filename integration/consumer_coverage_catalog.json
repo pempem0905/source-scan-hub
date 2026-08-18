@@ -1,0 +1,198 @@
+{
+  "schema": "promo.consumer_coverage_catalog.v1",
+  "market": "VN",
+  "goal": "Practical consumer promo coverage before long-tail domain growth",
+  "categories": [
+    {"category":"MALL","priority":100,"targets":[
+      {"name":"Vincom","domains":["vincom.com.vn"],"tier":1},
+      {"name":"AEON MALL Vietnam","domains":["aeonmall-vietnam.com"],"tier":1},
+      {"name":"Lotte Mall West Lake","domains":["lottemallwestlakehanoi.vn"],"tier":1},
+      {"name":"Crescent Mall","domains":["crescentmall.com.vn"],"tier":1},
+      {"name":"Estella Place","domains":["estellaplace.com.vn"],"tier":1},
+      {"name":"GigaMall","domains":["gigamall.com.vn"],"tier":1},
+      {"name":"THISO Mall Sala","domains":["thisomallsala.vn"],"tier":1},
+      {"name":"Saigon Centre","domains":["shopping.saigoncentre.com.vn"],"tier":2}
+    ]},
+    {"category":"SUPERMARKET_GROCERY","priority":100,"targets":[
+      {"name":"WinMart","domains":["winmart.vn"],"tier":1},
+      {"name":"Bach Hoa Xanh","domains":["bachhoaxanh.com"],"tier":1},
+      {"name":"Co.op Online","domains":["cooponline.vn"],"tier":1},
+      {"name":"LOTTE Mart","domains":["lottemart.com.vn"],"tier":1},
+      {"name":"MM Mega Market","domains":["mmvietnam.com"],"tier":1},
+      {"name":"AEON Vietnam","domains":["aeon.com.vn"],"tier":1},
+      {"name":"Emart Vietnam","domains":["emart.com.vn"],"tier":2},
+      {"name":"Homefarm","domains":["homefarm.vn"],"tier":2},
+      {"name":"Central Retail Vietnam","domains":["centralretail.com.vn"],"tier":2}
+    ]},
+    {"category":"CONVENIENCE","priority":90,"targets":[
+      {"name":"Circle K Vietnam","domains":["circlek.com.vn"],"tier":1},
+      {"name":"GS25 Vietnam","domains":["gs25.com.vn"],"tier":1},
+      {"name":"FamilyMart Vietnam","domains":["familymart.com.vn"],"tier":1},
+      {"name":"MINISTOP Vietnam","domains":[],"tier":2},
+      {"name":"7-Eleven Vietnam","domains":[],"tier":2}
+    ]},
+    {"category":"PHARMACY_HEALTH","priority":100,"targets":[
+      {"name":"Nha thuoc Long Chau","domains":["nhathuoclongchau.com.vn"],"tier":1},
+      {"name":"Pharmacity","domains":["pharmacity.vn"],"tier":1},
+      {"name":"Nha thuoc An Khang","domains":["nhathuocankhang.com"],"tier":1},
+      {"name":"VNVC","domains":["vnvc.vn"],"tier":2},
+      {"name":"Medicare","domains":["medicare.vn"],"tier":2}
+    ]},
+    {"category":"BEAUTY_PERSONAL_CARE","priority":90,"targets":[
+      {"name":"Guardian Vietnam","domains":["guardian.com.vn"],"tier":1},
+      {"name":"Watsons Vietnam","domains":["watsons.vn"],"tier":1},
+      {"name":"Hasaki","domains":["hasaki.vn"],"tier":1},
+      {"name":"SammiShop","domains":["sammishop.com"],"tier":2}
+    ]},
+    {"category":"FASHION_APPAREL","priority":95,"targets":[
+      {"name":"UNIQLO Vietnam","domains":["uniqlo.com"],"tier":1},
+      {"name":"H&M Vietnam","domains":["hm.com"],"tier":1},
+      {"name":"YODY","domains":["yody.vn"],"tier":1},
+      {"name":"CANIFA","domains":["canifa.com"],"tier":1},
+      {"name":"Coolmate","domains":["coolmate.me"],"tier":1},
+      {"name":"IVY moda","domains":["ivymoda.com"],"tier":2},
+      {"name":"Routine","domains":["routine.vn"],"tier":2},
+      {"name":"An Phuoc","domains":["anphuoc.com.vn"],"tier":2},
+      {"name":"NEM Fashion","domains":["nemshop.vn"],"tier":2},
+      {"name":"ACFC","domains":["acfc.com.vn"],"tier":1},
+      {"name":"Maison Online","domains":["maisononline.vn"],"tier":1},
+      {"name":"Charles & Keith Vietnam","domains":["charleskeith.vn"],"tier":2}
+    ]},
+    {"category":"FOOTWEAR_ACCESSORIES","priority":85,"targets":[
+      {"name":"Biti's","domains":["bitis.com.vn"],"tier":1},
+      {"name":"Juno","domains":["juno.vn"],"tier":1},
+      {"name":"Vascara","domains":["vascara.com"],"tier":1},
+      {"name":"Nike Vietnam","domains":["nike.com"],"tier":1},
+      {"name":"adidas Vietnam","domains":[],"tier":1}
+    ]},
+    {"category":"JEWELRY","priority":85,"targets":[
+      {"name":"PNJ","domains":["pnj.com.vn"],"tier":1},
+      {"name":"DOJI","domains":["doji.vn"],"tier":1},
+      {"name":"SJC","domains":["sjc.com.vn"],"tier":1}
+    ]},
+    {"category":"ELECTRONICS","priority":100,"targets":[
+      {"name":"The Gioi Di Dong","domains":["thegioididong.com"],"tier":1},
+      {"name":"Dien May Xanh","domains":["dienmayxanh.com"],"tier":1},
+      {"name":"FPT Shop","domains":["fptshop.com.vn"],"tier":1},
+      {"name":"CellphoneS","domains":["cellphones.com.vn"],"tier":1},
+      {"name":"Viettel Store","domains":["viettelstore.vn"],"tier":1},
+      {"name":"Nguyen Kim","domains":["nguyenkim.com"],"tier":2},
+      {"name":"Phong Vu","domains":["phongvu.vn"],"tier":2}
+    ]},
+    {"category":"MOTHER_BABY","priority":85,"targets":[
+      {"name":"Con Cung","domains":["concung.com"],"tier":1},
+      {"name":"AVAKids","domains":["avakids.com"],"tier":1},
+      {"name":"Bibo Mart","domains":["bibomart.com.vn"],"tier":1},
+      {"name":"KidsPlaza","domains":["kidsplaza.vn"],"tier":1}
+    ]},
+    {"category":"FOOD_BEVERAGE","priority":100,"targets":[
+      {"name":"Highlands Coffee","domains":["highlandscoffee.com.vn"],"tier":1},
+      {"name":"Phuc Long","domains":["phuclong.com.vn"],"tier":1},
+      {"name":"The Coffee House","domains":["thecoffeehouse.com"],"tier":1},
+      {"name":"KFC Vietnam","domains":["kfcvietnam.com.vn"],"tier":1},
+      {"name":"Lotteria Vietnam","domains":["lotteria.vn"],"tier":1},
+      {"name":"Jollibee Vietnam","domains":["jollibee.com.vn"],"tier":1},
+      {"name":"Pizza 4P's","domains":["pizza4ps.com"],"tier":1},
+      {"name":"Pizza Hut Vietnam","domains":["pizzahut.vn"],"tier":1},
+      {"name":"Starbucks Vietnam","domains":["starbucks.vn"],"tier":1},
+      {"name":"Gong Cha Vietnam","domains":["gongcha.com.vn"],"tier":2},
+      {"name":"TocoToco","domains":["tocotocotea.com"],"tier":2},
+      {"name":"Katinat","domains":[],"tier":1},
+      {"name":"Golden Gate Group","domains":["ggg.com.vn"],"tier":1}
+    ]},
+    {"category":"MARKETPLACE","priority":100,"targets":[
+      {"name":"Shopee Vietnam","domains":["shopee.vn"],"tier":1},
+      {"name":"Lazada Vietnam","domains":["lazada.vn"],"tier":1},
+      {"name":"Tiki","domains":["tiki.vn"],"tier":1},
+      {"name":"TikTok Shop Vietnam","domains":["tiktok.com"],"tier":1}
+    ]},
+    {"category":"BANK_CARD","priority":100,"targets":[
+      {"name":"VPBank","domains":["vpbank.com.vn"],"tier":1},
+      {"name":"Vietcombank","domains":["vietcombank.com.vn"],"tier":1},
+      {"name":"Techcombank","domains":["techcombank.com"],"tier":1},
+      {"name":"ACB","domains":["acb.com.vn"],"tier":1},
+      {"name":"BIDV","domains":["bidv.com.vn"],"tier":1},
+      {"name":"VietinBank","domains":["vietinbank.vn"],"tier":1},
+      {"name":"MB Bank","domains":["mbbank.com.vn"],"tier":1},
+      {"name":"VIB","domains":["vib.com.vn"],"tier":1},
+      {"name":"Sacombank","domains":["sacombank.com.vn"],"tier":1},
+      {"name":"HDBank","domains":["hdbank.com.vn"],"tier":1},
+      {"name":"OCB","domains":["ocb.com.vn"],"tier":1},
+      {"name":"TPBank","domains":["tpb.vn"],"tier":1},
+      {"name":"SeABank","domains":["seabank.com.vn"],"tier":2},
+      {"name":"MSB","domains":["msb.com.vn"],"tier":2},
+      {"name":"HSBC Vietnam","domains":["hsbc.com.vn"],"tier":1},
+      {"name":"Shinhan Bank Vietnam","domains":["shinhan.com.vn"],"tier":2}
+    ]},
+    {"category":"PAYMENT_WALLET","priority":95,"targets":[
+      {"name":"MoMo","domains":["momo.vn"],"tier":1},
+      {"name":"ZaloPay","domains":["zalopay.vn"],"tier":1},
+      {"name":"VNPAY","domains":["vnpay.vn"],"tier":1},
+      {"name":"ShopeePay Vietnam","domains":["shopeepay.vn"],"tier":1},
+      {"name":"VNPT Money","domains":["vnptpay.vn"],"tier":2}
+    ]},
+    {"category":"TRAVEL_AIRLINE","priority":95,"targets":[
+      {"name":"Vietnam Airlines","domains":["vietnamairlines.com"],"tier":1},
+      {"name":"Vietjet Air","domains":["vietjetair.com"],"tier":1},
+      {"name":"Bamboo Airways","domains":["bambooairways.com"],"tier":1},
+      {"name":"Vietravel Airlines","domains":["vietravelairlines.vn"],"tier":2}
+    ]},
+    {"category":"TRAVEL_OTA_HOTEL","priority":95,"targets":[
+      {"name":"Traveloka Vietnam","domains":["traveloka.com"],"tier":1},
+      {"name":"Booking.com Vietnam","domains":["booking.com"],"tier":1},
+      {"name":"Agoda Vietnam","domains":["agoda.com"],"tier":1},
+      {"name":"Klook Vietnam","domains":["klook.com"],"tier":1},
+      {"name":"Trip.com Vietnam","domains":["trip.com"],"tier":2},
+      {"name":"Vinpearl","domains":["vinpearl.com"],"tier":1}
+    ]},
+    {"category":"MOBILITY_DELIVERY","priority":95,"targets":[
+      {"name":"Grab Vietnam","domains":["grab.com"],"tier":1},
+      {"name":"be","domains":["be.com.vn"],"tier":1},
+      {"name":"Xanh SM","domains":["xanhsm.com"],"tier":1},
+      {"name":"ShopeeFood","domains":["shopeefood.vn"],"tier":1}
+    ]},
+    {"category":"ENTERTAINMENT","priority":80,"targets":[
+      {"name":"CGV Vietnam","domains":["cgv.vn"],"tier":1},
+      {"name":"Galaxy Cinema","domains":["galaxycine.vn"],"tier":1},
+      {"name":"Lotte Cinema Vietnam","domains":["lottecinemavn.com"],"tier":1},
+      {"name":"Beta Cinemas","domains":["betacinemas.vn"],"tier":2},
+      {"name":"BHD Star","domains":["bhdstar.vn"],"tier":2}
+    ]},
+    {"category":"LOYALTY_GIFTCARD","priority":80,"targets":[
+      {"name":"TAPTAP","domains":["taptap.com.vn"],"tier":1},
+      {"name":"UrBox","domains":["urbox.vn"],"tier":1},
+      {"name":"Got It","domains":["gotit.vn"],"tier":1}
+    ]},
+    {"category":"TELECOM","priority":80,"targets":[
+      {"name":"Viettel Telecom","domains":["vietteltelecom.vn"],"tier":1},
+      {"name":"MobiFone","domains":["mobifone.vn"],"tier":1},
+      {"name":"VNPT","domains":["vnpt.com.vn"],"tier":1},
+      {"name":"FPT Telecom","domains":["fpt.vn"],"tier":1}
+    ]},
+    {"category":"INSURANCE","priority":70,"targets":[
+      {"name":"Bao Viet","domains":["baoviet.com.vn"],"tier":1},
+      {"name":"Prudential Vietnam","domains":["prudential.com.vn"],"tier":1},
+      {"name":"Manulife Vietnam","domains":["manulife.com.vn"],"tier":1},
+      {"name":"AIA Vietnam","domains":["aia.com.vn"],"tier":1}
+    ]},
+    {"category":"FITNESS_WELLNESS","priority":65,"targets":[
+      {"name":"California Fitness & Yoga","domains":["californiafitness.vn"],"tier":1},
+      {"name":"CITIGYM","domains":["citigym.com.vn"],"tier":1},
+      {"name":"Elite Fitness","domains":[],"tier":2},
+      {"name":"The New Gym","domains":["thenewgym.vn"],"tier":2}
+    ]},
+    {"category":"EDUCATION","priority":60,"targets":[
+      {"name":"Apollo English","domains":["apollo.edu.vn"],"tier":1},
+      {"name":"VUS","domains":["vus.edu.vn"],"tier":1},
+      {"name":"ILA Vietnam","domains":["ila.edu.vn"],"tier":1},
+      {"name":"Wall Street English Vietnam","domains":[],"tier":2}
+    ]},
+    {"category":"AUTOMOTIVE","priority":65,"targets":[
+      {"name":"VinFast","domains":["vinfastauto.com"],"tier":1},
+      {"name":"Honda Vietnam","domains":["honda.com.vn"],"tier":1},
+      {"name":"Yamaha Motor Vietnam","domains":["yamaha-motor.com.vn"],"tier":1},
+      {"name":"Toyota Vietnam","domains":["toyota.com.vn"],"tier":1},
+      {"name":"Ford Vietnam","domains":["ford.com.vn"],"tier":2}
+    ]}
+  ]
+}
