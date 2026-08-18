@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-18T11:48:49.858553Z",
+  "generated_at": "2026-08-18T12:01:56.007091Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 7049,
-    "frontier_deferred_pending": 38317,
-    "frontier_pending": 45366,
-    "last_6_runs_new_domains": 38,
+    "frontier_active_pending": 7726,
+    "frontier_deferred_pending": 38498,
+    "frontier_pending": 46224,
+    "last_6_runs_new_domains": 34,
     "last_run": {
-      "at": "2026-08-18T11:44:14.694189Z",
+      "at": "2026-08-18T11:57:42.709582Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.net/vn/*uu-dai*",
-        "*.com/vietnam/*promotion*",
-        "*.vn/*khuyen-mai*",
-        "*.vn/*khuyenmai*"
+        "*.vn/*uu-dai*",
+        "*.vn/*uudai*",
+        "*.vn/*voucher*",
+        "*.vn/*promotion*"
       ],
-      "duration_s": 273.7,
-      "errors": 290,
-      "frontier_pending": 45366,
-      "new_domains": 1,
-      "processed": 1683,
-      "rate403": 1.664,
-      "rate429": 7.903
+      "duration_s": 251.7,
+      "errors": 146,
+      "frontier_pending": 46224,
+      "new_domains": 6,
+      "processed": 1502,
+      "rate403": 1.332,
+      "rate429": 0.067
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1699,
+    "master_domains": 1722,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 126,
+    "run_count": 127,
     "running": true,
-    "seen_urls": 650004,
-    "updated_at": "2026-08-18T11:48:48.379760Z"
+    "seen_urls": 657797,
+    "updated_at": "2026-08-18T12:01:54.417733Z"
   },
   "master_input": {
-    "active_input_count": 206,
+    "active_input_count": 208,
     "counts": {
-      "ACTIVE_INPUT": 206,
+      "ACTIVE_INPUT": 208,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 27,
-      "GENERAL": 1283,
+      "GENERAL": 1303,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 32,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 159,
-      "PUBLIC_HTTP": 1463,
+      "PROMO_RETAIL": 161,
+      "PUBLIC_HTTP": 1484,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 94,
-      "REVIEW_INPUT": 1257,
+      "RETAIL_ECOMMERCE": 95,
+      "REVIEW_INPUT": 1276,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1257,
+      "SOURCE_REVIEW": 1276,
       "TRAVEL_MOBILITY": 21
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-18T11:48:49.654970Z",
+    "generated_at": "2026-08-18T12:01:55.788398Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1479,
-    "review_input_count": 1257,
+    "record_count": 1500,
+    "review_input_count": 1276,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1699,
+    "source_hunter_domains": 1722,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -386,69 +386,27 @@
     "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "rạp chiếu phim khuyến mãi Việt Nam",
-      "rạp chiếu phim ưu đãi Việt Nam",
-      "rạp chiếu phim voucher Việt Nam",
-      "rạp chiếu phim promotion Vietnam"
+      "khách sạn resort khuyến mãi Việt Nam",
+      "khách sạn resort ưu đãi Việt Nam",
+      "khách sạn resort voucher Việt Nam",
+      "khách sạn resort promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 111,
+    "cc_domain_page": 112,
     "frontier_scheduler": {
-      "active": 1683,
+      "active": 1502,
       "base_per_host_batch": 16,
-      "deferred": 38317,
+      "deferred": 38498,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.0,
+      "previous_429_rate": 7.903,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 206
+      "unique_hosts": 182
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-17T23:52:14.974251Z",
-      "domain": "vistage.com",
-      "radar": false,
-      "url": "https://vistage.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T23:52:14.974251Z",
-      "domain": "salesfocusinc.com",
-      "radar": false,
-      "url": "https://salesfocusinc.com/sales-focus-inc-south-carolina-business-review-2025/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T00:24:08.425457Z",
-      "domain": "appexchange.salesforce.com",
-      "radar": false,
-      "url": "https://appexchange.salesforce.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T00:24:08.425457Z",
-      "domain": "bts.com",
-      "radar": false,
-      "url": "https://bts.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T00:24:08.425457Z",
-      "domain": "irobot.fr",
-      "radar": false,
-      "url": "https://irobot.fr/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T00:24:08.425457Z",
-      "domain": "irobot.be",
-      "radar": false,
-      "url": "https://irobot.be/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-18T00:24:08.425457Z",
       "domain": "ign.com",
@@ -1245,6 +1203,48 @@
       "domain": "cambridgesatchel.com",
       "radar": false,
       "url": "https://cambridgesatchel.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T11:57:42.709582Z",
+      "domain": "revenue.ky.gov",
+      "radar": false,
+      "url": "https://revenue.ky.gov/Business/Sales-Use-Tax/Pages/default.aspx",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T11:57:42.709582Z",
+      "domain": "revenue.state.mn.us",
+      "radar": false,
+      "url": "https://revenue.state.mn.us/sales-and-use-tax",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T11:57:42.709582Z",
+      "domain": "cultgaia.com",
+      "radar": false,
+      "url": "https://cultgaia.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T11:57:42.709582Z",
+      "domain": "isharya.com",
+      "radar": false,
+      "url": "https://isharya.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T11:57:42.709582Z",
+      "domain": "milly.com",
+      "radar": false,
+      "url": "https://milly.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T11:57:42.709582Z",
+      "domain": "t-mobile.com",
+      "radar": false,
+      "url": "https://t-mobile.com/",
       "via": "external_promo"
     }
   ]
