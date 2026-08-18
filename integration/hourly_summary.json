@@ -1,21 +1,21 @@
 {
   "alerts": [
     "stale canonical suppressed: raw 319/66, floor 360/77",
-    "canonical telemetry stale 1021m"
+    "canonical telemetry stale 1080m"
   ],
-  "generated_at": "2026-08-18T21:26:55.832972Z",
-  "local_time": "2026-08-19T04:26:55.832968+07:00",
+  "generated_at": "2026-08-18T22:25:51.905684Z",
+  "local_time": "2026-08-19T05:25:51.905681+07:00",
   "metrics": {
     "actionable_offers": 360,
-    "active_sources": 223,
-    "hunter_domains": 1885,
+    "active_sources": 225,
+    "hunter_domains": 1905,
     "literal_codes": 77,
-    "master_sources": 1634,
+    "master_sources": 1651,
     "promo_scanned_sources": 326,
     "raw_actionable_offers": 319,
     "raw_literal_codes": 66,
-    "review_sources": 1393,
-    "seen_urls": 765359
+    "review_sources": 1408,
+    "seen_urls": 784651
   },
   "platform_states": {
     "PREAUTH_PENDING_SESSION": 5,
@@ -23,5 +23,5 @@
     "WAIT_SOURCE_MAPPING": 1
   },
   "schema": "promo.hourly_summary.v1",
-  "text": "PROMO: 360 voucher/deal | 77 code\nMới: +0 voucher/deal | +0 code | +6 source\nSource: 326/223 (146%)\nL2: chưa login-ready; 7 profile đang xử lý\nETA login: đang tự retry theo lượt free\nETA all jobs: chưa đủ throughput canonical ổn định"
+  "text": "PROMO: 360 voucher/deal | 77 code\nMới: +0 voucher/deal | +0 code | +17 source\nSource: 326/225 (145%)\nL2: chưa login-ready; 7 profile đang xử lý\nETA login: đang tự retry theo lượt free\nETA all jobs: chưa đủ throughput canonical ổn định"
 }
