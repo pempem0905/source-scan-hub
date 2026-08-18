@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/accesstrade-feed.yml'
       - 'integration/accesstrade_ingest.py'
+      - 'integration/accesstrade_catalog_ingest.py'
   schedule:
     - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
@@ -20,7 +21,7 @@ concurrency:
 jobs:
   ingest:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 14
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,7 +41,7 @@ jobs:
             echo "AccessTrade feed is installed but credentials are not configured in GitHub Actions secrets."
           fi
 
-      - name: Ingest vouchers, coupons, deals and TikTok Shop feed
+      - name: Ingest vouchers coupons deals and TikTok Shop feed
         if: steps.auth.outputs.enabled == 'true'
         env:
           ACCESSTRADE_API_TOKEN: ${{ secrets.ACCESSTRADE_API_TOKEN }}
@@ -51,31 +52,49 @@ jobs:
           ACCESSTRADE_TIKTOK_LIMIT: '20'
         run: python3 integration/accesstrade_ingest.py
 
-      - name: Validate generated feed
+      - name: Ingest approved campaigns active promotions and discounted product datafeeds
+        if: steps.auth.outputs.enabled == 'true'
+        env:
+          ACCESSTRADE_API_TOKEN: ${{ secrets.ACCESSTRADE_API_TOKEN }}
+          ACCESSTRADE_API_TOKEN_2: ${{ secrets.ACCESSTRADE_API_TOKEN_2 }}
+        run: python3 integration/accesstrade_catalog_ingest.py
+
+      - name: Validate generated feeds
         if: steps.auth.outputs.enabled == 'true'
         run: |
-          python3 -m py_compile integration/accesstrade_ingest.py
+          python3 -m py_compile integration/accesstrade_ingest.py integration/accesstrade_catalog_ingest.py
           python3 - <<'PY'
           import json
           from pathlib import Path
-          for name in ('accesstrade_handoff_v1.jsonl','accesstrade_sources.jsonl','accesstrade_tiktok_feed.jsonl'):
+          names=(
+            'accesstrade_handoff_v1.jsonl',
+            'accesstrade_sources.jsonl',
+            'accesstrade_tiktok_feed.jsonl',
+            'accesstrade_campaigns.jsonl',
+            'accesstrade_catalog_handoff_v1.jsonl',
+            'accesstrade_datafeeds.jsonl',
+          )
+          for name in names:
               p=Path('integration')/name
+              if not p.exists():
+                  raise SystemExit(f'missing {name}')
               for line in p.read_text(errors='replace').splitlines():
                   json.loads(line)
           json.loads(Path('integration/accesstrade_status.json').read_text())
-          print('AccessTrade feed validation OK')
+          json.loads(Path('integration/accesstrade_catalog_status.json').read_text())
+          print('AccessTrade feeds validation OK')
           PY
 
-      - name: Persist AccessTrade feed
+      - name: Persist AccessTrade feeds
         if: steps.auth.outputs.enabled == 'true'
         run: |
           git config user.name "promo-accesstrade-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add integration/accesstrade_handoff_v1.jsonl integration/accesstrade_sources.jsonl integration/accesstrade_tiktok_feed.jsonl integration/accesstrade_status.json
+          git add integration/accesstrade_handoff_v1.jsonl integration/accesstrade_sources.jsonl integration/accesstrade_tiktok_feed.jsonl integration/accesstrade_status.json integration/accesstrade_campaigns.jsonl integration/accesstrade_catalog_handoff_v1.jsonl integration/accesstrade_datafeeds.jsonl integration/accesstrade_catalog_status.json
           if git diff --cached --quiet; then
             echo "No AccessTrade feed changes"
             exit 0
           fi
-          git commit -m "Refresh AccessTrade promo feed [skip ci]"
+          git commit -m "Refresh AccessTrade full promo catalog [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main
