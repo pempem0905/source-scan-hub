@@ -1,0 +1,27 @@
+{
+  "candidate_rows_total": 0,
+  "generated_at": "2026-08-18T11:09:09.189647Z",
+  "networks": {
+    "ECOMOBI": {
+      "candidate_rows": 0,
+      "endpoints_considered": 6,
+      "error": null,
+      "http_status": null,
+      "raw_rows": 0,
+      "state": "CREDENTIALS_MISSING",
+      "successful_endpoint": null
+    },
+    "MASOFFER": {
+      "candidate_rows": 0,
+      "endpoints_considered": 5,
+      "error": null,
+      "http_status": null,
+      "raw_rows": 0,
+      "state": "CREDENTIALS_MISSING",
+      "successful_endpoint": null
+    }
+  },
+  "production_write": false,
+  "schema": "promo.affiliate_network_status.v1",
+  "verification_required": true
+}
