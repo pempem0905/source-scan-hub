@@ -12,6 +12,8 @@
     "source_input": "integration/master_input_sources_v1.jsonl",
     "dispatch_plan": "integration/promo_dispatch_plan_v1.jsonl",
     "l2_shadow_queue": "l2/candidate-queue.jsonl",
+    "external_candidate_feeds": ["integration/accesstrade_handoff_v1.jsonl"],
+    "affiliate_product_feeds": ["integration/accesstrade_tiktok_feed.jsonl"],
     "value_filter": "ACTIONABLE-VALUE-V2",
     "master_rule": "single-writer",
     "migration_mode": "BRIDGE_SHADOW"
@@ -46,14 +48,14 @@
       "name": "PROMO Turbo Scan",
       "state": "ACTIVE",
       "role": "single-writer-quality-gate",
-      "responsibilities": ["global dedup", "validate READY queue", "validate L2 candidates only after promotion from shadow", "atomic commit", "post-commit verification"],
+      "responsibilities": ["global dedup", "validate READY queue", "validate L2 candidates only after promotion from shadow", "validate affiliate-feed candidates against merchant/official source", "atomic commit", "post-commit verification"],
       "crawl_sources": false
     },
     {
       "name": "PROMO GPT Infra + Commit",
       "state": "ACTIVE",
       "role": "dispatcher-health-relay",
-      "responsibilities": ["read master input and dispatch plan", "worker health", "producer-stall detection", "commit-stall detection", "queue relay", "writer verification", "source registry export", "status/dashboard health"],
+      "responsibilities": ["read master input and dispatch plan", "read external candidate feed manifests", "worker health", "producer-stall detection", "commit-stall detection", "queue relay", "writer verification", "source registry export", "status/dashboard health"],
       "broad_source_discovery": false
     }
   ],
@@ -68,10 +70,13 @@
   ],
   "subsystems": {
     "source_hunter": {"project_id": "PROMO-SRC-HUNTER-V1", "role": "only broad source discovery and master-input writer"},
-    "l2_router": {"project_id": "PROMO-L2-ROUTER-V1", "role": "hard access lanes and shadow extraction", "production_write": false}
+    "l2_router": {"project_id": "PROMO-L2-ROUTER-V1", "role": "hard access lanes and shadow extraction", "production_write": false},
+    "accesstrade_feed": {"project_id": "PROMO-ACCESSTRADE-FEED-V1", "role": "fast affiliate voucher/deal discovery plus TikTok Shop product feed", "candidate_feed": "integration/accesstrade_handoff_v1.jsonl", "tiktok_feed": "integration/accesstrade_tiktok_feed.jsonl", "production_write": false, "verification_required": true}
   },
   "data_rules": {
     "official_source_first": true,
+    "affiliate_feed_requires_official_verification": true,
+    "affiliate_links_are_never_primary_evidence": true,
     "child_detail_terms_override_hubs": true,
     "literal_code_requires_exact_visible_contextual_evidence": true,
     "raw_regex_code_match_is_never_a_verified_code": true,
