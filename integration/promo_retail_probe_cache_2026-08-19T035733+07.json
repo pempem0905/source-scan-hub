@@ -1,0 +1,35 @@
+{
+  "schema": "promo.retail.probe_cache_delta.v1",
+  "source_worker": "PROMO Retail Shard",
+  "checked_at": "2026-08-19T03:57:33+07:00",
+  "entries": [
+    {
+      "url": "https://www.thegioididong.com/tin-tuc/uu-dai-giam-den-200k-khi-thanh-toan-momo-tren-tgdd-1543223",
+      "result": "EXPIRED_LITERAL",
+      "observed_literals": ["TGDD200", "TGDDFS1"],
+      "notes": "Controlling official terms are 21/08-10/09/2023; reject as current 2026 code evidence."
+    },
+    {
+      "url": "https://www.thegioididong.com/tin-tuc/chuong-trinh-giam-gia-1-toi-da-100-000d-khi-thanh-toan-1530109",
+      "result": "LITERAL_CURRENT_VALIDITY_UNRESOLVED",
+      "observed_literals": ["MMDIENTU"],
+      "notes": "Exact token is visible on official TGDĐ content, but this run did not resolve controlling current/future 2026 validity; REVIEW only, do not enqueue."
+    },
+    {
+      "url": "https://www.thegioididong.com/may-doi-tra/dtdd/nokia-110-4g/detail",
+      "result": "LITERAL_CURRENT_VALIDITY_UNRESOLVED",
+      "observed_literals": ["VNPAY567", "MMDIENTU"],
+      "notes": "Tokens appear on current product UI, but controlling campaign dates were not resolved; no clean enqueue."
+    },
+    {
+      "url": "https://www.galaxycine.vn/khuyen-mai/voucher-giam-khung-danh-tang-cac-stars/",
+      "result": "ACTIONABLE_ACCOUNT_CLAIMED_VOUCHER_DUPLICATE",
+      "notes": "Current 01/08-31/08/2026 ShopeePay benefit requires claiming voucher in app; no reusable public literal and candidate already represented."
+    },
+    {
+      "url": "https://www.galaxycine.vn/binh-luan-phim/galaxy-cinema-x-kfc-tang-den-100k/",
+      "result": "ACCOUNT_ISSUED_EVOUCHERS_NO_PUBLIC_LITERAL",
+      "notes": "Current member benefit issues private KFC e-vouchers; not reusable public literals."
+    }
+  ]
+}
