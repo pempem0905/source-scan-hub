@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-18T23:39:29.358165Z",
+  "generated_at": "2026-08-18T23:58:10.450748Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 7101,
-    "frontier_deferred_pending": 38484,
-    "frontier_pending": 45585,
-    "last_6_runs_new_domains": 15,
+    "frontier_active_pending": 6155,
+    "frontier_deferred_pending": 38467,
+    "frontier_pending": 44622,
+    "last_6_runs_new_domains": 17,
     "last_run": {
-      "at": "2026-08-18T23:34:04.154463Z",
+      "at": "2026-08-18T23:52:32.221442Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vi-vn/*uu-dai*",
-        "*.com/vi-vn/*voucher*",
-        "*.com/vi-vn/*promotion*",
-        "*.net/vn/*khuyen-mai*"
+        "*.net/vn/*uu-dai*",
+        "*.com/vietnam/*promotion*",
+        "*.vn/*khuyen-mai*",
+        "*.vn/*khuyenmai*"
       ],
-      "duration_s": 323.4,
-      "errors": 117,
-      "frontier_pending": 45585,
+      "duration_s": 336.4,
+      "errors": 87,
+      "frontier_pending": 44622,
       "new_domains": 5,
-      "processed": 1516,
-      "rate403": 1.385,
-      "rate429": 0.132
+      "processed": 1533,
+      "rate403": 0.457,
+      "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1946,
+    "master_domains": 1951,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 150,
+    "run_count": 151,
     "running": true,
-    "seen_urls": 812899,
-    "updated_at": "2026-08-18T23:39:27.521924Z"
+    "seen_urls": 819053,
+    "updated_at": "2026-08-18T23:58:08.666369Z"
   },
   "master_input": {
-    "active_input_count": 226,
+    "active_input_count": 228,
     "counts": {
-      "ACTIVE_INPUT": 226,
+      "ACTIVE_INPUT": 228,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 18,
       "FOOD_BEVERAGE": 28,
-      "GENERAL": 1478,
+      "GENERAL": 1482,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 33,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 178,
-      "PUBLIC_HTTP": 1672,
+      "PROMO_RETAIL": 180,
+      "PUBLIC_HTTP": 1677,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 105,
-      "REVIEW_INPUT": 1444,
+      "RETAIL_ECOMMERCE": 106,
+      "REVIEW_INPUT": 1447,
       "SOURCE_HUNTER": 18,
-      "SOURCE_REVIEW": 1444,
+      "SOURCE_REVIEW": 1447,
       "TRAVEL_MOBILITY": 23
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 18,
-    "generated_at": "2026-08-18T23:39:29.135277Z",
+    "generated_at": "2026-08-18T23:58:10.230841Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1688,
-    "review_input_count": 1444,
+    "record_count": 1693,
+    "review_input_count": 1447,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1946,
+    "source_hunter_domains": 1951,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -295,7 +295,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-18T23:02:38.157243Z",
+    "updated_at": "2026-08-18T23:38:55.039570Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -383,65 +383,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 1,
+    "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "trang sức khuyến mãi Việt Nam",
-      "trang sức ưu đãi Việt Nam",
-      "trang sức voucher Việt Nam",
-      "trang sức promotion Vietnam"
+      "nội thất gia dụng khuyến mãi Việt Nam",
+      "nội thất gia dụng ưu đãi Việt Nam",
+      "nội thất gia dụng voucher Việt Nam",
+      "nội thất gia dụng promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
     "cc_domain_page": 127,
     "frontier_scheduler": {
-      "active": 1516,
+      "active": 1533,
       "base_per_host_batch": 16,
-      "deferred": 38484,
+      "deferred": 38467,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.0,
+      "previous_429_rate": 0.132,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 176
+      "unique_hosts": 172
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T10:17:45.239764Z",
-      "domain": "gtspirit.com",
-      "radar": false,
-      "url": "https://gtspirit.com/cars-for-sale/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T10:17:45.239764Z",
-      "domain": "playstationlifestyle.net",
-      "radar": false,
-      "url": "https://playstationlifestyle.net/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T10:17:45.239764Z",
-      "domain": "beautygarden.vn",
-      "radar": false,
-      "url": "https://beautygarden.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-18T10:17:45.239764Z",
-      "domain": "bnbeauty.com.vn",
-      "radar": false,
-      "url": "https://bnbeauty.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-18T10:17:45.239764Z",
-      "domain": "sakurabeauty.vn",
-      "radar": false,
-      "url": "https://sakurabeauty.vn/",
-      "via": "free_search"
-    },
     {
       "at": "2026-08-18T10:17:45.239764Z",
       "domain": "elori.vn",
@@ -1246,6 +1211,41 @@
       "radar": false,
       "url": "https://vinhcara.com/",
       "via": "free_search"
+    },
+    {
+      "at": "2026-08-18T23:52:32.221442Z",
+      "domain": "jetbluevacations.com",
+      "radar": false,
+      "url": "https://jetbluevacations.com/deals",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T23:52:32.221442Z",
+      "domain": "lemlem.com",
+      "radar": false,
+      "url": "https://lemlem.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T23:52:32.221442Z",
+      "domain": "pixiemarket.com",
+      "radar": false,
+      "url": "https://pixiemarket.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T23:52:32.221442Z",
+      "domain": "nililotan.com",
+      "radar": false,
+      "url": "https://nililotan.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T23:52:32.221442Z",
+      "domain": "shopmoment.com",
+      "radar": false,
+      "url": "https://shopmoment.com/summer-sale-2026?toggle=isOnSale&filter-isOnSale=true",
+      "via": "internal_promo"
     }
   ]
 }
