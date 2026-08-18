@@ -1,0 +1,37 @@
+{
+  "schema": "promo.retail.telemetry.v1",
+  "source_worker": "PROMO Retail Shard",
+  "mode": "TURBO_SCAN_PIPELINE_V2",
+  "input_contract": {
+    "dispatch_plan": "integration/promo_dispatch_plan_v1.jsonl",
+    "master_input": "integration/master_input_sources_v1.jsonl",
+    "required_lane": "PROMO_RETAIL",
+    "required_dispatch_status": "ELIGIBLE",
+    "required_source_status": "ACTIVE_INPUT"
+  },
+  "last_run_at": "2026-08-18T19:55:38+07:00",
+  "fast_probes": 18,
+  "shortlisted": 2,
+  "deep_validations": 1,
+  "cache_skips": 0,
+  "sources_read": 10,
+  "code_likely_sources_read": 2,
+  "no_code_reads": 8,
+  "family_rotations": 2,
+  "offers_found": 2,
+  "voucher_benefits_found": 2,
+  "literal_codes_found": 0,
+  "literal_codes_observed_duplicate": 4,
+  "codes_per_10_reads": 0.0,
+  "enqueued": 0,
+  "blocked": 0,
+  "duplicates": 4,
+  "lovable_calls": 0,
+  "notes": [
+    "Pharmacity official Q3/2026 ZaloPay page revalidated four exact reusable literals: ZPPMC15, TRASAUPMC35, ZPPMC, TRASAUPMC; all four already exist in integration/promo_retail_handoff_v1.jsonl, so no duplicate enqueue.",
+    "CellphoneS current code-summary page contained current benefits but no exact current reusable literal token; deep read stopped after probe.",
+    "Phuc Long August selected-member vouchers are targeted Zalo-delivered vouchers, not public reusable literal codes.",
+    "Current Circle K, Vincom and Dien May Xanh promo pages probed had actionable economics but no exact reusable literal token in visible official text; exact-code producer did not enqueue them in this run.",
+    "No login/WAF bypass attempted; zero Lovable usage."
+  ]
+}
