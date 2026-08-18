@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-18T04:14:46.071121Z",
+  "generated_at": "2026-08-18T04:53:31.484870Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 10114,
+    "frontier_active_pending": 7218,
     "frontier_deferred_pending": 38200,
-    "frontier_pending": 48314,
-    "last_6_runs_new_domains": 41,
+    "frontier_pending": 45418,
+    "last_6_runs_new_domains": 39,
     "last_run": {
-      "at": "2026-08-18T04:09:41.683313Z",
+      "at": "2026-08-18T04:49:00.417069Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vi-vn/*uu-dai*",
-        "*.com/vi-vn/*voucher*",
-        "*.com/vi-vn/*promotion*",
-        "*.net/vn/*khuyen-mai*"
+        "*.net/vn/*uu-dai*",
+        "*.com/vietnam/*promotion*",
+        "*.vn/*khuyen-mai*",
+        "*.vn/*khuyenmai*"
       ],
-      "duration_s": 303.0,
-      "errors": 102,
-      "frontier_pending": 48314,
-      "new_domains": 6,
+      "duration_s": 269.6,
+      "errors": 86,
+      "frontier_pending": 45418,
+      "new_domains": 4,
       "processed": 1800,
-      "rate403": 1.278,
-      "rate429": 0.944
+      "rate403": 0.667,
+      "rate429": 0.667
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1532,
+    "master_domains": 1536,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 110,
+    "run_count": 111,
     "running": true,
-    "seen_urls": 529831,
-    "updated_at": "2026-08-18T04:14:44.678833Z"
+    "seen_urls": 537058,
+    "updated_at": "2026-08-18T04:53:30.046210Z"
   },
   "master_input": {
     "active_input_count": 176,
@@ -41,33 +41,33 @@
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 25,
-      "GENERAL": 1135,
+      "GENERAL": 1138,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 32,
       "PROMO_L2": 15,
       "PROMO_RETAIL": 129,
-      "PUBLIC_HTTP": 1305,
+      "PUBLIC_HTTP": 1308,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 87,
-      "REVIEW_INPUT": 1129,
+      "REVIEW_INPUT": 1132,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1129,
+      "SOURCE_REVIEW": 1132,
       "TRAVEL_MOBILITY": 20
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-18T04:14:45.859392Z",
+    "generated_at": "2026-08-18T04:53:31.269045Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1321,
-    "review_input_count": 1129,
+    "record_count": 1324,
+    "review_input_count": 1132,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1532,
+    "source_hunter_domains": 1536,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -234,7 +234,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-18T03:12:39.363269Z",
+    "updated_at": "2026-08-18T04:20:24.526309Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -252,14 +252,14 @@
       "login_before_demand": true,
       "runtime_probe_verified": true,
       "permission_required": {
-        "state": "WAITING_RUNTIME_WINDOW",
-        "reason": "No real secure takeover surface is active right now.",
-        "safe_action": "No user action is required until bridge_status becomes TAKEOVER_READY.",
-        "note": "The bridge will retry autonomously; sensitive login material remains runtime-only."
+        "state": "WAITING_FREE_DAILY_QUOTA",
+        "reason": "The verified free Browser Run lane is waiting for its next daily acquisition window.",
+        "safe_action": "No user action is required; the bridge will retry automatically after the recorded UTC retry time.",
+        "note": "No login alert is emitted until a real secure takeover surface is active."
       },
       "end_to_end_verified": false,
-      "free_daily_quota_wait": false,
-      "next_retry_at": null
+      "free_daily_quota_wait": true,
+      "next_retry_at": "2026-08-19T00:05:00Z"
     },
     "platforms": {
       "uniqlo": {
@@ -322,13 +322,13 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 1,
+    "free_search_last_added": 4,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "ô tô xe máy khuyến mãi Việt Nam",
-      "ô tô xe máy ưu đãi Việt Nam",
-      "ô tô xe máy voucher Việt Nam",
-      "ô tô xe máy promotion Vietnam"
+      "bất động sản khuyến mãi Việt Nam",
+      "bất động sản ưu đãi Việt Nam",
+      "bất động sản voucher Việt Nam",
+      "bất động sản promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
@@ -339,41 +339,13 @@
       "deferred": 38200,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.5,
+      "previous_429_rate": 0.944,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 271
+      "unique_hosts": 241
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-17T20:58:12.663122Z",
-      "domain": "fr.fiverr.com",
-      "radar": false,
-      "url": "https://fr.fiverr.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T20:58:12.663122Z",
-      "domain": "ecommercenorthamerica.org",
-      "radar": false,
-      "url": "https://ecommercenorthamerica.org/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T20:58:12.663122Z",
-      "domain": "it.fiverr.com",
-      "radar": false,
-      "url": "https://it.fiverr.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T20:58:12.663122Z",
-      "domain": "ja.semrush.com",
-      "radar": false,
-      "url": "https://ja.semrush.com/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-17T20:58:12.663122Z",
       "domain": "it.semrush.com",
@@ -1185,6 +1157,34 @@
       "radar": false,
       "url": "https://badgermapping.com/blog/4-ways-meditation-helps-salespeople/",
       "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T04:49:00.417069Z",
+      "domain": "vendux.org",
+      "radar": false,
+      "url": "https://vendux.org/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T04:49:00.417069Z",
+      "domain": "trogiup.batdongsan.com.vn",
+      "radar": false,
+      "url": "https://trogiup.batdongsan.com.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-18T04:49:00.417069Z",
+      "domain": "phonhadat.vn",
+      "radar": false,
+      "url": "https://phonhadat.vn/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-18T04:49:00.417069Z",
+      "domain": "bds123.vn",
+      "radar": false,
+      "url": "https://bds123.vn/",
+      "via": "free_search"
     }
   ]
 }
