@@ -792,3 +792,7 @@
 {"at": "2026-08-18T18:48:14.493339Z", "domain": "italist.com", "radar": false, "url": "https://italist.com/", "via": "external_promo"}
 {"at": "2026-08-18T18:48:14.493339Z", "domain": "realtyvietnam.vn", "radar": false, "url": "https://realtyvietnam.vn/", "via": "free_search"}
 {"at": "2026-08-18T18:48:14.493339Z", "domain": "store.hbr.org", "radar": false, "url": "https://store.hbr.org/Sales-and-marketing-books?_bc_fsnf=1&Choose+a+language=English&Format+Type+Filter%5B%5D=Bundle&Format+Type+Filter%5B%5D=Ebook&Publish+Date+Range=Last+24+months", "via": "internal_promo"}
+{"at": "2026-08-18T19:42:59.369590Z", "domain": "danviet.vn", "radar": false, "url": "https://danviet.vn/", "via": "free_search"}
+{"at": "2026-08-18T19:42:59.369590Z", "domain": "gotit.vn", "radar": false, "url": "https://gotit.vn/", "via": "free_search"}
+{"at": "2026-08-18T19:42:59.369590Z", "domain": "voucherbox.vn", "radar": true, "url": "https://voucherbox.vn/", "via": "free_search"}
+{"at": "2026-08-18T19:42:59.369590Z", "domain": "lifelink.vn", "radar": false, "url": "https://lifelink.vn/", "via": "free_search"}
