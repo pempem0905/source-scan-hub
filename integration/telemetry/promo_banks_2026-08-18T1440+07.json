@@ -1,0 +1,23 @@
+{
+  "schema": "promo.worker_telemetry.v2",
+  "worker": "PROMO Banks Shard",
+  "fast_probes": 18,
+  "shortlisted": 6,
+  "deep_validations": 4,
+  "cache_skips": 5,
+  "sources_read": 6,
+  "code_likely_sources_read": 6,
+  "no_code_reads": 2,
+  "family_rotations": 1,
+  "offers_found": 2,
+  "voucher_benefits_found": 2,
+  "literal_codes_found": 2,
+  "codes_per_10_reads": 3.33,
+  "enqueued": 2,
+  "blocked": 0,
+  "duplicates": 5,
+  "last_run_at": "2026-08-18T14:40:55+07:00",
+  "lovable_calls": 0,
+  "handoff": "integration/handoffs/promo_banks_2026-08-18T1440+07.jsonl",
+  "note": "GitHub-only exact-code V2 run. Consumed only ELIGIBLE+ACTIVE_INPUT PROMO_BANKS. New clean MoMo codes: VTSDOOKKI (Dookki / Ví Trả Sau, 01/06-31/12/2026) and HAPPYDAY (movie-ticket cashback Tue-Thu from 10/04/2026 until promotional budget exhaustion). MOMOGAME and CHAOMOMO had strong literal signals but lacked a controlling current/future end window in the probed official evidence, so were not enqueued. WORLDCUP/team codes, MOMOGSMNGON, NHANHTIEN and CUOITUAN are expired and rejected. Existing ZACBJX and BIDV JCB/Trip literals were dedup/cache skipped. No canonical counters mutated; lovable_calls=0."
+}
