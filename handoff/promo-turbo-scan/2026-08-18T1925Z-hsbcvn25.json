@@ -1,0 +1,20 @@
+{
+  "schema": "promo.handoff.actionable_value_v2",
+  "source_worker": "PROMO Turbo Scan",
+  "status": "READY",
+  "idempotency_key": "promo-turbo-scan|hsbc-vn|ascott|HSBCVN25|current",
+  "merchant": "Ascott / ASR participating Vietnam properties",
+  "issuer": "HSBC Vietnam",
+  "literal_code": "HSBCVN25",
+  "benefit": "25% off Best Flexible Rate at listed participating Ascott/ASR properties; breakfast inclusion varies by listed property group",
+  "eligibility": "Eligible HSBC cardholders; ASR membership/login required; book on official Ascott website and pay with eligible HSBC card",
+  "constraints": "Select Corporate Customers and enter HSBCVN25; cannot combine with other promotions; applicable only at listed participating properties and subject to programme terms",
+  "valid_through": null,
+  "date_status": "ACTIVE_ON_CURRENT_OFFICIAL_HSBC_DAILY_OFFERS_PAGE; exact terminal date not exposed in retrieved code context, therefore writer must retain current-page evidence and must not invent a date",
+  "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+  "source_type": "official_bank",
+  "actionable_value_v2": true,
+  "validated_at": "2026-08-18T19:25:00Z",
+  "evidence": "Official HSBC current daily-offers page states Promo Code HSBCVN25, 25% off Best Flexible Rate for participating Ascott properties, ASR membership/login and HSBC-card payment requirements.",
+  "writer_note": "READY handoff only; global dedup/canonical advancement remains the single final writer's responsibility. Do not fabricate valid_through."
+}
