@@ -7,7 +7,7 @@ on:
       - '.github/workflows/accesstrade-feed.yml'
       - 'integration/accesstrade_ingest.py'
   schedule:
-    - cron: '17,47 * * * *'
+    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
 
 permissions:
