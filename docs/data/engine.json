@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-18T08:22:20.916678Z",
+  "generated_at": "2026-08-18T09:01:17.536350Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 7457,
-    "frontier_deferred_pending": 38292,
-    "frontier_pending": 45749,
-    "last_6_runs_new_domains": 23,
+    "frontier_active_pending": 8219,
+    "frontier_deferred_pending": 38231,
+    "frontier_pending": 46450,
+    "last_6_runs_new_domains": 26,
     "last_run": {
-      "at": "2026-08-18T08:17:27.872158Z",
+      "at": "2026-08-18T08:55:38.599033Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*uu-dai*",
-        "*.vn/*uudai*",
-        "*.vn/*voucher*",
-        "*.vn/*promotion*"
+        "*.vn/*offers*",
+        "*.vn/*deals*",
+        "*.vn/*sale*",
+        "*.com/vn/*khuyen-mai*"
       ],
-      "duration_s": 291.7,
-      "errors": 125,
-      "frontier_pending": 45749,
-      "new_domains": 5,
-      "processed": 1708,
-      "rate403": 0.82,
-      "rate429": 0.117
+      "duration_s": 337.5,
+      "errors": 99,
+      "frontier_pending": 46450,
+      "new_domains": 4,
+      "processed": 1769,
+      "rate403": 0.565,
+      "rate429": 0.057
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1582,
+    "master_domains": 1597,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 117,
+    "run_count": 118,
     "running": true,
-    "seen_urls": 580927,
-    "updated_at": "2026-08-18T08:22:19.598493Z"
+    "seen_urls": 589188,
+    "updated_at": "2026-08-18T09:01:16.085209Z"
   },
   "master_input": {
-    "active_input_count": 185,
+    "active_input_count": 187,
     "counts": {
-      "ACTIVE_INPUT": 185,
+      "ACTIVE_INPUT": 187,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 16,
-      "FOOD_BEVERAGE": 25,
-      "GENERAL": 1181,
+      "FOOD_BEVERAGE": 26,
+      "GENERAL": 1193,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 32,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 138,
-      "PUBLIC_HTTP": 1352,
+      "PROMO_RETAIL": 140,
+      "PUBLIC_HTTP": 1366,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 88,
-      "REVIEW_INPUT": 1167,
+      "RETAIL_ECOMMERCE": 89,
+      "REVIEW_INPUT": 1179,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1167,
+      "SOURCE_REVIEW": 1179,
       "TRAVEL_MOBILITY": 20
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-18T08:22:20.777008Z",
+    "generated_at": "2026-08-18T09:01:17.329395Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1368,
-    "review_input_count": 1167,
+    "record_count": 1382,
+    "review_input_count": 1179,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1582,
+    "source_hunter_domains": 1597,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -234,7 +234,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-18T07:55:33.080336Z",
+    "updated_at": "2026-08-18T08:55:00.731269Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -325,55 +325,27 @@
     "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "thực phẩm sạch khuyến mãi Việt Nam",
-      "thực phẩm sạch ưu đãi Việt Nam",
-      "thực phẩm sạch voucher Việt Nam",
-      "thực phẩm sạch promotion Vietnam"
+      "mẹ và bé khuyến mãi Việt Nam",
+      "mẹ và bé ưu đãi Việt Nam",
+      "mẹ và bé voucher Việt Nam",
+      "mẹ và bé promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 102,
+    "cc_domain_page": 103,
     "frontier_scheduler": {
-      "active": 1708,
+      "active": 1769,
       "base_per_host_batch": 16,
-      "deferred": 38292,
+      "deferred": 38231,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.06,
+      "previous_429_rate": 0.117,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 268
+      "unique_hosts": 250
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-17T21:24:24.371604Z",
-      "domain": "shawncasemore.com",
-      "radar": false,
-      "url": "https://shawncasemore.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T21:24:24.371604Z",
-      "domain": "episodes.top1.fm",
-      "radar": false,
-      "url": "https://episodes.top1.fm/episode/200-428-and-the-show-must-go-on-onestreams-rosa-campagna-on-playing-the-long-game-in-enterprise-sales",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T21:46:19.531988Z",
-      "domain": "andrewchen.com",
-      "radar": false,
-      "url": "https://andrewchen.com/a-practitioners-guide-to-net-promoter-score/amp/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T21:46:19.531988Z",
-      "domain": "budget.com",
-      "radar": false,
-      "url": "https://budget.com/en/home",
-      "via": "internal_promo"
-    },
     {
       "at": "2026-08-17T21:46:19.531988Z",
       "domain": "irobot.com",
@@ -1184,6 +1156,34 @@
       "domain": "forma-ai.webflow.io",
       "radar": false,
       "url": "https://forma-ai.webflow.io/resources/article/charming-the-cobra-how-to-avoid-perverse-incentives-in-sales-compensation",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T08:55:38.599033Z",
+      "domain": "apps.shopify.com",
+      "radar": false,
+      "url": "https://apps.shopify.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T08:55:38.599033Z",
+      "domain": "bose.ca",
+      "radar": false,
+      "url": "https://bose.ca/en/home",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T08:55:38.599033Z",
+      "domain": "sea.ign.com",
+      "radar": false,
+      "url": "https://sea.ign.com/amazon-deals?page=10",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T08:55:38.599033Z",
+      "domain": "goodcarbadcar.net",
+      "radar": false,
+      "url": "https://goodcarbadcar.net/global-auto-sales-explorer/",
       "via": "internal_promo"
     }
   ]
