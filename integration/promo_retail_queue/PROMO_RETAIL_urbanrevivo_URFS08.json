@@ -1,0 +1,23 @@
+{
+  "schema": "promo.candidate.v1",
+  "idempotency_key": "PROMO_RETAIL|urbanrevivo.com.vn|URFS08|2026-08-01|2026-08-31",
+  "source_worker": "PROMO Retail Shard",
+  "source_id": "SRCV1-9EC95365E04C",
+  "registrable_domain": "urbanrevivo.com.vn",
+  "vertical": "GENERAL",
+  "source_url": "https://urbanrevivo.com.vn/pages/promotion",
+  "merchant": "Urban Revivo Vietnam",
+  "title": "Miễn phí vận chuyển tháng 8 với mã URFS08",
+  "benefit_type": "FREESHIP_CODE",
+  "benefit_value": "Miễn phí vận chuyển",
+  "benefit_cap_vnd": null,
+  "min_spend_vnd": 1199000,
+  "start_date": "2026-08-01",
+  "end_date": "2026-08-31",
+  "eligibility": "Tất cả sản phẩm trên urbanrevivo.com.vn; đơn từ 1.199.000 VND; được áp dụng đồng thời với các chương trình khác theo điều khoản trang chính thức.",
+  "literal_code": "URFS08",
+  "status": "ACTIVE",
+  "evidence": "Official Urban Revivo promotion page explicitly states '01 - 31.08: Miễn phí vận chuyển đơn từ 1,199K | Nhập mã: URFS08' and the program remains valid through 31/08/2026.",
+  "evidence_checked_at": "2026-08-19T05:53:33+07:00",
+  "value_filter_version": "ACTIONABLE-VALUE-V2"
+}
