@@ -1,0 +1,32 @@
+{
+  "schema": "promo.banks_telemetry.v1",
+  "last_run_at": "2026-08-18T22:41:30+07:00",
+  "source_worker": "PROMO Banks Shard",
+  "pipeline": "TURBO_SCAN_PIPELINE_V2",
+  "fast_probes": 16,
+  "shortlisted": 6,
+  "deep_validations": 6,
+  "cache_skips": 0,
+  "sources_read": 6,
+  "code_likely_sources_read": 6,
+  "no_code_reads": 4,
+  "family_rotations": 1,
+  "offers_found": 17,
+  "voucher_benefits_found": 17,
+  "literal_codes_found": 16,
+  "codes_per_10_reads": 26.67,
+  "enqueued": 16,
+  "blocked": 0,
+  "duplicates": 0,
+  "expired_or_rejected_codes": 7,
+  "held_for_validity_conflict": 2,
+  "lovable_calls": 0,
+  "github_handoff": "handoff/promo_banks_shard_queue.json",
+  "handoff_commit": "8e5b2dfbe1ee8a0b7f07f9daf3b190d5125a6348",
+  "notes": [
+    "Only GitHub ELIGIBLE+ACTIVE_INPUT assigned PROMO_BANKS was consumed.",
+    "grab.com source assignment SRCV1-62592728372E was the highest-yield exact-code family in this run.",
+    "BIDV Grab codes were held because official Grab evidence conflicts on 2025 versus 2026 validity.",
+    "Expired Shinhan/KienLongBank/FE Credit code families were rejected."
+  ]
+}
