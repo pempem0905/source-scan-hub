@@ -84,6 +84,7 @@ def build():
     runtime = load("integration/promo-runtime-status.json")
     at = load("integration/accesstrade_status.json")
     atcat = load("integration/accesstrade_catalog_status.json")
+    atreg = load("integration/accesstrade_campaign_registration_status.json")
     affiliates = load("integration/affiliate_networks_status.json")
     l2 = load("l2/auth-status.json")
     previous = load("integration/hourly_summary.json") if OUT_JSON.exists() else {}
@@ -107,7 +108,9 @@ def build():
         "promo_scanned_sources": num(canonical.get("scanned_sources")),
         "actionable_offers": num(canonical.get("actionable_offers")),
         "literal_codes": num(canonical.get("literal_codes")),
-        "at_campaigns": num(atcat.get("approved_campaign_count")),
+        "at_registered_campaigns": num(atreg.get("registered_campaign_count")),
+        "at_campaigns": num(atreg.get("approved_campaign_count") if atreg else atcat.get("approved_campaign_count")),
+        "at_pending_campaigns": num(atreg.get("pending_campaign_count")),
         "at_merchants": num(atcat.get("merchant_with_offer_count")),
         "at_offers": num(atcat.get("active_offer_count")),
         "at_discounted_products": num(atcat.get("discounted_product_count")),
@@ -124,8 +127,10 @@ def build():
     except Exception:
         pass
     cat_age = age_minutes(atcat.get("generated_at"))
-    if atcat.get("tokens_configured") and metrics["at_campaigns"] == 0 and (cat_age is None or cat_age < 180):
-        alerts.append("AccessTrade: token hoạt động nhưng campaign vẫn 0 → tiếp tục fallback API v1 + cashback và quét merchant riêng.")
+    if metrics["at_registered_campaigns"] > 0 and metrics["at_campaigns"] == 0:
+        alerts.append(f"AccessTrade: {metrics['at_registered_campaigns']} campaign đã đăng ký đang chờ duyệt; promo public vẫn tiếp tục quét bình thường.")
+    elif atcat.get("tokens_configured") and metrics["at_campaigns"] == 0 and (cat_age is None or cat_age < 180):
+        alerts.append("AccessTrade: chưa thấy campaign approved/pending qua API → tiếp tục kiểm tra trạng thái approval và fallback campaign endpoint.")
     if ecomobi.get("state") == "API_NOT_RESOLVED":
         alerts.append("Ecomobi: credential đã nhận, endpoint API vẫn chưa resolve.")
     if masoffer.get("state") == "API_NOT_RESOLVED":
@@ -139,6 +144,7 @@ def build():
     alerts = alerts[:5]
 
     local_now = now_utc().astimezone(TZ)
+    top_merchants = ', '.join(f'{k} {v}' for k, v in list((atcat.get('top_offer_merchants') or {}).items())[:3]) or 'n/a'
     lines = [
         f"📊 PROMO MASTER — {local_now:%H:%M %d/%m}",
         "",
@@ -152,7 +158,8 @@ def build():
         f"• Telemetry age: {fmt_age(runtime.get('generated_at'))}",
         "",
         "🟠 ACCESSTRADE",
-        f"• Campaign approved: {metrics['at_campaigns']}{dtext(delta(metrics, prev_metrics, 'at_campaigns'))} | merchants có offer: {metrics['at_merchants']}",
+        f"• Campaign: đăng ký {metrics['at_registered_campaigns']} | approved {metrics['at_campaigns']}{dtext(delta(metrics, prev_metrics, 'at_campaigns'))} | pending {metrics['at_pending_campaigns']}",
+        f"• Merchants có offer: {metrics['at_merchants']} | top: {top_merchants}",
         f"• Promo/deal: {metrics['at_offers']}{dtext(delta(metrics, prev_metrics, 'at_offers'))} | SP giảm giá: {metrics['at_discounted_products']}{dtext(delta(metrics, prev_metrics, 'at_discounted_products'))}",
         f"• TikTok Shop: {metrics['at_tiktok_products']} sản phẩm | AT state: {atcat.get('state','?')}/{at.get('state','?')}",
         "",
