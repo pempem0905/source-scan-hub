@@ -805,6 +805,7 @@ bds123.vn
 bds68.com.vn
 bdsonline.aditi.vn
 beautybox.com.vn
+beautygarden.vn
 belasspa.vn
 bellelab.co
 bemiie.com
@@ -831,6 +832,7 @@ blog.anber.vn
 blog.salesflare.com
 blog.vexere.com
 bloggiamgia.vn
+bnbeauty.com.vn
 bobapop.com.vn
 bonbanh.com
 bookingcare.vn
@@ -965,6 +967,7 @@ edu.aditi.vn
 edureka.co
 eholiday.vn
 elly.vn
+elori.vn
 emailanalytics.com
 ems-vietnam.vn
 en.3pointsaviation.vn
@@ -1048,6 +1051,7 @@ grow.alive-web.vn
 growth-public.grab.com
 growth.accesstrade.vn
 gs25.com.vn
+gtspirit.com
 gu.2te.vn
 gunny.360game.vn
 gutacafe.com
@@ -1276,6 +1280,7 @@ now.ac.vn
 now.iseeit.com
 nsqvietnam.com
 nygci.com
+nypost.com
 nytimes.com
 ocb.com.vn
 odoo.com
@@ -1308,6 +1313,7 @@ picodi.com
 pierre-cardin.vn
 pjico.com.vn
 pl.semrush.com
+playstationlifestyle.net
 pms.adsmo.vn
 pnj.com.vn
 portal.acv.vn
@@ -1341,6 +1347,7 @@ rentracks.com.vn
 resources.agileops.vn
 resume-example.com
 revenue.iowa.gov
+revenue.nebraska.gov
 reviewjournal.com
 rfoods.com.vn
 ring.com
@@ -1355,6 +1362,7 @@ saas.adscivil.vn
 saasrat.com
 saigonreview.vn
 saigonsneaker.com
+sakurabeauty.vn
 saleduck.com.vn
 sales.adsmo.vn
 salesfocusinc.com
@@ -1428,9 +1436,11 @@ swavi.vn
 tableau.com
 tapchicongthuong.vn
 tapdoanvns.a2ztech.vn
+tax.ri.gov
 tax.virginia.gov
 td.360game.vn
 techcombank.com
+teddybearland.co.uk
 temdientu.com.vn
 temu.com
 texgrill.vn
