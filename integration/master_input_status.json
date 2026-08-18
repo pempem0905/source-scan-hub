@@ -22,7 +22,7 @@
   },
   "dedupe_key": "registrable_domain",
   "discovery_only_count": 16,
-  "generated_at": "2026-08-18T04:53:31.269045Z",
+  "generated_at": "2026-08-18T05:20:47.717783Z",
   "legacy_seed_present": true,
   "mode": "BRIDGE_SHADOW",
   "production_write": false,
@@ -32,6 +32,6 @@
   "record_count": 1324,
   "review_input_count": 1132,
   "schema": "promo.master_input_status.v1",
-  "source_hunter_domains": 1536,
+  "source_hunter_domains": 1537,
   "url_key": "canonical_url"
 }
