@@ -7,7 +7,7 @@ on:
       - '.github/workflows/affiliate-network-feeds.yml'
       - 'integration/affiliate_networks_ingest.py'
   schedule:
-    - cron: '9,39 * * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 permissions:
