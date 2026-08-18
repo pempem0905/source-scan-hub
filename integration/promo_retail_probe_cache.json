@@ -1,0 +1,64 @@
+{
+  "schema": "promo.retail.probe_cache.v1",
+  "updated_at": "2026-08-18T19:55:38+07:00",
+  "source_worker": "PROMO Retail Shard",
+  "entries": [
+    {
+      "url": "https://cellphones.com.vn/sforum/ma-giam-gia",
+      "result": "NO_NEW_LITERAL_CODE",
+      "code_signal": true,
+      "notes": "Current page discusses voucher/code mechanics but visible current sections expose no exact current reusable CellphoneS literal token.",
+      "checked_at": "2026-08-18T19:55:38+07:00"
+    },
+    {
+      "url": "https://www.pharmacity.vn/uu-dai-zalopay-2026.lp",
+      "result": "LITERAL_CODES_DUPLICATE",
+      "code_signal": true,
+      "observed_literals": ["ZPPMC15", "TRASAUPMC35", "ZPPMC", "TRASAUPMC"],
+      "notes": "All four remain active through 2026-09-30 and already exist in GitHub retail handoff.",
+      "checked_at": "2026-08-18T19:55:38+07:00"
+    },
+    {
+      "url": "https://phuclong.com.vn/ve-chung-toi/bai-viet/uu-dai-dac-biet-danh-rieng-cho-hoi-vien-chon-loc-20251204042613",
+      "result": "TARGETED_NO_PUBLIC_LITERAL",
+      "code_signal": false,
+      "notes": "August vouchers are sent to selected members via Zalo; not public reusable literals.",
+      "checked_at": "2026-08-18T19:55:38+07:00"
+    },
+    {
+      "url": "https://www.circlek.com.vn/vi/uu-dai-dac-biet/",
+      "result": "NO_CURRENT_LITERAL_CODE",
+      "code_signal": false,
+      "notes": "Visible August promotion window shown in search evidence ended 2026-08-13; no reusable literal found.",
+      "checked_at": "2026-08-18T19:55:38+07:00"
+    },
+    {
+      "url": "https://www.dienmayxanh.com/khuyen-mai/tat-ca-may-giat-cac-hang-mua-kem-may-say-1590277",
+      "result": "ACTIONABLE_NO_LITERAL",
+      "code_signal": false,
+      "notes": "Current 2026-08-01 to 2026-09-06 bundle discounts; no exact reusable literal in visible official text.",
+      "checked_at": "2026-08-18T19:55:38+07:00"
+    },
+    {
+      "url": "https://www.dienmayxanh.com/khuyen-mai/qua-tang-vip-san-pmh-1-trieu-mua-may-rua-chen-1589252",
+      "result": "ACTIONABLE_NO_LITERAL",
+      "code_signal": false,
+      "notes": "Current VIP QR/check-in promotion; QR-generated benefit is not a reusable literal code.",
+      "checked_at": "2026-08-18T19:55:38+07:00"
+    },
+    {
+      "url": "https://vincom.com.vn/vincom-center-landmark-81/uu-dai",
+      "result": "NO_LITERAL_CODE",
+      "code_signal": false,
+      "notes": "Current merchant offers visible but no exact reusable literal token found.",
+      "checked_at": "2026-08-18T19:55:38+07:00"
+    },
+    {
+      "url": "https://vincom.com.vn/vincom-center-metropolis/uu-dai?page=1",
+      "result": "NO_CURRENT_LITERAL_CODE",
+      "code_signal": false,
+      "notes": "Visible early-August merchant promos were expired by run date; no exact reusable literal token found.",
+      "checked_at": "2026-08-18T19:55:38+07:00"
+    }
+  ]
+}
