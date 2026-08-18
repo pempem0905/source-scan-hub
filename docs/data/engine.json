@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-18T14:51:13.563408Z",
+  "generated_at": "2026-08-18T15:18:44.236923Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 6518,
-    "frontier_deferred_pending": 38598,
-    "frontier_pending": 45116,
-    "last_6_runs_new_domains": 31,
+    "frontier_active_pending": 6970,
+    "frontier_deferred_pending": 38537,
+    "frontier_pending": 45507,
+    "last_6_runs_new_domains": 45,
     "last_run": {
-      "at": "2026-08-18T14:47:04.238244Z",
+      "at": "2026-08-18T15:14:45.013508Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vi-vn/*uu-dai*",
-        "*.com/vi-vn/*voucher*",
-        "*.com/vi-vn/*promotion*",
-        "*.net/vn/*khuyen-mai*"
+        "*.net/vn/*uu-dai*",
+        "*.com/vietnam/*promotion*",
+        "*.vn/*khuyen-mai*",
+        "*.vn/*khuyenmai*"
       ],
-      "duration_s": 247.8,
-      "errors": 205,
-      "frontier_pending": 45116,
-      "new_domains": 8,
-      "processed": 1402,
-      "rate403": 0.499,
-      "rate429": 6.277
+      "duration_s": 237.6,
+      "errors": 155,
+      "frontier_pending": 45507,
+      "new_domains": 24,
+      "processed": 1463,
+      "rate403": 0.889,
+      "rate429": 1.299
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1751,
+    "master_domains": 1775,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 130,
+    "run_count": 131,
     "running": true,
-    "seen_urls": 677860,
-    "updated_at": "2026-08-18T14:51:11.997940Z"
+    "seen_urls": 684833,
+    "updated_at": "2026-08-18T15:18:42.642885Z"
   },
   "master_input": {
     "active_input_count": 217,
@@ -41,33 +41,33 @@
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 27,
-      "GENERAL": 1327,
+      "GENERAL": 1331,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 32,
       "PROMO_L2": 15,
       "PROMO_RETAIL": 170,
-      "PUBLIC_HTTP": 1511,
+      "PUBLIC_HTTP": 1515,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 98,
-      "REVIEW_INPUT": 1294,
+      "REVIEW_INPUT": 1298,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1294,
+      "SOURCE_REVIEW": 1298,
       "TRAVEL_MOBILITY": 21
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-18T14:51:13.392484Z",
+    "generated_at": "2026-08-18T15:18:44.025620Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1527,
-    "review_input_count": 1294,
+    "record_count": 1531,
+    "review_input_count": 1298,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1751,
+    "source_hunter_domains": 1775,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -295,7 +295,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-18T13:58:46.375529Z",
+    "updated_at": "2026-08-18T14:54:10.754039Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -386,195 +386,27 @@
     "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "ngân hàng thẻ tín dụng khuyến mãi Việt Nam",
-      "ngân hàng thẻ tín dụng ưu đãi Việt Nam",
-      "ngân hàng thẻ tín dụng voucher Việt Nam",
-      "ngân hàng thẻ tín dụng promotion Vietnam"
+      "ví điện tử khuyến mãi Việt Nam",
+      "ví điện tử ưu đãi Việt Nam",
+      "ví điện tử voucher Việt Nam",
+      "ví điện tử promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 113,
+    "cc_domain_page": 114,
     "frontier_scheduler": {
-      "active": 1402,
+      "active": 1463,
       "base_per_host_batch": 16,
-      "deferred": 38598,
+      "deferred": 38537,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.075,
+      "previous_429_rate": 6.277,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 203
+      "unique_hosts": 208
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T02:47:59.154341Z",
-      "domain": "nygci.com",
-      "radar": false,
-      "url": "https://nygci.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T02:47:59.154341Z",
-      "domain": "salesforcegeek.in",
-      "radar": false,
-      "url": "https://salesforcegeek.in/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T02:47:59.154341Z",
-      "domain": "smartcompany.com.au",
-      "radar": false,
-      "url": "https://smartcompany.com.au/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T02:47:59.154341Z",
-      "domain": "tunein.com",
-      "radar": false,
-      "url": "https://tunein.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T02:47:59.154341Z",
-      "domain": "trackmaven.com",
-      "radar": false,
-      "url": "https://trackmaven.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T02:47:59.154341Z",
-      "domain": "business.qld.gov.au",
-      "radar": false,
-      "url": "https://business.qld.gov.au/industries/manufacturing-retail/retail-wholesale/plastic-bag-ban",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T02:47:59.154341Z",
-      "domain": "nationalretail.org.au",
-      "radar": false,
-      "url": "https://nationalretail.org.au/policy-advocacy/sale-of-knives-and-controlled-items-qld/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T03:30:59.331852Z",
-      "domain": "edureka.co",
-      "radar": false,
-      "url": "https://edureka.co/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T03:30:59.331852Z",
-      "domain": "tax.virginia.gov",
-      "radar": false,
-      "url": "https://tax.virginia.gov/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T03:30:59.331852Z",
-      "domain": "thammydiamond.com",
-      "radar": false,
-      "url": "https://thammydiamond.com/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-18T03:30:59.331852Z",
-      "domain": "carfax.com",
-      "radar": false,
-      "url": "https://carfax.com/cars-for-sale/get-the-app",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T04:09:41.683313Z",
-      "domain": "revenue.iowa.gov",
-      "radar": false,
-      "url": "https://revenue.iowa.gov/news/2026-07-02/idr-announces-new-sales-tax-bills-signed-law-effective-july-1",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T04:09:41.683313Z",
-      "domain": "squaresigns.com",
-      "radar": false,
-      "url": "https://squaresigns.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T04:09:41.683313Z",
-      "domain": "toyota.com.vn",
-      "radar": false,
-      "url": "https://toyota.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-18T04:09:41.683313Z",
-      "domain": "humantic.ai",
-      "radar": false,
-      "url": "https://humantic.ai/blog/humantic-ai-recognized-as-a-cool-vendor-in-the-2024-gartner-cool-vendorstm-in-ai-led-sales-research-category/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T04:09:41.683313Z",
-      "domain": "portal.ct.gov",
-      "radar": false,
-      "url": "https://portal.ct.gov/governor/news/press-releases/2026/08-2026/governor-lamont-announces-sales-tax-reductions",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T04:09:41.683313Z",
-      "domain": "badgermapping.com",
-      "radar": false,
-      "url": "https://badgermapping.com/blog/4-ways-meditation-helps-salespeople/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T04:49:00.417069Z",
-      "domain": "vendux.org",
-      "radar": false,
-      "url": "https://vendux.org/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T04:49:00.417069Z",
-      "domain": "trogiup.batdongsan.com.vn",
-      "radar": false,
-      "url": "https://trogiup.batdongsan.com.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-18T04:49:00.417069Z",
-      "domain": "phonhadat.vn",
-      "radar": false,
-      "url": "https://phonhadat.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-18T04:49:00.417069Z",
-      "domain": "bds123.vn",
-      "radar": false,
-      "url": "https://bds123.vn/",
-      "via": "free_search"
-    },
-    {
-      "at": "2026-08-18T05:15:59.538310Z",
-      "domain": "economictimes.indiatimes.com",
-      "radar": false,
-      "url": "https://economictimes.indiatimes.com/news/international/world-news/well-bomb-the-sh-out-of-them-trump-warns-oman-over-deal-with-iran-to-control-hormuz/videoshow/133311134.cms",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T05:46:57.557757Z",
-      "domain": "softwareoffer.intel.com",
-      "radar": false,
-      "url": "https://softwareoffer.intel.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T05:46:57.557757Z",
-      "domain": "iamagazine.com",
-      "radar": false,
-      "url": "https://iamagazine.com/2020/01/02/the-roaring-twenties-how-agencies-are-boosting-sales-in-2020/",
-      "via": "internal_promo"
-    },
     {
       "at": "2026-08-18T05:46:57.557757Z",
       "domain": "intellipaat.com",
@@ -1246,6 +1078,174 @@
       "radar": false,
       "url": "https://360smsapp.com/salesforce-zalo/",
       "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "ar.macduggal.com",
+      "radar": false,
+      "url": "https://ar.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "at.macduggal.com",
+      "radar": false,
+      "url": "https://at.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "be.macduggal.com",
+      "radar": false,
+      "url": "https://be.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "bondiboost.com",
+      "radar": false,
+      "url": "https://bondiboost.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "ca.macduggal.com",
+      "radar": false,
+      "url": "https://ca.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "br.macduggal.com",
+      "radar": false,
+      "url": "https://br.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "ch.macduggal.com",
+      "radar": false,
+      "url": "https://ch.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "cl.macduggal.com",
+      "radar": false,
+      "url": "https://cl.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "co.macduggal.com",
+      "radar": false,
+      "url": "https://co.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "de.macduggal.com",
+      "radar": false,
+      "url": "https://de.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "elizafaulkner.com",
+      "radar": false,
+      "url": "https://elizafaulkner.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "es.macduggal.com",
+      "radar": false,
+      "url": "https://es.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "fr.macduggal.com",
+      "radar": false,
+      "url": "https://fr.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "jp.macduggal.com",
+      "radar": false,
+      "url": "https://jp.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "mujjo.com",
+      "radar": false,
+      "url": "https://mujjo.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "it.macduggal.com",
+      "radar": false,
+      "url": "https://it.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "nl.macduggal.com",
+      "radar": false,
+      "url": "https://nl.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "mx.macduggal.com",
+      "radar": false,
+      "url": "https://mx.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "no.macduggal.com",
+      "radar": false,
+      "url": "https://no.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "pt.macduggal.com",
+      "radar": false,
+      "url": "https://pt.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "pa.macduggal.com",
+      "radar": false,
+      "url": "https://pa.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "pl.macduggal.com",
+      "radar": false,
+      "url": "https://pl.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "se.macduggal.com",
+      "radar": false,
+      "url": "https://se.macduggal.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T15:14:45.013508Z",
+      "domain": "monos.uk",
+      "radar": false,
+      "url": "https://monos.uk/",
+      "via": "external_promo"
     }
   ]
 }

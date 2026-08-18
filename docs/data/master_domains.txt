@@ -850,8 +850,10 @@ app.alobo.vn
 appexchange.salesforce.com
 apple.com
 apps.shopify.com
+ar.macduggal.com
 artha.link
 ascenttrainings.com
+at.macduggal.com
 atac2024.aiotlab.vn
 atrip.vn
 auto5.vn
@@ -876,6 +878,7 @@ baydep.vn
 bds123.vn
 bds68.com.vn
 bdsonline.aditi.vn
+be.macduggal.com
 beautybox.com.vn
 beautygarden.vn
 belasspa.vn
@@ -909,10 +912,12 @@ bloggiamgia.vn
 bnbeauty.com.vn
 bobapop.com.vn
 bonbanh.com
+bondiboost.com
 bookingcare.vn
 bose.ca
 bose.com
 br.fiverr.com
+br.macduggal.com
 br.pro.fiverr.com
 brands.accesstrade.vn
 braveheartsales.com
@@ -923,6 +928,7 @@ business.admatrix.vn
 business.qld.gov.au
 business2community.com
 c.accesstrade.vn
+ca.macduggal.com
 cafebiz.vn
 cafef.vn
 cake.vn
@@ -944,6 +950,7 @@ centralretail.com.vn
 cenvi.3sgroup.vn
 cenvi.vn
 cf.shopee.vn
+ch.macduggal.com
 chanhtuoi.com
 chargebee.com
 charleskeith.vn
@@ -959,6 +966,7 @@ cio.com
 circlek.com.vn
 cis.visa.com
 citigym.asia
+cl.macduggal.com
 click.accesstrade.vn
 clickbuy.com.vn
 cloudgalacticos.co.uk
@@ -967,6 +975,7 @@ cms.360home.vn
 cnbc.com
 cnvloyalty.com
 co-opmart.com.vn
+co.macduggal.com
 cocoonvietnam.com
 code.360game.vn
 codm.360mobi.vn
@@ -1012,6 +1021,7 @@ datve.aitrip.vn
 davidmeermanscott.com
 dbd.028.vn
 de.fiverr.com
+de.macduggal.com
 de.semrush.com
 dealgiadung.vn
 dealhub.io
@@ -1049,6 +1059,7 @@ economictimes.indiatimes.com
 edu.aditi.vn
 edureka.co
 eholiday.vn
+elizafaulkner.com
 elly.vn
 elori.vn
 emailanalytics.com
@@ -1063,6 +1074,7 @@ erp.ade.vn
 erp.admatrix.vn
 erp.adsmo.vn
 es.fiverr.com
+es.macduggal.com
 es.semrush.com
 event.accesstrade.vn
 event.pia.accesstrade.vn
@@ -1098,6 +1110,7 @@ fpttelecom.net.vn
 fpttelecoms.vn
 fptvietnam.vn
 fr.fiverr.com
+fr.macduggal.com
 fr.semrush.com
 frame-store.com
 fwd.com.vn
@@ -1206,12 +1219,14 @@ irobot.com
 irobot.fr
 isharya.com
 it.fiverr.com
+it.macduggal.com
 it.semrush.com
 ja.semrush.com
 jangin.vn
 jettzy.com.vn
 jobs.sellwerk.de
 jossandmain.com
+jp.macduggal.com
 jtexpress.vn
 juno.vn
 jysk.vn
@@ -1335,12 +1350,15 @@ modcloth.com
 mogi.vn
 momo.vn
 moneyku.com
+monos.uk
 moto.6giay.vn
 moveek.com
 muathuoc.vn
 mudts.360game.vn
 muji.com.vn
+mujjo.com
 muonline.360game.vn
+mx.macduggal.com
 my.adsmo.vn
 myhomevietnam.com
 mytour.vn
@@ -1367,7 +1385,9 @@ nhathuoclongchau.com.vn
 nhathuocviet.com
 nhaxinh.com
 nl.fiverr.com
+nl.macduggal.com
 nl.semrush.com
+no.macduggal.com
 noithatgiadung.com.vn
 noithatgiakhanh.com
 noithathoanmy.com
@@ -1399,6 +1419,7 @@ onlinepacking.360group.vn
 onways.com
 organicfood.vn
 oto.com.vn
+pa.macduggal.com
 packaging.allship.vn
 pages.lazada.vn
 pandora.norbreeze.vn
@@ -1416,6 +1437,7 @@ phunuvasuckhoe.net
 picodi.com
 pierre-cardin.vn
 pjico.com.vn
+pl.macduggal.com
 pl.semrush.com
 playstationlifestyle.net
 pms.adsmo.vn
@@ -1436,6 +1458,7 @@ promo.highlandscoffee.com.vn
 promo.porchlightbooks.com
 promotion.amiskr.vn
 prudential.com.vn
+pt.macduggal.com
 pt.semrush.com
 pub2.accesstrade.vn
 purple.com
@@ -1488,6 +1511,7 @@ saturdaysnyc.com
 scalef.com
 scvivocity.com.vn
 sdtaxpayers.org
+se.macduggal.com
 sea.ign.com
 seemarketingny.com
 semrush.com
