@@ -1,0 +1,81 @@
+name: AccessTrade Promo Feed
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/accesstrade-feed.yml'
+      - 'integration/accesstrade_ingest.py'
+  schedule:
+    - cron: '17,47 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: accesstrade-promo-feed
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Check AccessTrade credentials
+        id: auth
+        env:
+          ACCESSTRADE_API_TOKEN: ${{ secrets.ACCESSTRADE_API_TOKEN }}
+          ACCESSTRADE_API_TOKEN_2: ${{ secrets.ACCESSTRADE_API_TOKEN_2 }}
+        run: |
+          if [ -n "${ACCESSTRADE_API_TOKEN}${ACCESSTRADE_API_TOKEN_2}" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "AccessTrade feed is installed but credentials are not configured in GitHub Actions secrets."
+          fi
+
+      - name: Ingest vouchers, coupons, deals and TikTok Shop feed
+        if: steps.auth.outputs.enabled == 'true'
+        env:
+          ACCESSTRADE_API_TOKEN: ${{ secrets.ACCESSTRADE_API_TOKEN }}
+          ACCESSTRADE_API_TOKEN_2: ${{ secrets.ACCESSTRADE_API_TOKEN_2 }}
+          ACCESSTRADE_COUPON_LIMIT: '100'
+          ACCESSTRADE_COUPON_MAX_PAGES: '10'
+          ACCESSTRADE_TIKTOK_ENABLED: '1'
+          ACCESSTRADE_TIKTOK_LIMIT: '20'
+        run: python3 integration/accesstrade_ingest.py
+
+      - name: Validate generated feed
+        if: steps.auth.outputs.enabled == 'true'
+        run: |
+          python3 -m py_compile integration/accesstrade_ingest.py
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          for name in ('accesstrade_handoff_v1.jsonl','accesstrade_sources.jsonl','accesstrade_tiktok_feed.jsonl'):
+              p=Path('integration')/name
+              for i,line in enumerate(p.read_text(errors='replace').splitlines(),1):
+                  json.loads(line)
+          json.loads(Path('integration/accesstrade_status.json').read_text())
+          print('AccessTrade feed validation OK')
+          PY
+
+      - name: Persist AccessTrade feed
+        if: steps.auth.outputs.enabled == 'true'
+        run: |
+          git config user.name "promo-accesstrade-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add integration/accesstrade_handoff_v1.jsonl integration/accesstrade_sources.jsonl integration/accesstrade_tiktok_feed.jsonl integration/accesstrade_status.json
+          if git diff --cached --quiet; then
+            echo "No AccessTrade feed changes"
+            exit 0
+          fi
+          git commit -m "Refresh AccessTrade promo feed [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
