@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-18T10:23:38.942919Z",
+  "generated_at": "2026-08-18T10:54:17.394443Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 6775,
-    "frontier_deferred_pending": 38371,
-    "frontier_pending": 45146,
+    "frontier_active_pending": 8661,
+    "frontier_deferred_pending": 38420,
+    "frontier_pending": 47081,
     "last_6_runs_new_domains": 39,
     "last_run": {
-      "at": "2026-08-18T10:17:45.239764Z",
+      "at": "2026-08-18T10:49:45.699919Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.net/vn/*uu-dai*",
-        "*.com/vietnam/*promotion*",
-        "*.vn/*khuyen-mai*",
-        "*.vn/*khuyenmai*"
+        "*.vn/*uu-dai*",
+        "*.vn/*uudai*",
+        "*.vn/*voucher*",
+        "*.vn/*promotion*"
       ],
-      "duration_s": 352.5,
-      "errors": 218,
-      "frontier_pending": 45146,
-      "new_domains": 10,
-      "processed": 1629,
-      "rate403": 0.43,
-      "rate429": 5.463
+      "duration_s": 270.2,
+      "errors": 101,
+      "frontier_pending": 47081,
+      "new_domains": 6,
+      "processed": 1580,
+      "rate403": 0.316,
+      "rate429": 0.063
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1630,
+    "master_domains": 1641,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 121,
+    "run_count": 122,
     "running": true,
-    "seen_urls": 611395,
-    "updated_at": "2026-08-18T10:23:37.714783Z"
+    "seen_urls": 620082,
+    "updated_at": "2026-08-18T10:54:15.915142Z"
   },
   "master_input": {
-    "active_input_count": 199,
+    "active_input_count": 202,
     "counts": {
-      "ACTIVE_INPUT": 199,
+      "ACTIVE_INPUT": 202,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 27,
-      "GENERAL": 1217,
+      "GENERAL": 1228,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 32,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 152,
-      "PUBLIC_HTTP": 1397,
+      "PROMO_RETAIL": 155,
+      "PUBLIC_HTTP": 1408,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 94,
-      "REVIEW_INPUT": 1198,
+      "REVIEW_INPUT": 1206,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1198,
+      "SOURCE_REVIEW": 1206,
       "TRAVEL_MOBILITY": 21
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-18T10:23:38.809887Z",
+    "generated_at": "2026-08-18T10:54:17.184265Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1413,
-    "review_input_count": 1198,
+    "record_count": 1424,
+    "review_input_count": 1206,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1630,
+    "source_hunter_domains": 1641,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -234,7 +234,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-18T09:50:02.928982Z",
+    "updated_at": "2026-08-18T10:48:18.076284Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -322,72 +322,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 4,
+    "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "mỹ phẩm làm đẹp khuyến mãi Việt Nam",
-      "mỹ phẩm làm đẹp ưu đãi Việt Nam",
-      "mỹ phẩm làm đẹp voucher Việt Nam",
-      "mỹ phẩm làm đẹp promotion Vietnam"
+      "thời trang giày dép khuyến mãi Việt Nam",
+      "thời trang giày dép ưu đãi Việt Nam",
+      "thời trang giày dép voucher Việt Nam",
+      "thời trang giày dép promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 106,
+    "cc_domain_page": 107,
     "frontier_scheduler": {
-      "active": 1629,
+      "active": 1580,
       "base_per_host_batch": 16,
-      "deferred": 38371,
+      "deferred": 38420,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.056,
+      "previous_429_rate": 5.463,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 201
+      "unique_hosts": 186
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-17T22:53:36.077950Z",
-      "domain": "autoguide.com",
-      "radar": false,
-      "url": "https://autoguide.com/auto/2014-audi-r8-for-sale-44634577",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T22:53:36.077950Z",
-      "domain": "usatoday.com",
-      "radar": false,
-      "url": "https://usatoday.com/story/news/world/2026/07/06/castro-grandson-trump-deal-cuba-exclusive/90784545007/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T22:53:36.077950Z",
-      "domain": "amvietnam.com",
-      "radar": false,
-      "url": "https://amvietnam.com/",
-      "via": "common_crawl_domain"
-    },
-    {
-      "at": "2026-08-17T23:09:37.227774Z",
-      "domain": "the-level-group.hirehive.com",
-      "radar": false,
-      "url": "https://the-level-group.hirehive.com/wholesale-intern-milan-zSKfLD",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T23:09:37.227774Z",
-      "domain": "careers.ing.com",
-      "radar": false,
-      "url": "https://careers.ing.com/en",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T23:09:37.227774Z",
-      "domain": "filteradvisors.squarespace.com",
-      "radar": false,
-      "url": "https://filteradvisors.squarespace.com/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-17T23:09:37.227774Z",
       "domain": "iowadot.gov",
@@ -1184,6 +1142,48 @@
       "domain": "nypost.com",
       "radar": false,
       "url": "https://nypost.com/tag/fashion-sales/feed/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T10:49:45.699919Z",
+      "domain": "ncdor.gov",
+      "radar": false,
+      "url": "https://ncdor.gov/form-e-585npa-application-nonprofit-sales-and-use-tax-refund-account-id/open",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T10:49:45.699919Z",
+      "domain": "hbx.com",
+      "radar": false,
+      "url": "https://hbx.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T10:49:45.699919Z",
+      "domain": "kpb.us",
+      "radar": false,
+      "url": "https://kpb.us/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T10:49:45.699919Z",
+      "domain": "linkedfusion.io",
+      "radar": false,
+      "url": "https://linkedfusion.io/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T10:49:45.699919Z",
+      "domain": "groupon.com",
+      "radar": false,
+      "url": "https://groupon.com/coupons/blog",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T10:49:45.699919Z",
+      "domain": "popsci.com",
+      "radar": false,
+      "url": "https://popsci.com/gear/rosetta-stone-new-years-deal-2026/",
       "via": "internal_promo"
     }
   ]
