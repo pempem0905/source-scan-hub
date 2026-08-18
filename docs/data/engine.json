@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-18T15:51:33.487512Z",
+  "generated_at": "2026-08-18T16:16:21.860262Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 8996,
-    "frontier_deferred_pending": 38303,
-    "frontier_pending": 47299,
-    "last_6_runs_new_domains": 44,
+    "frontier_active_pending": 9887,
+    "frontier_deferred_pending": 38259,
+    "frontier_pending": 48146,
+    "last_6_runs_new_domains": 38,
     "last_run": {
-      "at": "2026-08-18T15:47:10.051077Z",
+      "at": "2026-08-18T16:11:35.495959Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*uu-dai*",
-        "*.vn/*uudai*",
-        "*.vn/*voucher*",
-        "*.vn/*promotion*"
+        "*.vn/*offers*",
+        "*.vn/*deals*",
+        "*.vn/*sale*",
+        "*.com/vn/*khuyen-mai*"
       ],
-      "duration_s": 261.9,
-      "errors": 339,
-      "frontier_pending": 47299,
+      "duration_s": 284.6,
+      "errors": 200,
+      "frontier_pending": 48146,
       "new_domains": 0,
-      "processed": 1697,
-      "rate403": 0.648,
-      "rate429": 8.603
+      "processed": 1741,
+      "rate403": 0.804,
+      "rate429": 0.172
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1788,
+    "master_domains": 1820,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 132,
+    "run_count": 133,
     "running": true,
-    "seen_urls": 693888,
-    "updated_at": "2026-08-18T15:51:31.957800Z"
+    "seen_urls": 703899,
+    "updated_at": "2026-08-18T16:16:20.053169Z"
   },
   "master_input": {
     "active_input_count": 217,
@@ -41,33 +41,33 @@
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 27,
-      "GENERAL": 1344,
+      "GENERAL": 1374,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 32,
       "PROMO_L2": 15,
       "PROMO_RETAIL": 170,
-      "PUBLIC_HTTP": 1528,
+      "PUBLIC_HTTP": 1558,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 98,
-      "REVIEW_INPUT": 1311,
+      "REVIEW_INPUT": 1341,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1311,
+      "SOURCE_REVIEW": 1341,
       "TRAVEL_MOBILITY": 21
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-18T15:51:33.286049Z",
+    "generated_at": "2026-08-18T16:16:21.631147Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1544,
-    "review_input_count": 1311,
+    "record_count": 1574,
+    "review_input_count": 1341,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1788,
+    "source_hunter_domains": 1820,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -295,7 +295,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-18T14:54:10.754039Z",
+    "updated_at": "2026-08-18T15:48:04.020508Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -386,24 +386,24 @@
     "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "bảo hiểm khuyến mãi Việt Nam",
-      "bảo hiểm ưu đãi Việt Nam",
-      "bảo hiểm voucher Việt Nam",
-      "bảo hiểm promotion Vietnam"
+      "viễn thông internet khuyến mãi Việt Nam",
+      "viễn thông internet ưu đãi Việt Nam",
+      "viễn thông internet voucher Việt Nam",
+      "viễn thông internet promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 115,
+    "cc_domain_page": 116,
     "frontier_scheduler": {
-      "active": 1697,
+      "active": 1741,
       "base_per_host_batch": 16,
-      "deferred": 38303,
+      "deferred": 38259,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 1.299,
+      "previous_429_rate": 8.603,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 203
+      "unique_hosts": 191
     }
   },
   "recent_sources": [
