@@ -1,0 +1,33 @@
+{
+  "schema": "promo.banks.telemetry.v2",
+  "source_worker": "PROMO Banks Shard",
+  "pipeline": "TURBO_SCAN_PIPELINE_V2",
+  "input_contract": "GitHub ELIGIBLE + ACTIVE_INPUT assigned PROMO_BANKS",
+  "fast_probes": 8,
+  "shortlisted": 5,
+  "deep_validations": 5,
+  "cache_skips": 0,
+  "sources_read": 5,
+  "code_likely_sources_read": 5,
+  "no_code_reads": 0,
+  "family_rotations": 0,
+  "offers_found": 19,
+  "voucher_benefits_found": 19,
+  "literal_codes_found": 19,
+  "codes_per_10_reads": 38.0,
+  "enqueued": 19,
+  "blocked": 0,
+  "duplicates": 5,
+  "expired_rejected": 5,
+  "handoff_artifact": "integration/promo_banks_handoff_20260818T1939.jsonl",
+  "handoff_commit": "38f8eaa2bf777541e4dd03d889568ae6d97b0338",
+  "last_run_at": "2026-08-18T19:39:28+07:00",
+  "lovable_calls": 0,
+  "notes": [
+    "BIDV Klook JCB codes were current but already present in the existing GitHub handoff and were not re-enqueued.",
+    "MASTERVN7 was already present globally and was not re-enqueued from the VPBank Mastercard Expedia table.",
+    "ACB travel codes on the 2025 campaign page were expired and rejected.",
+    "VPBank Capella code MCAPONF was expired as of 2026-08-18 and was rejected.",
+    "No canonical counters were mutated."
+  ]
+}
