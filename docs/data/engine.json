@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-18T12:01:56.007091Z",
+  "generated_at": "2026-08-18T13:32:15.478436Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 7726,
-    "frontier_deferred_pending": 38498,
-    "frontier_pending": 46224,
-    "last_6_runs_new_domains": 34,
+    "frontier_active_pending": 7071,
+    "frontier_deferred_pending": 38394,
+    "frontier_pending": 45465,
+    "last_6_runs_new_domains": 29,
     "last_run": {
-      "at": "2026-08-18T11:57:42.709582Z",
+      "at": "2026-08-18T13:27:26.960623Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*uu-dai*",
-        "*.vn/*uudai*",
-        "*.vn/*voucher*",
-        "*.vn/*promotion*"
+        "*.vn/*offers*",
+        "*.vn/*deals*",
+        "*.vn/*sale*",
+        "*.com/vn/*khuyen-mai*"
       ],
-      "duration_s": 251.7,
-      "errors": 146,
-      "frontier_pending": 46224,
-      "new_domains": 6,
-      "processed": 1502,
-      "rate403": 1.332,
-      "rate429": 0.067
+      "duration_s": 286.9,
+      "errors": 309,
+      "frontier_pending": 45465,
+      "new_domains": 1,
+      "processed": 1606,
+      "rate403": 0.623,
+      "rate429": 8.032
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1722,
+    "master_domains": 1723,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 127,
+    "run_count": 128,
     "running": true,
-    "seen_urls": 657797,
-    "updated_at": "2026-08-18T12:01:54.417733Z"
+    "seen_urls": 664976,
+    "updated_at": "2026-08-18T13:32:13.818202Z"
   },
   "master_input": {
     "active_input_count": 208,
@@ -41,33 +41,33 @@
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 16,
       "FOOD_BEVERAGE": 27,
-      "GENERAL": 1303,
+      "GENERAL": 1304,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 32,
       "PROMO_L2": 15,
       "PROMO_RETAIL": 161,
-      "PUBLIC_HTTP": 1484,
+      "PUBLIC_HTTP": 1485,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 95,
-      "REVIEW_INPUT": 1276,
+      "REVIEW_INPUT": 1277,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1276,
+      "SOURCE_REVIEW": 1277,
       "TRAVEL_MOBILITY": 21
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-18T12:01:55.788398Z",
+    "generated_at": "2026-08-18T13:32:15.280867Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1500,
-    "review_input_count": 1276,
+    "record_count": 1501,
+    "review_input_count": 1277,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1722,
+    "source_hunter_domains": 1723,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -295,7 +295,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-18T11:43:14.156698Z",
+    "updated_at": "2026-08-18T13:10:17.034493Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -383,37 +383,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 1,
+    "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "khách sạn resort khuyến mãi Việt Nam",
-      "khách sạn resort ưu đãi Việt Nam",
-      "khách sạn resort voucher Việt Nam",
-      "khách sạn resort promotion Vietnam"
+      "hãng bay du lịch khuyến mãi Việt Nam",
+      "hãng bay du lịch ưu đãi Việt Nam",
+      "hãng bay du lịch voucher Việt Nam",
+      "hãng bay du lịch promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
     "cc_domain_page": 112,
     "frontier_scheduler": {
-      "active": 1502,
+      "active": 1606,
       "base_per_host_batch": 16,
-      "deferred": 38498,
+      "deferred": 38394,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 7.903,
+      "previous_429_rate": 0.067,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 182
+      "unique_hosts": 208
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T00:24:08.425457Z",
-      "domain": "ign.com",
-      "radar": false,
-      "url": "https://ign.com/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-18T00:24:08.425457Z",
       "domain": "fptpro.vn",
@@ -1245,6 +1238,13 @@
       "domain": "t-mobile.com",
       "radar": false,
       "url": "https://t-mobile.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T13:27:26.960623Z",
+      "domain": "lelo.com",
+      "radar": false,
+      "url": "https://lelo.com/",
       "via": "external_promo"
     }
   ]
