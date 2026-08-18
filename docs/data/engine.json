@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-18T09:01:17.536350Z",
+  "generated_at": "2026-08-18T09:30:01.594596Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 8219,
-    "frontier_deferred_pending": 38231,
-    "frontier_pending": 46450,
-    "last_6_runs_new_domains": 26,
+    "frontier_active_pending": 7988,
+    "frontier_deferred_pending": 38200,
+    "frontier_pending": 46188,
+    "last_6_runs_new_domains": 31,
     "last_run": {
-      "at": "2026-08-18T08:55:38.599033Z",
+      "at": "2026-08-18T09:23:48.504953Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*offers*",
-        "*.vn/*deals*",
-        "*.vn/*sale*",
-        "*.com/vn/*khuyen-mai*"
+        "*.com/vn/*uu-dai*",
+        "*.com/vn/*voucher*",
+        "*.com/vn/*promotion*",
+        "*.com/vi-vn/*khuyen-mai*"
       ],
-      "duration_s": 337.5,
-      "errors": 99,
-      "frontier_pending": 46450,
-      "new_domains": 4,
-      "processed": 1769,
-      "rate403": 0.565,
-      "rate429": 0.057
+      "duration_s": 371.7,
+      "errors": 107,
+      "frontier_pending": 46188,
+      "new_domains": 8,
+      "processed": 1800,
+      "rate403": 1.167,
+      "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 1597,
+    "master_domains": 1613,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 118,
+    "run_count": 119,
     "running": true,
-    "seen_urls": 589188,
-    "updated_at": "2026-08-18T09:01:16.085209Z"
+    "seen_urls": 597207,
+    "updated_at": "2026-08-18T09:30:00.191512Z"
   },
   "master_input": {
-    "active_input_count": 187,
+    "active_input_count": 193,
     "counts": {
-      "ACTIVE_INPUT": 187,
+      "ACTIVE_INPUT": 193,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 37,
       "DISCOVERY_ONLY": 16,
-      "FOOD_BEVERAGE": 26,
-      "GENERAL": 1193,
+      "FOOD_BEVERAGE": 27,
+      "GENERAL": 1206,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 32,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 140,
-      "PUBLIC_HTTP": 1366,
+      "PROMO_RETAIL": 146,
+      "PUBLIC_HTTP": 1382,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 89,
-      "REVIEW_INPUT": 1179,
+      "RETAIL_ECOMMERCE": 90,
+      "REVIEW_INPUT": 1189,
       "SOURCE_HUNTER": 16,
-      "SOURCE_REVIEW": 1179,
-      "TRAVEL_MOBILITY": 20
+      "SOURCE_REVIEW": 1189,
+      "TRAVEL_MOBILITY": 21
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 16,
-    "generated_at": "2026-08-18T09:01:17.329395Z",
+    "generated_at": "2026-08-18T09:30:01.392768Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1382,
-    "review_input_count": 1179,
+    "record_count": 1398,
+    "review_input_count": 1189,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 1597,
+    "source_hunter_domains": 1613,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -325,83 +325,27 @@
     "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "mẹ và bé khuyến mãi Việt Nam",
-      "mẹ và bé ưu đãi Việt Nam",
-      "mẹ và bé voucher Việt Nam",
-      "mẹ và bé promotion Vietnam"
+      "điện máy điện thoại laptop khuyến mãi Việt Nam",
+      "điện máy điện thoại laptop ưu đãi Việt Nam",
+      "điện máy điện thoại laptop voucher Việt Nam",
+      "điện máy điện thoại laptop promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 103,
+    "cc_domain_page": 104,
     "frontier_scheduler": {
-      "active": 1769,
+      "active": 1800,
       "base_per_host_batch": 16,
-      "deferred": 38231,
+      "deferred": 38200,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.117,
+      "previous_429_rate": 0.057,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 250
+      "unique_hosts": 254
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-17T21:46:19.531988Z",
-      "domain": "irobot.com",
-      "radar": false,
-      "url": "https://irobot.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T21:46:19.531988Z",
-      "domain": "ring.com",
-      "radar": false,
-      "url": "https://ring.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T21:46:19.531988Z",
-      "domain": "deloitte.com",
-      "radar": false,
-      "url": "https://deloitte.com/us/en.html",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T21:46:19.531988Z",
-      "domain": "vendingtimes.com",
-      "radar": false,
-      "url": "https://vendingtimes.com/resources/from-tech-sales-to-vending-entrepreneurship-the-growth-journey-of-altitude-amenities/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-17T22:02:05.004879Z",
-      "domain": "conga.com",
-      "radar": false,
-      "url": "https://conga.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T22:02:05.004879Z",
-      "domain": "docs.stripe.com",
-      "radar": false,
-      "url": "https://docs.stripe.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T22:02:05.004879Z",
-      "domain": "filteradvisors.com",
-      "radar": false,
-      "url": "https://filteradvisors.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-17T22:02:05.004879Z",
-      "domain": "uu-dai.amiskr.vn",
-      "radar": false,
-      "url": "http://uu-dai.amiskr.vn/Login.aspx?ReturnUrl=%2F",
-      "via": "common_crawl_domain"
-    },
     {
       "at": "2026-08-17T22:02:05.004879Z",
       "domain": "khuyen-mai.amiskr.vn",
@@ -1184,6 +1128,62 @@
       "domain": "goodcarbadcar.net",
       "radar": false,
       "url": "https://goodcarbadcar.net/global-auto-sales-explorer/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T09:23:48.504953Z",
+      "domain": "modcloth.com",
+      "radar": false,
+      "url": "https://modcloth.com/collections/sale.atom",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T09:23:48.504953Z",
+      "domain": "tifosioptics.com",
+      "radar": false,
+      "url": "https://tifosioptics.com/collections/sale",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T09:23:48.504953Z",
+      "domain": "vertexinc.com",
+      "radar": false,
+      "url": "https://vertexinc.com/solutions/tax-type/sales-use-tax",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T09:23:48.504953Z",
+      "domain": "global.antler.com",
+      "radar": false,
+      "url": "https://global.antler.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T09:23:48.504953Z",
+      "domain": "purple.com",
+      "radar": false,
+      "url": "https://purple.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-18T09:23:48.504953Z",
+      "domain": "seemarketingny.com",
+      "radar": false,
+      "url": "https://seemarketingny.com/claire-p-caldwell-human-first-sales/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T09:23:48.504953Z",
+      "domain": "demandsage.com",
+      "radar": false,
+      "url": "https://demandsage.com/category/coupon/feed/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-18T09:23:48.504953Z",
+      "domain": "markets.financialcontent.com",
+      "radar": false,
+      "url": "https://markets.financialcontent.com/stocks/news/topic/initial%20public%20offering?CurrentPage=12",
       "via": "internal_promo"
     }
   ]
