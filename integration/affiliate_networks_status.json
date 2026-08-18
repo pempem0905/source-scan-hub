@@ -1,23 +1,25 @@
 {
   "candidate_rows_total": 0,
-  "generated_at": "2026-08-18T11:09:09.189647Z",
+  "generated_at": "2026-08-18T11:20:36.023126Z",
   "networks": {
     "ECOMOBI": {
+      "attempt_count": 18,
       "candidate_rows": 0,
       "endpoints_considered": 6,
-      "error": null,
+      "error": "HTTP_404:/api/products",
       "http_status": null,
       "raw_rows": 0,
-      "state": "CREDENTIALS_MISSING",
+      "state": "API_NOT_RESOLVED",
       "successful_endpoint": null
     },
     "MASOFFER": {
+      "attempt_count": 25,
       "candidate_rows": 0,
       "endpoints_considered": 5,
-      "error": null,
+      "error": "ParseError:/api/promotion",
       "http_status": null,
       "raw_rows": 0,
-      "state": "CREDENTIALS_MISSING",
+      "state": "API_NOT_RESOLVED",
       "successful_endpoint": null
     }
   },
