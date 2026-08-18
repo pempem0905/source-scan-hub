@@ -1,0 +1,60 @@
+name: PROMO Hourly Telegram Report
+
+on:
+  schedule:
+    - cron: '5 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/promo-hourly-telegram.yml'
+      - 'integration/hourly_report.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: promo-hourly-telegram
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Build hourly summary and send Telegram
+        run: python3 integration/hourly_report.py
+
+      - name: Validate report outputs
+        run: |
+          python3 -m py_compile integration/hourly_report.py
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          summary=json.loads(Path('integration/hourly_summary.json').read_text())
+          status=json.loads(Path('integration/hourly_report_status.json').read_text())
+          assert summary.get('schema') == 'promo.hourly_summary.v1'
+          assert len(summary.get('text','')) < 4000
+          assert status.get('telegram_state') in {'SENT','CREDENTIALS_MISSING','SEND_ERROR','API_ERROR'}
+          print(status)
+          PY
+
+      - name: Persist hourly snapshot
+        run: |
+          git config user.name "promo-hourly-report-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add integration/hourly_summary.json integration/hourly_summary.txt integration/hourly_report_status.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "PROMO hourly report snapshot [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
