@@ -1,17 +1,18 @@
-📊 PROMO MASTER — 18:37 18/08
+📊 PROMO MASTER — 18:40 18/08
 
 🔎 SOURCE
-• Master: 1459 | Active 205 | Review 1238
-• Hunter: 1678 domains | Seen 634,825
+• Master: 1459 (+0/1h) | Active 205 | Review 1238
+• Hunter: 1678 domains (+0/1h) | Seen 634,825
 • Lần quét gần nhất: +7 domains / 1593 URL | lỗi 117
 
 🎟 PROMO / CODE
 • Canonical B86: scanned 326 | deals 319 | codes 66 | READY 1
-• Telemetry age: 7h11
+• Telemetry age: 7h14
 
 🟠 ACCESSTRADE
-• Campaign approved: 0 | merchants có offer: 2
-• Promo/deal: 2000 | SP giảm giá: 0
+• Campaign: đăng ký 0 | approved 0 (+0/1h) | pending 0
+• Merchants có offer: 2 | top: shopee 1995, tikivn 5
+• Promo/deal: 2000 (+0/1h) | SP giảm giá: 0 (+0/1h)
 • TikTok Shop: 140 sản phẩm | AT state: DEGRADED/DEGRADED
 
 🟣 AFFILIATE KHÁC
@@ -23,7 +24,7 @@
 
 🛠 PHÂN TÍCH / CẢI TIẾN
 • Hunter 403 cao 75.3% → giảm retry host bị chặn, ưu tiên nguồn official/Common Crawl.
-• AccessTrade: token hoạt động nhưng campaign vẫn 0 → tiếp tục fallback API v1 + cashback và quét merchant riêng.
+• AccessTrade: chưa thấy campaign approved/pending qua API → tiếp tục kiểm tra trạng thái approval và fallback campaign endpoint.
 • Ecomobi: credential đã nhận, endpoint API vẫn chưa resolve.
 • MasOffer: credential đã nhận, endpoint/response vẫn chưa resolve.
-• PROMO canonical telemetry cũ 7h11 → cần ưu tiên đồng bộ counter writer/dashboard.
+• PROMO canonical telemetry cũ 7h14 → cần ưu tiên đồng bộ counter writer/dashboard.
