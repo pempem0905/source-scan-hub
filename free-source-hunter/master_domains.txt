@@ -942,6 +942,8 @@ appsheet.vn
 appsim.vn
 appstore.vn
 apshop.vn
+aptech.vn
+aptek.vn
 ar.macduggal.com
 artha.link
 ascenttrainings.com
@@ -1497,6 +1499,7 @@ nhathuocbaochau.com
 nhathuoclientam.com.vn
 nhathuoclongchau.com.vn
 nhathuocviet.com
+nhathuocvietphap.net
 nhaxinh.com
 ninewest.com
 nl.fiverr.com
@@ -1714,6 +1717,7 @@ thecoffeehousevoucher.vn
 thegioidodung.vn
 theirstack.com
 thenewgym.vn
+thesalesblog.com
 thientuong.360game.vn
 thietbibanhluxta.com
 thietkeweb.ai.vn
