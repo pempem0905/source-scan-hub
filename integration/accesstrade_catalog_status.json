@@ -6,18 +6,71 @@
   "coupon_fallback_rows": 0,
   "datafeed_errors": [],
   "discounted_product_count": 0,
-  "generated_at": "2026-08-18T11:45:17.153212Z",
-  "global_active_offer_rows": 2000,
+  "generated_at": "2026-08-18T11:48:37.032889Z",
+  "global_active_offer_rows": 4000,
   "legacy_campaign_rows": 0,
   "merchant_with_offer_count": 2,
   "modern_campaign_rows": 0,
   "offer_errors": [],
   "official_source_first": true,
+  "per_token": {
+    "active_offers": {
+      "0": {
+        "api_ok": true,
+        "rows": 2000
+      },
+      "1": {
+        "api_ok": true,
+        "rows": 2000
+      }
+    },
+    "datafeeds": {
+      "0": {
+        "api_ok": true,
+        "rows": 250
+      },
+      "1": {
+        "api_ok": true,
+        "rows": 250
+      }
+    },
+    "legacy_campaigns": {
+      "0": {
+        "api_ok": true,
+        "rows": 0
+      },
+      "1": {
+        "api_ok": true,
+        "rows": 0
+      }
+    },
+    "merchant_list": {
+      "0": {
+        "api_ok": true,
+        "rows": 2
+      },
+      "1": {
+        "api_ok": true,
+        "rows": 2
+      }
+    },
+    "modern_campaigns": {
+      "0": {
+        "api_ok": true,
+        "rows": 0
+      },
+      "1": {
+        "api_ok": true,
+        "rows": 0
+      }
+    }
+  },
   "production_write": false,
-  "schema": "promo.accesstrade_catalog_status.v2",
-  "state": "DEGRADED",
+  "schema": "promo.accesstrade_catalog_status.v3",
+  "state": "OK",
   "token_slots_used": [
-    0
+    0,
+    1
   ],
   "tokens_configured": 2,
   "top_offer_merchants": {
