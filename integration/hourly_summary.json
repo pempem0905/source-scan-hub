@@ -1,31 +1,31 @@
 {
   "alerts": [
-    "Hunter 403 cao 80.4% → giảm retry host bị chặn, ưu tiên nguồn official/Common Crawl.",
     "AccessTrade: chưa thấy campaign approved/pending qua API → tiếp tục kiểm tra trạng thái approval và fallback campaign endpoint.",
     "Ecomobi: credential đã nhận, endpoint API vẫn chưa resolve.",
     "MasOffer: credential đã nhận, endpoint/response vẫn chưa resolve.",
-    "PROMO canonical telemetry cũ 12h08 → cần ưu tiên đồng bộ counter writer/dashboard."
+    "PROMO canonical telemetry cũ 13h03 → cần ưu tiên đồng bộ counter writer/dashboard.",
+    "L2 đang chờ quota Browser Run miễn phí; retry kế tiếp 2026-08-19T00:05:00Z."
   ],
-  "generated_at": "2026-08-18T16:33:52.889740Z",
-  "local_time": "2026-08-18T23:33:52.889695+07:00",
+  "generated_at": "2026-08-18T17:29:08.043984Z",
+  "local_time": "2026-08-19T00:29:08.043909+07:00",
   "metrics": {
     "actionable_offers": 319,
-    "active_sources": 217,
+    "active_sources": 218,
     "at_campaigns": 0,
     "at_discounted_products": 0,
     "at_merchants": 2,
-    "at_offers": 2000,
+    "at_offers": 1876,
     "at_pending_campaigns": 0,
     "at_registered_campaigns": 0,
     "at_tiktok_products": 140,
     "ecomobi_candidates": 0,
-    "hunter_domains": 1820,
+    "hunter_domains": 1835,
     "literal_codes": 66,
     "masoffer_candidates": 0,
-    "master_sources": 1574,
+    "master_sources": 1586,
     "promo_scanned_sources": 326,
-    "review_sources": 1341,
-    "seen_urls": 703899
+    "review_sources": 1352,
+    "seen_urls": 717437
   },
   "platform_states": {
     "PREAUTH_PENDING_SESSION": 5,
@@ -33,5 +33,5 @@
     "WAIT_SOURCE_MAPPING": 1
   },
   "schema": "promo.hourly_summary.v1",
-  "text": "📊 PROMO MASTER — 23:33 18/08\n\n🔎 SOURCE\n• Master: 1574 (+43/1h) | Active 217 | Review 1341\n• Hunter: 1820 domains (+45/1h) | Seen 703,899\n• Lần quét gần nhất: +0 domains / 1741 URL | lỗi 200\n\n🎟 PROMO / CODE\n• Canonical B86: scanned 326 | deals 319 | codes 66 | READY 1\n• Telemetry age: 12h08\n\n🟠 ACCESSTRADE\n• Campaign: đăng ký 0 | approved 0 (+0/1h) | pending 0\n• Merchants có offer: 2 | top: shopee 1995, tikivn 5\n• Promo/deal: 2000 (+0/1h) | SP giảm giá: 0 (+0/1h)\n• TikTok Shop: 140 sản phẩm | AT state: OK/DEGRADED\n\n🟣 AFFILIATE KHÁC\n• Ecomobi: API_NOT_RESOLVED | candidates 0\n• MasOffer: API_NOT_RESOLVED | candidates 0\n\n🔐 L2\n• PROACTIVE_PREAUTH | bridge BROWSER_RUN_PROBE_VERIFIED_HANDOFF_PENDING | profiles 7\n\n🛠 PHÂN TÍCH / CẢI TIẾN\n• Hunter 403 cao 80.4% → giảm retry host bị chặn, ưu tiên nguồn official/Common Crawl.\n• AccessTrade: chưa thấy campaign approved/pending qua API → tiếp tục kiểm tra trạng thái approval và fallback campaign endpoint.\n• Ecomobi: credential đã nhận, endpoint API vẫn chưa resolve.\n• MasOffer: credential đã nhận, endpoint/response vẫn chưa resolve.\n• PROMO canonical telemetry cũ 12h08 → cần ưu tiên đồng bộ counter writer/dashboard."
+  "text": "📊 PROMO MASTER — 00:29 19/08\n\n🔎 SOURCE\n• Master: 1586 (+12/1h) | Active 218 | Review 1352\n• Hunter: 1835 domains (+15/1h) | Seen 717,437\n• Lần quét gần nhất: +3 domains / 1426 URL | lỗi 46\n\n🎟 PROMO / CODE\n• Canonical B86: scanned 326 | deals 319 | codes 66 | READY 1\n• Telemetry age: 13h03\n\n🟠 ACCESSTRADE\n• Campaign: đăng ký 0 | approved 0 (+0/1h) | pending 0\n• Merchants có offer: 2 | top: shopee 1871, tikivn 5\n• Promo/deal: 1876 (-124/1h) | SP giảm giá: 0 (+0/1h)\n• TikTok Shop: 140 sản phẩm | AT state: OK/DEGRADED\n\n🟣 AFFILIATE KHÁC\n• Ecomobi: API_NOT_RESOLVED | candidates 0\n• MasOffer: API_NOT_RESOLVED | candidates 0\n\n🔐 L2\n• PROACTIVE_PREAUTH | bridge BROWSER_RUN_PROBE_VERIFIED_HANDOFF_PENDING | profiles 7\n\n🛠 PHÂN TÍCH / CẢI TIẾN\n• AccessTrade: chưa thấy campaign approved/pending qua API → tiếp tục kiểm tra trạng thái approval và fallback campaign endpoint.\n• Ecomobi: credential đã nhận, endpoint API vẫn chưa resolve.\n• MasOffer: credential đã nhận, endpoint/response vẫn chưa resolve.\n• PROMO canonical telemetry cũ 13h03 → cần ưu tiên đồng bộ counter writer/dashboard.\n• L2 đang chờ quota Browser Run miễn phí; retry kế tiếp 2026-08-19T00:05:00Z."
 }
