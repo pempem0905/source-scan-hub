@@ -16,8 +16,9 @@
   "end_date": null,
   "eligibility": "Khách hàng đăng ký thành viên tại website; áp dụng cho đơn hàng nguyên giá đầu tiên; mỗi khách hàng dùng mã 1 lần; website only.",
   "literal_code": "URWELCOME",
-  "status": "ACTIVE",
-  "evidence": "Official Urban Revivo promotion page currently displays 'Ưu đãi 10% cho đơn hàng đầu tiên | Nhập mã: URWELCOME' and states membership registration plus one-use-per-customer conditions. No end date is published.",
-  "evidence_checked_at": "2026-08-19T05:53:33+07:00",
+  "status": "REVIEW",
+  "queue_eligibility": "NOT_CLEAN_UNDATED",
+  "evidence": "Official Urban Revivo promotion page currently displays 'Ưu đãi 10% cho đơn hàng đầu tiên | Nhập mã: URWELCOME' and states membership registration plus one-use-per-customer conditions. No controlling start/end date is published, so current/future validity cannot be proven under the Retail clean-queue gate.",
+  "evidence_checked_at": "2026-08-19T06:56:55+07:00",
   "value_filter_version": "ACTIONABLE-VALUE-V2"
 }
