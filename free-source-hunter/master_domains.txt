@@ -893,6 +893,8 @@ aone.vn
 aonemarket.vn
 aonu.vn
 aophongdep.vn
+aotrang.vn
+aotrummaygiat.vn
 apacsma.com
 api-ht.568play.vn
 api.8pos.vn
@@ -1168,6 +1170,7 @@ fr.fiverr.com
 fr.macduggal.com
 fr.semrush.com
 frame-store.com
+frankiesbikinis.com
 fwd.com.vn
 gdshop.vn
 generali.vn
@@ -1277,6 +1280,7 @@ isharya.com
 it.fiverr.com
 it.macduggal.com
 it.semrush.com
+italist.com
 ja.semrush.com
 jangin.vn
 jettzy.com.vn
@@ -1530,6 +1534,7 @@ rabbitcare.com
 rabbitcare.vn
 randstad.co.uk
 rapchieuphim.com
+realtyvietnam.vn
 redgo.vn
 rentracks.com.vn
 resources.agileops.vn
@@ -1617,6 +1622,7 @@ squaresigns.com
 static.5sfashion.vn
 static.accesstrade.vn
 static.amago.vn
+store.hbr.org
 stripe.com
 suachuadientu.8tech.vn
 suckhoe.ai.vn
