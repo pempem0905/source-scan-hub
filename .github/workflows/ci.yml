@@ -9,6 +9,9 @@ on:
       - 'free-source-hunter/master_domains.txt'
       - 'free-source-hunter/seen_urls.txt'
       - 'free-source-hunter/evidence.jsonl'
+      - 'integration/hourly_summary.json'
+      - 'integration/hourly_summary.txt'
+      - 'integration/hourly_report_status.json'
   pull_request:
 
 permissions:
@@ -30,5 +33,7 @@ jobs:
       - run: node --check apify/native-orchestrator/src/main.js
       - run: python3 -m py_compile free-source-hunter/hunter.py
       - run: python3 -m py_compile integration/accesstrade_ingest.py
+      - run: python3 -m py_compile integration/accesstrade_catalog_ingest.py
       - run: python3 -m py_compile integration/affiliate_networks_ingest.py
+      - run: python3 -m py_compile integration/hourly_report.py
       - run: python3 -m py_compile l2/session_manager.py
