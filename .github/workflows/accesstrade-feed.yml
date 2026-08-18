@@ -7,6 +7,7 @@ on:
       - '.github/workflows/accesstrade-feed.yml'
       - 'integration/accesstrade_ingest.py'
       - 'integration/accesstrade_catalog_ingest.py'
+      - 'integration/accesstrade_campaign_probe.py'
   schedule:
     - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
@@ -59,10 +60,17 @@ jobs:
           ACCESSTRADE_API_TOKEN_2: ${{ secrets.ACCESSTRADE_API_TOKEN_2 }}
         run: python3 integration/accesstrade_catalog_ingest.py
 
+      - name: Probe campaign registration and approval states
+        if: steps.auth.outputs.enabled == 'true'
+        env:
+          ACCESSTRADE_API_TOKEN: ${{ secrets.ACCESSTRADE_API_TOKEN }}
+          ACCESSTRADE_API_TOKEN_2: ${{ secrets.ACCESSTRADE_API_TOKEN_2 }}
+        run: python3 integration/accesstrade_campaign_probe.py
+
       - name: Validate generated feeds
         if: steps.auth.outputs.enabled == 'true'
         run: |
-          python3 -m py_compile integration/accesstrade_ingest.py integration/accesstrade_catalog_ingest.py
+          python3 -m py_compile integration/accesstrade_ingest.py integration/accesstrade_catalog_ingest.py integration/accesstrade_campaign_probe.py
           python3 - <<'PY'
           import json
           from pathlib import Path
@@ -73,6 +81,7 @@ jobs:
             'accesstrade_campaigns.jsonl',
             'accesstrade_catalog_handoff_v1.jsonl',
             'accesstrade_datafeeds.jsonl',
+            'accesstrade_registered_campaigns.jsonl',
           )
           for name in names:
               p=Path('integration')/name
@@ -80,8 +89,8 @@ jobs:
                   raise SystemExit(f'missing {name}')
               for line in p.read_text(errors='replace').splitlines():
                   json.loads(line)
-          json.loads(Path('integration/accesstrade_status.json').read_text())
-          json.loads(Path('integration/accesstrade_catalog_status.json').read_text())
+          for name in ('accesstrade_status.json','accesstrade_catalog_status.json','accesstrade_campaign_registration_status.json'):
+              json.loads((Path('integration')/name).read_text())
           print('AccessTrade feeds validation OK')
           PY
 
@@ -90,7 +99,7 @@ jobs:
         run: |
           git config user.name "promo-accesstrade-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add integration/accesstrade_handoff_v1.jsonl integration/accesstrade_sources.jsonl integration/accesstrade_tiktok_feed.jsonl integration/accesstrade_status.json integration/accesstrade_campaigns.jsonl integration/accesstrade_catalog_handoff_v1.jsonl integration/accesstrade_datafeeds.jsonl integration/accesstrade_catalog_status.json
+          git add integration/accesstrade_handoff_v1.jsonl integration/accesstrade_sources.jsonl integration/accesstrade_tiktok_feed.jsonl integration/accesstrade_status.json integration/accesstrade_campaigns.jsonl integration/accesstrade_catalog_handoff_v1.jsonl integration/accesstrade_datafeeds.jsonl integration/accesstrade_catalog_status.json integration/accesstrade_registered_campaigns.jsonl integration/accesstrade_campaign_registration_status.json
           if git diff --cached --quiet; then
             echo "No AccessTrade feed changes"
             exit 0
