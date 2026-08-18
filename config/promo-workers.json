@@ -12,7 +12,11 @@
     "source_input": "integration/master_input_sources_v1.jsonl",
     "dispatch_plan": "integration/promo_dispatch_plan_v1.jsonl",
     "l2_shadow_queue": "l2/candidate-queue.jsonl",
-    "external_candidate_feeds": ["integration/accesstrade_handoff_v1.jsonl"],
+    "external_candidate_feeds": [
+      "integration/accesstrade_handoff_v1.jsonl",
+      "integration/ecomobi_handoff_v1.jsonl",
+      "integration/masoffer_handoff_v1.jsonl"
+    ],
     "affiliate_product_feeds": ["integration/accesstrade_tiktok_feed.jsonl"],
     "value_filter": "ACTIONABLE-VALUE-V2",
     "master_rule": "single-writer",
@@ -71,12 +75,15 @@
   "subsystems": {
     "source_hunter": {"project_id": "PROMO-SRC-HUNTER-V1", "role": "only broad source discovery and master-input writer"},
     "l2_router": {"project_id": "PROMO-L2-ROUTER-V1", "role": "hard access lanes and shadow extraction", "production_write": false},
-    "accesstrade_feed": {"project_id": "PROMO-ACCESSTRADE-FEED-V1", "role": "fast affiliate voucher/deal discovery plus TikTok Shop product feed", "candidate_feed": "integration/accesstrade_handoff_v1.jsonl", "tiktok_feed": "integration/accesstrade_tiktok_feed.jsonl", "production_write": false, "verification_required": true}
+    "accesstrade_feed": {"project_id": "PROMO-ACCESSTRADE-FEED-V1", "role": "fast affiliate voucher/deal discovery plus TikTok Shop product feed", "candidate_feed": "integration/accesstrade_handoff_v1.jsonl", "tiktok_feed": "integration/accesstrade_tiktok_feed.jsonl", "production_write": false, "verification_required": true},
+    "ecomobi_feed": {"project_id": "PROMO-ECOMOBI-FEED-V1", "role": "Ecomobi Passio offer, brand-promotion and product discovery feed", "candidate_feed": "integration/ecomobi_handoff_v1.jsonl", "production_write": false, "verification_required": true},
+    "masoffer_feed": {"project_id": "PROMO-MASOFFER-FEED-V1", "role": "MasOffer promotion and coupon discovery feed", "candidate_feed": "integration/masoffer_handoff_v1.jsonl", "production_write": false, "verification_required": true}
   },
   "data_rules": {
     "official_source_first": true,
     "affiliate_feed_requires_official_verification": true,
     "affiliate_links_are_never_primary_evidence": true,
+    "affiliate_network_feeds_are_discovery_only": true,
     "child_detail_terms_override_hubs": true,
     "literal_code_requires_exact_visible_contextual_evidence": true,
     "raw_regex_code_match_is_never_a_verified_code": true,
