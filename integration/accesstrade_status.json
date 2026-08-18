@@ -1,0 +1,22 @@
+{
+  "candidate_count": 0,
+  "generated_at": "2026-08-18T11:21:25.935354Z",
+  "offer_errors": [
+    "coupon_page_1:RuntimeError:HTTP_403"
+  ],
+  "official_source_first": true,
+  "production_write": false,
+  "raw_offer_rows": 0,
+  "schema": "promo.accesstrade_status.v1",
+  "source_hint_count": 0,
+  "started_at": "2026-08-18T11:20:50.960963Z",
+  "state": "DEGRADED",
+  "tiktok_errors": [],
+  "tiktok_product_count": 140,
+  "token_slots_used": [
+    0,
+    1
+  ],
+  "tokens_configured": 2,
+  "verification_required": true
+}
