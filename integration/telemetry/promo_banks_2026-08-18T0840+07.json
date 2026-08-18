@@ -1,0 +1,23 @@
+{
+  "schema": "promo.worker_telemetry.v2",
+  "worker": "PROMO Banks Shard",
+  "fast_probes": 26,
+  "shortlisted": 10,
+  "deep_validations": 7,
+  "cache_skips": 0,
+  "sources_read": 12,
+  "code_likely_sources_read": 7,
+  "no_code_reads": 8,
+  "family_rotations": 3,
+  "offers_found": 23,
+  "voucher_benefits_found": 6,
+  "literal_codes_found": 6,
+  "codes_per_10_reads": 5.0,
+  "enqueued": 6,
+  "blocked": 0,
+  "duplicates": 17,
+  "last_run_at": "2026-08-18T08:40:02+07:00",
+  "lovable_calls": 0,
+  "handoff": "integration/handoffs/promo_banks_2026-08-18T0840+07.jsonl",
+  "note": "GitHub-only exact-code V2 run. Consumed ELIGIBLE+ACTIVE_INPUT PROMO_BANKS inputs only. Deep validation found six current HDBank x Grab reusable literals under controlling official T&C through 31/10/2026: HDBFOOD, HDBBIKE, HDBCAR, HDBDO, HDBTPTNEW, HDBFOODNEW. Prior BIDV/Grab/VPBank exact codes including JCB14/JCB12/JCB10/JCB8, JCBJPWKND30/JCBWKND15/JCBNGAYDOI/KLOOK10JCB, VPBTRANSPORT/VPBFOOD, SHB20/SHB30, NABBIKE/NABFOOD25/NABCAR30, VPFLY200 and VPSTAY150 were treated as duplicates and not re-enqueued. Expired codes were rejected. No canonical counters mutated; lovable_calls=0."
+}
