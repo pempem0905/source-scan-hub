@@ -1,0 +1,7 @@
+{
+    "sources": [
+        {"platform": "VnExpress_KinhDoanh", "url": "https://vnexpress.net/rss/kinh-doanh.rss", "sector": "TaiChinh_NganHang"},
+        {"platform": "CafeF_ThiTruong", "url": "https://cafef.vn/thi-truong.rss", "sector": "TaiChinh_NganHang"},
+        {"platform": "TuoiTre_NhipSongSo", "url": "https://tuoitre.vn/rss/nhip-song-so.rss", "sector": "DienTu_CongNghe"}
+    ]
+}
