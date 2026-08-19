@@ -1,0 +1,23 @@
+{
+  "schema": "promo.candidate.v1",
+  "idempotency_key": "PROMO_RETAIL|vincom.com.vn|anta-hue-deal-chong-deal|2026-07-24|2026-08-23",
+  "source_worker": "PROMO Retail Shard",
+  "source_id": "SRCV1-D80FAC2A6847",
+  "registrable_domain": "vincom.com.vn",
+  "vertical": "GENERAL",
+  "source_url": "https://vincom.com.vn/vincom-plaza-hue/uu-dai",
+  "merchant": "ANTA - Vincom Plaza Huế",
+  "title": "ANTA Vincom Huế Deal Chồng Deal tháng 8",
+  "benefit_type": "STACKED_DISCOUNT_AND_GIFT",
+  "benefit_value": "Giảm đến 50%, giảm thêm đến 10% và quà tặng theo điều kiện hóa đơn",
+  "benefit_cap_vnd": null,
+  "min_spend_vnd": 1599000,
+  "start_date": "2026-07-24",
+  "end_date": "2026-08-23",
+  "eligibility": "Khách mua sắm tại ANTA Vincom Huế; quà tặng áp dụng theo ngưỡng hóa đơn từ 1.599.000đ và điều kiện chương trình trên trang Vincom chính thức.",
+  "literal_code": null,
+  "status": "ACTIVE",
+  "evidence": "Official Vincom Plaza Huế promotion listing describes ANTA Deal Chồng Deal from 24/07 through 23/08/2026 with discounts up to 50%, additional discount up to 10%, and gifts for bills from 1.599M VND.",
+  "evidence_checked_at": "2026-08-20T06:52:26+07:00",
+  "value_filter_version": "ACTIONABLE-VALUE-V2"
+}
