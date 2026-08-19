@@ -1,0 +1,40 @@
+{
+  "schema": "promo.retail.probe_cache_delta.v1",
+  "source_worker": "PROMO Retail Shard",
+  "checked_at": "2026-08-19T21:56:00+07:00",
+  "entries": [
+    {
+      "url": "https://www.pharmacity.vn/ngay-hoi-thuong-hieu.lp",
+      "result": "CURRENT_COUPON_MECHANIC_NO_PUBLIC_LITERAL",
+      "code_signal": true,
+      "notes": "Official page says customers must enter a discount code online; current usage window 17/08-23/08/2026, but the reusable literal token is not exposed in readable official text."
+    },
+    {
+      "url": "https://concung.com/tin-khuyen-mai/ctkm-thang-8-2026-bv3339.html",
+      "result": "CURRENT_ACTIONABLE_ISSUED_VOUCHER_NO_PUBLIC_LITERAL",
+      "code_signal": true,
+      "notes": "Official August promotion exposes 25,000 VND voucher benefit for qualifying food orders from 149,000 VND, but no reusable public literal is visible; treat as issued voucher, not exact code."
+    },
+    {
+      "url": "https://www.samsung.com/vn/offer/",
+      "result": "EXACT_LITERAL_REVIEW_VALIDITY_UNRESOLVED",
+      "code_signal": true,
+      "observed_literals": ["LS-THANG6", "LS-68S26"],
+      "notes": "Current official Samsung offer page visibly publishes both literals with actionable prices/discounts, but no controlling explicit current/future end date was resolved in this bounded run; retain REVIEW, do not enqueue."
+    },
+    {
+      "url": "https://yody.vn/post/hot-nhan-voucher-100k-doc-quyen-tren-website-mung-yody-dat-top-1",
+      "result": "EXACT_LITERAL_REVIEW_VALIDITY_UNRESOLVED",
+      "code_signal": true,
+      "observed_literals": ["YODYCE87"],
+      "notes": "Official YODY article exposes 100,000 VND off a 699,000 VND full-price new-customer order with code YODYCE87, but no controlling validity end date is published; retain REVIEW."
+    },
+    {
+      "url": "https://www.dienmayxanh.com/khuyen-mai/mua-may-giat-tivi-tu-lanh-may-lanh-giam-them-10-1595009",
+      "result": "CURRENT_ACTIONABLE_VOUCHER_NO_PUBLIC_LITERAL",
+      "code_signal": true,
+      "notes": "Official current promotion runs 01/08-06/09/2026 and applies an invoice discount voucher up to 20% for eligible bundle purchases, but no reusable public literal token is exposed."
+    }
+  ],
+  "lovable_calls": 0
+}
