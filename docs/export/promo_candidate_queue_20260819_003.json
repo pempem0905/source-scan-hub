@@ -1,0 +1,1316 @@
+{
+  "file": "promo_candidate_queue_20260819_003.json",
+  "chunk_index": 3,
+  "chunk_count": 5,
+  "row_count": 50,
+  "rows": [
+    {
+      "id": "e95e351e-1761-4b75-8ef1-87fc682ed73a",
+      "idempotency_key": "banks-travel-visa-infinite-agoda-stay3pay2-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.visa.com.vn/en_vn/visa-offers-and-perks/agoda/173296?locale=vi_vn",
+      "candidate": {
+        "brand": "Visa",
+        "market": "VN/APAC",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Agoda",
+        "economics": {
+          "cap_usd": 150,
+          "free_nights": 1,
+          "discount_pct": 33.34,
+          "nights_required": 3
+        },
+        "source_url": "https://www.visa.com.vn/en_vn/visa-offers-and-perks/agoda/173296?locale=vi_vn",
+        "start_date": "2026-04-01",
+        "eligibility": "Valid Visa Infinite issued in Asia Pacific; participating properties; quota-limited",
+        "evidence_url": "https://www.visa.com.vn/en_vn/visa-offers-and-perks/agoda/173296?locale=vi_vn",
+        "benefit_summary": "Visa Infinite: stay 3 nights, pay 2 nights at participating 4-5 star Agoda properties; 33.34% off accommodation charge, capped USD150 per transaction",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "4827b44a-aa44-4085-842b-11de075a4025",
+      "created_at": "2026-08-16T04:32:47.082914+00:00",
+      "committed_at": "2026-08-16T04:43:06.65489+00:00"
+    },
+    {
+      "id": "f790c260-3e6d-4c4c-a5a0-05457e8a0ede",
+      "idempotency_key": "banks-travel-visa-vietnam-affluent-dining-2026-2027",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.visa.com.vn/vi_vn/visa-offers-and-perks/d%E1%BA%B7c-quy%E1%BB%81n-%E1%BA%A9m-th%E1%BB%B1c-cao-c%E1%BA%A5p-c%E1%BB%A7a-visa-vi%E1%BB%87t-nam/178018",
+      "candidate": {
+        "brand": "Visa",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-03-31",
+        "merchant": "Visa Vietnam Affluent Dining Program",
+        "economics": {
+          "tier1_max_vnd": 3000000,
+          "tier1_min_vnd": 1000000,
+          "tier2_cap_vnd": 2000000,
+          "tier2_min_vnd": 3000001,
+          "tier1_discount_pct": 25,
+          "tier2_discount_pct": 50
+        },
+        "source_url": "https://www.visa.com.vn/vi_vn/visa-offers-and-perks/d%E1%BA%B7c-quy%E1%BB%81n-%E1%BA%A9m-th%E1%BB%B1c-cao-c%E1%BA%A5p-c%E1%BB%A7a-visa-vi%E1%BB%87t-nam/178018",
+        "start_date": "2026-04-01",
+        "eligibility": "Valid Visa Signature or Visa Infinite issued in Vietnam; reservation required; participating restaurants",
+        "evidence_url": "https://www.visa.com.vn/vi_vn/visa-offers-and-perks/d%E1%BA%B7c-quy%E1%BB%81n-%E1%BA%A9m-th%E1%BB%B1c-cao-c%E1%BA%A5p-c%E1%BB%A7a-visa-vi%E1%BB%87t-nam/178018",
+        "benefit_summary": "25% off bills from 1,000,000 to 3,000,000 VND; 50% off max 2,000,000 VND on bills over 3,000,000 VND at participating restaurants",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f6d6a4a6-fe78-4c49-b22a-ddf7167b0fd6",
+      "created_at": "2026-08-16T04:32:47.082914+00:00",
+      "committed_at": "2026-08-16T04:43:12.109137+00:00"
+    },
+    {
+      "id": "fc020637-c124-4af1-b3b1-84f3b26a6b4b",
+      "idempotency_key": "banks-travel-visa-expedia-vietnam-visayr7-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.visa.com.vn/vi_vn/visa-offers-and-perks/expedia/173476",
+      "candidate": {
+        "brand": "Visa",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Expedia",
+        "economics": {
+          "discount_pct": 7
+        },
+        "source_url": "https://www.visa.com.vn/vi_vn/visa-offers-and-perks/expedia/173476",
+        "start_date": "2026-01-01",
+        "eligibility": "Visa credit card issued in Vietnam; prepaid standalone hotel; designated Expedia Visa site",
+        "evidence_url": "https://www.visa.com.vn/vi_vn/visa-offers-and-perks/expedia/173476",
+        "literal_code": "VISAYR7",
+        "benefit_summary": "7% off eligible prepaid standalone hotel bookings on Expedia Vietnam",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f6d6a4a6-fe78-4c49-b22a-ddf7167b0fd6",
+      "created_at": "2026-08-16T04:32:47.082914+00:00",
+      "committed_at": "2026-08-16T04:43:12.109137+00:00"
+    },
+    {
+      "id": "4962fb78-f472-42b3-9110-b701fe562ecd",
+      "idempotency_key": "retail-pharmacity-msb-new-account-package-2026",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.pharmacity.vn/page/msb-pharmacity-mo-tai-khoan-nhan-qua-ngay",
+      "candidate": {
+        "brand": "Pharmacity",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "MSB",
+        "end_date": "2026-12-31",
+        "merchant": "Pharmacity",
+        "economics": {
+          "cashback_vnd": 100000,
+          "evoucher_vnd": 40000,
+          "min_bill_vnd": 300000,
+          "pxu_value_vnd": 10000
+        },
+        "source_url": "https://www.pharmacity.vn/page/msb-pharmacity-mo-tai-khoan-nhan-qua-ngay",
+        "start_date": "2026-06-15",
+        "eligibility": "New MSB payment-account customer joining through eligible Pharmacity/MSB acquisition flow; qualifying Pharmacity payment >=300,000 VND within 7 days for cashback benefit; Pharmacity membership required for voucher use.",
+        "evidence_url": "https://www.pharmacity.vn/page/msb-pharmacity-mo-tai-khoan-nhan-qua-ngay",
+        "literal_code": null,
+        "benefit_summary": "Eligible new MSB account customers receive 100,000 VND cashback voucher after qualifying Pharmacity payment, 10,000 P-Xu Vàng, and a 40,000 VND Pharmacity e-voucher for bill >=300,000 VND.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f6d6a4a6-fe78-4c49-b22a-ddf7167b0fd6",
+      "created_at": "2026-08-16T04:36:43.892537+00:00",
+      "committed_at": "2026-08-16T04:43:12.109137+00:00"
+    },
+    {
+      "id": "a18b8159-5933-4b68-ae43-e6ac87975819",
+      "idempotency_key": "retail-pharmacity-referral-20k-voucher-2026",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.pharmacity.vn/page/chuong-trinh-gioi-thieu-ban-moi-nhan-ngay-20k-pxu",
+      "candidate": {
+        "brand": "Pharmacity",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": null,
+        "merchant": "Pharmacity",
+        "economics": {
+          "voucher_vnd": 20000,
+          "min_bill_vnd": 150000,
+          "voucher_valid_days": 60,
+          "max_monthly_value_vnd": 100000,
+          "max_rewards_per_month": 5
+        },
+        "source_url": "https://www.pharmacity.vn/page/chuong-trinh-gioi-thieu-ban-moi-nhan-ngay-20k-pxu",
+        "start_date": "2026-04-15",
+        "eligibility": "Existing Pharmacity account holder referring a new/no-prior-transaction user; referee must complete successful transactions totaling >=150,000 VND within 14 days.",
+        "evidence_url": "https://www.pharmacity.vn/page/chuong-trinh-gioi-thieu-ban-moi-nhan-ngay-20k-pxu",
+        "literal_code": null,
+        "benefit_summary": "Referrer receives one 20,000 VND discount voucher per successful referral; up to 5 rewards/month (100,000 VND/month). Voucher applies to bill >=150,000 VND and expires 60 days after issue.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f6d6a4a6-fe78-4c49-b22a-ddf7167b0fd6",
+      "created_at": "2026-08-16T04:36:43.892537+00:00",
+      "committed_at": "2026-08-16T04:43:12.109137+00:00"
+    },
+    {
+      "id": "0f6d5093-8b73-4920-8d8d-4f995ce522df",
+      "idempotency_key": "retail-kfc-weekday-lunch-combos-2026",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.kfcvietnam.com.vn/kfc-tabs/promotion-details/trua-nay-an-gi",
+      "candidate": {
+        "brand": "KFC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "KFC Vietnam",
+        "economics": {
+          "weekdays": "Mon-Fri",
+          "time_window": "10:00-14:00",
+          "starting_price_vnd": 42000
+        },
+        "source_url": "https://www.kfcvietnam.com.vn/kfc-tabs/promotion-details/trua-nay-an-gi",
+        "start_date": "2026-01-02",
+        "eligibility": "KFC delivery channels including hotline, website, app, Zalo and TikTok Shop; excludes orders >=1,000,000 VND and stacking with other promotions.",
+        "evidence_url": "https://www.kfcvietnam.com.vn/kfc-tabs/promotion-details/trua-nay-an-gi",
+        "literal_code": null,
+        "benefit_summary": "Weekday lunch combo menu from 42,000 VND, including selected rice/pasta/burger item plus regular Pepsi; available 10:00-14:00 Monday-Friday with stated holiday exclusions.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "e52f4c4c-9b6b-4005-b275-6b2266b39766",
+      "created_at": "2026-08-16T04:37:14.542995+00:00",
+      "committed_at": "2026-08-16T05:41:16.342966+00:00"
+    },
+    {
+      "id": "859a02d6-ea72-4386-a8c5-260e9d739e3e",
+      "idempotency_key": "retail-kfc-member-day-99k-2026",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.kfcvietnam.com.vn/kfc-tabs/promotion-news",
+      "candidate": {
+        "brand": "KFC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "KFC Vietnam",
+        "economics": {
+          "savings_vnd": 93000,
+          "promo_price_vnd": 99000,
+          "reference_price_vnd": 192000,
+          "recurring_day_of_month": 15
+        },
+        "source_url": "https://www.kfcvietnam.com.vn/kfc-tabs/promotion-news",
+        "start_date": "2026-07-10",
+        "eligibility": "KFC Rewards member; must have at least one qualifying points-earning transaction during the prior 30 days up to the day before Member Day.",
+        "evidence_url": "https://www.kfcvietnam.com.vn/kfc-tabs/promotion-news",
+        "literal_code": null,
+        "benefit_summary": "KFC Rewards Member Day: exclusive combo 99,000 VND (listed regular value 192,000 VND) on the 15th day of each month.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f6d6a4a6-fe78-4c49-b22a-ddf7167b0fd6",
+      "created_at": "2026-08-16T04:37:14.542995+00:00",
+      "committed_at": "2026-08-16T04:43:12.109137+00:00"
+    },
+    {
+      "id": "98ff9f1d-5eb3-48f2-b7a9-9f1b341d7015",
+      "idempotency_key": "retail-kfc-rewards-new-member-25k-2026",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.kfcvietnam.com.vn/kfc-tabs/promotion-news",
+      "candidate": {
+        "brand": "KFC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "KFC Vietnam",
+        "economics": {
+          "new_member_only": true,
+          "promo_price_vnd": 25000
+        },
+        "source_url": "https://www.kfcvietnam.com.vn/kfc-tabs/promotion-news",
+        "start_date": "2026-05-27",
+        "eligibility": "New KFC Rewards member registering through KFC membership or Zalo MiniApp; member-only.",
+        "evidence_url": "https://www.kfcvietnam.com.vn/kfc-tabs/promotion-news",
+        "literal_code": null,
+        "benefit_summary": "New KFC Rewards member welcome deal: 1 crispy chicken piece + 1 regular Pepsi for 25,000 VND.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f6d6a4a6-fe78-4c49-b22a-ddf7167b0fd6",
+      "created_at": "2026-08-16T04:37:14.542995+00:00",
+      "committed_at": "2026-08-16T04:43:12.109137+00:00"
+    },
+    {
+      "id": "4ecceaa0-4a20-4ab6-9cfd-114859bcf069",
+      "idempotency_key": "hub-jollibee-burger-chicken-combo69k-20260616-v1",
+      "source_worker": "PROMO Discovery Hub",
+      "source_url": "https://jollibee.com.vn/blog/post/monmoidealhoi",
+      "candidate": {
+        "brand": "Jollibee Vietnam",
+        "market": "VN",
+        "status": "REVIEW",
+        "end_date": null,
+        "merchant": "Jollibee Vietnam",
+        "economics": {
+          "includes": [
+            "1 Burger Gà Giòn",
+            "1 Gà Giòn Vui Vẻ",
+            "1 Pepsi vừa"
+          ],
+          "combo_price_vnd": 69000
+        },
+        "source_url": "https://jollibee.com.vn/blog/post/monmoidealhoi",
+        "start_date": "2026-06-16",
+        "eligibility": "Order via Jollibee App or at participating Jollibee store; official post instructs customers to say the promo phrase Combo 69k at store.",
+        "evidence_url": "https://jollibee.com.vn/blog/post/monmoidealhoi",
+        "literal_code": "Combo 69k",
+        "benefit_summary": "Burger Gà Giòn combo 69,000 VND includes 1 Burger Gà Giòn, 1 Gà Giòn Vui Vẻ and 1 medium Pepsi; order in Jollibee App or ask for promo phrase at store.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "35f97bd0-08ad-4490-8693-34b1795fec61",
+      "created_at": "2026-08-16T05:07:45.025301+00:00",
+      "committed_at": "2026-08-16T09:16:21.90559+00:00"
+    },
+    {
+      "id": "073bd8ab-e8f6-4f6a-8679-7e177cd7dd0c",
+      "idempotency_key": "banks-travel-acb-jcb-thailand-1000thb-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/jcb-x-acb-jcb-hoan-6000-thb-cho-cac-giao-dich-tai-thai-lan-khi-thanh-toan-bang-the-acb-jcb",
+      "candidate": {
+        "brand": "ACB",
+        "market": "TH",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Thailand in-store JCB merchants",
+        "economics": {
+          "cashback_thb": 1000,
+          "monthly_min_spend_thb": 10000,
+          "program_max_cashback_thb": 6000
+        },
+        "source_url": "https://acb.com.vn/uu-dai-the/jcb-x-acb-jcb-hoan-6000-thb-cho-cac-giao-dich-tai-thai-lan-khi-thanh-toan-bang-the-acb-jcb",
+        "start_date": "2026-07-01",
+        "eligibility": "ACB JCB Debit or Gold Credit; direct in-store Thailand transactions in THB; online excluded",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/jcb-x-acb-jcb-hoan-6000-thb-cho-cac-giao-dich-tai-thai-lan-khi-thanh-toan-bang-the-acb-jcb",
+        "benefit_summary": "1,000 THB cashback per monthly phase for cumulative in-store Thailand spend from 10,000 THB; up to 6,000 THB/card program total",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "e163b71a-5101-4aa2-a50c-d8026f8707b5",
+      "created_at": "2026-08-16T05:29:03.329793+00:00",
+      "committed_at": "2026-08-16T05:41:33.260026+00:00"
+    },
+    {
+      "id": "13722e95-da17-4ff4-bf82-71ede7aed603",
+      "idempotency_key": "banks-travel-acb-starlux-zacbjx-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/starlux-airlines-x-acb-giam-5-gia-ve-may-bay-khi-thanh-toan-bang-the-acb",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "STARLUX Airlines",
+        "economics": {
+          "discount_pct": 5
+        },
+        "source_url": "https://acb.com.vn/uu-dai-the/starlux-airlines-x-acb-giam-5-gia-ve-may-bay-khi-thanh-toan-bang-the-acb",
+        "start_date": "2026-06-15",
+        "eligibility": "All cards issued by ACB; eligible routes/fare classes and adult tickets",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/starlux-airlines-x-acb-giam-5-gia-ve-may-bay-khi-thanh-toan-bang-the-acb",
+        "literal_code": "ZACBJX",
+        "benefit_summary": "5% off eligible STARLUX airfares booked on official website/app",
+        "travel_end_date": "2027-03-31",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "e52f4c4c-9b6b-4005-b275-6b2266b39766",
+      "created_at": "2026-08-16T05:29:03.329793+00:00",
+      "committed_at": "2026-08-16T05:41:16.342966+00:00"
+    },
+    {
+      "id": "38effb9c-6594-477c-acaa-808ae6d5ef49",
+      "idempotency_key": "banks-travel-acb-jcb-banyan-angsana-langco-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/banyan-tree-lang-co-angsana-lang-co-x-acb-jcb-giam-den-30-dich-vu-luu-tru-am-thuc-va-spa",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-10-20",
+        "merchant": "Banyan Tree Lăng Cô / Angsana Lăng Cô",
+        "economics": {
+          "spa_discount_pct": 10,
+          "room_discount_pct": 30,
+          "dining_discount_pct": 10
+        },
+        "source_url": "https://acb.com.vn/uu-dai-the/banyan-tree-lang-co-angsana-lang-co-x-acb-jcb-giam-den-30-dich-vu-luu-tru-am-thuc-va-spa",
+        "eligibility": "ACB JCB Debit or Gold Credit; advance booking and direct on-site ACB JCB payment",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/banyan-tree-lang-co-angsana-lang-co-x-acb-jcb-giam-den-30-dich-vu-luu-tru-am-thuc-va-spa",
+        "benefit_summary": "30% off Best Available Rate rooms, 10% off eligible dining and 10% off eligible spa",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "e163b71a-5101-4aa2-a50c-d8026f8707b5",
+      "created_at": "2026-08-16T05:29:03.329793+00:00",
+      "committed_at": "2026-08-16T05:41:33.260026+00:00"
+    },
+    {
+      "id": "3984fc0b-a09c-4c9e-a175-4571a271308e",
+      "idempotency_key": "banks-travel-acb-visa-corporate-expedia-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://acb.com.vn/uu-dai-doanh-nghiep/uu-dai-dac-quyen-den-8-tai-expedia",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Expedia",
+        "economics": {
+          "discount_pct_max": 8
+        },
+        "source_url": "https://acb.com.vn/uu-dai-doanh-nghiep/uu-dai-dac-quyen-den-8-tai-expedia",
+        "start_date": "2026-01-01",
+        "eligibility": "ACB Visa Corporate or ACB Visa Business; voucher must be obtained via official program flow and applied at checkout",
+        "evidence_url": "https://acb.com.vn/uu-dai-doanh-nghiep/uu-dai-dac-quyen-den-8-tai-expedia",
+        "benefit_summary": "Up to 8% off selected hotel bookings on Expedia for ACB Visa corporate cards",
+        "travel_end_date": "2027-06-30",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f7fa9545-61e8-4c33-9037-34f426f3b082",
+      "created_at": "2026-08-16T05:29:03.329793+00:00",
+      "committed_at": "2026-08-16T05:41:51.709789+00:00"
+    },
+    {
+      "id": "4384e924-aaef-4752-b23e-4c7b9b581a1b",
+      "idempotency_key": "banks-travel-acb-jcb-agoda-2026-2027",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/agoda-x-acb-jcb-giam-den-789000-vnd-khi-thanh-toan-bang-the-acb-jcb",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-05-31",
+        "merchant": "Agoda",
+        "economics": {
+          "daily_japan_pct": 15,
+          "daily_other_pct": 10,
+          "max_discount_usd": 30,
+          "weekend_japan_pct": 30,
+          "weekend_other_pct": 15
+        },
+        "source_url": "https://acb.com.vn/uu-dai-the/agoda-x-acb-jcb-giam-den-789000-vnd-khi-thanh-toan-bang-the-acb-jcb",
+        "start_date": "2026-06-10",
+        "eligibility": "All ACB JCB cards; online prepayment via designated Agoda program",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/agoda-x-acb-jcb-giam-den-789000-vnd-khi-thanh-toan-bang-the-acb-jcb",
+        "benefit_summary": "ACB JCB Agoda: weekends 30% Japan /15% elsewhere, double-date 15%, daily 15% Japan /10% elsewhere; max 30 USD (~789,000 VND)",
+        "travel_end_date": "2027-07-31",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "e52f4c4c-9b6b-4005-b275-6b2266b39766",
+      "created_at": "2026-08-16T05:29:03.329793+00:00",
+      "committed_at": "2026-08-16T05:41:16.342966+00:00"
+    },
+    {
+      "id": "458c1d04-ee78-4b4d-be21-b34b25c3be3c",
+      "idempotency_key": "banks-travel-acb-jcb-tripcom-2026-2027",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/tripcom-x-acb-jcb-giam-den-1000000-vnd-khi-thanh-toan-bang-the-acb-jcb",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-05-31",
+        "merchant": "Trip.com",
+        "economics": {
+          "daily_max_discount_usd": 30,
+          "hotel_fixed_discount_vnd": 300000,
+          "weekend_max_discount_vnd": 1000000
+        },
+        "source_url": "https://acb.com.vn/uu-dai-the/tripcom-x-acb-jcb-giam-den-1000000-vnd-khi-thanh-toan-bang-the-acb-jcb",
+        "start_date": "2026-05-15",
+        "eligibility": "ACB JCB Debit and ACB JCB Gold Credit; designated Trip.com program link; max 6 uses per promo code/account/card",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/tripcom-x-acb-jcb-giam-den-1000000-vnd-khi-thanh-toan-bang-the-acb-jcb",
+        "benefit_summary": "ACB JCB Trip.com family: weekends up to 30%/1,000,000 VND on international flights plus fixed discounts; double-date offers; daily hotel/flight discounts for Japan and global bookings",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "e52f4c4c-9b6b-4005-b275-6b2266b39766",
+      "created_at": "2026-08-16T05:29:03.329793+00:00",
+      "committed_at": "2026-08-16T05:41:16.342966+00:00"
+    },
+    {
+      "id": "53083c88-5b05-4a73-bdf0-8f5cf9fa8d26",
+      "idempotency_key": "banks-travel-acb-visa-sungroup-10pct-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/sun-group-x-acb-visa-giam-den-1-trieu-dong-khi-thanh-toan-bang-the-acb-visa",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "Sun Group / Sun Holidays",
+        "economics": {
+          "stackable": true,
+          "discount_pct": 10,
+          "max_discount_vnd": 1000000
+        },
+        "source_url": "https://acb.com.vn/uu-dai-the/sun-group-x-acb-visa-giam-den-1-trieu-dong-khi-thanh-toan-bang-the-acb-visa",
+        "start_date": "2026-05-25",
+        "eligibility": "ACB Visa Infinite, Privilege Visa Signature, Visa Signature, Visa Platinum, Visa Gold, Lotusmile Pay",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/sun-group-x-acb-visa-giam-den-1-trieu-dong-khi-thanh-toan-bang-the-acb-visa",
+        "benefit_summary": "Extra 10% off, max 1,000,000 VND, on online Sun Holidays ticket purchases paid with eligible ACB Visa cards",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "e52f4c4c-9b6b-4005-b275-6b2266b39766",
+      "created_at": "2026-08-16T05:29:03.329793+00:00",
+      "committed_at": "2026-08-16T05:41:16.342966+00:00"
+    },
+    {
+      "id": "c927d1b2-cf3f-4f9a-8f26-c4ebf5b5db96",
+      "idempotency_key": "banks-travel-acb-jcb-movenpick-camranh-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/movenpick-resort-cam-ranh-x-acb-jcb-giam-den-10-dich-vu-luu-tru-am-thuc-va-spa",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-01",
+        "merchant": "Mövenpick Resort Cam Ranh",
+        "economics": {
+          "spa_discount_pct": 10,
+          "room_discount_pct": 10,
+          "dining_discount_pct": 10
+        },
+        "source_url": "https://acb.com.vn/uu-dai-the/movenpick-resort-cam-ranh-x-acb-jcb-giam-den-10-dich-vu-luu-tru-am-thuc-va-spa",
+        "eligibility": "ACB JCB Debit or Gold Credit; advance booking and direct on-site ACB JCB payment",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/movenpick-resort-cam-ranh-x-acb-jcb-giam-den-10-dich-vu-luu-tru-am-thuc-va-spa",
+        "benefit_summary": "10% off best available room rate, eligible F&B, spa treatment packages and selected resort activities",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "e163b71a-5101-4aa2-a50c-d8026f8707b5",
+      "created_at": "2026-08-16T05:29:03.329793+00:00",
+      "committed_at": "2026-08-16T05:41:33.260026+00:00"
+    },
+    {
+      "id": "c95ca448-23b9-490d-8113-5ce11a1c58d2",
+      "idempotency_key": "banks-travel-acb-traveloka-weekend-stage2-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/traveloka-x-acb-giam-den-400000-vnd-khi-mua-ve-may-bay-va-dat-phong-khach-san",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "UPCOMING",
+        "end_date": "2026-11-30",
+        "merchant": "Traveloka",
+        "economics": {
+          "hotel_discount_vnd": 200000,
+          "flight_discount_vnd": 200000,
+          "hotel_min_spend_vnd": 2000000,
+          "flight_min_spend_vnd": 3000000
+        },
+        "source_url": "https://acb.com.vn/uu-dai-the/traveloka-x-acb-giam-den-400000-vnd-khi-mua-ve-may-bay-va-dat-phong-khach-san",
+        "start_date": "2026-09-01",
+        "eligibility": "ACB Visa Infinite, Privilege Visa Signature, Visa Signature, Visa Platinum; direct Traveloka app/website payment",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/traveloka-x-acb-giam-den-400000-vnd-khi-mua-ve-may-bay-va-dat-phong-khach-san",
+        "benefit_summary": "Weekend discount: 200,000 VND on flights from 3,000,000 VND and 200,000 VND on hotels from 2,000,000 VND; one use/month/customer per service",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "e52f4c4c-9b6b-4005-b275-6b2266b39766",
+      "created_at": "2026-08-16T05:29:03.329793+00:00",
+      "committed_at": "2026-08-16T05:41:16.342966+00:00"
+    },
+    {
+      "id": "31541a8c-d1f2-4cc3-96e6-6af20270bf6e",
+      "idempotency_key": "retail-pharmacity-aug2026-brauer-b1g1",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.pharmacity.vn/cam-nang-mua-sam/thang-8-23",
+      "candidate": {
+        "brand": "Brauer",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "Pharmacity",
+        "source_url": "https://www.pharmacity.vn/cam-nang-mua-sam/thang-8-23",
+        "start_date": "2026-08-01",
+        "evidence_url": "https://www.pharmacity.vn/cam-nang-mua-sam/thang-8-23",
+        "literal_code": null,
+        "benefit_summary": "Brauer MUA 1 TẶNG 1 trong cẩm nang khuyến mãi tháng 8",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f7fa9545-61e8-4c33-9037-34f426f3b082",
+      "created_at": "2026-08-16T05:34:48.548931+00:00",
+      "committed_at": "2026-08-16T05:41:51.709789+00:00"
+    },
+    {
+      "id": "59bed7e6-a602-4ab7-8286-2bdd6143a3b8",
+      "idempotency_key": "retail-pharmacity-aug2026-innerb-up35",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.pharmacity.vn/cam-nang-mua-sam/thang-8-23",
+      "candidate": {
+        "brand": "InnerB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "Pharmacity",
+        "source_url": "https://www.pharmacity.vn/cam-nang-mua-sam/thang-8-23",
+        "start_date": "2026-08-01",
+        "evidence_url": "https://www.pharmacity.vn/cam-nang-mua-sam/thang-8-23",
+        "literal_code": null,
+        "benefit_summary": "InnerB giảm đến 35% trong cẩm nang khuyến mãi tháng 8",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f7fa9545-61e8-4c33-9037-34f426f3b082",
+      "created_at": "2026-08-16T05:34:48.548931+00:00",
+      "committed_at": "2026-08-16T05:41:51.709789+00:00"
+    },
+    {
+      "id": "d571c40e-262c-4311-95aa-7cf0188554a4",
+      "idempotency_key": "retail-pharmacity-aug2026-livespo-voucher50k",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.pharmacity.vn/cam-nang-mua-sam/thang-8-23",
+      "candidate": {
+        "brand": "Livespo",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "Pharmacity",
+        "source_url": "https://www.pharmacity.vn/cam-nang-mua-sam/thang-8-23",
+        "start_date": "2026-08-01",
+        "evidence_url": "https://www.pharmacity.vn/cam-nang-mua-sam/thang-8-23",
+        "literal_code": null,
+        "benefit_summary": "Livespo tặng voucher 50.000 VND trong cẩm nang khuyến mãi tháng 8",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f7fa9545-61e8-4c33-9037-34f426f3b082",
+      "created_at": "2026-08-16T05:34:48.548931+00:00",
+      "committed_at": "2026-08-16T05:41:51.709789+00:00"
+    },
+    {
+      "id": "1b7d9556-0193-416a-b46a-128ea8b54aff",
+      "idempotency_key": "hub-aeonhue-bigfun-outdoor-b2g1-from34k-20260815",
+      "source_worker": "PROMO Discovery Hub",
+      "source_url": "https://hue.aeonmall-vietnam.com/khuyen-mai",
+      "candidate": {
+        "brand": "AEON MALL Huế",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "AEON MALL Huế",
+        "end_date": null,
+        "merchant": "BIGFUN Outdoor Park",
+        "economics": {
+          "mechanic": "BUY_2_GET_1",
+          "price_from_vnd": 34000
+        },
+        "source_url": "https://hue.aeonmall-vietnam.com/khuyen-mai",
+        "start_date": "2026-08-15",
+        "eligibility": "Khách hàng BIGFUN Outdoor Park tại AEON MALL Huế; điều kiện chi tiết theo chương trình tại điểm bán",
+        "evidence_url": "https://hue.aeonmall-vietnam.com/khuyen-mai",
+        "literal_code": null,
+        "benefit_summary": "Mua 2 tặng 1 vé BIGFUN Outdoor Park, giá vé chỉ từ 34.000 VND",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "d2ef8593-6583-49c2-9eb8-8b9edb4ac587",
+      "created_at": "2026-08-16T06:11:25.813502+00:00",
+      "committed_at": "2026-08-16T06:38:48.577444+00:00"
+    },
+    {
+      "id": "2ff47424-33e0-4af2-9b06-0243168b712e",
+      "idempotency_key": "banks-travel-vcb-visa-agoda-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.vietcombank.com.vn/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai/KHCN---Visa-2026",
+      "candidate": {
+        "brand": "Vietcombank",
+        "market": "GLOBAL",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "Agoda",
+        "economics": {
+          "daily_max_vnd": 500000,
+          "friday_max_vnd": 700000,
+          "daily_discount_pct": 10,
+          "friday_discount_pct": 15,
+          "signature_infinite_max_vnd": 900000,
+          "signature_infinite_discount_pct": 20
+        },
+        "source_url": "https://www.vietcombank.com.vn/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai/KHCN---Visa-2026",
+        "start_date": null,
+        "eligibility": "Chủ thẻ Vietcombank Visa; Signature/Infinite đủ điều kiện cho tier cao hơn.",
+        "evidence_url": "https://www.vietcombank.com.vn/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai/KHCN---Visa-2026",
+        "literal_code": null,
+        "benefit_summary": "Vietcombank Visa: giảm 10% tối đa 500.000 VND mỗi ngày tại Agoda; thứ Sáu giảm 15% tối đa 700.000 VND; Visa Signature/Infinite có ưu đãi 20% tối đa 900.000 VND theo điều kiện chương trình.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "d2ef8593-6583-49c2-9eb8-8b9edb4ac587",
+      "created_at": "2026-08-16T06:31:26.448337+00:00",
+      "committed_at": "2026-08-16T06:38:48.577444+00:00"
+    },
+    {
+      "id": "55d015c1-1161-4b7c-a845-1a0a9c75fd07",
+      "idempotency_key": "banks-travel-vcb-visa-golf-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.vietcombank.com.vn/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai/KHCN---Visa-2026",
+      "candidate": {
+        "brand": "Vietcombank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "Visa Golf",
+        "economics": {
+          "infinite_discount_vnd": 1000000,
+          "signature_discount_vnd": 500000,
+          "participating_golf_courses": 60,
+          "infinite_quarterly_golf_balls": 3
+        },
+        "source_url": "https://www.vietcombank.com.vn/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai/KHCN---Visa-2026",
+        "start_date": null,
+        "eligibility": "Chủ thẻ Vietcombank Visa Signature hoặc Visa Infinite; đặt chỗ và thanh toán bằng thẻ hợp lệ tại sân tham gia.",
+        "evidence_url": "https://www.vietcombank.com.vn/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai/KHCN---Visa-2026",
+        "literal_code": null,
+        "benefit_summary": "Vietcombank Visa Signature: giảm 500.000 VND phí chơi golf; Visa Infinite: giảm 1.000.000 VND phí chơi golf tại 60 sân tham gia, Infinite còn tặng 3 bóng Visa x Titleist Pro V1x mỗi quý tại 10 sân quy định.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "d2ef8593-6583-49c2-9eb8-8b9edb4ac587",
+      "created_at": "2026-08-16T06:31:26.448337+00:00",
+      "committed_at": "2026-08-16T06:38:48.577444+00:00"
+    },
+    {
+      "id": "cc55a2e2-5a63-4b9d-a81d-88ca275511fb",
+      "idempotency_key": "banks-travel-vcb-visa-tripcom-evergreen-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.vietcombank.com.vn/vi-VN/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai/2026_Uu-dai-Evergreen",
+      "candidate": {
+        "brand": "Vietcombank",
+        "market": "GLOBAL",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Trip.com",
+        "economics": {
+          "hotel_min_spend": 0,
+          "hotel_discount_pct": 6,
+          "flight_discount_pct": 1.5
+        },
+        "source_url": "https://www.vietcombank.com.vn/vi-VN/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai/2026_Uu-dai-Evergreen",
+        "start_date": null,
+        "eligibility": "Khách hàng sử dụng thẻ Vietcombank Visa; ưu đãi khách sạn dành cho thành viên Trip.com theo điều kiện trang ưu đãi.",
+        "evidence_url": "https://www.vietcombank.com.vn/vi-VN/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai/2026_Uu-dai-Evergreen",
+        "literal_code": null,
+        "benefit_summary": "Vietcombank Visa tại Trip.com: giảm 1,5% chuyến bay; giảm 6% đặt phòng khách sạn cho thành viên Trip.com, không yêu cầu mức chi tiêu/giá trị booking tối thiểu theo trang ưu đãi.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "d2ef8593-6583-49c2-9eb8-8b9edb4ac587",
+      "created_at": "2026-08-16T06:31:26.448337+00:00",
+      "committed_at": "2026-08-16T06:38:48.577444+00:00"
+    },
+    {
+      "id": "d48d55b9-b1d7-4505-9b31-33805680301b",
+      "idempotency_key": "banks-travel-vcb-visa-dine-save-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.vietcombank.com.vn/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai/KHCN---Visa-2026",
+      "candidate": {
+        "brand": "Vietcombank",
+        "market": "ASIA",
+        "status": "ACTIVE",
+        "end_date": "2026-08-30",
+        "merchant": "Visa Dine & Save",
+        "economics": {
+          "min_spend_vnd": 0,
+          "redemption_limit": "unlimited",
+          "discount_pct_up_to": 20
+        },
+        "source_url": "https://www.vietcombank.com.vn/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai/KHCN---Visa-2026",
+        "start_date": null,
+        "eligibility": "Chủ thẻ Vietcombank Visa thanh toán tại nhà hàng tham gia ở Singapore, Malaysia, Thái Lan, Hong Kong, Đài Loan, Hàn Quốc, Indonesia, Philippines, Việt Nam và Ấn Độ.",
+        "evidence_url": "https://www.vietcombank.com.vn/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai/KHCN---Visa-2026",
+        "literal_code": null,
+        "benefit_summary": "Giảm đến 20% tổng hóa đơn tại nhà hàng tham gia Visa Dine & Save ở nhiều thị trường châu Á khi thanh toán bằng Vietcombank Visa; không chi tiêu tối thiểu, không giới hạn số lần.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "d2ef8593-6583-49c2-9eb8-8b9edb4ac587",
+      "created_at": "2026-08-16T06:31:26.448337+00:00",
+      "committed_at": "2026-08-16T06:38:48.577444+00:00"
+    },
+    {
+      "id": "60ca018f-ceae-48f7-8c90-a50e83cf1b3f",
+      "idempotency_key": "retail-aeon-longbien-be-ride-aug2026-v1",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://aeonmall-long-bien.com.vn/chuong-trinh-khuyen-mai-thang-4/",
+      "candidate": {
+        "brand": "AEON MALL Long Biên",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "AEON MALL Long Biên",
+        "end_date": "2026-08-31",
+        "merchant": "be",
+        "economics": {
+          "discount_pct_up_to_special": 30,
+          "discount_pct_up_to_other_days": 20
+        },
+        "source_url": "https://aeonmall-long-bien.com.vn/chuong-trinh-khuyen-mai-thang-4/",
+        "start_date": "2026-08-01",
+        "eligibility": "Chuyến be có điểm đi hoặc đến AEON MALL Long Biên; mức cụ thể theo điều kiện be tại thời điểm đặt.",
+        "evidence_url": "https://aeonmall-long-bien.com.vn/chuong-trinh-khuyen-mai-thang-4/",
+        "literal_code": null,
+        "benefit_summary": "Ưu đãi be đến 30% vào Thứ 4 và ngày 5, 20 hàng tháng; đến 20% các ngày còn lại cho chuyến có điểm đi hoặc đến AEON MALL Long Biên trong chương trình tháng 8.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "d2ef8593-6583-49c2-9eb8-8b9edb4ac587",
+      "created_at": "2026-08-16T06:35:10.125174+00:00",
+      "committed_at": "2026-08-16T06:38:48.577444+00:00"
+    },
+    {
+      "id": "d3a8e81e-926f-45c6-9b8f-fabeadbcb899",
+      "idempotency_key": "retail-aeon-longbien-waon-x2-20260830-v1",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://aeonmall-long-bien.com.vn/chuong-trinh-khuyen-mai-thang-4/",
+      "candidate": {
+        "brand": "AEON MALL Long Biên",
+        "market": "VN",
+        "status": "UPCOMING",
+        "partner": "WAON POINT",
+        "end_date": "2026-08-30",
+        "merchant": "AEON MALL Long Biên",
+        "economics": {
+          "multiplier": 2,
+          "normal_vnd_per_point": 10000,
+          "promo_points_per_10000_vnd": 2
+        },
+        "source_url": "https://aeonmall-long-bien.com.vn/chuong-trinh-khuyen-mai-thang-4/",
+        "start_date": "2026-08-30",
+        "eligibility": "Thành viên WAON POINT trên ứng dụng AEONMALL Vietnam; giao dịch mua sắm/dịch vụ đủ điều kiện tại AEON MALL Long Biên.",
+        "evidence_url": "https://aeonmall-long-bien.com.vn/chuong-trinh-khuyen-mai-thang-4/",
+        "literal_code": null,
+        "benefit_summary": "Ngày 30/08/2026 tích x2 WAON POINT tại AEON MALL Long Biên: 10.000 VND = 2 điểm thay vì 1 điểm.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "35f97bd0-08ad-4490-8693-34b1795fec61",
+      "created_at": "2026-08-16T06:35:10.125174+00:00",
+      "committed_at": "2026-08-16T09:16:21.90559+00:00"
+    },
+    {
+      "id": "0108b860-ca1d-4e5f-ab72-d74c2ba9f4a0",
+      "idempotency_key": "banks-travel-hsbc-qatar-airways-10pct-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "Qatar Airways",
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "HSBC Vietnam cardholder; eligible fare/booking terms apply",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "Up to 10% off Qatar Airways flights",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "85a261a9-084c-47d6-8a91-c94001296a15",
+      "created_at": "2026-08-16T07:33:04.036327+00:00",
+      "committed_at": "2026-08-16T08:39:19.93294+00:00"
+    },
+    {
+      "id": "0ba30f70-9d67-4272-862c-42a6116e2d00",
+      "idempotency_key": "banks-travel-hsbc-hotelscom-7pct-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Hotels.com",
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "HSBC Vietnam cardholder; eligible Hotels.com booking",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "7% off worldwide hotel bookings",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "85a261a9-084c-47d6-8a91-c94001296a15",
+      "created_at": "2026-08-16T07:33:04.036327+00:00",
+      "committed_at": "2026-08-16T08:39:19.93294+00:00"
+    },
+    {
+      "id": "26731dc4-1edb-494e-b8ea-bb4d3cd9aa6b",
+      "idempotency_key": "banks-travel-hsbc-fusion-hotel-group-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Fusion Hotel Group",
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "HSBC Vietnam cardholder; direct eligible booking",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "10% off room rates on top of existing offers when booking directly on Fusion Hotel Group/properties websites",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "d7ca7c0d-5e87-4ec8-9c3c-edb158125a82",
+      "created_at": "2026-08-16T07:33:04.036327+00:00",
+      "committed_at": "2026-08-16T07:41:23.923643+00:00"
+    },
+    {
+      "id": "56c70657-ca43-47eb-a6e9-6df571f2850c",
+      "idempotency_key": "banks-travel-hsbc-premier-dhawa-stay3free1-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Dhawa",
+        "source_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+        "eligibility": "Eligible HSBC Premier Credit Cardholder; participating-property terms apply",
+        "evidence_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+        "benefit_summary": "Stay 3 nights, get 1 complimentary night plus 20% off spa and gallery during stay",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "d7ca7c0d-5e87-4ec8-9c3c-edb158125a82",
+      "created_at": "2026-08-16T07:33:04.036327+00:00",
+      "committed_at": "2026-08-16T07:41:23.923643+00:00"
+    },
+    {
+      "id": "5ccb88b7-95a3-4e8a-ac1f-8a21ab647281",
+      "idempotency_key": "banks-travel-hsbc-expedia-7pct-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Expedia",
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "HSBC Vietnam cardholder; eligible Expedia hotel booking",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "7% off hotel bookings for HSBC Vietnam cardholders",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "d7ca7c0d-5e87-4ec8-9c3c-edb158125a82",
+      "created_at": "2026-08-16T07:33:04.036327+00:00",
+      "committed_at": "2026-08-16T07:41:23.923643+00:00"
+    },
+    {
+      "id": "5d9d1c57-5ebb-41f8-b724-a40a0d2084f6",
+      "idempotency_key": "banks-travel-hsbc-premier-agoda-12pct-2027",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-03-31",
+        "merchant": "Agoda",
+        "source_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+        "eligibility": "HSBC Premier Credit Cardholder",
+        "evidence_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+        "benefit_summary": "12% off Agoda bookings, capped at USD 45",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "85a261a9-084c-47d6-8a91-c94001296a15",
+      "created_at": "2026-08-16T07:33:04.036327+00:00",
+      "committed_at": "2026-08-16T08:39:19.93294+00:00"
+    },
+    {
+      "id": "69ea6555-c640-4658-8c31-97c2c1f3375e",
+      "idempotency_key": "banks-travel-hsbc-new-world-phu-quoc-15pct-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "New World Resort Phu Quoc",
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "HSBC Vietnam cardholder; eligible direct booking/payment",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "15% off Best Available Room Rate on website plus 15% off Spa and F&B services directly at resort",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "85a261a9-084c-47d6-8a91-c94001296a15",
+      "created_at": "2026-08-16T07:33:04.036327+00:00",
+      "committed_at": "2026-08-16T08:39:19.93294+00:00"
+    },
+    {
+      "id": "736a3078-bf4f-4b81-8801-caf112bc4c4a",
+      "idempotency_key": "banks-travel-hsbc-premier-ihg-15pct-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "IHG Hotels & Resorts",
+        "source_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+        "eligibility": "Eligible HSBC Premier Credit Cardholder and IHG One Rewards member",
+        "evidence_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+        "benefit_summary": "15% savings on Best Flexible Rate at participating IHG hotels",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "c941e730-3821-4028-80db-43176a9c99cc",
+      "created_at": "2026-08-16T07:33:04.036327+00:00",
+      "committed_at": "2026-08-16T08:39:28.37479+00:00"
+    },
+    {
+      "id": "9899420d-68d0-4036-82b3-9486c5196a21",
+      "idempotency_key": "banks-travel-hsbc-premier-angsana-stay3free1-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Angsana Hotels & Resorts",
+        "source_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+        "eligibility": "Eligible HSBC Premier Credit Cardholder; participating-property terms apply",
+        "evidence_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+        "benefit_summary": "Stay 3 nights, get 1 complimentary night",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "c941e730-3821-4028-80db-43176a9c99cc",
+      "created_at": "2026-08-16T07:33:04.036327+00:00",
+      "committed_at": "2026-08-16T08:39:28.37479+00:00"
+    },
+    {
+      "id": "aefb1167-0362-4a76-9a31-9e8513e13437",
+      "idempotency_key": "banks-travel-hsbc-agoda-7pct-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Agoda",
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "HSBC Vietnam cardholder; eligible Agoda hotel booking",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "7% off hotel bookings",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "85a261a9-084c-47d6-8a91-c94001296a15",
+      "created_at": "2026-08-16T07:33:04.036327+00:00",
+      "committed_at": "2026-08-16T08:39:19.93294+00:00"
+    },
+    {
+      "id": "af795b4e-3eed-4b16-a4e0-8dd0ecd19d60",
+      "idempotency_key": "banks-travel-hsbc-dusit-10pct-2028",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2028-08-30",
+        "merchant": "Dusit Hotels & Resorts",
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "HSBC Vietnam cardholder; eligible direct booking",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "10% off all rates on dusit.com",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "85a261a9-084c-47d6-8a91-c94001296a15",
+      "created_at": "2026-08-16T07:33:04.036327+00:00",
+      "committed_at": "2026-08-16T08:39:19.93294+00:00"
+    },
+    {
+      "id": "bf680add-d374-425f-95c5-49fd9e855a2d",
+      "idempotency_key": "banks-travel-hsbc-premier-centara-free-night-2027",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-01-31",
+        "merchant": "Centara Hotels & Resorts",
+        "source_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+        "eligibility": "Eligible HSBC Premier Credit Cardholder; participating-property terms apply",
+        "evidence_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+        "benefit_summary": "One complimentary night at participating properties",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "d7ca7c0d-5e87-4ec8-9c3c-edb158125a82",
+      "created_at": "2026-08-16T07:33:04.036327+00:00",
+      "committed_at": "2026-08-16T07:41:23.923643+00:00"
+    },
+    {
+      "id": "c1794080-4d9d-4bdc-a7fc-f8f688ae2618",
+      "idempotency_key": "banks-travel-hsbc-vexere-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "Vexere",
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "HSBC Vietnam cardholder; eligible booking/payment terms apply",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "Up to 25% off bus tickets booked on Vexere website/app",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "d7ca7c0d-5e87-4ec8-9c3c-edb158125a82",
+      "created_at": "2026-08-16T07:33:04.036327+00:00",
+      "committed_at": "2026-08-16T07:41:23.923643+00:00"
+    },
+    {
+      "id": "d5f50e50-076a-4229-a5cc-b18c5774a83c",
+      "idempotency_key": "banks-travel-hsbc-premier-banyan-stay3free1-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Banyan Tree",
+        "source_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+        "eligibility": "Eligible HSBC Premier Credit Cardholder; participating-property terms apply",
+        "evidence_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+        "benefit_summary": "Stay 3 nights, get 1 complimentary night plus 20% off Banyan Tree Spa & Gallery during stay",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "d7ca7c0d-5e87-4ec8-9c3c-edb158125a82",
+      "created_at": "2026-08-16T07:33:04.036327+00:00",
+      "committed_at": "2026-08-16T07:41:23.923643+00:00"
+    },
+    {
+      "id": "f0ec1262-5d45-4c84-9d1d-a0b0a1e18ec5",
+      "idempotency_key": "banks-travel-hsbc-premier-grab-thailand-mcairport-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "TH",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "Grab Thailand",
+        "source_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+        "eligibility": "HSBC Premier Credit Card linked/selected via GrabPay; Thailand airport ride terms apply",
+        "evidence_url": "https://card.apply.hsbc.com.vn/HSBC-Premier-benefits/en",
+        "literal_code": "MCAIRPORT",
+        "benefit_summary": "THB 100 off airport rides",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "c941e730-3821-4028-80db-43176a9c99cc",
+      "created_at": "2026-08-16T07:33:04.036327+00:00",
+      "committed_at": "2026-08-16T08:39:28.37479+00:00"
+    },
+    {
+      "id": "3e981a9f-63d5-4592-8bce-6e7e2f5b18a9",
+      "idempotency_key": "retail-guardian-kotex-b1g1-202608-v1",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.guardian.com.vn/bvs-kotex-biocare-smc-23cm-16x16.html",
+      "candidate": {
+        "brand": "Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Kotex",
+        "end_date": "2026-08-25",
+        "merchant": "Guardian",
+        "economics": {
+          "buy_qty": 1,
+          "free_qty": 1,
+          "quota_limited": true
+        },
+        "source_url": "https://www.guardian.com.vn/bvs-kotex-biocare-smc-23cm-16x16.html",
+        "start_date": "2026-07-29",
+        "evidence_url": "https://www.guardian.com.vn/bvs-kotex-biocare-smc-23cm-16x16.html",
+        "benefit_summary": "Mua 1 tặng 1 Kotex BioCare siêu mỏng cánh 23cm 16 miếng; quà tự thêm vào giỏ; số lượng có hạn",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "c941e730-3821-4028-80db-43176a9c99cc",
+      "created_at": "2026-08-16T07:38:19.361604+00:00",
+      "committed_at": "2026-08-16T08:39:28.37479+00:00"
+    },
+    {
+      "id": "6a2290d7-a7bd-4672-9fd8-9e6b49dbdb12",
+      "idempotency_key": "retail-guardian-mannings-showercream-b1g1-202608-v1",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.guardian.com.vn/sua-tam-dang-kem-duong-am-mannings-guardian-goat-s-milk-gentle-moisturising-shower-cream-1l.html",
+      "candidate": {
+        "brand": "Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Mannings Guardian",
+        "end_date": "2026-08-25",
+        "merchant": "Guardian",
+        "economics": {
+          "buy_qty": 1,
+          "free_qty": 1,
+          "quota_limited": true
+        },
+        "source_url": "https://www.guardian.com.vn/sua-tam-dang-kem-duong-am-mannings-guardian-goat-s-milk-gentle-moisturising-shower-cream-1l.html",
+        "start_date": "2026-07-29",
+        "evidence_url": "https://www.guardian.com.vn/sua-tam-dang-kem-duong-am-mannings-guardian-goat-s-milk-gentle-moisturising-shower-cream-1l.html",
+        "benefit_summary": "Mua 1 tặng 1 các sản phẩm sữa tắm Mannings Guardian đủ điều kiện; quà tự thêm vào giỏ; số lượng có hạn",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "c941e730-3821-4028-80db-43176a9c99cc",
+      "created_at": "2026-08-16T07:38:19.361604+00:00",
+      "committed_at": "2026-08-16T08:39:28.37479+00:00"
+    },
+    {
+      "id": "9050f47d-c466-412a-94f5-17e445f7a8d0",
+      "idempotency_key": "retail-guardian-listerine-b1g1-202608-v1",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.guardian.com.vn/nuoc-suc-mieng-lam-trang-rang-listerine-healthy-bright-750ml.html",
+      "candidate": {
+        "brand": "Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Listerine",
+        "end_date": "2026-08-25",
+        "merchant": "Guardian",
+        "economics": {
+          "buy_qty": 1,
+          "free_qty": 1,
+          "quota_limited": true
+        },
+        "source_url": "https://www.guardian.com.vn/nuoc-suc-mieng-lam-trang-rang-listerine-healthy-bright-750ml.html",
+        "start_date": "2026-07-29",
+        "evidence_url": "https://www.guardian.com.vn/nuoc-suc-mieng-lam-trang-rang-listerine-healthy-bright-750ml.html",
+        "benefit_summary": "Mua 1 tặng 1 Listerine Healthy Bright 750ml; quà tự thêm vào giỏ; số lượng có hạn",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "c941e730-3821-4028-80db-43176a9c99cc",
+      "created_at": "2026-08-16T07:38:19.361604+00:00",
+      "committed_at": "2026-08-16T08:39:28.37479+00:00"
+    },
+    {
+      "id": "dba89a26-6a70-434b-aed4-1150b490ca96",
+      "idempotency_key": "retail-guardian-got2b-b2g1-202608-v1",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.guardian.com.vn/sap-vuot-toc-got2b-spiking-wax-75ml.html",
+      "candidate": {
+        "brand": "Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Got2b",
+        "end_date": "2026-08-25",
+        "merchant": "Guardian",
+        "economics": {
+          "buy_qty": 2,
+          "free_qty": 1,
+          "quota_limited": true,
+          "free_item_rule": "lowest-priced item in combo"
+        },
+        "source_url": "https://www.guardian.com.vn/sap-vuot-toc-got2b-spiking-wax-75ml.html",
+        "start_date": "2026-07-29",
+        "evidence_url": "https://www.guardian.com.vn/sap-vuot-toc-got2b-spiking-wax-75ml.html",
+        "benefit_summary": "Mua 2 tặng 1 trong danh sách đủ điều kiện; thêm 3 sản phẩm, sản phẩm giá thấp nhất được miễn phí; số lượng có hạn",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f33552a9-4262-48ce-904e-18840289f4af",
+      "created_at": "2026-08-16T07:38:19.361604+00:00",
+      "committed_at": "2026-08-16T08:39:34.343695+00:00"
+    },
+    {
+      "id": "0f9e439f-c000-4de3-8ca2-ef8cd267aa61",
+      "idempotency_key": "banks-travel-hsbc-be-airport-8x150k-2027",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-04-30",
+        "merchant": "Be",
+        "source_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+        "eligibility": "HSBC TravelOne or HSBC Premier Credit Card",
+        "evidence_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+        "benefit_summary": "Complimentary airport rides via Be up to 8 times/year, capped VND 150,000 per trip",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "0057f4b4-02e7-46c0-bd6b-8b47a9334dde",
+      "created_at": "2026-08-16T08:33:37.526143+00:00",
+      "committed_at": "2026-08-16T08:39:41.348647+00:00"
+    },
+    {
+      "id": "760dcad2-0889-4dc4-ab22-6058aa887cdd",
+      "idempotency_key": "banks-travel-hsbc-mai-house-10pct-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-01",
+        "merchant": "Mai House",
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "HSBC cardholder; direct hotel booking for room discount",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "10% off best room rate when booking direct and 10% off hotel restaurant F&B",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "0057f4b4-02e7-46c0-bd6b-8b47a9334dde",
+      "created_at": "2026-08-16T08:33:37.526143+00:00",
+      "committed_at": "2026-08-16T08:39:41.348647+00:00"
+    },
+    {
+      "id": "8090c4c2-4e25-4355-abab-0eed9f7a9c3a",
+      "idempotency_key": "banks-travel-hsbc-emirates-10pct-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Emirates",
+        "source_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+        "eligibility": "HSBC cardholder; dedicated booking channel required",
+        "evidence_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+        "benefit_summary": "Up to 10% off Emirates airfares via dedicated HSBC booking website",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f33552a9-4262-48ce-904e-18840289f4af",
+      "created_at": "2026-08-16T08:33:37.526143+00:00",
+      "committed_at": "2026-08-16T08:39:34.343695+00:00"
+    }
+  ]
+}

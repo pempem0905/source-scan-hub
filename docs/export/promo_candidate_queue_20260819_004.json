@@ -1,0 +1,1432 @@
+{
+  "file": "promo_candidate_queue_20260819_004.json",
+  "chunk_index": 4,
+  "chunk_count": 5,
+  "row_count": 50,
+  "rows": [
+    {
+      "id": "9b61bec7-ad16-4b06-9852-879e697434f2",
+      "idempotency_key": "banks-travel-hsbc-greensm-18pct-20260831",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "GreenSM",
+        "source_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+        "eligibility": "HSBC cardholder; offer terms apply",
+        "evidence_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+        "benefit_summary": "Up to 18% off GSM rides",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f33552a9-4262-48ce-904e-18840289f4af",
+      "created_at": "2026-08-16T08:33:37.526143+00:00",
+      "committed_at": "2026-08-16T08:39:34.343695+00:00"
+    },
+    {
+      "id": "b25f4314-0526-428a-a0cd-d1144a39dc73",
+      "idempotency_key": "banks-travel-hsbc-wyndham-grand-phuquoc-10pct-2027",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-10-31",
+        "merchant": "Wyndham Grand Phu Quoc",
+        "source_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+        "eligibility": "HSBC cardholder; offer terms apply",
+        "evidence_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+        "benefit_summary": "10% off room booking plus 10% off dining and spa",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f33552a9-4262-48ce-904e-18840289f4af",
+      "created_at": "2026-08-16T08:33:37.526143+00:00",
+      "committed_at": "2026-08-16T08:39:34.343695+00:00"
+    },
+    {
+      "id": "c3bfe8a7-eaa3-4737-bd95-145659e2d53b",
+      "idempotency_key": "banks-travel-hsbc-eva-air-5pct-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "EVA Air",
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "HSBC cardholder; booking on EVA AIR website",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "5% off airfares on EVA AIR website",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "0057f4b4-02e7-46c0-bd6b-8b47a9334dde",
+      "created_at": "2026-08-16T08:33:37.526143+00:00",
+      "committed_at": "2026-08-16T08:39:41.348647+00:00"
+    },
+    {
+      "id": "e25f4fbe-0c68-4518-a38b-b33308d1e39e",
+      "idempotency_key": "banks-travel-hsbc-movenpick-waverly-phuquoc-familyfun-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-10-31",
+        "merchant": "Mövenpick Resort Waverly Phu Quoc",
+        "source_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+        "eligibility": "HSBC cardholder; offer terms apply",
+        "evidence_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+        "benefit_summary": "Family Fun: 10% off plus up to VND 1,500,000 dining credit and airport transfer",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f33552a9-4262-48ce-904e-18840289f4af",
+      "created_at": "2026-08-16T08:33:37.526143+00:00",
+      "committed_at": "2026-08-16T08:39:34.343695+00:00"
+    },
+    {
+      "id": "f71e09c3-4328-40ed-8e8a-8f7c520ab741",
+      "idempotency_key": "banks-travel-hsbc-anantara-vacation-club-399usd-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Anantara Vacation Club",
+        "source_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+        "eligibility": "HSBC cardholder; offer terms apply",
+        "evidence_url": "https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn",
+        "benefit_summary": "Thailand vacation offer from USD 399",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f33552a9-4262-48ce-904e-18840289f4af",
+      "created_at": "2026-08-16T08:33:37.526143+00:00",
+      "committed_at": "2026-08-16T08:39:34.343695+00:00"
+    },
+    {
+      "id": "f567d97d-0689-4993-9228-4ac105797a84",
+      "idempotency_key": "retail-dmx-samsung-sbs-extra-warranty-20260801-20260831",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.dienmayxanh.com/khuyen-mai/mua-tu-lanh-side-by-side-samsung-tang-them-bao-han-1596420",
+      "candidate": {
+        "brand": "Điện máy XANH",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Samsung",
+        "end_date": "2026-08-31",
+        "merchant": "Điện máy XANH",
+        "economics": {
+          "extra_warranty_months": 6,
+          "eligible_product_codes": [
+            "335161",
+            "335159",
+            "335160",
+            "335158",
+            "335157",
+            "328616",
+            "332232"
+          ]
+        },
+        "source_url": "https://www.dienmayxanh.com/khuyen-mai/mua-tu-lanh-side-by-side-samsung-tang-them-bao-han-1596420",
+        "start_date": "2026-08-01",
+        "eligibility": "Khách hàng mua tủ lạnh Side by Side Samsung chính hãng thuộc danh sách áp dụng tại hệ thống Điện máy XANH",
+        "evidence_url": "https://www.dienmayxanh.com/khuyen-mai/mua-tu-lanh-side-by-side-samsung-tang-them-bao-han-1596420",
+        "literal_code": null,
+        "benefit_summary": "Tặng thêm 6 tháng bảo hành chính hãng Samsung khi mua tủ lạnh Side by Side Samsung thuộc danh sách áp dụng",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "0057f4b4-02e7-46c0-bd6b-8b47a9334dde",
+      "created_at": "2026-08-16T08:37:19.792106+00:00",
+      "committed_at": "2026-08-16T08:39:41.348647+00:00"
+    },
+    {
+      "id": "2337d4a9-708c-4bd4-9ac3-b5d2dc940883",
+      "idempotency_key": "banks-travel-hsbc-visa-agoda-20pct-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Visa",
+        "end_date": "2026-09-30",
+        "merchant": "Agoda",
+        "economics": {
+          "discount_pct": 20
+        },
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "Eligible Visa cardholder under the HSBC daily-offers Visa/Master programme",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "Up to 20% off worldwide hotel bookings when using an eligible Visa card",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "aa296858-6293-42df-aca4-7579377fd3f5",
+      "created_at": "2026-08-16T09:30:03.28931+00:00",
+      "committed_at": "2026-08-16T09:39:26.230291+00:00"
+    },
+    {
+      "id": "31c648f5-70e7-434d-98e6-4d2a50044717",
+      "idempotency_key": "banks-travel-hsbc-visa-booking-wallet-7pct-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Visa",
+        "end_date": "2026-12-31",
+        "merchant": "Booking.com",
+        "economics": {
+          "wallet_credit_pct": 7
+        },
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "Eligible Visa cardholder under the HSBC daily-offers Visa/Master programme",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "Up to 7% Booking.com Wallet credit when paying with an eligible Visa card",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "aa296858-6293-42df-aca4-7579377fd3f5",
+      "created_at": "2026-08-16T09:30:03.28931+00:00",
+      "committed_at": "2026-08-16T09:39:26.230291+00:00"
+    },
+    {
+      "id": "39071222-d4e1-4f2f-995e-7a5bc7052e82",
+      "idempotency_key": "banks-travel-hsbc-la-veranda-phuquoc-15pct-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-10-31",
+        "merchant": "La Veranda Resort Phu Quoc",
+        "economics": {
+          "discount_pct": 15
+        },
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "Eligible HSBC cardholder; book via participating offer channel and pay as required by offer terms",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "Up to 15% off Best Available Room Rate, breakfast included",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "aa296858-6293-42df-aca4-7579377fd3f5",
+      "created_at": "2026-08-16T09:30:03.28931+00:00",
+      "committed_at": "2026-08-16T09:39:26.230291+00:00"
+    },
+    {
+      "id": "5fe0fc6d-fda0-4ab7-976f-c54e26c88251",
+      "idempotency_key": "banks-travel-hsbc-sun-group-visa-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Visa",
+        "end_date": "2026-09-30",
+        "merchant": "Sun Group",
+        "economics": {
+          "benefit_type": "lounge_leisure_privileges"
+        },
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "Eligible Visa cardholder; participating Sun Group services and programme terms apply",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "Airport lounge and leisure privileges with Sun Group for eligible Visa cardholders",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "aa296858-6293-42df-aca4-7579377fd3f5",
+      "created_at": "2026-08-16T09:30:03.28931+00:00",
+      "committed_at": "2026-08-16T09:39:26.230291+00:00"
+    },
+    {
+      "id": "b6274e25-a03f-46f3-977d-e76e8fae2e13",
+      "idempotency_key": "banks-travel-hsbc-visa-luxury-travel-2027",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Visa",
+        "end_date": "2027-01-29",
+        "merchant": "Visa Luxury Travel Experiences",
+        "economics": {
+          "benefit_type": "travel_privileges"
+        },
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "Eligible Visa cardholder; specific property/experience terms apply",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "Luxury stays and travel-experience privileges through Visa Luxury Travel Experiences",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "aa296858-6293-42df-aca4-7579377fd3f5",
+      "created_at": "2026-08-16T09:30:03.28931+00:00",
+      "committed_at": "2026-08-16T09:39:26.230291+00:00"
+    },
+    {
+      "id": "ca3bc236-3f0b-4bdb-85cd-193060d627bb",
+      "idempotency_key": "banks-travel-hsbc-visa-qatar-15pct-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+      "candidate": {
+        "brand": "HSBC Vietnam",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Visa",
+        "end_date": "2026-10-31",
+        "merchant": "Qatar Airways",
+        "economics": {
+          "discount_pct": 15
+        },
+        "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "eligibility": "Eligible Visa cardholder under the HSBC daily-offers Visa/Master programme",
+        "evidence_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
+        "benefit_summary": "Up to 15% off Qatar Airways flights when paying with an eligible Visa card",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "aa296858-6293-42df-aca4-7579377fd3f5",
+      "created_at": "2026-08-16T09:30:03.28931+00:00",
+      "committed_at": "2026-08-16T09:39:26.230291+00:00"
+    },
+    {
+      "id": "26bef719-e22d-4b48-9284-e9eb74230a51",
+      "idempotency_key": "retail-guardian-skincare-aug2026-family-v1",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.guardian.com.vn/khuyen-mai-8/skincare-thang-8.html",
+      "candidate": {
+        "brand": "Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "Guardian",
+        "economics": {
+          "discount_up_to_pct": 50
+        },
+        "source_url": "https://www.guardian.com.vn/khuyen-mai-8/skincare-thang-8.html",
+        "start_date": "2026-08-01",
+        "eligibility": "General online shoppers; selected products only",
+        "evidence_url": "https://www.guardian.com.vn/khuyen-mai-8/skincare-thang-8.html",
+        "benefit_summary": "Guardian Skincare Tháng 8 campaign family with visible direct markdowns across eligible skincare; examples include Dear Klairs toner -50%, Anessa sunscreen -32%, Cocoon face polish -31%, Sunplay Super Block -28%",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "7f9b9f60-1a25-4548-93c0-1bcda463a922",
+      "created_at": "2026-08-16T09:34:38.644796+00:00",
+      "committed_at": "2026-08-16T09:39:46.987414+00:00"
+    },
+    {
+      "id": "7f71ca4a-c670-46d7-a144-fcc2286e918b",
+      "idempotency_key": "retail-bodyshop-green-summer-2026-family-v1",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://vincom.com.vn/vincom-center-landmark-81/uu-dai?page=8",
+      "candidate": {
+        "brand": "The Body Shop",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-09",
+        "merchant": "The Body Shop",
+        "economics": {
+          "buy_qty": 3,
+          "gift_qty": 1,
+          "gift_type": "Travel Size",
+          "member_discount_pct": 12
+        },
+        "source_url": "https://vincom.com.vn/vincom-center-landmark-81/uu-dai?page=8",
+        "start_date": "2026-07-23",
+        "eligibility": "The Body Shop customers at participating Vincom stores; 12% offer is for Love Your Body Club members",
+        "evidence_url": "https://vincom.com.vn/vincom-center-landmark-81/uu-dai?page=8",
+        "benefit_summary": "Green Summer campaign at Vincom: buy 3 eligible items and receive 1 Travel Size gift; Love Your Body Club membership campaign also advertises 12% member offer",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "7f9b9f60-1a25-4548-93c0-1bcda463a922",
+      "created_at": "2026-08-16T09:34:38.644796+00:00",
+      "committed_at": "2026-08-16T09:39:46.987414+00:00"
+    },
+    {
+      "id": "df7a1fd7-5aeb-461a-93cf-3c209c419b85",
+      "idempotency_key": "retail-medicare-aug2026-value-campaign-v1",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://vincom.com.vn/vincom-plaza-hue/uu-dai",
+      "candidate": {
+        "brand": "MEDiCARE",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-26",
+        "merchant": "MEDiCARE",
+        "economics": {
+          "buy_2_discount_pct": 50,
+          "selected_sunscreen_discount_up_to_pct": 30
+        },
+        "source_url": "https://vincom.com.vn/vincom-plaza-hue/uu-dai",
+        "start_date": "2026-07-30",
+        "eligibility": "General customers; some sub-offers are member-exclusive",
+        "evidence_url": "https://vincom.com.vn/vincom-plaza-hue/uu-dai",
+        "benefit_summary": "30 Jul-26 Aug 2026 health & beauty campaign: buy 2 get 50% on selected items and sunscreen deals up to 30%; member-exclusive offers also advertised",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "7f9b9f60-1a25-4548-93c0-1bcda463a922",
+      "created_at": "2026-08-16T09:34:38.644796+00:00",
+      "committed_at": "2026-08-16T09:39:46.987414+00:00"
+    },
+    {
+      "id": "4b5329c9-772e-410d-9a3a-812e9e116718",
+      "idempotency_key": "guardian:colorkey-micellar-500ml:buy2get1:20260729-20260825",
+      "source_worker": "PROMO Discovery Hub",
+      "source_url": "https://www.guardian.com.vn/nuoc-tay-trang-lam-sach-all-in-1-colorkey-micellar-cleansing-water-in-oil-all-in-1-500ml.html",
+      "candidate": {
+        "brand": "Colorkey",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-25",
+        "merchant": "Guardian Vietnam",
+        "economics": {
+          "mechanic": "BUY_2_GET_1",
+          "listed_price_vnd": 159000
+        },
+        "source_url": "https://www.guardian.com.vn/nuoc-tay-trang-lam-sach-all-in-1-colorkey-micellar-cleansing-water-in-oil-all-in-1-500ml.html",
+        "start_date": "2026-07-29",
+        "eligibility": "Thêm 3 sản phẩm cùng loại hoặc 3 sản phẩm trong danh sách áp dụng vào giỏ; số lượng có hạn.",
+        "evidence_url": "https://www.guardian.com.vn/nuoc-tay-trang-lam-sach-all-in-1-colorkey-micellar-cleansing-water-in-oil-all-in-1-500ml.html",
+        "literal_code": null,
+        "benefit_summary": "Mua 2 tặng 1; thêm 3 sản phẩm cùng loại hoặc trong danh sách vào giỏ, sản phẩm giá trị thấp nhất được miễn phí.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "2eceaec3-0aea-44b8-aaf8-9d26a1dcf1c0",
+      "created_at": "2026-08-16T10:08:18.04133+00:00",
+      "committed_at": "2026-08-16T10:16:08.97236+00:00"
+    },
+    {
+      "id": "6b77b713-3d57-4b0c-a0eb-6cb4e37438a7",
+      "idempotency_key": "guardian:ultra-protect-ml-2pc:buy2get1:20260729-20260825",
+      "source_worker": "PROMO Discovery Hub",
+      "source_url": "https://www.guardian.com.vn/bang-ve-sinh-dang-quan-mannings-guardian-chong-tran-ban-dem-ultra-protect-size-m-l-2-mieng.html",
+      "candidate": {
+        "brand": "Mannings Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-25",
+        "merchant": "Guardian Vietnam",
+        "economics": {
+          "mechanic": "BUY_2_GET_1",
+          "listed_price_vnd": 36000
+        },
+        "source_url": "https://www.guardian.com.vn/bang-ve-sinh-dang-quan-mannings-guardian-chong-tran-ban-dem-ultra-protect-size-m-l-2-mieng.html",
+        "start_date": "2026-07-29",
+        "eligibility": "Sản phẩm áp dụng tại Guardian; số lượng có hạn, kiểm tra giỏ trước thanh toán.",
+        "evidence_url": "https://www.guardian.com.vn/bang-ve-sinh-dang-quan-mannings-guardian-chong-tran-ban-dem-ultra-protect-size-m-l-2-mieng.html",
+        "literal_code": null,
+        "benefit_summary": "Mua 2 tặng 1; quà được tự động thêm vào giỏ.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "2eceaec3-0aea-44b8-aaf8-9d26a1dcf1c0",
+      "created_at": "2026-08-16T10:08:18.04133+00:00",
+      "committed_at": "2026-08-16T10:16:08.97236+00:00"
+    },
+    {
+      "id": "744fbac3-2b1b-4279-8296-51f5c2fb0fc4",
+      "idempotency_key": "guardian:loreal-elseve-200ml:buy2get1:20260729-20260825",
+      "source_worker": "PROMO Discovery Hub",
+      "source_url": "https://www.guardian.com.vn/loreal-elseve-kem-u-phuc-hoi-200ml.html",
+      "candidate": {
+        "brand": "L’Oreal Elseve",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-25",
+        "merchant": "Guardian Vietnam",
+        "economics": {
+          "mechanic": "BUY_2_GET_1",
+          "listed_price_vnd": 169000
+        },
+        "source_url": "https://www.guardian.com.vn/loreal-elseve-kem-u-phuc-hoi-200ml.html",
+        "start_date": "2026-07-29",
+        "eligibility": "Thêm 3 sản phẩm cùng loại hoặc 3 sản phẩm trong danh sách áp dụng vào giỏ; số lượng có hạn.",
+        "evidence_url": "https://www.guardian.com.vn/loreal-elseve-kem-u-phuc-hoi-200ml.html",
+        "literal_code": null,
+        "benefit_summary": "Mua 2 tặng 1; thêm 3 sản phẩm cùng loại hoặc trong danh sách vào giỏ, sản phẩm giá trị thấp nhất được miễn phí.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "2eceaec3-0aea-44b8-aaf8-9d26a1dcf1c0",
+      "created_at": "2026-08-16T10:08:18.04133+00:00",
+      "committed_at": "2026-08-16T10:16:08.97236+00:00"
+    },
+    {
+      "id": "7f38b69d-c6c5-4dc5-a716-25e088a5f360",
+      "idempotency_key": "guardian:ultra-soft-tissue:buy2get1:20260729-20260825",
+      "source_worker": "PROMO Discovery Hub",
+      "source_url": "https://www.guardian.com.vn/guardian-ultra-soft-facial-tissue-100s.html",
+      "candidate": {
+        "brand": "Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-25",
+        "merchant": "Guardian Vietnam",
+        "economics": {
+          "mechanic": "BUY_2_GET_1",
+          "listed_price_vnd": 18000
+        },
+        "source_url": "https://www.guardian.com.vn/guardian-ultra-soft-facial-tissue-100s.html",
+        "start_date": "2026-07-29",
+        "eligibility": "Sản phẩm áp dụng tại Guardian; số lượng có hạn, kiểm tra giỏ trước thanh toán.",
+        "evidence_url": "https://www.guardian.com.vn/guardian-ultra-soft-facial-tissue-100s.html",
+        "literal_code": null,
+        "benefit_summary": "Mua 2 tặng 1; quà được tự động thêm vào giỏ.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "2eceaec3-0aea-44b8-aaf8-9d26a1dcf1c0",
+      "created_at": "2026-08-16T10:08:18.04133+00:00",
+      "committed_at": "2026-08-16T10:16:08.97236+00:00"
+    },
+    {
+      "id": "c526ea52-5068-4078-8061-51bd95fc69d7",
+      "idempotency_key": "guardian:double-rich-gel-250ml:buy2get1:20260729-20260825",
+      "source_worker": "PROMO Discovery Hub",
+      "source_url": "https://www.guardian.com.vn/gel-tao-kieu-toc-double-rich-hair-gel-giu-nep-toc-suot-ngay-250ml.html",
+      "candidate": {
+        "brand": "Double Rich",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-25",
+        "merchant": "Guardian Vietnam",
+        "economics": {
+          "mechanic": "BUY_2_GET_1",
+          "listed_price_vnd": 103000
+        },
+        "source_url": "https://www.guardian.com.vn/gel-tao-kieu-toc-double-rich-hair-gel-giu-nep-toc-suot-ngay-250ml.html",
+        "start_date": "2026-07-29",
+        "eligibility": "Thêm 3 sản phẩm cùng loại hoặc 3 sản phẩm trong danh sách áp dụng vào giỏ; số lượng có hạn.",
+        "evidence_url": "https://www.guardian.com.vn/gel-tao-kieu-toc-double-rich-hair-gel-giu-nep-toc-suot-ngay-250ml.html",
+        "literal_code": null,
+        "benefit_summary": "Mua 2 tặng 1; thêm 3 sản phẩm cùng loại hoặc trong danh sách vào giỏ, sản phẩm giá trị thấp nhất được miễn phí.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "2eceaec3-0aea-44b8-aaf8-9d26a1dcf1c0",
+      "created_at": "2026-08-16T10:08:18.04133+00:00",
+      "committed_at": "2026-08-16T10:16:08.97236+00:00"
+    },
+    {
+      "id": "ae447109-4dca-4985-a418-0467084e57cb",
+      "idempotency_key": "lotte-cinema:membership:2026-benefits",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.lottecinemavn.com/LCHS/Contents/Membership/vip-member-vip-standard.aspx",
+      "candidate": {
+        "brand": "LOTTE Cinema",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "LOTTE Cinema Vietnam",
+        "economics": {
+          "mechanic": "MEMBERSHIP_REWARDS",
+          "vip_ticket_points_percent": 7,
+          "normal_ticket_points_percent": 5,
+          "vip_concession_points_percent": 8,
+          "platinum_ticket_points_percent": 10,
+          "normal_concession_points_percent": 6,
+          "platinum_concession_points_percent": 12
+        },
+        "source_url": "https://www.lottecinemavn.com/LCHS/Contents/Membership/vip-member-vip-standard.aspx",
+        "start_date": "2026-01-01",
+        "eligibility": "VIP 2026: chi tiêu năm 2025 từ 2.500.000 đến 5.999.999 VND; Platinum: từ 6.000.000 VND. Quyền lợi voucher/quà theo hạng và điều khoản LOTTE Cinema 2026.",
+        "evidence_url": "https://www.lottecinemavn.com/LCHS/Contents/Membership/vip-member-vip-standard.aspx",
+        "literal_code": null,
+        "benefit_summary": "Chương trình thành viên 2026: Normal tích 5% vé/6% bắp nước; VIP 7%/8% kèm 6 vé 2D và quà; Platinum 10%/12% kèm 14 vé 2D và quà theo hạng.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "ccf94c7c-8057-4181-9d0d-c0960b4a3770",
+      "created_at": "2026-08-16T10:34:32.305937+00:00",
+      "committed_at": "2026-08-16T10:40:49.776254+00:00"
+    },
+    {
+      "id": "b8fa026f-8b96-47a5-87c7-a43000907ce1",
+      "idempotency_key": "highlands:vpbank:free-upsize:20260522-20260831",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.highlandscoffee.com.vn/en/mien-phi-upsize-tai-highlands-coffee-khi-thanh-toan-bang-the-vpbank.html",
+      "candidate": {
+        "brand": "Highlands Coffee",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "Highlands Coffee",
+        "economics": {
+          "mechanic": "FREE_UPSIZE",
+          "discount_percent": 100
+        },
+        "source_url": "https://www.highlandscoffee.com.vn/en/mien-phi-upsize-tai-highlands-coffee-khi-thanh-toan-bang-the-vpbank.html",
+        "start_date": "2026-05-22",
+        "eligibility": "Thẻ quốc tế VPBank Visa/Mastercard/JCB/UnionPay thuộc danh sách BIN chính thức; thanh toán 100% bằng thẻ VPBank; không tách hóa đơn; không cộng ưu đãi khác; loại trừ sân bay và danh sách cửa hàng đặc biệt/franchise trên điều khoản.",
+        "evidence_url": "https://www.highlandscoffee.com.vn/en/mien-phi-upsize-tai-highlands-coffee-khi-thanh-toan-bang-the-vpbank.html",
+        "literal_code": null,
+        "benefit_summary": "Miễn phí nâng size M lên L cho đồ uống đủ điều kiện khi thanh toán 100% bằng thẻ quốc tế VPBank thuộc BIN áp dụng.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "ccf94c7c-8057-4181-9d0d-c0960b4a3770",
+      "created_at": "2026-08-16T10:34:32.305937+00:00",
+      "committed_at": "2026-08-16T10:40:49.776254+00:00"
+    },
+    {
+      "id": "e8ac8ec9-3e1f-4aac-943c-fcb75f222d9c",
+      "idempotency_key": "highlands:momo-postpaid:phin-sua-da-b1g1:20260522-20261231",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.highlandscoffee.com.vn/vn/mua-1-tang-1-phin-sua-da-khi-thanh-toan-qua-vi-tra-sau-momo.html",
+      "candidate": {
+        "brand": "Highlands Coffee",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Highlands Coffee",
+        "economics": {
+          "mechanic": "BUY_1_GET_1",
+          "free_item": "Phin Sữa Đá size S"
+        },
+        "source_url": "https://www.highlandscoffee.com.vn/vn/mua-1-tang-1-phin-sua-da-khi-thanh-toan-qua-vi-tra-sau-momo.html",
+        "start_date": "2026-05-22",
+        "eligibility": "Tài khoản MoMo đã định danh và liên kết ngân hàng; thanh toán Ví Trả Sau MoMo tại Highlands; 1 lần/2 tuần, tối đa 2 lần/tháng/tài khoản và thiết bị; không cộng ưu đãi khác; áp dụng Thứ 6, Thứ 7, Chủ nhật; loại trừ danh sách cửa hàng trên điều khoản.",
+        "evidence_url": "https://www.highlandscoffee.com.vn/vn/mua-1-tang-1-phin-sua-da-khi-thanh-toan-qua-vi-tra-sau-momo.html",
+        "literal_code": null,
+        "literal_codes": [
+          "VTSCF29",
+          "VTSCF35"
+        ],
+        "benefit_summary": "Mua 1 Phin Sữa Đá size L tặng 1 Phin Sữa Đá size S khi thanh toán Ví Trả Sau MoMo vào Thứ 6–Chủ nhật; mã chính thức VTSCF29 hoặc VTSCF35 tùy mức giá cửa hàng.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "ccf94c7c-8057-4181-9d0d-c0960b4a3770",
+      "created_at": "2026-08-16T10:34:32.305937+00:00",
+      "committed_at": "2026-08-16T10:40:49.776254+00:00"
+    },
+    {
+      "id": "6e6f08fa-81c4-45cb-a44e-74cc92173a13",
+      "idempotency_key": "retail:SRCV1-AE1CD734555B:cellphones-apple-crosssell-pmh-2026",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://cellphones.com.vn/sforum/khuyen-mai-combo-san-pham-apple",
+      "candidate": {
+        "brand": "CellphoneS",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": null,
+        "merchant": "CellphoneS",
+        "economics": {
+          "mechanic": "PURCHASE_VOUCHER",
+          "voucher_max_vnd": 1500000,
+          "voucher_min_vnd": 300000
+        },
+        "source_id": "SRCV1-AE1CD734555B",
+        "source_url": "https://cellphones.com.vn/sforum/khuyen-mai-combo-san-pham-apple",
+        "start_date": "2026-05-28",
+        "eligibility": "Mua iPhone mới chính hãng tại CellphoneS; PMH dùng cho nhóm Apple áp dụng; không áp dụng cùng chương trình khuyến mãi khác và ưu đãi HSSV theo thể lệ.",
+        "evidence_url": "https://cellphones.com.vn/sforum/khuyen-mai-combo-san-pham-apple",
+        "literal_code": null,
+        "benefit_summary": "Mua iPhone mới chính hãng tại CellphoneS nhận phiếu mua hàng Apple: 300.000đ–1.500.000đ tùy nhóm sản phẩm mua kèm, gồm Apple Watch, iPad, Mac và AirPods.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "0b97ec3e-326c-4c03-b0e7-376a359cfff6",
+      "created_at": "2026-08-16T11:36:11.196472+00:00",
+      "committed_at": "2026-08-16T12:18:32.094117+00:00"
+    },
+    {
+      "id": "ad6e7b8d-2589-4aac-8de4-25822cf0cf22",
+      "idempotency_key": "retail:SRCV1-AE1CD734555B:cellphones-sedu-used-trial-2026",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://cellphones.com.vn/dung-thu-iphone-cu-07-ngay",
+      "candidate": {
+        "brand": "CellphoneS",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "CellphoneS",
+        "economics": {
+          "mechanic": "FREE_7_DAY_TRIAL_RETURN",
+          "trial_days": 7
+        },
+        "source_id": "SRCV1-AE1CD734555B",
+        "source_url": "https://cellphones.com.vn/dung-thu-iphone-cu-07-ngay",
+        "start_date": "2026-07-01",
+        "eligibility": "HSSV, giáo viên hoặc giảng viên đã đăng ký thành công S-Edu; áp dụng toàn hệ thống CellphoneS và online; chọn kèm ưu đãi HSSV hoặc trả góp theo thể lệ.",
+        "evidence_url": "https://cellphones.com.vn/dung-thu-iphone-cu-07-ngay",
+        "literal_code": null,
+        "benefit_summary": "Thành viên S-Edu mua iPhone/iPad/MacBook/Laptop cũ được miễn phí dùng thử 7 ngày và có thể trả lại không mất phí trong thời gian dùng thử.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "0b97ec3e-326c-4c03-b0e7-376a359cfff6",
+      "created_at": "2026-08-16T11:36:11.196472+00:00",
+      "committed_at": "2026-08-16T12:18:32.094117+00:00"
+    },
+    {
+      "id": "b5aa153d-dc37-4036-805b-5ebad65cd41b",
+      "idempotency_key": "retail:SRCV1-AE1CD734555B:cellphones-back-to-school-gifts-2026",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://cellphones.com.vn/sforum/khuyen-mai-back-to-school-2026-cellphones",
+      "candidate": {
+        "brand": "CellphoneS",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-10-31",
+        "merchant": "CellphoneS",
+        "economics": {
+          "mechanic": "SPEND_TIER_GIFT",
+          "tier_1_min_vnd": 8000000,
+          "tier_2_min_vnd": 12000000,
+          "tier_3_min_vnd": 20000000
+        },
+        "source_id": "SRCV1-AE1CD734555B",
+        "source_url": "https://cellphones.com.vn/sforum/khuyen-mai-back-to-school-2026-cellphones",
+        "start_date": "2026-06-01",
+        "eligibility": "Thành viên S-Student/S-Teacher; áp dụng cửa hàng, website và app CellphoneS; không áp dụng đơn bán sỉ; quà theo giá trị đơn và số lượng chương trình.",
+        "evidence_url": "https://cellphones.com.vn/sforum/khuyen-mai-back-to-school-2026-cellphones",
+        "literal_code": null,
+        "benefit_summary": "S-Edu Back to School: đơn từ 8 triệu tặng túi phụ kiện; từ 12 triệu tặng quạt cầm tay; từ 20 triệu tặng bàn chải điện; có thể áp dụng cùng code và ưu đãi thanh toán theo thể lệ.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "0b97ec3e-326c-4c03-b0e7-376a359cfff6",
+      "created_at": "2026-08-16T11:36:11.196472+00:00",
+      "committed_at": "2026-08-16T12:18:32.094117+00:00"
+    },
+    {
+      "id": "8cd700a3-cd46-4b17-a424-0f4f61c9f27d",
+      "idempotency_key": "retail:SRCV1-B083BD5AE51C:lotte-flex-first-payment-2026",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://lottemallwestlakehanoi.vn/en/promotion/1150",
+      "candidate": {
+        "brand": "Lotte Mall West Lake Hanoi",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Lotte Mall West Lake Hanoi",
+        "economics": {
+          "mechanic": "FIRST_PAYMENT_DISCOUNT_PLUS_POINTS",
+          "max_discount_vnd": 50000,
+          "points_multiplier": 2
+        },
+        "source_id": "SRCV1-B083BD5AE51C",
+        "source_url": "https://lottemallwestlakehanoi.vn/en/promotion/1150",
+        "start_date": "2025-07-11",
+        "eligibility": "Khách hàng mới LOTTE FLEX; thanh toán bằng LOTTE FLEX tại Lotte Mall West Lake Hanoi. LOTTE FLEX là hình thức mua trước trả sau trên app LOTTE C&F hợp tác VPBank.",
+        "evidence_url": "https://lottemallwestlakehanoi.vn/en/promotion/1150",
+        "literal_code": null,
+        "benefit_summary": "LOTTE FLEX: khách hàng mới được giảm tối đa 50.000đ cho lần thanh toán LOTTE FLEX đầu tiên và nhận gấp đôi LS.POINT khi dùng LOTTE FLEX tại Lotte Mall West Lake Hanoi.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "b47df371-6446-48fd-87d4-548fb2db4205",
+      "created_at": "2026-08-16T12:36:31.032722+00:00",
+      "committed_at": "2026-08-16T15:20:54.418372+00:00"
+    },
+    {
+      "id": "d4d91122-6bec-4b9e-8e86-6d84cfd7f4e1",
+      "idempotency_key": "retail:SRCV1-AE1CD734555B:cellphones-hsbc-b2s-2026",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://cellphones.com.vn/uu-dai-doi-tac/hsbc-b2s",
+      "candidate": {
+        "brand": "CellphoneS",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "CellphoneS",
+        "economics": {
+          "mechanic": "DIRECT_DISCOUNT",
+          "tier1_discount_vnd": 500000,
+          "tier2_discount_vnd": 1000000,
+          "tier1_min_spend_vnd": 12000000,
+          "tier2_min_spend_vnd": 30000000
+        },
+        "source_id": "SRCV1-AE1CD734555B",
+        "source_url": "https://cellphones.com.vn/uu-dai-doi-tac/hsbc-b2s",
+        "start_date": "2026-06-01",
+        "eligibility": "HSBC Premier, TravelOne, Live+, Cash Back hoặc LiveFree; BIN 546022, 437841, 445094, 445093; thanh toán 100% bằng thẻ HSBC; khách hàng cá nhân; mỗi chủ thẻ tối đa 1 lần Ưu đãi 1 hoặc 1 lần Ưu đãi 2 trong toàn chương trình; không áp dụng cùng ưu đãi ví/ngân hàng khác.",
+        "evidence_url": "https://cellphones.com.vn/uu-dai-doi-tac/hsbc-b2s",
+        "literal_code": null,
+        "benefit_summary": "Chủ thẻ tín dụng HSBC hợp lệ mua laptop, tablet, MacBook, PC hoặc màn hình tại CellphoneS được giảm trực tiếp 500.000đ cho đơn từ 12 triệu hoặc 1.000.000đ cho đơn từ 30 triệu; áp dụng theo quota từng giai đoạn, có thể kèm trả góp 0%.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "b47df371-6446-48fd-87d4-548fb2db4205",
+      "created_at": "2026-08-16T13:34:57.81149+00:00",
+      "committed_at": "2026-08-16T15:20:54.418372+00:00"
+    },
+    {
+      "id": "22088083-907d-4892-b216-d3690ffda575",
+      "idempotency_key": "banks-acb-open-card-urbox-jun-aug-2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://acb.com.vn/acbwebsite/files/UU%20DAI%20MO%20THE%20TIN%20DUNG%20QUOC%20TE%20ACB%20.pdf",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "ACB credit cards / UrBox",
+        "economics": {
+          "other_spend_vnd": 3000000,
+          "other_voucher_vnd": 300000,
+          "spend_window_days": 30,
+          "signature_spend_vnd": 8000000,
+          "signature_voucher_vnd": 1000000
+        },
+        "source_id": "SRCV1-CF7FC4072DBB",
+        "start_date": "2026-06-05",
+        "eligibility": "New eligible ACB unsecured primary credit card; card type and registration rules apply; one reward card per customer.",
+        "evidence_url": "https://acb.com.vn/acbwebsite/files/UU%20DAI%20MO%20THE%20TIN%20DUNG%20QUOC%20TE%20ACB%20.pdf",
+        "literal_code": null,
+        "benefit_summary": "New eligible ACB unsecured credit-card customers opening 05/06-31/08/2026 can earn a VND 1,000,000 UrBox e-voucher on Privilege Visa Signature/Visa Signature after VND 8,000,000 eligible spend in 30 days, or VND 300,000 on Visa Platinum/JCB Gold/Visa Gold after VND 3,000,000 eligible spend in 30 days.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "b47df371-6446-48fd-87d4-548fb2db4205",
+      "created_at": "2026-08-16T14:30:47.669604+00:00",
+      "committed_at": "2026-08-16T15:20:54.418372+00:00"
+    },
+    {
+      "id": "c880243a-5dea-4fa5-b6c1-c52ad18c6286",
+      "idempotency_key": "banks-acb-jcb-uniqlo-2026-2027",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/uniqlo-x-acb-jcb-hoan-den-600000-vnd-khi-thanh-toan-voi-the-acb-jcb",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-04-06",
+        "merchant": "UNIQLO Vietnam",
+        "economics": {
+          "monthly_cashback_vnd": 300000,
+          "special_cashback_vnd": 600000,
+          "monthly_min_spend_vnd": 2000000,
+          "special_min_spend_vnd": 3000000
+        },
+        "source_id": "SRCV1-CF7FC4072DBB",
+        "eligibility": "ACB JCB cardholder; one cashback per card per promotional period; limited budget.",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/uniqlo-x-acb-jcb-hoan-den-600000-vnd-khi-thanh-toan-voi-the-acb-jcb",
+        "literal_code": null,
+        "benefit_summary": "ACB JCB: monthly cashback VND 300,000 on online UNIQLO bills from VND 2,000,000 on listed campaign dates; special-event cashback VND 600,000 on bills from VND 3,000,000 online or in store on listed event periods.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "b47df371-6446-48fd-87d4-548fb2db4205",
+      "created_at": "2026-08-16T14:30:47.669604+00:00",
+      "committed_at": "2026-08-16T15:20:54.418372+00:00"
+    },
+    {
+      "id": "fa290cff-2d8d-4331-bff9-4aa916ce8aa1",
+      "idempotency_key": "banks-acb-visa-shopee-2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/shopee-x-acb-visa-giam-den-300000-vnd-khi-mua-hang",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "Shopee",
+        "economics": {
+          "friday_min_vnd": 800000,
+          "month_end_min_vnd": 1800000,
+          "double_date_min_vnd": 1500000,
+          "friday_discount_vnd": 50000,
+          "month_end_discount_vnd": 300000,
+          "double_date_discount_vnd": 100000
+        },
+        "source_id": "SRCV1-CF7FC4072DBB",
+        "eligibility": "ACB Visa Infinite, Privilege Visa Signature, Visa Signature, Visa Platinum, Visa Gold or Lotusmile Pay; one use/card/month/program; quotas apply.",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/shopee-x-acb-visa-giam-den-300000-vnd-khi-mua-hang",
+        "literal_code": null,
+        "benefit_summary": "Eligible ACB Visa cards: VND 100,000 off from VND 1.5m on double dates, VND 50,000 off from VND 800k each Friday, and VND 300,000 off from VND 1.8m on days 28-30 monthly.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "b47df371-6446-48fd-87d4-548fb2db4205",
+      "created_at": "2026-08-16T14:30:47.669604+00:00",
+      "committed_at": "2026-08-16T15:20:54.418372+00:00"
+    },
+    {
+      "id": "fc808324-d1b8-4892-b5e6-d183dbf59c35",
+      "idempotency_key": "banks-acb-visa-tripcom-flights-2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/tripcom-x-acb-visa-giam-den-1000000-vnd-khi-mua-ve-may-bay-tai-tripcom",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-10-30",
+        "merchant": "Trip.com",
+        "economics": {
+          "daily_flight_cap_vnd": 500000,
+          "max_flight_discount_vnd": 1000000,
+          "daily_hotel_discount_pct": 7,
+          "daily_flight_discount_pct": 5
+        },
+        "source_id": "SRCV1-CF7FC4072DBB",
+        "eligibility": "Registered Trip.com member paying in VND with eligible ACB Visa on Vietnamese Trip.com app; promotion-code quota/use rules apply.",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/tripcom-x-acb-visa-giam-den-1000000-vnd-khi-mua-ve-may-bay-tai-tripcom",
+        "literal_code": null,
+        "benefit_summary": "ACB Visa Trip.com flight campaign through 30/10/2026: international-flight discounts up to VND 1,000,000 on monthly 26-28 events, flash-sale tiers, plus daily 5% flight discount capped VND 500,000 and 7% hotel discount.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "b47df371-6446-48fd-87d4-548fb2db4205",
+      "created_at": "2026-08-16T14:30:47.669604+00:00",
+      "committed_at": "2026-08-16T15:20:54.418372+00:00"
+    },
+    {
+      "id": "fd880d55-6396-4c22-b440-8ccc2b6a4e41",
+      "idempotency_key": "banks-sacombank-nationalday-2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.sacombank.com.vn/trang-chu/khuyen-mai/khcn/chuong-trinh-uu-dai/quoc-khanh-rang-ngoi-sang-bung-uu-dai.html",
+      "candidate": {
+        "brand": "Sacombank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-07",
+        "merchant": "Sacombank card / Sacombank Pay",
+        "economics": {
+          "top_cashback_pct": 29,
+          "top_min_spend_vnd": 8000000,
+          "first_cashback_vnd": 290000,
+          "first_min_spend_vnd": 1000000,
+          "top_cashback_cap_vnd": 2900000,
+          "pay_transport_discount_vnd": 80000,
+          "pay_online_shopping_discount_vnd": 100000,
+          "pay_flight_hotel_other_discount_vnd": 200000,
+          "pay_flight_hotel_friday_discount_vnd": 290000
+        },
+        "source_id": "SRCV1-55FED73DCC18",
+        "start_date": "2026-08-04",
+        "eligibility": "Individual Sacombank credit-card customers and/or Sacombank Pay users according to each sub-program; ranking/first-come quotas apply.",
+        "evidence_url": "https://www.sacombank.com.vn/trang-chu/khuyen-mai/khcn/chuong-trinh-uu-dai/quoc-khanh-rang-ngoi-sang-bung-uu-dai.html",
+        "literal_code": null,
+        "benefit_summary": "National Day campaign: credit-card cashback includes 29% capped VND 2.9m for top 290 cardholders with at least VND 8m cumulative spend on 02/09, and VND 290k for first 2,900 cardholders spending at least VND 1m during 01-07/09; Sacombank Pay also discounts transport, flight/hotel and online-shopping bookings through 07/09.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "b47df371-6446-48fd-87d4-548fb2db4205",
+      "created_at": "2026-08-16T14:30:47.669604+00:00",
+      "committed_at": "2026-08-16T15:20:54.418372+00:00"
+    },
+    {
+      "id": "9ed23742-139c-4f63-9f10-c3a5911998d2",
+      "idempotency_key": "retail:SRCV1-B083BD5AE51C:lotte-summer-retreat-lspoint-2026",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://lottemallwestlakehanoi.vn/en/promotion/1905",
+      "candidate": {
+        "brand": "Lotte Mall West Lake Hanoi",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-16",
+        "merchant": "Lotte Mall West Lake Hanoi",
+        "economics": {
+          "mechanic": "SPEND_TIER_GIFT_PLUS_POINTS",
+          "points_tier1": 100000,
+          "points_tier2": 200000,
+          "points_tier3": 300000,
+          "points_tier4": 500000,
+          "gift_tier1_min_spend_vnd": 3000000,
+          "gift_tier2_min_spend_vnd": 5000000,
+          "points_tier1_min_spend_vnd": 2000000,
+          "points_tier2_min_spend_vnd": 4000000,
+          "points_tier3_min_spend_vnd": 6000000,
+          "points_tier4_min_spend_vnd": 10000000
+        },
+        "source_id": "SRCV1-B083BD5AE51C",
+        "source_url": "https://lottemallwestlakehanoi.vn/en/promotion/1905",
+        "start_date": "2026-07-17",
+        "eligibility": "Hội viên LS.POINT; đổi tại Customer Service Lounge tầng 2; hóa đơn đổi trong ngày; không áp dụng hóa đơn đồ uống có cồn; tối đa 1 quà/ngày theo mức chi tiêu tương ứng.",
+        "evidence_url": "https://lottemallwestlakehanoi.vn/en/promotion/1905",
+        "literal_code": null,
+        "benefit_summary": "Hội viên LS.POINT mua sắm tại Lotte Mall West Lake Hanoi nhận quà theo hóa đơn: từ 3 triệu nhận túi Tote, từ 5 triệu nhận bình giữ nhiệt; riêng Thứ 6–Chủ Nhật, hóa đơn từ 2/4/6/10 triệu nhận lần lượt 100.000/200.000/300.000/500.000 điểm LS.POINT.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "b47df371-6446-48fd-87d4-548fb2db4205",
+      "created_at": "2026-08-16T14:36:11.646608+00:00",
+      "committed_at": "2026-08-16T15:20:54.418372+00:00"
+    },
+    {
+      "id": "739ed7b0-c221-4cb5-9d50-b38beb24bc0b",
+      "idempotency_key": "banks-vpbank-debit-shopee-2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/vui-he-gap-doi-uu-dai-gap-boi-cung-the-ghi-no-vpbank",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Shopee",
+        "economics": {
+          "other_debit_daily_discount_vnd": 50000,
+          "other_debit_daily_min_spend_vnd": 500000,
+          "visa_shopee_double_discount_vnd": 150000,
+          "visa_shopee_monday_discount_vnd": 50000,
+          "other_debit_special_discount_vnd": 200000,
+          "visa_shopee_double_min_spend_vnd": 900000,
+          "visa_shopee_monday_min_spend_vnd": 500000,
+          "visa_shopee_special_discount_vnd": 100000,
+          "other_debit_special_min_spend_vnd": 2000000,
+          "visa_shopee_special_min_spend_vnd": 700000
+        },
+        "source_id": "SRCV1-8CFA55ABC23D",
+        "start_date": "2026-05-01",
+        "eligibility": "Eligible VPBank international debit card; select credit/debit card payment at Shopee checkout; per-card/month and campaign quota limits apply; special dates follow official terms.",
+        "evidence_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/vui-he-gap-doi-uu-dai-gap-boi-cung-the-ghi-no-vpbank",
+        "literal_code": null,
+        "benefit_summary": "VPBank international debit cards on Shopee: Visa Shopee card gets 50,000 VND off orders from 500,000 VND every Monday (2 uses/card/month), special-day tiers including 100,000 off from 700,000 and 150,000 off from 900,000; other eligible VPBank debit cards get 50,000 VND off from 500,000 daily except special days and 200,000 VND off from 2,000,000 on listed double dates. Discount auto-applies at checkout for eligible card; no public code required.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "25593419-9cbf-4863-85fc-ee5b1b30b171",
+      "created_at": "2026-08-16T15:30:02.660024+00:00",
+      "committed_at": "2026-08-16T17:19:13.767475+00:00"
+    },
+    {
+      "id": "178187e3-cf1f-40d8-983f-385b81768d2f",
+      "idempotency_key": "banks-vpbank-gameon-lynkid-2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/other/nap-game-don-xuan-nhan-doi-loc-thuong",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "VPBank GameON Mastercard / LynkiD",
+        "economics": {
+          "min_spend_vnd": 1000000,
+          "voucher_lynkid_points": 100000
+        },
+        "source_id": "SRCV1-8CFA55ABC23D",
+        "start_date": "2026-06-16",
+        "eligibility": "Khách hàng cá nhân dùng thẻ tín dụng VPBank GameON Mastercard; điều kiện ngân sách và thể lệ chương trình áp dụng.",
+        "evidence_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/other/nap-game-don-xuan-nhan-doi-loc-thuong",
+        "literal_code": null,
+        "benefit_summary": "Tặng voucher 100.000 điểm LynkiD khi chi tiêu từ 1.000.000 VND bằng thẻ tín dụng VPBank GameON Mastercard trong chu kỳ xét ưu đãi từ ngày 15 tháng T đến ngày 14 tháng T+1; áp dụng đến khi hết ngân sách nếu sớm hơn.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "25593419-9cbf-4863-85fc-ee5b1b30b171",
+      "created_at": "2026-08-16T16:31:05.531285+00:00",
+      "committed_at": "2026-08-16T17:19:13.767475+00:00"
+    },
+    {
+      "id": "3ad762cc-0acd-4c6f-a3fd-466729672008",
+      "idempotency_key": "banks-vpbank-regal-edu-2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/other/he-thong-anh-ngu-regal-edu",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Regal Edu",
+        "economics": {
+          "discount_pct": 40,
+          "bonus_months_16_24": 1,
+          "bonus_months_32_plus": 2
+        },
+        "source_id": "SRCV1-8CFA55ABC23D",
+        "start_date": "2026-01-01",
+        "eligibility": "Chủ thẻ VPBank tại hệ thống Regal Edu; không áp dụng đồng thời chương trình khuyến mãi khác và các ngày lễ/Tết theo điều kiện chính thức.",
+        "evidence_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/other/he-thong-anh-ngu-regal-edu",
+        "literal_code": null,
+        "benefit_summary": "Chủ thẻ VPBank được giảm 40% khóa học tại Regal Edu; tặng thêm 1 tháng học bổng khi đăng ký khóa 16 hoặc 24 tháng và 2 tháng khi đăng ký từ 32 tháng trở lên.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "25593419-9cbf-4863-85fc-ee5b1b30b171",
+      "created_at": "2026-08-16T16:31:05.531285+00:00",
+      "committed_at": "2026-08-16T17:19:13.767475+00:00"
+    },
+    {
+      "id": "f386dc14-7cbe-4d6d-9255-2632e94b9d0c",
+      "idempotency_key": "banks-vpbank-sport-combo-2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/other-promotion-category/sport-combo-2026",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "VPBank Sport Combo / LynkiD",
+        "economics": {
+          "card_earn_pct_max": 8,
+          "headline_value_vnd": 15000000,
+          "card_points_cap_year": 8400000,
+          "first_neo_health_points": 50000
+        },
+        "source_id": "SRCV1-8CFA55ABC23D",
+        "start_date": "2026-01-19",
+        "eligibility": "Khách hàng cá nhân kích hoạt gói VPBank Sport Combo 2026 và đáp ứng điều kiện NEO Health/thẻ VPBank Flex Mastercard theo từng hạng mục.",
+        "evidence_url": "https://www.vpbank.com.vn/uu-dai/retail/other-promotion-category/sport-combo-2026",
+        "literal_code": null,
+        "benefit_summary": "Sport Combo 2026 có tổng giá trị ưu đãi tới 15 triệu đồng: 50.000 điểm LynkiD khi lần đầu tích hợp NEO Health và phát sinh thành tích; thưởng theo hoạt động/mốc tập luyện; tích đến 8% tối đa 8.400.000 điểm LynkiD/năm khi chi tiêu bằng VPBank Flex Mastercard.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "25593419-9cbf-4863-85fc-ee5b1b30b171",
+      "created_at": "2026-08-16T16:31:05.531285+00:00",
+      "committed_at": "2026-08-16T17:19:13.767475+00:00"
+    },
+    {
+      "id": "fe8838fc-3b25-41da-ac61-05ccdb164901",
+      "idempotency_key": "retail:SRCV1-AE61498B63E1:phuclong-combo-he-89k-2026",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://phuclong.com.vn/khuyen-mai/combo-he-dam-vi---tiep-suc-vi-vu-20260611020636",
+      "candidate": {
+        "brand": "Phúc Long",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": null,
+        "merchant": "Phúc Long",
+        "economics": {
+          "mechanic": "FIXED_PRICE_COMBO",
+          "combo_price_vnd": 89000
+        },
+        "source_id": "SRCV1-AE61498B63E1",
+        "source_url": "https://phuclong.com.vn/khuyen-mai/combo-he-dam-vi---tiep-suc-vi-vu-20260611020636",
+        "start_date": "2026-06-10",
+        "eligibility": "Khách mua combo tại Phúc Long; món bánh áp dụng theo danh sách chi tiết của chương trình.",
+        "evidence_url": "https://phuclong.com.vn/khuyen-mai/combo-he-dam-vi---tiep-suc-vi-vu-20260611020636",
+        "literal_code": null,
+        "benefit_summary": "Combo hè 89.000đ gồm 1 món nước trong nhóm Trà Lài Đác Thơm/Hồng Trà Sữa/Trà Nhãn Sen và 1 món bánh áp dụng (Panna Cotta Chanh Dây, Tiramisu hoặc Red Velvet theo danh sách chương trình).",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "25593419-9cbf-4863-85fc-ee5b1b30b171",
+      "created_at": "2026-08-16T16:35:48.829426+00:00",
+      "committed_at": "2026-08-16T17:19:13.767475+00:00"
+    },
+    {
+      "id": "ff525ad6-f3c6-4ccd-80c4-fafa12ba72e8",
+      "idempotency_key": "retail:SRCV1-AE61498B63E1:phuclong-midautumn-corporate-26pct-2026",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://phuclong.com.vn/khuyen-mai/vong-nguyet-thuong-danh-tra---dan-tinh-hoa-gan-ket-20260713023153",
+      "candidate": {
+        "brand": "Phúc Long",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": null,
+        "merchant": "Phúc Long",
+        "economics": {
+          "mechanic": "BULK_PURCHASE_DISCOUNT",
+          "min_quantity": 5,
+          "max_discount_percent": 26
+        },
+        "source_id": "SRCV1-AE61498B63E1",
+        "source_url": "https://phuclong.com.vn/khuyen-mai/vong-nguyet-thuong-danh-tra---dan-tinh-hoa-gan-ket-20260713023153",
+        "start_date": "2026-08-07",
+        "eligibility": "Khách hàng doanh nghiệp đặt mua từ 5 hộp bánh Trung Thu Phúc Long 2026 trở lên.",
+        "evidence_url": "https://phuclong.com.vn/khuyen-mai/vong-nguyet-thuong-danh-tra---dan-tinh-hoa-gan-ket-20260713023153",
+        "literal_code": null,
+        "benefit_summary": "Khách hàng doanh nghiệp đặt từ 5 hộp bánh Trung Thu Phúc Long 2026 được chiết khấu lên đến 26%; hộp bánh mở bán toàn hệ thống từ 07/08/2026.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "25593419-9cbf-4863-85fc-ee5b1b30b171",
+      "created_at": "2026-08-16T16:35:48.829426+00:00",
+      "committed_at": "2026-08-16T17:19:13.767475+00:00"
+    },
+    {
+      "id": "20505f6f-eb93-4a36-bca6-21910ed9792f",
+      "idempotency_key": "banks:grab:vpbfood:2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.grab.com/vn/blog/uu-dai-the-vpbank/",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-11-27",
+        "merchant": "GrabFood",
+        "economics": {
+          "discount_vnd": 25000,
+          "min_spend_vnd": 100000
+        },
+        "source_id": "SRCV1-62592728372E",
+        "start_date": "2026-06-01",
+        "eligibility": "Thanh toán Grab bằng thẻ VPBank; 1 mã/người dùng/tháng; áp dụng trên phiên bản ứng dụng Grab mới nhất.",
+        "evidence_url": "https://www.grab.com/vn/blog/uu-dai-the-vpbank/",
+        "literal_code": "VPBFOOD",
+        "benefit_summary": "Giảm 25.000 VND cho đơn GrabFood từ 100.000 VND khi thanh toán bằng thẻ VPBank.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "462a148f-36e9-42fa-a620-978f70a14ffa",
+      "created_at": "2026-08-16T17:43:01.792136+00:00",
+      "committed_at": "2026-08-16T18:08:38.748904+00:00"
+    },
+    {
+      "id": "38b7d8fd-bd92-4ade-90e3-872ea44aace2",
+      "idempotency_key": "banks:grab:vikkicar30:2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.grab.com/vn/en/blog/uu-dai-the-vikki-mastercard/",
+      "candidate": {
+        "brand": "Vikki Mastercard",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-27",
+        "merchant": "GrabCar",
+        "economics": {
+          "discount_vnd": 30000,
+          "min_spend_vnd": 60000
+        },
+        "source_id": "SRCV1-62592728372E",
+        "start_date": "2026-05-27",
+        "eligibility": "Thanh toán dịch vụ Grab bằng thẻ Vikki Mastercard; 1 mã/người dùng/ngày; áp dụng trên phiên bản ứng dụng Grab mới nhất.",
+        "evidence_url": "https://www.grab.com/vn/en/blog/uu-dai-the-vikki-mastercard/",
+        "literal_code": "VIKKICAR30",
+        "benefit_summary": "Giảm 30.000 VND cho chuyến GrabCar từ 60.000 VND khi thanh toán bằng thẻ Vikki Mastercard.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "462a148f-36e9-42fa-a620-978f70a14ffa",
+      "created_at": "2026-08-16T17:43:01.792136+00:00",
+      "committed_at": "2026-08-16T18:08:38.748904+00:00"
+    },
+    {
+      "id": "4e19a1df-3488-4439-9372-e1d16bc24847",
+      "idempotency_key": "banks:grab:vikkifood30:2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.grab.com/vn/en/blog/uu-dai-the-vikki-mastercard/",
+      "candidate": {
+        "brand": "Vikki Mastercard",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-27",
+        "merchant": "GrabFood",
+        "economics": {
+          "discount_vnd": 30000,
+          "min_spend_vnd": 80000
+        },
+        "source_id": "SRCV1-62592728372E",
+        "start_date": "2026-05-27",
+        "eligibility": "Thanh toán dịch vụ Grab bằng thẻ Vikki Mastercard; 1 mã/người dùng/ngày; áp dụng trên phiên bản ứng dụng Grab mới nhất.",
+        "evidence_url": "https://www.grab.com/vn/en/blog/uu-dai-the-vikki-mastercard/",
+        "literal_code": "VIKKIFOOD30",
+        "benefit_summary": "Giảm 30.000 VND cho đơn GrabFood từ 80.000 VND khi thanh toán bằng thẻ Vikki Mastercard.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "462a148f-36e9-42fa-a620-978f70a14ffa",
+      "created_at": "2026-08-16T17:43:01.792136+00:00",
+      "committed_at": "2026-08-16T18:08:38.748904+00:00"
+    },
+    {
+      "id": "4fae7cd6-4c55-4c7e-a1dd-b94522cac566",
+      "idempotency_key": "banks:grab:vikkibike15:2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.grab.com/vn/en/blog/uu-dai-the-vikki-mastercard/",
+      "candidate": {
+        "brand": "Vikki Mastercard",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-27",
+        "merchant": "GrabBike",
+        "economics": {
+          "discount_vnd": 15000,
+          "min_spend_vnd": 30000
+        },
+        "source_id": "SRCV1-62592728372E",
+        "start_date": "2026-05-27",
+        "eligibility": "Thanh toán dịch vụ Grab bằng thẻ Vikki Mastercard; 1 mã/người dùng/ngày; áp dụng trên phiên bản ứng dụng Grab mới nhất.",
+        "evidence_url": "https://www.grab.com/vn/en/blog/uu-dai-the-vikki-mastercard/",
+        "literal_code": "VIKKIBIKE15",
+        "benefit_summary": "Giảm 15.000 VND cho chuyến GrabBike từ 30.000 VND khi thanh toán bằng thẻ Vikki Mastercard.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "462a148f-36e9-42fa-a620-978f70a14ffa",
+      "created_at": "2026-08-16T17:43:01.792136+00:00",
+      "committed_at": "2026-08-16T18:08:38.748904+00:00"
+    },
+    {
+      "id": "87eae16b-3ee1-488a-9692-bded1567c2ed",
+      "idempotency_key": "banks:grab:vikkiexpress15:2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.grab.com/vn/en/blog/uu-dai-the-vikki-mastercard/",
+      "candidate": {
+        "brand": "Vikki Mastercard",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-27",
+        "merchant": "GrabExpress",
+        "economics": {
+          "discount_vnd": 15000,
+          "min_spend_vnd": 30000
+        },
+        "source_id": "SRCV1-62592728372E",
+        "start_date": "2026-05-27",
+        "eligibility": "Thanh toán dịch vụ Grab bằng thẻ Vikki Mastercard; 1 mã/người dùng/ngày; áp dụng trên phiên bản ứng dụng Grab mới nhất.",
+        "evidence_url": "https://www.grab.com/vn/en/blog/uu-dai-the-vikki-mastercard/",
+        "literal_code": "VIKKIEXPRESS15",
+        "benefit_summary": "Giảm 15.000 VND cho đơn GrabExpress từ 30.000 VND khi thanh toán bằng thẻ Vikki Mastercard.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "462a148f-36e9-42fa-a620-978f70a14ffa",
+      "created_at": "2026-08-16T17:43:01.792136+00:00",
+      "committed_at": "2026-08-16T18:08:38.748904+00:00"
+    },
+    {
+      "id": "d0a156ca-c3db-4c1e-9add-636a5955cdb0",
+      "idempotency_key": "banks:grab:vpbtransport:2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.grab.com/vn/blog/uu-dai-the-vpbank/",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-11-27",
+        "merchant": "GrabBike / GrabCar",
+        "economics": {
+          "discount_vnd": 15000,
+          "min_spend_vnd": 50000
+        },
+        "source_id": "SRCV1-62592728372E",
+        "start_date": "2026-06-01",
+        "eligibility": "Thanh toán Grab bằng thẻ VPBank; 1 mã/người dùng/tháng; áp dụng trên phiên bản ứng dụng Grab mới nhất.",
+        "evidence_url": "https://www.grab.com/vn/blog/uu-dai-the-vpbank/",
+        "literal_code": "VPBTRANSPORT",
+        "benefit_summary": "Giảm 15.000 VND cho chuyến GrabBike hoặc GrabCar từ 50.000 VND khi thanh toán bằng thẻ VPBank.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "462a148f-36e9-42fa-a620-978f70a14ffa",
+      "created_at": "2026-08-16T17:43:01.792136+00:00",
+      "committed_at": "2026-08-16T18:08:38.748904+00:00"
+    },
+    {
+      "id": "954f100b-0635-45de-85a8-f62ed0a3c16e",
+      "idempotency_key": "banks-travel-vpbank-mastercard-expedia-mastervn7-2026",
+      "source_worker": "PROMO Turbo Scan",
+      "source_url": "https://www.vpbank.com.vn/-/media/vpbank-latest/1retail/promotion/for-cardholder/2026/thang-6/uu-dai-idc-travel/tnc-travel-idc.pdf",
+      "candidate": {
+        "card": "VPBank Mastercard",
+        "code": "MASTERVN7",
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Mastercard",
+        "end_date": "2027-01-31",
+        "evidence": "Official VPBank IDC travel T&C PDF lists Expedia Vietnam code MASTERVN7, 7% off, booking through 31/01/2027, stay through 30/06/2027",
+        "merchant": "Expedia",
+        "code_type": "LITERAL",
+        "economics": {
+          "scope": "eligible Expedia Vietnam bookings",
+          "discount_pct": 7
+        },
+        "source_url": "https://www.vpbank.com.vn/-/media/vpbank-latest/1retail/promotion/for-cardholder/2026/thang-6/uu-dai-idc-travel/tnc-travel-idc.pdf",
+        "value_filter": "actionable-value-v2",
+        "stay_end_date": "2027-06-30",
+        "booking_end_date": "2027-01-31"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f8a1b7fa-553e-45f3-84ee-d191edcbcab0",
+      "created_at": "2026-08-16T19:28:56.81178+00:00",
+      "committed_at": "2026-08-16T20:08:17.146042+00:00"
+    },
+    {
+      "id": "0d454b6f-018b-4433-bdd4-f8936e85abe7",
+      "idempotency_key": "banks:grab:shb20:2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.grab.com/vn/blog/uu-dai-the-shb/",
+      "candidate": {
+        "brand": "SHB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-11-30",
+        "merchant": "GrabBike",
+        "economics": {
+          "discount_vnd": 20000,
+          "min_spend_vnd": 40000
+        },
+        "source_id": "SRCV1-62592728372E",
+        "start_date": "2026-06-01",
+        "eligibility": "Thanh toán bằng thẻ ngân hàng SHB; 1 mã/người dùng/ngày, tối đa 5 mã/người dùng/tháng; app Grab mới nhất.",
+        "evidence_url": "https://www.grab.com/vn/blog/uu-dai-the-shb/",
+        "literal_code": "SHB20",
+        "benefit_summary": "Giảm 20.000 VND cho chuyến GrabBike từ 40.000 VND khi thanh toán bằng thẻ SHB.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f8a1b7fa-553e-45f3-84ee-d191edcbcab0",
+      "created_at": "2026-08-16T19:43:30.588158+00:00",
+      "committed_at": "2026-08-16T20:08:17.146042+00:00"
+    },
+    {
+      "id": "27e7fc69-18a7-4f4a-b509-2fb38c6e1a03",
+      "idempotency_key": "banks:grab:banmoi1k:2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.grab.com/vn/thu-grab-dat-mon-goi-xe-1k/",
+      "candidate": {
+        "brand": "Grab",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "GrabBike / GrabCar / GrabFood",
+        "economics": {
+          "fixed_price_vnd": 1000
+        },
+        "source_id": "SRCV1-62592728372E",
+        "eligibility": "Người dùng lần đầu sử dụng dịch vụ; toàn quốc ngoại trừ Hà Nội và TP.HCM; số lượng có hạn.",
+        "evidence_url": "https://www.grab.com/vn/thu-grab-dat-mon-goi-xe-1k/",
+        "literal_code": "BANMOI1K",
+        "benefit_summary": "Đồng giá 1.000 VND cho lần đầu sử dụng GrabBike, GrabCar hoặc GrabFood dành cho người dùng mới.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f8a1b7fa-553e-45f3-84ee-d191edcbcab0",
+      "created_at": "2026-08-16T19:43:30.588158+00:00",
+      "committed_at": "2026-08-16T20:08:17.146042+00:00"
+    },
+    {
+      "id": "6531769b-86f0-44c0-8585-0f9b9d0e4c5e",
+      "idempotency_key": "banks:grab:shb30:food:2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.grab.com/vn/blog/uu-dai-the-shb/",
+      "candidate": {
+        "brand": "SHB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-11-30",
+        "merchant": "GrabFood",
+        "economics": {
+          "discount_vnd": 30000,
+          "min_spend_vnd": 120000
+        },
+        "source_id": "SRCV1-62592728372E",
+        "start_date": "2026-06-01",
+        "eligibility": "Thanh toán bằng thẻ ngân hàng SHB; 1 mã/người dùng/ngày, tối đa 5 mã/người dùng/tháng; app Grab mới nhất.",
+        "evidence_url": "https://www.grab.com/vn/blog/uu-dai-the-shb/",
+        "literal_code": "SHB30",
+        "benefit_summary": "Giảm 30.000 VND cho đơn GrabFood từ 120.000 VND khi thanh toán bằng thẻ SHB.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f8a1b7fa-553e-45f3-84ee-d191edcbcab0",
+      "created_at": "2026-08-16T19:43:30.588158+00:00",
+      "committed_at": "2026-08-16T20:08:17.146042+00:00"
+    }
+  ]
+}

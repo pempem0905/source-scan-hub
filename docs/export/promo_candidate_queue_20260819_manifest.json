@@ -1,0 +1,31 @@
+{
+  "table": "promo_candidate_queue",
+  "export_date": "2026-08-19",
+  "generated_at": "2026-08-19T06:05:54.885910Z",
+  "total_rows": 240,
+  "chunk_count": 5,
+  "max_rows_per_chunk": 50,
+  "status_counts": {
+    "COMMITTED": 236,
+    "READY": 2,
+    "REJECTED": 2
+  },
+  "fields": [
+    "id",
+    "idempotency_key",
+    "source_worker",
+    "source_url",
+    "candidate",
+    "status",
+    "commit_id",
+    "created_at",
+    "committed_at"
+  ],
+  "files": [
+    "promo_candidate_queue_20260819_001.json",
+    "promo_candidate_queue_20260819_002.json",
+    "promo_candidate_queue_20260819_003.json",
+    "promo_candidate_queue_20260819_004.json",
+    "promo_candidate_queue_20260819_005.json"
+  ]
+}

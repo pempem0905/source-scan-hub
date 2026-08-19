@@ -1,0 +1,1520 @@
+{
+  "file": "promo_candidate_queue_20260819_001.json",
+  "chunk_index": 1,
+  "chunk_count": 5,
+  "row_count": 50,
+  "rows": [
+    {
+      "id": "04880d87-5dc1-4c52-b9ba-9b6fe9750172",
+      "idempotency_key": "b49-eximbank-chay-ba-xa",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://eximbank.com.vn/uu-dai-ca-nhan/giam-15-tai-nha-hang-chay-ba-xa-danh-cho-the-eximbank",
+      "candidate": {
+        "brand": "Eximbank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Nhà hàng Chay Bà Xã",
+        "end_date": "2026-08-31",
+        "merchant": "Nhà hàng Chay Bà Xã",
+        "economics": {
+          "exclusions": [
+            "holidays",
+            "lunar days"
+          ],
+          "discount_pct": 15
+        },
+        "source_url": "https://eximbank.com.vn/uu-dai-ca-nhan/giam-15-tai-nha-hang-chay-ba-xa-danh-cho-the-eximbank",
+        "eligibility": "Eximbank cardholder",
+        "evidence_url": "https://eximbank.com.vn/uu-dai-ca-nhan/giam-15-tai-nha-hang-chay-ba-xa-danh-cho-the-eximbank",
+        "benefit_summary": "15% off at Chay Bà Xã vegetarian restaurant with Eximbank card",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "1c6d7f51-ddfb-4ffc-abdf-01353d5537bb",
+      "created_at": "2026-08-15T13:54:56.974533+00:00",
+      "committed_at": "2026-08-15T13:55:04.917609+00:00"
+    },
+    {
+      "id": "302494fb-ae02-4fe3-8527-b64c4b91dd76",
+      "idempotency_key": "b49-eximbank-dining-priority-visa-signature",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://eximbank.com.vn/uu-dai-ca-nhan/dac-quyen-am-thuc-cao-cap-giam-den-50-danh-the-tin-dung-eximbank-priority-visa-signature",
+      "candidate": {
+        "brand": "Eximbank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Eximbank Priority Visa Signature dining privilege",
+        "end_date": "2027-03-31",
+        "merchant": "Eximbank Priority Visa Signature dining privilege",
+        "economics": {
+          "tiers": [
+            {
+              "discount_pct": 50,
+              "min_bill_vnd": 3000000,
+              "max_discount_vnd": 2000000
+            },
+            {
+              "discount_pct": 25,
+              "max_bill_vnd": 3000000,
+              "min_bill_vnd": 1000000
+            },
+            {
+              "scope": "general",
+              "discount_pct": 10
+            }
+          ],
+          "cardholder_only": true
+        },
+        "source_url": "https://eximbank.com.vn/uu-dai-ca-nhan/dac-quyen-am-thuc-cao-cap-giam-den-50-danh-the-tin-dung-eximbank-priority-visa-signature",
+        "eligibility": "Eximbank Priority Visa Signature cardholder",
+        "evidence_url": "https://eximbank.com.vn/uu-dai-ca-nhan/dac-quyen-am-thuc-cao-cap-giam-den-50-danh-the-tin-dung-eximbank-priority-visa-signature",
+        "benefit_summary": "Fine-dining privilege: 50% off (max 2,000,000 VND) on bills over 3,000,000 VND; 25% off on bills 1,000,000-3,000,000 VND; 10% off general",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "1c6d7f51-ddfb-4ffc-abdf-01353d5537bb",
+      "created_at": "2026-08-15T13:54:56.974533+00:00",
+      "committed_at": "2026-08-15T13:55:04.917609+00:00"
+    },
+    {
+      "id": "3f145199-b8d6-4732-8eb3-3512342441a0",
+      "idempotency_key": "b49-eximbank-ninh-khuong",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://eximbank.com.vn/uu-dai-ca-nhan/giam-10-tai-ninh-khuong-danh-cho-tat-ca-the-eximbank",
+      "candidate": {
+        "brand": "Eximbank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Ninh Khương",
+        "end_date": "2026-08-31",
+        "merchant": "Ninh Khương",
+        "economics": {
+          "discount_pct": 10
+        },
+        "source_url": "https://eximbank.com.vn/uu-dai-ca-nhan/giam-10-tai-ninh-khuong-danh-cho-tat-ca-the-eximbank",
+        "eligibility": "Eximbank cardholder",
+        "evidence_url": "https://eximbank.com.vn/uu-dai-ca-nhan/giam-10-tai-ninh-khuong-danh-cho-tat-ca-the-eximbank",
+        "benefit_summary": "10% off at Ninh Khương with Eximbank card",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "1c6d7f51-ddfb-4ffc-abdf-01353d5537bb",
+      "created_at": "2026-08-15T13:54:56.974533+00:00",
+      "committed_at": "2026-08-15T13:55:04.917609+00:00"
+    },
+    {
+      "id": "75ddecd5-f85d-4d03-9865-6e69e21b2979",
+      "idempotency_key": "b49-eximbank-lg-clinic-voucher",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://eximbank.com.vn/uu-dai-ca-nhan/tang-voucher-2000000-vnd-ap-dung-cho-tat-ca-dich-vu-tai-lg-clinic-khi-thanh-toan-qua-the-eximbank",
+      "candidate": {
+        "brand": "Eximbank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "LG Clinic",
+        "end_date": "2026-08-31",
+        "merchant": "LG Clinic",
+        "economics": {
+          "stackable": false,
+          "voucher_vnd": 2000000,
+          "code_restricted": true,
+          "one_use_per_customer": true,
+          "first_time_customer_only": true
+        },
+        "source_url": "https://eximbank.com.vn/uu-dai-ca-nhan/tang-voucher-2000000-vnd-ap-dung-cho-tat-ca-dich-vu-tai-lg-clinic-khi-thanh-toan-qua-the-eximbank",
+        "eligibility": "Eximbank cardholder; first-time LG Clinic service customer",
+        "evidence_url": "https://eximbank.com.vn/uu-dai-ca-nhan/tang-voucher-2000000-vnd-ap-dung-cho-tat-ca-dich-vu-tai-lg-clinic-khi-thanh-toan-qua-the-eximbank",
+        "literal_code": "LGCLINICXEXIMBANK",
+        "benefit_summary": "Voucher 2,000,000 VND for all LG Clinic services when paying by Eximbank card",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "1c6d7f51-ddfb-4ffc-abdf-01353d5537bb",
+      "created_at": "2026-08-15T13:54:56.974533+00:00",
+      "committed_at": "2026-08-15T13:55:04.917609+00:00"
+    },
+    {
+      "id": "7a4ac8da-a9d2-4c9c-bc6b-5bb305bda512",
+      "idempotency_key": "b49-eximbank-sea-lion-beach-resort",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://eximbank.com.vn/en/personal-promotion/giam-den-10-tai-sea-lion-beach-resort-danh-cho-the-eximbank",
+      "candidate": {
+        "brand": "Eximbank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Sea Lion Beach Resort",
+        "end_date": "2026-08-31",
+        "merchant": "Sea Lion Beach Resort",
+        "economics": {
+          "scope": "all services",
+          "stackable": true,
+          "discount_pct": 10,
+          "max_discount_vnd": 1000000,
+          "direct_booking_only": true
+        },
+        "source_url": "https://eximbank.com.vn/en/personal-promotion/giam-den-10-tai-sea-lion-beach-resort-danh-cho-the-eximbank",
+        "eligibility": "Eximbank cardholder",
+        "evidence_url": "https://eximbank.com.vn/en/personal-promotion/giam-den-10-tai-sea-lion-beach-resort-danh-cho-the-eximbank",
+        "benefit_summary": "10% off (max 1,000,000 VND per cardholder) on all services at Sea Lion Beach Resort",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "1c6d7f51-ddfb-4ffc-abdf-01353d5537bb",
+      "created_at": "2026-08-15T13:54:56.974533+00:00",
+      "committed_at": "2026-08-15T13:55:04.917609+00:00"
+    },
+    {
+      "id": "899bbd5f-24bb-458e-a3da-378d510d1652",
+      "idempotency_key": "b49-eximbank-neom",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://eximbank.com.vn/uu-dai-ca-nhan/giam-den-25-tai-neom-khi-thanh-toan-qua-the-eximbank",
+      "candidate": {
+        "brand": "Eximbank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "NEOM",
+        "end_date": "2026-08-31",
+        "merchant": "NEOM",
+        "economics": {
+          "options": [
+            {
+              "scope": "all items",
+              "discount_pct": 15
+            },
+            {
+              "discount_pct": 25,
+              "min_bill_vnd": 1000000
+            }
+          ]
+        },
+        "source_url": "https://eximbank.com.vn/uu-dai-ca-nhan/giam-den-25-tai-neom-khi-thanh-toan-qua-the-eximbank",
+        "eligibility": "Eximbank cardholder",
+        "evidence_url": "https://eximbank.com.vn/uu-dai-ca-nhan/giam-den-25-tai-neom-khi-thanh-toan-qua-the-eximbank",
+        "benefit_summary": "Up to 25% off at NEOM: choose 15% on all items or 25% on bills from 1,000,000 VND",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "1c6d7f51-ddfb-4ffc-abdf-01353d5537bb",
+      "created_at": "2026-08-15T13:54:56.974533+00:00",
+      "committed_at": "2026-08-15T13:55:04.917609+00:00"
+    },
+    {
+      "id": "986ce89e-1151-47c1-9049-4b39c76aa90b",
+      "idempotency_key": "b49-eximbank-hera-jewelry-diamonds",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://eximbank.com.vn/uu-dai-ca-nhan/giam-10-tai-hera-jewelry-diamonds-khi-thanh-toan-qua-the-eximbank",
+      "candidate": {
+        "brand": "Eximbank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Hera Jewelry & Diamonds",
+        "end_date": "2026-08-31",
+        "merchant": "Hera Jewelry & Diamonds",
+        "economics": {
+          "stackable": false,
+          "exclusions": [
+            "loose diamonds",
+            "custom design"
+          ],
+          "discount_pct": 10
+        },
+        "source_url": "https://eximbank.com.vn/uu-dai-ca-nhan/giam-10-tai-hera-jewelry-diamonds-khi-thanh-toan-qua-the-eximbank",
+        "eligibility": "Eximbank cardholder",
+        "evidence_url": "https://eximbank.com.vn/uu-dai-ca-nhan/giam-10-tai-hera-jewelry-diamonds-khi-thanh-toan-qua-the-eximbank",
+        "benefit_summary": "10% off at Hera Jewelry & Diamonds when paying by Eximbank card",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "1c6d7f51-ddfb-4ffc-abdf-01353d5537bb",
+      "created_at": "2026-08-15T13:54:56.974533+00:00",
+      "committed_at": "2026-08-15T13:55:04.917609+00:00"
+    },
+    {
+      "id": "b6f3ecf7-2aac-43f8-be61-6b150061fd00",
+      "idempotency_key": "b49-eximbank-ocean-waves-resort-cam-ranh",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://eximbank.com.vn/en/personal-promotion/giam-10-tai-ocean-waves-resort-cam-ranh-danh-cho-the-eximbank",
+      "candidate": {
+        "brand": "Eximbank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Ocean Waves Resort Cam Ranh",
+        "end_date": "2026-08-31",
+        "merchant": "Ocean Waves Resort Cam Ranh",
+        "economics": {
+          "scope": "all services",
+          "stackable": true,
+          "discount_pct": 10,
+          "max_discount_vnd": 1000000,
+          "direct_booking_only": true
+        },
+        "source_url": "https://eximbank.com.vn/en/personal-promotion/giam-10-tai-ocean-waves-resort-cam-ranh-danh-cho-the-eximbank",
+        "eligibility": "Eximbank cardholder",
+        "evidence_url": "https://eximbank.com.vn/en/personal-promotion/giam-10-tai-ocean-waves-resort-cam-ranh-danh-cho-the-eximbank",
+        "benefit_summary": "10% off (max 1,000,000 VND per cardholder) on all services at Ocean Waves Resort Cam Ranh",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "1c6d7f51-ddfb-4ffc-abdf-01353d5537bb",
+      "created_at": "2026-08-15T13:54:56.974533+00:00",
+      "committed_at": "2026-08-15T13:55:04.917609+00:00"
+    },
+    {
+      "id": "4db58047-cb98-4f46-b119-94a42cefe3ce",
+      "idempotency_key": "b50-bidv-jcb-gongcha-applepay-2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-applepay-gongcha-jcb",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "JCB / Apple Pay",
+        "end_date": "2026-12-31",
+        "merchant": "Gong Cha",
+        "economics": {
+          "discount_vnd": 49000,
+          "min_bill_vnd": 100000,
+          "max_uses_per_card_per_week": 2
+        },
+        "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-applepay-gongcha-jcb",
+        "start_date": "2026-07-03",
+        "eligibility": "BIDV JCB card paid via Apple Pay; max 2 uses/card/week; quota limited",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-applepay-gongcha-jcb",
+        "benefit_summary": "49,000 VND discount on bill >=100,000 VND",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "0f0cfc18-83c6-4f44-b1df-3ffac235c3d9",
+      "created_at": "2026-08-15T18:05:33.970949+00:00",
+      "committed_at": "2026-08-15T18:05:46.958238+00:00"
+    },
+    {
+      "id": "b837ce9b-54a5-4031-8c2b-5e2fdb9818dd",
+      "idempotency_key": "b50-eximbank-ana-mandara-dalat-2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://eximbank.com.vn/uu-dai-ca-nhan/giam-den-15-tai-ana-mandara-villas-dalat-resort-spa-danh-cho-tat-ca-the-eximbank-2026",
+      "candidate": {
+        "brand": "Eximbank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Ana Mandara Villas Dalat Resort & Spa",
+        "end_date": "2027-06-30",
+        "merchant": "Ana Mandara Villas Dalat Resort & Spa",
+        "economics": {
+          "spa_discount_pct": 10,
+          "room_discount_pct": 15,
+          "restaurant_discount_pct": 15
+        },
+        "source_url": "https://eximbank.com.vn/uu-dai-ca-nhan/giam-den-15-tai-ana-mandara-villas-dalat-resort-spa-danh-cho-tat-ca-the-eximbank-2026",
+        "start_date": "2026-05-20",
+        "eligibility": "Eximbank cardholder; direct resort booking/payment conditions apply",
+        "evidence_url": "https://eximbank.com.vn/uu-dai-ca-nhan/giam-den-15-tai-ana-mandara-villas-dalat-resort-spa-danh-cho-tat-ca-the-eximbank-2026",
+        "benefit_summary": "15% off BAR room rate with booking >=24h; 15% off Le Petit A La Carte excluding alcohol; 10% off La Cochinchin Spa excluding packages and 4-hand treatment",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "0f0cfc18-83c6-4f44-b1df-3ffac235c3d9",
+      "created_at": "2026-08-15T18:05:33.970949+00:00",
+      "committed_at": "2026-08-15T18:05:46.958238+00:00"
+    },
+    {
+      "id": "fcee1a52-19aa-4d78-953f-89c75600affe",
+      "idempotency_key": "b50-bidv-jcb-thailand-cashback-2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-thailand-jcb",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "JCB",
+        "end_date": "2026-12-31",
+        "merchant": "Thailand in-store JCB merchants",
+        "economics": {
+          "cashback_thb": 1000,
+          "monthly_phases": 6,
+          "max_program_cashback_thb": 6000,
+          "min_cumulative_spend_thb": 10000
+        },
+        "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-thailand-jcb",
+        "start_date": "2026-07-01",
+        "eligibility": "BIDV JCB; in-store Thailand; THB transactions; no registration; budget limited",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-thailand-jcb",
+        "benefit_summary": "1,000 THB cashback per monthly phase when cumulative eligible spend >=10,000 THB; max 6,000 THB/card for program",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "0f0cfc18-83c6-4f44-b1df-3ffac235c3d9",
+      "created_at": "2026-08-15T18:05:33.970949+00:00",
+      "committed_at": "2026-08-15T18:05:46.958238+00:00"
+    },
+    {
+      "id": "8e01b379-1335-4af2-8850-9d5c84b1dd3c",
+      "idempotency_key": "hub-concung-aug2026-monthly-actionable-v1",
+      "source_worker": "PROMO Hub + L2 Sync",
+      "source_url": "https://concung.com/tin-khuyen-mai/ctkm-thang-8-2026-bv3339.html",
+      "candidate": {
+        "brand": "Con Cưng",
+        "market": "VN",
+        "status": "ACTIVE",
+        "merchant": "Con Cưng",
+        "source_url": "https://concung.com/tin-khuyen-mai/ctkm-thang-8-2026-bv3339.html",
+        "eligibility": "Offer-specific channel/product conditions apply; product counts are eligibility metadata, not offer count",
+        "evidence_url": "https://concung.com/tin-khuyen-mai/ctkm-thang-8-2026-bv3339.html",
+        "benefit_summary": "August 2026 monthly promotion hub with concrete direct discounts including 80,000 VND off 2 Animo diaper packs, 14% off selected Colosbaby WebApp case, 15% off selected Nutimilk WebApp case, and up to 1,500,000 VND off Animo car seats online",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "2200bba7-b544-4b1a-8d4e-228c78f4d96e",
+      "created_at": "2026-08-15T18:06:56.654771+00:00",
+      "committed_at": "2026-08-15T18:40:23.865201+00:00"
+    },
+    {
+      "id": "45ebc408-656f-4423-8b0f-937214f168cf",
+      "idempotency_key": "b51-bidv-jcb-fahasa-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-fahasa-jcb",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "FAHASA",
+        "economics": {
+          "discount_pct": 30,
+          "min_spend_vnd": 500000,
+          "max_discount_vnd": 200000
+        },
+        "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-fahasa-jcb",
+        "start_date": "2026-07-04",
+        "eligibility": "BIDV JCB card or Apple Pay linked BIDV JCB; Payoo POS; Saturdays and Sundays",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-fahasa-jcb",
+        "literal_code": null,
+        "benefit_summary": "30% off, max 200,000 VND, on orders from 500,000 VND at FAHASA via Payoo POS",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "2200bba7-b544-4b1a-8d4e-228c78f4d96e",
+      "created_at": "2026-08-15T18:31:58.153283+00:00",
+      "committed_at": "2026-08-15T18:40:23.865201+00:00"
+    },
+    {
+      "id": "bb94716c-4a62-46a7-989f-2d5b7857463a",
+      "idempotency_key": "b51-bidv-jcb-trip-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-trip-jcb",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-05-31",
+        "merchant": "Trip.com",
+        "economics": {
+          "weekend_max_discount_vnd": 1000000,
+          "weekend_hotel_discount_vnd": 300000,
+          "weekend_hotel_min_spend_vnd": 3000000,
+          "weekend_flight_min_spend_vnd": 8000000,
+          "daily_hotel_japan_discount_pct": 14,
+          "daily_flight_japan_discount_pct": 10,
+          "daily_flight_other_discount_pct": 8,
+          "daily_hotel_global_discount_pct": 12,
+          "weekend_intl_flight_discount_pct": 30,
+          "weekend_domestic_or_intl_flight_discount_vnd": 500000
+        },
+        "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-trip-jcb",
+        "start_date": "2026-05-15",
+        "eligibility": "BIDV JCB; designated Trip.com JCB Vietnam page/app; member account; max 6 uses per promo code/account/card; limited quota",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-trip-jcb",
+        "literal_code": null,
+        "benefit_summary": "BIDV JCB Trip.com: weekend up to 30%/1,000,000 VND on international flights; fixed flight/hotel discounts; double-day offers; daily hotel/flight discounts",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "2200bba7-b544-4b1a-8d4e-228c78f4d96e",
+      "created_at": "2026-08-15T18:31:58.153283+00:00",
+      "committed_at": "2026-08-15T18:40:23.865201+00:00"
+    },
+    {
+      "id": "e0d45b53-98e8-4f0b-b9ad-ad29e6ddcb1d",
+      "idempotency_key": "b51-bidv-jcb-galaxy-cinema-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-galaxy-cinema-jcb",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "Galaxy Cinema",
+        "economics": {
+          "discount_pct": 30,
+          "min_spend_vnd": 200000,
+          "max_discount_vnd": 100000
+        },
+        "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-galaxy-cinema-jcb",
+        "start_date": "2026-07-04",
+        "eligibility": "BIDV JCB or Apple Pay linked BIDV JCB; Payoo POS at cinema or Payoo online on Galaxy web/app; weekends; max 1 use/card/week",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-galaxy-cinema-jcb",
+        "literal_code": null,
+        "benefit_summary": "30% off, max 100,000 VND, on orders from 200,000 VND at Galaxy Cinema",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "2200bba7-b544-4b1a-8d4e-228c78f4d96e",
+      "created_at": "2026-08-15T18:31:58.153283+00:00",
+      "committed_at": "2026-08-15T18:40:23.865201+00:00"
+    },
+    {
+      "id": "e765de6c-7f09-4835-95fc-b59f043394b2",
+      "idempotency_key": "b51-bidv-jcb-abcmart-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-abcmart-jcb",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "ABC-MART",
+        "economics": {
+          "discount_vnd": 300000,
+          "min_spend_vnd": 1500000
+        },
+        "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-abcmart-jcb",
+        "start_date": "2026-07-04",
+        "eligibility": "BIDV JCB or Apple Pay linked BIDV JCB; Payoo POS; Saturdays and Sundays",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-abcmart-jcb",
+        "literal_code": null,
+        "benefit_summary": "300,000 VND off orders from 1,500,000 VND at ABC-MART",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "2200bba7-b544-4b1a-8d4e-228c78f4d96e",
+      "created_at": "2026-08-15T18:31:58.153283+00:00",
+      "committed_at": "2026-08-15T18:40:23.865201+00:00"
+    },
+    {
+      "id": "f2cc33ac-5a83-40d2-86f5-ea006248f4cd",
+      "idempotency_key": "b51-retail-guardian-mannings-b2g1-20260825",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.guardian.com.vn/mannings-guardian-luoc-tron-tao-phong.html",
+      "candidate": {
+        "brand": "Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-25",
+        "merchant": "Mannings Guardian",
+        "economics": {
+          "mechanic": "BUY_2_GET_1",
+          "free_item_rule": "lowest-priced eligible item"
+        },
+        "source_url": "https://www.guardian.com.vn/mannings-guardian-luoc-tron-tao-phong.html",
+        "start_date": "2026-07-29",
+        "eligibility": "Eligible Mannings Guardian product list; limited quantity; verify gift in cart",
+        "evidence_url": "https://www.guardian.com.vn/mannings-guardian-luoc-tron-tao-phong.html",
+        "literal_code": null,
+        "benefit_summary": "Buy 2 get 1 free on eligible Mannings Guardian products; add 3 eligible items and the lowest-priced item is free",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "2200bba7-b544-4b1a-8d4e-228c78f4d96e",
+      "created_at": "2026-08-15T18:35:16.15968+00:00",
+      "committed_at": "2026-08-15T18:40:23.865201+00:00"
+    },
+    {
+      "id": "7e0fe52a-8afa-4aa2-bcc0-b6a870d6cdb4",
+      "idempotency_key": "guardian-g-xinchao-first-order-10pct-20260816",
+      "source_worker": "PROMO Discovery Hub",
+      "source_url": "https://www.guardian.com.vn/khan-uot-huong-hoa-anh-dao-mini-mannings-guardian-8-to-x-6-goi.html",
+      "candidate": {
+        "brand": "Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "merchant": "Guardian Vietnam",
+        "economics": {
+          "discount_pct": 10,
+          "first_order_only": true,
+          "max_discount_vnd": 100000
+        },
+        "source_url": "https://www.guardian.com.vn/khan-uot-huong-hoa-anh-dao-mini-mannings-guardian-8-to-x-6-goi.html",
+        "eligibility": "New customer / first order",
+        "evidence_url": "https://www.guardian.com.vn/khan-uot-huong-hoa-anh-dao-mini-mannings-guardian-8-to-x-6-goi.html",
+        "literal_code": "G-XINCHAO",
+        "benefit_summary": "10% off, capped at VND 100,000, for first order",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "047124f8-8986-42e5-b7cf-6527fa4fd235",
+      "created_at": "2026-08-15T19:09:23.569587+00:00",
+      "committed_at": "2026-08-15T20:41:22.589065+00:00"
+    },
+    {
+      "id": "bf14944d-6dfd-49cc-90dc-63d0388903c0",
+      "idempotency_key": "guardian-vc40-310726-16pct-249k-20260816",
+      "source_worker": "PROMO Discovery Hub",
+      "source_url": "https://www.guardian.com.vn/khan-uot-huong-hoa-anh-dao-mini-mannings-guardian-8-to-x-6-goi.html",
+      "candidate": {
+        "brand": "Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "merchant": "Guardian Vietnam",
+        "economics": {
+          "discount_pct": 16,
+          "min_spend_vnd": 249000,
+          "limited_quantity": true,
+          "max_discount_vnd": 40000
+        },
+        "source_url": "https://www.guardian.com.vn/khan-uot-huong-hoa-anh-dao-mini-mannings-guardian-8-to-x-6-goi.html",
+        "eligibility": "Guardian online order; minimum spend VND 249,000; limited quantity",
+        "evidence_url": "https://www.guardian.com.vn/khan-uot-huong-hoa-anh-dao-mini-mannings-guardian-8-to-x-6-goi.html",
+        "literal_code": "VC40-310726",
+        "benefit_summary": "16% off orders from VND 249,000, capped at VND 40,000; limited quantity",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "REJECTED",
+      "commit_id": null,
+      "created_at": "2026-08-15T19:09:23.569587+00:00",
+      "committed_at": null
+    },
+    {
+      "id": "862816ec-d400-4894-9bf2-d0b20cc12330",
+      "idempotency_key": "bidv-visa-click-to-pay-current-merchants-20260816",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/vn/ca-nhan/khuyen-mai/khuyen-mai-the/chi-tiet/%21ut/p/z0/fYzBCoJAEEC_Zo_DjEbeRSiMyC6BziWmVdpJWxV2Jf8--4GOD957yFgje1n0KUFHL8PGDWd3yss0KSmpqiIrKLudD_vLcbe7poQn5P_CdtDXPHOObEcfuk_A-qHtYsgKeCfeUO_i2nl4ixpq1TpYIgTXGYoRWlGwg9o-jJOs8Ctx6rn5Aty4V94%21/",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "merchant": "Multi-merchant Click to Pay",
+        "economics": {
+          "mechanics": [
+            {
+              "end_date": "2026-08-31",
+              "merchant": "Oppo",
+              "discount_vnd": 300000,
+              "min_spend_vnd": 6000000
+            },
+            {
+              "end_date": "2026-08-19",
+              "merchant": "Vietravel",
+              "discount_vnd": 500000,
+              "min_spend_vnd": 10000000
+            },
+            {
+              "end_date": "2026-08-19",
+              "merchant": "Aeon Beta",
+              "discount_vnd": 50000,
+              "min_spend_vnd": 100000
+            }
+          ]
+        },
+        "eligibility": "BIDV Visa cardholder using Click to Pay at listed merchant channels",
+        "evidence_url": "https://bidv.com.vn/vn/ca-nhan/khuyen-mai/khuyen-mai-the/chi-tiet/%21ut/p/z0/fYzBCoJAEEC_Zo_DjEbeRSiMyC6BziWmVdpJWxV2Jf8--4GOD957yFgje1n0KUFHL8PGDWd3yss0KSmpqiIrKLudD_vLcbe7poQn5P_CdtDXPHOObEcfuk_A-qHtYsgKeCfeUO_i2nl4ixpq1TpYIgTXGYoRWlGwg9o-jJOs8Ctx6rn5Aty4V94%21/",
+        "evidence_date": "2026-07-21",
+        "payment_method": "BIDV Visa via Click to Pay",
+        "benefit_summary": "Current BIDV Visa Click to Pay merchant offers: Oppo 300,000 VND off orders from 6,000,000 VND through 2026-08-31; Vietravel 500,000 VND off orders from 10,000,000 VND through 2026-08-19; Aeon Beta 50,000 VND off orders from 100,000 VND through 2026-08-19.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "047124f8-8986-42e5-b7cf-6527fa4fd235",
+      "created_at": "2026-08-15T19:31:53.262876+00:00",
+      "committed_at": "2026-08-15T20:41:22.589065+00:00"
+    },
+    {
+      "id": "9cc85db0-21db-4fab-b28b-5b50d3f20b69",
+      "idempotency_key": "hub-guardian-combo-exclusive-aug2026-v1",
+      "source_worker": "PROMO Discovery Hub",
+      "source_url": "https://www.guardian.com.vn/khuyen-mai-6/combo-exclusive-ll08-26.html",
+      "candidate": {
+        "brand": "Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "merchant": "Guardian Vietnam",
+        "economics": {
+          "mechanic": "direct_discount",
+          "eligible_combo_count": 53,
+          "max_visible_discount_pct": 34
+        },
+        "source_url": "https://www.guardian.com.vn/khuyen-mai-6/combo-exclusive-ll08-26.html",
+        "eligibility": "Purchase an eligible Combo Exclusive Tháng 8 item at Guardian Vietnam while listed promotion pricing is active",
+        "evidence_url": "https://www.guardian.com.vn/khuyen-mai-6/combo-exclusive-ll08-26.html",
+        "benefit_summary": "Combo Exclusive Tháng 8: 53 eligible combos with visible direct discounts; examples include NIVEA 238,000 VND vs 318,000 VND (-25%), X-MEN 196,000 VND vs 299,000 VND (-34%), and OLAY 863,000 VND vs 1,080,000 VND (-20%)",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "047124f8-8986-42e5-b7cf-6527fa4fd235",
+      "created_at": "2026-08-15T20:07:07.878469+00:00",
+      "committed_at": "2026-08-15T20:41:22.589065+00:00"
+    },
+    {
+      "id": "13a857c4-a25c-4231-b79b-5d900d801f62",
+      "idempotency_key": "banks-travel-bidv-mastercard-expedia-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-mastercard-expedia",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-01-31",
+        "merchant": "Expedia",
+        "economics": {
+          "discount_pct": 7
+        },
+        "eligibility": "All BIDV Mastercard cards",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-mastercard-expedia",
+        "literal_code": "MASTERVN7",
+        "stay_end_date": "2027-06-30",
+        "benefit_summary": "7% off Expedia hotel bookings",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "749f0574-9186-454b-ab53-223eb2868dc3",
+      "created_at": "2026-08-15T20:33:51.443655+00:00",
+      "committed_at": "2026-08-15T20:41:40.742238+00:00"
+    },
+    {
+      "id": "31569e71-106b-4a11-a9f8-0e224509e840",
+      "idempotency_key": "banks-travel-bidv-jcb-100-restaurants-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-jcb-nha-hang",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "100+ participating restaurants",
+        "economics": {
+          "discount_pct_up_to": 30
+        },
+        "eligibility": "BIDV JCB physical card or BIDV JCB linked to Apple Pay; restaurant-specific terms may vary",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-jcb-nha-hang",
+        "benefit_summary": "Up to 30% off at 100+ participating restaurants",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "749f0574-9186-454b-ab53-223eb2868dc3",
+      "created_at": "2026-08-15T20:33:51.443655+00:00",
+      "committed_at": "2026-08-15T20:41:40.742238+00:00"
+    },
+    {
+      "id": "508e60f9-ed5e-4b96-8467-078b60527e2f",
+      "idempotency_key": "banks-travel-bidv-jcb-langco-2025-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-lang-co",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-10-20",
+        "merchant": "Banyan Tree Lang Co / Angsana Lang Co",
+        "economics": {
+          "spa_discount_pct": 10,
+          "room_discount_pct": 30,
+          "dining_discount_pct": 10
+        },
+        "start_date": "2025-10-20",
+        "eligibility": "BIDV JCB cardholder; advance booking through resort contact; all days",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-lang-co",
+        "benefit_summary": "30% off best available room rate, 10% off eligible dining, 10% off eligible spa services",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "749f0574-9186-454b-ab53-223eb2868dc3",
+      "created_at": "2026-08-15T20:33:51.443655+00:00",
+      "committed_at": "2026-08-15T20:41:40.742238+00:00"
+    },
+    {
+      "id": "7383b444-fbb4-41f6-a66b-604b03b5554a",
+      "idempotency_key": "banks-travel-bidv-visa-hotelscom-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-hotels",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-30",
+        "merchant": "Hotels.com",
+        "economics": {
+          "discount_pct": 7
+        },
+        "eligibility": "BIDV Visa cardholder booking through designated Hotels.com/Visa page",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-hotels",
+        "literal_code": "VISA7",
+        "benefit_summary": "Up to 7% off hotel stays on Hotels.com",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "749f0574-9186-454b-ab53-223eb2868dc3",
+      "created_at": "2026-08-15T20:33:51.443655+00:00",
+      "committed_at": "2026-08-15T20:41:40.742238+00:00"
+    },
+    {
+      "id": "80647ee9-1d08-4688-b98a-31e4099cd9f8",
+      "idempotency_key": "banks-travel-bidv-visa-expedia-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-expedia",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Expedia",
+        "economics": {
+          "discount_pct": 7
+        },
+        "eligibility": "BIDV Visa cardholder booking selected hotels via Expedia/Visa flow",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-expedia",
+        "literal_code": "VISAYR7",
+        "benefit_summary": "7% off selected Expedia hotel bookings",
+        "travel_end_date": "2027-06-30",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "749f0574-9186-454b-ab53-223eb2868dc3",
+      "created_at": "2026-08-15T20:33:51.443655+00:00",
+      "committed_at": "2026-08-15T20:41:40.742238+00:00"
+    },
+    {
+      "id": "891d1e7a-dfeb-4829-9a2e-09b91eb29cc6",
+      "idempotency_key": "banks-travel-bidv-jcb-klook-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-klook-jcb",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-05-31",
+        "merchant": "Klook",
+        "economics": {
+          "daily": {
+            "discount_pct": 10,
+            "min_spend_vnd": 2000000,
+            "max_discount_vnd": 300000
+          },
+          "double_day": {
+            "discount_pct": 15,
+            "min_spend_vnd": 2000000,
+            "max_discount_vnd": 500000
+          },
+          "weekend_foreign": {
+            "discount_pct": 30,
+            "max_discount_vnd": 500000
+          },
+          "weekend_general": {
+            "discount_pct": 15,
+            "min_spend_vnd": 2000000,
+            "max_discount_vnd": 500000
+          }
+        },
+        "start_date": "2026-06-15",
+        "eligibility": "BIDV JCB cardholder; Klook web/app; limited redemption quota",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-klook-jcb",
+        "literal_codes": [
+          "JCBJPWKND30",
+          "JCBWKND15",
+          "JCBNGAYDOI",
+          "KLOOK10JCB"
+        ],
+        "benefit_summary": "Klook: weekend 30% max 500,000 VND on foreign products; weekend 15% max 500,000 VND on orders >=2,000,000 VND; double-day 15% max 500,000 VND on orders >=2,000,000 VND; daily 10% max 300,000 VND on orders >=2,000,000 VND",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "047124f8-8986-42e5-b7cf-6527fa4fd235",
+      "created_at": "2026-08-15T20:33:51.443655+00:00",
+      "committed_at": "2026-08-15T20:41:22.589065+00:00"
+    },
+    {
+      "id": "95a38903-bb02-4201-91a0-30bc7d76083f",
+      "idempotency_key": "banks-travel-bidv-jcb-hotelscom-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-jcb-hotels",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-04-30",
+        "merchant": "Hotels.com",
+        "economics": {
+          "japan": {
+            "discount_pct": 16,
+            "max_discount_vnd": 1040080
+          },
+          "other": {
+            "discount_pct": 12
+          }
+        },
+        "start_date": "2026-05-01",
+        "eligibility": "BIDV JCB cardholder booking via designated Hotels.com page",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-jcb-hotels",
+        "literal_codes": [
+          "JCBVN16",
+          "JCBVN12"
+        ],
+        "stay_end_date": "2027-06-30",
+        "benefit_summary": "16% off Japan hotels, max 1,040,080 VND; 12% off hotels worldwide excluding Japan",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "047124f8-8986-42e5-b7cf-6527fa4fd235",
+      "created_at": "2026-08-15T20:33:51.443655+00:00",
+      "committed_at": "2026-08-15T20:41:22.589065+00:00"
+    },
+    {
+      "id": "c9ded5c0-d48f-4f54-8fa3-079eca229aa0",
+      "idempotency_key": "banks-travel-bidv-visa-klook-applepay-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-klook-visa",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "Klook",
+        "economics": {
+          "voucher_vnd": 300000,
+          "user_specific": true,
+          "redeem_min_spend_vnd": 2000000,
+          "trigger_min_spend_vnd": 2000000
+        },
+        "start_date": "2026-01-17",
+        "eligibility": "Klook user paying eligible order >=2,000,000 VND via Apple Pay with BIDV Visa; max one voucher/account",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-klook-visa",
+        "literal_code": null,
+        "benefit_summary": "Receive a user-specific 300,000 VND voucher for a subsequent Klook order >=2,000,000 VND after completing an eligible experience/trip",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "749f0574-9186-454b-ab53-223eb2868dc3",
+      "created_at": "2026-08-15T20:33:51.443655+00:00",
+      "committed_at": "2026-08-15T20:41:40.742238+00:00"
+    },
+    {
+      "id": "d5da940d-ffa0-4a8f-86d9-82ecc6da0adf",
+      "idempotency_key": "banks-travel-bidv-jcb-agoda-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-agoda-jcb-2026",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-05-31",
+        "merchant": "Agoda",
+        "economics": {
+          "japan_daily": {
+            "discount_pct": 15,
+            "max_discount_usd": 30
+          },
+          "other_daily": {
+            "discount_pct": 10,
+            "max_discount_usd": 30
+          },
+          "japan_weekend": {
+            "discount_pct": 30,
+            "max_discount_usd": 30
+          },
+          "international_weekend": {
+            "discount_pct": 15,
+            "max_discount_usd": 30
+          }
+        },
+        "start_date": "2026-06-05",
+        "eligibility": "All BIDV JCB cards; prepaid eligible hotels through dedicated Agoda/JCB flow; limited quota",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-agoda-jcb-2026",
+        "stay_end_date": "2027-07-31",
+        "benefit_summary": "Agoda: weekend 30% max USD30 for Japan; weekend 15% max USD30 for international/Vietnam; daily up to 15% max USD30",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "047124f8-8986-42e5-b7cf-6527fa4fd235",
+      "created_at": "2026-08-15T20:33:51.443655+00:00",
+      "committed_at": "2026-08-15T20:41:22.589065+00:00"
+    },
+    {
+      "id": "5c5b8d81-5f5d-4014-8c80-5450063c8cae",
+      "idempotency_key": "retail-guardian-mannings-aloe-buy1get1-202608",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.guardian.com.vn/gel-duong-am-mannings-guardian-aloe-vera-gel-chiet-xuat-lo-hoi-nha-dam-250ml.html",
+      "candidate": {
+        "brand": "Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Mannings Guardian",
+        "end_date": "2026-08-25",
+        "merchant": "Guardian",
+        "economics": {
+          "buy_qty": 1,
+          "free_qty": 1
+        },
+        "source_url": "https://www.guardian.com.vn/gel-duong-am-mannings-guardian-aloe-vera-gel-chiet-xuat-lo-hoi-nha-dam-250ml.html",
+        "start_date": "2026-07-29",
+        "evidence_url": "https://www.guardian.com.vn/gel-duong-am-mannings-guardian-aloe-vera-gel-chiet-xuat-lo-hoi-nha-dam-250ml.html",
+        "benefit_summary": "Buy 1 get 1 free Mannings Guardian Aloe Vera Gel 250ml; gift auto-added to cart; limited quantity",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "5f27f35c-b300-4422-b036-61d4035a8d43",
+      "created_at": "2026-08-15T20:34:09.909597+00:00",
+      "committed_at": "2026-08-15T21:39:15.872243+00:00"
+    },
+    {
+      "id": "7a920fdc-46b2-4dbb-9e09-639cde9d52a2",
+      "idempotency_key": "retail-guardian-mannings-wet-wipes-buy2get1-202608",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.guardian.com.vn/khan-uot-khong-huong-mini-mannings-guardian-8-to-x-6-goi.html",
+      "candidate": {
+        "brand": "Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Mannings Guardian",
+        "end_date": "2026-08-25",
+        "merchant": "Guardian",
+        "economics": {
+          "buy_qty": 2,
+          "free_qty": 1
+        },
+        "source_url": "https://www.guardian.com.vn/khan-uot-khong-huong-mini-mannings-guardian-8-to-x-6-goi.html",
+        "start_date": "2026-07-29",
+        "evidence_url": "https://www.guardian.com.vn/khan-uot-khong-huong-mini-mannings-guardian-8-to-x-6-goi.html",
+        "benefit_summary": "Buy 2 get 1 free Mannings Guardian fragrance-free mini wet wipes; gift auto-added to cart; limited quantity",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "5f27f35c-b300-4422-b036-61d4035a8d43",
+      "created_at": "2026-08-15T20:34:09.909597+00:00",
+      "committed_at": "2026-08-15T21:39:15.872243+00:00"
+    },
+    {
+      "id": "226a4284-4da1-42ab-9e1b-1669a43cd184",
+      "idempotency_key": "hub-guardian-tresemme-buy2get1-202608",
+      "source_worker": "PROMO Discovery Hub",
+      "source_url": "https://www.guardian.com.vn/serum-vao-nep-suon-muot-cho-toc-kho-xo-roi-tresemme-keratin-smooth-100ml.html",
+      "candidate": {
+        "brand": "Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "TRESemme",
+        "end_date": "2026-08-25",
+        "merchant": "Guardian",
+        "economics": {
+          "buy_qty": 2,
+          "free_qty": 1,
+          "free_item_rule": "lowest_value_in_combo"
+        },
+        "source_url": "https://www.guardian.com.vn/serum-vao-nep-suon-muot-cho-toc-kho-xo-roi-tresemme-keratin-smooth-100ml.html",
+        "start_date": "2026-07-29",
+        "evidence_url": "https://www.guardian.com.vn/serum-vao-nep-suon-muot-cho-toc-kho-xo-roi-tresemme-keratin-smooth-100ml.html",
+        "benefit_summary": "Buy 2 get 1 free on eligible TRESemme Keratin Smooth 100ml/list; add 3 eligible items, lowest-value item free; limited quantity",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "5f27f35c-b300-4422-b036-61d4035a8d43",
+      "created_at": "2026-08-15T21:07:47.70438+00:00",
+      "committed_at": "2026-08-15T21:39:15.872243+00:00"
+    },
+    {
+      "id": "73793470-9ab1-44c6-93ac-53ff9c8a74c8",
+      "idempotency_key": "hub-guardian-mannings-hairpins-buy2get1-code-202608",
+      "source_worker": "PROMO Discovery Hub",
+      "source_url": "https://www.guardian.com.vn/mannings-guardian-kep-tam-co-dinh-toc-24-chiec.html",
+      "candidate": {
+        "brand": "Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Mannings Guardian",
+        "end_date": "2026-08-25",
+        "merchant": "Guardian",
+        "economics": {
+          "buy_qty": 2,
+          "code_day": "Thursday",
+          "free_qty": 1,
+          "membership": "Hoi Cam",
+          "code_discount_pct": 5,
+          "code_max_discount_vnd": 100000
+        },
+        "source_url": "https://www.guardian.com.vn/mannings-guardian-kep-tam-co-dinh-toc-24-chiec.html",
+        "start_date": "2026-07-29",
+        "evidence_url": "https://www.guardian.com.vn/mannings-guardian-kep-tam-co-dinh-toc-24-chiec.html",
+        "literal_code": "G5-MG2026",
+        "benefit_summary": "Buy 2 get 1 free 29 Jul-25 Aug; additionally code G5-MG2026 gives 5% off up to 100K on Mannings Guardian products for Hội Cam, Thursdays only",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "5f27f35c-b300-4422-b036-61d4035a8d43",
+      "created_at": "2026-08-15T21:07:47.70438+00:00",
+      "committed_at": "2026-08-15T21:39:15.872243+00:00"
+    },
+    {
+      "id": "aa46fac1-d7f3-4047-bb29-f8d970567090",
+      "idempotency_key": "hub-guardian-mannings-goatmilk-buy1get1-202608",
+      "source_worker": "PROMO Discovery Hub",
+      "source_url": "https://www.guardian.com.vn/sua-tam-dang-kem-duong-am-mannings-guardian-goat-s-milk-gentle-moisturising-shower-cream-1l.html",
+      "candidate": {
+        "brand": "Guardian",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Mannings Guardian",
+        "end_date": "2026-08-25",
+        "merchant": "Guardian",
+        "economics": {
+          "buy_qty": 1,
+          "free_qty": 1
+        },
+        "source_url": "https://www.guardian.com.vn/sua-tam-dang-kem-duong-am-mannings-guardian-goat-s-milk-gentle-moisturising-shower-cream-1l.html",
+        "start_date": "2026-07-29",
+        "evidence_url": "https://www.guardian.com.vn/sua-tam-dang-kem-duong-am-mannings-guardian-goat-s-milk-gentle-moisturising-shower-cream-1l.html",
+        "benefit_summary": "Buy 1 get 1 free Mannings Guardian Goat Milk Shower Cream 1L; gift auto-added; limited quantity",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "5f27f35c-b300-4422-b036-61d4035a8d43",
+      "created_at": "2026-08-15T21:07:47.70438+00:00",
+      "committed_at": "2026-08-15T21:39:15.872243+00:00"
+    },
+    {
+      "id": "23c8f974-939c-4f34-b345-fcd3ab004007",
+      "idempotency_key": "banks-travel-vpbank-adora-bay-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/adora-bay-ke-ga-beach-resort-2026",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Adora Bay Ke Ga Beach Resort",
+        "end_date": "2027-02-28",
+        "merchant": "Adora Bay Ke Ga Beach Resort",
+        "economics": {
+          "discount_pct": 20
+        },
+        "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/adora-bay-ke-ga-beach-resort-2026",
+        "start_date": "2026-03-01",
+        "eligibility": "VPBank cardholder; pay at resort reception",
+        "evidence_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/adora-bay-ke-ga-beach-resort-2026",
+        "benefit_summary": "20% off all services at Adora Bay Ke Ga Beach Resort when paying by VPBank card, applied directly at reception",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "3d41ca4b-4dd7-4ab2-a3e7-289d1a4d9063",
+      "created_at": "2026-08-15T21:31:37.565155+00:00",
+      "committed_at": "2026-08-15T21:39:45.33324+00:00"
+    },
+    {
+      "id": "24ca7eae-9e1a-4c6c-b5a4-f94b366a9147",
+      "idempotency_key": "banks-travel-vpbank-intercontinental-hanoi-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/intercontinental-hanoi-2025",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "InterContinental Hanoi Landmark72",
+        "end_date": "2026-12-31",
+        "merchant": "InterContinental Hanoi Landmark72",
+        "economics": {
+          "fnb_discount_pct": 15,
+          "room_discount_pct": 10
+        },
+        "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/intercontinental-hanoi-2025",
+        "start_date": "2026-01-01",
+        "eligibility": "VPBank cardholder; participating InterContinental Hanoi Landmark72 services",
+        "evidence_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/intercontinental-hanoi-2025",
+        "benefit_summary": "15% off pre-tax/service-charge dining bill excluding alcohol at participating outlets and 10% off Best Flexible room rates",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "4fd03962-ccfd-4bc9-bb5d-abb67faa9691",
+      "created_at": "2026-08-15T21:31:37.565155+00:00",
+      "committed_at": "2026-08-15T21:40:03.80184+00:00"
+    },
+    {
+      "id": "335d700b-bae9-42ee-857e-918171a46eba",
+      "idempotency_key": "banks-travel-vpbank-victoria-hotels-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/victoria-hotel-resort",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN/LA",
+        "status": "ACTIVE",
+        "partner": "Victoria Hotels & Resorts",
+        "end_date": "2026-12-31",
+        "merchant": "Victoria Hotels & Resorts",
+        "economics": {
+          "fnb_discount_pct": 10,
+          "spa_discount_pct": 10,
+          "room_discount_pct": 5
+        },
+        "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/victoria-hotel-resort",
+        "start_date": "2026-01-01",
+        "eligibility": "VPBank cardholder; direct reservation with participating Victoria properties",
+        "evidence_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/victoria-hotel-resort",
+        "benefit_summary": "5% off published room rates and 10% off F&B and spa for VPBank cardholders at participating Victoria properties",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "3d41ca4b-4dd7-4ab2-a3e7-289d1a4d9063",
+      "created_at": "2026-08-15T21:31:37.565155+00:00",
+      "committed_at": "2026-08-15T21:39:45.33324+00:00"
+    },
+    {
+      "id": "7500dff7-7498-4e75-8d3d-66d5a8091f8f",
+      "idempotency_key": "banks-travel-vpbank-sailing-club-phuquoc-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/sailing-club-signature-resort",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Sailing Club Signature Resort",
+        "end_date": "2026-10-31",
+        "merchant": "Sailing Club Signature Resort Phu Quoc",
+        "economics": {
+          "free_minibar": true,
+          "free_pickleball": true,
+          "fnb_discount_pct": 20,
+          "room_discount_pct": 30
+        },
+        "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/sailing-club-signature-resort",
+        "start_date": "2026-04-01",
+        "eligibility": "VPBank cardholder; room booking via resort website; pay by VPBank card",
+        "evidence_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/sailing-club-signature-resort",
+        "literal_code": "BANK30",
+        "benefit_summary": "30% off resort website room booking with code BANK30, free minibar and pickleball; 20% off a la carte dining plus selected beverage freebies at Sailing Club Beach Club",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "3d41ca4b-4dd7-4ab2-a3e7-289d1a4d9063",
+      "created_at": "2026-08-15T21:31:37.565155+00:00",
+      "committed_at": "2026-08-15T21:39:45.33324+00:00"
+    },
+    {
+      "id": "96091726-c675-4c2d-9525-02818fe0db53",
+      "idempotency_key": "banks-travel-vpbank-amanoi-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/amanoi-2026",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Amanoi Resort",
+        "end_date": "2026-12-15",
+        "merchant": "Amanoi Resort",
+        "economics": {
+          "room_upgrade": true,
+          "spa_credit_vnd": 2500000,
+          "fnb_discount_pct": 10
+        },
+        "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/amanoi-2026",
+        "start_date": "2026-03-10",
+        "eligibility": "VPBank cardholder; Amanoi Resort Vinh Hy; holiday/Tet exclusions and non-stack rules apply",
+        "evidence_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/amanoi-2026",
+        "benefit_summary": "Amanoi cardholder privilege: 2,500,000 VND spa credit per stay for eligible Villa/Residence guests age over 12, next-category room upgrade on selected room types subject to availability, and 10% off F&B at participating resort outlets",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "3d41ca4b-4dd7-4ab2-a3e7-289d1a4d9063",
+      "created_at": "2026-08-15T21:31:37.565155+00:00",
+      "committed_at": "2026-08-15T21:39:45.33324+00:00"
+    },
+    {
+      "id": "b46777d4-8e31-4889-9f72-055110725bfa",
+      "idempotency_key": "banks-travel-vpbank-ana-mandara-cam-ranh-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/ana-mandara-resort-cam-ranh-2026",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Ana Mandara Resort Cam Ranh",
+        "end_date": "2026-12-31",
+        "merchant": "Ana Mandara Resort Cam Ranh",
+        "economics": {
+          "fnb_discount_pct": 10,
+          "spa_discount_pct": 35,
+          "room_discount_pct": 20,
+          "airport_transfer_min_nights": 2
+        },
+        "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/ana-mandara-resort-cam-ranh-2026",
+        "start_date": "2026-01-01",
+        "eligibility": "Book on resort website using code CAMP-VPBANK and pay by VPBank credit card",
+        "evidence_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/ana-mandara-resort-cam-ranh-2026",
+        "literal_code": "CAMP-VPBANK",
+        "benefit_summary": "20% off website room rate, 35% off Ana Mandara Spa, 10% off non-alcoholic F&B, plus airport transfer benefit for bookings over 2 nights",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "3d41ca4b-4dd7-4ab2-a3e7-289d1a4d9063",
+      "created_at": "2026-08-15T21:31:37.565155+00:00",
+      "committed_at": "2026-08-15T21:39:45.33324+00:00"
+    },
+    {
+      "id": "bd8f4ef4-83f4-450b-9886-fb87c03e8dc3",
+      "idempotency_key": "banks-travel-vpbank-singapore-airlines-travelday-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/vpbank-travel-day-2026",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Singapore Airlines",
+        "end_date": "2026-12-11",
+        "merchant": "Singapore Airlines",
+        "economics": {
+          "cashback_pct": 15,
+          "monthly_days": "10-11",
+          "min_spend_vnd": 10000000,
+          "max_cashback_vnd": 1500000,
+          "supplementary_cashback_pct": 20
+        },
+        "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/vpbank-travel-day-2026",
+        "start_date": "2026-02-10",
+        "eligibility": "Eligible VPBank international credit cards; official Singapore Airlines website; flights departing Vietnam",
+        "evidence_url": "https://www.vpbank.com.vn/-/media/vpbank-latest/1retail/promotion/for-cardholder/2026/thang-2/vpbank-travel-day/The-le-chuong-trinh-VPBank-Travel-Day-Singapore-Airlines.pdf",
+        "benefit_summary": "VPBank Travel Day on the 10th and 11th monthly: 15% cashback up to 1,500,000 VND on Singapore Airlines bills from 10,000,000 VND; 20% for eligible supplementary-card transaction when the primary card also spends at least 10,000,000 VND at Singapore Airlines that Travel Day",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "5f27f35c-b300-4422-b036-61d4035a8d43",
+      "created_at": "2026-08-15T21:31:37.565155+00:00",
+      "committed_at": "2026-08-15T21:39:15.872243+00:00"
+    },
+    {
+      "id": "bea03399-d24d-4b95-b6e9-03d3a5c7b438",
+      "idempotency_key": "banks-travel-vpbank-somerset-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/somerset-2026",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Somerset",
+        "end_date": "2026-12-31",
+        "merchant": "Somerset / The Ascott Limited",
+        "economics": {
+          "refundable": false,
+          "room_discount_pct": 20,
+          "prepayment_required": true
+        },
+        "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/somerset-2026",
+        "start_date": "2026-01-30",
+        "eligibility": "Book via DiscoverASR.com, ASR App, hotel hotline/email or walk-in; enter code ASRVPB2026; full prepayment; non-refundable; blackout dates may apply",
+        "evidence_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/somerset-2026",
+        "literal_code": "ASRVPB2026",
+        "benefit_summary": "20% off Best Flexible Rate at participating Somerset properties for VPBank cardholders",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "3d41ca4b-4dd7-4ab2-a3e7-289d1a4d9063",
+      "created_at": "2026-08-15T21:31:37.565155+00:00",
+      "committed_at": "2026-08-15T21:39:45.33324+00:00"
+    },
+    {
+      "id": "c565f69c-baa5-4405-9f0c-c5d540bd3281",
+      "idempotency_key": "banks-travel-vpbank-wyndham-danang-golden-bay-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/wyndham-danang-golden-bay-hotel-2026",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Wyndham Danang Golden Bay Hotel",
+        "end_date": "2026-12-31",
+        "merchant": "Wyndham Danang Golden Bay Hotel",
+        "economics": {
+          "airport_transfer": true,
+          "fnb_discount_pct": 15,
+          "spa_discount_pct": 15,
+          "room_discount_pct": 15
+        },
+        "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/wyndham-danang-golden-bay-hotel-2026",
+        "start_date": "2026-01-01",
+        "eligibility": "VPBank cardholder; participating hotel services",
+        "evidence_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/wyndham-danang-golden-bay-hotel-2026",
+        "benefit_summary": "15% off published room rates with breakfast, 15% off participating F&B outlets, 15% off eligible spa services, plus scheduled airport transfer",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "4fd03962-ccfd-4bc9-bb5d-abb67faa9691",
+      "created_at": "2026-08-15T21:31:37.565155+00:00",
+      "committed_at": "2026-08-15T21:40:03.80184+00:00"
+    },
+    {
+      "id": "fa583112-747f-4c71-b230-b2964ffb28e5",
+      "idempotency_key": "banks-travel-vpbank-hoian-river-beach-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/hoi-an-river-beach-resort-residences-2026",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Hoi An River Beach Resort & Residences",
+        "end_date": "2026-10-30",
+        "merchant": "Hoi An River Beach Resort & Residences",
+        "economics": {
+          "fnb_discount_pct": 10,
+          "spa_discount_pct": 10,
+          "room_discount_pct": 10,
+          "breakfast_included": true
+        },
+        "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/hoi-an-river-beach-resort-residences-2026",
+        "start_date": "2025-11-10",
+        "eligibility": "Use code VPB10 on resort website and pay with VPBank card",
+        "evidence_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/hoi-an-river-beach-resort-residences-2026",
+        "literal_code": "VPB10",
+        "benefit_summary": "10% off standard room rate with breakfast, 10% off non-alcoholic F&B and 10% off spa packages",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "4fd03962-ccfd-4bc9-bb5d-abb67faa9691",
+      "created_at": "2026-08-15T21:31:37.565155+00:00",
+      "committed_at": "2026-08-15T21:40:03.80184+00:00"
+    },
+    {
+      "id": "986180b7-7788-4746-94ff-b3d72f8fbe4a",
+      "idempotency_key": "retail-guardian-aug-beauty-feast-vaseline-rosylips-26pct-20260816",
+      "source_worker": "PROMO Retail + F&B + Lifestyle Shard",
+      "source_url": "https://www.guardian.com.vn/khuyen-mai-4/dai-tiec-my-pham.html",
+      "candidate": {
+        "brand": "Guardian",
+        "status": "ACTIVE",
+        "campaign": "ĐẠI TIỆC MỸ PHẨM",
+        "merchant": "Guardian",
+        "economics": {
+          "discount_pct": 26,
+          "sale_price_vnd": 67000,
+          "regular_price_vnd": 90000
+        },
+        "checked_at": "2026-08-16T04:37:00+07:00",
+        "evidence_url": "https://www.guardian.com.vn/khuyen-mai-4/dai-tiec-my-pham.html",
+        "literal_code": null,
+        "benefit_summary": "Vaseline Lips Therapy Rosy Lips 7g: 67,000 VND vs 90,000 VND (-26%)",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "4fd03962-ccfd-4bc9-bb5d-abb67faa9691",
+      "created_at": "2026-08-15T21:37:40.467177+00:00",
+      "committed_at": "2026-08-15T21:40:03.80184+00:00"
+    },
+    {
+      "id": "bdb0cbd2-adb3-4572-a6bf-bbc7f5bb6d97",
+      "idempotency_key": "hub-concung-elite-loyalty-2026-v1",
+      "source_worker": "PROMO Discovery Hub",
+      "source_url": "https://concung.com/tin-khuyen-mai/2744-chuong-trinh-con-cung-elite.html",
+      "candidate": {
+        "brand": "Con Cưng",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-01-04",
+        "merchant": "Con Cưng",
+        "economics": {
+          "elite_rank_top": 10000,
+          "elite_xu_rate_pct": 0.3,
+          "member_xu_rate_pct": 0.1,
+          "elite_min_spend_vnd": 40000000,
+          "elite_min_successful_orders": 12
+        },
+        "source_url": "https://concung.com/tin-khuyen-mai/2744-chuong-trinh-con-cung-elite.html",
+        "start_date": "2026-08-01",
+        "eligibility": "Member: register phone number. Elite: automatic qualification requiring at least 12 successful orders, Top 10,000 spenders, and at least 40,000,000 VND spend in the ranking cycle.",
+        "evidence_url": "https://concung.com/tin-khuyen-mai/2744-chuong-trinh-con-cung-elite.html",
+        "benefit_summary": "Con Cưng loyalty: registered Members earn 0.1% Xu on eligible orders; Elite earns 0.3% Xu, plus one monthly Blind Box on the 5th with a chance of Xu, vouchers or gifts.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "bdbc7225-b0fc-4791-9a50-cd30a811696c",
+      "created_at": "2026-08-15T22:06:28.557201+00:00",
+      "committed_at": "2026-08-15T22:42:49.183843+00:00"
+    },
+    {
+      "id": "2c614207-94f8-4bba-821c-83ee3889b4cf",
+      "idempotency_key": "b57-bidv-visa-clicktopay-multi-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-clicktopay-bidv",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Visa Click to Pay",
+        "end_date": "2026-08-31",
+        "merchant": "Click to Pay partner offers",
+        "economics": {
+          "oppo_discount_vnd": 300000,
+          "oppo_min_spend_vnd": 6000000,
+          "aeon_beta_discount_vnd": 50000,
+          "vietravel_discount_vnd": 500000,
+          "aeon_beta_min_spend_vnd": 100000,
+          "vietravel_min_spend_vnd": 10000000
+        },
+        "checked_at": "2026-08-16T05:27:55+07:00",
+        "start_date": "2026-06-19",
+        "eligibility": "BIDV Visa via Click to Pay",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-clicktopay-bidv",
+        "benefit_summary": "Current active Click to Pay offers: 300,000 VND off >=6,000,000 at OPPO through 31/08/2026; 500,000 VND off >=10,000,000 at Vietravel through 19/08/2026; 50,000 VND off >=100,000 at Aeon Beta through 19/08/2026. Koi Thé and Thế Giới Skinfood suboffers ended 15/08 and are excluded.",
+        "payment_requirement": "BIDV Visa via Click to Pay",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "bdbc7225-b0fc-4791-9a50-cd30a811696c",
+      "created_at": "2026-08-15T22:29:04.942397+00:00",
+      "committed_at": "2026-08-15T22:42:49.183843+00:00"
+    },
+    {
+      "id": "9959a6d0-ea8c-4fcd-977c-c276d849b364",
+      "idempotency_key": "b57-bidv-jcb-ultimate-overseas-cashback-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-chi-tieu-jcb",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "GLOBAL",
+        "status": "ACTIVE",
+        "partner": "JCB Ultimate",
+        "end_date": "2026-12-31",
+        "merchant": "Overseas POS spending",
+        "economics": {
+          "regional_min_vnd": 3000000,
+          "cashback_1m_min_vnd": 15000000,
+          "cashback_500k_min_vnd": 5000000,
+          "regional_cashback_vnd": 300000,
+          "max_rewards_per_customer": 3
+        },
+        "checked_at": "2026-08-16T05:27:55+07:00",
+        "start_date": "2026-07-01",
+        "eligibility": "BIDV JCB Ultimate credit card BIN 356592; eligible in-person overseas POS transactions",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-chi-tieu-jcb",
+        "benefit_summary": "Cashback tiers for overseas face-to-face spend: 500,000 VND for >=5M transactions outside Japan; 1,000,000 VND for >=15M outside Japan; 300,000 VND for >=3M in Southeast Asia/China/Taiwan/Korea; additional 500,000 VND tier for qualifying F2F transactions per targeted message. Max 3 rewards/customer for program, budget-limited.",
+        "payment_requirement": "BIDV JCB Ultimate physical/in-person POS overseas",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "bdbc7225-b0fc-4791-9a50-cd30a811696c",
+      "created_at": "2026-08-15T22:29:04.942397+00:00",
+      "committed_at": "2026-08-15T22:42:49.183843+00:00"
+    },
+    {
+      "id": "9a142cb3-7ce8-40b9-9ee5-c6b43a687f47",
+      "idempotency_key": "b57-bidv-jcb-shopee-applepay-2026",
+      "source_worker": "PROMO Banks + Travel Shard",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-shopee-applepay-jcb",
+      "candidate": {
+        "brand": "BIDV",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "JCB / Apple Pay",
+        "end_date": "2026-12-31",
+        "merchant": "Shopee",
+        "economics": {
+          "regular_voucher_vnd": 100000,
+          "special_voucher_vnd": 300000,
+          "regular_min_spend_vnd": 500000,
+          "special_min_spend_vnd": 1000000
+        },
+        "checked_at": "2026-08-16T05:27:55+07:00",
+        "start_date": "2026-08-08",
+        "eligibility": "BIDV JCB card paid via Apple Pay in Shopee app",
+        "evidence_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-shopee-applepay-jcb",
+        "benefit_summary": "100,000 VND Shopee voucher for eligible orders >=500,000 on regular eligible days; 300,000 VND voucher for orders >=1,000,000 on specified double-date/mid-month/payday sale dates. Monthly/day quotas and per-card caps apply.",
+        "payment_requirement": "BIDV JCB via Apple Pay",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "bdbc7225-b0fc-4791-9a50-cd30a811696c",
+      "created_at": "2026-08-15T22:29:04.942397+00:00",
+      "committed_at": "2026-08-15T22:42:49.183843+00:00"
+    }
+  ]
+}
