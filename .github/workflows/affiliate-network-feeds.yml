@@ -1,5 +1,5 @@
 name: Affiliate Network Feeds
-# credential recheck trigger 2026-08-19T11:16+07
+# credential recheck trigger 2026-08-19T11:24+07
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
       - '.github/workflows/affiliate-network-feeds.yml'
       - 'integration/affiliate_networks_ingest.py'
       - 'integration/masoffer_ingest_v2.py'
+      - 'integration/ecomobi_tracking_v3.py'
   schedule:
     - cron: '*/15 * * * *'
   workflow_dispatch:
@@ -27,6 +28,8 @@ jobs:
       ECOMOBI_API_KEY: ${{ secrets.ECOMOBI_API_KEY }}
       ECOMOBI_API_SECRET: ${{ secrets.ECOMOBI_API_SECRET }}
       ECOMOBI_API_TOKEN: ${{ secrets.ECOMOBI_API_TOKEN }}
+      ECOMOBI_TOKEN: ${{ secrets.ECOMOBI_TOKEN }}
+      ECOMOBI_TOKEN_PRIVATE: ${{ secrets.ECOMOBI_TOKEN_PRIVATE }}
       MASOFFER_PUBLISHER_ID: ${{ secrets.MASOFFER_PUBLISHER_ID }}
       MASOFFER_PUBLISHER_KEY: ${{ secrets.MASOFFER_PUBLISHER_KEY }}
       MASOFFER_API_TOKEN: ${{ secrets.MASOFFER_API_TOKEN }}
@@ -39,7 +42,10 @@ jobs:
           ref: main
           fetch-depth: 1
 
-      - name: Ingest Ecomobi Passio and legacy MasOffer probes
+      - name: Verify Ecomobi Ecotrackings API v3
+        run: python3 integration/ecomobi_tracking_v3.py
+
+      - name: Ingest Ecomobi offer discovery and legacy MasOffer probes
         run: python3 integration/affiliate_networks_ingest.py
 
       - name: Ingest MasOffer with full publisher credentials
@@ -47,7 +53,7 @@ jobs:
 
       - name: Validate generated feed
         run: |
-          python3 -m py_compile integration/affiliate_networks_ingest.py integration/masoffer_ingest_v2.py
+          python3 -m py_compile integration/ecomobi_tracking_v3.py integration/affiliate_networks_ingest.py integration/masoffer_ingest_v2.py
           python3 - <<'PY'
           import json
           from pathlib import Path
@@ -58,18 +64,20 @@ jobs:
               for line in p.read_text(errors='replace').splitlines():
                   json.loads(line)
           status=json.loads(Path('integration/affiliate_networks_status.json').read_text())
+          e3=json.loads(Path('integration/ecomobi_tracking_status.json').read_text())
           m2=json.loads(Path('integration/masoffer_v2_status.json').read_text())
           assert status.get('production_write') is False
           assert status.get('verification_required') is True
+          assert e3.get('state') in {'OK','AUTH_NOT_RESOLVED','CREDENTIALS_INCOMPLETE'}
           assert m2.get('state') in {'OK','API_NOT_RESOLVED','CREDENTIALS_INCOMPLETE'}
-          print('Affiliate feed validation OK', m2.get('state'))
+          print('Affiliate feed validation OK', 'EcomobiTracking='+str(e3.get('state')), 'MasOffer='+str(m2.get('state')))
           PY
 
       - name: Persist affiliate network feeds
         run: |
           git config user.name "promo-affiliate-feed-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add integration/ecomobi_handoff_v1.jsonl integration/masoffer_handoff_v1.jsonl integration/affiliate_networks_status.json integration/masoffer_v2_status.json
+          git add integration/ecomobi_handoff_v1.jsonl integration/ecomobi_tracking_status.json integration/masoffer_handoff_v1.jsonl integration/affiliate_networks_status.json integration/masoffer_v2_status.json
           if git diff --cached --quiet; then
             echo "No affiliate feed changes"
             exit 0
