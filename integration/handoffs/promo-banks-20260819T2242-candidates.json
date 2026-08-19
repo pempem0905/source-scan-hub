@@ -1,0 +1,51 @@
+{
+  "schema": "promo.banks_handoff.v2",
+  "generated_at": "2026-08-19T22:42:23+07:00",
+  "source_worker": "PROMO Banks Shard",
+  "pipeline": "TURBO_SCAN_PIPELINE_V2",
+  "input_contract": "GitHub ELIGIBLE + ACTIVE_INPUT assigned PROMO_BANKS",
+  "candidates": [
+    {
+      "idempotency_key": "PROMO_BANKS|momo.vn|VTSCF29|2026-06-15|2026-12-31",
+      "source_worker": "PROMO Banks Shard",
+      "source_id": "SRCV1-C379353D0B36",
+      "source_domain": "momo.vn",
+      "merchant": "Highlands Coffee",
+      "partner": "MoMo Ví Trả Sau",
+      "offer_type": "voucher_code",
+      "literal_code": "VTSCF29",
+      "benefit": "Mua 01 Phin Sữa Đá cỡ L, tặng 01 Phin Sữa Đá cỡ S tại nhóm cửa hàng có giá Phin Sữa Đá 29.000 VND",
+      "payment_requirement": "Thanh toán bằng Ví Trả Sau trên MoMo",
+      "valid_days": ["FRIDAY", "SATURDAY", "SUNDAY"],
+      "usage_limit": "01 lần mỗi 02 tuần; tối đa 02 lần/tháng trên 01 tài khoản MoMo và 01 thiết bị",
+      "geo": "Hầu hết cửa hàng Highlands Coffee toàn quốc, có danh sách loại trừ theo thể lệ",
+      "start_date": "2026-06-15",
+      "end_date": "2026-12-31",
+      "status": "READY",
+      "evidence_url": "https://www.momo.vn/tin-tuc/khuyen-mai/highlands-coffee-mua-1-tang-1-phin-sua-da-cuc-hoi-8851",
+      "value_filter_version": "actionable-value-v2",
+      "verified_at": "2026-08-19T22:42:23+07:00"
+    },
+    {
+      "idempotency_key": "PROMO_BANKS|momo.vn|VTSCF35|2026-06-15|2026-12-31",
+      "source_worker": "PROMO Banks Shard",
+      "source_id": "SRCV1-C379353D0B36",
+      "source_domain": "momo.vn",
+      "merchant": "Highlands Coffee",
+      "partner": "MoMo Ví Trả Sau",
+      "offer_type": "voucher_code",
+      "literal_code": "VTSCF35",
+      "benefit": "Mua 01 Phin Sữa Đá cỡ L, tặng 01 Phin Sữa Đá cỡ S tại nhóm cửa hàng có giá Phin Sữa Đá 35.000 VND",
+      "payment_requirement": "Thanh toán bằng Ví Trả Sau trên MoMo",
+      "valid_days": ["FRIDAY", "SATURDAY", "SUNDAY"],
+      "usage_limit": "01 lần mỗi 02 tuần; tối đa 02 lần/tháng trên 01 tài khoản MoMo và 01 thiết bị",
+      "geo": "Hầu hết cửa hàng Highlands Coffee toàn quốc, có danh sách loại trừ theo thể lệ",
+      "start_date": "2026-06-15",
+      "end_date": "2026-12-31",
+      "status": "READY",
+      "evidence_url": "https://www.momo.vn/tin-tuc/khuyen-mai/highlands-coffee-mua-1-tang-1-phin-sua-da-cuc-hoi-8851",
+      "value_filter_version": "actionable-value-v2",
+      "verified_at": "2026-08-19T22:42:23+07:00"
+    }
+  ]
+}
