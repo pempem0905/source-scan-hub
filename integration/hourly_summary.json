@@ -1,27 +1,27 @@
 {
   "alerts": [
     "stale canonical suppressed: raw 319/66, floor 360/77",
-    "canonical telemetry stale 1507m",
+    "canonical telemetry stale 1582m",
     "Ecomobi offer feed: endpoint kho offer/product chưa resolve; tracking API không được tính là promo feed"
   ],
-  "generated_at": "2026-08-19T05:32:55.270623Z",
-  "local_time": "2026-08-19T12:32:55.270617+07:00",
+  "generated_at": "2026-08-19T06:48:08.075115Z",
+  "local_time": "2026-08-19T13:48:08.075110+07:00",
   "metrics": {
     "actionable_offers": 360,
     "active_sources": 230,
     "at_offers": 2000,
-    "at_tiktok": 140,
+    "at_tiktok": 139,
     "ecomobi_candidates": 0,
     "ecomobi_recent_conversions": 0,
-    "hunter_domains": 2008,
+    "hunter_domains": 2021,
     "literal_codes": 77,
     "masoffer_candidates": 270,
-    "master_sources": 1740,
+    "master_sources": 1753,
     "promo_scanned_sources": 326,
     "raw_actionable_offers": 319,
     "raw_literal_codes": 66,
-    "review_sources": 1492,
-    "seen_urls": 864578
+    "review_sources": 1505,
+    "seen_urls": 876854
   },
   "platform_states": {
     "PREAUTH_PENDING_SESSION": 5,
@@ -29,5 +29,5 @@
     "WAIT_SOURCE_MAPPING": 1
   },
   "schema": "promo.hourly_summary.v1",
-  "text": "PROMO: 360 voucher/deal | 77 code\nMới: +0 voucher/deal | +0 code | +11 source\nSource: 326/230 (142%)\nAccessTrade: 2000 promo | TikTok 140\nMasOffer: OK | candidates 270\nEcomobi: tracking OK | offer API_NOT_RESOLVED | candidates 0\nL2: chưa login-ready; 7 profile đang xử lý\nETA login: đang tự retry theo lượt free\nETA all jobs: chưa đủ throughput canonical ổn định\nCải tiến: stale canonical suppressed: raw 319/66, floor 360/77 | canonical telemetry stale 1507m | Ecomobi offer feed: endpoint kho offer/product chưa resolve; tracking API không được tính là promo feed"
+  "text": "PROMO: 360 voucher/deal | 77 code\nMới: +0 voucher/deal | +0 code | +13 source\nSource: 326/230 (142%)\nAccessTrade: 2000 promo | TikTok 139\nMasOffer: OK | candidates 270\nEcomobi: tracking OK | offer API_NOT_RESOLVED | candidates 0\nL2: chưa login-ready; 7 profile đang xử lý\nETA login: đang tự retry theo lượt free\nETA all jobs: chưa đủ throughput canonical ổn định\nCải tiến: stale canonical suppressed: raw 319/66, floor 360/77 | canonical telemetry stale 1582m | Ecomobi offer feed: endpoint kho offer/product chưa resolve; tracking API không được tính là promo feed"
 }
