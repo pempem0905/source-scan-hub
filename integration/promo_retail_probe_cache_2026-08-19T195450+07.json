@@ -1,0 +1,34 @@
+{
+  "schema": "promo.retail.probe_cache.run.v1",
+  "source_worker": "PROMO Retail Shard",
+  "checked_at": "2026-08-19T19:54:50+07:00",
+  "entries": [
+    {
+      "url": "https://www.samsung.com/vn/offer/",
+      "result": "LITERAL_CODES_REVIEW_VALIDITY_UNRESOLVED",
+      "code_signal": true,
+      "observed_literals": ["LS-68S26", "LS-THANG6"],
+      "notes": "Official current offers page exposes exact reusable-looking tokens with concrete product economics, but no controlling current/future validity window was resolved in this run; do not enqueue until date evidence is explicit."
+    },
+    {
+      "url": "https://www.samsung.com/vn/offer/samsung-live-shop/",
+      "result": "MIXED_EXPIRED_OR_UNRESOLVED_LITERALS",
+      "code_signal": true,
+      "observed_literals": ["LS-SSZ8", "AI-SSZ8", "LS-THANG7", "AI-THANG7"],
+      "notes": "Live Shop surfaces exact tokens, but Z-series pre-order controlling page ended 13/08/2026 and other token validity was not explicitly resolved; no clean enqueue."
+    },
+    {
+      "url": "https://www.samsung.com/vn/offer/galaxy-z-fold7-flip7-series/",
+      "result": "EXPIRED_LITERAL",
+      "code_signal": true,
+      "observed_literals": ["LS-THANG8"],
+      "notes": "Official page labels the related Shop App offer as expired; reject as current literal."
+    },
+    {
+      "url": "https://mediamart.vn/tin-khuyen-mai/samsung-tri-an-dam-sau-uu-dai-cuc-ngau",
+      "result": "ACTIONABLE_VOUCHER_NO_LITERAL_ENQUEUED",
+      "code_signal": false,
+      "notes": "Official campaign 01/08-31/08/2026; eligible Samsung appliance purchase grants phone voucher tier 200K/300K/400K; no reusable public literal; deterministic candidate enqueued."
+    }
+  ]
+}
