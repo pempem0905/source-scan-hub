@@ -1,0 +1,27 @@
+{
+  "schema": "promo.banks.telemetry.v2",
+  "source_worker": "PROMO Banks Shard",
+  "last_run_at": "2026-08-20T00:38:39+07:00",
+  "fast_probes": 20,
+  "shortlisted": 7,
+  "deep_validations": 5,
+  "cache_skips": 0,
+  "sources_read": 12,
+  "code_likely_sources_read": 7,
+  "no_code_reads": 5,
+  "family_rotations": 1,
+  "offers_found": 2,
+  "voucher_benefits_found": 2,
+  "literal_codes_found": 2,
+  "codes_per_10_reads": 1.67,
+  "enqueued": 2,
+  "blocked": 0,
+  "duplicates": 8,
+  "lovable_calls": 0,
+  "notes": [
+    "BIDV JCB Klook/Trip exact codes were found again but skipped as existing GitHub handoff duplicates.",
+    "Expired MoMo 8.8/World Cup codes were rejected by current-date gate.",
+    "HSBC Ascott HSBCVN25 appears attached to stale 2024 material and was not enqueued.",
+    "Only GitHub ELIGIBLE+ACTIVE_INPUT PROMO_BANKS domains were consumed."
+  ]
+}
