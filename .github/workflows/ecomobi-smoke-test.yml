@@ -1,0 +1,49 @@
+name: Ecomobi Credential Smoke Test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ecomobi-smoke-test.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ecomobi-credential-smoke
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      ECOMOBI_TOKEN: ${{ secrets.ECOMOBI_TOKEN }}
+      ECOMOBI_TOKEN_PRIVATE: ${{ secrets.ECOMOBI_TOKEN_PRIVATE }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Verify Ecomobi Ecotrackings auth
+        run: python3 integration/ecomobi_tracking_v3.py
+      - name: Validate status
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('integration/ecomobi_tracking_status.json')
+          s=json.loads(p.read_text())
+          assert s.get('state') in {'OK','AUTH_NOT_RESOLVED','CREDENTIALS_INCOMPLETE'}
+          print(s)
+          PY
+      - name: Persist smoke result
+        run: |
+          git config user.name "promo-ecomobi-smoke-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add integration/ecomobi_tracking_status.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Ecomobi credential smoke result [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
