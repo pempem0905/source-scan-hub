@@ -1,0 +1,48 @@
+{
+  "schema": "promo.retail.probe_cache_delta.v1",
+  "source_worker": "PROMO Retail Shard",
+  "checked_at": "2026-08-19T16:54:30+07:00",
+  "entries": [
+    {
+      "url": "https://urbanrevivo.com.vn/pages/promotion",
+      "result": "ACTIVE_LITERALS_DUPLICATE",
+      "code_signal": true,
+      "observed_literals": ["URFS08", "URPAY", "URWELCOME"],
+      "notes": "Official promotion page currently validates URFS08 free shipping on orders from 1.199M through 31/08/2026, URPAY 10% online-payment discount capped 100K through 30/09/2026, and URWELCOME 10% first full-price member order. All three already exist in GitHub retail queue; skip re-enqueue."
+    },
+    {
+      "url": "https://www.samsung.com/vn/smartphones/galaxy-s26/buy/",
+      "result": "REVIEW_LITERAL_VALIDITY_UNRESOLVED",
+      "code_signal": true,
+      "observed_literals": ["LS-THANG6"],
+      "notes": "Official current Galaxy S26 buying surface still exposes LS-THANG6 with discount up to 2M when bundled with Galaxy ecosystem/Samsung Care+, but this run could not resolve an explicit controlling current validity end date. Do not enqueue/count until validity is resolved."
+    },
+    {
+      "url": "https://www.samsung.com/vn/offer/galaxy-z-fold8-flip8/",
+      "result": "EXPIRED_LITERAL_REJECT",
+      "code_signal": true,
+      "observed_literals": ["LS-THANG8"],
+      "notes": "Official Samsung offer page explicitly marks the offer expired; reject exact token despite code visibility."
+    },
+    {
+      "url": "https://yody.vn/post/hot-nhan-voucher-100k-doc-quyen-tren-website-mung-yody-dat-top-1",
+      "result": "REVIEW_LITERAL_VALIDITY_UNRESOLVED",
+      "code_signal": true,
+      "observed_literals": ["YODYCE87"],
+      "notes": "Official YODY article exposes YODYCE87 for 100K off a 699K full-price new-customer order, but no controlling current validity end date was resolved; keep REVIEW and do not enqueue."
+    },
+    {
+      "url": "https://mediamart.vn/tin-khuyen-mai/samsung-tri-an-dam-sau-uu-dai-cuc-ngau",
+      "result": "ACTIONABLE_ISSUED_VOUCHER_NO_PUBLIC_LITERAL",
+      "code_signal": true,
+      "notes": "Active 01/08-31/08/2026. Qualifying Samsung appliance purchase earns one MediaMart voucher worth 200K-400K by eligible Samsung phone model, valid 15 days and no later than 31/08. Voucher is issued per qualifying purchase; no reusable public literal exposed."
+    },
+    {
+      "url": "https://www.pharmacity.vn/mua-hang-nhan-coupon.lp",
+      "result": "DUPLICATE_PRIOR_RUN_ACTIONABLE_ACCOUNT_COUPON",
+      "code_signal": true,
+      "notes": "Current 01/08-31/08/2026 member benefit: in-store bill from 150K earns account-issued 40K coupon for online order from 350K, valid 15 days. Already enqueued by prior Retail run at 15:56; skip duplicate."
+    }
+  ],
+  "lovable_calls": 0
+}
