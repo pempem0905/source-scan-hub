@@ -1,0 +1,39 @@
+{
+  "schema": "promo.retail.probe_cache_delta.v1",
+  "source_worker": "PROMO Retail Shard",
+  "checked_at": "2026-08-19T17:57:06+07:00",
+  "entries": [
+    {
+      "url": "https://www.bachhoaxanh.com/kinh-nghiem-hay/mua-hang-online-nhieu-uu-dai-khi-thanh-toan-truc-tuyen-tai-bach-hoa-xanh-1476661",
+      "result": "EXPIRED_LITERAL_REJECT",
+      "code_signal": true,
+      "observed_literals": ["ZLPBHX"],
+      "notes": "Official Bách hóa XANH page exposes exact ZLPBHX for ZaloPay discounts, but the controlling campaign window is February-March 2026; expired as of 2026-08-19."
+    },
+    {
+      "url": "https://www.emart.com.vn/chuong-trinh-khuyen-mai/an-pham-khuyen-mai/",
+      "result": "NO_CURRENT_LITERAL_CODE",
+      "code_signal": false,
+      "notes": "Latest indexed official Emart promotional publication found in this probe ended 12/08/2026; no current reusable public literal exposed."
+    },
+    {
+      "url": "https://phuclong.com.vn/khuyen-mai/Phuc-Long-58-nam-20260311111933",
+      "result": "EXPIRED_DYNAMIC_QR_CONTEST_NO_LITERAL",
+      "code_signal": true,
+      "notes": "Official Phúc Long QR/scratch promotion ran 07/05-05/06/2026. QR/contest identifiers are dynamic and campaign is expired; never count as reusable literal."
+    },
+    {
+      "url": "https://lottemallwestlakehanoi.vn/en/event/132",
+      "result": "EXPIRED_ACTIONABLE_NO_LITERAL",
+      "code_signal": false,
+      "notes": "Official Lotte Mall Weekend Retreat #3 had actionable receipt/member benefits only on 01-02/08/2026; expired, with no reusable public literal."
+    },
+    {
+      "url": "https://winmart.vn/",
+      "result": "SEARCH_NOISE_ROTATE_FAMILY",
+      "code_signal": false,
+      "notes": "Fresh official-domain search was dominated by WinMart recruitment pages rather than consumer promotion children; no clean current literal surfaced in the bounded probe."
+    }
+  ],
+  "lovable_calls": 0
+}
