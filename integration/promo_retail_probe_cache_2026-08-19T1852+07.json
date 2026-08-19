@@ -1,0 +1,16 @@
+{
+  "schema": "promo.retail.probe_cache.v1",
+  "updated_at": "2026-08-19T18:52:41+07:00",
+  "source_worker": "PROMO Retail Shard",
+  "mode": "TURBO_SCAN_PIPELINE_V2",
+  "entries": [
+    {"url":"https://www.dienmayxanh.com/khuyen-mai/tang-phieu-mua-hang-den-2-trieu-mua-tu-lanh-1596515","result":"ACTIONABLE_VOUCHER_NO_LITERAL_ENQUEUED","code_signal":true,"notes":"Active 01/08-06/09/2026; PMH 1M/2M, issued voucher HSD 7 days; no reusable literal.","checked_at":"2026-08-19T18:52:41+07:00"},
+    {"url":"https://www.dienmayxanh.com/khuyen-mai/nhan-ngay-voucher-mua-bao-hiem-xe-may-khi-nap-1583189","result":"ACTIONABLE_VOUCHER_NO_LITERAL_ENQUEUED","code_signal":true,"notes":"Active 01/08-31/08/2026; three PMH benefits 50K+20K+20K; no reusable literal.","checked_at":"2026-08-19T18:52:41+07:00"},
+    {"url":"https://www.pharmacity.vn/mua-hang-nhan-coupon.lp","result":"EXPIRED_DYNAMIC_COUPON","code_signal":true,"notes":"Controlling official terms visible in fetched page are 01/12-31/12/2025; account-issued coupon, not current.","checked_at":"2026-08-19T18:52:41+07:00"},
+    {"url":"https://lottemallwestlakehanoi.vn/en/promotion/1655","result":"EXPIRED_LITERAL","code_signal":true,"observed_literals":["CJKTANG15%"],"notes":"Exact official literal exists but controlling dates were March/April 2026; reject expired.","checked_at":"2026-08-19T18:52:41+07:00"},
+    {"url":"https://www.galaxycine.vn/khuyen-mai/voucher-giam-khung-danh-tang-cac-stars/","result":"DUPLICATE_ACTIONABLE_NO_LITERAL","code_signal":true,"notes":"Active ShopeePay voucher campaign through 31/08/2026; voucher is claimed in app and already present in retail handoff.","checked_at":"2026-08-19T18:52:41+07:00"},
+    {"url":"https://cellphones.com.vn/uu-dai-doi-tac/shopeepay","result":"DUPLICATE_ACTIONABLE_NO_LITERAL","code_signal":true,"notes":"Active 01/08-30/09/2026 5% discount capped 500K; account/wallet-displayed code behavior, already in retail handoff.","checked_at":"2026-08-19T18:52:41+07:00"},
+    {"url":"https://concung.com/landingpage-vong-quay-ta-sua-sinh-nhat.html","result":"ACTIONABLE_DYNAMIC_VOUCHER_NO_LITERAL","code_signal":true,"notes":"Current August promotion surfaces issued discount benefits but no stable reusable public literal; do not count dynamic/account voucher IDs.","checked_at":"2026-08-19T18:52:41+07:00"},
+    {"url":"https://www.circlek.com.vn/vi/uu-dai-dac-biet/","result":"EXPIRED_NO_LITERAL","code_signal":false,"notes":"Visible promotion window ended 13/08/2026; no current reusable literal.","checked_at":"2026-08-19T18:52:41+07:00"}
+  ]
+}
