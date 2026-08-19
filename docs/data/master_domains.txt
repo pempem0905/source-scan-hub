@@ -1114,6 +1114,18 @@ auacorp.vn
 aubestudio.vn
 aubot.vn
 aucontech.vn
+audio24h.vn
+audio2nd.vn
+audio360.vn
+audiobay.vn
+audiobook.vn
+audiohome.vn
+audioliena.vn
+audiomart.vn
+audiophile.vn
+audioquest.vn
+audioroom.vn
+audioservice.vn
 auto5.vn
 autoguide.com
 award.atomgroup.vn
@@ -1310,6 +1322,7 @@ deloitte.com
 deloittedigital.com
 demandsage.com
 developers.accesstrade.vn
+devialet.com.vn
 diabetes.ascensia.vn
 diamond.vpbank.com.vn
 dichvu.anysoft.vn

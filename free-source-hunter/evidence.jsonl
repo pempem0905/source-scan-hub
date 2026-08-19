@@ -881,3 +881,4 @@
 {"at": "2026-08-19T10:58:23.346566Z", "domain": "direct.playstation.com", "radar": false, "url": "https://direct.playstation.com/de-lu/deals", "via": "internal_promo"}
 {"at": "2026-08-19T11:23:44.357363Z", "domain": "dallas.culturemap.com", "radar": false, "url": "https://dallas.culturemap.com/feeds/community/promoted.rss", "via": "internal_promo"}
 {"at": "2026-08-19T11:23:44.357363Z", "domain": "mercuryholidays.ie", "radar": false, "url": "https://mercuryholidays.ie/", "via": "external_promo"}
+{"at": "2026-08-19T12:02:35.766513Z", "domain": "devialet.com.vn", "radar": false, "url": "https://devialet.com.vn/", "via": "common_crawl_domain"}

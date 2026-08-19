@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-19T11:28:38.151956Z",
+  "generated_at": "2026-08-19T12:06:50.209261Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 6137,
-    "frontier_deferred_pending": 38592,
-    "frontier_pending": 44729,
+    "frontier_active_pending": 5715,
+    "frontier_deferred_pending": 38656,
+    "frontier_pending": 44371,
     "last_6_runs_new_domains": 13,
     "last_run": {
-      "at": "2026-08-19T11:23:44.357363Z",
+      "at": "2026-08-19T12:02:35.766513Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vn/*uu-dai*",
-        "*.com/vn/*voucher*",
-        "*.com/vn/*promotion*",
-        "*.com/vi-vn/*khuyen-mai*"
+        "*.com/vi-vn/*uu-dai*",
+        "*.com/vi-vn/*voucher*",
+        "*.com/vi-vn/*promotion*",
+        "*.net/vn/*khuyen-mai*"
       ],
-      "duration_s": 291.8,
-      "errors": 80,
-      "frontier_pending": 44729,
-      "new_domains": 2,
-      "processed": 1408,
-      "rate403": 0.71,
+      "duration_s": 252.4,
+      "errors": 99,
+      "frontier_pending": 44371,
+      "new_domains": 1,
+      "processed": 1344,
+      "rate403": 0.223,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 2156,
+    "master_domains": 2169,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 169,
+    "run_count": 170,
     "running": true,
-    "seen_urls": 933794,
-    "updated_at": "2026-08-19T11:28:36.110248Z"
+    "seen_urls": 939562,
+    "updated_at": "2026-08-19T12:06:48.132323Z"
   },
   "master_input": {
     "active_input_count": 237,
@@ -41,33 +41,33 @@
       "BANK_CARD": 38,
       "DISCOVERY_ONLY": 18,
       "FOOD_BEVERAGE": 30,
-      "GENERAL": 1645,
+      "GENERAL": 1657,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 35,
       "PROMO_L2": 15,
       "PROMO_RETAIL": 187,
-      "PUBLIC_HTTP": 1855,
+      "PUBLIC_HTTP": 1868,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 110,
-      "REVIEW_INPUT": 1616,
+      "RETAIL_ECOMMERCE": 111,
+      "REVIEW_INPUT": 1629,
       "SOURCE_HUNTER": 18,
-      "SOURCE_REVIEW": 1616,
+      "SOURCE_REVIEW": 1629,
       "TRAVEL_MOBILITY": 31
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 18,
-    "generated_at": "2026-08-19T11:28:37.922235Z",
+    "generated_at": "2026-08-19T12:06:49.975437Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1871,
-    "review_input_count": 1616,
+    "record_count": 1884,
+    "review_input_count": 1629,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 2156,
+    "source_hunter_domains": 2169,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -295,7 +295,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-19T10:47:53.915028Z",
+    "updated_at": "2026-08-19T11:42:43.431655Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -386,34 +386,27 @@
     "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "chuỗi bán lẻ khuyến mãi Việt Nam",
-      "chuỗi bán lẻ ưu đãi Việt Nam",
-      "chuỗi bán lẻ voucher Việt Nam",
-      "chuỗi bán lẻ promotion Vietnam"
+      "cửa hàng tiện lợi khuyến mãi Việt Nam",
+      "cửa hàng tiện lợi ưu đãi Việt Nam",
+      "cửa hàng tiện lợi voucher Việt Nam",
+      "cửa hàng tiện lợi promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 142,
+    "cc_domain_page": 143,
     "frontier_scheduler": {
-      "active": 1408,
+      "active": 1344,
       "base_per_host_batch": 16,
-      "deferred": 38592,
+      "deferred": 38656,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 162
+      "unique_hosts": 153
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T15:14:45.013508Z",
-      "domain": "br.macduggal.com",
-      "radar": false,
-      "url": "https://br.macduggal.com/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-18T15:14:45.013508Z",
       "domain": "ch.macduggal.com",
@@ -1246,6 +1239,13 @@
       "radar": false,
       "url": "https://mercuryholidays.ie/",
       "via": "external_promo"
+    },
+    {
+      "at": "2026-08-19T12:02:35.766513Z",
+      "domain": "devialet.com.vn",
+      "radar": false,
+      "url": "https://devialet.com.vn/",
+      "via": "common_crawl_domain"
     }
   ]
 }
