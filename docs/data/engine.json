@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-19T18:32:24.938252Z",
+  "generated_at": "2026-08-19T19:06:58.669923Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 5330,
-    "frontier_deferred_pending": 38797,
-    "frontier_pending": 44127,
-    "last_6_runs_new_domains": 5,
+    "frontier_active_pending": 6019,
+    "frontier_deferred_pending": 38828,
+    "frontier_pending": 44847,
+    "last_6_runs_new_domains": 6,
     "last_run": {
-      "at": "2026-08-19T18:28:53.027609Z",
+      "at": "2026-08-19T19:03:02.646599Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.net/vn/*uu-dai*",
-        "*.com/vietnam/*promotion*",
-        "*.vn/*khuyen-mai*",
-        "*.vn/*khuyenmai*"
+        "*.vn/*uu-dai*",
+        "*.vn/*uudai*",
+        "*.vn/*voucher*",
+        "*.vn/*promotion*"
       ],
-      "duration_s": 209.7,
-      "errors": 33,
-      "frontier_pending": 44127,
-      "new_domains": 0,
-      "processed": 1203,
-      "rate403": 0.249,
+      "duration_s": 233.7,
+      "errors": 35,
+      "frontier_pending": 44847,
+      "new_domains": 2,
+      "processed": 1172,
+      "rate403": 0.0,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 2264,
+    "master_domains": 2277,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 181,
+    "run_count": 182,
     "running": true,
-    "seen_urls": 1008808,
-    "updated_at": "2026-08-19T18:32:22.763289Z"
+    "seen_urls": 1014870,
+    "updated_at": "2026-08-19T19:06:56.387857Z"
   },
   "master_input": {
-    "active_input_count": 238,
+    "active_input_count": 239,
     "counts": {
-      "ACTIVE_INPUT": 238,
+      "ACTIVE_INPUT": 239,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 38,
       "DISCOVERY_ONLY": 18,
       "FOOD_BEVERAGE": 31,
-      "GENERAL": 1738,
+      "GENERAL": 1749,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 35,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 188,
-      "PUBLIC_HTTP": 1954,
+      "PROMO_RETAIL": 189,
+      "PUBLIC_HTTP": 1967,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 114,
-      "REVIEW_INPUT": 1714,
+      "RETAIL_ECOMMERCE": 116,
+      "REVIEW_INPUT": 1726,
       "SOURCE_HUNTER": 18,
-      "SOURCE_REVIEW": 1714,
+      "SOURCE_REVIEW": 1726,
       "TRAVEL_MOBILITY": 32
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 18,
-    "generated_at": "2026-08-19T18:32:24.706033Z",
+    "generated_at": "2026-08-19T19:06:58.431466Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1970,
-    "review_input_count": 1714,
+    "record_count": 1983,
+    "review_input_count": 1726,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 2264,
+    "source_hunter_domains": 2277,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -295,7 +295,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-19T18:01:34.888610Z",
+    "updated_at": "2026-08-19T18:54:54.955616Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -383,44 +383,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 0,
+    "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "khách sạn resort khuyến mãi Việt Nam",
-      "khách sạn resort ưu đãi Việt Nam",
-      "khách sạn resort voucher Việt Nam",
-      "khách sạn resort promotion Vietnam"
+      "hãng bay du lịch khuyến mãi Việt Nam",
+      "hãng bay du lịch ưu đãi Việt Nam",
+      "hãng bay du lịch voucher Việt Nam",
+      "hãng bay du lịch promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 154,
+    "cc_domain_page": 155,
     "frontier_scheduler": {
-      "active": 1203,
+      "active": 1172,
       "base_per_host_batch": 16,
-      "deferred": 38797,
+      "deferred": 38828,
       "effective_per_host_batch": 16,
       "max_active": 1800,
-      "previous_429_rate": 0.081,
+      "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 127
+      "unique_hosts": 125
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T17:11:58.442906Z",
-      "domain": "summersalt.com",
-      "radar": false,
-      "url": "https://summersalt.com/collections/archive-sale",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T17:11:58.442906Z",
-      "domain": "vividseats.com",
-      "radar": false,
-      "url": "https://vividseats.com/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-18T17:11:58.442906Z",
       "domain": "metro.co.uk",
@@ -1246,6 +1232,20 @@
       "radar": false,
       "url": "https://ipos.vn/",
       "via": "free_search"
+    },
+    {
+      "at": "2026-08-19T19:03:02.646599Z",
+      "domain": "vietnam-tickets.com",
+      "radar": false,
+      "url": "https://vietnam-tickets.com/",
+      "via": "free_search"
+    },
+    {
+      "at": "2026-08-19T19:03:02.646599Z",
+      "domain": "itch.io",
+      "radar": false,
+      "url": "https://itch.io/games/on-sale?page=7",
+      "via": "internal_promo"
     }
   ]
 }

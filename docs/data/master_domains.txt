@@ -1199,6 +1199,16 @@ avanta.vn
 avantiboutique.vn
 avantihotel.vn
 avdh.vn
+avitechresearch.vn
+avitechshop.vn
+avitek.vn
+avivahouse.vn
+avl.vn
+avlaw.vn
+avlsolutions.vn
+avnaudit.vn
+avngroup.vn
+avnstore.vn
 award.atomgroup.vn
 badgermapping.com
 bain.com
@@ -1515,6 +1525,7 @@ giaidau.360play.vn
 giaidau.moba.360mobi.vn
 giaoduc.art-house.vn
 giaoduc.net.vn
+giaoducmo.avnuc.vn
 giaohangtotnhat.vn
 giaxeoto.vn
 gigamall.com.vn
@@ -1623,6 +1634,7 @@ it.fiverr.com
 it.macduggal.com
 it.semrush.com
 italist.com
+itch.io
 ja.semrush.com
 jangin.vn
 jeffreycampbellshoes.com
@@ -2153,6 +2165,7 @@ vienhoahoc.ac.vn
 vietbank.com.vn
 vietcombank.com.vn
 vieteltelecom.vn
+vietnam-tickets.com
 vietnam.vn
 vietnamairlines.com
 vietnambiz.vn
