@@ -1,10 +1,32 @@
 {
-  "schema": "promo.masoffer_status.v2",
-  "generated_at": "2026-08-19T04:13:24.588893Z",
-  "state": "CREDENTIALS_INCOMPLETE",
-  "publisher_id_present": false,
-  "publisher_key_present": false,
   "api_token_present": true,
-  "endpoints_considered": 9,
-  "candidate_rows": 0
+  "auth_variants": 10,
+  "candidate_rows": 269,
+  "credentials_complete": true,
+  "endpoints_considered": 4,
+  "error_tail": [
+    "HTTP_500:/offer/brand",
+    "HTTP_500:/offer/brand",
+    "HTTP_500:/offer/brand",
+    "HTTP_500:/offer/brand",
+    "HTTP_500:/offer/brand",
+    "HTTP_500:/offer/brand",
+    "HTTP_500:/offer/brand",
+    "HTTP_500:/offer/brand"
+  ],
+  "generated_at": "2026-08-19T04:33:40.719011Z",
+  "last_error": "HTTP_500:/offer/brand",
+  "publisher_id_present": true,
+  "publisher_key_present": true,
+  "query_variants": 9,
+  "schema": "promo.masoffer_status.v2",
+  "state": "OK",
+  "successful_endpoints": [
+    {
+      "endpoint": "https://publisher-api.masoffer.net/offer/all",
+      "http_status": 200,
+      "raw_rows": 269,
+      "variant": "h1/q8"
+    }
+  ]
 }

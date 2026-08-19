@@ -1,0 +1,10 @@
+{
+  "conversion_rows_persisted": false,
+  "endpoint": "/api/v3/conversions",
+  "generated_at": "2026-08-19T04:29:33.760607Z",
+  "purpose": "tracking_auth_health_only",
+  "schema": "promo.ecomobi_tracking_status.v3",
+  "state": "CREDENTIALS_INCOMPLETE",
+  "token_present": false,
+  "token_private_present": false
+}
