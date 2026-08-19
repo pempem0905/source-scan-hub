@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>VoucherFreeVn — UI Lab</title>
+<meta name="description" content="UI Lab thử nghiệm giao diện VoucherFreeVn" />
+<style>
+:root{
+  --bg:#f7f8fa;--surface:#fff;--surface2:#f0f3f6;--text:#15181c;--muted:#69717c;--line:#e4e8ed;
+  --brand:#ff5a36;--brand2:#ff8a38;--green:#138a5b;--blue:#2c6bed;--radius:18px;--shadow:0 10px 34px rgba(16,24,40,.08);
+  --content:1220px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}
+.shell{min-height:100vh}.topbar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.topbar-in{max-width:var(--content);margin:auto;padding:9px 16px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:center}.brand{display:flex;align-items:center;gap:9px;font-weight:900;font-size:16px}.brandmark{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--brand),var(--brand2));display:grid;place-items:center;color:white;font-weight:900;box-shadow:0 6px 14px rgba(255,90,54,.25)}
+.nav{display:flex;gap:4px;overflow:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a{white-space:nowrap;padding:8px 10px;border-radius:10px;color:var(--muted);font-weight:700;font-size:12px}.nav a.active,.nav a:hover{background:var(--surface2);color:var(--text)}.top-actions{display:flex;gap:7px}.iconbtn{border:1px solid var(--line);background:white;width:36px;height:36px;border-radius:11px;display:grid;place-items:center}.avatar{background:#14171b;color:white;font-weight:800}
+.labbar{background:#17191d;color:white}.labbar-in{max-width:var(--content);margin:auto;padding:8px 16px;display:flex;align-items:center;gap:10px;justify-content:space-between}.lab-note{font-size:12px;color:#b9bec7}.modes{display:flex;gap:4px;background:#24272c;padding:3px;border-radius:12px}.mode{border:0;background:transparent;color:#bdc3cc;padding:6px 9px;border-radius:9px;font-size:11px;font-weight:800}.mode.active{background:white;color:#15181c}
+.main{max-width:var(--content);margin:auto;padding:18px 16px 90px}.hero{background:linear-gradient(135deg,#17191d 0%,#24272d 55%,#2d2924 100%);color:white;border-radius:28px;padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;right:-80px;top:-120px;width:310px;height:310px;border-radius:50%;background:radial-gradient(circle,rgba(255,138,56,.35),transparent 65%)}.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:24px;align-items:end;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);padding:6px 9px;border-radius:999px;font-size:11px;font-weight:800}.hero h1{font-size:38px;line-height:1.06;letter-spacing:-.04em;margin:14px 0 10px;max-width:720px}.hero p{margin:0;color:#c8cbd1;font-size:14px;max-width:650px}.searchbox{margin-top:19px;background:white;border-radius:17px;padding:6px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:6px;max-width:780px;box-shadow:0 12px 28px rgba(0,0,0,.24)}.searchbox span{color:#7a838f;padding-left:7px}.searchbox input{border:0;outline:0;padding:11px 4px;font-size:14px;min-width:0}.searchbox button{border:0;background:var(--brand);color:white;padding:11px 17px;border-radius:12px;font-weight:800}.location-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:16px}.location-card .big{font-size:19px;font-weight:900;margin-top:3px}.location-card .meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.mini{font-size:10px;padding:5px 7px;border-radius:999px;background:rgba(255,255,255,.1);color:#d6d9de}
+.quick{display:grid;grid-template-columns:repeat(6,1fr);gap:9px;margin-top:12px}.quick button{border:1px solid var(--line);background:white;border-radius:16px;padding:13px 10px;text-align:left;min-height:74px;box-shadow:0 4px 13px rgba(16,24,40,.035)}.quick b{display:block;margin-top:7px;font-size:12px}.quick small{display:block;color:var(--muted);font-size:10px;margin-top:2px}.qico{font-size:20px}
+.section{margin-top:26px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:10px;margin-bottom:11px}.section-title{font-size:21px;font-weight:900;letter-spacing:-.025em}.section-sub{font-size:11px;color:var(--muted);margin-top:2px}.link{color:var(--brand);font-size:11px;font-weight:800}
+.filters{display:flex;gap:6px;overflow:auto;scrollbar-width:none;margin-bottom:11px}.filters::-webkit-scrollbar{display:none}.chip{border:1px solid var(--line);background:white;color:var(--muted);padding:7px 10px;border-radius:999px;white-space:nowrap;font-size:11px;font-weight:700}.chip.active{background:#17191d;color:white;border-color:#17191d}
+.deals{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}.deal{background:white;border:1px solid var(--line);border-radius:20px;padding:14px;display:flex;flex-direction:column;min-height:230px;transition:.18s;position:relative;overflow:hidden}.deal:hover{transform:translateY(-2px);box-shadow:var(--shadow)}.deal-top{display:flex;justify-content:space-between;gap:8px}.merchant{display:flex;gap:9px;align-items:center;min-width:0}.logo{width:42px;height:42px;border-radius:13px;background:var(--surface2);display:grid;place-items:center;font-weight:900;font-size:17px;flex:0 0 auto}.merchant-name{font-weight:900;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.source{font-size:10px;color:var(--muted);margin-top:2px}.save{font-size:10px;color:var(--green);background:#eaf7f1;border-radius:999px;padding:5px 7px;height:max-content;font-weight:800}.deal h3{font-size:15px;line-height:1.3;margin:13px 0 7px;letter-spacing:-.015em}.desc{font-size:11px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.deal-meta{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}.tag{font-size:9px;padding:5px 6px;background:var(--surface2);border-radius:7px;color:#5d6670;font-weight:700}.code-row{margin-top:auto;padding-top:13px;display:flex;gap:7px}.code{border:1px dashed #cbd2da;background:#fbfcfd;border-radius:10px;padding:9px 10px;font-weight:900;font-size:12px;letter-spacing:.04em;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.cta{border:0;background:#17191d;color:white;border-radius:10px;padding:9px 11px;font-size:11px;font-weight:800}
+.two-col{display:grid;grid-template-columns:1.2fr .8fr;gap:12px}.panel{background:white;border:1px solid var(--line);border-radius:22px;padding:16px}.benefit{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}.benefit:last-child{border-bottom:0}.bank{width:42px;height:42px;border-radius:13px;background:#f2f5f8;display:grid;place-items:center;font-weight:900;font-size:10px}.benefit b{font-size:12px}.benefit small{display:block;color:var(--muted);font-size:10px;margin-top:2px}.pct{font-size:15px;font-weight:900;color:var(--brand)}
+.ai-card{background:linear-gradient(145deg,#fff5ee,#fff);border-color:#f4ddd0}.ai-card h3{font-size:18px;margin:3px 0 6px}.ai-list{display:grid;gap:7px;margin-top:13px}.ai-item{background:white;border:1px solid #f0e1d7;border-radius:13px;padding:10px;font-size:11px}.ai-item b{display:block;font-size:12px;margin-bottom:2px}.ai-cta{margin-top:13px;width:100%;border:0;background:var(--brand);color:white;border-radius:12px;padding:11px;font-weight:900}
+.mobile-nav{display:none}
+body[data-mode="compact"]{--radius:14px;--bg:#f4f5f7}.compact-only{display:none}body[data-mode="compact"] .hero{padding:19px;border-radius:18px}body[data-mode="compact"] .hero h1{font-size:29px}body[data-mode="compact"] .quick{grid-template-columns:repeat(8,1fr)}body[data-mode="compact"] .quick button{min-height:58px;padding:9px}body[data-mode="compact"] .quick small{display:none}body[data-mode="compact"] .deals{grid-template-columns:repeat(5,1fr)}body[data-mode="compact"] .deal{min-height:208px;border-radius:15px;padding:11px}body[data-mode="compact"] .logo{width:36px;height:36px;border-radius:10px}body[data-mode="compact"] .section{margin-top:19px}
+body[data-mode="ai"]{--brand:#7357ff;--brand2:#9a74ff;--bg:#f7f6fb}.ai-first-only{display:none}body[data-mode="ai"] .ai-first-only{display:block}body[data-mode="ai"] .hero{background:linear-gradient(140deg,#221b3b,#32255a 55%,#3f2f64)}body[data-mode="ai"] .hero-grid{grid-template-columns:1fr}body[data-mode="ai"] .location-card{display:none}body[data-mode="ai"] .hero h1{max-width:860px}body[data-mode="ai"] .quick{grid-template-columns:repeat(4,1fr)}body[data-mode="ai"] .deals{grid-template-columns:repeat(3,1fr)}body[data-mode="ai"] .deal:nth-child(n+7){display:none}
+@media(max-width:1000px){.hero-grid{grid-template-columns:1fr}.location-card{max-width:420px}.deals{grid-template-columns:repeat(3,1fr)}body[data-mode="compact"] .deals{grid-template-columns:repeat(4,1fr)}.quick{grid-template-columns:repeat(3,1fr)}body[data-mode="compact"] .quick{grid-template-columns:repeat(4,1fr)}.two-col{grid-template-columns:1fr}}
+@media(max-width:720px){body{font-size:13px}.topbar-in{grid-template-columns:auto 1fr auto;padding:8px 11px}.brand span{display:none}.nav{display:none}.labbar-in{padding:7px 11px;align-items:flex-start;flex-direction:column}.main{padding:11px 11px 88px}.hero{border-radius:20px;padding:20px 16px}.hero h1{font-size:28px}.hero p{font-size:12px}.searchbox{grid-template-columns:auto minmax(0,1fr)}.searchbox button{grid-column:1/-1}.location-card{display:none}.quick,.deals,body[data-mode="compact"] .quick,body[data-mode="compact"] .deals,body[data-mode="ai"] .quick,body[data-mode="ai"] .deals{grid-template-columns:repeat(2,1fr)}.deal{min-height:217px}.two-col{grid-template-columns:1fr}.mobile-nav{position:fixed;left:10px;right:10px;bottom:10px;z-index:45;background:rgba(23,25,29,.95);backdrop-filter:blur(12px);border-radius:18px;padding:7px;display:grid;grid-template-columns:repeat(5,1fr);box-shadow:0 15px 40px rgba(0,0,0,.25)}.mobile-nav button{border:0;background:transparent;color:#bbc0c7;font-size:9px;padding:5px 2px}.mobile-nav b{display:block;color:white;font-size:17px;margin-bottom:1px}.section-title{font-size:18px}}
+</style>
+</head>
+<body data-mode="clean">
+<div class="shell">
+  <div class="labbar">
+    <div class="labbar-in">
+      <div><b>UI LAB · VoucherFreeVn</b> <span class="lab-note">Dữ liệu mẫu — chỉ để chốt giao diện, không đụng backend</span></div>
+      <div class="modes" aria-label="Chọn hướng giao diện">
+        <button class="mode active" data-mode="clean">A · Clean</button>
+        <button class="mode" data-mode="compact">B · Compact</button>
+        <button class="mode" data-mode="ai">C · AI-first</button>
+      </div>
+    </div>
+  </div>
+  <header class="topbar">
+    <div class="topbar-in">
+      <a class="brand" href="#"><span class="brandmark">V</span><span>VoucherFreeVn</span></a>
+      <nav class="nav"><a class="active" href="#">Ưu đãi</a><a href="#">Săn Deal</a><a href="#">Món ăn</a><a href="#">Rạp phim</a><a href="#">Thẻ của tôi</a><a href="#">Group săn sale</a></nav>
+      <div class="top-actions"><button class="iconbtn" title="Thông báo">🔔</button><button class="iconbtn avatar" title="Tài khoản">AN</button></div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">⚡ 1.284 ưu đãi đang dùng được</span>
+          <h1>Đừng tìm mã. Hãy nói bạn đang muốn mua gì.</h1>
+          <p>Mình gom voucher, ưu đãi thẻ, deal quanh bạn và xếp theo giá trị thực tế — ưu tiên thứ dùng được ngay.</p>
+          <div class="searchbox"><span>⌕</span><input value="" placeholder="Ví dụ: ăn KFC gần đây, thanh toán bằng VPBank..." /><button>Tìm ưu đãi</button></div>
+          <div class="ai-first-only" style="margin-top:12px;color:#d4cbf7;font-size:11px">AI sẽ tự ghép: nhu cầu + vị trí + thẻ bạn có + voucher đang hoạt động.</div>
+        </div>
+        <aside class="location-card"><small style="color:#bfc4cc">Vị trí hiện tại</small><div class="big">📍 Hai Bà Trưng, Hà Nội</div><div class="meta"><span class="mini">46 deal trong 3 km</span><span class="mini">12 deal hết hôm nay</span><span class="mini">8 ưu đãi thẻ</span></div></aside>
+      </div>
+    </section>
+
+    <section class="quick">
+      <button><span class="qico">🍜</span><b>Ăn gì hôm nay</b><small>Deal đồ ăn quanh bạn</small></button>
+      <button><span class="qico">📍</span><b>Gần tôi</b><small>Ưu tiên khoảng cách</small></button>
+      <button><span class="qico">💳</span><b>Thẻ của tôi</b><small>Lọc đúng ngân hàng</small></button>
+      <button><span class="qico">🚚</span><b>Freeship</b><small>Mã ship đang chạy</small></button>
+      <button><span class="qico">🎬</span><b>Xem phim</b><small>Rạp & combo bắp nước</small></button>
+      <button><span class="qico">🔥</span><b>Hết hôm nay</b><small>Deal cần chốt sớm</small></button>
+      <button class="compact-only"><span class="qico">🛍️</span><b>Mua sắm</b></button>
+      <button class="compact-only"><span class="qico">☕</span><b>Cà phê</b></button>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div><div class="section-title">Ưu đãi đáng lấy nhất</div><div class="section-sub">Đã xếp theo mức tiết kiệm, độ tin cậy và khả năng dùng ngay</div></div><a class="link" href="#">Xem tất cả →</a></div>
+      <div class="filters"><button class="chip active">Gợi ý cho bạn</button><button class="chip">Đồ ăn</button><button class="chip">Mua sắm</button><button class="chip">Ngân hàng</button><button class="chip">Quanh đây</button><button class="chip">Mã mới</button></div>
+      <div class="deals" id="deals"></div>
+    </section>
+
+    <section class="section two-col">
+      <div class="panel">
+        <div class="section-head"><div><div class="section-title">Ưu đãi từ thẻ bạn đang có</div><div class="section-sub">Một lần khai báo thẻ, hệ thống tự ghép về sau</div></div><a class="link" href="#">Quản lý thẻ →</a></div>
+        <div class="benefit"><div class="bank">VP</div><div><b>VPBank · Grab / GrabFood</b><small>Thanh toán thẻ tín dụng · tối đa 100.000đ</small></div><div class="pct">-20%</div></div>
+        <div class="benefit"><div class="bank">VCB</div><div><b>Vietcombank · CGV</b><small>Áp dụng một số dòng Visa · thứ 6</small></div><div class="pct">1+1</div></div>
+        <div class="benefit"><div class="bank">TCB</div><div><b>Techcombank · AEON Mall</b><small>Hoàn tiền theo chương trình đang hoạt động</small></div><div class="pct">-10%</div></div>
+      </div>
+      <aside class="panel ai-card">
+        <small style="font-weight:900;color:var(--brand)">✨ TRỢ LÝ DEAL</small><h3>Muốn mình chọn luôn?</h3><div style="font-size:11px;color:var(--muted)">Không cần biết tên mã. Chỉ cần nói nhu cầu, ngân sách và bạn đi đâu.</div>
+        <div class="ai-list"><div class="ai-item"><b>“2 người ăn tối dưới 300k”</b>→ ưu tiên combo + voucher thanh toán</div><div class="ai-item"><b>“Mua máy lọc không khí”</b>→ so deal + mã + ưu đãi thẻ</div></div>
+        <button class="ai-cta">Hỏi trợ lý</button>
+      </aside>
+    </section>
+  </main>
+
+  <nav class="mobile-nav"><button><b>⌂</b>Ưu đãi</button><button><b>⌕</b>Tìm</button><button><b>✨</b>AI</button><button><b>♡</b>Đã lưu</button><button><b>☺</b>Tôi</button></nav>
+</div>
+<script>
+const DATA=[
+ {logo:'G',merchant:'GrabFood',source:'Nguồn chính thức',save:'Tiết kiệm ~80k',title:'Giảm 50% đơn đồ ăn, tối đa 80.000đ',desc:'Áp dụng theo khu vực và danh sách quán tham gia.',tags:['Hà Nội','Đồ ăn','Còn 6 giờ'],code:'ANNGON50'},
+ {logo:'S',merchant:'ShopeeFood',source:'Marketplace',save:'Tiết kiệm ~40k',title:'Mã freeship + giảm thêm cho đơn từ 120k',desc:'Có thể thay đổi theo tài khoản và khung giờ.',tags:['Freeship','Đơn 120k+','Hôm nay'],code:'FREESHIP'},
+ {logo:'V',merchant:'Vincom',source:'Vincom Times City',save:'Deal tại chỗ',title:'Ưu đãi FnB & mua sắm tại Times City',desc:'Tổng hợp các chương trình đang có tại trung tâm thương mại.',tags:['1.2 km','TTTM','48 ưu đãi'],code:'XEM DEAL'},
+ {logo:'C',merchant:'CGV',source:'Ưu đãi đối tác',save:'Mua 1 tặng 1',title:'Ưu đãi vé phim khi thanh toán thẻ phù hợp',desc:'Kiểm tra dòng thẻ trước khi thanh toán.',tags:['Rạp phim','Thẻ ngân hàng','Tin cậy cao'],code:'KIỂM TRA THẺ'},
+ {logo:'A',merchant:'AEON',source:'AEON Việt Nam',save:'Đến 20%',title:'Khuyến mại siêu thị & khu ẩm thực trong tuần',desc:'Lọc theo cơ sở gần bạn và thời gian hiệu lực.',tags:['3.8 km','Siêu thị','Cuối tuần'],code:'XEM ƯU ĐÃI'},
+ {logo:'K',merchant:'Katinat',source:'Website thương hiệu',save:'Tiết kiệm 25k',title:'Mua 2 đồ uống được giảm trực tiếp 25.000đ',desc:'Một số cửa hàng và sản phẩm có thể không áp dụng.',tags:['Cà phê','Gần bạn','Mới'],code:'KATI25'},
+ {logo:'L',merchant:'Lazada',source:'Marketplace',save:'Đến 100k',title:'Voucher ngành hàng + freeship theo khung giờ',desc:'Ưu tiên voucher có thể lưu trước khi mở sale.',tags:['Mua sắm','Sale giờ vàng'],code:'LAZ100'},
+ {logo:'V',merchant:'VPBank',source:'Ngân hàng',save:'Hoàn đến 300k',title:'Hoàn tiền cho chi tiêu ăn uống & mua sắm',desc:'Tùy dòng thẻ và điều kiện doanh số.',tags:['Thẻ tín dụng','Ngân hàng'],code:'XEM THỂ LỆ'}
+];
+const deals=document.getElementById('deals');
+function render(){deals.innerHTML=DATA.map((x,i)=>`<article class="deal"><div class="deal-top"><div class="merchant"><div class="logo">${x.logo}</div><div style="min-width:0"><div class="merchant-name">${x.merchant}</div><div class="source">${x.source}</div></div></div><span class="save">${x.save}</span></div><h3>${x.title}</h3><div class="desc">${x.desc}</div><div class="deal-meta">${x.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div><div class="code-row"><div class="code">${x.code}</div><button class="cta" onclick="this.textContent='Đã copy';setTimeout(()=>this.textContent='Lấy mã',1200)">Lấy mã</button></div></article>`).join('')}
+render();
+const modes=[...document.querySelectorAll('.mode')];modes.forEach(b=>b.addEventListener('click',()=>{document.body.dataset.mode=b.dataset.mode;modes.forEach(x=>x.classList.toggle('active',x===b));}));
+</script>
+</body></html>
