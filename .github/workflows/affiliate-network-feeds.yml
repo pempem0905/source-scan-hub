@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/affiliate-network-feeds.yml'
       - 'integration/affiliate_networks_ingest.py'
+      - 'integration/masoffer_ingest_v2.py'
   schedule:
     - cron: '*/15 * * * *'
   workflow_dispatch:
@@ -38,12 +39,15 @@ jobs:
           ref: main
           fetch-depth: 1
 
-      - name: Ingest Ecomobi Passio and MasOffer feeds
+      - name: Ingest Ecomobi Passio and legacy MasOffer probes
         run: python3 integration/affiliate_networks_ingest.py
+
+      - name: Ingest MasOffer with full publisher credentials
+        run: python3 integration/masoffer_ingest_v2.py
 
       - name: Validate generated feed
         run: |
-          python3 -m py_compile integration/affiliate_networks_ingest.py
+          python3 -m py_compile integration/affiliate_networks_ingest.py integration/masoffer_ingest_v2.py
           python3 - <<'PY'
           import json
           from pathlib import Path
@@ -54,16 +58,18 @@ jobs:
               for line in p.read_text(errors='replace').splitlines():
                   json.loads(line)
           status=json.loads(Path('integration/affiliate_networks_status.json').read_text())
+          m2=json.loads(Path('integration/masoffer_v2_status.json').read_text())
           assert status.get('production_write') is False
           assert status.get('verification_required') is True
-          print('Affiliate feed validation OK')
+          assert m2.get('state') in {'OK','API_NOT_RESOLVED','CREDENTIALS_INCOMPLETE'}
+          print('Affiliate feed validation OK', m2.get('state'))
           PY
 
       - name: Persist affiliate network feeds
         run: |
           git config user.name "promo-affiliate-feed-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add integration/ecomobi_handoff_v1.jsonl integration/masoffer_handoff_v1.jsonl integration/affiliate_networks_status.json
+          git add integration/ecomobi_handoff_v1.jsonl integration/masoffer_handoff_v1.jsonl integration/affiliate_networks_status.json integration/masoffer_v2_status.json
           if git diff --cached --quiet; then
             echo "No affiliate feed changes"
             exit 0
