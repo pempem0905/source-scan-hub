@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-19T16:22:10.959828Z",
+  "generated_at": "2026-08-19T16:53:42.899550Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 5980,
-    "frontier_deferred_pending": 38585,
-    "frontier_pending": 44565,
-    "last_6_runs_new_domains": 12,
+    "frontier_active_pending": 7165,
+    "frontier_deferred_pending": 38715,
+    "frontier_pending": 45880,
+    "last_6_runs_new_domains": 11,
     "last_run": {
-      "at": "2026-08-19T16:16:45.699625Z",
+      "at": "2026-08-19T16:49:35.098351Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*uu-dai*",
-        "*.vn/*uudai*",
-        "*.vn/*voucher*",
-        "*.vn/*promotion*"
+        "*.vn/*offers*",
+        "*.vn/*deals*",
+        "*.vn/*sale*",
+        "*.com/vn/*khuyen-mai*"
       ],
-      "duration_s": 323.3,
-      "errors": 183,
-      "frontier_pending": 44565,
-      "new_domains": 0,
-      "processed": 1415,
-      "rate403": 0.424,
+      "duration_s": 245.8,
+      "errors": 45,
+      "frontier_pending": 45880,
+      "new_domains": 1,
+      "processed": 1285,
+      "rate403": 0.623,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 2245,
+    "master_domains": 2248,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 177,
+    "run_count": 178,
     "running": true,
-    "seen_urls": 983488,
-    "updated_at": "2026-08-19T16:22:09.003912Z"
+    "seen_urls": 990662,
+    "updated_at": "2026-08-19T16:53:40.866057Z"
   },
   "master_input": {
-    "active_input_count": 237,
+    "active_input_count": 238,
     "counts": {
-      "ACTIVE_INPUT": 237,
+      "ACTIVE_INPUT": 238,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 38,
       "DISCOVERY_ONLY": 18,
       "FOOD_BEVERAGE": 30,
-      "GENERAL": 1723,
+      "GENERAL": 1726,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 35,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 187,
-      "PUBLIC_HTTP": 1937,
+      "PROMO_RETAIL": 188,
+      "PUBLIC_HTTP": 1940,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 114,
-      "REVIEW_INPUT": 1698,
+      "REVIEW_INPUT": 1700,
       "SOURCE_HUNTER": 18,
-      "SOURCE_REVIEW": 1698,
+      "SOURCE_REVIEW": 1700,
       "TRAVEL_MOBILITY": 31
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 18,
-    "generated_at": "2026-08-19T16:22:10.734949Z",
+    "generated_at": "2026-08-19T16:53:42.677472Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1953,
-    "review_input_count": 1698,
+    "record_count": 1956,
+    "review_input_count": 1700,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 2245,
+    "source_hunter_domains": 2248,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -295,7 +295,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-19T15:47:49.836884Z",
+    "updated_at": "2026-08-19T16:48:35.912295Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -383,37 +383,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 0,
+    "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "trang sức khuyến mãi Việt Nam",
-      "trang sức ưu đãi Việt Nam",
-      "trang sức voucher Việt Nam",
-      "trang sức promotion Vietnam"
+      "nội thất gia dụng khuyến mãi Việt Nam",
+      "nội thất gia dụng ưu đãi Việt Nam",
+      "nội thất gia dụng voucher Việt Nam",
+      "nội thất gia dụng promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 150,
+    "cc_domain_page": 151,
     "frontier_scheduler": {
-      "active": 1415,
+      "active": 1285,
       "base_per_host_batch": 16,
-      "deferred": 38585,
+      "deferred": 38715,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 208
+      "unique_hosts": 145
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T15:14:45.013508Z",
-      "domain": "pa.macduggal.com",
-      "radar": false,
-      "url": "https://pa.macduggal.com/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-18T15:14:45.013508Z",
       "domain": "pl.macduggal.com",
@@ -1246,6 +1239,13 @@
       "radar": false,
       "url": "https://rog.asus.com/",
       "via": "external_promo"
+    },
+    {
+      "at": "2026-08-19T16:49:35.098351Z",
+      "domain": "coolmathgames.com",
+      "radar": false,
+      "url": "https://coolmathgames.com/0-super-coupon-club",
+      "via": "internal_promo"
     }
   ]
 }
