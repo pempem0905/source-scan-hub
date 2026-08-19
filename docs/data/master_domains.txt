@@ -980,6 +980,13 @@ aroma-zone.vn
 aroma.vn
 aroma360.vn
 aromacaffe.vn
+art-studio.vn
+artauction.vn
+artaudio.vn
+artbank.vn
+artbookhouse.vn
+artcorner.vn
+artcraft.vn
 artha.link
 ascenttrainings.com
 at.macduggal.com
@@ -1272,6 +1279,7 @@ giadunghoangviet.com
 giaidau.360mobi.vn
 giaidau.360play.vn
 giaidau.moba.360mobi.vn
+giaoduc.art-house.vn
 giaoduc.net.vn
 giaohangtotnhat.vn
 giaxeoto.vn
@@ -1610,6 +1618,7 @@ pixiemarket.com
 pjico.com.vn
 pl.macduggal.com
 pl.semrush.com
+play-asia.com
 playstationlifestyle.net
 pms.adsmo.vn
 pnj.com.vn
