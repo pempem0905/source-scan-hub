@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-19T15:29:02.224927Z",
+  "generated_at": "2026-08-19T15:58:40.859234Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 5240,
-    "frontier_deferred_pending": 38792,
-    "frontier_pending": 44032,
+    "frontier_active_pending": 7152,
+    "frontier_deferred_pending": 38703,
+    "frontier_pending": 45855,
     "last_6_runs_new_domains": 14,
     "last_run": {
-      "at": "2026-08-19T15:24:43.738630Z",
+      "at": "2026-08-19T15:54:10.418336Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vi-vn/*uu-dai*",
-        "*.com/vi-vn/*voucher*",
-        "*.com/vi-vn/*promotion*",
-        "*.net/vn/*khuyen-mai*"
+        "*.net/vn/*uu-dai*",
+        "*.com/vietnam/*promotion*",
+        "*.vn/*khuyen-mai*",
+        "*.vn/*khuyenmai*"
       ],
-      "duration_s": 256.4,
-      "errors": 85,
-      "frontier_pending": 44032,
-      "new_domains": 2,
-      "processed": 1208,
-      "rate403": 0.331,
+      "duration_s": 268.3,
+      "errors": 109,
+      "frontier_pending": 45855,
+      "new_domains": 1,
+      "processed": 1297,
+      "rate403": 0.617,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 2226,
+    "master_domains": 2227,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 175,
+    "run_count": 176,
     "running": true,
-    "seen_urls": 970090,
-    "updated_at": "2026-08-19T15:29:00.099388Z"
+    "seen_urls": 977305,
+    "updated_at": "2026-08-19T15:58:38.698950Z"
   },
   "master_input": {
     "active_input_count": 237,
@@ -41,33 +41,33 @@
       "BANK_CARD": 38,
       "DISCOVERY_ONLY": 18,
       "FOOD_BEVERAGE": 30,
-      "GENERAL": 1704,
+      "GENERAL": 1705,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 35,
       "PROMO_L2": 15,
       "PROMO_RETAIL": 187,
-      "PUBLIC_HTTP": 1918,
+      "PUBLIC_HTTP": 1919,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 114,
-      "REVIEW_INPUT": 1679,
+      "REVIEW_INPUT": 1680,
       "SOURCE_HUNTER": 18,
-      "SOURCE_REVIEW": 1679,
+      "SOURCE_REVIEW": 1680,
       "TRAVEL_MOBILITY": 31
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 18,
-    "generated_at": "2026-08-19T15:29:01.986557Z",
+    "generated_at": "2026-08-19T15:58:40.616860Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1934,
-    "review_input_count": 1679,
+    "record_count": 1935,
+    "review_input_count": 1680,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 2226,
+    "source_hunter_domains": 2227,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -295,7 +295,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-19T14:54:21.306003Z",
+    "updated_at": "2026-08-19T15:47:49.836884Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -383,37 +383,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 1,
+    "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "mỹ phẩm làm đẹp khuyến mãi Việt Nam",
-      "mỹ phẩm làm đẹp ưu đãi Việt Nam",
-      "mỹ phẩm làm đẹp voucher Việt Nam",
-      "mỹ phẩm làm đẹp promotion Vietnam"
+      "thời trang giày dép khuyến mãi Việt Nam",
+      "thời trang giày dép ưu đãi Việt Nam",
+      "thời trang giày dép voucher Việt Nam",
+      "thời trang giày dép promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 148,
+    "cc_domain_page": 149,
     "frontier_scheduler": {
-      "active": 1208,
+      "active": 1297,
       "base_per_host_batch": 16,
-      "deferred": 38792,
+      "deferred": 38703,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 128
+      "unique_hosts": 158
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T15:14:45.013508Z",
-      "domain": "pt.macduggal.com",
-      "radar": false,
-      "url": "https://pt.macduggal.com/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-18T15:14:45.013508Z",
       "domain": "pa.macduggal.com",
@@ -1246,6 +1239,13 @@
       "radar": false,
       "url": "https://forum.autodaily.vn/",
       "via": "common_crawl_domain"
+    },
+    {
+      "at": "2026-08-19T15:54:10.418336Z",
+      "domain": "rog.asus.com",
+      "radar": false,
+      "url": "https://rog.asus.com/",
+      "via": "external_promo"
     }
   ]
 }
