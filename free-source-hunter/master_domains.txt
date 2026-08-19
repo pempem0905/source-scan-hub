@@ -1235,6 +1235,7 @@ business.admatrix.vn
 business.qld.gov.au
 business2community.com
 buzzfeed.com
+bvnatural.vn
 c.accesstrade.vn
 ca.macduggal.com
 ca.monos.com
@@ -1549,6 +1550,8 @@ imh.ac.vn
 in.mashable.com
 indiatoday.in
 infoworld.com
+inhoalong.vn
+inminhkhang.com
 insivia.com
 instock.vn
 insycle.com
@@ -1556,6 +1559,7 @@ intellipaat.com
 internet-fpt.com.vn
 internet-viettel.com
 internetviettel.vn
+intoroigiare.vn
 invest.abs.vn
 iowadot.gov
 irobot.be
@@ -1993,6 +1997,7 @@ thecoffeehouse.com
 thecoffeehousevoucher.vn
 thegamecollection.net
 thegioidodung.vn
+thegioituigiay.com
 theirstack.com
 thenewgym.vn
 thesalesblog.com
@@ -2029,6 +2034,7 @@ top10tphcm.com
 top1index.vn
 toplist.vn
 topmom.com.vn
+topprint.vn
 topreviewviet.com
 toyota.com.vn
 tpb.vn
