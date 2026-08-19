@@ -1,0 +1,74 @@
+{
+  "schema": "promo.retail.probe_cache.run.v1",
+  "source_worker": "PROMO Retail Shard",
+  "checked_at": "2026-08-20T06:52:26+07:00",
+  "lovable_calls": 0,
+  "entries": [
+    {
+      "url": "https://www.samsung.com/vn/offer/",
+      "result": "CACHE_DUPLICATE_ACTIVE_LITERAL_AND_REVIEW",
+      "code_signal": true,
+      "observed_literals": ["LS-68S26", "LS-THANG6"],
+      "notes": "LS-68S26 already exists in GitHub retail queue as current active exact literal. LS-THANG6 remains REVIEW because the token name and campaign validity are ambiguous despite live current-page visibility; no duplicate/new enqueue."
+    },
+    {
+      "url": "https://urbanrevivo.com.vn/pages/promotion",
+      "result": "CACHE_DUPLICATE_ACTIVE_LITERALS",
+      "code_signal": true,
+      "observed_literals": ["URFS08", "URPAY", "URWELCOME"],
+      "notes": "Official page revalidates URFS08 through 31/08/2026, URPAY through 30/09/2026 and URWELCOME current; all already present in GitHub retail queue."
+    },
+    {
+      "url": "https://yody.vn/post/hot-nhan-voucher-100k-doc-quyen-tren-website-mung-yody-dat-top-1",
+      "result": "LITERAL_CODE_UNDATED_REVIEW",
+      "code_signal": true,
+      "observed_literals": ["YODYCE87"],
+      "notes": "Official June 2026 page exposes 100,000 VND off orders from 699,000 VND for new customers, but no controlling current/future end date or fresh active marker was resolved. REVIEW only."
+    },
+    {
+      "url": "https://www.thegioididong.com/tin-tuc/hoan-ngay-50k-khi-thanh-toan-bang-tai-khoan-vpbank-neo-mo-moi-tai-tgdd-dmx-1596151",
+      "result": "ACTIONABLE_ENQUEUED_REFERRAL_NOT_LITERAL",
+      "code_signal": true,
+      "observed_literals": ["MWG999"],
+      "notes": "Current 01/08-30/09/2026 benefit is 50% off capped 50,000 VND after opening VPBank NEO and paying at TGDĐ/ĐMX. MWG999 is explicitly a referral/introduction code, so it is excluded from literal-code counts; benefit enqueued with literal_code=null."
+    },
+    {
+      "url": "https://www.thegioididong.com/khuyen-mai/vnpay-qr",
+      "result": "EXPIRED_LITERAL_REJECT",
+      "code_signal": true,
+      "observed_literals": ["VNPAYTGDD2"],
+      "notes": "Exact token appears on product surfaces, but controlling official campaign terms ended 30/06/2026; reject as expired/stale surface."
+    },
+    {
+      "url": "https://www.pharmacity.vn/ngay-hoi-thuong-hieu.lp",
+      "result": "CURRENT_COUPON_CAMPAIGN_NO_EXTRACTABLE_LITERAL",
+      "code_signal": true,
+      "notes": "Official campaign is current 17/08-23/08/2026 and requires coupon entry, but exact coupon token/economics are not exposed in accessible page text; no fabrication and no enqueue."
+    },
+    {
+      "url": "https://vincom.com.vn/vincom-plaza-hue/uu-dai",
+      "result": "ACTIONABLE_ENQUEUED_NO_LITERAL",
+      "code_signal": false,
+      "notes": "Official Vincom page shows ANTA Huế Deal Chồng Deal current through 23/08/2026: up to 50% off, extra up to 10% and gifts for bills from 1.599M VND. Clean actionable offer enqueued; no public reusable literal visible."
+    },
+    {
+      "url": "https://www.emart.com.vn/chuong-trinh-khuyen-mai/an-pham-khuyen-mai-sala/",
+      "result": "CURRENT_NO_LITERAL_SIGNAL",
+      "code_signal": false,
+      "notes": "Current member/leaflet campaigns surfaced for 13/08-26/08 and 13/08-23/09, but no exact reusable public literal was exposed in accessible evidence."
+    },
+    {
+      "url": "https://cellphones.com.vn/sforum/ma-giam-gia",
+      "result": "CACHE_SKIP_NO_NEW_MERCHANT_LITERAL",
+      "code_signal": true,
+      "notes": "Generic code guide remains non-specific; game/editorial codes are rejected as non-merchant promo codes."
+    },
+    {
+      "url": "https://www.galaxycine.vn/khuyen-mai/zalopay-tang-25k-khi-dat-ve-galaxy/",
+      "result": "CACHE_SKIP_EXPIRED_LITERAL",
+      "code_signal": true,
+      "observed_literals": ["PHIMVIET"],
+      "notes": "Previously validated exact literal expired 30/06/2026; skipped deep read."
+    }
+  ]
+}
