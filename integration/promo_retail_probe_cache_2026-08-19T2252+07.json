@@ -1,0 +1,34 @@
+{
+  "schema": "promo.retail.probe_cache_delta.v1",
+  "source_worker": "PROMO Retail Shard",
+  "checked_at": "2026-08-19T22:52:52+07:00",
+  "entries": [
+    {
+      "url": "https://mediamart.vn/tin-khuyen-mai/back-to-school-2026-mediamart-uu-dai-dac-biet-danh-rieng-cho-hs-sv-va-giao-vien",
+      "result": "CURRENT_ACTIONABLE_MULTI_BENEFIT_NO_PUBLIC_LITERAL",
+      "code_signal": false,
+      "notes": "Official campaign is active 04/07-31/10/2026 with eVoucher up to 2M, direct discount up to 1M and referral eVoucher 300K. Referral identifier is staff-guided/dynamic, not a reusable literal code. Clean no-code candidate enqueued."
+    },
+    {
+      "url": "https://www.samsung.com/vn/offer/",
+      "result": "EXACT_LITERAL_REVIEW_VALIDITY_UNRESOLVED",
+      "code_signal": true,
+      "observed_literals": ["LS-THANG6", "LS-68S26"],
+      "notes": "Current official offer/product pages still visibly publish both tokens with actionable economics, including LS-THANG6 discounts and LS-68S26 Galaxy S26 pricing, but no controlling explicit current/future end date was resolved. Keep REVIEW; do not enqueue."
+    },
+    {
+      "url": "https://yody.vn/post/hot-nhan-voucher-100k-doc-quyen-tren-website-mung-yody-dat-top-1",
+      "result": "EXACT_LITERAL_REVIEW_VALIDITY_UNRESOLVED",
+      "code_signal": true,
+      "observed_literals": ["YODYCE87"],
+      "notes": "Official YODY article still exposes code YODYCE87 for 100K off a 699K full-price new-customer order, but no controlling end date is published. Keep REVIEW; do not enqueue."
+    },
+    {
+      "url": "https://www.thegioididong.com/game-app/",
+      "result": "FALSE_POSITIVE_GAME_GIFTCODE_FAMILY",
+      "code_signal": false,
+      "notes": "Fresh code searches are dominated by third-party game gift-code editorial content hosted on the retailer domain, not Thegioididong retail checkout promotions. Down-rank this path family for retail voucher-code scanning."
+    }
+  ],
+  "lovable_calls": 0
+}
