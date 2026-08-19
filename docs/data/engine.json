@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-19T10:07:53.690897Z",
+  "generated_at": "2026-08-19T10:39:40.897283Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 5083,
-    "frontier_deferred_pending": 38443,
-    "frontier_pending": 43526,
-    "last_6_runs_new_domains": 21,
+    "frontier_active_pending": 7540,
+    "frontier_deferred_pending": 38578,
+    "frontier_pending": 46118,
+    "last_6_runs_new_domains": 17,
     "last_run": {
-      "at": "2026-08-19T10:01:07.765457Z",
+      "at": "2026-08-19T10:34:50.792084Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.net/vn/*uu-dai*",
-        "*.com/vietnam/*promotion*",
-        "*.vn/*khuyen-mai*",
-        "*.vn/*khuyenmai*"
+        "*.vn/*uu-dai*",
+        "*.vn/*uudai*",
+        "*.vn/*voucher*",
+        "*.vn/*promotion*"
       ],
-      "duration_s": 403.8,
-      "errors": 195,
-      "frontier_pending": 43526,
-      "new_domains": 2,
-      "processed": 1557,
-      "rate403": 0.963,
+      "duration_s": 288.0,
+      "errors": 94,
+      "frontier_pending": 46118,
+      "new_domains": 4,
+      "processed": 1422,
+      "rate403": 0.281,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 2117,
+    "master_domains": 2136,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 166,
+    "run_count": 167,
     "running": true,
-    "seen_urls": 913757,
-    "updated_at": "2026-08-19T10:07:51.527314Z"
+    "seen_urls": 921367,
+    "updated_at": "2026-08-19T10:39:38.805342Z"
   },
   "master_input": {
-    "active_input_count": 234,
+    "active_input_count": 235,
     "counts": {
-      "ACTIVE_INPUT": 234,
+      "ACTIVE_INPUT": 235,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 38,
       "DISCOVERY_ONLY": 18,
       "FOOD_BEVERAGE": 30,
-      "GENERAL": 1612,
+      "GENERAL": 1626,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 35,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 184,
-      "PUBLIC_HTTP": 1820,
+      "PROMO_RETAIL": 185,
+      "PUBLIC_HTTP": 1835,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 109,
-      "REVIEW_INPUT": 1584,
+      "RETAIL_ECOMMERCE": 110,
+      "REVIEW_INPUT": 1598,
       "SOURCE_HUNTER": 18,
-      "SOURCE_REVIEW": 1584,
+      "SOURCE_REVIEW": 1598,
       "TRAVEL_MOBILITY": 30
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 18,
-    "generated_at": "2026-08-19T10:07:53.489618Z",
+    "generated_at": "2026-08-19T10:39:40.667073Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1836,
-    "review_input_count": 1584,
+    "record_count": 1851,
+    "review_input_count": 1598,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 2117,
+    "source_hunter_domains": 2136,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -383,58 +383,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 2,
+    "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "loyalty membership khuyến mãi Việt Nam",
-      "loyalty membership ưu đãi Việt Nam",
-      "loyalty membership voucher Việt Nam",
-      "loyalty membership promotion Vietnam"
+      "trung tâm thương mại khuyến mãi Việt Nam",
+      "trung tâm thương mại ưu đãi Việt Nam",
+      "trung tâm thương mại voucher Việt Nam",
+      "trung tâm thương mại promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 139,
+    "cc_domain_page": 140,
     "frontier_scheduler": {
-      "active": 1557,
+      "active": 1422,
       "base_per_host_batch": 16,
-      "deferred": 38443,
+      "deferred": 38578,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 221
+      "unique_hosts": 177
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T14:47:04.238244Z",
-      "domain": "military.com",
-      "radar": false,
-      "url": "https://military.com/about-us/advertising-and-sales",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T14:47:04.238244Z",
-      "domain": "madeincookware.com",
-      "radar": false,
-      "url": "https://madeincookware.com/industry/dealer-inquiries",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T14:47:04.238244Z",
-      "domain": "360smsapp.com",
-      "radar": false,
-      "url": "https://360smsapp.com/salesforce-zalo/",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T15:14:45.013508Z",
-      "domain": "ar.macduggal.com",
-      "radar": false,
-      "url": "https://ar.macduggal.com/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-18T15:14:45.013508Z",
       "domain": "at.macduggal.com",
@@ -1246,6 +1218,34 @@
       "radar": false,
       "url": "https://hfholidays.co.uk/",
       "via": "external_promo"
+    },
+    {
+      "at": "2026-08-19T10:34:50.792084Z",
+      "domain": "beauchampestates.com",
+      "radar": false,
+      "url": "https://beauchampestates.com/luxury-properties-for-sale-in-mayfair",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-19T10:34:50.792084Z",
+      "domain": "mercuryholidays.co.uk",
+      "radar": false,
+      "url": "https://mercuryholidays.co.uk/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-19T10:34:50.792084Z",
+      "domain": "store.ign.com",
+      "radar": false,
+      "url": "https://store.ign.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-19T10:34:50.792084Z",
+      "domain": "vietrade.gov.vn",
+      "radar": false,
+      "url": "https://vietrade.gov.vn/",
+      "via": "free_search"
     }
   ]
 }
