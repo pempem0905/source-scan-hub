@@ -3,7 +3,7 @@ import json, os, urllib.parse, urllib.request
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-OUT_JSON=ROOT/'integration/hourly_summary.json'; OUT_TXT=ROOT/'integration/hourly_summary.txt'; OUT_STATUS=ROOT/'integration/hourly_report_status.json'
+OUT_JSON=ROOT/'integration'/'hourly_summary.json'; OUT_TXT=ROOT/'integration'/'hourly_summary.txt'; OUT_STATUS=ROOT/'integration'/'hourly_report_status.json'
 TZ=timezone(timedelta(hours=7)); FLOOR_OFFERS=360; FLOOR_CODES=77
 
 def load(path, default=None):
@@ -32,11 +32,19 @@ def count_platform_states(platforms):
 
 def build():
     engine=load('docs/data/engine.json'); runtime=load('integration/promo-runtime-status.json'); l2=load('l2/auth-status.json')
+    at=load('integration/accesstrade_status.json'); atcat=load('integration/accesstrade_catalog_status.json')
+    affiliates=load('integration/affiliate_networks_status.json'); masv2=load('integration/masoffer_v2_status.json')
     previous=load('integration/hourly_summary.json') if OUT_JSON.exists() else {}; pm=previous.get('metrics') or {}
     status=engine.get('status') or {}; master=engine.get('master_input') or load('integration/master_input_status.json'); canonical=runtime.get('canonical') or {}
     raw_offers=num(canonical.get('actionable_offers')); raw_codes=num(canonical.get('literal_codes'))
     offers=max(FLOOR_OFFERS,raw_offers); codes=max(FLOOR_CODES,raw_codes)
-    metrics={'master_sources':num(master.get('record_count')),'active_sources':num(master.get('active_input_count')),'review_sources':num(master.get('review_input_count')),'hunter_domains':num(status.get('master_domains') or master.get('source_hunter_domains')),'seen_urls':num(status.get('seen_urls')),'promo_scanned_sources':num(canonical.get('scanned_sources')),'actionable_offers':offers,'literal_codes':codes,'raw_actionable_offers':raw_offers,'raw_literal_codes':raw_codes}
+    nets=affiliates.get('networks') or {}; eco=nets.get('ECOMOBI') or {}
+    metrics={
+      'master_sources':num(master.get('record_count')),'active_sources':num(master.get('active_input_count')),'review_sources':num(master.get('review_input_count')),
+      'hunter_domains':num(status.get('master_domains') or master.get('source_hunter_domains')),'seen_urls':num(status.get('seen_urls')),
+      'promo_scanned_sources':num(canonical.get('scanned_sources')),'actionable_offers':offers,'literal_codes':codes,'raw_actionable_offers':raw_offers,'raw_literal_codes':raw_codes,
+      'at_offers':num(atcat.get('active_offer_count')),'at_tiktok':num(at.get('tiktok_product_count')),'masoffer_candidates':num(masv2.get('candidate_rows')),'ecomobi_candidates':num(eco.get('candidate_rows'))
+    }
     prev_off=max(FLOOR_OFFERS,num(pm.get('actionable_offers'))); prev_code=max(FLOOR_CODES,num(pm.get('literal_codes')))
     d_off=max(0,offers-prev_off); d_code=max(0,codes-prev_code); d_src=max(0,metrics['master_sources']-num(pm.get('master_sources')))
     scanned=metrics['promo_scanned_sources']; eligible=metrics['active_sources']; pct=(100*scanned/eligible) if eligible else 0
@@ -47,11 +55,23 @@ def build():
     eta_login='chưa đủ dữ liệu'
     if preauth.get('next_retry_at'): eta_login='đang tự retry theo lượt free'
     eta_all='chưa đủ throughput canonical ổn định'
-    lines=[f"PROMO: {offers} voucher/deal | {codes} code",f"Mới: +{d_off} voucher/deal | +{d_code} code | +{d_src} source",f"Source: {scanned}/{eligible} ({pct:.0f}%)",f"L2: {l2_line}",f"ETA login: {eta_login}",f"ETA all jobs: {eta_all}"]
+    mas_state=masv2.get('state') or 'UNKNOWN'; eco_state=eco.get('state') or 'UNKNOWN'
+    lines=[
+      f"PROMO: {offers} voucher/deal | {codes} code",
+      f"Mới: +{d_off} voucher/deal | +{d_code} code | +{d_src} source",
+      f"Source: {scanned}/{eligible} ({pct:.0f}%)",
+      f"AccessTrade: {metrics['at_offers']} promo | TikTok {metrics['at_tiktok']}",
+      f"MasOffer: {mas_state} | candidates {metrics['masoffer_candidates']}",
+      f"Ecomobi: {eco_state} | candidates {metrics['ecomobi_candidates']}",
+      f"L2: {l2_line}",f"ETA login: {eta_login}",f"ETA all jobs: {eta_all}"
+    ]
     alerts=[]
     if raw_offers<FLOOR_OFFERS or raw_codes<FLOOR_CODES: alerts.append(f'stale canonical suppressed: raw {raw_offers}/{raw_codes}, floor {FLOOR_OFFERS}/{FLOOR_CODES}')
     if runtime_age is not None and runtime_age>120: alerts.append(f'canonical telemetry stale {runtime_age}m')
-    local_now=now_utc().astimezone(TZ); text='\n'.join(lines)
+    if mas_state=='CREDENTIALS_INCOMPLETE': alerts.append('MasOffer: chờ workflow nhận đủ Publisher ID/Key/Token')
+    elif mas_state=='API_NOT_RESOLVED': alerts.append('MasOffer: credential đủ, đang tự dò auth trên Publisher API chính thức')
+    if eco_state=='API_NOT_RESOLVED': alerts.append('Ecomobi: credential có, endpoint chưa resolve')
+    local_now=now_utc().astimezone(TZ); text='\n'.join(lines + (["Cải tiến: " + ' | '.join(alerts[:3])] if alerts else []))
     return {'schema':'promo.hourly_summary.v1','generated_at':now_utc().isoformat().replace('+00:00','Z'),'local_time':local_now.isoformat(),'metrics':metrics,'alerts':alerts,'platform_states':platforms,'text':text}
 
 def send_telegram(text):
