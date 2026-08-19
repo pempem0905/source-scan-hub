@@ -1,0 +1,33 @@
+{
+  "schema": "promo.retail.probe_cache_delta.v1",
+  "source_worker": "PROMO Retail Shard",
+  "checked_at": "2026-08-19T06:56:55+07:00",
+  "entries": [
+    {
+      "url": "https://yody.vn/post/hot-nhan-voucher-100k-doc-quyen-tren-website-mung-yody-dat-top-1",
+      "result": "LITERAL_CODE_UNDATED_REVIEW",
+      "code_signal": true,
+      "observed_literals": ["YODYCE87"],
+      "notes": "Official YODY page dated 10/06/2026 exposes YODYCE87 = 100,000 VND off for new customers on orders >=699,000 VND of full-price products, but no controlling end date was visible. REVIEW only."
+    },
+    {
+      "url": "https://www.galaxycine.vn/khuyen-mai/voucher-giam-khung-danh-tang-cac-stars/",
+      "result": "ACTIONABLE_ACCOUNT_CLAIM_VOUCHER_NO_LITERAL",
+      "code_signal": true,
+      "notes": "Current Galaxy x ShopeePay 01/08-31/08/2026: 20% max50K new users / 10% max20K existing users. Voucher must be claimed in ShopeePay account; no reusable public literal token."
+    },
+    {
+      "url": "https://new.dienmaycholon.vn/may-giat/may-giat-electrolux-inverter-10-kg-ewf1043r7wc",
+      "result": "ACTIONABLE_VOUCHER_NO_LITERAL",
+      "code_signal": true,
+      "notes": "Current official product surface advertises online voucher up to 2,000,000 VND but no exact reusable public code string is exposed."
+    },
+    {
+      "url": "https://www.phuclong.com.vn/khuyen-mai/vong-nguyet-thuong-danh-tra---dan-tinh-hoa-gan-ket-20260713023153",
+      "result": "ACTIONABLE_NO_LITERAL",
+      "code_signal": false,
+      "notes": "Current 2026 Mid-Autumn campaign advertises corporate order discounts up to 26%; no exact reusable public literal code found."
+    }
+  ],
+  "lovable_calls": 0
+}
