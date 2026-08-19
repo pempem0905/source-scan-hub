@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-19T17:17:11.904954Z",
+  "generated_at": "2026-08-19T17:43:14.096126Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 5514,
-    "frontier_deferred_pending": 38683,
-    "frontier_pending": 44197,
-    "last_6_runs_new_domains": 13,
+    "frontier_active_pending": 7238,
+    "frontier_deferred_pending": 38762,
+    "frontier_pending": 46000,
+    "last_6_runs_new_domains": 7,
     "last_run": {
-      "at": "2026-08-19T17:12:14.357112Z",
+      "at": "2026-08-19T17:39:09.256660Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.com/vn/*uu-dai*",
-        "*.com/vn/*voucher*",
-        "*.com/vn/*promotion*",
-        "*.com/vi-vn/*khuyen-mai*"
+        "*.com/vi-vn/*uu-dai*",
+        "*.com/vi-vn/*voucher*",
+        "*.com/vi-vn/*promotion*",
+        "*.net/vn/*khuyen-mai*"
       ],
-      "duration_s": 295.5,
-      "errors": 62,
-      "frontier_pending": 44197,
-      "new_domains": 3,
-      "processed": 1317,
-      "rate403": 1.443,
-      "rate429": 0.0
+      "duration_s": 242.8,
+      "errors": 47,
+      "frontier_pending": 46000,
+      "new_domains": 0,
+      "processed": 1238,
+      "rate403": 0.485,
+      "rate429": 0.081
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 2260,
+    "master_domains": 2263,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 179,
+    "run_count": 180,
     "running": true,
-    "seen_urls": 996219,
-    "updated_at": "2026-08-19T17:17:09.831098Z"
+    "seen_urls": 1003470,
+    "updated_at": "2026-08-19T17:43:12.040870Z"
   },
   "master_input": {
     "active_input_count": 238,
@@ -41,33 +41,33 @@
       "BANK_CARD": 38,
       "DISCOVERY_ONLY": 18,
       "FOOD_BEVERAGE": 31,
-      "GENERAL": 1735,
+      "GENERAL": 1737,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 35,
       "PROMO_L2": 15,
       "PROMO_RETAIL": 188,
-      "PUBLIC_HTTP": 1950,
+      "PUBLIC_HTTP": 1953,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 114,
-      "REVIEW_INPUT": 1710,
+      "REVIEW_INPUT": 1713,
       "SOURCE_HUNTER": 18,
-      "SOURCE_REVIEW": 1710,
-      "TRAVEL_MOBILITY": 31
+      "SOURCE_REVIEW": 1713,
+      "TRAVEL_MOBILITY": 32
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 18,
-    "generated_at": "2026-08-19T17:17:11.626825Z",
+    "generated_at": "2026-08-19T17:43:13.870473Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1966,
-    "review_input_count": 1710,
+    "record_count": 1969,
+    "review_input_count": 1713,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 2260,
+    "source_hunter_domains": 2263,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -383,27 +383,27 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 4,
+    "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "nhà hàng cafe trà sữa khuyến mãi Việt Nam",
-      "nhà hàng cafe trà sữa ưu đãi Việt Nam",
-      "nhà hàng cafe trà sữa voucher Việt Nam",
-      "nhà hàng cafe trà sữa promotion Vietnam"
+      "rạp chiếu phim khuyến mãi Việt Nam",
+      "rạp chiếu phim ưu đãi Việt Nam",
+      "rạp chiếu phim voucher Việt Nam",
+      "rạp chiếu phim promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 152,
+    "cc_domain_page": 153,
     "frontier_scheduler": {
-      "active": 1317,
+      "active": 1238,
       "base_per_host_batch": 16,
-      "deferred": 38683,
+      "deferred": 38762,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 144
+      "unique_hosts": 129
     }
   },
   "recent_sources": [
