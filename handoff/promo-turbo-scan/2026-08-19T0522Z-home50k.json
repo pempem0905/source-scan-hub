@@ -1,0 +1,41 @@
+{
+  "schema": "promo.handoff.actionable_value_v2.batch",
+  "source_worker": "PROMO Turbo Scan",
+  "status": "READY",
+  "validated_at": "2026-08-19T05:22:31Z",
+  "actionable_value_v2": true,
+  "findings": [
+    {
+      "idempotency_key": "promo-turbo-scan|zalopay|home-credit|HOME50K|2026-12-31",
+      "merchant": "Home Credit",
+      "issuer": "Zalopay",
+      "literal_code": "HOME50K",
+      "benefit": "Khách chưa từng giao dịch thanh toán bằng Zalopay: giảm 50.000đ khi thanh toán khoản vay/thẻ tín dụng Home Credit từ 500.000đ; khách đã từng thanh toán: giảm 1% tối đa 20.000đ từ 1.000.000đ",
+      "eligibility": "Thanh toán khoản vay hoặc thẻ tín dụng Home Credit trên Zalopay; tài khoản Zalopay đã liên kết ngân hàng, định danh và xác thực sinh trắc học; giới hạn theo cohort của chương trình",
+      "valid_through": "2026-12-31",
+      "source_url": "https://zalopay.vn/giam-den-50000d-khi-thanh-toan-home-credit-tren-zalopay-6686",
+      "source_type": "official_wallet"
+    }
+  ],
+  "telemetry": {
+    "fast_probes": 25,
+    "shortlisted": 4,
+    "deep_validations": 2,
+    "cache_skips": 3,
+    "code_sources_read": 2,
+    "no_code_reads": 1,
+    "source_family_rotations": 1,
+    "offers_found": 1,
+    "voucher_benefits_found": 1,
+    "literal_codes_found": 1,
+    "codes_per_10_reads": 5.0,
+    "validated": 1,
+    "rejected": 1,
+    "committed": 0,
+    "literal_codes_committed": 0,
+    "batch": "2026-08-19T0522Z",
+    "last_run_at": "2026-08-19T05:22:31Z",
+    "lovable_calls": 0
+  },
+  "writer_note": "READY handoff only. Exact literal/economics/current validity confirmed on official Zalopay source. Canonical advancement remains single-final-writer only."
+}
