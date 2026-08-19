@@ -1,73 +1,73 @@
 {
-  "generated_at": "2026-08-19T07:57:53.387480Z",
+  "generated_at": "2026-08-19T08:24:59.380206Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 5082,
-    "frontier_deferred_pending": 38529,
-    "frontier_pending": 43611,
+    "frontier_active_pending": 9354,
+    "frontier_deferred_pending": 38545,
+    "frontier_pending": 47899,
     "last_6_runs_new_domains": 25,
     "last_run": {
-      "at": "2026-08-19T07:52:12.963463Z",
+      "at": "2026-08-19T08:19:00.158210Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*uu-dai*",
-        "*.vn/*uudai*",
-        "*.vn/*voucher*",
-        "*.vn/*promotion*"
+        "*.vn/*offers*",
+        "*.vn/*deals*",
+        "*.vn/*sale*",
+        "*.com/vn/*khuyen-mai*"
       ],
-      "duration_s": 338.5,
-      "errors": 149,
-      "frontier_pending": 43611,
-      "new_domains": 5,
-      "processed": 1471,
-      "rate403": 0.272,
+      "duration_s": 357.2,
+      "errors": 185,
+      "frontier_pending": 47899,
+      "new_domains": 3,
+      "processed": 1455,
+      "rate403": 2.543,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 2060,
+    "master_domains": 2077,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 162,
+    "run_count": 163,
     "running": true,
-    "seen_urls": 887521,
-    "updated_at": "2026-08-19T07:57:51.506599Z"
+    "seen_urls": 896931,
+    "updated_at": "2026-08-19T08:24:57.391733Z"
   },
   "master_input": {
-    "active_input_count": 232,
+    "active_input_count": 233,
     "counts": {
-      "ACTIVE_INPUT": 232,
+      "ACTIVE_INPUT": 233,
       "AUTHORIZED_ACCOUNT": 4,
       "BANK_CARD": 38,
       "DISCOVERY_ONLY": 18,
       "FOOD_BEVERAGE": 29,
-      "GENERAL": 1563,
+      "GENERAL": 1577,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 35,
       "PROMO_L2": 15,
-      "PROMO_RETAIL": 182,
-      "PUBLIC_HTTP": 1766,
+      "PROMO_RETAIL": 183,
+      "PUBLIC_HTTP": 1783,
       "RESIDENTIAL_REQUIRED": 12,
-      "RETAIL_ECOMMERCE": 106,
-      "REVIEW_INPUT": 1532,
+      "RETAIL_ECOMMERCE": 108,
+      "REVIEW_INPUT": 1548,
       "SOURCE_HUNTER": 18,
-      "SOURCE_REVIEW": 1532,
-      "TRAVEL_MOBILITY": 29
+      "SOURCE_REVIEW": 1548,
+      "TRAVEL_MOBILITY": 30
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 18,
-    "generated_at": "2026-08-19T07:57:53.193023Z",
+    "generated_at": "2026-08-19T08:24:59.134906Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1782,
-    "review_input_count": 1532,
+    "record_count": 1799,
+    "review_input_count": 1548,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 2060,
+    "source_hunter_domains": 2077,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -295,7 +295,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-19T07:07:00.886771Z",
+    "updated_at": "2026-08-19T07:55:16.903944Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -383,51 +383,30 @@
     }
   },
   "discovery": {
-    "free_search_last_added": 2,
+    "free_search_last_added": 1,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "phòng gym fitness khuyến mãi Việt Nam",
-      "phòng gym fitness ưu đãi Việt Nam",
-      "phòng gym fitness voucher Việt Nam",
-      "phòng gym fitness promotion Vietnam"
+      "spa thẩm mỹ khuyến mãi Việt Nam",
+      "spa thẩm mỹ ưu đãi Việt Nam",
+      "spa thẩm mỹ voucher Việt Nam",
+      "spa thẩm mỹ promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 135,
+    "cc_domain_page": 136,
     "frontier_scheduler": {
-      "active": 1471,
+      "active": 1455,
       "base_per_host_batch": 16,
-      "deferred": 38529,
+      "deferred": 38545,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 162
+      "unique_hosts": 175
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T14:06:01.474716Z",
-      "domain": "macduggal.com",
-      "radar": false,
-      "url": "https://macduggal.com/",
-      "via": "external_promo"
-    },
-    {
-      "at": "2026-08-18T14:06:01.474716Z",
-      "domain": "laodongviet.vn",
-      "radar": false,
-      "url": "https://laodongviet.vn/uu-dai-50-huan-luyen-an-toan-ve-sinh-lao-dong-theo-nghi-dinh-so-44-2016-nd-cp-tai-doanh-nghiep-a-1629.html",
-      "via": "internal_promo"
-    },
-    {
-      "at": "2026-08-18T14:06:01.474716Z",
-      "domain": "9to5toys.com",
-      "radar": false,
-      "url": "https://9to5toys.com/2026/08/04/tuesday-apple-tv-deals-best/",
-      "via": "internal_promo"
-    },
     {
       "at": "2026-08-18T14:47:04.238244Z",
       "domain": "jossandmain.com",
@@ -1246,6 +1225,27 @@
       "radar": false,
       "url": "https://flightcentre.co.za/deals/asia-holidays",
       "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-19T08:19:00.158210Z",
+      "domain": "ikea.com",
+      "radar": false,
+      "url": "https://ikea.com/global/en/international-sales/",
+      "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-19T08:19:00.158210Z",
+      "domain": "rachelcomey.com",
+      "radar": false,
+      "url": "https://rachelcomey.com/",
+      "via": "external_promo"
+    },
+    {
+      "at": "2026-08-19T08:19:00.158210Z",
+      "domain": "hpmed.vn",
+      "radar": false,
+      "url": "https://hpmed.vn/",
+      "via": "free_search"
     }
   ]
 }
