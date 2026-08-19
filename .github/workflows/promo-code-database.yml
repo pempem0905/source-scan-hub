@@ -39,10 +39,11 @@ jobs:
           python3 - <<'PY'
           import json
           from pathlib import Path
-          p=Path('docs/data/promo_codes.json')
-          data=json.loads(p.read_text())
+          data=json.loads(Path('docs/data/promo_codes.json').read_text())
+          qa=json.loads(Path('integration/code_database_status.json').read_text())
           assert data['schema']=='promo.code_database.v1'
           assert data['snapshot_label']=='19/08/2026'
+          assert qa['schema']=='promo.code_database_status.v1'
           assert isinstance(data.get('records'), list)
           assert all(r.get('code') for r in data['records'])
           assert all(r.get('quality_tier') in {'ACTIVE_VERIFIED','ACTIVE_REVIEW','UNVERIFIED','INACTIVE','UNKNOWN'} for r in data['records'])
@@ -53,7 +54,7 @@ jobs:
         run: |
           git config user.name "promo-code-db-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/promo_codes.json
+          git add docs/data/promo_codes.json integration/code_database_status.json
           if git diff --cached --quiet; then
             exit 0
           fi
