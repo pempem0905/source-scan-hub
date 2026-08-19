@@ -1,7 +1,7 @@
 {
   "schema": "promo.handoff.actionable_value_v2",
   "source_worker": "PROMO Turbo Scan",
-  "status": "READY",
+  "status": "REJECTED_DATE_GATE",
   "idempotency_key": "promo-turbo-scan|hsbc-vn|ascott|HSBCVN25|current",
   "merchant": "Ascott / ASR participating Vietnam properties",
   "issuer": "HSBC Vietnam",
@@ -10,11 +10,11 @@
   "eligibility": "Eligible HSBC cardholders; ASR membership/login required; book on official Ascott website and pay with eligible HSBC card",
   "constraints": "Select Corporate Customers and enter HSBCVN25; cannot combine with other promotions; applicable only at listed participating properties and subject to programme terms",
   "valid_through": null,
-  "date_status": "ACTIVE_ON_CURRENT_OFFICIAL_HSBC_DAILY_OFFERS_PAGE; exact terminal date not exposed in retrieved code context, therefore writer must retain current-page evidence and must not invent a date",
+  "date_status": "REJECTED: exact current/future terminal date was not exposed in the retrieved code context. ACTIONABLE-VALUE-V2 requires current/future dates; do not infer a date from neighboring offers.",
   "source_url": "https://card.apply.hsbc.com.vn/daily-offers/en",
   "source_type": "official_bank",
-  "actionable_value_v2": true,
-  "validated_at": "2026-08-18T19:25:00Z",
-  "evidence": "Official HSBC current daily-offers page states Promo Code HSBCVN25, 25% off Best Flexible Rate for participating Ascott properties, ASR membership/login and HSBC-card payment requirements.",
-  "writer_note": "READY handoff only; global dedup/canonical advancement remains the single final writer's responsibility. Do not fabricate valid_through."
+  "actionable_value_v2": false,
+  "validated_at": "2026-08-19T00:23:00Z",
+  "evidence": "Official HSBC page confirms literal code HSBCVN25 and 25% Ascott benefit, but the code-specific terminal date could not be safely bound from retrieved context.",
+  "writer_note": "Quarantined by final quality gate. Re-promote only after exact code-specific current/future terminal date is verified on official evidence. Never fabricate valid_through."
 }
