@@ -1014,6 +1014,21 @@ ascendtech.vn
 ascentgroup.vn
 ascenttrainings.com
 asco.vn
+asia-genomics.vn
+asia-park.vn
+asia-star.vn
+asia-tech.vn
+asia-vnjp.vn
+asia-work.vn
+asiacar.vn
+asiacenter.vn
+asiacert.vn
+asiacleancapital.vn
+asiacontainer.vn
+asiacorp.vn
+asiacreative.vn
+asiae.vn
+asiastar.vn
 at.macduggal.com
 atac2024.aiotlab.vn
 atrip.vn
@@ -1275,6 +1290,7 @@ fiverr.com
 flchotelsresorts.com
 flexoffice.com
 flightcentre.ca
+flightcentre.com.au
 flyroyalbrunei.com
 food.grab.com
 foody.vn
@@ -1460,6 +1476,7 @@ kvoucher.vn
 lacoste.com.vn
 lady.amf.vn
 lagrowthmachine.com
+lamdong.edu.vn
 landing.360group.vn
 laodongviet.vn
 lapmangfpttelecom.com
@@ -1489,6 +1506,7 @@ lottemart.com.vn
 lottemart.vn
 lotteria.vn
 loyalty.nuti.vn
+luatvietnam.vn
 lv.360game.vn
 lynkid.vn
 lypham.vn
@@ -1640,6 +1658,7 @@ pandora.norbreeze.vn
 partner.agileops.vn
 partnerhub.g2.com
 pay.357games.vn
+pe-nation.com
 pedroshoes.com
 pharmacity.vn
 phongchinhtri.demo.algae.vn
@@ -1648,6 +1667,7 @@ phongthuy.6giay.vn
 phongvan.360game.vn
 phonhadat.vn
 phuclong.com.vn
+phunuphapluat.nguoiduatin.vn
 phunuvasuckhoe.net
 picodi.com
 pierre-cardin.vn
@@ -1896,6 +1916,7 @@ us.gamesplanet.com
 usatoday.com
 uu-dai.amiskr.vn
 v2.dinhvi.3tbk.vn
+vanban.chinhphu.vn
 vanhanhmall.com
 vap.ac.vn
 vato.vn
@@ -1977,6 +1998,7 @@ voucherbox.vn
 voucherhighlands.chanhtuoi.com
 voucherhighlands.com
 voucherthecoffeehouse.com
+vov2.vov.vn
 vpbank.com.vn
 vtcpay.vn
 vuanoithat.asia
