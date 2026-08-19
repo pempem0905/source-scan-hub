@@ -71,12 +71,35 @@ def quality(obj):
     return "ACTIVE_REVIEW" if status else "UNKNOWN"
 
 
+def ui_meta(q):
+    if q == "ACTIVE_VERIFIED":
+        return "Đã xác minh", "verified", None
+    if q == "ACTIVE_REVIEW":
+        return "Cần rà soát", "review", "Ưu đãi đã có ngữ cảnh nhưng nên kiểm tra lại trước khi thanh toán."
+    if q == "UNVERIFIED":
+        return "Candidate", "candidate", "Mã lấy từ nguồn discovery/affiliate và chưa được đối chiếu lại với nguồn chính thức."
+    if q == "INACTIVE":
+        return "Hết hạn / không hoạt động", "inactive", "Giữ để lịch sử và chống trùng; không nên dùng để thanh toán."
+    return "Chưa phân loại", "unknown", "Cần kiểm tra trước khi sử dụng."
+
+
+def usage_terms(obj):
+    parts = []
+    for key in ("eligibility", "conditions", "condition", "usage_limit", "service", "evidence"):
+        value = txt(obj.get(key), 1800)
+        if value and value not in parts:
+            parts.append(value)
+    return " · ".join(parts)[:3500] if parts else None
+
+
 def row_for(code, obj, source_file, code_field):
     q = quality(obj)
+    label, badge, warning = ui_meta(q)
     merchant = txt(obj.get("merchant") or obj.get("brand") or obj.get("merchant_name"), 300)
     title = txt(obj.get("title") or obj.get("name") or obj.get("promotion_name") or obj.get("offer_name"), 500)
     source_url = txt(obj.get("source_url") or obj.get("url") or obj.get("landing_url"), 2000)
     identity = "|".join((code.upper(), (merchant or "").lower(), source_url or ""))
+    eligibility = txt(obj.get("eligibility") or obj.get("conditions") or obj.get("condition"), 1800)
     return {
         "id": "CODE|" + hashlib.sha1(identity.encode()).hexdigest()[:20],
         "code": code,
@@ -84,12 +107,16 @@ def row_for(code, obj, source_file, code_field):
         "title": title,
         "vertical": txt(obj.get("vertical"), 100),
         "benefit_type": txt(obj.get("benefit_type"), 120),
-        "benefit_value": txt(obj.get("benefit_value"), 500),
+        "benefit_value": txt(obj.get("benefit_value") or obj.get("benefit"), 700),
         "benefit_cap_vnd": obj.get("benefit_cap_vnd"),
         "min_spend_vnd": obj.get("min_spend_vnd"),
         "start_date": txt(obj.get("start_date"), 100),
         "end_date": txt(obj.get("end_date"), 100),
-        "eligibility": txt(obj.get("eligibility") or obj.get("conditions") or obj.get("condition"), 1500),
+        "eligibility": eligibility,
+        "usage_limit": txt(obj.get("usage_limit"), 800),
+        "service": txt(obj.get("service"), 300),
+        "usage_terms": usage_terms(obj),
+        "conditions_button_label": "Điều kiện sử dụng",
         "source_url": source_url,
         "affiliate_url": txt(obj.get("affiliate_url"), 2000),
         "source_worker": txt(obj.get("source_worker"), 200),
@@ -97,10 +124,14 @@ def row_for(code, obj, source_file, code_field):
         "source_id": txt(obj.get("source_id"), 200),
         "status": txt(obj.get("status") or obj.get("verification_status"), 150),
         "quality_tier": q,
+        "display_status": label,
+        "display_badge": badge,
+        "ui_warning": warning,
+        "ui_visible": True,
         "ui_safe_default": q == "ACTIVE_VERIFIED",
-        "verification_required": obj.get("verification_required") is True,
+        "verification_required": obj.get("verification_required") is True or q in {"ACTIVE_REVIEW", "UNVERIFIED"},
         "evidence": txt(obj.get("evidence"), 1800),
-        "evidence_checked_at": txt(obj.get("evidence_checked_at") or obj.get("observed_at") or obj.get("generated_at"), 100),
+        "evidence_checked_at": txt(obj.get("evidence_checked_at") or obj.get("verified_at") or obj.get("observed_at") or obj.get("generated_at"), 100),
         "code_field": code_field,
         "source_files": [source_file],
     }
@@ -171,7 +202,7 @@ def merge_rows(rows):
             merged[key] = row
         else:
             old["source_files"] = files
-            for f in ("merchant", "title", "benefit_type", "benefit_value", "eligibility", "source_url", "start_date", "end_date", "evidence"):
+            for f in ("merchant", "title", "benefit_type", "benefit_value", "eligibility", "usage_limit", "service", "usage_terms", "source_url", "start_date", "end_date", "evidence"):
                 if not old.get(f) and row.get(f):
                     old[f] = row[f]
     return list(merged.values())
@@ -209,12 +240,15 @@ def main():
         "by_quality_tier": dict(by_quality),
     }
     payload = {
-        "schema": "promo.code_database.v1",
+        "schema": "promo.code_database.v2",
         "snapshot_label": SNAPSHOT_LABEL,
         "generated_at": now(),
         "ui_contract": {
-            "default_filter": {"ui_safe_default": True},
-            "note": "Show ACTIVE_VERIFIED by default. Other tiers remain visible for admin/review UI.",
+            "default_filter": {"ui_visible": True},
+            "show_all_discovered_codes": True,
+            "quality_order": ["ACTIVE_VERIFIED", "ACTIVE_REVIEW", "UNVERIFIED", "INACTIVE"],
+            "conditions": {"field": "usage_terms", "button_label_field": "conditions_button_label", "recommended_mode": "collapse_below_card"},
+            "note": "All discovered literal codes are available to UI. Always show display_status; show ui_warning for non-verified tiers.",
         },
         "stats": stats,
         "records": records,
@@ -223,12 +257,12 @@ def main():
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     qa = {
-        "schema": "promo.code_database_status.v1",
+        "schema": "promo.code_database_status.v2",
         "snapshot_label": SNAPSHOT_LABEL,
         "generated_at": payload["generated_at"],
         **stats,
         "top_source_files": [{"file": k, "observations": v} for k, v in source_counts.most_common(20)],
-        "sample": [{k: r.get(k) for k in ("code", "merchant", "title", "quality_tier", "status", "source_worker", "code_field")} for r in records[:30]],
+        "sample": [{k: r.get(k) for k in ("code", "merchant", "title", "quality_tier", "display_status", "status", "source_worker", "code_field")} for r in records[:30]],
     }
     STATUS_OUT.write_text(json.dumps(qa, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(stats, ensure_ascii=False))
