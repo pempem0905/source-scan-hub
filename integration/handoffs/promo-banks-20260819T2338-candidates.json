@@ -1,0 +1,50 @@
+{
+  "schema": "promo.banks_handoff.v2",
+  "generated_at": "2026-08-19T23:38:42+07:00",
+  "source_worker": "PROMO Banks Shard",
+  "pipeline": "TURBO_SCAN_PIPELINE_V2",
+  "input_contract": "GitHub ELIGIBLE + ACTIVE_INPUT assigned PROMO_BANKS",
+  "candidates": [
+    {
+      "idempotency_key": "PROMO_BANKS|momo.vn|BIGBANG|2026-07-30|OPEN_ENDED",
+      "source_worker": "PROMO Banks Shard",
+      "source_id": "SRCV1-C379353D0B36",
+      "source_domain": "momo.vn",
+      "merchant": "MoMo Travel",
+      "partner": "MoMo",
+      "offer_type": "voucher_code",
+      "literal_code": "BIGBANG",
+      "benefit": "Nhận 2 thẻ quà: vé máy bay khứ hồi tới Hà Nội giảm 80.000 VND cho hành trình trong tháng 10; phòng khách sạn giảm 10% tối đa 420.000 VND",
+      "eligibility": "Đặt vé máy bay hoặc khách sạn trực tiếp trên MoMo Travel; mỗi khách hàng tối đa 1 lần cho mỗi ưu đãi",
+      "usage_limit": "1 lần/1 tài khoản MoMo/1 CMND/1 SĐT/1 tài khoản ngân hàng/1 thiết bị; số lượng có hạn",
+      "geo": "MoMo Travel / hành trình liên quan Hà Nội theo điều kiện chương trình",
+      "start_date": "2026-07-30",
+      "end_date": null,
+      "status": "READY",
+      "evidence_url": "https://www.momo.vn/tin-tuc/khuyen-mai/vip-san-sang-quay-concert-bigbang-8949",
+      "value_filter_version": "actionable-value-v2",
+      "verified_at": "2026-08-19T23:38:42+07:00"
+    },
+    {
+      "idempotency_key": "PROMO_BANKS|bidv.com.vn|MCVN7|2026-05-06|2027-01-31",
+      "source_worker": "PROMO Banks Shard",
+      "source_id": "SRCV1-1AA0214B3820",
+      "source_domain": "bidv.com.vn",
+      "merchant": "Selected hotels",
+      "partner": "Mastercard",
+      "offer_type": "voucher_code",
+      "literal_code": "MCVN7",
+      "benefit": "Giảm 7% quanh năm cho các đơn đặt phòng khách sạn đủ điều kiện",
+      "payment_requirement": "Thanh toán bằng thẻ BIDV Mastercard hợp lệ",
+      "eligibility": "Tất cả các hạng thẻ BIDV Mastercard; áp dụng cho các khách sạn được chọn",
+      "usage_limit": "Áp dụng đến khi hết mã/ưu đãi theo điều kiện chương trình",
+      "start_date": "2026-05-06",
+      "end_date": "2027-01-31",
+      "stay_end_date": "2027-06-30",
+      "status": "READY",
+      "evidence_url": "https://bidv.com.vn/vn/ca-nhan/khuyen-mai/khuyen-mai-the/chi-tiet/%21ut/p/z0/fYxBDoIwEABf02OzC0buhESDMeLFBPZi1raxK1gEW6K_lxd4nMxkgKAFCrzInaOMgYeVOyquWNZ5VmPWNFVRYXE57ran_WZzzhEOQP-D9SCPaaISyIwhuk-E9iZ2UWhYB89BYe_T1wX9ZFFoxXi9JB29U5iStiyreEc3G56t9mN0A7x66n4WAmtI/",
+      "value_filter_version": "actionable-value-v2",
+      "verified_at": "2026-08-19T23:38:42+07:00"
+    }
+  ]
+}
