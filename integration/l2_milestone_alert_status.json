@@ -1,14 +1,14 @@
 {
-  "schema": "promo.l2.milestone_alert_status.v1",
-  "generated_at": "2026-08-19T07:26:48Z",
+  "error": null,
+  "generated_at": "2026-08-19T08:06:13.241634Z",
   "last_alert_key": null,
   "last_alert_kind": null,
   "last_metrics": {
+    "l2_literal_codes_found": 1,
     "l2_sources_scanned": 1,
-    "l2_voucher_deals_found": 2,
-    "l2_literal_codes_found": 1
+    "l2_voucher_deals_found": 2
   },
-  "telegram_state": "BASELINE_INITIALIZED",
+  "schema": "promo.l2.milestone_alert_status.v1",
   "sent": false,
-  "error": null
+  "telegram_state": "NO_MILESTONE"
 }
