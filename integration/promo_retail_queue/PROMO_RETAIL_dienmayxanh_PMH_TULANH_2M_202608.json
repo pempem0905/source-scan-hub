@@ -1,0 +1,23 @@
+{
+  "schema": "promo.candidate.v1",
+  "idempotency_key": "PROMO_RETAIL|dienmayxanh.com|pmh-tu-lanh-2m|2026-08-01|2026-09-06",
+  "source_worker": "PROMO Retail Shard",
+  "source_id": "SRCV1-A1642775091E",
+  "registrable_domain": "dienmayxanh.com",
+  "vertical": "RETAIL_ECOMMERCE",
+  "source_url": "https://www.dienmayxanh.com/khuyen-mai/tang-phieu-mua-hang-den-2-trieu-mua-tu-lanh-1596515",
+  "merchant": "Điện máy XANH",
+  "title": "Tặng Phiếu Mua Hàng đến 2 triệu mua Tủ lạnh, Tủ đông, Tủ mát",
+  "benefit_type": "VOUCHER_BENEFIT",
+  "benefit_value": "PMH 1.000.000đ hoặc 2.000.000đ tùy dung tích sản phẩm áp dụng",
+  "benefit_cap_vnd": 2000000,
+  "min_spend_vnd": null,
+  "start_date": "2026-08-01",
+  "end_date": "2026-09-06",
+  "eligibility": "Mua Tivi, Máy giặt, Máy sấy, Máy lạnh, Máy nước nóng hoặc Máy lọc nước tại Điện máy XANH; PMH dùng cho lần mua tiếp theo các Tủ lạnh/Tủ đông/Tủ mát thuộc danh sách. PMH 1 triệu áp dụng dung tích 400-500L; PMH 2 triệu áp dụng từ 500L trở lên; không cộng dồn; HSD phiếu 7 ngày từ phát hành.",
+  "literal_code": null,
+  "status": "ACTIVE",
+  "evidence": "Official Điện máy XANH page published 01/08/2026 states campaign 01/08/2026-06/09/2026, PMH tiers 1,000,000/2,000,000 VND and 7-day issued-voucher validity. No reusable public literal code is exposed.",
+  "evidence_checked_at": "2026-08-19T18:52:41+07:00",
+  "actionable_value_version": "ACTIONABLE-VALUE-V2"
+}
