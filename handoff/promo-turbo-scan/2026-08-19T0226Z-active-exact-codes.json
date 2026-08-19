@@ -1,0 +1,65 @@
+{
+  "schema": "promo.handoff.actionable_value_v2.batch",
+  "source_worker": "PROMO Turbo Scan",
+  "status": "READY",
+  "validated_at": "2026-08-19T02:26:50Z",
+  "actionable_value_v2": true,
+  "findings": [
+    {
+      "idempotency_key": "promo-turbo-scan|momo|dookki|VTSDOOKKI|2026-12-31",
+      "merchant": "Dookki",
+      "issuer": "MoMo",
+      "literal_code": "VTSDOOKKI",
+      "benefit": "Ví Trả Sau: hoàn 20% tối đa 35.000đ cho khách hàng mới; khách hàng hiện hữu hoàn 20.000đ",
+      "eligibility": "Thanh toán bằng Ví Trả Sau MoMo tại hệ thống Dookki toàn quốc; không áp dụng cửa hàng nhượng quyền",
+      "valid_through": "2026-12-31",
+      "source_url": "https://www.momo.vn/tin-tuc/khuyen-mai/nhap-ma-vtsdookki-hoan-ngay-5-20-voi-vi-tra-sau-8782",
+      "source_type": "official_wallet"
+    },
+    {
+      "idempotency_key": "promo-turbo-scan|vpbank-mastercard|hotels.com|MCVN7|2027-01-31",
+      "merchant": "Hotels.com",
+      "issuer": "VPBank Mastercard debit",
+      "literal_code": "MCVN7",
+      "benefit": "Giảm 7% cho đơn đặt phòng khách sạn đủ điều kiện",
+      "eligibility": "Thanh toán bằng thẻ ghi nợ VPBank Mastercard; nhập code tại trang thanh toán",
+      "valid_through": "2027-01-31",
+      "stay_through": "2027-06-30",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/travel/vui-he-gap-doi-uu-dai-gap-boi-cung-the-ghi-no-vpbank",
+      "source_type": "official_bank"
+    },
+    {
+      "idempotency_key": "promo-turbo-scan|vpbank-mastercard|qatar-airways|MASTERCARD|2026-12-31",
+      "merchant": "Qatar Airways",
+      "issuer": "VPBank Mastercard debit",
+      "literal_code": "MASTERCARD",
+      "benefit": "Giảm 5%-10% trên hạng vé Economy và Business đủ điều kiện",
+      "eligibility": "Thanh toán bằng thẻ Mastercard hợp lệ; áp dụng cho các hành trình/hạng vé đủ điều kiện được công bố",
+      "valid_through": "2026-12-31",
+      "travel_through": "2027-03-31",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/other/quet-the-ghi-no-vpbank-mastercard-nhan-uu-dai",
+      "source_type": "official_bank"
+    }
+  ],
+  "telemetry": {
+    "fast_probes": 25,
+    "shortlisted": 8,
+    "deep_validations": 5,
+    "cache_skips": 0,
+    "code_sources_read": 5,
+    "no_code_reads": 2,
+    "source_family_rotations": 0,
+    "offers_found": 3,
+    "voucher_benefits_found": 3,
+    "literal_codes_found": 3,
+    "codes_per_10_reads": 6.0,
+    "validated": 3,
+    "rejected": 2,
+    "committed": 0,
+    "literal_codes_committed": 0,
+    "batch": "2026-08-19T0226Z",
+    "last_run_at": "2026-08-19T02:26:50Z",
+    "lovable_calls": 0
+  },
+  "writer_note": "READY handoff only. Global repo literal search returned no matches for VTSDOOKKI, MCVN7, or MASTERCARD. Canonical advancement must be performed and verified by the single final writer."
+}
