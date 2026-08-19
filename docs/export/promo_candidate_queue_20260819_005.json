@@ -1,0 +1,1175 @@
+{
+  "file": "promo_candidate_queue_20260819_005.json",
+  "chunk_index": 5,
+  "chunk_count": 5,
+  "row_count": 40,
+  "rows": [
+    {
+      "id": "b2216159-c41d-4a8f-8fce-9eedb6d8cbca",
+      "idempotency_key": "banks:grab:shb30:car:2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.grab.com/vn/blog/uu-dai-the-shb/",
+      "candidate": {
+        "brand": "SHB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-11-30",
+        "merchant": "GrabCar",
+        "economics": {
+          "discount_vnd": 30000,
+          "min_spend_vnd": 60000
+        },
+        "source_id": "SRCV1-62592728372E",
+        "start_date": "2026-06-01",
+        "eligibility": "Thanh toán bằng thẻ ngân hàng SHB; 1 mã/người dùng/ngày, tối đa 5 mã/người dùng/tháng; app Grab mới nhất.",
+        "evidence_url": "https://www.grab.com/vn/blog/uu-dai-the-shb/",
+        "literal_code": "SHB30",
+        "benefit_summary": "Giảm 30.000 VND cho chuyến GrabCar từ 60.000 VND khi thanh toán bằng thẻ SHB.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "f8a1b7fa-553e-45f3-84ee-d191edcbcab0",
+      "created_at": "2026-08-16T19:43:30.588158+00:00",
+      "committed_at": "2026-08-16T20:08:17.146042+00:00"
+    },
+    {
+      "id": "2adf9994-de4f-45e7-9c1d-e4b7bdd621e2",
+      "idempotency_key": "promo:v1:SRCV1-C0539A4C9D0F:vnpt-lazada-2026-10k",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://vnptpay.vn/web/khuyenmai/lzd_thagauudai",
+      "candidate": {
+        "brand": "VNPT Money",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "Lazada",
+        "economics": {
+          "discount_vnd": 10000,
+          "min_spend_vnd": 180000
+        },
+        "source_id": "SRCV1-C0539A4C9D0F",
+        "start_date": "2026-07-01",
+        "eligibility": "Mua hàng trên Lazada và thanh toán bằng VNPT Money; voucher Instant Off; tối đa 1 lần/tháng cho ưu đãi này.",
+        "evidence_url": "https://vnptpay.vn/web/khuyenmai/lzd_thagauudai",
+        "literal_code": null,
+        "benefit_summary": "Voucher giảm 10.000 VND cho đơn Lazada từ 180.000 VND khi thanh toán bằng VNPT Money; tự áp dụng khi đủ điều kiện; tối đa 1 lần/khách hàng/tháng cho tier này.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "ca7ce7e1-26e7-4a66-8b25-5ab77d7e7a1f",
+      "created_at": "2026-08-16T20:38:50.476227+00:00",
+      "committed_at": "2026-08-16T21:10:47.986229+00:00"
+    },
+    {
+      "id": "626c53a0-3c75-41a0-8571-fe31ecc8038d",
+      "idempotency_key": "promo:v1:SRCV1-C0539A4C9D0F:vnpt-topup-friday-50pct-2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://vnptpay.vn/web/khuyenmai/topup_thu6vang",
+      "candidate": {
+        "brand": "VNPT Money",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "Mobile top-up",
+        "economics": {
+          "daily_quota": 1000,
+          "discount_pct": 50,
+          "discount_cap_vnd": 30000
+        },
+        "source_id": "SRCV1-C0539A4C9D0F",
+        "start_date": "2026-06-05",
+        "eligibility": "Tài khoản VNPT Money đủ điều kiện; số điện thoại nạp trùng số đăng nhập; thanh toán bằng Ví VNPT Pay/Mobile Money; 1 lần/tháng trong giai đoạn hiện tại.",
+        "evidence_url": "https://vnptpay.vn/web/khuyenmai/topup_thu6vang",
+        "literal_code": null,
+        "benefit_summary": "Thẻ quà tặng giảm 50% tối đa 30.000 VND khi nạp điện thoại cho chính mình vào Thứ Sáu bằng Ví VNPT Pay hoặc Mobile Money; giai đoạn 01/07-31/08 tối đa 1 lần/tháng.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "ca7ce7e1-26e7-4a66-8b25-5ab77d7e7a1f",
+      "created_at": "2026-08-16T20:38:50.476227+00:00",
+      "committed_at": "2026-08-16T21:10:47.986229+00:00"
+    },
+    {
+      "id": "6aa2ffe3-ab65-455e-803a-1ec83b048fd8",
+      "idempotency_key": "promo:v1:SRCV1-C0539A4C9D0F:vnpt-lazada-2026-20k",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://vnptpay.vn/web/khuyenmai/lzd_thagauudai",
+      "candidate": {
+        "brand": "VNPT Money",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "Lazada",
+        "economics": {
+          "discount_vnd": 20000,
+          "min_spend_vnd": 400000
+        },
+        "source_id": "SRCV1-C0539A4C9D0F",
+        "start_date": "2026-07-01",
+        "eligibility": "Mua hàng trên Lazada và thanh toán bằng VNPT Money; voucher Instant Off; tối đa 1 lần/tháng cho ưu đãi này.",
+        "evidence_url": "https://vnptpay.vn/web/khuyenmai/lzd_thagauudai",
+        "literal_code": null,
+        "benefit_summary": "Voucher giảm 20.000 VND cho đơn Lazada từ 400.000 VND khi thanh toán bằng VNPT Money; tự áp dụng khi đủ điều kiện; tối đa 1 lần/khách hàng/tháng cho tier này.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "ca7ce7e1-26e7-4a66-8b25-5ab77d7e7a1f",
+      "created_at": "2026-08-16T20:38:50.476227+00:00",
+      "committed_at": "2026-08-16T21:10:47.986229+00:00"
+    },
+    {
+      "id": "6e1ccb4a-081b-4003-9646-361f747b63df",
+      "idempotency_key": "promo:v1:SRCV1-C0539A4C9D0F:vnpt-lazada-2026-15k",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://vnptpay.vn/web/khuyenmai/lzd_thagauudai",
+      "candidate": {
+        "brand": "VNPT Money",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "Lazada",
+        "economics": {
+          "discount_vnd": 15000,
+          "min_spend_vnd": 300000
+        },
+        "source_id": "SRCV1-C0539A4C9D0F",
+        "start_date": "2026-07-01",
+        "eligibility": "Mua hàng trên Lazada và thanh toán bằng VNPT Money; voucher Instant Off; tối đa 1 lần/tháng cho ưu đãi này.",
+        "evidence_url": "https://vnptpay.vn/web/khuyenmai/lzd_thagauudai",
+        "literal_code": null,
+        "benefit_summary": "Voucher giảm 15.000 VND cho đơn Lazada từ 300.000 VND khi thanh toán bằng VNPT Money; tự áp dụng khi đủ điều kiện; tối đa 1 lần/khách hàng/tháng cho tier này.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "ca7ce7e1-26e7-4a66-8b25-5ab77d7e7a1f",
+      "created_at": "2026-08-16T20:38:50.476227+00:00",
+      "committed_at": "2026-08-16T21:10:47.986229+00:00"
+    },
+    {
+      "id": "8efaf7ba-f770-4f8e-b395-5f6549fadbcd",
+      "idempotency_key": "promo:v1:SRCV1-C0539A4C9D0F:vnpt-bill-friday-6pct-2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://vnptpay.vn/web/khuyenmai/hdvt_thu6vang",
+      "candidate": {
+        "brand": "VNPT Money",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "VNPT telecom bills",
+        "economics": {
+          "cashback_pct": 6,
+          "cashback_cap_vnd": 50000
+        },
+        "source_id": "SRCV1-C0539A4C9D0F",
+        "start_date": "2026-06-12",
+        "eligibility": "Tài khoản VNPT Money đủ điều kiện; thanh toán hóa đơn VNPT cho chính mình; không áp dụng thanh toán tự động; 1 lần/tháng.",
+        "evidence_url": "https://vnptpay.vn/web/khuyenmai/hdvt_thu6vang",
+        "literal_code": null,
+        "benefit_summary": "Hoàn 6% tối đa 50.000 VND/giao dịch vào Thứ Sáu khi thanh toán hóa đơn cước VNPT cho chính mình trên VNPT Money; tối đa 1 lần/khách hàng/tháng.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "ca7ce7e1-26e7-4a66-8b25-5ab77d7e7a1f",
+      "created_at": "2026-08-16T20:38:50.476227+00:00",
+      "committed_at": "2026-08-16T21:10:47.986229+00:00"
+    },
+    {
+      "id": "9a7b2d4b-94c2-401f-9e24-92fd122c089c",
+      "idempotency_key": "promo:v1:SRCV1-C0539A4C9D0F:vnpt-hanoi-metro-link-50k-2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://vnptpay.vn/web/khuyenmai/hnmetro_t5_50K",
+      "candidate": {
+        "brand": "VNPT Money",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "Hanoi Metro",
+        "economics": {
+          "reward_vnd": 50000,
+          "time_ticket_min_spend_vnd": 100000
+        },
+        "source_id": "SRCV1-C0539A4C9D0F",
+        "start_date": "2026-04-12",
+        "eligibility": "Mở mới Ví VNPT Pay, định danh/sinh trắc học/liên kết ngân hàng; liên kết Hanoi Metro lần đầu; có ít nhất 1 giao dịch vé thông minh hoặc vé thời gian/vé lượt từ 100.000 VND theo thể lệ.",
+        "evidence_url": "https://vnptpay.vn/web/khuyenmai/hnmetro_t5_50K",
+        "literal_code": null,
+        "benefit_summary": "Tặng 50.000 VND vào Ví thanh toán cho khách hàng mở mới VNPT Pay, liên kết Hà Nội Metro lần đầu và phát sinh giao dịch vé đủ điều kiện.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "52ce0cfc-6e55-49ee-833d-2fd577d86c64",
+      "created_at": "2026-08-16T20:38:50.476227+00:00",
+      "committed_at": "2026-08-16T22:08:38.884074+00:00"
+    },
+    {
+      "id": "cfd49f08-1a0c-4428-9937-c6fe10d29424",
+      "idempotency_key": "promo:v1:SRCV1-C0539A4C9D0F:vnpt-hanoi-metro-50pct-2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://vnptpay.vn/web/khuyenmai/uudaimetro",
+      "candidate": {
+        "brand": "VNPT Money",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "Hanoi Metro",
+        "economics": {
+          "cashback_pct": 50,
+          "min_spend_vnd": 8000,
+          "cashback_cap_vnd": 50000,
+          "max_uses_per_customer": 15
+        },
+        "source_id": "SRCV1-C0539A4C9D0F",
+        "start_date": "2026-06-01",
+        "eligibility": "Tài khoản VNPT Money đủ điều kiện; thanh toán QR tại Hà Nội Metro qua VNPT Money hoặc Vé thông minh trên app Hà Nội Metro.",
+        "evidence_url": "https://vnptpay.vn/web/khuyenmai/uudaimetro",
+        "literal_code": null,
+        "benefit_summary": "Hoàn 50% tối đa 50.000 VND/giao dịch vé Hà Nội Metro từ 8.000 VND khi thanh toán bằng QR VNPT Money; tối đa 15 lần/khách hàng trong chương trình.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "ca7ce7e1-26e7-4a66-8b25-5ab77d7e7a1f",
+      "created_at": "2026-08-16T20:38:50.476227+00:00",
+      "committed_at": "2026-08-16T21:10:47.986229+00:00"
+    },
+    {
+      "id": "0a3244d4-0009-45cf-9bce-b9394e910fee",
+      "idempotency_key": "retail:SRCV1-D80FAC2A6847:vincom-medicare-aug-2026",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://vincom.com.vn/vincom-plaza-hue/uu-dai",
+      "candidate": {
+        "brand": "MEDiCARE",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-26",
+        "merchant": "MEDiCARE",
+        "economics": {
+          "mechanic": "MULTI_DEAL",
+          "buy2_discount_percent": 50,
+          "other_discount_up_to_percent": 30
+        },
+        "source_id": "SRCV1-D80FAC2A6847",
+        "source_url": "https://vincom.com.vn/vincom-plaza-hue/uu-dai",
+        "start_date": "2026-07-30",
+        "eligibility": "Áp dụng tại MEDiCARE theo danh mục/sản phẩm của chương trình tại Vincom; mức giảm phụ thuộc sản phẩm và điều kiện từng deal.",
+        "evidence_url": "https://vincom.com.vn/vincom-plaza-hue/uu-dai",
+        "literal_code": null,
+        "benefit_summary": "Chương trình Giá Trị Vượt Trội tháng 8 tại MEDiCARE: mua 2 giảm 50% ở nhóm hàng áp dụng, deal chống nắng giảm đến 30%, cùng ưu đãi mỹ phẩm/chăm sóc da và quyền lợi thành viên.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "52ce0cfc-6e55-49ee-833d-2fd577d86c64",
+      "created_at": "2026-08-16T20:58:16.263711+00:00",
+      "committed_at": "2026-08-16T22:08:38.884074+00:00"
+    },
+    {
+      "id": "7026f3ee-c17f-4601-b2e6-e9e0d1cd25f4",
+      "idempotency_key": "retail:SRCV1-93EE251F12D1:galaxy-shopeepay-aug-2026",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://www.galaxycine.vn/khuyen-mai/voucher-giam-khung-danh-tang-cac-stars/",
+      "candidate": {
+        "brand": "Galaxy Cinema",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "Galaxy Cinema",
+        "economics": {
+          "mechanic": "PERCENT_DISCOUNT",
+          "new_user_cap_vnd": 50000,
+          "new_user_percent": 20,
+          "existing_user_cap_vnd": 20000,
+          "existing_user_percent": 10
+        },
+        "source_id": "SRCV1-93EE251F12D1",
+        "source_url": "https://www.galaxycine.vn/khuyen-mai/voucher-giam-khung-danh-tang-cac-stars/",
+        "start_date": "2026-08-01",
+        "eligibility": "Khách hàng phải đăng nhập app ShopeePay và claim voucher trong mục Mã Giảm giá; voucher theo tài khoản nên không coi là literal code.",
+        "evidence_url": "https://www.galaxycine.vn/khuyen-mai/voucher-giam-khung-danh-tang-cac-stars/",
+        "literal_code": null,
+        "benefit_summary": "Thanh toán Galaxy bằng ShopeePay: khách mới giảm 20% tối đa 50.000đ (tối đa 1 lần); khách hiện tại giảm 10% tối đa 20.000đ (tối đa 3 lần trong chương trình).",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "52ce0cfc-6e55-49ee-833d-2fd577d86c64",
+      "created_at": "2026-08-16T20:58:16.263711+00:00",
+      "committed_at": "2026-08-16T22:08:38.884074+00:00"
+    },
+    {
+      "id": "a232ad95-4ccd-417e-8842-47473456677c",
+      "idempotency_key": "retail:SRCV1-AE1CD734555B:cellphones-shopeepay-spaylater-aug-sep-2026",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://cellphones.com.vn/uu-dai-doi-tac/shopeepay",
+      "candidate": {
+        "brand": "CellphoneS",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "CellphoneS",
+        "economics": {
+          "mechanic": "PERCENT_DISCOUNT",
+          "discount_percent": 5,
+          "max_discount_vnd": 500000
+        },
+        "source_id": "SRCV1-AE1CD734555B",
+        "source_url": "https://cellphones.com.vn/uu-dai-doi-tac/shopeepay",
+        "start_date": "2026-08-01",
+        "eligibility": "Thanh toán tại cửa hàng CellphoneS bằng ShopeePay hoặc SPayLater; tối đa 1 lần/khách hàng; không áp dụng cùng ưu đãi thanh toán thẻ/ví khác. Voucher phải được hiển thị/claim trong tài khoản ShopeePay nên không coi là literal code.",
+        "evidence_url": "https://cellphones.com.vn/uu-dai-doi-tac/shopeepay",
+        "literal_code": null,
+        "benefit_summary": "Giảm ngay 5% tối đa 500.000đ khi thanh toán tại cửa hàng CellphoneS bằng ShopeePay hoặc SPayLater; tối đa 1 lần/khách hàng; áp dụng hầu hết sản phẩm, trừ thẻ cào và dịch vụ thu hộ; số lượng ưu đãi giới hạn.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "52ce0cfc-6e55-49ee-833d-2fd577d86c64",
+      "created_at": "2026-08-16T20:58:16.263711+00:00",
+      "committed_at": "2026-08-16T22:08:38.884074+00:00"
+    },
+    {
+      "id": "373e07ad-1984-4377-ad2a-b16e9fdd52d6",
+      "idempotency_key": "retail:SRCV1-D80FAC2A6847:vincom-medicare-aug2026-buy2-50-deals30",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://vincom.com.vn/vincom-plaza-hue/uu-dai",
+      "candidate": {
+        "brand": "MEDiCARE",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-26",
+        "merchant": "MEDiCARE at Vincom Plaza Huế",
+        "economics": {
+          "mechanic": "MULTIBUY_AND_PERCENT_DISCOUNT",
+          "buy_quantity": 2,
+          "discount_percent": 50,
+          "other_deals_up_to_percent": 30
+        },
+        "source_id": "SRCV1-D80FAC2A6847",
+        "source_url": "https://vincom.com.vn/vincom-plaza-hue/uu-dai",
+        "start_date": "2026-07-30",
+        "eligibility": "Khách mua sắm tại MEDiCARE; một số ưu đãi độc quyền áp dụng cho thành viên theo chương trình.",
+        "evidence_url": "https://vincom.com.vn/vincom-plaza-hue/uu-dai",
+        "literal_code": null,
+        "benefit_summary": "MEDiCARE Giá Trị Vượt Trội Tháng 8: mua 2 giảm 50%, deal chống nắng đến 30%, cùng ưu đãi mỹ phẩm/chăm sóc da và quyền lợi thành viên; áp dụng 30/07–26/08/2026.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "REJECTED",
+      "commit_id": null,
+      "created_at": "2026-08-16T21:58:48.059966+00:00",
+      "committed_at": null
+    },
+    {
+      "id": "89bccebd-49ec-4602-9d7c-251bc81be4e1",
+      "idempotency_key": "banks:grab:nama:nabfood25:20260601",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.grab.com/vn/en/blog/uu-dai-the-nam-a-bank/",
+      "candidate": {
+        "brand": "Grab",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "GrabFood",
+        "economics": {
+          "discount_vnd": 25000,
+          "min_spend_vnd": 80000
+        },
+        "source_id": "SRCV1-62592728372E",
+        "start_date": "2026-06-01",
+        "eligibility": "Thanh toán GrabFood bằng thẻ Nam A Bank; tối đa 4 mã/người dùng/tháng theo trang ưu đãi.",
+        "evidence_url": "https://www.grab.com/vn/en/blog/uu-dai-the-nam-a-bank/",
+        "literal_code": "NABFOOD25",
+        "benefit_summary": "Giảm 25.000 VND cho đơn GrabFood từ 80.000 VND khi thanh toán bằng thẻ Nam A Bank và nhập mã NABFOOD25.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "9fb454b2-be7f-4c95-90b1-e104bc74a5cb",
+      "created_at": "2026-08-16T22:39:30.570525+00:00",
+      "committed_at": "2026-08-16T23:10:35.44387+00:00"
+    },
+    {
+      "id": "8ad84372-604a-4036-b131-b99c382e75c4",
+      "idempotency_key": "banks:grab:nama:nabcar30:20260601",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.grab.com/vn/en/blog/uu-dai-the-nam-a-bank/",
+      "candidate": {
+        "brand": "Grab",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "GrabCar",
+        "economics": {
+          "discount_vnd": 30000,
+          "min_spend_vnd": 60000
+        },
+        "source_id": "SRCV1-62592728372E",
+        "start_date": "2026-06-01",
+        "eligibility": "Thanh toán GrabCar bằng thẻ Nam A Bank; tối đa 4 mã/người dùng/tháng theo trang ưu đãi.",
+        "evidence_url": "https://www.grab.com/vn/en/blog/uu-dai-the-nam-a-bank/",
+        "literal_code": "NABCAR30",
+        "benefit_summary": "Giảm 30.000 VND cho chuyến GrabCar từ 60.000 VND khi thanh toán bằng thẻ Nam A Bank và nhập mã NABCAR30.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "9fb454b2-be7f-4c95-90b1-e104bc74a5cb",
+      "created_at": "2026-08-16T22:39:30.570525+00:00",
+      "committed_at": "2026-08-16T23:10:35.44387+00:00"
+    },
+    {
+      "id": "ac6086e2-8bef-4b04-8dbf-d9266eb59ac0",
+      "idempotency_key": "banks:grab:mb:newlink-food:20260601",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.grab.com/vn/en/blog/uu-dai-the-mb-bank/",
+      "candidate": {
+        "brand": "Grab",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-11-30",
+        "merchant": "GrabFood",
+        "economics": {
+          "discount_vnd": 40000,
+          "min_spend_vnd": 120000
+        },
+        "source_id": "SRCV1-62592728372E",
+        "start_date": "2026-06-01",
+        "eligibility": "Người dùng mới liên kết thẻ MB Bank vào Grab; thanh toán bằng thẻ MB Bank; 4 ưu đãi/tháng với mỗi mã theo trang ưu đãi.",
+        "evidence_url": "https://www.grab.com/vn/en/blog/uu-dai-the-mb-bank/",
+        "literal_code": null,
+        "benefit_summary": "Giảm 40.000 VND cho đơn GrabFood từ 120.000 VND dành cho người dùng mới liên kết thẻ MB Bank vào Grab.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "9fb454b2-be7f-4c95-90b1-e104bc74a5cb",
+      "created_at": "2026-08-16T22:39:30.570525+00:00",
+      "committed_at": "2026-08-16T23:10:35.44387+00:00"
+    },
+    {
+      "id": "d1714946-ed54-46f9-9488-9ded03833ceb",
+      "idempotency_key": "banks:grab:nama:nabbike:20260601",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.grab.com/vn/en/blog/uu-dai-the-nam-a-bank/",
+      "candidate": {
+        "brand": "Grab",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "GrabBike",
+        "economics": {
+          "discount_vnd": 15000,
+          "min_spend_vnd": 30000
+        },
+        "source_id": "SRCV1-62592728372E",
+        "start_date": "2026-06-01",
+        "eligibility": "Thanh toán GrabBike bằng thẻ Nam A Bank; tối đa 4 mã/người dùng/tháng theo trang ưu đãi.",
+        "evidence_url": "https://www.grab.com/vn/en/blog/uu-dai-the-nam-a-bank/",
+        "literal_code": "NABBIKE",
+        "benefit_summary": "Giảm 15.000 VND cho chuyến GrabBike từ 30.000 VND khi thanh toán bằng thẻ Nam A Bank và nhập mã NABBIKE.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "9fb454b2-be7f-4c95-90b1-e104bc74a5cb",
+      "created_at": "2026-08-16T22:39:30.570525+00:00",
+      "committed_at": "2026-08-16T23:10:35.44387+00:00"
+    },
+    {
+      "id": "fd1082e0-95b9-48bd-bd4c-9bc5afa43128",
+      "idempotency_key": "banks:grab:mb:newlink-transport:20260601",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.grab.com/vn/en/blog/uu-dai-the-mb-bank/",
+      "candidate": {
+        "brand": "Grab",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-11-30",
+        "merchant": "GrabBike / GrabCar",
+        "economics": {
+          "discount_vnd": 15000,
+          "min_spend_vnd": 30000
+        },
+        "source_id": "SRCV1-62592728372E",
+        "start_date": "2026-06-01",
+        "eligibility": "Người dùng mới liên kết thẻ MB Bank vào Grab; thanh toán bằng thẻ MB Bank; 4 ưu đãi/tháng với mỗi mã theo trang ưu đãi.",
+        "evidence_url": "https://www.grab.com/vn/en/blog/uu-dai-the-mb-bank/",
+        "literal_code": null,
+        "benefit_summary": "Giảm 15.000 VND cho chuyến GrabBike/GrabCar từ 30.000 VND dành cho người dùng mới liên kết thẻ MB Bank vào Grab.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "9fb454b2-be7f-4c95-90b1-e104bc74a5cb",
+      "created_at": "2026-08-16T22:39:30.570525+00:00",
+      "committed_at": "2026-08-16T23:10:35.44387+00:00"
+    },
+    {
+      "id": "9195a78b-5804-4ac4-ae15-6f26c322f768",
+      "idempotency_key": "promo-retail:cellphones:iphone17pro1tb:2026-08",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://cellphones.com.vn/iphone-17-pro-1tb.html",
+      "candidate": {
+        "brand": "CellphoneS",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "CellphoneS",
+        "economics": {
+          "sale_price_vnd": 43990000,
+          "reference_price_vnd": 47990000,
+          "trade_in_bonus_max_vnd": 2000000,
+          "installment_interest_pct": 0,
+          "payment_discount_max_vnd": 1000000,
+          "accessory_discount_max_pct": 10
+        },
+        "source_id": "SRCV1-AE1CD734555B",
+        "source_url": "https://cellphones.com.vn/iphone-17-pro-1tb.html",
+        "start_date": "2026-08-01",
+        "eligibility": "Khách mua iPhone 17 Pro 1TB chính hãng tại CellphoneS; ưu đãi thanh toán qua ví/thẻ ngân hàng có số lượng hạn chế.",
+        "evidence_url": "https://cellphones.com.vn/iphone-17-pro-1tb.html",
+        "literal_code": null,
+        "payment_method": "Ví điện tử hoặc thẻ tín dụng ngân hàng cho ưu đãi giảm thêm; trả góp 0% theo điều kiện chương trình.",
+        "benefit_summary": "iPhone 17 Pro 1TB giá 43.990.000đ từ 47.990.000đ; thu cũ lên đời trợ giá đến 2.000.000đ; giảm thêm đến 1.000.000đ khi thanh toán qua ví điện tử/thẻ tín dụng ngân hàng (số lượng có hạn); trả góp 0% và 0đ trả trước, không phụ phí; phụ kiện mua kèm giảm đến 10%.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "9fb454b2-be7f-4c95-90b1-e104bc74a5cb",
+      "created_at": "2026-08-16T22:55:42.037238+00:00",
+      "committed_at": "2026-08-16T23:10:35.44387+00:00"
+    },
+    {
+      "id": "09c9b941-9a0a-4084-b803-b76320031f6b",
+      "idempotency_key": "promo-retail:galaxy:jcb30:2026-07-04",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://www.galaxycine.vn/khuyen-mai/uu-dai-30-khi-thanh-toan-bang-the-jcb-tai-galaxy-cinema/",
+      "candidate": {
+        "brand": "Galaxy Cinema",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "Galaxy Cinema",
+        "economics": {
+          "discount_pct": 30,
+          "min_spend_vnd": 200000,
+          "discount_cap_vnd": 100000
+        },
+        "source_id": "SRCV1-93EE251F12D1",
+        "source_url": "https://www.galaxycine.vn/khuyen-mai/uu-dai-30-khi-thanh-toan-bang-the-jcb-tai-galaxy-cinema/",
+        "start_date": "2026-07-04",
+        "eligibility": "Thanh toán Galaxy Cinema bằng thẻ JCB hoặc Apple Pay liên kết JCB; áp dụng cuối tuần theo khung thời gian chương trình.",
+        "evidence_url": "https://www.galaxycine.vn/khuyen-mai/uu-dai-30-khi-thanh-toan-bang-the-jcb-tai-galaxy-cinema/",
+        "literal_code": null,
+        "payment_method": "JCB hoặc Apple Pay liên kết JCB qua Payoo",
+        "benefit_summary": "Giảm 30% tối đa 100.000đ cho đơn từ 200.000đ khi thanh toán bằng thẻ JCB hoặc Apple Pay liên kết thẻ JCB qua Payoo; áp dụng Thứ Bảy và Chủ Nhật hằng tuần.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "acd8cc94-aad8-4b96-a56a-8859fe8ac3a0",
+      "created_at": "2026-08-16T22:56:07.401627+00:00",
+      "committed_at": "2026-08-17T00:13:00.366805+00:00"
+    },
+    {
+      "id": "327a1a6a-758a-4316-a9ba-279d014491dc",
+      "idempotency_key": "promo-retail:galaxy:swensens50k:2026-07-24",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://www.galaxycine.vn/khuyen-mai/giai-nhiet-mua-he---xem-phim-cuc-da/",
+      "candidate": {
+        "brand": "Galaxy Cinema",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-08-31",
+        "merchant": "Galaxy Cinema",
+        "economics": {
+          "required_combo": 1,
+          "voucher_value_vnd": 50000,
+          "required_movie_tickets": 2
+        },
+        "source_id": "SRCV1-93EE251F12D1",
+        "source_url": "https://www.galaxycine.vn/khuyen-mai/giai-nhiet-mua-he---xem-phim-cuc-da/",
+        "start_date": "2026-07-24",
+        "eligibility": "Áp dụng tại Galaxy Cinema Nguyễn Du, Tân Bình và Mipec Long Biên; số lượng quà có hạn.",
+        "evidence_url": "https://www.galaxycine.vn/khuyen-mai/giai-nhiet-mua-he---xem-phim-cuc-da/",
+        "literal_code": null,
+        "benefit_summary": "Mua 2 vé xem phim và 1 combo bắp nước bất kỳ nhận 1 voucher kem Swensens trị giá 50.000đ.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "acd8cc94-aad8-4b96-a56a-8859fe8ac3a0",
+      "created_at": "2026-08-16T22:56:07.401627+00:00",
+      "committed_at": "2026-08-17T00:13:00.366805+00:00"
+    },
+    {
+      "id": "67850c26-c35a-4e3f-933e-ee60bb485bad",
+      "idempotency_key": "promo-retail:galaxy:member2026:2026",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://www.galaxycine.vn/khuyen-mai/uu-dai-thanh-vien-galaxy-cinema-2026/",
+      "candidate": {
+        "brand": "Galaxy Cinema",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Galaxy Cinema",
+        "economics": {
+          "birthday_combo": "1 popcorn + 2 drinks",
+          "star_value_vnd": 1000,
+          "redeem_max_stars": 100,
+          "redeem_min_stars": 20
+        },
+        "source_id": "SRCV1-93EE251F12D1",
+        "source_url": "https://www.galaxycine.vn/khuyen-mai/uu-dai-thanh-vien-galaxy-cinema-2026/",
+        "start_date": "2026-01-01",
+        "eligibility": "Thành viên Galaxy Cinema; quà sinh nhật yêu cầu giấy tờ tùy thân khi đổi.",
+        "evidence_url": "https://www.galaxycine.vn/khuyen-mai/uu-dai-thanh-vien-galaxy-cinema-2026/",
+        "literal_code": null,
+        "benefit_summary": "Thành viên Galaxy có sinh nhật trong tháng được tặng Combo 2 gồm 1 bắp + 2 nước; G-Star và X-Star có thêm vé sinh nhật. Điểm Star đổi theo tỷ lệ 1 điểm = 1.000đ, mỗi giao dịch đổi tối thiểu 20 và tối đa 100 điểm.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "acd8cc94-aad8-4b96-a56a-8859fe8ac3a0",
+      "created_at": "2026-08-16T22:56:07.401627+00:00",
+      "committed_at": "2026-08-17T00:13:00.366805+00:00"
+    },
+    {
+      "id": "703576aa-2e3f-4310-96ea-01220c411961",
+      "idempotency_key": "promo-retail:galaxy:zalopayxu:2026-07-01",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://www.galaxycine.vn/khuyen-mai/dat-ve-galaxy-cinema--tich-xu-doi-qua-tren-zalopay/",
+      "candidate": {
+        "brand": "Galaxy Cinema",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "Galaxy Cinema",
+        "economics": {
+          "reward_type": "ZALOPAY_COINS",
+          "monthly_limit": 2,
+          "gold_coins_max": 336,
+          "gold_coins_min": 40,
+          "diamond_coins_max": 420,
+          "diamond_coins_min": 50
+        },
+        "source_id": "SRCV1-93EE251F12D1",
+        "source_url": "https://www.galaxycine.vn/khuyen-mai/dat-ve-galaxy-cinema--tich-xu-doi-qua-tren-zalopay/",
+        "start_date": "2026-07-01",
+        "eligibility": "Khách thanh toán vé Galaxy Cinema trên Zalopay; mức xu phụ thuộc giá trị đơn và hạng thành viên Zalopay.",
+        "evidence_url": "https://www.galaxycine.vn/khuyen-mai/dat-ve-galaxy-cinema--tich-xu-doi-qua-tren-zalopay/",
+        "literal_code": null,
+        "payment_method": "Zalopay",
+        "benefit_summary": "Thanh toán vé Galaxy Cinema trên Zalopay nhận xu theo giá trị đơn và hạng thành viên; hạng Kim Cương nhận 50–420 xu, hạng Vàng 40–336 xu; giới hạn 2 lần/tháng.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "acd8cc94-aad8-4b96-a56a-8859fe8ac3a0",
+      "created_at": "2026-08-16T22:56:07.401627+00:00",
+      "committed_at": "2026-08-17T00:13:00.366805+00:00"
+    },
+    {
+      "id": "d211c47c-a194-428c-9c3e-d4190f88d100",
+      "idempotency_key": "3a6e355d213c06f2893c890cc51714f0",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://www.crescentmall.com.vn/events/tiniworld-31-12",
+      "candidate": {
+        "geo": "Crescent Mall / tiNiWorld participating location per official page",
+        "quota": "Mỗi tài khoản tiNiZen xác thực tối đa 03 bé",
+        "title": "Ưu đãi vé cổng dành cho Bé Xíu tại tiNiWorld",
+        "schema": "promo.candidate.v2",
+        "benefit": {
+          "age_0_to_12_months": "Miễn phí vé cổng",
+          "age_12m1d_to_24_months": "Giảm 50% vé cổng"
+        },
+        "end_date": null,
+        "merchant": "tiNiWorld",
+        "vertical": "RETAIL_ECOMMERCE",
+        "min_spend": null,
+        "start_date": "2026-03-09",
+        "eligibility": "Trẻ 0–24 tháng; cần xác thực trực tiếp tại tiNiWorld hoặc qua App tiNi; mỗi tài khoản tiNiZen xác thực tối đa 03 bé",
+        "observed_at": "2026-08-17T06:55:35+07:00",
+        "evidence_url": "https://www.crescentmall.com.vn/events/tiniworld-31-12",
+        "literal_code": null,
+        "evidence_type": "official_detail",
+        "payment_method": null,
+        "actionable_value_v2": true
+      },
+      "status": "COMMITTED",
+      "commit_id": "acd8cc94-aad8-4b96-a56a-8859fe8ac3a0",
+      "created_at": "2026-08-16T23:57:13.763772+00:00",
+      "committed_at": "2026-08-17T00:13:00.366805+00:00"
+    },
+    {
+      "id": "05f96823-6287-44a0-b639-d18eb6b4e191",
+      "idempotency_key": "promo-retail:galaxycine:ngay-tri-an:first-monday:2026",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://www.galaxycine.vn/khuyen-mai/ngay-tri-an-cua-galaxy-cinema---ngay-thu-hai-dau-tien-moi-thang/",
+      "candidate": {
+        "brand": "Galaxy Cinema",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Galaxy Cinema",
+        "economics": {
+          "mechanic": "RECURRING_MEMBER_DAY",
+          "free_refill_count": 1,
+          "ticket_price_from_vnd": 45000
+        },
+        "source_id": "SRCV1-93EE251F12D1",
+        "source_url": "https://www.galaxycine.vn/khuyen-mai/ngay-tri-an-cua-galaxy-cinema---ngay-thu-hai-dau-tien-moi-thang/",
+        "start_date": "2026-01-01",
+        "eligibility": "Áp dụng thứ Hai đầu tiên mỗi tháng; mọi loại ghế và suất chiếu, trừ suất chiếu đặc biệt/suất chiếu sớm; refill yêu cầu hóa đơn và hộp/ly, trước 22:00.",
+        "evidence_url": "https://www.galaxycine.vn/khuyen-mai/ngay-tri-an-cua-galaxy-cinema---ngay-thu-hai-dau-tien-moi-thang/",
+        "literal_code": null,
+        "benefit_summary": "Ngày Tri Ân vào thứ Hai đầu tiên mỗi tháng: vé phim 2D từ 45.000đ; 01 lần refill/châm miễn phí bắp và nước ngọt dạng ly/combo đủ điều kiện trước 22:00.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "fe95cfaf-2b1e-45c6-a4b5-518dbb2df23f",
+      "created_at": "2026-08-17T00:58:21.361557+00:00",
+      "committed_at": "2026-08-17T02:08:55.976716+00:00"
+    },
+    {
+      "id": "55bfd69a-6ba7-490d-bf5c-8b02a44a1a3f",
+      "idempotency_key": "promo:v2:sacombank:jcb:kasa-sushi:2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.sacombank.com.vn/content/dam/sacombank/files/the-le/uu-dai-nha-hang-2805.pdf",
+      "candidate": {
+        "brand": "Sacombank JCB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Kasa Sushi",
+        "economics": {
+          "mechanic": "DIRECT_DISCOUNT",
+          "discount_pct": 30,
+          "max_discount_vnd": 300000
+        },
+        "eligibility": "Tất cả thẻ Sacombank JCB; điều kiện địa điểm và thanh toán theo thể lệ chính thức.",
+        "evidence_url": "https://www.sacombank.com.vn/content/dam/sacombank/files/the-le/uu-dai-nha-hang-2805.pdf",
+        "literal_code": null,
+        "benefit_summary": "Giảm 30% tối đa 300.000 VND tại Kasa Sushi cho chủ thẻ Sacombank JCB; không áp dụng đồ uống có cồn.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "fe95cfaf-2b1e-45c6-a4b5-518dbb2df23f",
+      "created_at": "2026-08-17T01:38:22.395285+00:00",
+      "committed_at": "2026-08-17T02:08:55.976716+00:00"
+    },
+    {
+      "id": "ca06c37a-4e08-49d6-a2fd-c7fcb47420d6",
+      "idempotency_key": "promo:v2:vpbank:thai-market:2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/cuisine/thai-market-2026",
+      "candidate": {
+        "brand": "VPBank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Thai Market",
+        "economics": {
+          "mechanic": "DIRECT_DISCOUNT",
+          "discount_pct": 10
+        },
+        "start_date": "2026-03-10",
+        "eligibility": "Chủ thẻ VPBank; tại các địa điểm Thai Market được liệt kê trong trang ưu đãi chính thức.",
+        "evidence_url": "https://www.vpbank.com.vn/uu-dai/retail/for-cardholder-promotion-category/cuisine/thai-market-2026",
+        "literal_code": null,
+        "benefit_summary": "Giảm 10% tại Thai Market dành cho chủ thẻ VPBank; không áp dụng đồng thời chương trình khuyến mãi khác hoặc ngày lễ/Tết.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "fe95cfaf-2b1e-45c6-a4b5-518dbb2df23f",
+      "created_at": "2026-08-17T01:38:22.395285+00:00",
+      "committed_at": "2026-08-17T02:08:55.976716+00:00"
+    },
+    {
+      "id": "db60ddd7-7ad5-42ed-83bf-a97571b88fff",
+      "idempotency_key": "promo:v2:shb:double-day-2026:credit",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.shb.com.vn/wp-content/uploads/2025/06/Th%E1%BB%83-l%E1%BB%87-CTKM-ng%C3%A0y-%C4%91%C3%B4i-2026-1.pdf",
+      "candidate": {
+        "brand": "SHB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Online card spending",
+        "economics": {
+          "mechanic": "CASHBACK",
+          "daily_quota": 250,
+          "cashback_vnd": 200000,
+          "min_spend_vnd": 1000000
+        },
+        "start_date": "2026-01-01",
+        "eligibility": "Chủ thẻ tín dụng quốc tế SHB; giao dịch online hợp lệ; loại trừ thanh toán điện, nước và nạp điện thoại trên App SAHA theo thể lệ.",
+        "evidence_url": "https://www.shb.com.vn/wp-content/uploads/2025/06/Th%E1%BB%83-l%E1%BB%87-CTKM-ng%C3%A0y-%C4%91%C3%B4i-2026-1.pdf",
+        "literal_code": null,
+        "benefit_summary": "Ngày đôi 2026: hoàn 200.000 VND cho chủ thẻ tín dụng quốc tế SHB có giao dịch online từ 1.000.000 VND; 250 giao dịch hợp lệ đầu tiên mỗi ngày đôi từ 09:00 đến 23:59:59; tối đa 1 ưu đãi/khách hàng/ngày.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "fe95cfaf-2b1e-45c6-a4b5-518dbb2df23f",
+      "created_at": "2026-08-17T01:38:22.395285+00:00",
+      "committed_at": "2026-08-17T02:08:55.976716+00:00"
+    },
+    {
+      "id": "efdb7895-3438-4726-9248-ef0a7c40f25e",
+      "idempotency_key": "promo:v2:shb:double-day-2026:debit",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://www.shb.com.vn/wp-content/uploads/2025/06/Th%E1%BB%83-l%E1%BB%87-CTKM-ng%C3%A0y-%C4%91%C3%B4i-2026-1.pdf",
+      "candidate": {
+        "brand": "SHB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Online card spending",
+        "economics": {
+          "mechanic": "CASHBACK",
+          "daily_quota": 100,
+          "cashback_vnd": 100000,
+          "min_spend_vnd": 800000
+        },
+        "start_date": "2026-01-01",
+        "eligibility": "Chủ thẻ ghi nợ quốc tế SHB; giao dịch online hợp lệ theo thể lệ chương trình ngày đôi.",
+        "evidence_url": "https://www.shb.com.vn/wp-content/uploads/2025/06/Th%E1%BB%83-l%E1%BB%87-CTKM-ng%C3%A0y-%C4%91%C3%B4i-2026-1.pdf",
+        "literal_code": null,
+        "benefit_summary": "Ngày đôi 2026: hoàn 100.000 VND cho chủ thẻ ghi nợ quốc tế SHB có giao dịch online từ 800.000 VND; 100 giao dịch hợp lệ đầu tiên mỗi ngày đôi từ 09:00 đến 23:59:59.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "fe95cfaf-2b1e-45c6-a4b5-518dbb2df23f",
+      "created_at": "2026-08-17T01:38:22.395285+00:00",
+      "committed_at": "2026-08-17T02:08:55.976716+00:00"
+    },
+    {
+      "id": "1171a45b-40df-45f5-b13e-c7d3d6c77a2a",
+      "idempotency_key": "banks:acb:be:20260410",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/be-x-acb-giam-den-100000-vnd-uu-dai-be-voi-the-tin-dung-acb",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-03-31",
+        "merchant": "be",
+        "economics": {
+          "food_discount_vnd": 50000,
+          "ride_discount_vnd": 30000,
+          "food_min_spend_vnd": 200000,
+          "ride_min_spend_vnd": 100000,
+          "flight_discount_vnd": 100000,
+          "flight_min_spend_vnd": 1500000
+        },
+        "start_date": "2026-04-10",
+        "eligibility": "Thanh toán trong ứng dụng be bằng thẻ tín dụng ACB hợp lệ; ưu đãi phải hiển thị trước khi thanh toán; ngân sách có hạn.",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/be-x-acb-giam-den-100000-vnd-uu-dai-be-voi-the-tin-dung-acb",
+        "literal_code": null,
+        "benefit_summary": "Ưu đãi thẻ tín dụng ACB trên be: xe giảm đến 30.000 VND từ 100.000 VND (2 lượt/tháng), đồ ăn giảm đến 50.000 VND từ 200.000 VND (1 lượt/tháng), vé máy bay giảm đến 100.000 VND từ 1.500.000 VND.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "224d4bd9-9b80-4abe-ba6f-69ca191cc07a",
+      "created_at": "2026-08-17T03:40:26.382033+00:00",
+      "committed_at": "2026-08-17T04:13:35.903612+00:00"
+    },
+    {
+      "id": "5fd42051-3f9e-45b8-851a-883d3aaccd21",
+      "idempotency_key": "banks:acb:jcb:fahasa:20260704",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/fahasa-x-acb-jcb-giam-den-200000-vnd-khi-thanh-toan-bang-the-acb-jcb",
+      "candidate": {
+        "brand": "ACB JCB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "FAHASA",
+        "economics": {
+          "discount_pct": 30,
+          "min_spend_vnd": 500000,
+          "max_discount_vnd": 200000,
+          "max_uses_per_card_week": 1
+        },
+        "start_date": "2026-07-04",
+        "eligibility": "ACB JCB Debit hoặc ACB JCB Gold Credit; Payoo POS; Thứ Bảy/Chủ Nhật; quota ngày có hạn.",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/fahasa-x-acb-jcb-giam-den-200000-vnd-khi-thanh-toan-bang-the-acb-jcb",
+        "literal_code": null,
+        "benefit_summary": "Giảm 30% tối đa 200.000 VND cho đơn từ 500.000 VND tại FAHASA khi thanh toán bằng ACB JCB trên Payoo POS; Thứ Bảy/Chủ Nhật; tối đa 1 lượt/thẻ/tuần.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "224d4bd9-9b80-4abe-ba6f-69ca191cc07a",
+      "created_at": "2026-08-17T03:40:26.382033+00:00",
+      "committed_at": "2026-08-17T04:13:35.903612+00:00"
+    },
+    {
+      "id": "6fa1edb4-e6e6-431e-9c63-3efd2861d39e",
+      "idempotency_key": "banks:acb:greensm:20260415",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/giam-den-40000-vnd-uu-dai-green-sm-voi-the-tin-dung-acb",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-03-31",
+        "merchant": "Green SM",
+        "economics": {
+          "food_discount_vnd": 40000,
+          "ride_discount_vnd": 20000,
+          "food_min_spend_vnd": 200000,
+          "ride_min_spend_vnd": 100000,
+          "max_uses_per_customer_month_service": 2
+        },
+        "start_date": "2026-04-15",
+        "eligibility": "ACB Visa Infinite, Privilege Signature, Signature hoặc Platinum; thanh toán trực tiếp trong Green SM; quota/ngân sách có hạn.",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/giam-den-40000-vnd-uu-dai-green-sm-voi-the-tin-dung-acb",
+        "literal_code": null,
+        "benefit_summary": "Green Car/Premium/Bike/Bike Plus giảm 20.000 VND cho chuyến từ 100.000 VND; Green Food giảm 40.000 VND cho đơn từ 200.000 VND; tối đa 2 lượt/tháng/dịch vụ.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "224d4bd9-9b80-4abe-ba6f-69ca191cc07a",
+      "created_at": "2026-08-17T03:40:26.382033+00:00",
+      "committed_at": "2026-08-17T04:13:35.903612+00:00"
+    },
+    {
+      "id": "71540a8d-7350-4eef-a742-6793ea90c074",
+      "idempotency_key": "banks:acb:jcb:abcmart:20260704",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/abc-mart-x-acb-jcb-giam-300000-vnd-khi-thanh-toan-bang-the-acb-jcb",
+      "candidate": {
+        "brand": "ACB JCB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "ABC-MART",
+        "economics": {
+          "discount_vnd": 300000,
+          "min_spend_vnd": 1500000,
+          "max_uses_per_card_month": 2
+        },
+        "start_date": "2026-07-04",
+        "eligibility": "ACB JCB Debit hoặc ACB JCB Gold Credit; Payoo POS; Thứ Bảy/Chủ Nhật; quota ngày có hạn.",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/abc-mart-x-acb-jcb-giam-300000-vnd-khi-thanh-toan-bang-the-acb-jcb",
+        "literal_code": null,
+        "benefit_summary": "Giảm 300.000 VND cho đơn từ 1.500.000 VND khi thanh toán bằng thẻ ACB JCB trên Payoo POS tại ABC-MART; áp dụng Thứ Bảy và Chủ Nhật; tối đa 2 lượt/thẻ/tháng.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "224d4bd9-9b80-4abe-ba6f-69ca191cc07a",
+      "created_at": "2026-08-17T03:40:26.382033+00:00",
+      "committed_at": "2026-08-17T04:13:35.903612+00:00"
+    },
+    {
+      "id": "7435813f-951f-4d59-9453-543a356cc0fa",
+      "idempotency_key": "banks:acb:jcb:galaxy:20260704",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/galaxy-cinema-x-acb-jcb-giam-den-100000-vnd-khi-thanh-toan-bang-the-acb-jcb",
+      "candidate": {
+        "brand": "ACB JCB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-09-30",
+        "merchant": "Galaxy Cinema",
+        "economics": {
+          "discount_pct": 30,
+          "min_spend_vnd": 200000,
+          "max_discount_vnd": 100000,
+          "max_uses_per_card_week": 1
+        },
+        "start_date": "2026-07-04",
+        "eligibility": "ACB JCB Debit hoặc ACB JCB Gold Credit; Payoo POS hoặc thanh toán online Galaxy; Thứ Bảy/Chủ Nhật; quota có hạn.",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/galaxy-cinema-x-acb-jcb-giam-den-100000-vnd-khi-thanh-toan-bang-the-acb-jcb",
+        "literal_code": null,
+        "benefit_summary": "Giảm 30% tối đa 100.000 VND cho đơn từ 200.000 VND tại Galaxy Cinema hoặc online khi thanh toán bằng ACB JCB; Thứ Bảy/Chủ Nhật; tối đa 1 lượt/thẻ/tuần.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "224d4bd9-9b80-4abe-ba6f-69ca191cc07a",
+      "created_at": "2026-08-17T03:40:26.382033+00:00",
+      "committed_at": "2026-08-17T04:13:35.903612+00:00"
+    },
+    {
+      "id": "8ffddf2b-280b-42ed-ac02-eb0e6a2c79ba",
+      "idempotency_key": "banks:acb:fwd:installment0:20260612",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/uu-dai-tra-gop-0-tai-fwd",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2027-07-31",
+        "merchant": "FWD Vietnam",
+        "economics": {
+          "interest_pct": 0,
+          "terms_months": [
+            3,
+            6,
+            9,
+            12
+          ],
+          "min_spend_vnd": 1000000,
+          "conversion_fee_pct": 0
+        },
+        "start_date": "2026-06-12",
+        "eligibility": "Thẻ tín dụng ACB Visa Infinite, Privilege Visa Signature, Visa Signature hoặc Visa Platinum.",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/uu-dai-tra-gop-0-tai-fwd",
+        "literal_code": null,
+        "benefit_summary": "Trả góp 0% lãi suất và 0% phí chuyển đổi tại FWD cho giao dịch từ 1.000.000 VND, kỳ hạn 3/6/9/12 tháng.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "224d4bd9-9b80-4abe-ba6f-69ca191cc07a",
+      "created_at": "2026-08-17T03:40:26.382033+00:00",
+      "committed_at": "2026-08-17T04:13:35.903612+00:00"
+    },
+    {
+      "id": "4920401d-3713-4100-ac96-05906c2b9c2e",
+      "idempotency_key": "retail:SRCV1-A1642775091E:dmx-vip-dishwasher-pmh-202608",
+      "source_worker": "PROMO Retail Shard",
+      "source_url": "https://www.dienmayxanh.com/khuyen-mai/qua-tang-vip-san-pmh-1-trieu-mua-may-rua-chen-1589252",
+      "candidate": {
+        "geo": "Việt Nam / hệ thống Điện máy XANH",
+        "status": "ACTIVE",
+        "benefit": "Khách hàng dùng App Quà Tặng VIP, check-in tại siêu thị có cơ hội nhận Phiếu Mua Hàng để mua máy rửa chén Junger/LG/Electrolux/Toshiba/Comfee/Hafele; trang chính thức nêu giá trị PMH lên đến 2.000.000đ, tiêu đề nêu đến 1.500.000đ.",
+        "end_date": "2026-09-06",
+        "evidence": "Official Điện máy XANH promotion page published 2026-08-01; may end early when gifts run out.",
+        "merchant": "Điện máy XANH",
+        "vertical": "RETAIL_ECOMMERCE",
+        "source_id": "SRCV1-A1642775091E",
+        "start_date": "2026-08-01",
+        "eligibility": "Khách hàng sử dụng App Quà Tặng VIP; đến siêu thị và quét QR check-in; áp dụng model/danh sách theo chương trình.",
+        "literal_code": null,
+        "actionable_value_v2": true
+      },
+      "status": "COMMITTED",
+      "commit_id": "d5069b72-5aee-4d24-a746-451f46b96831",
+      "created_at": "2026-08-17T03:53:08.816063+00:00",
+      "committed_at": "2026-08-17T04:27:05.602861+00:00"
+    },
+    {
+      "id": "655dea99-5c5b-467c-aa58-98caff72ef71",
+      "idempotency_key": "turbo:vietcombank:jcbfusion:2026",
+      "source_worker": "PROMO Turbo Scan",
+      "source_url": "https://www.vietcombank.com.vn/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai/KHCN---1012026----Uu-dai-chu-the-JCB",
+      "candidate": {
+        "brand": "Vietcombank",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "JCB",
+        "end_date": "2026-12-31",
+        "merchant": "Fusion Hotel Group",
+        "economics": {
+          "discount_pct": 10
+        },
+        "eligibility": "Chủ thẻ Vietcombank JCB; đăng nhập tài khoản Fusionlife và nhập mã ưu đãi.",
+        "evidence_url": "https://www.vietcombank.com.vn/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai/KHCN---1012026----Uu-dai-chu-the-JCB",
+        "literal_code": "JCBFUSION",
+        "benefit_summary": "Giảm 10% giá phòng tại các khách sạn thuộc Fusion Hotel Group, áp dụng đồng thời với Fusionlife.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "d5069b72-5aee-4d24-a746-451f46b96831",
+      "created_at": "2026-08-17T04:26:44.356862+00:00",
+      "committed_at": "2026-08-17T04:27:05.602861+00:00"
+    },
+    {
+      "id": "72f95f24-0054-4501-b5d0-4dc8d03f3747",
+      "idempotency_key": "turbo:acb:bevisabiz:20260530-20261031",
+      "source_worker": "PROMO Turbo Scan",
+      "source_url": "https://acb.com.vn/the-doanh-nghiep",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Visa Business",
+        "end_date": "2026-10-31",
+        "merchant": "be",
+        "economics": {
+          "benefit_value_vnd_up_to": 2500000
+        },
+        "start_date": "2026-05-30",
+        "eligibility": "Chủ thẻ ACB Visa Doanh nghiệp sử dụng ưu đãi trên ứng dụng be.",
+        "evidence_url": "https://acb.com.vn/the-doanh-nghiep",
+        "literal_code": "BEVISABIZ",
+        "benefit_summary": "Gói ưu đãi Be trị giá lên đến 2.500.000 VND dành cho chủ thẻ ACB Visa Doanh nghiệp khi nhập mã BEVISABIZ.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "d5069b72-5aee-4d24-a746-451f46b96831",
+      "created_at": "2026-08-17T04:26:44.356862+00:00",
+      "committed_at": "2026-08-17T04:27:05.602861+00:00"
+    },
+    {
+      "id": "8777ed60-3476-44f4-bd0c-1d54d40a4c02",
+      "idempotency_key": "turbo:shb:batikair:masterbatik26:2026",
+      "source_worker": "PROMO Turbo Scan",
+      "source_url": "https://www.shb.com.vn/batik-air-giam-len-den-25-khi-thanh-toan-bang-the-shb-mastercard/",
+      "candidate": {
+        "brand": "SHB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "partner": "Mastercard",
+        "end_date": "2026-11-14",
+        "merchant": "Batik Air",
+        "economics": {
+          "flexi_discount_pct": 20,
+          "business_flexi_discount_pct": 25
+        },
+        "eligibility": "Chủ thẻ SHB Mastercard hợp lệ; đặt tại batikair.com.my; blackout dates áp dụng.",
+        "evidence_url": "https://www.shb.com.vn/batik-air-giam-len-den-25-khi-thanh-toan-bang-the-shb-mastercard/",
+        "literal_code": "MASTERBATIK26",
+        "benefit_summary": "Giảm 20% hạng Flexi và 25% hạng Business Flexi khi đặt trên Batik Air và thanh toán bằng thẻ SHB Mastercard.",
+        "value_filter_version": "actionable-value-v2"
+      },
+      "status": "COMMITTED",
+      "commit_id": "d5069b72-5aee-4d24-a746-451f46b96831",
+      "created_at": "2026-08-17T04:26:44.356862+00:00",
+      "committed_at": "2026-08-17T04:27:05.602861+00:00"
+    },
+    {
+      "id": "11e6bf8e-b1f2-48d6-a2d9-732fdb683281",
+      "idempotency_key": "promo-banks|acb|meta2026|2026-12-31",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/dac-quyen-uu-dai-danh-cho-nha-quang-cao-meta",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "end_date": "2026-12-31",
+        "merchant": "Meta advertising / UrBox",
+        "economics": {
+          "spend_window_days": 30,
+          "min_meta_spend_vnd": 100000000,
+          "business_voucher_vnd": 1000000,
+          "individual_voucher_vnd": 500000
+        },
+        "start_date": "2026-04-08",
+        "eligibility": "New eligible ACB Visa Digi / Visa Business CN (individual) or Visa Corporate / Visa Business debit (business); no advertising transaction at ACB in prior 6 months; Meta MCC 7311; one reward per customer; registration by SMS required.",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/dac-quyen-uu-dai-danh-cho-nha-quang-cao-meta",
+        "literal_code": null,
+        "benefit_summary": "New eligible ACB card customers spending at least 100,000,000 VND on Meta advertising within 30 days of card issuance receive an UrBox voucher: 500,000 VND for individual customers or 1,000,000 VND for business customers.",
+        "value_filter_version": "actionable-value-v2",
+        "registration_instruction": "ACB KMT META2026 gửi 997"
+      },
+      "status": "READY",
+      "commit_id": null,
+      "created_at": "2026-08-17T04:39:22.802589+00:00",
+      "committed_at": null
+    },
+    {
+      "id": "4d3d24bd-2a9e-4977-b12b-eccc851ba9ce",
+      "idempotency_key": "promo-banks|acb|annual-fee-ptn|2026",
+      "source_worker": "PROMO Banks Shard",
+      "source_url": "https://acb.com.vn/uu-dai-the/mien-phi-thuong-nien-khi-mo-the-tin-dung-acb",
+      "candidate": {
+        "brand": "ACB",
+        "market": "VN",
+        "status": "ACTIVE",
+        "merchant": "ACB credit cards",
+        "economics": {
+          "max_fee_waiver_years": 3,
+          "qualification_window_days": 30,
+          "visa_signature_first_year_spend_vnd": 5000000,
+          "visa_signature_next_two_years_spend_vnd": 40000000
+        },
+        "eligibility": "New eligible ACB credit card opened via branch/transaction office; must register and meet the applicable card spend condition within 30 days of opening.",
+        "evidence_url": "https://acb.com.vn/uu-dai-the/mien-phi-thuong-nien-khi-mo-the-tin-dung-acb",
+        "literal_code": null,
+        "benefit_summary": "Eligible newly opened ACB credit cards can receive annual-fee waivers for up to 3 years after meeting card-specific spend conditions within 30 days; ACB Visa Signature example: first-year annual fee refunded from 5,000,000 VND spend and the next 2 years waived from 40,000,000 VND spend.",
+        "value_filter_version": "actionable-value-v2",
+        "registration_instruction": "ACB KMT PTN gửi 997"
+      },
+      "status": "READY",
+      "commit_id": null,
+      "created_at": "2026-08-17T04:39:22.802589+00:00",
+      "committed_at": null
+    }
+  ]
+}
