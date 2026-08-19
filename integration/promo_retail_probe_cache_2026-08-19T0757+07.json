@@ -1,0 +1,32 @@
+{
+  "schema": "promo.retail.probe_cache_delta.v1",
+  "source_worker": "PROMO Retail Shard",
+  "checked_at": "2026-08-19T07:57:42+07:00",
+  "entries": [
+    {
+      "url": "https://www.pharmacity.vn/page/gioi-thieu-ban-moi-nhan-ma-giam-gia-20000d",
+      "result": "ACTIONABLE_REFERRAL_ACCOUNT_CODE_NO_PUBLIC_LITERAL",
+      "code_signal": true,
+      "notes": "Current official Pharmacity referral program remains active until further notice and since 23/07/2026 rewards eligible members with a 20,000 VND discount code; code is issued to the member/referral flow, not a reusable public literal."
+    },
+    {
+      "url": "https://www.pharmacity.vn/mua-hang-nhan-coupon.lp",
+      "result": "ACTIONABLE_ACCOUNT_ISSUED_COUPON_NO_LITERAL",
+      "code_signal": true,
+      "notes": "Current 01/08-31/08/2026 member campaign: qualifying in-store purchase receives a 40,000 VND online coupon for a later purchase; coupon is issued to the customer, with no stable public literal token."
+    },
+    {
+      "url": "https://shopee.vn/m/ma-giam-gia",
+      "result": "ACCOUNT_SAVE_VOUCHERS_NO_PUBLIC_LITERAL",
+      "code_signal": true,
+      "notes": "Official Shopee voucher surface uses save/claim-to-account mechanics; no exact reusable public literal token was exposed in the current probe."
+    },
+    {
+      "url": "https://www.galaxycine.vn/binh-luan-phim/galaxy-cinema-x-kfc-tang-den-100k/",
+      "result": "ACCOUNT_ISSUED_EVOUCHERS_NO_PUBLIC_LITERAL",
+      "code_signal": true,
+      "notes": "Current Galaxy member benefit issues KFC e-voucher codes into the member account after qualifying transactions; no reusable public literal is published."
+    }
+  ],
+  "lovable_calls": 0
+}
