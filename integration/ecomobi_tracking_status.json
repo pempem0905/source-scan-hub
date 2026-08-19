@@ -1,10 +1,15 @@
 {
   "conversion_rows_persisted": false,
   "endpoint": "/api/v3/conversions",
-  "generated_at": "2026-08-19T04:29:33.760607Z",
+  "generated_at": "2026-08-19T04:36:24.325094Z",
+  "http_status": 200,
+  "last_error": null,
   "purpose": "tracking_auth_health_only",
+  "recent_conversion_rows": 0,
   "schema": "promo.ecomobi_tracking_status.v3",
-  "state": "CREDENTIALS_INCOMPLETE",
-  "token_present": false,
-  "token_private_present": false
+  "state": "OK",
+  "status_breakdown_sample": {},
+  "successful_auth_variant": 1,
+  "top_advertisers_sample": {},
+  "window_days": 7
 }
