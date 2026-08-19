@@ -8,7 +8,7 @@
   "l2_literal_codes_found": 1,
   "remaining_platforms": 7,
   "last_run_at": "2026-08-18T01:30:00Z",
-  "generated_at": "2026-08-19T01:48:55.772277Z",
+  "generated_at": "2026-08-19T01:54:52.905543Z",
   "public_overlap_excluded": true,
   "note": "L2 metrics count hard/authenticated/access-constrained outcomes only. Routine public crawling is owned by Layer1 and is excluded from L2 totals."
 }
