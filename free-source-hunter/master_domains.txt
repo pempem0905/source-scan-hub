@@ -1003,7 +1003,17 @@ artnam.vn
 arttimes.vn
 asado.vn
 asae.vn
+asatech.vn
+asatek.vn
+asavn.vn
+asbeau.vn
+asbuild.vn
+asc.vn
+ascar.vn
+ascendtech.vn
+ascentgroup.vn
 ascenttrainings.com
+asco.vn
 at.macduggal.com
 atac2024.aiotlab.vn
 atrip.vn
@@ -1043,6 +1053,7 @@ bestprice.vn
 beyours.vn
 bf.360play.vn
 bibomart.com.vn
+bic.vn
 bidv.com.vn
 biggreen.com.vn
 birchlane.com
@@ -1198,6 +1209,7 @@ deloitte.com
 deloittedigital.com
 demandsage.com
 developers.accesstrade.vn
+diabetes.ascensia.vn
 diamond.vpbank.com.vn
 dichvu.anysoft.vn
 dichvudidong.vn
