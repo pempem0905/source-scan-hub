@@ -1,0 +1,23 @@
+{
+  "schema": "promo.candidate.v1",
+  "idempotency_key": "PROMO_RETAIL|samsung.com/vn|LS-68S26|2026-08-current",
+  "source_worker": "PROMO Retail Shard",
+  "source_id": "SRCV1-12CFC24F5748",
+  "registrable_domain": "samsung.com",
+  "vertical": "RETAIL_ECOMMERCE",
+  "source_url": "https://www.samsung.com/vn/offer/",
+  "merchant": "Samsung",
+  "title": "Galaxy S26 Ultra - nhập LS-68S26 giá 31,99 triệu",
+  "benefit_type": "FIXED_PRICE_CODE",
+  "benefit_value": "Giá 31.990.000đ khi nhập mã LS-68S26",
+  "benefit_cap_vnd": null,
+  "min_spend_vnd": null,
+  "start_date": null,
+  "end_date": null,
+  "eligibility": "Áp dụng theo ưu đãi mua Galaxy S26 Ultra trên Samsung Việt Nam; điều kiện chi tiết ngoài nội dung hiển thị công khai chưa được suy diễn.",
+  "literal_code": "LS-68S26",
+  "status": "ACTIVE",
+  "evidence": "Official Samsung Vietnam current Offers page, section 'Ưu đãi mới nhất', explicitly displays: Galaxy S26 Ultra - nhập LS-68S26 giá chỉ 31,99TR. Live/current evidence verified 20/08/2026; no end date inferred.",
+  "evidence_checked_at": "2026-08-20T05:53:45+07:00",
+  "value_filter_version": "ACTIONABLE-VALUE-V2"
+}
