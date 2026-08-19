@@ -1,0 +1,49 @@
+name: PROMO L2 Milestone Alert
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: promo-l2-milestone-alert
+  cancel-in-progress: true
+
+jobs:
+  alert:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate milestone notifier
+        run: python -m py_compile integration/l2_milestone_alert.py
+
+      - name: Send only real L2 milestone
+        run: python integration/l2_milestone_alert.py
+
+      - name: Persist sanitized alert checkpoint
+        run: |
+          set -euo pipefail
+          git config user.name "promo-l2-alert-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add integration/l2_milestone_alert_status.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "PROMO L2 alert checkpoint [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
