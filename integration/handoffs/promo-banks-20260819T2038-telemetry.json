@@ -1,0 +1,33 @@
+{
+  "schema": "promo.banks.telemetry.v2",
+  "source_worker": "PROMO Banks Shard",
+  "pipeline": "TURBO_SCAN_PIPELINE_V2",
+  "input_contract": "GitHub ELIGIBLE + ACTIVE_INPUT assigned PROMO_BANKS",
+  "fast_probes": 15,
+  "shortlisted": 4,
+  "deep_validations": 2,
+  "cache_skips": 3,
+  "sources_read": 8,
+  "code_likely_sources_read": 4,
+  "no_code_reads": 5,
+  "family_rotations": 2,
+  "offers_found": 3,
+  "voucher_benefits_found": 3,
+  "literal_codes_found": 0,
+  "codes_per_10_reads": 0.0,
+  "enqueued": 0,
+  "blocked": 0,
+  "duplicates": 3,
+  "expired_rejected": 7,
+  "date_conflict_rejected": 0,
+  "last_run_at": "2026-08-19T20:38:55+07:00",
+  "lovable_calls": 0,
+  "notes": [
+    "Consumed GitHub dispatch/input contract only for ELIGIBLE + ACTIVE_INPUT assigned PROMO_BANKS; no Lovable usage.",
+    "Fast-probed current official bank/payment/travel families including Vietcombank JCB, VPBank Mastercard travel, HSBC daily offers, ACB, BIDV, MoMo and ZaloPay.",
+    "VPBank Wyndham/Expedia exact codes were cache/dedup hits already present in prior GitHub handoff or exported candidate queue; no re-enqueue.",
+    "Vietcombank JCB codes JCBVN16/JCBVN12 are globally duplicate with existing BIDV JCB Hotels.com records; JCBFUSION is already COMMITTED in GitHub exported queue; no re-enqueue.",
+    "MoMo 8.8 code family surfaced only expired 08/08/2026 codes and was rejected by current-date gate.",
+    "No genuinely new clean exact reusable code survived current/future validation plus GitHub global dedup this run; canonical counters untouched."
+  ]
+}
