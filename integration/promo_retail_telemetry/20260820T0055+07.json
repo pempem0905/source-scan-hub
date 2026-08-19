@@ -1,0 +1,33 @@
+{
+  "schema": "promo.retail.telemetry.v1",
+  "source_worker": "PROMO Retail Shard",
+  "mode": "TURBO_SCAN_PIPELINE_V2",
+  "fast_probes": 20,
+  "shortlisted": 5,
+  "deep_validations": 3,
+  "cache_skips": 4,
+  "sources_read": 12,
+  "code_likely_sources_read": 5,
+  "no_code_reads": 7,
+  "family_rotations": 6,
+  "offers_found": 0,
+  "voucher_benefits_found": 0,
+  "literal_codes_found": 0,
+  "literal_codes_review": 3,
+  "literal_codes_observed_rejected": 0,
+  "codes_per_10_reads": 0.0,
+  "enqueued": 0,
+  "blocked": 0,
+  "duplicates": 0,
+  "last_run_at": "2026-08-20T00:55:48+07:00",
+  "lovable_calls": 0,
+  "notes": [
+    "Consumed only GitHub-dispatched PROMO_RETAIL families and used GitHub for persistence; lovable_calls=0.",
+    "Samsung official pages still expose LS-THANG6 and LS-68S26 with actionable economics, but no controlling current/future end date was resolved; both remain REVIEW and were not enqueued.",
+    "YODY official page still exposes YODYCE87 (100K off 699K for new customers), but no controlling current/future end date was resolved; remains REVIEW.",
+    "Pharmacity brand week is current 17/08-23/08/2026 and requires a coupon, but exact literal and benefit economics were not exposed in accessible official text; no inference.",
+    "Circle K August page, Con Cung gold campaign, and Lotte Mall hits were expired as of 20/08/2026 and rejected/rotated.",
+    "Dienmayxanh current MÃ GIẢM THÊM 300K/400K surfaces no reusable public token; not counted as literal.",
+    "No clean new candidate passed exact-code/current-validity/actionable-value/global-dedup gates; canonical counters untouched."
+  ]
+}
