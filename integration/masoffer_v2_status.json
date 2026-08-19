@@ -1,0 +1,10 @@
+{
+  "schema": "promo.masoffer_status.v2",
+  "generated_at": "2026-08-19T04:13:24.588893Z",
+  "state": "CREDENTIALS_INCOMPLETE",
+  "publisher_id_present": false,
+  "publisher_key_present": false,
+  "api_token_present": true,
+  "endpoints_considered": 9,
+  "candidate_rows": 0
+}
