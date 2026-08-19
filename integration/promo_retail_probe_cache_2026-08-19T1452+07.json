@@ -1,0 +1,47 @@
+{
+  "schema": "promo.retail.probe_cache_delta.v1",
+  "source_worker": "PROMO Retail Shard",
+  "checked_at": "2026-08-19T14:52:35+07:00",
+  "entries": [
+    {
+      "url": "https://www.dienmayxanh.com/khuyen-mai/deal-dep-co-han-rinh-phieu-san-deal-hoi-1595981",
+      "result": "ACTIONABLE_ACTIVE_VOUCHER_NO_PUBLIC_LITERAL",
+      "code_signal": true,
+      "notes": "Active 21/07-31/12/2026. Concrete PMH discounts 8% max 500K / 12% max 300K by category; no stable reusable public literal exposed. Enqueued as no-literal actionable candidate."
+    },
+    {
+      "url": "https://www.dienmayxanh.com/khuyen-mai/quet-qr-nhan-phieu-giam-gia-dien-may-xanh-1595885",
+      "result": "ACTIONABLE_QR_ISSUED_VOUCHER_NO_LITERAL",
+      "code_signal": true,
+      "notes": "Active 16/07-30/09/2026. QR-issued voucher gives up to 700K discount for washer/dryer/dishwasher; dynamic QR-issued redemption is not reusable literal. Enqueued as no-literal actionable candidate."
+    },
+    {
+      "url": "https://www.dienmayxanh.com/khuyen-mai/10000-phieu-giam-2tr-1596169",
+      "result": "EXPIRED_LITERAL_REJECT",
+      "code_signal": true,
+      "observed_literal": "ZALO.2M2026",
+      "notes": "Exact official literal gave 10% max 2M but validity ended 31/07/2026; rejected as expired on 19/08/2026."
+    },
+    {
+      "url": "https://www.samsung.com/vn/offer/",
+      "result": "REVIEW_LITERAL_VALIDITY_UNRESOLVED",
+      "code_signal": true,
+      "observed_literals": ["LS-THANG6", "LS-68S26"],
+      "notes": "Official current offer surface still exposes exact reusable-looking tokens with concrete economics, but controlling explicit validity end dates were not resolved in this run; keep REVIEW, do not enqueue/count."
+    },
+    {
+      "url": "https://yody.vn/post/hot-nhan-voucher-100k-doc-quyen-tren-website-mung-yody-dat-top-1",
+      "result": "REVIEW_LITERAL_VALIDITY_UNRESOLVED",
+      "code_signal": true,
+      "observed_literal": "YODYCE87",
+      "notes": "Official 100K off 699K full-price new-customer code remains visible, but article provides no controlling validity end date; keep REVIEW."
+    },
+    {
+      "url": "https://concung.com/tin-khuyen-mai/ctkm-thang-8-2026-bv3339.html",
+      "result": "ACTIONABLE_MONTHLY_PROMOS_NO_LITERAL",
+      "code_signal": false,
+      "notes": "Current August 2026 official promo roundup exposes many concrete discounts but no reusable public literal token in probe; avoid SKU/campaign inflation and do not deep-enqueue family without controlling child mechanics."
+    }
+  ],
+  "lovable_calls": 0
+}
