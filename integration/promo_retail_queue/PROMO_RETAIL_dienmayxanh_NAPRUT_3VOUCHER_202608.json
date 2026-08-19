@@ -1,0 +1,23 @@
+{
+  "schema": "promo.candidate.v1",
+  "idempotency_key": "PROMO_RETAIL|dienmayxanh.com|nap-rut-3-voucher|2026-08-01|2026-08-31",
+  "source_worker": "PROMO Retail Shard",
+  "source_id": "SRCV1-A1642775091E",
+  "registrable_domain": "dienmayxanh.com",
+  "vertical": "RETAIL_ECOMMERCE",
+  "source_url": "https://www.dienmayxanh.com/khuyen-mai/nhan-ngay-voucher-mua-bao-hiem-xe-may-khi-nap-1583189",
+  "merchant": "Điện máy XANH",
+  "title": "Tặng 3 voucher khi Nạp/Rút tiền tại Điện máy XANH",
+  "benefit_type": "VOUCHER_BENEFIT",
+  "benefit_value": "PMH 50.000đ phụ kiện từ 250.000đ + PMH 20.000đ bảo hiểm xe máy + PMH 20.000đ bảo hiểm an ninh mạng",
+  "benefit_cap_vnd": 90000,
+  "min_spend_vnd": null,
+  "start_date": "2026-08-01",
+  "end_date": "2026-08-31",
+  "eligibility": "Thực hiện giao dịch nạp tiền hoặc rút tiền tài khoản ngân hàng tại Thế Giới Di Động/Điện máy XANH trong thời gian chương trình. PMH 50K dùng mua sạc dự phòng/tai nghe từ 250K (trừ Apple, Beats); hai PMH 20K dùng cho các gói bảo hiểm nêu trong thể lệ.",
+  "literal_code": null,
+  "status": "ACTIVE",
+  "evidence": "Official Điện máy XANH page published 01/08/2026 states campaign 01/08/2026-31/08/2026 and the three concrete voucher benefits. No reusable public literal code is exposed.",
+  "evidence_checked_at": "2026-08-19T18:52:41+07:00",
+  "actionable_value_version": "ACTIONABLE-VALUE-V2"
+}
