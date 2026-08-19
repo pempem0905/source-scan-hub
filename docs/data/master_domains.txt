@@ -1734,6 +1734,7 @@ static.5sfashion.vn
 static.accesstrade.vn
 static.amago.vn
 store.hbr.org
+store.steampowered.com
 stripe.com
 studentbeans.com
 suachuadientu.8tech.vn
@@ -1840,6 +1841,7 @@ upanh.0511.vn
 upbeauty.vn
 upharma.vn
 urbox.vn
+us.gamesplanet.com
 usatoday.com
 uu-dai.amiskr.vn
 v2.dinhvi.3tbk.vn
@@ -1887,6 +1889,7 @@ vinhcara.com
 vinhome.com.vn
 vinid.net
 vinmart.com
+vinpearlresortvietnam.com
 vinwonders.com
 vip.360mobi.vn
 vipa.ac.vn
