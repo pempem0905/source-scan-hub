@@ -1,0 +1,370 @@
+{
+  "schema": "promo.code_database_status.v1",
+  "snapshot_label": "19/08/2026",
+  "generated_at": "2026-08-19T05:03:13.964220Z",
+  "records": 2230,
+  "unique_literal_codes": 2152,
+  "merchants": 71,
+  "structured_files_scanned": 143,
+  "raw_explicit_code_observations": 2378,
+  "by_quality_tier": {
+    "ACTIVE_VERIFIED": 187,
+    "ACTIVE_REVIEW": 30,
+    "UNVERIFIED": 2000,
+    "INACTIVE": 13
+  },
+  "top_source_files": [
+    {
+      "file": "integration/accesstrade_catalog_handoff_v1.jsonl",
+      "observations": 2000
+    },
+    {
+      "file": "l2/candidate-queue.jsonl",
+      "observations": 46
+    },
+    {
+      "file": "integration/promo_banks_handoff_v1.jsonl",
+      "observations": 19
+    },
+    {
+      "file": "integration/promo_banks_handoff_20260818T1939.jsonl",
+      "observations": 19
+    },
+    {
+      "file": "integration/handoffs/promo_banks_2026-08-18T103751+07.jsonl",
+      "observations": 18
+    },
+    {
+      "file": "integration/handoffs/promo_banks_2026-08-19T0537+07.jsonl",
+      "observations": 17
+    },
+    {
+      "file": "integration/handoffs/promo_banks_2026-08-18T0737+07.jsonl",
+      "observations": 17
+    },
+    {
+      "file": "integration/handoffs/promo_banks_2026-08-19T0643+07.jsonl",
+      "observations": 16
+    },
+    {
+      "file": "integration/handoffs/promo_banks_2026-08-18T0237+07.jsonl",
+      "observations": 13
+    },
+    {
+      "file": "integration/handoffs/promo_banks_2026-08-18T1141+07.jsonl",
+      "observations": 10
+    },
+    {
+      "file": "integration/handoffs/promo_banks_2026-08-17T2042+07.jsonl",
+      "observations": 10
+    },
+    {
+      "file": "integration/handoffs/promo_banks_2026-08-18T0638+07.jsonl",
+      "observations": 9
+    },
+    {
+      "file": "integration/handoffs/promo_banks_2026-08-18T1538+07.jsonl",
+      "observations": 9
+    },
+    {
+      "file": "integration/handoffs/promo_banks_2026-08-19T0039+07.jsonl",
+      "observations": 7
+    },
+    {
+      "file": "integration/handoffs/promo_banks_2026-08-19T0242+07.jsonl",
+      "observations": 6
+    },
+    {
+      "file": "integration/handoffs/promo_banks_2026-08-18T0840+07.jsonl",
+      "observations": 6
+    },
+    {
+      "file": "integration/handoffs/promo_banks_2026-08-18T1838+07.jsonl",
+      "observations": 6
+    },
+    {
+      "file": "integration/handoffs/promo_turbo_2026-08-17T1932+07.jsonl",
+      "observations": 6
+    },
+    {
+      "file": "integration/handoffs/promo_banks_2026-08-18T2142+07.jsonl",
+      "observations": 6
+    },
+    {
+      "file": "integration/handoffs/promo_banks_2026-08-19T1037+07.jsonl",
+      "observations": 6
+    }
+  ],
+  "sample": [
+    {
+      "code": "ALMAMASTER",
+      "merchant": "Alma Resort Cam Ranh",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Turbo Scan",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "VPBANK26",
+      "merchant": "Ana Mandara Cam Ranh",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "CAMP-VPBANK",
+      "merchant": "Ana Mandara Resort Cam Ranh",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "ACTIVE",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "CAMP-VPBANK",
+      "merchant": "Ana Mandara Resort Cam Ranh",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Turbo Scan",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "VISABT",
+      "merchant": "Banyan Group",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "BEVISABIZ",
+      "merchant": "Be",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "BLISSHOIAN2026",
+      "merchant": "Bliss Hoi An Beach Resort & Wellness",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Turbo Scan",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "CERAVPBANK26",
+      "merchant": "Cera Premium Beauty",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "VNPAYCGV104",
+      "merchant": "CGV",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Turbo Scan",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "VNPAYCGV115",
+      "merchant": "CGV",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Turbo Scan",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "VNPAYCGV104",
+      "merchant": "CGV via MyVIB/VNPAY",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Turbo Scan",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "VNPAYCGV115",
+      "merchant": "CGV via MyVIB/VNPAY",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Turbo Scan",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "HAPPYDAY",
+      "merchant": "Cinema tickets on MoMo",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "VTSDOOKKI",
+      "merchant": "Dookki",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "HOCHE",
+      "merchant": "Education payment partners",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "MASTERAU8",
+      "merchant": "Expedia",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "MASTERAU8",
+      "merchant": "Expedia",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "ACTIVE",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "MASTERHK8",
+      "merchant": "Expedia",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "MASTERHK8",
+      "merchant": "Expedia",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "ACTIVE",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "MASTERID7",
+      "merchant": "Expedia",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "MASTERID7",
+      "merchant": "Expedia",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "ACTIVE",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "MASTERIN7",
+      "merchant": "Expedia",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "MASTERIN7",
+      "merchant": "Expedia",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "ACTIVE",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "MASTERJP8",
+      "merchant": "Expedia",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "MASTERJP8",
+      "merchant": "Expedia",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "ACTIVE",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "MASTERKR8",
+      "merchant": "Expedia",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "MASTERKR8",
+      "merchant": "Expedia",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "ACTIVE",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "MASTERMY7",
+      "merchant": "Expedia",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "MASTERMY7",
+      "merchant": "Expedia",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "ACTIVE",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    },
+    {
+      "code": "MASTERPH7",
+      "merchant": "Expedia",
+      "title": null,
+      "quality_tier": "ACTIVE_VERIFIED",
+      "status": "READY",
+      "source_worker": "PROMO Banks Shard",
+      "code_field": "literal_code"
+    }
+  ]
+}
