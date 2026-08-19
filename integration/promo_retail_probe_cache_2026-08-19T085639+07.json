@@ -1,0 +1,52 @@
+{
+  "schema": "promo.retail.probe_cache.v1",
+  "source_worker": "PROMO Retail Shard",
+  "updated_at": "2026-08-19T08:56:39+07:00",
+  "entries": [
+    {
+      "url": "https://www.samsung.com/vn/offer/samsung-live-shop/",
+      "result": "LITERAL_CODES_VALIDITY_UNRESOLVED_REVIEW",
+      "code_signal": true,
+      "observed_literals": ["LS-SSZ8", "AI-SSZ8", "LS-THANG7", "AI-THANG7"],
+      "notes": "Official Samsung current Live Shop surface exposes exact tokens with actionable economics, but controlling current/future end dates were not resolved in official evidence. Do not enqueue until date gate is satisfied."
+    },
+    {
+      "url": "https://www.samsung.com/vn/offer/",
+      "result": "LITERAL_CODES_VALIDITY_UNRESOLVED_REVIEW",
+      "code_signal": true,
+      "observed_literals": ["LS-68S26", "LS-THANG6"],
+      "notes": "Official offer page exposes exact token and concrete prices/discounts. Page lacks controlling validity dates for the tokens in extracted evidence; REVIEW only."
+    },
+    {
+      "url": "https://www.thegioididong.com/hoi-dap/tong-hop-tat-ca-ma-giam-gia-ma-khuyen-mai-tai-tgdd-1587864",
+      "result": "NO_CURRENT_REUSABLE_LITERAL",
+      "code_signal": true,
+      "notes": "June 2026 promo roundup is stale for 19/08/2026 and visible mechanics do not establish a new current reusable literal."
+    },
+    {
+      "url": "https://www.thegioididong.com/tin-tuc/tet-2026-mua-sam-online-tai-tgdd-1583838",
+      "result": "REJECT_DYNAMIC_EXPIRED_LITERAL",
+      "code_signal": true,
+      "observed_literals": ["LIXI.2026"],
+      "notes": "Historical Tet promotion; voucher tied to phone/user flow, not reusable public literal."
+    },
+    {
+      "url": "https://mediamart.vn/tin-khuyen-mai/back-to-school-2026-mediamart-uu-dai-dac-biet-danh-rieng-cho-hs-sv-va-giao-vien",
+      "result": "ACTIONABLE_DYNAMIC_EVOUCHER_NO_LITERAL",
+      "code_signal": true,
+      "notes": "Current 04/07/2026-31/10/2026 benefit up to 2M; eVoucher is issued after eligibility verification, not a reusable public token."
+    },
+    {
+      "url": "https://shopnext.vn/khuyen-mai",
+      "result": "ACTIONABLE_REWARD_LISTING_NO_LITERAL",
+      "code_signal": false,
+      "notes": "Current long-dated cashback/reward listings found; no exact reusable public token exposed."
+    },
+    {
+      "url": "https://www.circlek.com.vn/vi/uu-dai-dac-biet/",
+      "result": "EXPIRED_CURRENT_SURFACE_NO_LITERAL",
+      "code_signal": false,
+      "notes": "August special promotion visible on official page ended 13/08/2026; no current reusable literal accepted."
+    }
+  ]
+}
