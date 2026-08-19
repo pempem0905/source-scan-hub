@@ -1,0 +1,61 @@
+name: PROMO Code Database
+
+on:
+  schedule:
+    - cron: '10 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'integration/build_code_database.py'
+      - 'integration/handoffs/**'
+      - 'integration/*handoff*.jsonl'
+      - 'l2/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: promo-code-database
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Build centralized code database
+        run: python3 integration/build_code_database.py
+
+      - name: Validate UI database
+        run: |
+          python3 -m py_compile integration/build_code_database.py
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('docs/data/promo_codes.json')
+          data=json.loads(p.read_text())
+          assert data['schema']=='promo.code_database.v1'
+          assert data['snapshot_label']=='19/08/2026'
+          assert isinstance(data.get('records'), list)
+          assert all(r.get('code') for r in data['records'])
+          assert all(r.get('quality_tier') in {'ACTIVE_VERIFIED','ACTIVE_REVIEW','UNVERIFIED','INACTIVE','UNKNOWN'} for r in data['records'])
+          print(data['stats'])
+          PY
+
+      - name: Persist centralized database
+        run: |
+          git config user.name "promo-code-db-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/promo_codes.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Refresh centralized promo code database [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
