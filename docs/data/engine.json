@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-19T13:56:20.649568Z",
+  "generated_at": "2026-08-19T14:24:42.952593Z",
   "legacy_baseline_domains": 6117,
   "status": {
     "cost_target_usd": 0,
     "estimated_monthly_github_minutes": 1320.0,
-    "frontier_active_pending": 6731,
-    "frontier_deferred_pending": 38666,
-    "frontier_pending": 45397,
-    "last_6_runs_new_domains": 13,
+    "frontier_active_pending": 5247,
+    "frontier_deferred_pending": 38641,
+    "frontier_pending": 43888,
+    "last_6_runs_new_domains": 10,
     "last_run": {
-      "at": "2026-08-19T13:51:22.393542Z",
+      "at": "2026-08-19T14:19:30.894159Z",
       "cc_added": 0,
       "cc_patterns": [
-        "*.vn/*uu-dai*",
-        "*.vn/*uudai*",
-        "*.vn/*voucher*",
-        "*.vn/*promotion*"
+        "*.vn/*offers*",
+        "*.vn/*deals*",
+        "*.vn/*sale*",
+        "*.com/vn/*khuyen-mai*"
       ],
-      "duration_s": 296.3,
-      "errors": 84,
-      "frontier_pending": 45397,
-      "new_domains": 2,
-      "processed": 1334,
-      "rate403": 0.15,
+      "duration_s": 310.0,
+      "errors": 79,
+      "frontier_pending": 43888,
+      "new_domains": 1,
+      "processed": 1359,
+      "rate403": 0.368,
       "rate429": 0.0
     },
     "latest_common_crawl": "CC-MAIN-2026-30",
-    "master_domains": 2197,
+    "master_domains": 2204,
     "mode": "FREE_COMMON_CRAWL_GITHUB",
-    "run_count": 172,
+    "run_count": 173,
     "running": true,
-    "seen_urls": 953941,
-    "updated_at": "2026-08-19T13:56:18.646199Z"
+    "seen_urls": 959206,
+    "updated_at": "2026-08-19T14:24:40.892082Z"
   },
   "master_input": {
     "active_input_count": 237,
@@ -41,33 +41,33 @@
       "BANK_CARD": 38,
       "DISCOVERY_ONLY": 18,
       "FOOD_BEVERAGE": 30,
-      "GENERAL": 1676,
+      "GENERAL": 1683,
       "LOYALTY_REWARDS": 10,
       "PAYMENT_WALLET": 7,
       "PROMO_BANKS": 35,
       "PROMO_L2": 15,
       "PROMO_RETAIL": 187,
-      "PUBLIC_HTTP": 1890,
+      "PUBLIC_HTTP": 1897,
       "RESIDENTIAL_REQUIRED": 12,
       "RETAIL_ECOMMERCE": 114,
-      "REVIEW_INPUT": 1651,
+      "REVIEW_INPUT": 1658,
       "SOURCE_HUNTER": 18,
-      "SOURCE_REVIEW": 1651,
+      "SOURCE_REVIEW": 1658,
       "TRAVEL_MOBILITY": 31
     },
     "dedupe_key": "registrable_domain",
     "discovery_only_count": 18,
-    "generated_at": "2026-08-19T13:56:20.424403Z",
+    "generated_at": "2026-08-19T14:24:42.723335Z",
     "legacy_seed_present": true,
     "mode": "BRIDGE_SHADOW",
     "production_write": false,
     "project_id": "PROMO-SRC-HUNTER-V1",
     "promo_export_present": false,
     "quality_gate": "SOURCE_QUALITY_V1",
-    "record_count": 1906,
-    "review_input_count": 1651,
+    "record_count": 1913,
+    "review_input_count": 1658,
     "schema": "promo.master_input_status.v1",
-    "source_hunter_domains": 2197,
+    "source_hunter_domains": 2204,
     "url_key": "canonical_url"
   },
   "promo_workers": {
@@ -295,7 +295,7 @@
   "l2_auth": {
     "schema_version": 4,
     "project_id": "PROMO-L2-ROUTER-V1",
-    "updated_at": "2026-08-19T13:11:30.690764Z",
+    "updated_at": "2026-08-19T13:59:11.844828Z",
     "mode": "PROACTIVE_PREAUTH",
     "alert_states": [
       "LOGIN_REQUIRED",
@@ -386,34 +386,27 @@
     "free_search_last_added": 0,
     "free_search_last_errors": 0,
     "free_search_last_queries": [
-      "mẹ và bé khuyến mãi Việt Nam",
-      "mẹ và bé ưu đãi Việt Nam",
-      "mẹ và bé voucher Việt Nam",
-      "mẹ và bé promotion Vietnam"
+      "điện máy điện thoại laptop khuyến mãi Việt Nam",
+      "điện máy điện thoại laptop ưu đãi Việt Nam",
+      "điện máy điện thoại laptop voucher Việt Nam",
+      "điện máy điện thoại laptop promotion Vietnam"
     ],
     "cc_domain_last_added": 0,
     "cc_domain_pattern": null,
-    "cc_domain_page": 145,
+    "cc_domain_page": 146,
     "frontier_scheduler": {
-      "active": 1334,
+      "active": 1359,
       "base_per_host_batch": 16,
-      "deferred": 38666,
+      "deferred": 38641,
       "effective_per_host_batch": 16,
       "max_active": 1800,
       "previous_429_rate": 0.0,
       "rate_limit_pressure": "LOW",
       "strategy": "strict_host_quota_round_robin",
-      "unique_hosts": 144
+      "unique_hosts": 141
     }
   },
   "recent_sources": [
-    {
-      "at": "2026-08-18T15:14:45.013508Z",
-      "domain": "elizafaulkner.com",
-      "radar": false,
-      "url": "https://elizafaulkner.com/",
-      "via": "external_promo"
-    },
     {
       "at": "2026-08-18T15:14:45.013508Z",
       "domain": "es.macduggal.com",
@@ -1246,6 +1239,13 @@
       "radar": false,
       "url": "https://all.accor.com/a/ko/offers/family-offer.html",
       "via": "internal_promo"
+    },
+    {
+      "at": "2026-08-19T14:19:30.894159Z",
+      "domain": "thegamecollection.net",
+      "radar": false,
+      "url": "https://thegamecollection.net/",
+      "via": "external_promo"
     }
   ]
 }
