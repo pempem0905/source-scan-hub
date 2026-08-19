@@ -1,0 +1,36 @@
+{
+  "schema": "promo.retail.probe_cache.run.v1",
+  "source_worker": "PROMO Retail Shard",
+  "checked_at": "2026-08-20T02:58:00+07:00",
+  "lovable_calls": 0,
+  "entries": [
+    {
+      "url": "https://www.samsung.com/vn/offer/",
+      "result": "LITERAL_CODES_UNDATED_REVIEW",
+      "code_signal": true,
+      "observed_literals": ["LS-THANG6", "LS-68S26"],
+      "notes": "Official Samsung offer/buy pages expose exact codes with actionable economics, including LS-THANG6 bundle/device discounts and LS-68S26 Galaxy S26 Ultra pricing, but no controlling current/future campaign end date was resolved in this run. REVIEW only; not enqueued."
+    },
+    {
+      "url": "https://yody.vn/post/hot-nhan-voucher-100k-doc-quyen-tren-website-mung-yody-dat-top-1",
+      "result": "LITERAL_CODE_UNDATED_REVIEW",
+      "code_signal": true,
+      "observed_literals": ["YODYCE87"],
+      "notes": "Official YODY page published 2026-06-10 exposes YODYCE87 for 100,000 VND off orders from 699,000 VND on full-price items for new customers, but no controlling end date was visible. REVIEW only; not enqueued."
+    },
+    {
+      "url": "https://www.dienmayxanh.com/khuyen-mai/10000-phieu-giam-2tr-1596169",
+      "result": "CACHE_SKIP_EXPIRED_LITERAL",
+      "code_signal": true,
+      "observed_literals": ["ZALO.2M2026"],
+      "notes": "Previously validated exact literal but expired 2026-07-31; skipped deep read."
+    },
+    {
+      "url": "https://www.pharmacity.vn/uu-dai-zalopay-2026.lp",
+      "result": "CACHE_SKIP_LITERAL_DUPLICATES",
+      "code_signal": true,
+      "observed_literals": ["ZPPMC15", "TRASAUPMC35", "ZPPMC", "TRASAUPMC"],
+      "notes": "Already captured in retail handoff; no duplicate enqueue."
+    }
+  ]
+}
