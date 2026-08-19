@@ -1,0 +1,33 @@
+{
+  "schema": "promo.banks.telemetry.v2",
+  "source_worker": "PROMO Banks Shard",
+  "pipeline": "TURBO_SCAN_PIPELINE_V2",
+  "input_contract": "GitHub ELIGIBLE + ACTIVE_INPUT assigned PROMO_BANKS",
+  "fast_probes": 12,
+  "shortlisted": 4,
+  "deep_validations": 2,
+  "cache_skips": 0,
+  "sources_read": 2,
+  "code_likely_sources_read": 2,
+  "no_code_reads": 0,
+  "family_rotations": 10,
+  "offers_found": 7,
+  "voucher_benefits_found": 7,
+  "literal_codes_found": 7,
+  "codes_per_10_reads": 35.0,
+  "enqueued": 7,
+  "blocked": 0,
+  "duplicates": 0,
+  "expired_rejected": 5,
+  "date_conflict_rejected": 2,
+  "last_run_at": "2026-08-19T21:38:44+07:00",
+  "lovable_calls": 0,
+  "notes": [
+    "Consumed only GitHub dispatch rows with status ELIGIBLE, source_status ACTIVE_INPUT, assigned_lane PROMO_BANKS.",
+    "High-signal probe concentrated deep validation on official Grab partner pages because they exposed exact literal tokens and current/future programme context.",
+    "Enqueued SHB20, SHB30, HDBTPTNEW, HDBFOODNEW, HDBBIKE, HDBCAR and HDBFOOD to a GitHub-backed READY handoff batch; canonical counters untouched.",
+    "Rejected JCBBIDVFOOD1/JCBBIDVFOOD2 pending controlling terms because the official aggregate page contains a 2025-versus-2026 date contradiction.",
+    "Rejected expired KienlongBank code family plus RIDE40/GRABNAMMOI current-validity misses.",
+    "No login/WAF bypass and zero Lovable calls."
+  ]
+}
