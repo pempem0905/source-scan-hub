@@ -26,8 +26,8 @@
     "live_view_handoff_exercised": true,
     "authenticated_session_reuse_verified": false,
     "fresh_connection_reuse_required": true,
-    "last_runtime_state": "TRANSIENT_RATE_LIMIT",
-    "transient_failure": true,
+    "last_runtime_state": "STALE_RUNTIME_EVIDENCE",
+    "transient_failure": false,
     "status_source": "l2/bridge-runtime-status.json"
   },
   "remaining_gate": {
@@ -49,5 +49,5 @@
   },
   "readiness_rule": "Do not mark READY until a real Browser Run session has been created, structured human takeover has completed, and the authenticated session has been rediscovered and reused from an independent fresh L2 CDP connection without persisting sensitive session material.",
   "fallback_readiness_rule": "For cloud/datacenter-blocked sites, require an online self-hosted residential runner with a platform-isolated persistent profile before marking that platform READY.",
-  "last_reconciled_at": "2026-08-20T04:55:09.602681Z"
+  "last_reconciled_at": "2026-08-20T05:47:54.328396Z"
 }
