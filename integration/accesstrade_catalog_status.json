@@ -6,7 +6,7 @@
   "coupon_fallback_rows": 0,
   "datafeed_errors": [],
   "discounted_product_count": 0,
-  "generated_at": "2026-08-20T00:05:57.783608Z",
+  "generated_at": "2026-08-20T01:43:24.060286Z",
   "global_active_offer_rows": 4000,
   "legacy_campaign_rows": 0,
   "merchant_with_offer_count": 2,
@@ -74,8 +74,8 @@
   ],
   "tokens_configured": 2,
   "top_offer_merchants": {
-    "shopee": 1994,
-    "tikivn": 6
+    "shopee": 1996,
+    "tikivn": 4
   },
   "top_product_domains": {},
   "verification_required": true
