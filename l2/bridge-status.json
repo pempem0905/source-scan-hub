@@ -31,9 +31,9 @@
     "status_source": "l2/bridge-runtime-status.json"
   },
   "remaining_gate": {
-    "state": "WAITING_RUNTIME_WINDOW",
-    "reason": "No real secure takeover surface is active right now.",
-    "safe_action": "No user action is required until bridge_status becomes TAKEOVER_READY."
+    "state": "WAITING_FREE_DAILY_QUOTA",
+    "reason": "The verified free Browser Run lane is waiting for its next daily acquisition window.",
+    "safe_action": "No user action is required; the bridge will retry automatically after the recorded UTC retry time."
   },
   "security_invariants": {
     "passwords_in_github": false,
@@ -49,5 +49,5 @@
   },
   "readiness_rule": "Do not mark READY until a real Browser Run session has been created, structured human takeover has completed, and the authenticated session has been rediscovered and reused from an independent fresh L2 CDP connection without persisting sensitive session material.",
   "fallback_readiness_rule": "For cloud/datacenter-blocked sites, require an online self-hosted residential runner with a platform-isolated persistent profile before marking that platform READY.",
-  "last_reconciled_at": "2026-08-20T03:13:09.175736Z"
+  "last_reconciled_at": "2026-08-20T04:00:12.011474Z"
 }
