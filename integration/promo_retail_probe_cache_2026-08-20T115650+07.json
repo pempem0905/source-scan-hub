@@ -1,0 +1,45 @@
+{
+  "schema": "promo.retail.probe_cache.run.v1",
+  "source_worker": "PROMO Retail Shard",
+  "checked_at": "2026-08-20T11:56:50+07:00",
+  "lovable_calls": 0,
+  "entries": [
+    {
+      "url": "https://nhathuoclongchau.com.vn/bai-viet/the-le-chuong-trinh-uu-dai-san-sang-suc-khoe-vung-vang-5.html",
+      "result": "EXPIRED_ACTIONABLE_NO_LITERAL",
+      "code_signal": false,
+      "notes": "Official terms show 01/06/2026-30/06/2026 only; 30K/50K purchase vouchers and gifts are expired as of 20/08/2026; no exact reusable literal."
+    },
+    {
+      "url": "https://cellphones.com.vn/danh-sach-khuyen-mai",
+      "result": "CURRENT_HUB_NO_LITERAL_SIGNAL",
+      "code_signal": false,
+      "notes": "Current promotion hub accessible; no exact reusable literal or voucher token exposed in visible hub text."
+    },
+    {
+      "url": "https://mediamart.vn/tin-khuyen-mai/thu-4-sale-ruc-lua-giam-het-co-mua-cuc-hoi",
+      "result": "ACTIONABLE_NO_LITERAL",
+      "code_signal": false,
+      "notes": "Current Wednesday sale exposes direct discounts, 0% installment and voucher benefits but no exact reusable public literal token."
+    },
+    {
+      "url": "https://mediamart.vn/tin-khuyen-mai/xa-hang-he-don-mua-tuu-truong",
+      "result": "ACTIONABLE_VOUCHER_NO_LITERAL",
+      "code_signal": true,
+      "notes": "Current sale exposes 10% follow-on vouchers and education vouchers up to 2M, but no exact reusable public literal token in official text."
+    },
+    {
+      "url": "https://www.pharmacity.vn/cam-nang-mua-sam",
+      "result": "CURRENT_PROMO_NO_EXTRACTABLE_LITERAL",
+      "code_signal": true,
+      "notes": "Official August promotion is current but accessible text does not expose a reusable coupon token; no fabrication."
+    },
+    {
+      "url": "https://www.galaxycine.vn/binh-luan-phim/giam-25-khi-dat-xe-den-galaxy-parc-mall-q8/",
+      "result": "LITERAL_CODE_REVIEW_FETCH_BLOCKED",
+      "code_signal": true,
+      "observed_literals": ["GALAXYQ8"],
+      "notes": "Prior official evidence exposes exact GALAXYQ8 for 25% off capped 50K, but current validity remains unresolved; this run hit redirect loop, so REVIEW only and no enqueue."
+    }
+  ]
+}
