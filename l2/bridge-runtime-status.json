@@ -17,5 +17,5 @@
   "note": "Runtime observation is stale; historical capability verification is retained separately. No login surface is considered active from stale evidence, and no sensitive runtime material is persisted.",
   "observation_stale": true,
   "stale_after_seconds": 7200,
-  "last_observed_state": "TRANSIENT_RATE_LIMIT"
+  "last_observed_state": "STALE_RUNTIME_EVIDENCE"
 }
