@@ -1,0 +1,15 @@
+{
+  "schema": "promo.handoff.actionable_value_v2.batch",
+  "source_worker": "PROMO Turbo Scan",
+  "status": "READY",
+  "validated_at": "2026-08-20T01:29:49Z",
+  "actionable_value_v2": true,
+  "findings": [
+    {"idempotency_key":"promo-turbo-scan|bidv-jcb|trip.com|JCB14|2026-12-31","merchant":"Trip.com","issuer":"BIDV JCB","literal_code":"JCB14","benefit":"Giảm 14% tối đa 800.000đ cho đặt phòng khách sạn tại Nhật Bản","eligibility":"Thanh toán bằng thẻ BIDV JCB; tài khoản Trip.com đăng ký và truy cập qua link chương trình chỉ định","valid_through":"2026-12-31","stay_through":"2027-02-28","source_url":"https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-jcb-trip","source_type":"official_bank"},
+    {"idempotency_key":"promo-turbo-scan|bidv-jcb|trip.com|JCB12|2026-12-31","merchant":"Trip.com","issuer":"BIDV JCB","literal_code":"JCB12","benefit":"Giảm 12% tối đa 800.000đ cho đặt phòng khách sạn ngoài Nhật Bản","eligibility":"Thanh toán bằng thẻ BIDV JCB; tài khoản Trip.com đăng ký và truy cập qua link chương trình chỉ định","valid_through":"2026-12-31","stay_through":"2027-02-28","source_url":"https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-jcb-trip","source_type":"official_bank"},
+    {"idempotency_key":"promo-turbo-scan|bidv-jcb|trip.com|JCB10|2026-12-31","merchant":"Trip.com","issuer":"BIDV JCB","literal_code":"JCB10","benefit":"Giảm 10% tối đa 800.000đ cho vé máy bay đến Nhật Bản","eligibility":"Thanh toán bằng thẻ BIDV JCB; tài khoản Trip.com đăng ký và truy cập qua link chương trình chỉ định","valid_through":"2026-12-31","travel_through":"2027-02-28","source_url":"https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-jcb-trip","source_type":"official_bank"},
+    {"idempotency_key":"promo-turbo-scan|bidv-jcb|trip.com|JCB8|2026-12-31","merchant":"Trip.com","issuer":"BIDV JCB","literal_code":"JCB8","benefit":"Giảm 8% tối đa 800.000đ cho vé máy bay ngoài nhóm đến Nhật Bản theo điều kiện chương trình","eligibility":"Thanh toán bằng thẻ BIDV JCB; tài khoản Trip.com đăng ký và truy cập qua link chương trình chỉ định","valid_through":"2026-12-31","travel_through":"2027-02-28","source_url":"https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-jcb-trip","source_type":"official_bank"}
+  ],
+  "telemetry": {"fast_probes":25,"shortlisted":4,"deep_validations":1,"cache_skips":3,"code_sources_read":1,"no_code_reads":0,"source_family_rotations":1,"offers_found":4,"voucher_benefits_found":4,"literal_codes_found":4,"codes_per_10_reads":40.0,"validated":4,"rejected":0,"committed":0,"literal_codes_committed":0,"batch":"2026-08-20T0129Z","last_run_at":"2026-08-20T01:29:49Z","lovable_calls":0},
+  "writer_note":"READY handoff only; single final writer must perform canonical global dedup/migration and verified commit. Dynamic/account-bound voucher from BIDV Visa Klook was excluded from exact-code count."
+}
