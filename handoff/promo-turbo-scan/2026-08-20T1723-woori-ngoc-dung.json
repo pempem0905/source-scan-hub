@@ -1,0 +1,20 @@
+{
+  "schema": "promo.exact_code_handoff.v2",
+  "source_worker": "PROMO Turbo Scan",
+  "quality_gate": "ACTIONABLE-VALUE-V2",
+  "status": "READY",
+  "source": {
+    "publisher": "Woori Bank Vietnam",
+    "merchant": "Tham my vien Ngoc Dung",
+    "url": "https://woori.com.vn/uu-dai-the/suc-khoe-va-lam-dep/tham-my-vien-ngoc-dung/",
+    "valid_through": "2026-12-31"
+  },
+  "eligibility": "Woori Visa personal international credit/debit cards with eligible BINs listed by Woori; activation required at least 60 minutes before use; each customer may use one code per program; activated code valid 15 days.",
+  "offers": [
+    {"code":"WR01","benefit":"Combo 10 sessions hair removal (face/armpit/bikini) for VND 990,000","idempotency":"woori|ngoc-dung|WR01|2026-12-31"},
+    {"code":"WR02","benefit":"Mint Lips dark-lip treatment essence for VND 590,000","idempotency":"woori|ngoc-dung|WR02|2026-12-31"},
+    {"code":"WR03","benefit":"HYDRA LUXURY premium Belgian mesotherapy skin-plumping treatment for VND 790,000","idempotency":"woori|ngoc-dung|WR03|2026-12-31"},
+    {"code":"WR04","benefit":"One complimentary eligible service voucher; new Ngoc Dung customers age 25+ only","idempotency":"woori|ngoc-dung|WR04|2026-12-31"}
+  ],
+  "telemetry": {"fast_probes":25,"shortlisted":4,"deep_validations":1,"cache_skips":0,"code_sources_read":1,"no_code_reads":0,"source_family_rotations":0,"offers_found":4,"voucher_benefits_found":4,"literal_codes_found":4,"codes_per_10_reads":40.0,"validated":4,"rejected":0,"committed":0,"literal_codes_committed":0,"batch":"2026-08-20T1723-woori-ngoc-dung","last_run_at":"2026-08-20T17:23:48+07:00","lovable_calls":0}
+}
