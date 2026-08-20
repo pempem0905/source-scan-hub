@@ -1,0 +1,74 @@
+{
+  "schema": "promo.handoff.actionable_value_v2.batch",
+  "source_worker": "PROMO Turbo Scan",
+  "status": "READY",
+  "validated_at": "2026-08-20T01:25:00Z",
+  "actionable_value_v2": true,
+  "findings": [
+    {
+      "idempotency_key": "promo-turbo-scan|bidv|klook|JCBJPWKND30|2027-05-31",
+      "merchant": "Klook",
+      "issuer": "BIDV JCB",
+      "literal_code": "JCBJPWKND30",
+      "benefit": "Giảm 30% tối đa 500.000đ cho sản phẩm nước ngoài đủ điều kiện vào thứ 7 và Chủ Nhật, 12:00-23:39:59 GMT+7",
+      "eligibility": "Chủ thẻ BIDV JCB; người dùng Klook tại Việt Nam với số điện thoại Việt Nam; nhập mã trước thanh toán và thanh toán bằng thẻ JCB",
+      "valid_through": "2027-05-31",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-klook-jcb",
+      "source_type": "official_bank"
+    },
+    {
+      "idempotency_key": "promo-turbo-scan|bidv|klook|JCBWKND15|2027-05-31",
+      "merchant": "Klook",
+      "issuer": "BIDV JCB",
+      "literal_code": "JCBWKND15",
+      "benefit": "Giảm 15% tối đa 500.000đ cho đơn từ 2.000.000đ vào thứ 7 và Chủ Nhật, 12:00-23:59:59 GMT+7",
+      "eligibility": "Chủ thẻ BIDV JCB; người dùng Klook tại Việt Nam với số điện thoại Việt Nam; nhập mã trước thanh toán và thanh toán bằng thẻ JCB",
+      "valid_through": "2027-05-31",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-klook-jcb",
+      "source_type": "official_bank"
+    },
+    {
+      "idempotency_key": "promo-turbo-scan|bidv|klook|JCBNGAYDOI|2027-05-31",
+      "merchant": "Klook",
+      "issuer": "BIDV JCB",
+      "literal_code": "JCBNGAYDOI",
+      "benefit": "Giảm 15% tối đa 500.000đ cho đơn từ 2.000.000đ vào các ngày đôi đủ điều kiện; các mốc tương lai từ 09/09/2026 đến 05/05/2027",
+      "eligibility": "Chủ thẻ BIDV JCB; người dùng Klook tại Việt Nam với số điện thoại Việt Nam; nhập mã trước thanh toán và thanh toán bằng thẻ JCB",
+      "valid_through": "2027-05-31",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-klook-jcb",
+      "source_type": "official_bank"
+    },
+    {
+      "idempotency_key": "promo-turbo-scan|bidv|klook|KLOOK10JCB|2027-05-31",
+      "merchant": "Klook",
+      "issuer": "BIDV JCB",
+      "literal_code": "KLOOK10JCB",
+      "benefit": "Giảm 10% tối đa 300.000đ cho đơn từ 2.000.000đ, áp dụng tất cả các ngày trong tuần",
+      "eligibility": "Chủ thẻ BIDV JCB; người dùng Klook tại Việt Nam với số điện thoại Việt Nam; nhập mã trước thanh toán và thanh toán bằng thẻ JCB",
+      "valid_through": "2027-05-31",
+      "source_url": "https://bidv.com.vn/bidv/ca-nhan/khuyen-mai/dich-vu-the/uu-dai-klook-jcb",
+      "source_type": "official_bank"
+    }
+  ],
+  "telemetry": {
+    "fast_probes": 10,
+    "shortlisted": 2,
+    "deep_validations": 1,
+    "cache_skips": 6,
+    "code_sources_read": 1,
+    "no_code_reads": 0,
+    "source_family_rotations": 0,
+    "offers_found": 4,
+    "voucher_benefits_found": 4,
+    "literal_codes_found": 4,
+    "codes_per_10_reads": 40.0,
+    "validated": 4,
+    "rejected": 1,
+    "committed": 0,
+    "literal_codes_committed": 0,
+    "batch": "2026-08-20T0125Z",
+    "last_run_at": "2026-08-20T01:25:00Z",
+    "lovable_calls": 0
+  },
+  "writer_note": "READY handoff only. Official BIDV source confirms reusable literal codes, economics, card eligibility and campaign validity through 31/05/2027. Canonical advancement remains single-final-writer only."
+}
