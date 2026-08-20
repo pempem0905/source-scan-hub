@@ -23,14 +23,14 @@
   "date_unknown_rejected": 0,
   "handoff_artifact": null,
   "handoff_commit": null,
-  "telemetry_artifact": "integration/telemetry/promo_banks_2026-08-20T1440+07.json",
-  "telemetry_commit": "1db0411d890c606f4aa269e63d312e73145cd567",
-  "last_run_at": "2026-08-20T14:40:22+07:00",
+  "telemetry_artifact": "integration/telemetry/promo_banks_2026-08-20T1539+07.json",
+  "telemetry_commit": "a0e22bcebbd44f6cb0e8932f8ee5241f3bad7c43",
+  "last_run_at": "2026-08-20T15:39:57+07:00",
   "lovable_calls": 0,
   "notes": [
     "Consumed only GitHub dispatch rows with status ELIGIBLE, source_status ACTIVE_INPUT, assigned_lane PROMO_BANKS.",
-    "No PROMO_BANKS master-input or bank-evidence refresh was present after the 13:42 exact-code run; thirty high-signal candidate children were cache-skipped before deep validation.",
-    "Recent verified Vietcombank, VPBank, BIDV, Grab and MoMo code families were not re-enqueued.",
+    "No PROMO_BANKS master-input or Banks evidence refresh was present after the 14:40 cache-skip run; thirty high-signal candidate children were cache-skipped before deep validation.",
+    "Recent verified Vietcombank, VPBank and BIDV exact-code families from the 13:42 handoff were not re-enqueued.",
     "No login/WAF bypass, no canonical counter mutation, zero Lovable calls."
   ]
 }
