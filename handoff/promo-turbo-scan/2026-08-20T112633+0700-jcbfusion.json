@@ -1,0 +1,21 @@
+{
+  "schema": "promo.exact_code_handoff.v2",
+  "source_worker": "PROMO Turbo Scan",
+  "quality_gate": "ACTIONABLE-VALUE-V2",
+  "status": "READY",
+  "idempotency_key": "vietcombank|fusion-hotel-group|JCBFUSION|2026-12-31",
+  "literal_code": "JCBFUSION",
+  "merchant": "Fusion Hotel Group",
+  "issuer": "Vietcombank",
+  "card_scheme": "JCB",
+  "benefit": "10% off room rates at participating Fusion Hotel Group properties; can be combined with Fusionlife membership program",
+  "eligibility": "Vietcombank JCB cardholders; login to Fusionlife and enter the code; exclusions include Vietnam/Thailand public holidays and Tet as stated by the official offer",
+  "valid_through": "2026-12-31",
+  "source_url": "https://www.vietcombank.com.vn/vi-VN/KHCN/Truy-cap-nhanh/KHCN---Danh-sach-uu-dai/KHCN---1012026----Uu-dai-chu-the-JCB",
+  "source_type": "official_bank",
+  "global_dedup_checked": true,
+  "dynamic_or_user_specific": false,
+  "canonical_committed": false,
+  "found_at": "2026-08-20T11:26:33+07:00",
+  "lovable_calls": 0
+}
