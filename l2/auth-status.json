@@ -1,7 +1,7 @@
 {
   "schema_version": 4,
   "project_id": "PROMO-L2-ROUTER-V1",
-  "updated_at": "2026-08-21T03:19:09.692035Z",
+  "updated_at": "2026-08-21T04:23:53.532641Z",
   "mode": "PROACTIVE_PREAUTH",
   "alert_states": [
     "LOGIN_REQUIRED",
@@ -19,14 +19,14 @@
     "login_before_demand": true,
     "runtime_probe_verified": true,
     "permission_required": {
-      "state": "WAITING_RUNTIME_WINDOW",
-      "reason": "No real secure takeover surface is active right now.",
-      "safe_action": "No user action is required until bridge_status becomes TAKEOVER_READY.",
-      "note": "The bridge will retry autonomously; sensitive login material remains runtime-only."
+      "state": "WAITING_FREE_DAILY_QUOTA",
+      "reason": "The verified free Browser Run lane is waiting for its next daily acquisition window.",
+      "safe_action": "No user action is required; the bridge will retry automatically after the recorded UTC retry time.",
+      "note": "No login alert is emitted until a real secure takeover surface is active."
     },
     "end_to_end_verified": false,
-    "free_daily_quota_wait": false,
-    "next_retry_at": null
+    "free_daily_quota_wait": true,
+    "next_retry_at": "2026-08-22T00:05:00Z"
   },
   "platforms": {
     "uniqlo": {
