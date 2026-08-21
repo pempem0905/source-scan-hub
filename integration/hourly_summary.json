@@ -1,15 +1,15 @@
 {
   "alerts": [
     "stale canonical suppressed: raw 319/66, floor 360/77",
-    "canonical telemetry stale 5221m",
+    "canonical telemetry stale 5282m",
     "Ecomobi offer feed: endpoint kho offer/product chưa resolve; tracking API không được tính là promo feed"
   ],
-  "generated_at": "2026-08-21T19:27:14.864515Z",
-  "local_time": "2026-08-22T02:27:14.864511+07:00",
+  "generated_at": "2026-08-21T20:28:05.072294Z",
+  "local_time": "2026-08-22T03:28:05.072289+07:00",
   "metrics": {
     "actionable_offers": 360,
     "active_sources": 239,
-    "at_offers": 2053,
+    "at_offers": 2049,
     "at_tiktok": 140,
     "ecomobi_candidates": 0,
     "ecomobi_recent_conversions": 0,
@@ -29,5 +29,5 @@
     "WAIT_SOURCE_MAPPING": 1
   },
   "schema": "promo.hourly_summary.v1",
-  "text": "PROMO: 360 voucher/deal | 77 code\nMới: +0 voucher/deal | +0 code | +0 source\nSource: 326/239 (136%)\nAccessTrade: 2053 promo | TikTok 140\nMasOffer: OK | candidates 270\nEcomobi: tracking OK | offer API_NOT_RESOLVED | candidates 0\nL2: chưa login-ready; 7 profile đang xử lý\nETA login: đang tự retry theo lượt free\nETA all jobs: chưa đủ throughput canonical ổn định\nCải tiến: stale canonical suppressed: raw 319/66, floor 360/77 | canonical telemetry stale 5221m | Ecomobi offer feed: endpoint kho offer/product chưa resolve; tracking API không được tính là promo feed"
+  "text": "PROMO: 360 voucher/deal | 77 code\nMới: +0 voucher/deal | +0 code | +0 source\nSource: 326/239 (136%)\nAccessTrade: 2049 promo | TikTok 140\nMasOffer: OK | candidates 270\nEcomobi: tracking OK | offer API_NOT_RESOLVED | candidates 0\nL2: chưa login-ready; 7 profile đang xử lý\nETA login: đang tự retry theo lượt free\nETA all jobs: chưa đủ throughput canonical ổn định\nCải tiến: stale canonical suppressed: raw 319/66, floor 360/77 | canonical telemetry stale 5282m | Ecomobi offer feed: endpoint kho offer/product chưa resolve; tracking API không được tính là promo feed"
 }
