@@ -6,18 +6,20 @@
   "coupon_fallback_rows": 0,
   "datafeed_errors": [],
   "discounted_product_count": 0,
-  "generated_at": "2026-08-21T11:58:27.397990Z",
-  "global_active_offer_rows": 4000,
+  "generated_at": "2026-08-21T13:04:57.973470Z",
+  "global_active_offer_rows": 3900,
   "legacy_campaign_rows": 0,
   "merchant_with_offer_count": 2,
   "modern_campaign_rows": 0,
-  "offer_errors": [],
+  "offer_errors": [
+    "token0:/v1/offers_informations:page_20:TimeoutError:The read operation timed out"
+  ],
   "official_source_first": true,
   "per_token": {
     "active_offers": {
       "0": {
         "api_ok": true,
-        "rows": 2000
+        "rows": 1900
       },
       "1": {
         "api_ok": true,
