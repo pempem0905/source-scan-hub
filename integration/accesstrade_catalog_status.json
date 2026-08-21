@@ -1,15 +1,12 @@
 {
-  "active_offer_count": 1999,
+  "active_offer_count": 2048,
   "approved_campaign_count": 0,
   "campaign_category_breakdown": {},
   "campaign_errors": [],
   "coupon_fallback_rows": 0,
-  "datafeed_errors": [
-    "token0:/v1/datafeeds:page_1:TimeoutError:The read operation timed out",
-    "token1:/v1/datafeeds:page_1:TimeoutError:The read operation timed out"
-  ],
+  "datafeed_errors": [],
   "discounted_product_count": 0,
-  "generated_at": "2026-08-21T22:35:39.561875Z",
+  "generated_at": "2026-08-21T22:56:06.339515Z",
   "global_active_offer_rows": 4000,
   "legacy_campaign_rows": 0,
   "merchant_with_offer_count": 2,
@@ -29,12 +26,12 @@
     },
     "datafeeds": {
       "0": {
-        "api_ok": false,
-        "rows": 0
+        "api_ok": true,
+        "rows": 250
       },
       "1": {
-        "api_ok": false,
-        "rows": 0
+        "api_ok": true,
+        "rows": 250
       }
     },
     "legacy_campaigns": {
@@ -77,7 +74,7 @@
   ],
   "tokens_configured": 2,
   "top_offer_merchants": {
-    "shopee": 1995,
+    "shopee": 2044,
     "tikivn": 4
   },
   "top_product_domains": {},
