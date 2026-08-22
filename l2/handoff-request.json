@@ -7,5 +7,5 @@
   "last_retry_requested_at": "2026-08-22T03:08:53.943252Z",
   "retriggered_at": "2026-08-19T01:26:43Z",
   "purpose": "Verify structured human takeover and fresh-connection authenticated session reuse. Contains no credentials or session material.",
-  "retry_after_utc": "2026-08-22T03:40:28.510164Z"
+  "retry_after_utc": "2026-08-23T00:05:00Z"
 }
