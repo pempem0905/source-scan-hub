@@ -1,11 +1,10 @@
 {
   "schema": "promo.l2.handoff_request.v1",
   "platform": "grabfood",
-  "state": "RETRY_PENDING",
-  "attempt_day_utc": "2026-08-21",
-  "attempts_today": 2,
-  "last_retry_requested_at": "2026-08-21T03:17:32.935103Z",
+  "state": "REQUESTED",
+  "attempt_day_utc": "2026-08-22",
+  "attempts_today": 1,
+  "last_retry_requested_at": "2026-08-22T01:46:34.605290Z",
   "retriggered_at": "2026-08-19T01:26:43Z",
-  "purpose": "Verify structured human takeover and fresh-connection authenticated session reuse. Contains no credentials or session material.",
-  "retry_after_utc": "2026-08-22T00:05:00Z"
+  "purpose": "Verify structured human takeover and fresh-connection authenticated session reuse. Contains no credentials or session material."
 }
