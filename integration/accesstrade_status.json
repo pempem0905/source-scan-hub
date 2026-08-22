@@ -1,6 +1,6 @@
 {
   "candidate_count": 0,
-  "generated_at": "2026-08-22T19:07:13.544021Z",
+  "generated_at": "2026-08-22T19:30:57.833611Z",
   "offer_errors": [
     "coupon_page_1:HTTPError:HTTP Error 400: BAD REQUEST"
   ],
@@ -9,10 +9,10 @@
   "raw_offer_rows": 0,
   "schema": "promo.accesstrade_status.v1",
   "source_hint_count": 0,
-  "started_at": "2026-08-22T19:06:47.419159Z",
+  "started_at": "2026-08-22T19:30:37.714994Z",
   "state": "DEGRADED",
   "tiktok_errors": [],
-  "tiktok_product_count": 140,
+  "tiktok_product_count": 139,
   "token_slots_used": [
     0
   ],
