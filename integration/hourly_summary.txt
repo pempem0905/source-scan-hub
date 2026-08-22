@@ -7,4 +7,4 @@ Ecomobi: tracking OK | offer API_NOT_RESOLVED | candidates 0
 L2: chưa login-ready; 7 profile đang xử lý
 ETA login: đang tự retry theo lượt free
 ETA all jobs: chưa đủ throughput canonical ổn định
-Cải tiến: stale canonical suppressed: raw 319/66, floor 360/77 | canonical telemetry stale 6256m | Ecomobi offer feed: endpoint kho offer/product chưa resolve; tracking API không được tính là promo feed
+Cải tiến: stale canonical suppressed: raw 319/66, floor 360/77 | canonical telemetry stale 6307m | Ecomobi offer feed: endpoint kho offer/product chưa resolve; tracking API không được tính là promo feed
