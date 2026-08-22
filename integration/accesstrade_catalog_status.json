@@ -1,12 +1,12 @@
 {
-  "active_offer_count": 2055,
+  "active_offer_count": 2000,
   "approved_campaign_count": 0,
   "campaign_category_breakdown": {},
   "campaign_errors": [],
   "coupon_fallback_rows": 0,
   "datafeed_errors": [],
   "discounted_product_count": 0,
-  "generated_at": "2026-08-22T17:52:54.570397Z",
+  "generated_at": "2026-08-22T18:06:31.217403Z",
   "global_active_offer_rows": 4000,
   "legacy_campaign_rows": 0,
   "merchant_with_offer_count": 2,
@@ -74,8 +74,8 @@
   ],
   "tokens_configured": 2,
   "top_offer_merchants": {
-    "shopee": 2050,
-    "tikivn": 5
+    "shopee": 1996,
+    "tikivn": 4
   },
   "top_product_domains": {},
   "verification_required": true
