@@ -1,0 +1,53 @@
+name: Deploy PROMO Monitor Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  verify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for edge propagation
+        run: sleep 20
+      - name: Verify production pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          for url in \
+            'https://pempem0905.github.io/source-scan-hub/' \
+            'https://pempem0905.github.io/source-scan-hub/live.html' \
+            'https://pempem0905.github.io/source-scan-hub/data/engine.json'; do
+            echo "Checking $url"
+            code=$(curl -L -sS -o /tmp/out -w '%{http_code}' "$url")
+            test "$code" = '200'
+          done
