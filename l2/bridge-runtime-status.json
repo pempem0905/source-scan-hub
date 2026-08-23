@@ -1,11 +1,11 @@
 {
   "schema": "promo.l2.bridge_runtime_status.v3",
   "provider": "CLOUDFLARE_BROWSER_RUN",
-  "checked_at": "2026-08-22T03:10:28.448913Z",
+  "checked_at": "2026-08-23T01:56:46.261244Z",
   "last_verified_at": null,
   "mode": "handoff",
   "platform": "grabfood",
-  "state": "STALE_RUNTIME_EVIDENCE",
+  "state": "TAKEOVER_READY",
   "browser_session_created": true,
   "human_handoff_exercised": true,
   "authenticated_session_reuse_verified": false,
@@ -14,8 +14,5 @@
   "transient_failure": false,
   "secret_values_observable": false,
   "sensitive_runtime_material_persisted": false,
-  "note": "Runtime observation is stale; historical capability verification is retained separately. No login surface is considered active from stale evidence, and no sensitive runtime material is persisted.",
-  "observation_stale": true,
-  "stale_after_seconds": 7200,
-  "last_observed_state": "STALE_RUNTIME_EVIDENCE"
+  "note": "A real Cloudflare Live Session is active. No session IDs, websocket endpoints, Live View URLs, cookies, credentials, OTPs or CAPTCHA data are persisted."
 }
