@@ -4,11 +4,9 @@
   "campaign_category_breakdown": {},
   "campaign_errors": [],
   "coupon_fallback_rows": 0,
-  "datafeed_errors": [
-    "token0:/v1/datafeeds:page_1:TimeoutError:The read operation timed out"
-  ],
+  "datafeed_errors": [],
   "discounted_product_count": 0,
-  "generated_at": "2026-08-23T14:00:53.168883Z",
+  "generated_at": "2026-08-23T14:33:24.510067Z",
   "global_active_offer_rows": 4000,
   "legacy_campaign_rows": 0,
   "merchant_with_offer_count": 2,
@@ -28,8 +26,8 @@
     },
     "datafeeds": {
       "0": {
-        "api_ok": false,
-        "rows": 0
+        "api_ok": true,
+        "rows": 250
       },
       "1": {
         "api_ok": true,
