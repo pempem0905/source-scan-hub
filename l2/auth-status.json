@@ -1,7 +1,7 @@
 {
   "schema_version": 4,
   "project_id": "PROMO-L2-ROUTER-V1",
-  "updated_at": "2026-08-23T17:58:17.586381Z",
+  "updated_at": "2026-08-23T18:49:39.499708Z",
   "mode": "PROACTIVE_PREAUTH",
   "alert_states": [
     "LOGIN_REQUIRED",
