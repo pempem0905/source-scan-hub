@@ -1,7 +1,7 @@
 {
   "conversion_rows_persisted": false,
   "endpoint": "/api/v3/conversions",
-  "generated_at": "2026-08-23T20:10:18.620208Z",
+  "generated_at": "2026-08-23T20:36:30.393828Z",
   "http_status": 200,
   "last_error": null,
   "purpose": "tracking_auth_health_only",
