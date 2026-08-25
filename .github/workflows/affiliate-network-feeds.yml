@@ -9,8 +9,10 @@ on:
       - 'integration/affiliate_networks_ingest.py'
       - 'integration/masoffer_ingest_v2.py'
       - 'integration/ecomobi_tracking_v3.py'
-  schedule:
-    - cron: '*/15 * * * *'
+  # ⛔ FROZEN (EMERGENCY FREEZE, user request): schedule disabled, file preserved.
+  # To restore: uncomment the 2 lines below.
+  # schedule:
+  #   - cron: '*/15 * * * *'
   workflow_dispatch:
 
 permissions:
