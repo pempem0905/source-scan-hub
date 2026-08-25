@@ -2,7 +2,7 @@
   "schema": "promo.l2.bridge_status.v3",
   "project_id": "PROMO-L2-ROUTER-V1",
   "provider": "CLOUDFLARE_BROWSER_RUN_HUMAN_IN_LOOP",
-  "status": "BROWSER_RUN_PROBE_VERIFIED_HANDOFF_PENDING",
+  "status": "TAKEOVER_READY",
   "ready": false,
   "runtime_verified": true,
   "end_to_end_verified": false,
@@ -26,14 +26,14 @@
     "live_view_handoff_exercised": true,
     "authenticated_session_reuse_verified": false,
     "fresh_connection_reuse_required": true,
-    "last_runtime_state": "STALE_RUNTIME_EVIDENCE",
+    "last_runtime_state": "TAKEOVER_READY",
     "transient_failure": false,
     "status_source": "l2/bridge-runtime-status.json"
   },
   "remaining_gate": {
-    "state": "WAITING_RUNTIME_WINDOW",
-    "reason": "No real secure takeover surface is active right now.",
-    "safe_action": "No user action is required until bridge_status becomes TAKEOVER_READY."
+    "state": "PERMISSION_REQUIRED",
+    "reason": "A real secure login surface is active and requires the authorized user to complete login before session reuse can be verified.",
+    "safe_action": "Open Cloudflare Dashboard > Browser Run > Live Sessions and complete login/MFA/CAPTCHA only inside the active secure session."
   },
   "security_invariants": {
     "passwords_in_github": false,
@@ -49,5 +49,5 @@
   },
   "readiness_rule": "Do not mark READY until a real Browser Run session has been created, structured human takeover has completed, and the authenticated session has been rediscovered and reused from an independent fresh L2 CDP connection without persisting sensitive session material.",
   "fallback_readiness_rule": "For cloud/datacenter-blocked sites, require an online self-hosted residential runner with a platform-isolated persistent profile before marking that platform READY.",
-  "last_reconciled_at": "2026-08-25T01:48:05.256040Z"
+  "last_reconciled_at": "2026-08-25T01:48:32.042807Z"
 }
