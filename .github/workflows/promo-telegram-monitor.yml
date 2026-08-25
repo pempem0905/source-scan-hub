@@ -1,8 +1,10 @@
 name: PROMO Telegram Monitor 30m
 
 on:
-  schedule:
-    - cron: '*/30 * * * *'
+  # ⛔ FROZEN (EMERGENCY FREEZE, user request): schedule disabled, file preserved.
+  # To restore: uncomment the 2 lines below.
+  # schedule:
+  #   - cron: '*/30 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
