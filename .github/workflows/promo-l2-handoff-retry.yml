@@ -1,15 +1,14 @@
 name: PROMO L2 Handoff Retry
 
 on:
-  schedule:
-    # Lightweight free self-heal cadence. The request gate prevents Browser Run
-    # acquisition until retry_after_utc, so the extra check does not burn browser
-    # quota while reducing a transient 30-minute cooldown from >1h to <=30m.
-    - cron: '17,47 * * * *'
-    # Free Browser Run daily acquisition window is recorded for 00:05 UTC.
-    # Add one targeted retry immediately after that window instead of waiting
-    # for the next regular slot.
-    - cron: '6 0 * * *'
+  # ⛔ FROZEN (EMERGENCY FREEZE, user request): both schedules disabled, file
+  # preserved. This workflow is also the one that programmatically dispatches
+  # promo-l2-browser-run-bridge.yml (via `gh workflow run`) once a retry is
+  # armed — freezing this scheduler also stops that chained dispatch.
+  # To restore: uncomment the 4 lines below.
+  # schedule:
+  #   - cron: '17,47 * * * *'
+  #   - cron: '6 0 * * *'
   workflow_dispatch:
 
 permissions:
