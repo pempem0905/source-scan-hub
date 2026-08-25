@@ -1,8 +1,10 @@
 name: PROMO Hourly Telegram Report
 
 on:
-  schedule:
-    - cron: '5 * * * *'
+  # ⛔ FROZEN (EMERGENCY FREEZE, user request): schedule disabled, file preserved.
+  # To restore: uncomment the 2 lines below.
+  # schedule:
+  #   - cron: '5 * * * *'
   workflow_dispatch:
 
 permissions:
