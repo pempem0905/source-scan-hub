@@ -6,8 +6,10 @@ on:
     paths:
       - 'docs/**'
       - '.github/workflows/pages.yml'
-  schedule:
-    - cron: '17 * * * *'
+  # ⛔ FROZEN (EMERGENCY FREEZE, user request): schedule disabled, file preserved.
+  # To restore: uncomment the 2 lines below.
+  # schedule:
+  #   - cron: '17 * * * *'
   workflow_dispatch:
 
 permissions:
