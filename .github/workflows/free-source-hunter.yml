@@ -18,8 +18,10 @@ on:
       - 'integration/promo-source-export.jsonl'
       - 'config/promo-workers.json'
       - 'l2/auth-status.json'
-  schedule:
-    - cron: '*/5 * * * *'
+  # ⛔ FROZEN (EMERGENCY FREEZE, user request): schedule disabled, file preserved.
+  # To restore: uncomment the 2 lines below.
+  # schedule:
+  #   - cron: '*/5 * * * *'
   workflow_dispatch:
 
 permissions:
