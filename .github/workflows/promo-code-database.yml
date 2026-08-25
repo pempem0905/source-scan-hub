@@ -1,8 +1,13 @@
 name: PROMO Code Database
 
 on:
-  schedule:
-    - cron: '10 * * * *'
+  # ⛔ FROZEN (EMERGENCY FREEZE, user request): schedule disabled, file preserved.
+  # This is the file voucherfreevn-app's promo-scan-hub bridge reads
+  # (docs/data/promo_codes.json GitHub export fallback) — freezing it means
+  # that export stops refreshing, but does not touch voucherfreevn-app itself.
+  # To restore: uncomment the 2 lines below.
+  # schedule:
+  #   - cron: '10 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
