@@ -8,8 +8,10 @@ on:
       - 'integration/accesstrade_ingest.py'
       - 'integration/accesstrade_catalog_ingest.py'
       - 'integration/accesstrade_campaign_probe.py'
-  schedule:
-    - cron: '7,22,37,52 * * * *'
+  # ⛔ FROZEN (EMERGENCY FREEZE, user request): schedule disabled, file preserved.
+  # To restore: uncomment the 2 lines below.
+  # schedule:
+  #   - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
 
 permissions:
