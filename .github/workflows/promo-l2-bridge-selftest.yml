@@ -1,8 +1,10 @@
 name: PROMO L2 Bridge Static Selftest
 
 on:
-  schedule:
-    - cron: '17 * * * *'
+  # ⛔ FROZEN (EMERGENCY FREEZE, user request): schedule disabled, file preserved.
+  # To restore: uncomment the 2 lines below.
+  # schedule:
+  #   - cron: '17 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
