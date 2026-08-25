@@ -5,14 +5,17 @@
   "last_verified_at": null,
   "mode": "handoff",
   "platform": "grabfood",
-  "state": "TRANSIENT_RATE_LIMIT",
+  "state": "STALE_RUNTIME_EVIDENCE",
   "browser_session_created": true,
   "human_handoff_exercised": true,
   "authenticated_session_reuse_verified": false,
   "fresh_connection_reuse_required": true,
   "ready": false,
-  "transient_failure": true,
+  "transient_failure": false,
   "secret_values_observable": false,
   "sensitive_runtime_material_persisted": false,
-  "note": "No session IDs, websocket endpoints, Live View URLs, cookies, credentials, OTPs or CAPTCHA data are persisted."
+  "note": "Runtime observation is stale; historical capability verification is retained separately. No login surface is considered active from stale evidence, and no sensitive runtime material is persisted.",
+  "observation_stale": true,
+  "stale_after_seconds": 7200,
+  "last_observed_state": "TRANSIENT_RATE_LIMIT"
 }
